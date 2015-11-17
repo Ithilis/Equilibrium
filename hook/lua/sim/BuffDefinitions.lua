@@ -306,4 +306,43 @@ TypeTable = {
     uas0304 = 4,
     ues0304 = 4,
     urs0304 = 4,
+	
+ -- VOLATILE BUILDINGS (preventing bug where buildings don't leave wreck after death)
+    uab1105 = 1,
+	ueb1105 = 1,
+	urb1105 = 1,
+	xsb1105 = 1,
+	
+	uab1106 = 1,
+	ueb1106 = 1,
+	urb1106 = 1,
+	xsb1106 = 1,
+	
+	uab1101 = 1,
+	ueb1101 = 1,
+	urb1101 = 1,
+	xsb1101 = 1,
+	
+	uab1201 = 1,
+	ueb1201 = 1,
+	urb1201 = 1,
+	xsb1201 = 1,
+	
+	uab1301 = 1,
+	ueb1301 = 1,
+	urb1301 = 1,
+	xsb1301 = 1,
+	
+	uab1104 = 1,
+	ueb1104 = 1,
+	urb1104 = 1,
+	xsb1104 = 1,
+	
+	uab1303 = 1,
+	ueb1303 = 1,
+	urb1303 = 1,
+	xsb1303 = 1,
+	
+	xab1401 = 1,
+	
 }

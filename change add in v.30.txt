@@ -1,3 +1,13 @@
+v.30
+______
+- add building that explode on icedreamer code, for prevent bug when dont leave wreck after die. 
+--> m/e storage, T1/2/3 pgen, T2/3 fab, Nuke, paragon
+
+
+- air factory T1 change for 210m 3500e 350bt 70s (from 180m 4500e 300bt)
+- tweek T2 air factory for drain corectly with changed T1 air factory. 
+
+
 v.29
 ______
 - selen speed hp 75 (from 85) range 13 (from 18) dps 20 (from 22)
