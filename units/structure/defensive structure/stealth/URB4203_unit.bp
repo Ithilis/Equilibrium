@@ -1,0 +1,28 @@
+#T2 Stealth Field Generator
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb4203", 
+
+	Categories = {
+		'DEFENSE',		#Add 
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_stealthfield>Stealth Field',
+			'<LOC ability_cloak>Cloaking',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 4500,
+        BuildCostMass = 300,
+        BuildTime = 375,
+        MaintenanceConsumptionPerSecondEnergy = 100,
+    },
+    Intel = {
+		Cloak = true,					#personal cloac
+        RadarStealthFieldRadius = 32,
+        SonarStealthFieldRadius = 32,
+        VisionRadius = 5,				#5 for not be effective as intel
+    },
+}

@@ -1,0 +1,13 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb0101",
+
+	Economy = {
+        BuildCostEnergy = 1500,
+        BuildCostMass = 300,
+        BuildRate = 25,
+        BuildTime = 300,
+		StorageEnergy = 0,
+        StorageMass = 0,	#from 80
+    },
+}

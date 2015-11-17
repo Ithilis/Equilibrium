@@ -1,0 +1,223 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsl0301", 
+
+
+    Buffs = {
+        Regen = {
+            Level1 = 5,
+            Level2 = 10,
+            Level3 = 15,
+            Level4 = 20,
+            Level5 = 25,
+        },
+    },
+    Defense = {
+        Health = 14500,
+        MaxHealth = 14500,
+        RegenRate = 5,		#from 15
+    },
+    Economy = {
+        BuildCostEnergy = 100000,
+        BuildCostMass = 2000,
+        BuildRate = 25,				#from 56
+        BuildTime = 5000,
+
+        ProductionPerSecondEnergy = 150,		#from 200
+        ProductionPerSecondMass = 1,		#from 2
+        StorageEnergy = 5000,
+        StorageMass = 500,
+
+    },
+    Enhancements = {
+        DamageStabilization = {
+            BuildCostEnergy = 100000,
+            BuildCostMass = 2000,
+            BuildTime = 5000,
+            NewHealth = 10500,
+            NewRegenRate = 145,		#from 250
+        },
+        EngineeringThroughput = {
+            BuildCostEnergy = 30000,
+            BuildCostMass = 600,
+            BuildTime = 1500,
+            NewBuildRate = 100,
+			
+			Slot = 'RCH',
+            UpgradeEffectBones = {
+                'Right_Arm_Muzzle',
+                'Right_Arm_Barrel',
+            },
+        },
+		EngineeringThroughputRemove = {
+            Slot = 'RCH',
+        },
+		EnhancedSensors = {
+            BuildCostEnergy = 20000,
+            BuildCostMass = 400,
+            BuildTime = 1000,
+
+            NewMaxRadius = 28,		#from 32
+            NewOmniRadius = 60,
+            NewVisionRadius = 36,
+        },
+		Missile = {
+            BuildCostEnergy = 100000,
+            BuildCostMass = 2000,
+            BuildTime = 5000,
+        },
+        Overcharge = {
+            BuildCostEnergy = 250000,	#from 27000
+            BuildCostMass = 5000,		#from 4500
+            BuildTime = 12500,			#from 12600
+			#Range for oc only 28
+        },
+		Shield = {
+            BuildCostEnergy = 100000,
+            BuildCostMass = 2000,
+            BuildTime = 5000,
+			MaintenanceConsumptionPerSecondEnergy = 250,	#from 300
+			
+			RegenAssistMult = 10,
+            ShieldEnergyDrainRechargeTime = 5,
+            ShieldMaxHealth = 25000,
+            ShieldRechargeTime = 160,
+            ShieldRegenStartTime = 1,
+            ShieldRegenRate = 100,	#from 22
+        },
+		Teleporter = {
+            BuildCostEnergy = 1500000,
+            BuildCostMass = 15000,
+            BuildTime = 18750,
+            MaintenanceConsumptionPerSecondEnergy = 10000,
+
+            Slot = 'LCH',
+            UpgradeEffectBones = {
+                'Left_Arm_Muzzle',
+                'Left_Arm_Barrel',
+            },
+        },
+        TeleporterRemove = {
+            Slot = 'LCH',
+        },
+    },
+	EnhancementPresets = {
+        AdvancedCombat = {
+            BuildIconSortPriority = 30,
+            Description = '<LOC xsl0301_AdvancedCombat_desc>SACU (Advanced Combatant preset)',
+            Enhancements = {
+                'Overcharge',
+                'Missile',
+                'DamageStabilization',
+            },
+            HelpText = '<LOC xsl0301_AdvancedCombat_help>Support Armored Command Unit. Enhanced during construction with the enhanced sensor system, nano-repair system and overcharge enhancements.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC xsl0301_AdvancedCombat_name>SACU (Advanced Combatant preset)',
+        },
+        Combat = {
+            BuildIconSortPriority = 10,
+            Description = '<LOC xsl0301_Combat_desc>SACU (Combatant preset)',
+            Enhancements = {
+                'EnhancedSensors',
+            },
+            HelpText = '<LOC xsl0301_Combat_help>Support Armored Command Unit. Enhanced during construction with the enhanced sensor system enhancement.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC xsl0301_Combat_name>SACU (Combatant preset)',
+        },
+        Engineer = {
+            BuildIconSortPriority = 15,
+            Description = '<LOC xsl0301_Engineer_desc>SACU (Engineer preset)',
+            Enhancements = {
+                'EngineeringThroughput',
+            },
+            HelpText = '<LOC xsl0301_Engineer_help>Support Armored Command Unit. Enhanced during construction with the rapid fabricator enhancement.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC xsl0301_Engineer_name>SACU (Engineer preset)',
+        },
+        Missile = {
+            BuildIconSortPriority = 25,
+            Description = '<LOC xsl0301_Missile_desc>SACU (Missile preset)',
+            Enhancements = {
+                'EngineeringThroughput',
+                'Missile',
+            },
+            HelpText = '<LOC xsl0301_Missile_help>Support Armored Command Unit. Enhanced during construction with the tactical missile launcher and rapid fabricator enhancements.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC xsl0301_Missile_name>SACU (Missile preset)',
+        },
+        NanoCombat = {
+            BuildIconSortPriority = 20,
+            Description = '<LOC xsl0301_NanoCombat_desc>SACU (Nano Combatant preset)',
+            Enhancements = {
+                'EnhancedSensors',
+				'EngineeringThroughput',
+                'DamageStabilization',
+            },
+            HelpText = '<LOC xsl0301_NanoCombat_help>Support Armored Command Unit. Enhanced during construction with the enhanced sensor system and nano-repair system enhancements.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC xsl0301_NanoCombat_name>SACU (Nano Combatant preset)',
+        },
+        Rambo = {
+            BuildIconSortPriority = 35,
+            Description = '<LOC xsl0301_Rambo_desc>SACU (Rambo preset)',
+            Enhancements = {
+                'Overcharge',
+                'Shield',
+                'DamageStabilization',
+            },
+            HelpText = '<LOC xsl0301_Rambo_help>Support Armored Command Unit. Enhanced during construction with the personal shield generator, nano-repair system and overcharge enhancements.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC xsl0301_Rambo_name>SACU (Rambo preset)',
+        },
+	},	
+    Veteran = {
+        Level1 = 90,
+        Level2 = 180,
+        Level3 = 270,
+        Level4 = 360,
+        Level5 = 450,
+    },
+    Weapon = {
+        {
+            Damage = 250,			#from 400
+			DamageRadius = 0,		#from 0
+            MaxRadius = 23,			#from 25
+
+            RateOfFire = 1,
+        },
+        {
+            Damage = 6000,				#from 12000
+            DamageRadius = 3.5,
+            DamageType = 'Overcharge',
+
+            EnergyDrainPerSecond = 5000,
+            EnergyRequired = 5000,
+
+            ManualFire = true,
+            MaxRadius = 28,				#from25
+            MuzzleVelocity = 25,		#from22 -> as projectile
+            RateOfFire = 0.1,			#from 0,2
+        },
+        {
+            Damage = 2500,				#from 1000
+            DamageFriendly = true,
+            DamageRadius = 10,
+            DamageType = 'Deathnuke',	#from normal 
+
+        },
+        {
+            Damage = 6000,
+            DamageFriendly = true,
+            DamageRadius = 3.5,			#from3
+            MaxProjectileStorage = 3,	#from 1
+            MaxRadius = 256,
+            MinRadius = 15,
+        },
+        {
+			#Teleport
+        },
+    },
+	Wreckage = {
+        ReclaimTimeMultiplier = 2,	#from 1
+    },
+}

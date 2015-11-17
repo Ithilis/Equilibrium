@@ -1,0 +1,55 @@
+#Riptide
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uel0203",
+    
+	Economy = {
+        BuildCostEnergy = 3600,		#2x more Energy
+        BuildCostMass = 360,
+        BuildTime = 1800,
+    },
+    Defense = {
+        Health = 2200,
+        MaxHealth = 2200,
+    },
+    Physics = {
+        MaxAcceleration = 3.6,
+        MaxBrake = 3.6,
+        MaxSpeed = 3.6,
+		MaxBrake = 10,
+        MaxSpeedReverse = 3.6,
+        MaxSteerForce = 3.6,
+		TurnRadius = 1.5,
+        TurnRate = 310,
+		WaterSpeedMultiplier = 0.85
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Veteran = {
+        Level1 = 11,
+        Level2 = 22,
+        Level3 = 33,
+        Level4 = 44,
+        Level5 = 55,
+    },
+    Weapon = {
+        Damage = 18,		#120dps
+    },
+    AI = {
+		TargetBones = {
+			'UEL0203',
+			'Turret_Muzzle_01',
+			'Turret_Muzzle_02',
+		},
+	},
+	CollisionOffsetY = -0.1,
+	SizeY = 0.65,
+}

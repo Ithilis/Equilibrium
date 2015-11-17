@@ -1,0 +1,19 @@
+#T1 Power generator
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb1101", 
+
+    Economy = {
+        BuildCostEnergy = 750,
+        BuildCostMass = 75,
+        BuildTime = 125,
+    },
+	Weapon = {
+        {
+            Damage = 300,		#from 250
+            DamageRadius = 2.5,
+            DisplayName = 'Death Weapon',
+        },
+    },
+}

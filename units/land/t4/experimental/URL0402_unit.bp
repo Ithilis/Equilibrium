@@ -1,0 +1,53 @@
+#Monkey lord
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0402",
+
+    Buffs = {
+        Regen = {
+            Level1 = 15,
+            Level2 = 30,
+            Level3 = 45,
+            Level4 = 60,
+            Level5 = 75,
+        },
+    },
+    Defense = {
+        Health = 40000,
+        MaxHealth = 40000,		#from 45 000
+        RegenRate = 15,
+    },
+    Economy = {
+        BuildCostEnergy = 250000,
+        BuildCostMass = 20000,
+        BuildTime = 33333,					# its three time faster as build same mass in percivals/bricks
+        MaintenanceConsumptionPerSecondEnergy = 250,		#from 400
+    },
+    Veteran = {
+	RequirementMult = 0.5,
+        Level1 = 60,
+        Level2 = 120,
+        Level3 = 180,
+        Level4 = 240,
+        Level5 = 300,
+    },
+    Weapon = {
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+            Damage = 100,		#from 50 = 100dps
+            DamageType = 'Normal',
+        },
+        {
+        },
+    },
+}

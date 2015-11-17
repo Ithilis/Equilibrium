@@ -1,0 +1,30 @@
+#T2 Mass Fabricator
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb1104",
+
+    Defense = {
+        Health = 500,
+        MaxHealth = 500,
+    },
+    Economy = {
+        BuildCostEnergy = 4000,
+        BuildCostMass = 200,
+        BuildTime = 312.5,
+        MaintenanceConsumptionPerSecondEnergy = 100,
+        ProductionPerSecondMass = 1,
+    },
+    Weapon = {
+        {
+            Damage = 500,
+            DamageFriendly = true,
+            DamageRadius = 7,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+}

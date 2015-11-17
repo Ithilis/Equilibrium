@@ -1,0 +1,21 @@
+#T3 Mass Extractor
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uab1302",
+
+    Defense = {
+        Health = 9000,
+        MaxHealth = 9000,
+    },
+    Economy = {
+        BuildCostEnergy = 38000,
+        BuildCostMass = 4000,
+        BuildTime = 5000,
+        MaintenanceConsumptionPerSecondEnergy = 50,
+        ProductionPerSecondMass = 16,
+    },
+    Intel = {
+		RadarStealth = true,	#for not change color after upgrade -> its still visible on radar no idea why, but at least dont change collor
+    },
+}

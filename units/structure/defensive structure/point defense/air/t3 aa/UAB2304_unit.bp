@@ -1,0 +1,28 @@
+#T3 AA SAMs
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="uab2304",
+
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 8000,
+        BuildCostMass = 800,
+        BuildTime = 1000,
+    },
+    Veteran = {
+        Level1 = 16,
+        Level2 = 32,
+        Level3 = 48,
+        Level4 = 64,
+        Level5 = 80,
+    },
+}

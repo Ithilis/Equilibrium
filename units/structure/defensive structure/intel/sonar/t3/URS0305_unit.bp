@@ -1,0 +1,34 @@
+#T3 sonar
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urs0305",
+
+
+
+    Defense = {
+        Health = 1500,
+        MaxHealth = 1500,
+    },
+    Economy = {
+        BuildCostEnergy = 24000,	#from 12000
+        BuildCostMass = 1200,		#from 480
+        BuildTime = 1875,
+        MaintenanceConsumptionPerSecondEnergy = 650,	#from 250
+    },
+    Intel = {
+        WaterVisionRadius = 100,	#from 24
+    },
+	Physics = {
+        MaxAcceleration = 1.5,		#from 4,5
+        MaxBrake = 1.5,
+        MaxSpeed = 1.5,
+    },
+    Veteran = {
+        Level1 = 36,
+        Level2 = 72,
+        Level3 = 108,
+        Level4 = 144,
+        Level5 = 180,
+    },
+}

@@ -1,0 +1,58 @@
+#t1 cybran submarine Silver
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urs0203",
+	
+    Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 4,
+            Level3 = 6,
+            Level4 = 8,
+            Level5 = 10,
+        },
+    },
+	Display = {
+        Abilities = {
+            '<LOC ability_sonar>Sonar',
+			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_submersible>Submersible',
+            '<LOC ability_torpedo>Torpedoes',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 3500,
+        BuildCostMass = 350,
+        BuildTime = 1400,
+		MaintenanceConsumptionPerSecondEnergy = 10,
+    },
+    Intel = {
+        SonarRadius = 60,
+		SonarStealth = true,
+        VisionRadius = 15,		#from 32
+        WaterVisionRadius = 15,	#from 32
+		SonarStealth = true,
+    },
+    Physics = {
+        Elevation = -2.5,		#from -1,5
+        MaxAcceleration = 6.5,	#from 6
+        MaxBrake = 6.5,
+        MaxSpeed = 6.5,
+        MaxSpeedReverse = 6.5,		
+    },
+    Veteran = {
+        Level1 = 11,
+        Level2 = 22,
+        Level3 = 33,
+        Level4 = 44,
+        Level5 = 55,
+    },
+    Weapon = {
+        {
+            MaxRadius = 35,	#from 32
+        },
+		{
+        },
+    },
+}

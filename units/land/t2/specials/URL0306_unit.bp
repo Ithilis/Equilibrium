@@ -1,0 +1,49 @@
+#Deceiver
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0306",
+
+	Defense = {
+	    Health = 350,
+        MaxHealth = 350,
+        RegenRate = 5,		#from 0 because cant get veterancy
+    },
+	Economy = {
+		BuildCostEnergy = 900,	#75e per sec
+		BuildCostMass = 84,		#7m per sec
+		BuildTime = 600,		#12s
+		MaintenanceConsumptionPerSecondEnergy = 50,
+	},
+	Weapon = {
+        {
+            AboveWaterTargetsOnly = true,      
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            CountedProjectile = false,
+            Damage = 0,								#its only for same behaviour 
+            DamageRadius = 0,
+            DamageType = 'Normal',
+            DisplayName = 'Serpentine Missile',
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            Label = 'MissileRack',
+            MaxRadius = 33,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_IndirectFire',
+            RateOfFire = 0,
+            RenderFireClock = true,
+            SlavedToBody = true,
+            TargetCheckInterval = 2,
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.15,
+            TurretDualManipulators = false,
+            Turreted = false,
+            WeaponCategory = 'Missile',
+            WeaponRepackTimeout = 0,
+            WeaponUnpacks = false,
+        },
+    },
+}

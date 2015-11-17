@@ -1,0 +1,18 @@
+#T2 TMD
+	
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb4201",
+
+    Economy = {
+        BuildCostEnergy = 3400,
+        BuildCostMass = 340,
+        BuildTime = 425,
+    },
+	Weapon = {
+        {
+            TargetCheckInterval = 0.1,
+            TrackingRadius = 1.1,
+        },
+    },
+}

@@ -1,0 +1,13 @@
+#Flak egg
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrl0004",
+
+    Economy = {
+        BuildCostEnergy = 900,
+        BuildCostMass = 180,
+        BuildTime = 180,
+        BuildUnit = 'url0205',
+    },
+}

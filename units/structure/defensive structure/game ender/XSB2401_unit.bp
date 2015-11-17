@@ -1,0 +1,33 @@
+#Ylona Oss
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsb2401", 
+
+	Buffs = {
+        Regen = {
+            Level1 = 15,
+            Level2 = 30,
+            Level3 = 45,
+            Level4 = 60,
+            Level5 = 75,
+        },
+    },
+    Defense = {
+        Health = 15000,
+        MaxHealth = 15000,
+		RegenRate = 5,	#from 0
+    },
+    Economy = {
+        BuildCostEnergy = 5400000,
+        BuildCostMass = 216000,
+        BuildTime = 90000,
+    },
+	Veteran = {
+        Level1 = 432,
+        Level2 = 864,
+        Level3 = 1296,
+        Level4 = 1728,
+        Level5 = 2160,
+    },
+}

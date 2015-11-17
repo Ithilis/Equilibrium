@@ -1,0 +1,51 @@
+#T2 cybran torpedo bomber
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ura0204", 
+
+    Air = {
+        MaxAirspeed = 16,	  #from15
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Display = {
+		Abilities = {
+	        '<LOC ability_omni>Omni Sensor',
+		},
+	},
+	Intel = {
+        OmniRadius = 20,
+    },
+	Veteran = {
+        Level1 = 7,
+        Level2 = 14,
+        Level3 = 21,
+        Level4 = 28,
+        Level5 = 35,
+    },
+	Economy = {
+        BuildCostEnergy = 5250,
+        BuildCostMass = 245,
+        BuildTime = 1400,
+    },
+    Physics = {
+        FuelUseTime = 300,	#from 600
+    },
+	Weapon = {
+        {
+        },
+        {
+            Damage = 250,
+            DamageRadius = 2,
+            DisplayName = 'Air Crash',
+        },
+    },	
+}

@@ -1,0 +1,78 @@
+#ASF
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uea0303", 
+
+    Air = {
+        MaxAirspeed = 20,	 	#from25
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Veteran = {
+        Level1 = 15,
+        Level2 = 30,
+        Level3 = 45,
+        Level4 = 60,
+        Level5 = 75,
+    },
+    Economy = {
+        BuildCostEnergy = 25000,
+        BuildCostMass = 500,
+        BuildTime = 3000,
+    },
+    Physics = {
+        FuelUseTime = 360,
+    },
+    Weapon = {
+        {
+            Damage = 225,
+            RateOfFire = 0.666,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },			
+            TurretPitchRange = 135,
+            TurretYawRange = 135,
+        },
+        {
+            Damage = 225,
+            RateOfFire = 0.666,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },			
+            TurretPitchRange = 135,
+            TurretYawRange = 135,
+        },
+        {
+            Damage = 250,
+            DamageRadius = 1.5,
+            DisplayName = 'Air Crash',
+        },
+    },
+    Wreckage = {
+		MassMult = 0.9,			#from 0.45
+    },
+}

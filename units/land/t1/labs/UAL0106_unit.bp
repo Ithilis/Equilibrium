@@ -1,0 +1,96 @@
+#Flare
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ual0106",
+
+	Audio = {
+        CaptureLoop = Sound {
+            Bank = 'UAL',
+            Cue = 'UAL0105_Capture_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+		StartCapture = Sound {
+            Bank = 'UAL',
+            Cue = 'UAL0105_Capture_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+	},	
+	Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER1FACTORY',
+        'BUILTBYTIER2FACTORY',
+        'BUILTBYTIER3FACTORY',
+        'AEON',
+        'MOBILE',
+        'LAND',
+        'TECH1',
+        'DIRECTFIRE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+		'CAPTURE',			#add
+        'BOT',
+        'OVERLAYDIRECTFIRE',
+    },
+	Defense = {
+        Health = 125,
+        MaxHealth = 125,
+    },
+	Display = {
+        Abilities = {
+			'<LOC ability_Capture>Capture',
+        },
+	},	
+	Economy = {
+        BuildCostEnergy = 350,
+        BuildCostMass = 35,
+        BuildTime = 175,
+		BuildRate = 2.5,
+    },
+	General = {
+        CommandCaps = {
+			RULEUCC_Capture = true,
+        },
+	},	
+	Physics = {
+        MaxAcceleration = 4.2,
+        MaxBrake = 4.2,
+        MaxSpeed = 4.2,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+	Veteran = {
+        Level1 = 1,
+        Level2 = 2,
+        Level3 = 3,
+        Level4 = 4,
+        Level5 = 5,
+    },
+	Weapon = {
+		{
+		Damage = 8,			#24dps
+		MaxRadius = 13,
+		TargetPriorities = {
+                'SPECIALHIGHPRI',
+				'TECH1 MOBILE RADAR',
+				'COMMAND',				#ACU hight priority for ghetto sniping
+				'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+			},
+		},
+	},
+	SizeX = 0.7,
+	SizeZ = 0.7,
+}

@@ -1,0 +1,13 @@
+#atrilery egg
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrl0005",
+
+    Economy = {
+        BuildCostEnergy = 12000,
+        BuildCostMass = 840,
+        BuildTime = 1200,
+        BuildUnit = 'url0304',
+    },
+}

@@ -1,0 +1,101 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0001", 
+
+	Buffs = {
+        Regen = {
+            Level1 = 5,
+            Level2 = 10,
+            Level3 = 15,
+            Level4 = 20,
+            Level5 = 25,
+        },
+    }, 
+   Defense = {
+        RegenRate = 15,					#from 17
+    },
+    Economy = {
+        BuildCostEnergy = 50000,		#from 5000000 	repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
+        BuildCostMass = 2000,			#from 18 000	repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
+        BuildRate = 10,
+        BuildTime = 10000, 				#from 60000000
+		StorageEnergy = 4000,			#from 4000
+        StorageMass = 800,				#from 650
+		TeleportEnergyMod = 3.255,
+    },
+    Enhancements = {
+        AdvancedEngineering = {
+            NewHealth = 2000,			#from 3500
+            NewRegenRate = 20,
+			NewBuildRate = 40,			#from 42
+			
+			BuildCostEnergy = 14000,		#from 18000
+            BuildCostMass = 700,			#from 720
+            BuildTime = 700,				#from 900
+        },
+		T3Engineering = {
+			NewBuildRate = 120,			#from 126
+			
+			BuildCostEnergy = 50000,		#from 50000	drain 200e/s
+            BuildCostMass = 2500,			#from 2400	drain 10m/s
+            BuildTime = 10000,				#from 8400
+		},
+		CloakingGenerator = {
+            BuildCostEnergy = 625000,		#from 750000e
+            BuildCostMass = 5000,			#from 6000
+            BuildTime = 2500,
+
+            MaintenanceConsumptionPerSecondEnergy = 2500,
+            NewHealth = 13000,			#from 15000
+        },
+        CoolingUpgrade = {
+            NewMaxRadius = 28,			#from30
+			NewHealth = 500,			#from 0
+        },
+		MicrowaveLaserGenerator = {
+            BuildCostEnergy = 560000,
+            BuildCostMass = 4200,
+            BuildTime = 2800,
+        },
+		NaniteTorpedoTube = {
+            BuildCostEnergy = 45000,
+            BuildCostMass = 1500,
+            BuildTime = 1500,
+        },
+        ResourceAllocation = {
+            ProductionPerSecondEnergy = 2100,	#from3500
+            ProductionPerSecondMass = 12,
+			
+			BuildCostEnergy = 125000,	#from 150 000e
+            BuildCostMass = 5000,
+            BuildTime = 2500,			#from 1400bt
+        },
+		Teleporter = {
+            BuildCostEnergy = 1500000,
+            BuildCostMass = 15000,
+            BuildTime = 5000,			#from 4200
+        },
+	},
+	Veteran = {
+        RequirementMult = 0.5,
+    },
+	Weapon = {
+        {
+		MaxRadius = 23,  #from 22
+        },
+        {
+		DamageType = 'Overcharge',
+		MaxRadius = 23,  #from 22 
+		RateOfFire = 0.25,			#from 0,3= 4s
+        },
+        {
+        },
+        {
+		MaxRadius = 23,  #from 22
+        },
+        {
+        },
+		{
+        },
+    },	
+}

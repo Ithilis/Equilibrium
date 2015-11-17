@@ -1,0 +1,12 @@
+#T2 TMD
+	
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uab4201",
+
+    Economy = {
+        BuildCostEnergy = 2000,
+        BuildCostMass = 200,
+        BuildTime = 312.5,
+    },
+}

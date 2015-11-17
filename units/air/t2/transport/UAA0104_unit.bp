@@ -1,0 +1,63 @@
+#T2 aeon transport
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uaa0104", 
+
+	Air = {
+        MaxAirspeed = 16,		#from15 for not be catch by interceptor
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Defense = {
+        RegenRate = 5,
+    },
+    Economy = {
+        BuildCostEnergy = 8000,
+        BuildCostMass = 280,
+        BuildTime = 1600,
+    },
+    Physics = {
+        FuelUseTime = 420,
+    },
+    Veteran = {
+        Level1 = 3,
+        Level2 = 6,
+        Level3 = 9,
+        Level4 = 12,
+        Level5 = 15,
+    },
+    Weapon = {
+        {
+            Damage = 15,	#from6 = 72AA dps
+        },
+        {
+			Damage = 15,	#from6
+        },
+        {
+ 			Damage = 15,	#from6
+        },
+        {
+			Damage = 15,	#from6
+        },
+		{
+            AboveWaterTargetsOnly = true,	#add crash dmg
+            Damage = 100,
+            DamageFriendly = true,
+            DamageRadius = 2,
+            DamageType = 'Normal',
+            DisplayName = 'Air Crash',
+            DummyWeapon = true,
+            FiringTolerance = 2,
+            Label = 'DeathImpact',
+            WeaponCategory = 'Death',
+        },
+    },
+}

@@ -1,0 +1,17 @@
+#Soothsayer
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrb3301", 
+
+    Defense = {
+        Health = 3000,
+        MaxHealth = 3000,
+    },
+    Economy = {
+        BuildCostEnergy = 90000,
+        BuildCostMass = 4500,
+        BuildTime = 5625,
+        MaintenanceConsumptionPerSecondEnergy = 3000,
+    },
+}

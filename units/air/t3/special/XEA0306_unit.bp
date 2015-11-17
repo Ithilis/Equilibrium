@@ -1,0 +1,83 @@
+#Continental
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xea0306", 
+
+
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+	Defense = {
+        RegenRate = 5,
+    },
+    Defense = {
+        Health = 2000,					#from4500
+        MaxHealth = 2000,
+        Shield = {
+            ShieldMaxHealth = 4000,		#from3000
+            ShieldRechargeTime = 50,	#from35
+            ShieldRegenRate = 25,		#from30
+			ShieldSize = 11,			#from 8,5
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 70000,
+        BuildCostMass = 1400,
+        BuildTime = 8400,
+        MaintenanceConsumptionPerSecondEnergy = 150,
+    },
+    Physics = {
+        FuelRechargeRate = 70,
+        FuelUseTime = 420,
+    },
+    Veteran = {
+        Level1 = 30,
+        Level2 = 60,
+        Level3 = 90,
+        Level4 = 120,
+        Level5 = 150,
+    },
+    Weapon = {
+        {
+											#Ground Fire=60dps
+        },
+        {
+        },
+        {
+            Damage = 30,					#from 20 = 120dps
+            DisplayName = 'Flayer SAM Launcher',
+            RateOfFire = 1,					#from 3
+            TargetCheckInterval = 0.5,		#from 0,16
+        },
+        {
+            Damage = 30,					#from 20 
+            DisplayName = 'Flayer SAM Launcher',
+            RateOfFire = 1,					#from 3
+            TargetCheckInterval = 0.5,		#from 0,16
+        },
+        {
+            Damage = 30,					#from 20 
+            DisplayName = 'Flayer SAM Launcher',
+            RateOfFire = 1,					#from 3
+            TargetCheckInterval = 0.5,		#from 0,16
+        },
+        {
+            Damage = 30,					#from 20 
+            DisplayName = 'Flayer SAM Launcher',
+            RateOfFire = 1,					#from 3
+            TargetCheckInterval = 0.5,		#from 0,16
+        },
+        {
+            Damage = 500,
+            DamageRadius = 3,
+            DisplayName = 'Air Crash',
+        },
+    },
+}

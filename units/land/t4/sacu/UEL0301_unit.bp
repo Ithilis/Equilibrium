@@ -1,0 +1,197 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uel0301", 
+
+    Buffs = {
+        Regen = {
+            Level1 = 5,
+            Level2 = 10,
+            Level3 = 15,
+            Level4 = 20,
+            Level5 = 25,
+        },
+    },
+    Defense = {
+        Health = 16000,	
+        MaxHealth = 16000,
+        RegenRate = 5,			#from 20
+    },
+    Economy = {
+        BuildCostEnergy = 90000,
+        BuildCostMass = 1800,
+        BuildRate = 25,				#from 56
+        BuildTime = 4500,
+
+        ProductionPerSecondEnergy = 20,
+        ProductionPerSecondMass = 1,
+        StorageEnergy = 5000,
+        StorageMass = 500,
+    },
+    Enhancements = {
+        AdvancedCoolingUpgrade = {
+            BuildCostEnergy = 50000,
+            BuildCostMass = 1000,
+            BuildTime = 2500,
+
+            NewRateOfFire = 2,		#from 2,5
+        },
+        HighExplosiveOrdnance = {
+            BuildCostEnergy = 60000,
+            BuildCostMass = 1200,
+            BuildTime = 3000,
+
+            NewDamageRadius = 2,	#from 2,5
+            NewMaxRadius = 33,		#from 35
+        },
+		Pod = {
+            BuildCostEnergy = 20000,
+            BuildCostMass = 400,
+            BuildTime = 1000,
+			
+			NewBuildRate = 50,		#ADD
+        },
+        RadarJammer = {
+            BuildCostEnergy = 20000,
+            BuildCostMass = 400,
+            BuildTime = 1000,
+
+            MaintenanceConsumptionPerSecondEnergy = 100,
+            NewJammerRadius = 26,
+        },
+		ResourceAllocation = {
+            BuildCostEnergy = 210000,
+            BuildCostMass = 4200,
+            BuildTime = 10500,
+
+            ProductionPerSecondEnergy = 1000,
+            ProductionPerSecondMass = 10,
+        },
+		SensorRangeEnhancer = {
+            BuildCostEnergy = 20000,
+            BuildCostMass = 400,
+            BuildTime = 1000,
+
+            NewOmniRadius = 80,
+            NewVisionRadius = 45,
+        },
+		Shield = {
+            BuildCostEnergy = 80000,
+            BuildCostMass = 1600,
+            BuildTime = 4000,
+            MaintenanceConsumptionPerSecondEnergy = 250,
+            RegenAssistMult = 10,
+            ShieldEnergyDrainRechargeTime = 5,
+            ShieldMaxHealth = 24000,
+            ShieldRechargeTime = 170,
+            ShieldRegenRate = 50,
+            ShieldRegenStartTime = 1,
+            ShieldSize = 3,
+
+        },
+        ShieldGeneratorField = {
+            BuildCostEnergy = 160000,
+            BuildCostMass = 3200,
+            BuildTime = 8000,
+            MaintenanceConsumptionPerSecondEnergy = 1000,
+            ShieldEnergyDrainRechargeTime = 5,
+            ShieldMaxHealth = 50000,
+            ShieldRechargeTime = 215,
+            ShieldRegenRate = 200,
+            ShieldRegenStartTime = 1,
+            ShieldSize = 20,
+            ShieldSpillOverDamageMod = 0.5,
+        },
+    },
+	EnhancementPresets = {
+        BubbleShield = {
+            BuildIconSortPriority = 35,
+            Description = '<LOC uel0301_BubbleShield_desc>SACU (Shield preset)',
+            Enhancements = {
+                'Shield',
+                'ShieldGeneratorField',
+            },
+            HelpText = '<LOC uel0301_BubbleShield_help>Support Armored Command Unit. Enhanced during construction with the bubble shield generator enhancement.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC uel0301_BubbleShield_name>SACU (Shield preset)',
+        },
+        Combat = {
+            BuildIconSortPriority = 20,
+            Description = '<LOC uel0301_Combat_desc>SACU (Combatant preset)',
+            Enhancements = {
+                'AdvancedCoolingUpgrade',
+                'HighExplosiveOrdnance',
+            },
+            HelpText = '<LOC uel0301_Combat_help>Support Armored Command Unit. Enhanced during construction with the energy accelerator and heavy plasma refractor enhancements.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC uel0301_Combat_name>SACU (Combatant preset)',
+        },
+        Engineer = {
+            BuildIconSortPriority = 10,
+            Description = '<LOC uel0301_Engineer_desc>SACU (Engineer preset)',
+            Enhancements = {
+                'Pod',
+            },
+            HelpText = '<LOC uel0301_Engineer_help>Support Armored Command Unit. Enhanced during construction with the engineering drone enhancement.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC uel0301_Engineer_name>SACU (Engineer preset)',
+        },
+        IntelJammer = {
+            BuildIconSortPriority = 15,
+            Description = '<LOC uel0301_IntelJammer_desc>SACU (Intel Jammer preset)',
+            Enhancements = {
+                'RadarJammer',
+                'SensorRangeEnhancer',
+            },
+            HelpText = '<LOC uel0301_IntelJammer_help>Support Armored Command Unit. Enhanced during construction with the radar jammer and enhanced sensor system enhancements.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC uel0301_IntelJammer_name>SACU (Intel Jammer preset)',
+        },
+        Rambo = {
+            BuildIconSortPriority = 25,
+            Description = '<LOC uel0301_Rambo_desc>SACU (Rambo preset)',
+            HelpText = '<LOC uel0301_Rambo_help>Support Armored Command Unit. Enhanced during construction with a personal shield, energy accelerator and heavy plasma refractor enhancements.',
+            Enhancements = {
+                'AdvancedCoolingUpgrade',
+                'HighExplosiveOrdnance',
+                'Shield',
+            },
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC uel0301_Rambo_name>SACU (Rambo preset)',
+        },
+        RAS = {
+            BuildIconSortPriority = 30,
+            Description = '<LOC uel0301_RAS_desc>SACU (RAS preset)',
+            Enhancements = {
+                'ResourceAllocation',
+            },
+            HelpText = '<LOC uel0301_RAS_help>Support Armored Command Unit. Enhanced during construction with a Resource Allocation System.',
+            SortCategory = 'SORTOTHER',
+            UnitName = '<LOC uel0301_RAS_name>SACU (RAS preset)',
+        },
+    },
+    Veteran = {
+        Level1 = 90,
+        Level2 = 180,
+        Level3 = 270,
+        Level4 = 360,
+        Level5 = 450,
+    },
+    Weapon = {
+        {
+            Damage = 200,						#from 300
+            MaxRadius = 23,		#from 25
+            RateOfFire = 1,
+        },
+        {
+            CollideFriendly = false,
+            Damage = 2500,				#from 1000
+            DamageFriendly = true,
+            DamageRadius = 10,
+
+			DamageType = 'Deathnuke',		#from normal 
+        },
+    },
+	Wreckage = {
+        ReclaimTimeMultiplier = 2,	#from 1
+    },
+}

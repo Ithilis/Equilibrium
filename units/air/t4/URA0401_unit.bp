@@ -1,0 +1,61 @@
+#Soul Ripper
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ura0401", 
+
+    Defense = {
+        Health = 80000,			#from 90 000
+        MaxHealth = 80000,
+        RegenRate = 25,			#from 0
+    },
+    Economy = {
+        BuildCostEnergy = 750000,
+        BuildCostMass = 30000,
+        BuildTime = 37500,
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 15,
+            Level2 = 30,
+            Level3 = 45,
+            Level4 = 60,
+            Level5 = 75,
+        },
+    },
+    Veteran = {
+	RequirementMult = 0.5,
+        Level1 = 90,
+        Level2 = 180,
+        Level3 = 270,
+        Level4 = 360,
+        Level5 = 450,
+    },
+    Weapon = {
+        {
+        },
+        {
+        },
+        {
+			Damage = 250,	#from150 = 400dps
+        },
+        {
+			Damage = 250,	#from150
+        },
+        {
+        },
+        {
+        },
+        {
+			AboveWaterTargetsOnly = false,	#from true = hit also submarine
+            Damage = 7500,				#from 5000
+            DamageRadius = 6,			#from 4
+            DisplayName = 'Air Crash',
+        },
+    },
+    Wreckage = {
+		EnergyMult = 0.45,		#from 0
+        HealthMult = 0.9,
+        MassMult = 0.45,		#from 0.9
+    },
+}

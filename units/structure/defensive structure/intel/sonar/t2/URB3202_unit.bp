@@ -1,0 +1,21 @@
+#T2 sonar 
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urb3202",
+
+    Defense = {
+        Health = 1200,
+        MaxHealth = 1200,
+    },
+    Economy = {
+		BuildCostEnergy = 4000,
+        BuildCostMass = 200,
+        BuildTime = 625,
+		BuildRate = 25,
+        MaintenanceConsumptionPerSecondEnergy = 150,	#from 100
+    },
+    Intel = {
+		WaterVisionRadius = 80,
+    },
+}

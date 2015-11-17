@@ -1,0 +1,46 @@
+#Mantis
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0107",
+
+    Economy = {
+        BuildCostEnergy = 250,
+        BuildCostMass = 50,
+        BuildTime = 250,
+		BuildRate = 1.5,	#from 1
+    },
+	Defense = {
+        Health = 330,
+        MaxHealth = 330,
+    },
+	Physics = {
+        MaxAcceleration = 3.5,
+        MaxSpeed = 3.5, 		#from 3.7
+        MaxSpeedReverse = 3.5, 
+        MaxSteerForce = 3.5, 
+    },
+	StrategicIconName = 'icon_land1_directfire',
+	Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+	Veteran = {
+        Level1 = 2,
+        Level2 = 4,
+        Level3 = 6,
+        Level4 = 8,
+        Level5 = 10,
+    },
+	Weapon = {
+		{
+		Damage = 10,		#from 8 = 20dps
+		RateOfFire = 2,		#from 3
+		},
+	},
+}

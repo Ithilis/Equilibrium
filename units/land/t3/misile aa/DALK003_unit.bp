@@ -1,0 +1,40 @@
+#T3AA Aeon
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "dalk003",   
+	
+	Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+	},
+	Veteran = {
+        Level1 = 23,
+        Level2 = 46,
+        Level3 = 69,
+        Level4 = 92,
+        Level5 = 115,
+    },
+	Defense = {
+        Health = 1900,
+        MaxHealth = 1900,
+    },
+	Economy = {
+        BuildCostEnergy = 9500,
+        BuildCostMass = 760,
+        BuildTime = 3800,
+    },
+
+	Weapon = {
+        {
+            Damage = 1200,		#200dps
+            MaxRadius = 54,
+            RateOfFire = 0.1667,
+        },
+    },
+}

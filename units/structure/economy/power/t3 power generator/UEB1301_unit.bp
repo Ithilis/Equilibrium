@@ -1,0 +1,24 @@
+#T3 Power Generator
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb1301",
+
+    Defense = {
+        Health = 8000,
+        MaxHealth = 8000,
+    },
+    Economy = {
+        BuildCostEnergy = 48000,
+        BuildCostMass = 3200,
+        BuildTime = 5000,
+        ProductionPerSecondEnergy = 2500,
+    },
+	Weapon = {
+        {
+            Damage = 7500,		#from 8000
+            DamageRadius = 10,
+            DisplayName = 'Death Weapon',
+        },
+    },
+}

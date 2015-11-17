@@ -1,0 +1,12 @@
+#UEF scout
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uel0101",
+
+    Economy = {
+        BuildCostEnergy = 150,
+        BuildCostMass = 15,
+        BuildTime = 75,
+    },
+}

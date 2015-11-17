@@ -1,0 +1,20 @@
+#UEF satelite
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ura0204", 
+
+
+Intel = {
+        RadarRadius = 100,	#from 70
+        VisionRadius = 50,	#from 40
+    },
+Weapon = {
+        {
+        },
+        {
+            Damage = 500,		#from 3000
+            DisplayName = 'Air Crash',
+        },
+    },
+}

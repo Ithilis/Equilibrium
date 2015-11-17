@@ -1,0 +1,53 @@
+#Shocker
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uaa0304", 
+
+    Air = {
+        MaxAirspeed = 16,	#from 17
+        MinAirspeed = 14,
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Defense = {
+        Health = 3300,
+        MaxHealth = 3300,
+    },
+    Economy = {
+        BuildCostEnergy = 100000,
+        BuildCostMass = 2000,
+        BuildTime = 9600,
+    },
+    Physics = {
+        FuelRechargeRate = 15,
+        FuelUseTime = 360,
+    },
+    Veteran = {
+        Level1 = 30,
+        Level2 = 60,
+        Level3 = 90,
+        Level4 = 120,
+        Level5 = 150,
+    },
+    Weapon = {
+        {
+            Damage = 3300,
+            DamageRadius = 5,		#from 4
+            MaxRadius = 80,			#from 90
+            RateOfFire = 0.1666,	#from 0.2
+        },
+        {
+            Damage = 500,
+            DamageRadius = 3,		#from 1
+            DisplayName = 'Air Crash',
+        },
+    },
+}

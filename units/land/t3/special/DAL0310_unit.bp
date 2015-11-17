@@ -1,0 +1,43 @@
+#Absolver
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "dal0310", 
+
+	Buffs = {
+        Regen = {
+			Level1 = 6,
+			Level2 = 9,
+			Level3 = 12,
+			Level4 = 15,
+			Level5 = 18,
+		},
+    },
+	Categories = {
+        'PRODUCTDL',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'AEON',
+        'MOBILE',
+        'LAND',
+		'NAVAL',
+        'TECH3',
+        'DIRECTFIRE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'HOVER',
+        'TANK',
+        'OVERLAYDIRECTFIRE',
+    },
+    Economy = {
+        BuildCostEnergy = 9250,
+        BuildCostMass = 518,
+        BuildTime = 3700,
+    },
+	Weapon = {
+		{
+		Damage = 10,		#from5
+		MaxRadius = 80,		#from 75 for out-range ravagers
+		},
+	},
+}

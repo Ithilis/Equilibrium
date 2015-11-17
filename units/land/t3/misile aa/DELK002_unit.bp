@@ -1,0 +1,39 @@
+#T3AA UEF
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "delk002", 
+
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+		},	
+    },
+    Defense = {
+        Health = 2200,
+        MaxHealth = 2200,
+    },
+	Economy = {
+        BuildCostEnergy = 9500,
+        BuildCostMass = 760,
+        BuildTime = 3800,
+	},	
+	Veteran = {
+        Level1 = 23,
+        Level2 = 46,
+        Level3 = 69,
+        Level4 = 92,
+        Level5 = 115,
+    },
+    Weapon = {
+        {
+            Damage = 100,				#from 100
+            FiringRandomness = 0.1,		#from 0.2
+            RateOfFire = 1,
+        },
+	},
+}

@@ -1,0 +1,20 @@
+#T3 Air factory
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb0302",	
+
+	Defense = {
+        Health = 20000,
+        MaxHealth = 20000,
+    },
+	Economy = {
+        BuildCostEnergy = 120000,	#from 180 000    potom niekedy to zase hod spet, ked na to bude spolocnost viac pripravena
+        BuildCostMass = 3600,
+        BuildRate = 120,
+        BuildTime = 9600,			#from 7200
+		DifferentialUpgradeCostCalculation = false,
+        StorageEnergy = 0,
+		StorageMass = 0,
+    },
+}

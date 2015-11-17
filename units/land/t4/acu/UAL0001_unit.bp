@@ -1,0 +1,146 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ual0001", 
+ 
+	Buffs = {
+        Regen = {
+            Level1 = 5,
+            Level2 = 10,
+            Level3 = 15,
+            Level4 = 20,
+            Level5 = 25,
+        },
+    }, 
+    Economy = {
+        BuildCostEnergy = 50000,		#from 5000000 	repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
+        BuildCostMass = 2000,			#from 18 000	repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
+        BuildRate = 10,
+        BuildTime = 10000, 				#from 60000000
+		StorageEnergy = 4000,			#from 4000
+        StorageMass = 800,				#from 650
+		TeleportEnergyMod = 3.255,
+    },
+    Enhancements = {
+        AdvancedEngineering = {
+            NewHealth = 1500,			#from 3000
+            NewRegenRate = 20,
+			NewBuildRate = 40,			#from 42
+			
+			BuildCostEnergy = 14000,		#from 18000
+            BuildCostMass = 700,			#from 720
+            BuildTime = 700,				#from 900
+        },
+		T3Engineering = {
+			NewBuildRate = 120,			#from 126
+			
+			BuildCostEnergy = 50000,		#from 50000	drain 200e/s
+            BuildCostMass = 2500,			#from 2400	drain 10m/s
+            BuildTime = 10000,				#from 8400
+		},
+		CrysalisBeam = {
+            NewMaxRadius = 33,			#from 35
+        },
+		ChronoDampener = {
+            BuildCostEnergy = 60000,	#from 52500
+            BuildCostMass = 1500,		#from 1750
+            BuildTime = 1500,			#from 1225
+			
+			NewRegenRate = 20,			#ADD
+        },
+		EnhancedSensors = {
+            BuildCostEnergy = 8000,
+            BuildCostMass = 400,
+            BuildTime = 400,
+			
+            NewOmniRadius = 100,
+            NewVisionRadius = 50,
+        },
+		ResourceAllocation = {
+            ProductionPerSecondEnergy = 1200,	#from2700
+            ProductionPerSecondMass = 18,
+			
+			BuildCostEnergy = 125000,	#from 150 000e
+            BuildCostMass = 5000,
+            BuildTime = 2500,			#from 1400bt
+        },
+        ResourceAllocationAdvanced = {
+            ProductionPerSecondEnergy = 2100,	#from5400
+            ProductionPerSecondMass = 36,
+			
+			BuildCostEnergy = 125000,	#from 150 000e
+            BuildCostMass = 5000,
+            BuildTime = 2500,			#from 1400bt
+        },
+		Shield = {
+            BuildCostEnergy = 90000,			#from 93750
+            BuildCostMass = 1500,				#from 1500
+            BuildTime = 1500,					#from 1750
+			
+			MaintenanceConsumptionPerSecondEnergy = 250,
+			ShieldMaxHealth = 29000,
+            ShieldRechargeTime = 160,
+            ShieldRegenRate = 40,			#from 37
+        },
+		ShieldHeavy = {
+            BuildCostEnergy = 480000,			#from 1 000000e
+            BuildCostMass = 3600,				#from 4500m	
+            BuildTime = 2400,					#from 3500
+			
+			ShieldMaxHealth = 44000,
+            ShieldRechargeTime = 200,
+            ShieldRegenRate = 60,		#from 44
+        },
+		Teleporter = {
+            BuildCostEnergy = 1500000,
+            BuildCostMass = 15000,
+            BuildTime = 5000,			#from 4200
+        },
+	},
+	Transport = {
+        CanFireFromTransport = true,
+    },
+	Veteran = {
+        RequirementMult = 0.5,
+    },
+	Weapon = {
+        {
+			MaxRadius = 23,  #from 22 
+        },
+        {
+			DamageType = 'Overcharge',
+			MaxRadius = 23,  #from 22 
+			RateOfFire = 0.25,			#from 0,3= 4s
+        },
+        {
+			Buffs = {
+                {
+                    Add = {
+                        OnFire = true,
+                    },
+                    BuffType = 'STUN',
+                    Duration = 2,
+                    Radius = 38,
+                    TargetAllow = 'MOBILE',
+                    TargetDisallow = 'EXPERIMENTAL,COMMAND',
+                },
+            },
+		
+			FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Air|Seabed',
+                Seabed = 'Land|Water|Air|Seabed',
+                Water = 'Land|Water|Air|Seabed',
+				Air = 'Land|Water|Air|Seabed',
+            },
+			
+			MaxRadius = 38,					#from 35
+			RateOfFire = 0.25,				#from 5s
+			
+			EnergyDrainPerSecond = 400,		#from 200
+            EnergyRequired = 400,			#from 200
+        },
+        {
+        },
+		{
+        },
+    },
+}

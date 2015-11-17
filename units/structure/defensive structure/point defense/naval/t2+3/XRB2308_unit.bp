@@ -1,0 +1,75 @@
+#Torpedo launcher T3
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrb2308", 
+
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+	Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'CYBRAN',
+        'MOBILE',			#from structure
+		'NEEDMOBILEBUILD',	#add
+        'DEFENSE',
+        'TECH3',
+        'ANTINAVY',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYSONAR',
+        'OVERLAYANTINAVY',
+        'SORTDEFENSE',
+    },
+    Defense = {
+		ArmorType = 'Normal',	#from structure
+        Health = 12500,		#from 11000
+        MaxHealth = 12500,
+    },
+	Display = {
+        Abilities = {
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_torpedo>Torpedoes',
+			'<LOC ability_personalstealth>Personal Stealth',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 30000,
+        BuildCostMass = 3000,
+        BuildTime = 3750,
+    },
+    Footprint = {
+        MinWaterDepth = 2,
+        SizeX = 2,
+        SizeZ = 2,
+    },
+    Intel = {
+        RadarStealth = true,
+        SonarRadius = 60,
+        SonarStealth = true,
+        VisionRadius = 35,			#from 20
+        WaterVisionRadius = 50,		#from 45
+    },
+    Physics = {
+        MotionType = 'RULEUMT_SurfacingSub',
+		MaxSpeed = 0.1,		#this is only for not stay visible on radar, it cant move
+    },
+    Veteran = {
+        Level1 = 60,
+        Level2 = 120,
+        Level3 = 180,
+        Level4 = 240,
+        Level5 = 300,
+    },
+}

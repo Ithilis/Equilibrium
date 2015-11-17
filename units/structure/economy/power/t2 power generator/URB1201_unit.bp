@@ -1,0 +1,17 @@
+#T2 Power generator
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb1201",
+
+    Defense = {
+        Health = 2000,
+        MaxHealth = 2000,
+    },
+    Economy = {
+        BuildCostEnergy = 12000,
+        BuildCostMass = 1200,
+        BuildTime = 1875,
+        ProductionPerSecondEnergy = 500,
+    },
+}

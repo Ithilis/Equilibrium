@@ -1,0 +1,12 @@
+#T1 energy storage
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb1105", 
+
+    Economy = {
+        BuildCostEnergy = 2000,
+        BuildCostMass = 200,
+        BuildTime = 250,
+    },
+}

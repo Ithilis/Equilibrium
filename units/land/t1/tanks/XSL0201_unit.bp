@@ -1,0 +1,42 @@
+#Thaam
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsl0201",
+
+    Economy = {
+        BuildCostEnergy = 275,
+        BuildCostMass = 55,
+        BuildTime = 275,
+    },
+	Defense = {
+        Health = 370,
+        MaxHealth = 370,
+    },
+	Physics = {
+        MaxAcceleration = 3.5,	#from 3,6
+        MaxBrake = 3.5,
+        MaxSpeed = 3.4,			#from3,5
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+	Veteran = {
+        Level1 = 2,
+        Level2 = 4,
+        Level3 = 6,
+        Level4 = 8,
+        Level5 = 10,
+    },
+	Weapon = {
+		{
+		Damage = 29,		#from 32 its 22dps
+		},
+	},
+}

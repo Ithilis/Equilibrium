@@ -1,0 +1,100 @@
+#T3 cybran submarine Plan B
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urs0304",
+
+    Buffs = {
+        Regen = {
+            Level1 = 8,
+            Level2 = 12,
+            Level3 = 16,
+            Level4 = 20,
+            Level5 = 24,
+        },
+    },
+	Defense = {
+        Health = 5000,		#from3500
+        MaxHealth = 5000,
+    },
+    Economy = {
+        BuildCostEnergy = 78750,
+        BuildCostMass = 5250,
+        BuildTime = 27000,
+		MaintenanceConsumptionPerSecondEnergy = 100,
+    },
+    General = {
+        OrderOverrides = {
+            RULEUTC_StealthToggle = {
+                bitmapId = 'stealth-personal',
+                helpText = 'toggle_stealth_personal',
+            },
+        },
+        ToggleCaps = {
+            RULEUTC_StealthToggle = true,
+        },
+    },
+    Intel = {
+		RadarStealth = true,
+		SonarStealth = true,
+        SonarRadius = 60,
+        VisionRadius = 35,
+        WaterVisionRadius = 35,	#from 45
+    },
+    Physics = {
+        Elevation = -3.5,		#from -1,5
+        MaxAcceleration = 4.5,	#from3,3
+        MaxBrake = 4.5,
+        MaxSpeed = 4.5,
+		MaxSpeedReverse = 4.5,
+    },
+    Veteran = {
+        Level1 = 160,
+        Level2 = 320,
+        Level3 = 480,
+        Level4 = 640,
+        Level5 = 800,
+    },
+    Weapon = {
+        {
+            DamageRadius = 3,		#from4
+        },
+        {
+            Damage = 70,			#from 45 = 350dps
+            MaxRadius = 65,			#from80
+        },
+        {
+            Buffs = {
+                {
+                    Add = {
+                        OnImpact = true,
+                    },
+                    AppliedToTarget = true,
+                    BuffType = 'STUN',
+                    Duration = 40,	#from 3
+                    Radius = 50,
+                    TargetAllow = 'MOBILE',
+                    TargetDisallow = 'TECH3,EXPERIMENTAL,COMMAND',
+                },
+				{
+                    Add = {
+                        OnImpact = true,
+                    },
+                    AppliedToTarget = true,
+                    BuffType = 'STUN',
+                    Duration = 30,
+                    Radius = 50,
+                    TargetAllow = 'MOBILE',
+                    TargetDisallow = 'COMMAND',
+                },
+            },
+            MaxRadius = 256,	#from 410
+            MinRadius = 65,		#from 128
+            NukeInnerRingDamage = 10000,	#from 22000+3000 -> 10000+5000
+            NukeInnerRingRadius = 25,	#from 30
+            NukeOuterRingDamage = 5000,
+            NukeOuterRingRadius = 50,	#from 40
+
+        },
+    },
+}

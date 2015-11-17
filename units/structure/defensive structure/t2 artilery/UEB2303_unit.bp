@@ -1,0 +1,47 @@
+#T2 Atrillery installation
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb2303", 
+
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Defense = {
+        Health = 5250,
+        MaxHealth = 5250,
+    },	
+    Economy = {
+        BuildCostEnergy = 27500,
+        BuildCostMass = 2750,
+        BuildTime = 3437.5,
+    },
+    Veteran = {
+        Level1 = 55,
+        Level2 = 110,
+        Level3 = 165,
+        Level4 = 220,
+        Level5 = 275,
+    },
+    Weapon = {
+        {
+			Damage = 3500,
+            DamageRadius = 3.5,
+            FiringRandomness = 1.5,
+			MaxRadius = 130,				#from 128
+            MinRadius = 15,					#from 5
+			
+			EnergyDrainPerSecond = 250,
+            EnergyRequired = 2500,
+			
+			TurretPitchSpeed = 15,	#from 6
+			TurretYawSpeed = 15,	#from 6
+		},
+	},	
+}

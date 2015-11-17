@@ -1,0 +1,13 @@
+# Quantume gateway
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb0304",	
+
+    Economy = {
+        BuildCostEnergy = 45000,
+        BuildCostMass = 3000,
+        BuildRate = 100,
+        BuildTime = 3750,
+    },
+}

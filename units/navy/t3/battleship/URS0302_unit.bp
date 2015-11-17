@@ -1,0 +1,61 @@
+#Battleship Galaxy
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urs0302",
+
+    Buffs = {
+        Regen = {
+            Level1 = 16,
+            Level2 = 22,
+            Level3 = 28,
+            Level4 = 34,
+            Level5 = 40,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 90000,
+        BuildCostMass = 9000,
+        BuildTime = 36000,
+    },
+    Intel = {
+        WaterVisionRadius = 25,
+    },
+    Veteran = {
+        Level1 = 270,
+        Level2 = 540,
+        Level3 = 810,
+        Level4 = 1080,
+        Level5 = 1350,
+    },
+    Weapon = {
+        {
+			Damage = 225,		#from 900 = 450dps
+			DamageRadius = 2.5,	#from2
+			RateOfFire = 1,		#from 0,25
+            MaxRadius = 140,	#from 128
+        },
+        {
+			Damage = 225,		#from 900 = 225dps
+            DamageRadius = 2.5,	#from2
+			RateOfFire = 1,
+            MaxRadius = 140,	#from 128
+        },
+        {
+			Damage = 20,		#= 120dps
+			RateOfFire = 0.666,	#from 1,2 = 1,5s
+        },
+        {
+			Damage = 20,		#= 120dps
+			RateOfFire = 0.666,	#from 1,2 = 1,5s
+        },
+        {
+			Damage = 25,		#from 10 =50dps
+			MaxRadius = 60,
+        },
+        {
+        },
+        {
+        },
+    },
+}

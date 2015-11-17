@@ -1,0 +1,16 @@
+name = "Equilibrium_balance_mod"
+uid = "EEEEEEEE-EEEE-EEEE-EEEE-EEQQQQQQQQQQ"
+version = 29.0
+copyright = "none"
+description = "Fixes all the common issues with the game, and improves the balance to a much higher level."
+icon = "/mods/Equilibrium_balance_mod/Equilibrium_balance_mod.png"
+author = "Ithilis"
+selectable = true
+enabled = true
+exclusive = false
+ui_only = false
+requires = {}
+requiresNames = {}
+conflicts = {}
+before = {}
+after = {}

@@ -1,0 +1,53 @@
+#Selen
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsl0101",
+
+    Economy = {
+        BuildCostEnergy = 375,	#75e/s
+        BuildCostMass = 25,
+        BuildTime = 125,
+    },
+	Defense = {
+        Health = 75,
+        MaxHealth = 75,
+    },
+	Physics = {
+        MaxAcceleration = 4.5,
+        MaxBrake = 4.5,
+        MaxSpeed = 4.5,
+    },
+	Transport = {
+        CanFireFromTransport = true,
+    },
+	Weapon = {
+		{
+		Damage = 10,			#20 dps
+		MaxRadius = 13,
+		RateOfFire = 2,
+		FireTargetLayerCapsTable = {
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+		TargetPriorities = {
+                'SPECIALHIGHPRI',
+				'TECH1 MOBILE RADAR',
+				'COMMAND',				#ACU hight priority for ghetto sniping
+				'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+			},
+		TurretPitchRange = 180,
+        TurretPitchSpeed = 85,
+        TurretYawRange = 180,
+        TurretYawSpeed = 180,
+		},
+	},
+	SizeX = 0.7,
+	SizeZ = 0.7,
+}

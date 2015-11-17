@@ -1,0 +1,15 @@
+#T2 Naval factory
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb0203",
+
+	Economy = {
+        BuildCostEnergy = 12000,
+        BuildCostMass = 1650,
+        BuildRate = 60,
+        BuildTime = 1800,
+		StorageEnergy = 0,
+        StorageMass = 0,	
+    },
+}

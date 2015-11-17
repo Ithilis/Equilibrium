@@ -1,0 +1,18 @@
+#T3 Radar
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb3104",
+
+    Economy = {
+        BuildCostEnergy = 48000,
+        BuildCostMass = 2400,
+        BuildTime = 3750,
+        MaintenanceConsumptionPerSecondEnergy = 2000,
+    },
+	Intel = {
+        OmniRadius = 200,	#from 200
+        RadarRadius = 500,	#from 600
+        VisionRadius = 30,
+    },
+}

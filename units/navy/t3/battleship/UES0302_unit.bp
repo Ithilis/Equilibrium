@@ -1,0 +1,68 @@
+#Battleship Summit
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="ues0302",
+
+    Buffs = {
+        Regen = {
+            Level1 = 16,
+            Level2 = 22,
+            Level3 = 28,
+            Level4 = 34,
+            Level5 = 40,
+        },
+    },
+	Defense = {
+        Health = 50000,		#from 51000
+        MaxHealth = 50000,
+    },
+    Economy = {
+        BuildCostEnergy = 90000,
+        BuildCostMass = 9000,
+        BuildTime = 36000,
+    },
+    Intel = {
+        WaterVisionRadius = 25,
+    },
+    Veteran = {
+        Level1 = 270,
+        Level2 = 540,
+        Level3 = 810,
+        Level4 = 1080,
+        Level5 = 1350,
+    },
+    Weapon = {
+        {
+			DamageRadius = 2.5,	#from2
+			Damage = 900,	#from 1000 = 405dps
+			MuzzleVelocity = 28,	#from 30
+        },
+        {
+            DamageRadius = 2.5,	#from2
+			Damage = 900,	#from 1000 = 405dps
+			MuzzleVelocity = 28,	#from 30
+        },
+        {
+			DamageRadius = 2.5,	#from2
+			Damage = 900,	#from 1000 = 405dps
+			MuzzleVelocity = 28,	#from 30
+        },
+        {
+			Damage = 17,	#From 12 = 4x20dps
+        },
+        {
+			Damage = 17,
+        },
+        {
+			Damage = 17,
+        },
+        {
+			Damage = 17,
+        },
+		{
+        },
+		{
+        },
+    },
+}

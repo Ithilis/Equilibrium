@@ -1,0 +1,13 @@
+#Nuke defense
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uab4302", 
+
+    Economy = {
+        BuildCostEnergy = 75000,
+        BuildCostMass = 7500,
+        BuildRate = 800,
+        BuildTime = 9375,
+    },
+}

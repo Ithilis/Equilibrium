@@ -1,0 +1,60 @@
+#Spectra T1.75 gunship
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uaa0203",
+
+    Air = {
+        MaxAirspeed = 13,		#from12
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+    Veteran = {
+        Level1 = 5,
+        Level2 = 10,
+        Level3 = 15,
+        Level4 = 20,
+        Level5 = 25,
+    },
+    Defense = {
+        Health = 750,
+        MaxHealth = 750,	
+    },
+    Display = {
+        UniformScale = 0.15,
+    },
+    Economy = {
+        BuildCostEnergy = 3750,
+        BuildCostMass = 175,
+        BuildTime = 1000,
+    },
+    Physics = {
+        FuelUseTime = 300,
+    },
+    Weapon = {
+        {
+            Damage = 10,	#from 13 = 50dps
+            MaxRadius = 22,
+            MuzzleVelocity = 40,
+            ProjectilesPerOnFire = 4,
+            RateOfFire = 1.25,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+	        Damage = 250,
+            DamageRadius = 1.5,
+            DisplayName = 'Air Crash',
+        },
+    },
+}

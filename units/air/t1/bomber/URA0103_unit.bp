@@ -1,0 +1,75 @@
+#T1 cybran bomber
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ura0103", 
+
+
+    Air = {
+        MaxAirspeed = 11,		#from 10
+        MinAirspeed = 11,
+		BreakOffDistance = 28,	#from 30
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 1875,
+        BuildCostMass = 75,
+        BuildTime = 500,
+    },
+    Physics = {
+        FuelUseTime = 240,
+    },
+    Weapon = {
+        {
+            Damage = 60,				#from 50	
+			DamageFriendly = false,			
+            DamageRadius = 3.5,			#from3
+            FiringRandomness = 3,		#from3
+            MaxRadius = 40,
+            MuzzleSalvoDelay = 0.2,
+            MuzzleSalvoSize = 6,
+            MuzzleVelocity = 0,
+            ProjectilesPerOnFire = 6,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Muzzle_L03',
+                        'Muzzle_R03',
+                        'Muzzle_L02',
+                        'Muzzle_R02',
+                        'Muzzle_L01',
+                        'Muzzle_R01',
+                    },
+                    RackBone = 'Muzzle_L03',
+                },
+            },
+            RateOfFire = 0.1666, #from 4s
+            TargetPriorities = {
+                'SPECIALHIGHPRI',		#from prioritize air units :D
+				'ENGINEER',
+                'LAND MOBILE TECH1',
+                'LAND MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+            Damage = 100,
+            DamageRadius = 1,
+        },
+    },
+}
+
+
+
+
+
+

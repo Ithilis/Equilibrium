@@ -1,0 +1,15 @@
+#T1 Naval factory
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsb0103",
+
+	Economy = {
+        BuildCostEnergy = 3000,
+        BuildCostMass = 300,
+        BuildRate = 20,
+        BuildTime = 300,
+		StorageEnergy = 0,
+        StorageMass = 0,	
+    },
+}

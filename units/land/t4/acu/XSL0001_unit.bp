@@ -1,0 +1,135 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "xsl0001",
+
+	Buffs = {
+        Regen = {
+            Level1 = 5,
+            Level2 = 10,
+            Level3 = 15,
+            Level4 = 20,
+            Level5 = 25,
+        },
+    }, 	
+    Economy = {
+        BuildCostEnergy = 50000,		#from 5000000 	repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
+        BuildCostMass = 2000,			#from 18 000	repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
+        BuildRate = 10,
+        BuildTime = 10000, 				#from 60000000
+		StorageEnergy = 4000,			#from 4000
+        StorageMass = 800,				#from 650
+		TeleportEnergyMod = 3.255,
+    },
+    Enhancements = {
+        AdvancedEngineering = {
+            NewHealth = 1000,			#from 3000
+            NewRegenRate = 20,
+			NewBuildRate = 40,			#from 42
+			
+			BuildCostEnergy = 14000,		#from 18000
+            BuildCostMass = 700,			#from 720
+            BuildTime = 700,				#from 900
+        },
+		DamageStabilization = {
+            BuildCostEnergy = 90000,
+            BuildCostMass = 2000,
+            BuildTime = 2000,			#from 2800
+			
+            NewHealth = 6000,
+            NewRegenRate = 75,
+        },
+		DamageStabilizationAdvanced = {
+            BuildCostEnergy = 450000,
+            BuildCostMass = 4500,
+            BuildTime = 3000,		#from 4200
+
+            NewHealth = 21000,
+            NewRegenRate = 125,		#its 75+125 = 200hp/s
+        },
+		T3Engineering = {
+			NewBuildRate = 120,			#from 126
+			
+			BuildCostEnergy = 50000,		#from 50000	drain 200e/s
+            BuildCostMass = 2500,			#from 2400	drain 10m/s
+            BuildTime = 10000,				#from 8400
+		},
+		Missile = {
+            BuildCostEnergy = 60000,
+            BuildCostMass = 1200,
+            BuildTime = 1200,
+		},
+		BlastAttack = {
+            BuildCostEnergy = 300000,	#from 300K
+            BuildCostMass = 3000,		#from 3500 = 15m/s
+            BuildTime = 2000,			#= 200s
+			NewMaxRadius = 26,			#add
+        },
+        RateOfFire = {
+            NewMaxRadius = 28,			#from30
+        },
+		ResourceAllocation = {
+            ProductionPerSecondEnergy = 1500,	#from3000
+            ProductionPerSecondMass = 16,
+			
+			BuildCostEnergy = 125000,	#from 150 000e
+            BuildCostMass = 5000,
+            BuildTime = 2500,			#from 1400bt
+        },
+        ResourceAllocationAdvanced = {
+            ProductionPerSecondEnergy = 2700,	#from6000
+            ProductionPerSecondMass = 32,
+			
+			BuildCostEnergy = 125000,	#from 150 000e
+            BuildCostMass = 5000,
+            BuildTime = 2500,			#from 1400bt
+        },
+		
+		RegenAura = {
+            ACUAddHealth = 1500,			#from 1000
+			NewRegenRate = 15,				#from 0
+            BuildCostEnergy = 9000,			#from 4500
+            BuildCostMass = 600,			#from 600
+            BuildTime = 600,
+            Radius = 23, 					# 22
+            RegenCeiling = 20, 				# 15
+            RegenFloor = 5,					# 0
+			MaxHealthFactor = 1.0625,		#added
+            RegenPerSecond = 0.02, 			
+        },
+		AdvancedRegenAura = {
+            ACUAddHealth = 4500, 			#from 2500
+			NewRegenRate = 30,				#from 0
+            BuildCostEnergy = 42000,		#from 31250	drain 300e/s
+            BuildCostMass = 1400,			# drain 10m/s
+            BuildTime = 1400,				#from 1250
+            Radius = 33,					#30
+            RegenCeiling = 60,				#from 200
+            RegenFloor = 10,				#from 0
+            MaxHealthFactor = 1.15, 		#from 10%
+            RegenPerSecond = 0.01,			#from 0,01111111
+        },
+		Teleporter = {
+            BuildCostEnergy = 1500000,
+            BuildCostMass = 15000,
+            BuildTime = 5000,			#from 4200
+        },
+	},
+	Veteran = {
+        RequirementMult = 0.5,
+    },
+    Weapon = {
+        {
+		MaxRadius = 23,  #from 22          
+        },
+        {
+		DamageType = 'Overcharge',
+		MaxRadius = 23,  #from 22 
+		RateOfFire = 0.25,			#from 0,3= 4s
+        },
+        {
+        },
+        {
+            MinRadius = 15,
+        },
+    },
+}

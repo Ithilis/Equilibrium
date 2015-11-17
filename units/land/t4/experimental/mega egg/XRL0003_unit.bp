@@ -1,0 +1,13 @@
+#Brick egg
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrl0003",
+
+    Economy = {
+        BuildCostEnergy = 10000,
+        BuildCostMass = 1000,
+        BuildTime = 1000,
+        BuildUnit = 'xrl0305',
+    },
+}

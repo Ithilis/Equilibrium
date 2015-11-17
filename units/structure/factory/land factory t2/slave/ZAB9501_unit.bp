@@ -1,0 +1,14 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "zab9501",
+
+Economy = {
+        BuildCostEnergy = 1500,
+        BuildCostMass = 300,
+        BuildRate = 50,
+        BuildTime = 750,
+        StorageEnergy = 0,
+		StorageMass = 0,
+		DifferentialUpgradeCostCalculation = false, 
+    },
+}	

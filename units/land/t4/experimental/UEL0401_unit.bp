@@ -1,0 +1,74 @@
+#Fatboy
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uel0401",
+
+
+    Buffs = {
+        Regen = {
+            Level1 = 15,
+            Level2 = 30,
+            Level3 = 45,
+            Level4 = 60,
+            Level5 = 75,
+        },
+    },
+    Veteran = {
+	RequirementMult = 0.5,
+        Level1 = 85,
+        Level2 = 170,
+        Level3 = 255,
+        Level4 = 340,
+        Level5 = 425,
+    },
+    Defense = {
+        Health = 20000,
+        MaxHealth = 20000,
+        RegenRate = 15,					#from 20
+        Shield = {
+            ShieldMaxHealth = 15000,
+            ShieldRechargeTime = 120,	#from 160
+            ShieldRegenRate = 85,		#from 64
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 350000,
+        BuildCostMass = 28000,
+        BuildRate = 200,		#from 180
+        BuildTime = 46666,					# its three time faster as build same mass in percivals/bricks
+        MaintenanceConsumptionPerSecondEnergy = 250,	#from 500
+    },
+    Weapon = {
+        {
+			Damage = 250,		#4x525dps on 100r
+        },
+        {
+			Damage = 250,
+        },
+        {
+			Damage = 250,
+        },
+        {
+			Damage = 250,
+        },
+        {
+			Damage = 225,		#2x750dps on 45r
+        },
+        {
+			Damage = 225,
+        },
+        {
+			Damage = 120,
+        },
+        {
+			Damage = 120,	#from 20 =350AA dmg in total
+        },
+        {
+            Damage = 150,			#from 75
+            MaxRadius = 60,			#from 40
+        },
+        {
+        },
+    },
+}

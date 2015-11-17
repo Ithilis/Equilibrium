@@ -1,0 +1,62 @@
+#Bacon frigate
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="uas0103",
+
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+    Defense = {
+        Health = 2000,	#from 1800
+        MaxHealth = 2000,
+    },
+    Economy = {
+        BuildCostEnergy = 2800,
+        BuildCostMass = 280,
+        BuildTime = 1120,
+    },
+    Intel = {
+        RadarRadius = 80,
+        SonarRadius = 80,		#from 82
+        VisionRadius = 30,		#from 32
+        WaterVisionRadius = 35,	#from 16
+    },
+    Physics = {
+        MaxAcceleration = 5.8,	#from 6
+        MaxBrake = 5.8,
+        MaxSpeed = 5.8,
+        MaxSpeedReverse = 5.8,
+    },
+    Veteran = {
+        Level1 = 8,
+        Level2 = 16,
+        Level3 = 24,
+        Level4 = 32,
+        Level5 = 40,
+    },
+    Weapon = {
+        {
+            Damage = 150,			#from 140
+			RateOfFire = 0.2,
+            MaxRadius = 35,			#from 31
+			MuzzleChargeDelay = 0.5,
+        },
+        {
+            Damage = 150,			#from 140
+			RateOfFire = 0.2,
+            MaxRadius = 35,			#from 31
+			MuzzleChargeDelay = 0.5,
+        },
+        {
+			RateOfFire = 0.2,		#from 0,1
+			MaxRadius = 35,			#from 31
+        },
+    },
+}

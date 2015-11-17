@@ -1,0 +1,43 @@
+#T2 sera transport
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsa0104", 
+
+	Air = {
+        MaxAirspeed = 16,		#from15 for not be catch by interceptor
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Defense = {
+        RegenRate = 5,
+    },
+    Economy = {
+        BuildCostEnergy = 8000,
+        BuildCostMass = 280,
+        BuildTime = 1600,
+    },
+    Physics = {
+        FuelUseTime = 420,
+    },
+    Weapon = {
+        {
+        },
+        {
+        },
+        {
+            Damage = 8,		#from2 land dmg = 20dps
+        },
+        {
+            Damage = 100,	#from 25, crash dmg
+			DamageRadius = 2,
+        },
+    },
+}

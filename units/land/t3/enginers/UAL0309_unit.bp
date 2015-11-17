@@ -1,0 +1,36 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ual0309", 
+
+    Economy = {
+		BuildCostEnergy = 3750,	#200e/s
+		BuildCostMass = 375,	#20m/s
+		BuildTime = 1875,		#18,75s
+		BuildRate = 37.5,		#from 40
+		StorageEnergy = 0,
+        StorageMass = 0,
+		
+		SacrificeMassMult = 0.8,	#from 0.6
+        SacrificeEnergyMult = 3.2,	#from 0.6 = 40x more energy as mass, enginer cost 10x more energy as mass
+    },
+	Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'AEON',
+        'MOBILE',
+        'LAND',
+        'TECH3',
+        'CONSTRUCTION',
+        'ENGINEER',
+        'REPAIR',
+        'RECLAIM',
+		'REBUILDER',	#add
+        'CAPTURE',
+        'HOVER',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'PATROLHELPER',
+        'SHOWQUEUE',
+    },
+}

@@ -1,0 +1,85 @@
+#Salvation
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xab2307", 
+
+	Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'STRUCTURE',
+        'STRATEGIC',
+        'TECH3',
+        'INDIRECTFIRE',
+        'ARTILLERY',
+        'DRAGBUILD',
+        'SIZE16',				#from 20
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYINDIRECTFIRE',
+        'SORTSTRATEGIC',
+    },
+	Display = {
+        Tarmacs = {
+            {
+				Albedo = 'Tarmacs/Tar6x_aeon_01_albedo',
+                Normal = 'Tarmacs/Tar6x_aeon_01_normals',
+            },
+        },
+    },
+	Footprint = {
+        SizeX = 5,	#from 7x7
+        SizeZ = 5,
+    },
+    LifeBarOffset = 2.9,	#from 3,8
+    Physics = {
+        SkirtSizeX = 8,	#from 10x10
+        SkirtSizeZ = 8,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Defense = {
+        Health = 13000,
+        MaxHealth = 13000,
+    },
+    Economy = {
+        BuildCostEnergy = 1080000,
+        BuildCostMass = 72000,
+        BuildTime = 45000,
+    },
+    Veteran = {
+        Level1 = 144,
+        Level2 = 288,
+        Level3 = 432,
+        Level4 = 576,
+        Level5 = 720,
+    },
+	Weapon = {
+        {
+            Damage = 100,					#from 220
+            DamageRadius = 4,				#from 2
+            EnergyDrainPerSecond = 4250,	#from 12000
+            EnergyRequired = 8500,			#
+            FiringRandomness = 0.35,		#from 0,25
+            FiringTolerance = 0.01,			#from 0,01
+            MaxRadius = 700,				#from 1800
+            MinRadius = 150,				#
+            MuzzleVelocity = 80,			#
+            MuzzleVelocityReduceDistance = 750,	#
+            ProjectilesPerOnFire = 36,		#25 but in reality its 36
+            RateOfFire = 0.166,				#from 0,32 = 6s=600dps
+
+        },
+    },
+}
+

@@ -1,0 +1,48 @@
+#T2 Infinite  cruiser
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="uas0202",
+
+    Buffs = {
+        Regen = {
+            Level1 = 8,
+            Level2 = 12,
+            Level3 = 16,
+            Level4 = 20,
+            Level5 = 24,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 13000,	#from 18000
+        BuildCostMass = 1950,
+        BuildTime = 7800,
+    },
+    Intel = {
+        RadarRadius = 150,
+        SonarRadius = 120,
+        VisionRadius = 65,
+        WaterVisionRadius = 60,
+    },
+    Veteran = {
+        Level1 = 60,
+        Level2 = 120,
+        Level3 = 180,
+        Level4 = 240,
+        Level5 = 300,
+    },
+	Weapon = {
+        {
+            Damage = 200,				#from 140=100dps
+            FiringRandomness = 0.15,	#from 0,5
+            MaxRadius = 80,				#from 60
+
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+    },
+}

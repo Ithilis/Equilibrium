@@ -1,0 +1,79 @@
+#sera spy plane
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsa0302", 
+
+    Air = {
+        MaxAirspeed = 25,	#from30
+        MinAirspeed = 20,	#from25
+    },
+	Defense = {
+        Health = 200,		#from1100
+        MaxHealth = 200,
+        RegenRate = 5,		#from0
+    },
+    Economy = {
+        BuildCostEnergy = 7500,
+        BuildCostMass = 200,
+        BuildTime = 1200,
+		MaintenanceConsumptionPerSecondEnergy = 150,	#for stealth when not moving
+    },
+    Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'SERAPHIM',
+        'MOBILE',
+        'AIR',
+        'HIGHALTAIR',
+        'TECH3',
+        'INTELLIGENCE',
+		'COUNTERINTELLIGENCE',		#add cloak, stealth while not moving
+        'RADAR',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYOMNI',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+    },
+    Display = {
+        Abilities = {
+			'<LOC ability_cloak>Cloaking',	
+			'<LOC ability_personalstealth>Personal Stealth',
+            '<LOC ability_omni>Omni Sensor',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+        },
+    },
+	General = {
+        OrderOverrides = {
+            RULEUTC_StealthToggle = {
+                bitmapId = 'stealth-personal',
+                helpText = 'toggle_stealth_personal',
+            },
+        },
+        ToggleCaps = {
+            RULEUTC_StealthToggle = true,
+        },
+    },
+    Intel = {
+        Cloak = true,	
+		RadarStealth = true,		
+        OmniRadius = 25,	#from 30
+        RadarRadius = 80,	#from96/85
+        VisionRadius = 50,	#from64/55
+        SonarRadius = 85,	#from98
+    },
+    Physics = {
+        FuelRechargeRate = 15,
+        FuelUseTime = 600,
+    },
+    Weapon = {
+        {
+            Damage = 150,
+            DamageRadius = 1.5,
+            DisplayName = 'Air Crash',
+        },
+    },
+}

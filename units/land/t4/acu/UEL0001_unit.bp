@@ -1,0 +1,132 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "uel0001",
+
+	Buffs = {
+        Regen = {
+            Level1 = 5,
+            Level2 = 10,
+            Level3 = 15,
+            Level4 = 20,
+            Level5 = 25,
+        },
+    }, 	
+    Economy = {
+        BuildCostEnergy = 50000,		#from 5000000 	repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
+        BuildCostMass = 2000,			#from 18 000	repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
+        BuildRate = 10,
+        BuildTime = 10000, 				#from 60000000
+		StorageEnergy = 4000,			#from 4000
+        StorageMass = 800,				#from 650
+		TeleportEnergyMod = 3.255,
+    },
+    Enhancements = {
+        AdvancedEngineering = {
+            NewHealth = 1000,		#from 3000
+            NewRegenRate = 20,
+			NewBuildRate = 40,		#from 42
+			
+			BuildCostEnergy = 14000,		#from 18000
+            BuildCostMass = 700,			#from 720
+            BuildTime = 700,				#from 900
+        },
+		T3Engineering = {
+			NewBuildRate = 120,		#from 126
+			
+			BuildCostEnergy = 50000,		#from 50000	drain 200e/s
+            BuildCostMass = 2500,			#from 2400	drain 10m/s
+            BuildTime = 10000,				#from 8400
+		},			
+		HeavyAntiMatterCannon = {
+            NewMaxRadius = 28,		#from 30
+        },
+		LeftPod = {
+            BuildCostEnergy = 2250,
+            BuildCostMass = 150,
+            BuildTime = 300,
+        },
+		RightPod = {
+            BuildCostEnergy = 2250,
+            BuildCostMass = 150,
+            BuildTime = 300,
+        },
+        ResourceAllocation = {
+            ProductionPerSecondEnergy = 1800,	#from3300
+            ProductionPerSecondMass = 14,
+			
+			BuildCostEnergy = 125000,	#from 150 000e
+            BuildCostMass = 5000,
+            BuildTime = 2500,			#from 1400bt
+        },
+        DamageStablization = {
+            BuildCostEnergy = 48000,
+            BuildCostMass = 1200,
+            BuildTime = 1200,
+            NewHealth = 2000,		#add
+            NewRegenRate = 60,
+        },
+		Shield = {
+            BuildCostEnergy = 126000,	#from 112500
+            BuildCostMass = 1400,		#from 1500
+            BuildTime = 1400,			#from 2100
+
+            MaintenanceConsumptionPerSecondEnergy = 250,
+            ShieldMaxHealth = 24000,
+            ShieldRechargeTime = 140,
+            ShieldRegenRate = 35,
+        },
+		ShieldGeneratorField = {
+            BuildCostEnergy = 500000,	#from 450 000e
+            BuildCostMass = 3000,
+            BuildTime = 2000,			#from 2800
+
+            ShieldMaxHealth = 36000,
+            ShieldRechargeTime = 175,
+            ShieldRegenRate = 50,		#from 42
+            ShieldSize = 16,
+        },
+		TacticalMissile = {
+            BuildCostEnergy = 60000,
+            BuildCostMass = 1200,
+            BuildTime = 1200,
+		},	
+		TacticalNukeMissile = {
+            BuildCostEnergy = 375000,	#from 315 000
+            BuildCostMass = 5000,		#from 5400
+            BuildTime = 2500,			#from 5600
+        },
+		Teleporter = {
+            BuildCostEnergy = 1500000,
+            BuildCostMass = 15000,
+            BuildTime = 5000,			#from 4200
+        },
+	},
+	Veteran = {
+        RequirementMult = 0.5,
+    },	
+	Weapon = {
+        {
+		MaxRadius = 23,  #from 22
+        },
+        {
+		DamageType = 'Overcharge',
+		MaxRadius = 23,  #from 22 
+		RateOfFire = 0.25,			#from 0,3= 4s
+        },
+        {
+            MinRadius = 15,
+			DamageRadius = 3,
+        },
+        {
+            Label = 'TacNukeMissile',
+            MaxRadius = 256,
+            MinRadius = 25,		#from 5
+            NukeInnerRingDamage = 9000,#from 12000
+            NukeInnerRingRadius = 15,	#from 15
+            NukeOuterRingDamage = 1000,	#from 250
+            NukeOuterRingRadius = 20,	#from 25
+        },
+        {
+        },
+    },
+}

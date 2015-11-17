@@ -1,0 +1,44 @@
+#T2 Static Shield ED1
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb4202", 
+
+    Defense = {
+        Health = 100,
+        MaxHealth = 100,
+        Shield = {
+            ShieldMaxHealth = 4000,
+            ShieldRechargeTime = 18,
+            ShieldRegenRate = 40,
+            ShieldSize = 18,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 3000,
+        BuildCostMass = 200,
+        BuildRate = 12.5,
+        BuildTime = 500,
+        MaintenanceConsumptionPerSecondEnergy = 75,
+    },
+	General = {
+        CommandCaps = {
+            RULEUCC_Attack = false,
+            RULEUCC_CallTransport = false,
+            RULEUCC_Capture = false,
+            RULEUCC_Guard = false,
+            RULEUCC_Move = false,
+            RULEUCC_Nuke = false,
+            RULEUCC_Patrol = false,
+			RULEUCC_Pause = false,
+            RULEUCC_Reclaim = false,
+            RULEUCC_Repair = false,
+            RULEUCC_RetaliateToggle = false,
+            RULEUCC_Stop = true,
+            RULEUCC_Transport = false,
+        },
+	},
+    Intel = {
+        RadarStealth = true,
+    },
+}

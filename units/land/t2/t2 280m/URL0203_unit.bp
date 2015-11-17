@@ -1,0 +1,55 @@
+#Wagner
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0203",
+	
+	Economy = {
+        BuildCostEnergy = 2800,		#2x more Energy
+        BuildCostMass = 280,
+        BuildTime = 1400,
+    },
+    Defense = {
+        Health = 1500,
+        MaxHealth = 1500,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Intel = {
+        VisionRadius = 15,
+        WaterVisionRadius = 5,	#from 20
+    },
+	Veteran = {
+        Level1 = 8.5,
+        Level2 = 17,
+        Level3 = 25.5,
+        Level4 = 34,
+        Level5 = 42.5,
+    },
+    Weapon = {
+			{
+            Damage = 200,		#60dps
+            MaxRadius = 23,
+            MuzzleVelocity = 30,
+			RateOfFire = 0.3030303030,
+            },
+			{
+            Damage = 60,		#30dps
+            MaxRadius = 18,
+			RateOfFire = 0.5,
+            },
+			{
+            Damage = 75,		#10dps
+            MaxRadius = 20,
+            ProjectilesPerOnFire = 2,
+            RateOfFire = 0.0666,
+			},
+    },
+}

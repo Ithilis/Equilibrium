@@ -1,0 +1,79 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ual0205",
+
+	Economy = {
+		BuildCostEnergy = 1000,
+		BuildCostMass = 200,
+		BuildTime = 1000,
+	},
+	Defense = {
+        Health = 900,		#from 1000
+        MaxHealth = 900,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Veteran = {
+        Level1 = 6,
+        Level2 = 12,
+        Level3 = 18,
+        Level4 = 24,
+        Level5 = 32,
+    },
+	Weapon = {
+        {
+        Damage = 90,
+		DamageRadius = 2.5,		#from 4
+		MuzzleVelocity = 27.5,	#from 20
+		MaxRadius = 38,			#from 40
+		TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'AIR MOBILE HIGHPRIAIR',
+				'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+			},
+		},
+		{
+            AboveWaterTargetsOnly = true,      
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            CountedProjectile = false,
+            Damage = 0,								#its only for same behaviour 
+            DamageRadius = 0,
+            DamageType = 'Normal',
+            DisplayName = 'Serpentine Missile',
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            Label = 'MissileRack',
+            MaxRadius = 28,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_IndirectFire',
+            RateOfFire = 0,
+            RenderFireClock = true,
+            SlavedToBody = true,
+            TargetCheckInterval = 2,
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.15,
+            TurretDualManipulators = false,
+            Turreted = false,
+            WeaponCategory = 'Missile',
+            WeaponRepackTimeout = 0,
+            WeaponUnpacks = false,
+        },
+	},
+}

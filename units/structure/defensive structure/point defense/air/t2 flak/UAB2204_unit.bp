@@ -1,0 +1,42 @@
+#T2 static flack 
+	
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uab2204",
+	
+	
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Veteran = {
+        Level1 = 8,
+        Level2 = 16,
+        Level3 = 24,
+        Level4 = 36,
+        Level5 = 48,
+    },
+    Defense = {
+        Health = 2400,
+        MaxHealth = 2400,
+    },
+    Economy = {
+        BuildCostEnergy = 4200,
+        BuildCostMass = 420,
+        BuildTime = 525,
+    },
+    Weapon = {
+        {
+            Damage = 300,
+            DamageRadius = 3.5,
+            MuzzleVelocity = 30,
+            RateOfFire = 0.5,
+			FiringRandomness = 2,
+        },
+    },
+}

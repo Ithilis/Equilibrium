@@ -1,0 +1,24 @@
+#T3 Static Shield 
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsb4301", 
+
+    Defense = {
+        Health = 700,
+        MaxHealth = 700,
+        Shield = {
+            ShieldMaxHealth = 21000,
+            ShieldRechargeTime = 25,
+            ShieldRegenRate = 160,
+            ShieldSize = 50,
+            ShieldVerticalOffset = -7,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 72000,
+        BuildCostMass = 3600,
+        BuildTime = 4500,
+        MaintenanceConsumptionPerSecondEnergy = 500,
+    },
+}

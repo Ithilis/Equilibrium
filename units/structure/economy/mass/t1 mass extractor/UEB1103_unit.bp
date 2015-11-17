@@ -1,0 +1,15 @@
+#T1 Mass Extractor
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb1103", 
+
+    Economy = {
+        BuildCostEnergy = 250,
+        BuildCostMass = 20,
+        BuildRate = 12.5,
+        BuildTime = 50,
+        MaintenanceConsumptionPerSecondEnergy = 1,
+		ProductionPerSecondMass = 2,
+    },
+}

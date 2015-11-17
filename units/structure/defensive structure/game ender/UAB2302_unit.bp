@@ -1,0 +1,66 @@
+#T3+ Artilery Emisary
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uab2302", 
+
+	Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'STRUCTURE',
+        'STRATEGIC',
+        'EXPERIMENTAL',
+        'INDIRECTFIRE',
+        'ARTILLERY',
+        'DRAGBUILD',
+        'SIZE16',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWATTACKRETICLE',
+        'OVERLAYINDIRECTFIRE',
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 15,
+            Level2 = 30,
+            Level3 = 45,
+            Level4 = 60,
+            Level5 = 75,
+        },
+    },
+    Defense = {
+        Health = 15000,
+        MaxHealth = 15000,
+		RegenRate = 5,		#from 0
+    },
+    Economy = {
+        BuildCostEnergy = 4320000,
+        BuildCostMass = 216000,
+        BuildTime = 90000,
+    },
+    Veteran = {
+        Level1 = 432,
+        Level2 = 864,
+        Level3 = 1296,
+        Level4 = 1728,
+        Level5 = 2160,
+    },
+	Weapon = {
+        {
+            Damage = 15000,		#from 6000 = 2000dps
+            DamageRadius = 6,		#from5
+            EnergyDrainPerSecond = 7500,	#
+            EnergyRequired = 15000,			#
+            FiringRandomness = 0.2,	#from 0,35
+            MaxRadius = 1800,	#
+            MinRadius = 175,	#
+            MuzzleVelocity = 100,	#from 65
+            MuzzleVelocityReduceDistance = 1750,	#
+            RateOfFire = 0.0666,	#15s
+        },
+    },
+}
+

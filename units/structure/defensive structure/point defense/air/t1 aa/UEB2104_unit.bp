@@ -1,0 +1,32 @@
+#T1 static AA
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb2104",
+
+    Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+	Defense = {
+        Health = 850,
+        MaxHealth = 850,
+    },
+    Economy = {
+        BuildCostEnergy = 1500,
+        BuildCostMass = 150,
+        BuildTime = 150,	#from 188
+    },
+    Veteran = {
+        Level1 = 3,
+        Level2 = 6,
+        Level3 = 9,
+        Level4 = 12,
+        Level5 = 15,
+    },
+}

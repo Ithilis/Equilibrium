@@ -1,0 +1,558 @@
+v.29
+______
+- selen speed hp 75 (from 85) range 13 (from 18) dps 20 (from 22)
+- hunter aoe 6 (from 5)
+- loyalist EMP disalow stun command units, add yelow range for emp blast, add diplay from volitail to EMP weapon. 
+
+- acu energy cost 50 000e build time 10 000bt (from 48K 20K) -> for proper number while repairing. 
+- T2 upgrade +500HP
+
+- T1 bomber freintl fire false (from true) 
+
+- veterancy mass multiplier 150% from 100%
+- sacu new max hp after vet bonus 15% from 20%
+- sera sacu mass cost 2000m 100 000e 5000bt +1m/150e/s (from 1800m +1m/20e/s)
+
+-------VETERANCY-------------
+- sacu new max hp after vet bonus 15% from 20%
+- veterancy mass multiplier 200% from 100%
+
+
+Combat:
+T1: +0.5+1+1.5+2+2.5 	=> 0.5/1.5/3/5/7.5
+T2: +1+2+3+4+5 		=> 1/3/6/10/15
+T3: +1.5+3+4.5+6+7.5	=> 1.5/4.5/9/15/22.5
+Sac:+2+4+6+12+16 	=> 2/6/12/24/30
+T4: +5+10+15+20+25	=> 5/15/30/50/75
+
+Raider:
+T1:+1+1+1+1+1 => 1/2/3/4/5
+T2:+2+2+2+2+2 => 2/4/6/8/10
+T3:+3+3+3+3+3 => 3/6/9/12/15
+
+Ship (combat):
+T1: +1+2+3+4+5 => 1/3/6/10/15
+T2: +2+4+6+8+10 => 2/6/12/20/30
+T3: +6+12+18+24+30 => 6/18/36/60/90
+
+Submarine (raider):
+T1: +2+2+2+2+2 => 2/4/6/8/10
+T2: +3+3+3+3+3 => 3/6/9/12/15
+T3: +6+6+6+6+6 => 6/12/18/24/30
+
+ACU (raider): 5+5+5+5+5 => 5/10/15/20/25
+
+
+v.28
+_______
+- adjustancy bonus from mass storage fixed, now gain 6,25% again
+
+
+v.27
+------
+- build rate of mega 40 (from 10) 
+-- build time of mega egg increase for avoin super fast assist situation
+-- fixed bad numbers on engi + AA egg
+
+- T1 aeon submarine speed 7 (from 6,5) (because dont have deck gun)
+- T1 aeon frigate speed 5,8 (from 5,5)
+- t2 cybran mobile bomb hp 300(from 400)
+
+- add proper unit description for all units (esecialy sacu preset)
+
+- T1 aeon lab removed reclaim
+-- Add capture tool with 2,5br
+
+- sacrifice system add 20x more energy as mass (from 5x more)
+-- T1/2 enginer 0,8m/3,2e T3 enginer 0,8m/1,6e sacu 0,8m/0,8e
+
+- cybran sacu combatant preset fixed -> i add stealth on preset and then it magical work. 
+- cybran acu base regen 15 (from 10)
+-- cybran T2 1500hp (from 2000)
+-- cybran gun 500hp (from 1000)
+
+- obsidian shield regen 5sHP/s (from2)
+- titan shield regen 10sHP/s (from 6)
+- Harbringer shield regen 15sHP/s (from 6)
+
+- add proper veterancy system with sharing veterancy (Thx to IceDreamer)
+
+
+-------VETERANCY-------------
+_____________________________
+BEFORE VET:
+- unit need destroy 100% own mass to next vet lvl
+- destroy unit with *vet star gain 20%more xp for every * => 1* gain 120%xp 5* gain 200% xp
+- units cooperate on kills gain xp equal %of damage that gain to target, xp are shared on all units that take dmg
+
+AFTER VET:
+- units(T1/2/acu/sacu) gain 20% more max hp (from 10%) T3 units gain 15% more max hp, experimental gain 10%
+- gain regeneration that divide on 2 category: 
+-- combat units -> gain regeneration whith rise exponencional
+-- raider units -> gain regeneration with rise aritmetical
+
+Combat:
+T1: +1+2+3+4+5 => 1/3/6/10/15
+T2: +2+4+6+8+10 => 2/6/12/20/30
+T3: +3+6+9+12+15 => 3/9/18/30/45
+Sac: +4+8+12+24+36 => 4/12/24/40/60
+T4: +12+24+36+48+60 => 12/36/72/120/180
+
+Raider:
+T1:+2+2+2+2+2 => 2/4/6/8/10
+T2:+4+4+4+4+4 => 4/8/12/16/20
+T3:+6+6+6+6+6 => 6/12/18/24/30
+
+Ship (combat):
+T1: +2+4+6+8+10 => 2/6/12/20/30
+T2: +4+8+12+16+20 => 4/12/24/40/60
+T3: +12+24+36+48+60 => 12/36/72/120/180
+
+Submarine (raider):
+T1: +4+4+4+4+4 => 4/8/12/16/20
+T2: +6+6+6+6+6 => 6/12/18/24/30
+T3: +12+12+12+12+12 => 12/24/36/48/60
+
+ACU (raider): 5+5+5+5+5 => 5/10/15/20/25
+
+Combat units: building, T1/2/3 tanks(non fast), artilerys, mobile aa, AA air, T2F/B, gunships, ships
+Raider units: land scout, labs, t2 hover tanks, t2 range bots, t3 raid bots, t3 snipers, bombers, transport, submarine
+
+
+- sera acu regen field
+-- regen field dont lower regeneration of sacu (old bug) celling is aply only on regen that add regen field not afetc other regeneration
+-- simple field regen flor 5 (from 0)
+-- advance field regen ceiling 60 (from 225)
+
+- ACUs require destory 50% own mass for next vet level
+- ACUs mass cost 2000m => need destroy 1000m = +-20T1 units to get veterancy but destroy acu gain 2x more
+
+- EXPERIMENTALs require destry 50% own mass for next vet lvl
+- EXPERIEMENTALs add 10% new max hp (from 20% as others)
+- T3 add 15% new max hp
+
+
+________________________________
+
+
+
+
+v.26
+----
+
+-add new mod icon
+
+- chronodumper able to fire on air units automatic (dont need ground fire to hit air)
+- chrono add posibility to fire from transport (in bp alow fire from transport then hook acu is premise about turn gun off when trans /except chrono)
+
+v.25
+----
+- fix mass storage adjustancy that was magicali removed, no clue where and why i remove it.. 
+- fix mercy bug with max speed and max air speed (max speed adjust for same as max air speed)
+
+- mantis rof 2 (from 3) damege 10 from 7 = dps 20 (from 21)
+- harbringer reclaim while fire  (again)
+- harbringer doubler br for 10 (from5) because doubled reclaim time
+
+- fervor (aeon t1 arty) rof 1s (from2s) adjust dps for same.  	-> for give aeon on T1 some advantage on long range when lose auroras.  
+-- fervor aoe 1 (from 0,5)
+-- TurretPitchRange 75 (from 45)    				-> slightly better manevrability. 
+-- fervor UniformScale 0,09 (from 0,07) 				-> its how big is in game, only grafical side. 
+
+-  lobo vision 8 (from5) for 8s (from 5)
+-- lobo aoe 1,2 (from 1)
+
+- meduza dmg 250 (from 230) = 50dps (from 43)
+
+- labs target priority ->mobile radar ->ACU ->T1 mobile ->T2 mobile...   (for easyr ghetto snipe)
+- selen 30m 450e 6s  (from 25m 375e 5s)
+-- selen is able fire from transport as other lab
+- when invis then weapon are off
+- hunter dps 24 (from 21)
+- flare can reclaim while patrol/atack move now
+- flare add reclaim for 1 (from 0,5) -> becasue doubled reclaim time
+- flare energy cost fixed for drain 50e/s   -> was by mistake
+- Mechmarine hp 145 (from 150) -> for be easyr destroyed by Tham
+
+
+- proper hook units
+- removed lua skript of torpedo launchers it was ussles change, work also whiteout. 
+- cybran t3 torp launcher change motion type for submarine -> fix brokenes where it dont fire
+
+- atlantis add sonar stealth, same as tempest (was missing by mistake)
+
+
+ACU:
+-T2 700m 14000e 700bt (from 720m 18000e 900bt) -> its for corect upgrade cost for 10m/s 
+-T3 2500m 10000bt (from 2400m 8400bt)
+-TML 1200m 60000e 120s to build (from 1000m 50000e 140s)
+-RAS/ADV RAS 125 000e 2500bt (from 150 000e 1400bt) drain 20m/500e//s  -> for easyr drain
+-Teleport 5000bt (from 4200bt)
+
+sera 
+-regen field 600m add +15hp/s for acu
+-- advance regen field 1400m 42000e 1400bt add +30hp/s for acu
+- adv nano 200regen (from 225) 21000hp (from 20000hp)  -> for nice 50K hp on full upgraded acu
+
+Aeon
+- omni 8000e 40s bt (from 1000e 50s bt)
+- shield build time 150s
+- heavy shield build time 2400bt from 3500bt
+- Chronodumper 1500m 60 000e 1500bt add +20hp/s regen, drain 400e need have 400e stored (from 200) 38r (from 35)
+-- chorno fire also on air automatic
+
+UEF
+- drone 150m 2250e 30s bt
+- nano 48000e 120s bt
+- shield 1400m 126000e 140s bt
+- bubble shield  500 000e 2000bt  from 450 000e 2800bt
+- nuke 375000e 2500bt
+
+Cybran
+- laser 4200m 560 000e
+- torpedo 45000e (from 37500e)
+- cloak 5000m 625000e 250s bt 2500e dain 13000hp
+
+
+- T3 radar 500radius (from 600)
+
+- from gamecommon removed 16 lines that say to log show every changed unit   ->>> probably solve issue
+
+SYSTEM:
+-> double reclaim time of wreack -> in lua/sim/unit add line abut reclaim time. 
+
+SAC:
+- br 25 (from 50)
+- sacu wreack is reclaimed 2x slower as other units (from same)
+- explosion changed for death nuke type = dont damage building
+- upgrade price change for inteligent drain, and at all its big change. bscly owerhelming
+
+- preset are changet   -> dont work well!!!!!!!!!!!!
+
+
+
+v24
+---------
+change survival manual:
+-- add line about energy storage that add more adjastancy and fix energy problem
+-- time where will button disiaper 180s (from 300s)
+
+
+- LABs change 
+- LABs target priority changed: t1 mobile radar -> t1 mobile -> T2 mobile -> T3 mobile... 
+-- aeon add reclaim ability 0,5br  hp 125 (from 135)
+-- uef 150hp (from 140) 25.5dps (from 24)
+-- seraphin 22dps (from 18)
+--- seraphin turret pitch/yaw range buffed for better manevrability
+-- Cybran 30m 300e 150bt (from 35m 350e 175bt)
+--- cybran EMP when die (as loyalist) 5aoe 1.5s stun on mobile land T1/T2  -> explosion effect didnt work!
+--- cybran hp 100hp (from 120)
+--- cybran speed 4.3 (from 4,4)
+
+- mantis 1,5br (from 1)
+- fire beetle energy consumption 50e/s (from 35)
+
+_________
+v.23
+-------
+
+- anti nuke building 800bp (from 1080)
+-- anti nuke missile 192K bp (from 259 200bp)
+
+- nuke building 1200bp (from 1080bp)
+-- nume missile 10 500m 1050 000e 360 000bp 300s (from 12K m 1350K e 324K bt 300s)
+
+
+_________________
+v.22
+________
+- fix mirror log warning
+
+v.21
+-------------
+
+- proper hooked lua/sim/AdjacencyBuffs file -> debuger dont screm about duplicity
+- repair wrong hook for beetles, and torpedo launchers
+
+- military structure (PD/Artilery/Tml/Nuke) get veterancy level after destroy 100% own mass (from 150%)
+-- game T3/T4 artilery/nuke get veterancy level after destroy 10% own mass (from 15%)
+
+- T3 ravenger hp 6500 (from 7500)
+
+- mavor, ylona oss, paragon build time decreese for 90 000bt (from 13500) energy cost decreese for 20/25x more as mass cost
+
+- Air experimental build time decrees about 20%, for drain 20/30m/s
+
+- hoplite hp 550 (from 500)
+-- hoplite reload time 5s (from 4s)
+-- damage per salve 225 (from 180)
+-- damage freindly = false (from true)
+-- change target priority, where ACU is higer priority
+
+- mongoose hp 1250 (from 1350)
+-- corecting dps for 7s reload time, what is hard lock
+-- damage freindly = false (from true)
+
+- deciver, parashield, asylum get +5hp/s regeneration
+
+- Sera sniper -> removed energy consumption from code (was by mistake)
+
+
+- fire beetle fixed where was bugged
+-- vision radius 20 (from 22)
+-- change reclaim hp and mass value for 0,1 (from 0,9) becasue wreack still occur, what should not -> dont know why its bugged
+
+- Mass storage 150m 1500e 187,5bt 1000m storage (from 100m 1000e 125bt 500m storage)
+
+________________
+
+
+
+v.20
+----------
+- acu tml cost fixed for 1000m
+- acu tml projectile change removed -> for be actual
+- cybran tml misile file removed
+- sacu fixed for equilibrium value
+- change speed of aeon/sera flak for standard value 3
+- fix aeon frigate stats
+- corsair fix muzzle velocity
+- change solace range for standard value
+
+
+v19
+-----------
+- add new mod logo
+- proper hook Cybran/Seraphim ACU
+- fix reall personal stealth on t2/3 torpedo launcher
+
+- T3 pgen explosion 7500(from 8000) -> for not make chain reaction
+
+- T1 tanks decreese speed for 0,1 -> for making labs better for raiding
+- UEF/Aeon Labs speed 4.2 (from 4)
+-- Cybran lab speed 4.4 (from 4.2)
+
+- sparky get back on enginer units when selected. 
+-- sparky speed 2,8 (from 2,5) -> same as mml/flak
+
+- Fuel interceptor/swift/asf/T3 gunship + 60s
+
+- t2 artilery rework. turret rotate speed 15 (from6)
+-- Cybran  2500m 25000e 3125bt 300/3000e for shot; 4750hp, 1,75fr, 150dps, 15s reload time, 10-120range, STUN:10aoe T1-4s T2-3s T3-2s Naval: T1-3s T2-2s T3-1s
+-- UEF 2750m 27500e 3437,5bt 250/2500e for shot; 5250hp, 1,5fr, 175dps, 15-130r
+-- SERA 2750m 27500e 3437,5bt 250/2500e for shot; 5000hp, 1,25fr, 175dps, 15-130r
+-- Aeon 3000m 30000e 3750bt, 300/3000e for shot; 5000hp, 1fr, 200dps, 15-140r
+
+_______________
+v18 
+------------
+- mass storage 1500hp (back from 1000 what was mistake)
+- T2/3 torpedo laucnher is buildable, but again visible on radar.. it need be fixed in some different way
+- HOT FIX aeon oc that in some way was not working..  -> aeonweapon need be properly hooked
+- frigates water vision 35(from60)
+- T1 submarine water vision/visual vision 15 (from 40)
+- T2 submarien water vision/visual vision 20 (from 50)
+- T3 submarine water vision/visual vision 35 (from 60)
+- T4 submarine water vision 55 (from 80)
+
+- Summit main cannon muzzle velocity 28 (from 30) 
+-- Summit main cannon damage 900 =405dps (from 1000 =450dps)
+______________________________
+v17
+_____________
+- ADD mod info with survival manual, that will show for 5minute, and then diseaper (thx Washy)
+
+- fix bug with personal shields on acu/sacu. 
+- sera sacu tml storage max 3 from 1
+-- sera sacu tml aoe 3.5 (from 3)
+-- sera sacu tml minimal range 15 (from 5)
+
+- sparky selection priority 1    ->as military untis
+
+- uef billi upgrade cost 5000m 300 000e 5600bt (from 5400m 315 000e 5600bt)
+- billi missile cost 3000m 300 000e 3000bt (from 3000m 316260e 3060bt)
+-- billi missile hp 3 (from 4)
+-- uef acu billi minimal range 25 (from 5)
+-- billi dmg 9000dmg on 15aoe + 1000dmg on 25aoe (from 12000 15aoe + 250dmg on 25aoe)
+
+- scatis aoe 5 (from 3) firing randomnes 0,4 (from 0,5)
+_________________________________________
+v15
+_____________
+- fixed stuff that cause brokenes from last patch
+- aeon sniper bot 65r (from 75)
+- sera sniper bot 70r (from 80)
+_____________________________________
+v14
+__________________
+- fixed stuff that cause brokenes from last patch
+- mass storage 100m 1000e 125bt 1000hp 750 death explosion, 6,25% adjustancy (on every mex) (from 200m 1500e 50s 1000death explosion 12,5% adjustancy)
+- t3 mex 4000m 38 000e 16mass income (from 4800m 48000e 18mass income)
+
+- T1 bomber first target priority for enginner
+-- t1 aeon second target priority for t2 mobile flak, thirth priority for T2 mobile units
+- T2 bombers target priority for T3 mobile antiair ->T2 mobile anti-air
+- T2 corsair AA 4x50 dmg (from 4x 37,5) range 40 (from 30) muzzle velocity 95 (from 55)
+
+- t1 air scout lose omni
+- T2 torpedo bombers get omni 20r
+
+- ACU seraphin regen aura:
+-- regen aura 500m 9000e +1500hp on acu(from 1000) max range 23 (from 22) units inside +6,25%max hp (from 0), apply for 10s (from 5s)
+-- advance regen aura 37500e +4500hp (from 2500) 33max range (from 30) max regen 225 (from 200) minimal regen 10 (from0) units around +15% new max hp (from 10%) regen 1% (from 1,11111%)
+- ACU sera Advance gun new maximum range 26r (from 0)
+
+- T1 submarines visual intel 15 (from 32)
+- t2 submarines visual intel 15 (from 32)
+- T3 submarines visual intel 15 (from 32/16)
+____________________________________________
+v13
+___________________________
+- Salvation 6s reload time (from 5) aoe 4 (from 5) firing randomnes 0,35 (from 0,15)
+- Emissar move on T4 (for not mesh up with salvation)
+_______________________________________
+v12
+__________________
+- T2 artilery are buildable on T3
+-- T2/3 artilery range 135 (from 140)
+
+- galaxy main canon 1s reload time (from 4)
+-- torpedo 50dps (from 20dps)
+-- AA 2x60dps 1,5reload time (from 2x30dps 0,8s reload time)
+- summit AA 4x20dps (from 4x14dps)
+- Huaathum AA 2x25dmg / 2s = 100dps 1 firing randomness 30 muzzle
+- Bulwark shield dome aoe 80 (from 120)
+- T1maa muzzle 60 (from 45)
+-- cyrban t1 maa muzzle 35 (from 25)
+
+- megalith underwater vision 45 (from 32)
+- soul ripper 400AA dps (from 240)
+
+- T3 Pgen 8000hp (from 10000)
+- T3 fabricator 10aoe death explosion (from 14)
+- mass storage adjustancy on T3 mex +6,25% +25% in total(from +12,5%/50% in total)
+
+- T3 air factory 240s bt 120K energy cost (from 180s bt 180K energy)
+- Cybran ED4 buildable on T3 (with same price as every upgrade)
+
+- Salvation 6s reload time (from 5) aoe 4 (from 5) firing randomnes 0,35 (from 0,15)
+- Emissar move on T4 (for not mesh up with salvation)
+
+_________________________________________
+v. 11
+_____________________________
+
+- Loaylist swap weapon range 
+- aeon t1 bomber dont stun/damage freinldy units
+- aeon t1 aa boad AA 45 (from 35)
+- acu regen +5 per lever (from +3)
+- cybran acu T2 +2000hp (from 3000)
+- cybran acu gun upgrade +1000hp (from 0)
+- mongoose long range (33r) change target priority for acu
+
+- t1 transport 12 speed (from 10)
+- t2 transport  16 speed (from 15)
+
+- T1 Pgen 75m 25s bt death explosion 300dmg 2,5aoe (form 75m 750e 25s 250dmg 2aoe)
+- start with 800e (from 1000)
+- t1 mex 250e (from 300)
+
+- uef t3 ravenger 1950m 253dps (from 1800m 353dps)
+
+_____________________________________________
+v10
+__________________________________________
+- hive price 275m 2750e 55s bt
+- kennel price 325m 3250e 65s bt, building br 20 (from 25)
+-- kennel drone 125m 1250e 25s bt (from 250m)
+- uef tmd, better aiming misile. 
+- cybran split missile speed 5 (from 7)
+
+- T2 static Artillery
+-- Cybran 2fr 
+-- UEF 1,75fr 
+-- SERA 1,5fr 3000hp (from 2200)
+-- Aeon 1,25fr 
+
+- T1 Jester dps 55(from 45) 0,4rof (from 0,3)
+- T3 bombers reload time 6s (from 8s)
+- t4 bomber reload time 15s (from 20s)
+
+- t1 mobile AA 20dps/21dps aeon (from 16/15aeon) 3,5speed (from 3)
+-- t1 aa cybran 26dps 35r (from 32)
+- T2 mobile flak 25/27,5 muzzle velocity 
+-- t2 mobile flak 38r (from 40)
+
+- T4 Fateboy main cannon (100r) 525dps (from 750)
+-- close cannon (45r) 750dps (from 450)
+-- shield reload time 120s (from 160)
+
+____________________________
+below is not integrate and is only my note what need to fix somewhere...
+___________________________
+- sacu preset ikonky
+
+
+Chrono aby nestunovalo vlastnych
+
+
+- sera acu advance gun prida +3 range, ale ked ho zrusi range sa nezrusi spet. èo je zle a treba to nejak fixnut. 
+
+- anti nuka, nestava ked stalujes s niecim... 
+
+- transporty kedze enviem fixnut stealth.. tak mozno mu dat jamming. alebo nieco take.. jast idea
+
+- uprav cenu upgradov na sacu a aby boli zaokruhlene cisla
+
+
+
+
+stealt building
+-- change units behavior so dont stay visible on radar after reveal
+-- visual intel 5 (from 20) for not be effective as intel
+
+musis vyhodit tarmak inak je vidiet ze tam je nejaka budova, rsp bola.. 
+
+
+- sacu cena za upgrady upratat, aby to malo normalne cisla. a nepolozilo to eko
+
+- t2 torpedo bomber chyba omny radius..
+- aeon chronodumper, dont stunn ally units (fixed) - undone  nefunguje to ani u icedreamera 
+
+
+
+- stealth na transportoch. 
+- wraky aby neignorovali stit. 
+
+
+- cruiser AA issue,   je taka ze cruiser je sialene silny proti airu,  velmi vela dps ktory nuti air strielat po cruiseri inak death.   
+co by mohlo pomoct, je dat dole dps a pridat equivalent hpciek. takze by tam ten air mohol lietat dlhsie
+
+- chrono stunuje ally  - zle som prepisal kod, pozri sa na to viac, musis i pridat aeonske weaoni a nieco tam spravit... 
+
+- aeon t1 AA boat dat mu torp defens ktory i funguje
+
+janus miss issue,  dat mu t1 arty projektil ktory vychne vo vzduchu, a padne dole, aby tolko nemisoval a vypadal super
+
+
+- cyrbansky teleport ako jediny nema animaciu na mieste portovania..   imho by tam mala byt, bezohladu na to ze je telemazer featura a ju to kazdi... to je dalsi sposob kontroli a skilu ktory to dokaze odhalit. najskor ju len niekto pre to vyhodil. 
+
+
+- vyries repair. aby nestal mass ale len enegriu. 
+
+RAS a adv RAS  ras 2500m a polovicna ucinnost,   tj vyhoda sa posunie skor. 
+cybran stealth spravit advance stealth kedy bude mat aoe efekt ako ma decivet a pridavat nejak 3000hp acucku
+cloac potom spravit lacnejsi, a menej hp aby to sedelo. 
+- air faktorka roll time ice dreamer zevraj spravil cas stavania enginerou rovnaky na kazdu faktorku. skopiruj a skontroluj
+
+mercina pridat effekt ako ma miasma, 
+merrcina pridat velmi kratky stun na jednotky, nefunguje to. neviem preèo
+
+
+- sera advance gun  pridava +3range a ked sa odstrani range nezmyzne, treba to nejak fixnut. 
+
+- fuel -> aby ked sa minie palivo a 30s bol bez prikazu, aby sa siel automaticky natankovat. 
+
+- skus spravit carrier, aby po pouzití funkcie carrier jednotky mali viac hp, ktory casom klesá az bonus vyprcha. 
+
+- chrono dumper zmenit popis aby bolo jasne ze pridava hp a regen a ze nie je pravda ze je to hight energy consumption

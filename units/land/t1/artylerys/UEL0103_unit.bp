@@ -1,0 +1,35 @@
+#Lobo
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uel0103",
+
+    Economy = {
+        BuildCostEnergy = 175,
+        BuildCostMass = 35,
+        BuildTime = 175,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+	Veteran = {
+        Level1 = 1,
+        Level2 = 2,
+        Level3 = 3,
+        Level4 = 4,
+        Level5 = 5,
+    },	
+	Weapon = {
+        {
+			DamageRadius = 1.2,		#from 1
+            CameraLifetime = 8,		#from 5
+            CameraVisionRadius = 8,	#from 5
+        },
+    },
+}

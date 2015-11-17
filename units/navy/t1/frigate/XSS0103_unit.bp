@@ -1,0 +1,34 @@
+#sera frigate
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="xss0103",
+
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+     Economy = {
+        BuildCostEnergy = 2600,
+        BuildCostMass = 260,
+        BuildTime = 1040,
+    },
+    Intel = {
+        RadarRadius = 80,
+        SonarRadius = 80,		#from 82
+        VisionRadius = 30,		#from 32
+        WaterVisionRadius = 35,	#from 16
+    },
+    Weapon = {
+        {
+            MaxRadius = 30,
+        },
+        {
+        },
+    },
+}

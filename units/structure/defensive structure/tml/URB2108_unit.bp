@@ -1,0 +1,34 @@
+#TML
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb2108", 
+
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 8500,
+        BuildCostMass = 850,
+        BuildTime = 1062.5,
+    },
+    Veteran = {
+        Level1 = 16,
+        Level2 = 32,
+        Level3 = 48,
+        Level4 = 64,
+        Level5 = 80,
+    },
+    Weapon = {
+        {
+            DamageRadius = 3,	#from 2
+			MaxProjectileStorage = 8,	#from 10
+        },
+    },
+}

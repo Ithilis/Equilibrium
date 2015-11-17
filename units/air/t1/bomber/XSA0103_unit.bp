@@ -1,0 +1,49 @@
+#T1 sera bomber
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsa0103", 
+
+
+    Air = {
+        MaxAirspeed = 11,		#from 10
+        MinAirspeed = 11,
+		BreakOffDistance = 28,	#from 30
+    },
+    Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 1875,
+        BuildCostMass = 75,
+        BuildTime = 500,
+    },
+    Physics = {
+        FuelUseTime = 240,
+    },
+    Weapon = {
+        {
+            DamageRadius = 4.5,
+			DamageFriendly = false,
+            RateOfFire = 0.1666, 	#from 0.25 = 6sec
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+				'ENGINEER',
+                'LAND MOBILE TECH1',
+                'LAND MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+            Damage = 100,
+            DamageRadius = 1,
+        },
+    },
+}

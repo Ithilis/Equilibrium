@@ -1,0 +1,34 @@
+#T1 mass storage
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ueb1106", 
+
+    Defense = {
+        Health = 1500,
+        MaxHealth = 1500,
+    },
+    Economy = {
+        BuildCostEnergy = 1500,
+        BuildCostMass = 150,
+        BuildTime = 187.5,
+		StorageMass = 1000,
+    },
+	Display = {
+        Abilities = {
+            '<LOC ability_deathaoe>Volatile',
+        },
+	},	
+	Weapon = {
+        {
+            Damage = 750,
+            DamageFriendly = true,
+            DamageRadius = 5,
+            DamageType = 'Normal',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
+        },
+    },
+}

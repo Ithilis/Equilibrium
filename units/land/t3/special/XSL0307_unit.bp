@@ -1,0 +1,68 @@
+#Athanah (sera mobile shield)
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsl0307", 
+
+	Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'SERAPHIM',
+        'MOBILE',
+        'LAND',
+		'NAVAL',
+        'TECH3',
+        'SHIELD',
+        'DEFENSE',
+        'HOVER',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDEFENSE',
+    },
+    Defense = {
+		Health = 1000,	#from 400
+        MaxHealth = 1000,
+		RegenRate = 5,
+        Shield = {
+            ShieldRechargeTime = 50,
+            ShieldRegenRate = 100,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 9250,
+        BuildCostMass = 518,
+        BuildTime = 3700,
+    },
+	Display = {
+        Abilities = {
+            '<LOC ability_hover>Hover',
+            '<LOC ability_shielddome>Shield Dome',
+        },
+	},
+	Weapon = {
+        {
+            AboveWaterTargetsOnly = true,      
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            CountedProjectile = false,
+            Damage = 0,								
+            DamageRadius = 0,
+            DamageType = 'Normal',
+            DisplayName = 'Serpentine Missile',
+            Label = 'MissileRack',
+            MaxRadius = 38,							#its only for same behaviour 
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_IndirectFire',
+            RateOfFire = 0,
+            RenderFireClock = true,
+            SlavedToBody = true,
+            TargetCheckInterval = 2,
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.15,
+            TurretDualManipulators = false,
+            Turreted = false,
+            WeaponCategory = 'Missile',
+		},
+    },
+}

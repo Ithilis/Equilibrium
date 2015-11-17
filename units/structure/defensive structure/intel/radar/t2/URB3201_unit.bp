@@ -1,0 +1,17 @@
+#T2 Radar 
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urb3201",
+
+    Economy = {
+        BuildCostEnergy = 4000,
+        BuildCostMass = 200,
+        BuildRate = 25,
+        BuildTime = 625,
+        MaintenanceConsumptionPerSecondEnergy = 250,
+    },
+	Intel = {
+		RadarStealth = true,
+    },
+}

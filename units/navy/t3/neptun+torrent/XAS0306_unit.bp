@@ -1,0 +1,53 @@
+# Torrent ship
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="xas0306",
+
+    Buffs = {
+        Regen = {
+            Level1 = 16,
+            Level2 = 22,
+            Level3 = 28,
+            Level4 = 34,
+            Level5 = 40,
+        },
+    },
+    Defense = {
+        Health = 20000,		#from 15000
+        MaxHealth = 20000,
+    },
+    Economy = {
+        BuildCostEnergy = 105000,	#from 80 000e
+        BuildCostMass = 8000,
+        BuildTime = 36000,			#from 16000bt
+    },
+    Intel = {
+        WaterVisionRadius = 25,		#from 50
+    },
+    Veteran = {
+        Level1 = 240,
+        Level2 = 480,
+        Level3 = 720,
+        Level4 = 960,
+        Level5 = 1200,
+    },
+    Weapon = {
+        {
+            Damage = 1000,		#from 800
+            DamageRadius = 3,	#from 2
+        },
+        {
+            Damage = 1000,		#from 800
+            DamageRadius = 3,	#from 2
+        },
+        {
+        },
+		{
+        },
+		{
+        },
+		{
+        },
+    },
+}

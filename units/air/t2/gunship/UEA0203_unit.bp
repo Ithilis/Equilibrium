@@ -1,0 +1,50 @@
+#stinger
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uea0203",
+
+    Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Veteran = {
+        Level1 = 7,
+        Level2 = 14,
+        Level3 = 21,
+        Level4 = 28,
+        Level5 = 35,
+    },
+    Defense = {
+        AirThreatLevel = 0,
+        ArmorType = 'Light',
+        EconomyThreatLevel = 0,
+        Health = 900,			#from 880hp
+        MaxHealth = 900,
+        RegenRate = 0,
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 6,
+    },
+    Economy = {
+        BuildCostEnergy = 5250,
+        BuildCostMass = 245,
+        BuildTime = 1400,
+    },
+    Physics = {
+        FuelUseTime = 300,
+    },
+    Weapon = {
+        {
+        },
+        {
+            Damage = 250,
+            DamageRadius = 2,
+            DisplayName = 'Air Crash',
+        },
+    },
+}

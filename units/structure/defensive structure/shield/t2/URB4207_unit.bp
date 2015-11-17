@@ -1,0 +1,61 @@
+#T3 Static Shield ED5
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb4207", 
+
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'CYBRAN',
+        'STRUCTURE',
+        'DEFENSE',
+        'TECH3',	#from t2
+        'SHIELD',
+        'DRAGBUILD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'OVERLAYDEFENSE',
+        'SORTDEFENSE',
+    },
+    Defense = {
+        Health = 1000,
+        MaxHealth = 1000,
+        Shield = {
+            ShieldMaxHealth = 15000,
+            ShieldRechargeTime = 22,
+            ShieldRegenRate = 140,
+            ShieldSize = 40,
+			ShieldVerticalOffset = -5,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 75000,
+        BuildCostMass = 4000,
+        BuildRate = 25,
+        BuildTime = 2000,
+        MaintenanceConsumptionPerSecondEnergy = 500,
+    },
+	General = {
+        CommandCaps = {
+            RULEUCC_Attack = false,
+            RULEUCC_CallTransport = false,
+            RULEUCC_Capture = false,
+            RULEUCC_Guard = false,
+            RULEUCC_Move = false,
+            RULEUCC_Nuke = false,
+            RULEUCC_Patrol = false,
+			RULEUCC_Pause = false,
+            RULEUCC_Reclaim = false,
+            RULEUCC_Repair = false,
+            RULEUCC_RetaliateToggle = false,
+            RULEUCC_Stop = true,
+            RULEUCC_Transport = false,
+        },
+	},
+	Intel = {
+        RadarStealth = true,
+    },
+}

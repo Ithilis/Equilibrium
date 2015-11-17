@@ -1,0 +1,42 @@
+#Fervor
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ual0103",
+
+    Economy = {
+        BuildCostEnergy = 175,
+        BuildCostMass = 35,
+        BuildTime = 175,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+    },
+	Display = {
+        UniformScale = 0.09,		#◘from 0,7
+    },
+	Veteran = {
+        Level1 = 1,
+        Level2 = 2,
+        Level3 = 3,
+        Level4 = 4,
+        Level5 = 5,
+    },
+    Weapon = {
+        {
+            Damage = 100,			#from 200   = same dps but more projectiles
+            DamageRadius = 1,		#from 0,5
+            RateOfFire = 1,			#from 0,5
+			
+            TurretPitchRange = 75,	#from 45
+            TurretYawRange = 75,	#from 45
+        },
+    },	
+}
+

@@ -1,0 +1,15 @@
+#T1 scout
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsa0101", 
+
+    Economy = {
+        BuildCostEnergy = 750,
+        BuildCostMass = 30,
+        BuildTime = 200,
+    },
+    Physics = {
+        FuelUseTime = 240,	#from 500
+    },
+}

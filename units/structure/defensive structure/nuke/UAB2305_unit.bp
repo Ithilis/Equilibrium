@@ -1,0 +1,34 @@
+#Nuke
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uab2305", 
+
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 225000,
+        BuildCostMass = 15000,
+        BuildRate = 1200,
+        BuildTime = 18750,
+    },
+    Veteran = {
+        Level1 = 300,
+        Level2 = 600,
+        Level3 = 900,
+        Level4 = 1200,
+        Level5 = 1500,
+    },
+    Weapon = {
+        {
+            NukeOuterRingDamage = 2500,	#from 500
+        },
+	},	
+}

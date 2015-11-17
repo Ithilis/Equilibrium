@@ -1,0 +1,13 @@
+# Kennel 2
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xeb0204", 
+
+	Economy = {
+        BuildCostEnergy = 4875,
+        BuildCostMass = 325,
+        BuildRate = 25,
+        BuildTime = 1625,
+    },
+}

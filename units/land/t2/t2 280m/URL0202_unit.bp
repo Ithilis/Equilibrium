@@ -1,0 +1,38 @@
+#Rhino
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0202",
+
+	Economy = {
+        BuildCostEnergy = 1400,
+        BuildCostMass = 280,
+        BuildTime = 1400,
+    },
+    Defense = {
+        Health = 1900,
+        MaxHealth = 1900,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Veteran = {
+        Level1 = 8.5,
+        Level2 = 17,
+        Level3 = 25.5,
+        Level4 = 34,
+        Level5 = 42.5,
+    },
+	Weapon = {
+		{
+		Damage = 9,		#90dps
+		RateOfFire = 5,
+		},
+	},
+}

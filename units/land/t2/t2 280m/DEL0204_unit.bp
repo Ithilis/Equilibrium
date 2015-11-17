@@ -1,0 +1,77 @@
+#Mongoose
+
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "del0204",
+	
+	Economy = {
+        BuildCostEnergy = 1400,
+        BuildCostMass = 280,
+        BuildTime = 1400,
+    },
+	Defense = {
+        Health = 1250,
+        MaxHealth = 1250,
+    },
+    Physics = {
+        MaxAcceleration = 2.5,
+        MaxBrake = 2.5,
+        MaxSpeed = 2.5,
+    },
+	Buffs = {
+        Regen = {
+            Level1 = 4,
+            Level2 = 6,
+            Level3 = 8,
+            Level4 = 10,
+            Level5 = 12,
+        },
+    },
+	Veteran = {
+        Level1 = 8.5,
+        Level2 = 17,
+        Level3 = 25.5,
+        Level4 = 34,
+        Level5 = 42.5,
+    },
+	Intel = {
+        VisionRadius = 20,			#from26
+    },
+	AI = {
+		TargetBones = {
+			'Body',		
+			'DEL0204',
+		},
+	},
+	CollisionOffsetX = -0.03,
+	SizeX = 0.9,
+	SizeZ = 0.6,
+    Weapon = {
+        {
+            Damage = 15,			#30dps
+			DamageRadius = 0.5,		#dont miss
+			MaxRadius = 33,
+            FiringRandomness = 0.2,
+            MuzzleVelocity = 35,
+			TargetPriorities = {
+                'SPECIALHIGHPRI',
+				'COMMAND',			#acu is hight priority
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+			},
+        },
+        {
+            Damage = 80,			#45dps = 320per salve
+            DamageRadius = 2.5,
+			DamageFriendly = false,
+            FiringRandomness = 1.75,
+			MaxRadius = 18,
+			CollideFriendly = false,
+			#RateOfFire = 0.15,			this doesnt work, reload time is 7s and change didnt occur
+        },	
+	},
+}

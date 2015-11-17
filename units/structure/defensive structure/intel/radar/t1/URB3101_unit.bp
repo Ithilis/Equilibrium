@@ -1,0 +1,17 @@
+#T1 Radar 
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="urb3101",
+
+    Economy = {
+        BuildCostEnergy = 1000,
+        BuildCostMass = 100,
+        BuildRate = 12.5,
+        BuildTime = 100,
+		MaintenanceConsumptionPerSecondEnergy = 20,
+    },
+	Intel = {
+		RadarStealth = true,
+    },
+}

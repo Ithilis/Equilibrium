@@ -1,0 +1,12 @@
+#Air staging facility
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "urb5202", 
+
+    Economy = {
+        BuildCostEnergy = 2250,
+        BuildCostMass = 150,
+        BuildTime = 187.5,
+    },
+}
