@@ -345,4 +345,7 @@ TypeTable = {
 	
 	xab1401 = 1,
 	
+	-- fire beetle
+	xrl0302 = 1, 
+	
 }

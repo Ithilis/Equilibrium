@@ -30,13 +30,11 @@ local settings = {
         "- This mod aims to improve balance while keeping the same feel of the game. Just play normally.",
         "- However here are some things which you might want to take into account while playing:",
 		"",
-        "1. Air factories cost more energy, but air is cheaper. Dont build first air!",
-        "2. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
-        "3. Mass storages are cheaper, provide less mass, and explode on death! Consider safety and use adjacency.",
-		"4. Energy storages, provide much more adjacency bonus, use them for fix your energy problem.",
-        "5. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
-        "6. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
-        "7. Veterancy doesn't instant-heal units anymore.",
+        "1. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
+        "2. Mass storages are cheaper, provide less mass, and explode on death! Consider safety and use adjacency.",
+        "3. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
+        "4. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
+        "5. Veterancy doesn't instant-heal units anymore. Units share experience from kill.",
 	}
 }
 

@@ -45,7 +45,7 @@ BlueprintId = "xsa0203",
         },
         {
             Damage = 20,				#from12
-			DamageRadius = 1,			#from 0
+			DamageRadius = 0.5,			#from 0
             MaxRadius = 24,				#from 22r
             ProjectilesPerOnFire = 2,
             RateOfFire = 1,

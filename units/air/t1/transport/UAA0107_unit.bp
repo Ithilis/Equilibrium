@@ -3,18 +3,58 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0107", 
-
+	
+	Audio = {
+        CaptureLoop = Sound {
+            Bank = 'UAL',
+            Cue = 'UAL0105_Capture_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+		StartCapture = Sound {
+            Bank = 'UAL',
+            Cue = 'UAL0105_Capture_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+	},
     Air = {
         MaxAirspeed = 12,		#from10
+    },
+	Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'TRANSPORTBUILTBYTIER1FACTORY',
+        'TRANSPORTBUILTBYTIER2FACTORY',
+        'TRANSPORTBUILTBYTIER3FACTORY',
+        'AEON',
+        'MOBILE',
+        'AIR',
+        'TECH1',
+        'TRANSPORTATION',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'TRANSPORTFOCUS',
+        'CANNOTUSEAIRSTAGING',
+		'CAPTURE',			#add
     },
 	Defense = {
         RegenRate = 5,
     },
+	Display = {
+        Abilities = {
+			'<LOC ability_Capture>Capture',
+        },
+	},
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 105,
         BuildTime = 700,
+		BuildRate = 5,
     },
+	General = {
+        CommandCaps = {
+			RULEUCC_Capture = true,
+        },
+	},
     Physics = {
         FuelUseTime = 300,
     },
