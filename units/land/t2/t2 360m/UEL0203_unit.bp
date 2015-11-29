@@ -45,7 +45,7 @@ BlueprintId = "uel0203",
 			Damage = 18,		#120dps
 			TargetPriorities = {
 					'SPECIALHIGHPRI',
-					'COMMAND',			#acu is hight priority
+					'COMMAND',			#acu is high priority
 					'TECH3 MOBILE',
 					'TECH2 MOBILE',
 					'TECH1 MOBILE',
