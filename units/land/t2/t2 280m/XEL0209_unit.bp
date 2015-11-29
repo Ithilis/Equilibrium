@@ -65,4 +65,7 @@ BlueprintId = "xel0209",
         Level4 = 34,
         Level5 = 42.5,
     },
+	Weapon = {
+		MaxRadius = 20,
+    },
 }

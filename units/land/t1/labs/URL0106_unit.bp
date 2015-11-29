@@ -1,0 +1,117 @@
+#Hunter
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "url0106",
+
+	Buffs = {
+        Regen = {
+            Level1 = 2,
+            Level2 = 3,
+            Level3 = 4,
+            Level4 = 5,
+            Level5 = 6,
+        },
+		Stun = {
+		    Add = {
+                OnDeath = true,
+                OnImpact = true,
+            },
+            AppliedToTarget = true,
+            BuffType = 'STUN',
+            Duration = 1,
+            Radius = 10,
+            TargetAllow = 'MOBILE, LAND',
+			TargetDisallow = 'TECH3, COMMAND, EXPERIMENTAL',
+        },
+    },
+    Defense = {
+        Health = 100,
+        MaxHealth = 100,
+    },
+    Display = {
+		Abilities = {
+            '<LOC ability_stun>EMP Weapon',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 300,
+        BuildCostMass = 30,
+        BuildTime = 150,
+    },
+    Physics = {
+        MaxAcceleration = 4.3,
+        MaxBrake = 4.3,
+        MaxSpeed = 4.3,
+    },
+
+    SizeX = 0.8,
+    SizeY = 0.65,
+    SizeZ = 0.8,
+	
+    Veteran = {
+        Level1 = 1,
+        Level2 = 2,
+        Level3 = 3,
+        Level4 = 4,
+        Level5 = 5,
+    },
+    Weapon = {
+		{
+            Damage = 7,	#21dps
+            MaxRadius = 16,
+            MuzzleVelocity = 35,	#from 25
+            ProjectilesPerOnFire = 3,
+            RateOfFire = 1,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+				'TECH1 MOBILE RADAR',
+				'COMMAND',				#ACU hight priority for ghetto sniping
+				'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+			},
+        },
+		{
+            AboveWaterTargetsOnly = true,
+            Accurate = true,
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            Damage = 1,
+            DamageFriendly = false,
+            DamageRadius = 6,
+            DamageType = 'EMP',
+            DisplayName = 'EMP',
+            FireTargetLayerCapsTable = {
+                Air = 'Air|Land|Seabed|Water',
+                Land = 'Air|Land|Seabed|Water',
+                Water = 'Air|Land|Water',
+            },
+            FiringTolerance = 2,
+            IgnoreIfDisabled = true,
+            Label = 'EMP',
+            MaxRadius = 10,
+            MuzzleVelocity = 0,
+            ProjectileId = '/projectiles/CIFEMP01/CIFEMP01_proj.bp',
+            ProjectileLifetimeUsesMultiplier = 1.15,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        0,
+                    },
+                    RackBone = 0,
+                },
+            },
+            RangeCategory = 'UWRC_IndirectFire',		#from direct
+            RateOfFire = 0.5,
+            SalvoSize = 1,
+            SlavedToBody = true,
+            TargetCheckInterval = 1,
+            TargetRestrictDisallow = 'UNTARGETABLE, AIR',
+            WeaponCategory = 'Direct Fire',
+        },
+    },
+}

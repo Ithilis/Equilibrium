@@ -11,14 +11,14 @@ BlueprintId = "url0107",
 		BuildRate = 1.5,	#from 1
     },
 	Defense = {
-        Health = 330,
-        MaxHealth = 330,
+        Health = 375,
+        MaxHealth = 375,
     },
 	Physics = {
-        MaxAcceleration = 3.5,
-        MaxSpeed = 3.5, 		#from 3.7
-        MaxSpeedReverse = 3.5, 
-        MaxSteerForce = 3.5, 
+        MaxAcceleration = 3.7,
+        MaxSpeed = 3.7, 		#from 3.7
+        MaxSpeedReverse = 3.7, 
+        MaxSteerForce = 3.7, 
     },
 	StrategicIconName = 'icon_land1_directfire',
 	Buffs = {
@@ -39,8 +39,10 @@ BlueprintId = "url0107",
     },
 	Weapon = {
 		{
-		Damage = 10,		#from 8 = 20dps
-		RateOfFire = 2,		#from 3
+		Damage = 7,		#from 8 = 21dps
+		MaxRadius = 20,
+		MuzzleVelocity = 31.5,	#from 30
+		RateOfFire = 3,		#from 3
 		},
 	},
 }

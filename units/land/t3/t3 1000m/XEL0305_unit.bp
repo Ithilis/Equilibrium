@@ -35,7 +35,7 @@
 		Weapon = {
 			{
 			Damage = 900,			#300dps
-			MaxRadius = 33,
+			MaxRadius = 32,
 			RateOfFire = 0.333,		#from 4s to 3s 
 			},
 		},

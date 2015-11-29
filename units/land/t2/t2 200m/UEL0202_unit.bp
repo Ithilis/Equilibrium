@@ -9,10 +9,17 @@ BlueprintId = "uel0202",
         BuildCostMass = 200,
         BuildTime = 1000,
     },
+	Physics = {
+        MaxAcceleration = 2.95,
+        MaxBrake = 2.95,
+        MaxSpeed = 2.95,
+    },
 	Weapon = {
 		{
-		Damage = 60,		#60dps
-		RateOfFire = 0.5,
+		Damage = 45,			#60dps
+		MaxRadius = 24,
+		MuzzleVelocity = 32.5,	#from 30
+		RateOfFire = 0.666,	#from 1,3s =1.5s
 		},
 	},
 	Buffs = {

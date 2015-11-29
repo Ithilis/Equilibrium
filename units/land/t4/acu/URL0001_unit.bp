@@ -49,7 +49,7 @@ BlueprintId = "url0001",
             NewHealth = 13000,			#from 15000
         },
         CoolingUpgrade = {
-            NewMaxRadius = 28,			#from30
+            NewMaxRadius = 30,			#from30
 			NewHealth = 500,			#from 0
         },
 		MicrowaveLaserGenerator = {
@@ -76,22 +76,33 @@ BlueprintId = "url0001",
             BuildTime = 5000,			#from 4200
         },
 	},
+	Intel = {
+        OmniRadius = 28,	#from 26
+    },
+	Physics = {
+        MaxAcceleration = 1.8,
+        MaxSpeed = 1.8,
+    },
 	Veteran = {
         RequirementMult = 0.5,
     },
 	Weapon = {
         {
-		MaxRadius = 23,  #from 22
+			MaxRadius = 25,  #from 22
+			TurretPitchSpeed = 100,	#from 90
+			TurretYawSpeed = 100,
         },
         {
-		DamageType = 'Overcharge',
-		MaxRadius = 23,  #from 22 
-		RateOfFire = 0.25,			#from 0,3= 4s
+			DamageType = 'Overcharge',
+			MaxRadius = 25,  #from 22 
+			RateOfFire = 0.25,			#from 0,3= 4s
+			TurretPitchSpeed = 100,	#from 90
+			TurretYawSpeed = 100,
         },
         {
         },
         {
-		MaxRadius = 23,  #from 22
+			MaxRadius = 25,  #from 22
         },
         {
         },

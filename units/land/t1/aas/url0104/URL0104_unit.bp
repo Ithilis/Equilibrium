@@ -162,9 +162,9 @@ UnitBlueprint {
             LAYER_Water = false,
         },
         DragCoefficient = 0.2,
-        MaxAcceleration = 2.7,	#from 2,9
-        MaxBrake = 2.7,			#from 2,9
-        MaxSpeed = 2.7,			#from 2,9
+        MaxAcceleration = 3,	#from 2,9
+        MaxBrake = 3,			#from 2,9
+        MaxSpeed = 3,			#from 2,9
         MaxSpeedReverse = 0,
         MaxSteerForce = 10,
         MinSpeedPercent = 0,
@@ -284,7 +284,7 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CannotAttackGround = false,
             CollideFriendly = false,
-            Damage = 12,	#from 20dps
+            Damage = 9,	#from 10 = 18dps
             DamageType = 'Normal',
             DisplayName = 'Nanodart Launcher',
             FireTargetLayerCapsTable = {
@@ -292,13 +292,13 @@ UnitBlueprint {
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
-            FiringRandomness = 0.45,
+            FiringRandomness = 0.25,
             FiringTolerance = 2,
             Label = 'GroundGun',
-            MaxRadius = 23,
+            MaxRadius = 24,
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
-            MuzzleVelocity = 20,
+            MuzzleVelocity = 25,
             ProjectileId = '/projectiles/CAANanoDart05/CAANanoDart05_proj.bp',
             ProjectileLifetime = 1.6,
             ProjectilesPerOnFire = 1,

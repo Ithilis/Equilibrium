@@ -45,7 +45,7 @@ UnitBlueprint {
         Damage = 75,		#225dmg per salve
         DamageRadius = 2,
 		DamageFriendly = false,
-		MaxRadius = 38,
+		MaxRadius = 36,
 		RateOfFire = 0.2,	#from 0,25 = 5s 
 		TargetPriorities = {
                 'SPECIALHIGHPRI',

@@ -14,9 +14,9 @@ UnitBlueprint {
         MaxHealth = 1250,
     },
     Physics = {
-        MaxAcceleration = 2.5,
-        MaxBrake = 2.5,
-        MaxSpeed = 2.5,
+        MaxAcceleration = 2.45,
+        MaxBrake = 2.45,
+        MaxSpeed = 2.45,
     },
 	Buffs = {
         Regen = {
@@ -50,7 +50,7 @@ UnitBlueprint {
         {
             Damage = 15,			#30dps
 			DamageRadius = 0.5,		#dont miss
-			MaxRadius = 33,
+			MaxRadius = 32,
             FiringRandomness = 0.2,
             MuzzleVelocity = 35,
 			TargetPriorities = {
@@ -66,11 +66,12 @@ UnitBlueprint {
         },
         {
             Damage = 80,			#45dps = 320per salve
-            DamageRadius = 2.5,
+            DamageRadius = 3,
 			DamageFriendly = false,
             FiringRandomness = 1.75,
-			MaxRadius = 18,
+			MaxRadius = 20,
 			CollideFriendly = false,
+			RangeCategory = 'UWRC_IndirectFire',	#from direct fire -> add yellow circle for granade
 			#RateOfFire = 0.15,			this doesnt work, reload time is 7s and change didnt occur
         },	
 	},

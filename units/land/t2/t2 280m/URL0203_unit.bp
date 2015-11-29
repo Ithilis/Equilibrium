@@ -36,13 +36,13 @@ BlueprintId = "url0203",
     Weapon = {
 			{
             Damage = 200,		#60dps
-            MaxRadius = 23,
+            MaxRadius = 24,
             MuzzleVelocity = 30,
 			RateOfFire = 0.3030303030,
             },
 			{
-            Damage = 60,		#30dps
-            MaxRadius = 18,
+            Damage = 30,		#30dps
+            MaxRadius = 20,
 			RateOfFire = 0.5,
             },
 			{

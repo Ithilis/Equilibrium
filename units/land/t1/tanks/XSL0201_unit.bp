@@ -10,13 +10,13 @@ BlueprintId = "xsl0201",
         BuildTime = 275,
     },
 	Defense = {
-        Health = 370,
-        MaxHealth = 370,
+        Health = 400,
+        MaxHealth = 400,
     },
 	Physics = {
-        MaxAcceleration = 3.5,	#from 3,6
-        MaxBrake = 3.5,
-        MaxSpeed = 3.4,			#from3,5
+        MaxAcceleration = 3.6,	#from 3,6
+        MaxBrake = 3.6,
+        MaxSpeed = 3.6,			#from3,5
     },
 	Buffs = {
         Regen = {
@@ -36,7 +36,9 @@ BlueprintId = "xsl0201",
     },
 	Weapon = {
 		{
-		Damage = 29,		#from 32 its 22dps
+		Damage = 48,		# 24dps
+		MaxRadius = 20,
+		RateOfFire = 0.5,	#from 1,3s = 2s
 		},
 	},
 }

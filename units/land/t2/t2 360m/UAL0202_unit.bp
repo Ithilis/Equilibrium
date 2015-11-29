@@ -14,15 +14,15 @@ BlueprintId = "ual0202",
         Health = 1500,
         MaxHealth = 1500,
 		Shield = {
-            ShieldMaxHealth = 1125,
+            ShieldMaxHealth = 1500,
 			ShieldRechargeTime = 60,	#from 75s
             ShieldRegenRate = 5,		#from2
         },
     },
     Physics = {
-        MaxAcceleration = 2.65,
-        MaxBrake = 2.65,
-        MaxSpeed = 2.65,
+        MaxAcceleration = 2.7,
+        MaxBrake = 2.7,
+        MaxSpeed = 2.7,
     },
 	Buffs = {
         Regen = {
@@ -41,8 +41,9 @@ BlueprintId = "ual0202",
         Level5 = 55,
     },
     Weapon = {
-			{
-            Damage = 400,
+		{
+            Damage = 350,
+			MaxRadius = 22,		#from 20
 			RateOfFire = 0.3,
 			TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -54,6 +55,6 @@ BlueprintId = "ual0202",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
 			},
-			},
+		},
 	},
 }

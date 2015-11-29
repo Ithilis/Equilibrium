@@ -27,6 +27,7 @@ BlueprintId = "uab2101",
     },
     Weapon = {
         {
+			MaxRadius = 28, 		#from 26
 			RateOfFire = 3.333,		#from 3
         },
     },

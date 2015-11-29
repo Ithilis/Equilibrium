@@ -59,7 +59,7 @@ Unit_Description_0026="Lightly armoured fast-moving raiding unit. Poor in direct
 Unit_Description_0027="Frontloaded Mobile Artillery unit. Designed to engage enemy units at long range and inflict massive damage to buildings, provide camera sensor on projectile." --ithilis
 Unit_Description_0028="Mobile Anti-Air effective against low-end enemy air units."
 Unit_Description_0029="Lightly armoured Main Battle Tank armed with a single cannon."
-Unit_Description_0030="Heavy Assault Tank designed to take large armies and fortified bases head-on."
+Unit_Description_0030="Heavy Assault Tank designed to take large armies, fortified bases head-on and be mainly! Its real Tank for real man." --Ithilis
 Unit_Description_0031="Fast-moving Hovering Amphibious Tank. Good for riding. On water have speed penalty" --Ithilis
 Unit_Description_0032="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Out-ranges T2 Point defense."
 Unit_Description_0033="Mobile Anti-Air with a low-speed Area-Of-Effect munition, excellent against enemy gunships."
@@ -336,11 +336,11 @@ Unit_Description_0175="Adds Teleportation capability. Requires considerable ener
 
 ##Land
 Unit_Description_0223="Fast, lightly armoured amphibious reconnaissance vehicle. Armed with a machine gun and a basic sensor suite."
-Unit_Description_0224="Lightly armoured fast-moving raiding unit. Can fire from Air Transports. Equipped with moderate capture tool with 2.5 build power." --Ithilis
-Unit_Description_0225="Poorly armoured amphibious Main Battle Tank. Makes up for the lack of HP with a longer range than the other factions' tanks." --Ithilis
+Unit_Description_0224="Lightly armoured fast-moving raiding unit. Can fire from Air Transports." 
+Unit_Description_0225="Poorly armoured amphibious Main Battle Tank. Makes up for the lack of HP with a longer range than the other faction's tanks." --Ithilis
 Unit_Description_0226="Mobile Artillery unit. Designed to engage enemy units at long range and inflict massive damage to buildings."
 Unit_Description_0227="Mobile Anti-Air effective against low-end enemy Air units."
-Unit_Description_0228="Shielded Heavy Assault Tank designed to take large armies and fortified bases head-on."
+Unit_Description_0228="Shielded Heavy Tank Designed to solve all its problems by killing them. A real tank for real men." -- Ithilis
 Unit_Description_0229="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Out-ranges T2 Point defense."
 Unit_Description_0230="Amphibious Mobile Anti-Air with a low-speed Area-Of-Effect munition, excellent against enemy gunships."
 Unit_Description_0231="Amphibious Mobile Shield Generator which provides limited protection to units beneath the shield. Shields transfer residual damage to intersecting bubbles."

@@ -4,6 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0103",
 
+	Defense = {
+        Health = 250,		#from 170hp
+        MaxHealth = 250,
+    },
     Economy = {
         BuildCostEnergy = 250,
         BuildCostMass = 50,
@@ -24,5 +28,10 @@ BlueprintId = "xsl0103",
         Level3 = 3,
         Level4 = 4,
         Level5 = 5,
+    },
+	Weapon = {
+        {
+			MaxRadius = 32, 	#from 30		
+        },
     },
 }

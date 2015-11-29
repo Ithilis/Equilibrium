@@ -52,6 +52,7 @@ BlueprintId = "xal0203",
     Weapon = {
 		{
         Damage = 18,				#60dps
+		MaxRadius = 24,
 		},
     },
 	AI = {

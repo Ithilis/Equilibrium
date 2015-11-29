@@ -422,7 +422,7 @@ UnitBlueprint {
 			FiringRandomnessWhileMoving = 0.75,		#add im not sure if this parameter work
             FiringTolerance = 2,
             Label = 'GroundGun',
-            MaxRadius = 38,				#from 25
+            MaxRadius = 36,				#from 25
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 2,
             MuzzleVelocity = 10,

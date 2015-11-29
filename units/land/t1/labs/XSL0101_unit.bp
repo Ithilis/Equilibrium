@@ -10,13 +10,13 @@ BlueprintId = "xsl0101",
         BuildTime = 125,
     },
 	Defense = {
-        Health = 75,
-        MaxHealth = 75,
+        Health = 100,
+        MaxHealth = 100,
     },
 	Physics = {
-        MaxAcceleration = 4.5,
-        MaxBrake = 4.5,
-        MaxSpeed = 4.5,
+        MaxAcceleration = 4.6,
+        MaxBrake = 4.6,
+        MaxSpeed = 4.6,
     },
 	Transport = {
         CanFireFromTransport = true,
@@ -24,7 +24,7 @@ BlueprintId = "xsl0101",
 	Weapon = {
 		{
 		Damage = 10,			#20 dps
-		MaxRadius = 13,
+		MaxRadius = 16,
 		RateOfFire = 2,
 		FireTargetLayerCapsTable = {
                 Air = 'Land|Water|Seabed',
@@ -48,6 +48,6 @@ BlueprintId = "xsl0101",
         TurretYawSpeed = 180,
 		},
 	},
-	SizeX = 0.7,
-	SizeZ = 0.7,
+	SizeX = 0.8,
+	SizeZ = 0.8,
 }

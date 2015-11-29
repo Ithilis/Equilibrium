@@ -9,6 +9,10 @@ BlueprintId = "xsl0202",
 		BuildCostMass = 360,
 		BuildTime = 1800,
 	},
+	Defense = {
+        Health = 2650,
+        MaxHealth = 2650,
+    },
 	Buffs = {
         Regen = {
             Level1 = 4,
@@ -24,5 +28,16 @@ BlueprintId = "xsl0202",
         Level3 = 33,
         Level4 = 44,
         Level5 = 55,
+    },
+	Physics = {
+        MaxAcceleration = 2.6,
+        MaxBrake = 2.6,
+        MaxSpeed = 2.6,
+    },
+	Weapon = {
+        Damage = 35,	#105dps
+		MaxRadius = 26,
+		
+		TurretYawSpeed = 180,	#from 70 = on prenerf value
     },
 }

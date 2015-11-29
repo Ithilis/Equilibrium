@@ -9,4 +9,9 @@ BlueprintId = "ual0101",
         BuildCostMass = 15,
         BuildTime = 75,
     },
+	Weapon = {
+        {
+			MaxRadius = 24, 		#from 25
+        },
+    },
 }

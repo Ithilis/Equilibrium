@@ -57,7 +57,7 @@
         Damage = 600,					#120dps
         DamageRadius = 1.5,
 		FiringRandomnessWhileMoving = 0.4,	#from 0,6
-        MaxRadius = 38,
+        MaxRadius = 36,
 		RateOfFire = 0.2,
 		},
 	},

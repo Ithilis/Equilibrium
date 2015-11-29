@@ -53,17 +53,17 @@ BlueprintId = "xsl0303",
     Weapon = {
 		{
             Damage = 42,		#168 dps
-            MaxRadius = 23,
+            MaxRadius = 24,
 			RateOfFire = 2,
         },
         {
             Damage = 42,
-            MaxRadius = 23,
+            MaxRadius = 24,
 			RateOfFire = 2,
         },
         {
             Damage = 400,		#100 dps
-            MaxRadius = 33,
+            MaxRadius = 32,
         },
         {
             Damage = 150,

@@ -66,8 +66,9 @@ BlueprintId = "url0103",
                     TargetDisallow = 'WALL, NAVAL',
                 },
             },
-		Damage = 250, # from230
-	    RateOfFire = 0.2, 	#from 1.666 =6sec to 5sec
+			Damage = 250, # from230
+			RateOfFire = 0.2, 	#from 1.666 =6sec to 5sec
+			MaxRadius = 32, 	#from 30
 		},
 	},
 }

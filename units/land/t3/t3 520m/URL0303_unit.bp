@@ -32,8 +32,8 @@
 				},
 		},		
 		Defense = {
-			Health = 2800,				
-			MaxHealth = 2800,
+			Health = 2600,				
+			MaxHealth = 2600,
 		},
 		Economy = {
 			BuildCostEnergy = 6500,
@@ -48,12 +48,12 @@
 		Weapon = {
 			{
 			Damage = 145,				#130dps
-			MaxRadius = 18,
+			MaxRadius = 20,
 			RateOfFire = 0.3,
 			},
 			{
 			Damage = 40,				#100dps
-			MaxRadius = 23,
+			MaxRadius = 22,
 			RateOfFire = 2.5,
 			},
 			{
@@ -77,7 +77,7 @@
 		},
 	},
 	CollisionOffsetZ = 0.15,
-	SizeX = 1.1,
+	SizeX = 1.2,
 	SizeY = 1.2,
-	SizeZ = 0.9,
+	SizeZ = 1,
 	}

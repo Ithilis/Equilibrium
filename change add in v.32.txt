@@ -1,3 +1,227 @@
+v32r
+_______
+
+- acu 25r/30r/33r
+- acu omni range for 28 (26)
+-- acu turret pitch/yaw speed 100 (90)
+
+- aeon acu chrono 36r (38)
+- sera acu heavy gun +28r (26)
+- sera regen aura 24r (23) advance one 32r (33)
+-- sera regen aura +5% new max hp (6,25%)
+
+- T1 PD 28r (26)
+______________
+
+Scouts:
+- uef scout 30hp (29) 
+-- 24r (25)
+- aeon scout 24r (25)
+- cybran 10m 100e 50bt (15m 150e 75bt)
+
+LAB:
+- hunter 16r (13)
+-- EMP aoe 10 (6) 1s (1,5)
+-- hunter muzzle velocity 35 (25)
+-- hunter removed units folder and let only script (with emp) and merge bp file.
+-- hunter 100hp (120)
+-- size 0.8 (0.7)
+-- speed 4,3 (4,5)
+-- dps 21 (24)
+
+- flare 16r (13)
+-- flare muzzle velocity 35 (25)
+-- size 0.8 (0.7)
+
+- selen 16r (13)
+-- size 0.8 (0.7)
+
+- mech 16r (13) 
+-- size 0.8 (0.7)
+
+T1 artilery:
+- Zthuee 32r (30)
+-- 250hp (170)
+- fevor 32r (30) 
+- lobo 32r (30)
+- medusa 32r (30)
+
+T1 AA:
+- sky slammer range 24(23) 
+-- 18dps (26) 
+-- speed 3 (2,7)
+-- sky slammer GF projectile use gravity true, leadtarget = true, change muzzle, and zigzag, intial speed and acceleration, and turn rate for 50 (0) -> it track target
+
+T1 tanks:
+- mantis hp 375 (330) 
+-- speed 3.75 (3,7) 20r
+-- dps 21 (20)
+-- rof 3 (2)
+-- muzzle velocity 31.5 (30)
+
+- aurora 27,5dps (24)
+-- 220hp (205)
+-- muzzlevelocity 32.5 (30)
+-- 24r (23)
+-- aurora speed 2,9 (2,8)
+-- aurora hit box : SizeX = 1.0,(0.8)
+ SizeY = 0.8,(0.6) SizeZ = 1.2, (1,0)
+
+- thaam 400hp (370) 20r
+-- 24dps (22)
+-- rof 2s (1,3)
+
+- striker 450hp 
+-- 24dps 20r 
+-- speed 3,45 (3,4)
+
+T2 tanks
+- t2 deciver duny weapon 32r (33)
+-- price 112m 1200e 800bt
+
+- parashield 133m 1425e 950bt
+
+- asylum 154m 1650e 1100bt
+
+- pillar 24r (23) 
+-- muzzle velocity 32,5 (30)
+
+- hoplite 36r (38)
+- yenzee 20r (18)
+-- 1250hp (1300)
+- blaze 20r (18)
+- wagner 20r/24r (18r/23r)
+-- dps on short range 30 (30! was 60 by mistake)
+
+- mongoose 24/32r (18/33)
+-- speed 2,45 (2,5)
+-- granade projectile uniform scale 0,1 (0,05) strategic icon 1,5 (1) -> only grafical issue
+--  granade aoe 3 (2,5)
+
+- rhino 24r (23)
+-- rof 1s (0,2)
+-- 1750hp (1900)
+-- turret turn rate 100 (90)
+-- speed 2,65(7)
+
+- obsidian
+-- hp 1500+1500sHP (1500+1125sHP)
+-- range 22r (20)
+-- dps 105 (120) 350dmg/shot
+-- speed 2,7 (2,65)
+--> add in unit description "real tank for real man"
+
+- illshawor speed 2,6 (2,5)
+-- turret TurretYawSpeed 180 (70)
+-- hp 2650 (2500)
+
+- riptide dps 120 (from 90! that was by mistake)
+-- hp 2000 (2200)
+
+
+
+T3 tanks
+- titan 2000hp+1000Shp (2000+1100)
+-- range 22 (23)
+-- hit box x/y +0,1
+
+- loyalist 20/22r (18/23r)
+-- hit box x/y +0,1
+
+- athaana shield duny weapon 36r (38)
+- sera sniper 36r (38)
+- outhuum 24/32r (23/33r)
+- Bouncer 36r (38)
+- perci 32r (33)
+- brick 32r (33)
+
+- sera T2 gunship 
+-- damage radius on both turret 0,5 (one was on 1! by mistake)
+
+- add fire beetle on veterancy mod, because target didnt leave wreack
+
+
+___ 
+neni done 
+
+
+Bouncer by mal mat tiez tracking targetu, 
+sky slammer by mohol mat rovnaky behaior ako ma AA, teda ze vystreli pocka a ptom zrychlue. 
+
+
+v31
+__________
+
+- T1 transport aeon,
+-- add capture ability, 5bp
+
+- remove special veterancy for acu what was depend on unit tech. Now acu get veterancy as other units. 
+- veterancy multiplier move on 150% own mass to next lvl. (from 200%)
+
+- remove point about dont build first air, because its not issue anymore. 
+- remove point about energy storage provide much more adjustancy. -> its not so important. 
+- add point on veterancy dont insta heal "units share experience from kill"
+
+
+T1 tanks add +-7,5% hp 
+- mantis 380hp (from 330) +0,2speed
+- thaam 400hp (370) +0,2speed
+-- thaam dps 22,5 (22)
+-- thaam reload time 2s (1,3) 
+- aurora 30dps (24) +0,2speed
+-- aurora reload time 2.5s (2)
+- striker 450hp (400) +0,1speed
+
+T1 lab add +- 20hp  -> because T1 tank add about 50hp
+- selen 100hp (from 75) +0,1speed
+- hunter 120hp (100) +0,2speed
+- flare 150hp (125) +0,2speed
+-- flare capture+bp removed
+-- flare add visibility after death that reval place on 28aoe for 20s
+- mech 165hp (145) +0,2speed
+
+- cybran sky slammer 26ground dps (24)
+-- sky slammer firing randomnes 0,25 (0,45) +0,3speed
+-- sky slammer AA projectile initial speed 20 (15)
+- sera zthuue 200hp (170)
+
+--T2 tanks--
+- Pillar reload time 3s (2s)
+- Yenzee 1250hp (1300)
+- Rhino reload time 2s (0,2s)
+- obsidian reload time 3s (from 3,3) => 360dmg = dont kill t1 by single shot
+-- obsidian shield 1250sHp (from 1150)
+- Riptide target priority for acu (same reason as obsidian)
+- mongoose add yellow range for granade.
+
+--T3 tanks--
+- Harbringer reload time 1,25s (0,8s)
+- titan 2000hp+1000shield (from 2000hp+1100shield)
+-- titan dps 200 (210)
+- loyalist 2600hp (2800)
+
+- ACU + 0,1speed
+
+-->> purpose of this change is make mix t1 tanks into t2/3 army more important. T2 tanks would have bigger overkill. 
+
+- cybran static T1 AA now hit scout properly
+-- was changed projectile inicial speed from 35mzl for 45mzl as others, also changed projectile live time for same as others. 
+
+Scouts:
+- uef scout 30hp (29) 
+-- 24r (25)
+- aeon scout 24r (25)
+- cybran 10m 100e 50bt (15m 150e 75bt)
+
+_______________
+
+stale tam je niekde kod ktory vyvolava log. pohladaj a vymaz. 
+
+skus pridat icedremerov fix transportou. 
+pridat trochu rychlosti na acu nejak 0,1/0,2
+ubrat speed na t3 raiding tankoch na 3,3   a ostatnych t3 o 0,1
+
+
 v.30
 ______
 - add building that explode on icedreamer code, for prevent bug when dont leave wreck after die. 

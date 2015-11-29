@@ -96,6 +96,13 @@ BlueprintId = "ual0001",
             BuildTime = 5000,			#from 4200
         },
 	},
+	Intel = {
+        OmniRadius = 28,	#from 26
+    },
+	Physics = {
+        MaxAcceleration = 1.8,
+        MaxSpeed = 1.8,
+    },
 	Transport = {
         CanFireFromTransport = true,
     },
@@ -104,12 +111,16 @@ BlueprintId = "ual0001",
     },
 	Weapon = {
         {
-			MaxRadius = 23,  #from 22 
+			MaxRadius = 25,  #from 22
+			TurretPitchSpeed = 100,	#from 90
+            TurretYawSpeed = 100,			
         },
         {
 			DamageType = 'Overcharge',
-			MaxRadius = 23,  #from 22 
+			MaxRadius = 25,  #from 22 
 			RateOfFire = 0.25,			#from 0,3= 4s
+			TurretPitchSpeed = 100,	#from 90
+            TurretYawSpeed = 100,
         },
         {
 			Buffs = {
@@ -119,7 +130,7 @@ BlueprintId = "ual0001",
                     },
                     BuffType = 'STUN',
                     Duration = 2,
-                    Radius = 38,
+                    Radius = 36,
                     TargetAllow = 'MOBILE',
                     TargetDisallow = 'EXPERIMENTAL,COMMAND',
                 },
@@ -132,7 +143,7 @@ BlueprintId = "ual0001",
 				Air = 'Land|Water|Air|Seabed',
             },
 			
-			MaxRadius = 38,					#from 35
+			MaxRadius = 36,					#from 35
 			RateOfFire = 0.25,				#from 5s
 			
 			EnergyDrainPerSecond = 400,		#from 200

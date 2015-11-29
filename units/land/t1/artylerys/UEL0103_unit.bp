@@ -30,6 +30,8 @@ BlueprintId = "uel0103",
 			DamageRadius = 1.2,		#from 1
             CameraLifetime = 8,		#from 5
             CameraVisionRadius = 8,	#from 5
+			
+			MaxRadius = 32, 		#from 30
         },
     },
 }

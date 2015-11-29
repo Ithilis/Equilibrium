@@ -22,9 +22,9 @@ BlueprintId = "ual0307",
         'OVERLAYDEFENSE',
     },
 	Economy = {
-		BuildCostEnergy = 1350,	#75e per sec
-		BuildCostMass = 126,	#7m per sec
-		BuildTime = 900,		#18s
+		BuildCostEnergy = 1650,	#75e per sec
+		BuildCostMass = 154,	#7m per sec
+		BuildTime = 1100,		#18s
 	},
 	Defense = {
         Shield = {

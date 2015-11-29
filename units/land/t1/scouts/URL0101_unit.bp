@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "url0101",
 
     Economy = {
-        BuildCostEnergy = 150,
-        BuildCostMass = 15,
-        BuildTime = 75,
+        BuildCostEnergy = 100,
+        BuildCostMass = 10,
+        BuildTime = 50,
     },
 }
