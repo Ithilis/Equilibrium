@@ -1,5 +1,19 @@
 v32r
 _______
+notes for next develop of version:
+- visual intel on units, 
+t1 16visual
+t1 scout 22visual
+t2 20visual
+t2 range bots 24visual
+t2 hover 16visual
+t3 22visual
+t3 sniper 26visual
+t3+ 24visual
+
+
+
+---------
 
 - acu 25r/30r/33r
 - acu omni range for 28 (26)
