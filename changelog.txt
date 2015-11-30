@@ -1,32 +1,48 @@
 v.32
 ______
+- edit mod_info file add credit eq instead of mod autor
+
+- riptide weapon fixed, where was missing branch about weapon -> now it have real 120dps (90)
+-- decrese hp of riptide for 2000hp (2200)
+
 - got a proper changelog
 - got an actual copyright in the mod info
 
 - changed some unit descriptions for more clarity and fun
 - adjusted the mod info in game button - air facs can be used just like normal since v30, so dont need that point.
 - removed cybran lab dummy weapon, saving a ton of space on the mod by hooking it via merge instead
-- wagner bug fixed 
+- wagner bug fixed (with double dmg on 30dps weapon that was by mistake)
 
-- fixed fire beetle veterancy bug
+- fixed fire beetle veterancy bug (killed units was not show wreack after kiling by beetle)
 - adjusted veterancy threshold - you need 150% of own mass killed to vet up (from 200%)
 - removed special acu code for veterancy. they now get vet like other units
 
 - fixed cybran t1 maa not being able to hit anything in ground fire mode, and made the missiles cooler as well
-- same for cybran t3 maa
-- fixed cybran t1 static aa missing all its shots, unlike all the other factions' aa
+-- decrese dps for 18 (22) -> because dont miss
+
+- fixed cybran t1 static aa missing all its shots, unlike all the other factions' aa -> changed projectile where it was low initial speed and fast accelerate what was kinda ussles, and cause this problems
 - fixed mongoose grenades being (almost) invisible, and also added separate range circle for them (yellow)
 
 - aeon air transport now has a capture ability
-- aeon lab now leaves a wide vision field when it dies (capture removed)
+- aeon lab now leaves a wide vision field when it dies 28aoe for 20s (capture removed)
 
-- seraphim t2 gunship aoe decreased to 0.5 from 1.0
+- seraphim t2 gunship aoe decreased to 0.5 from 1.0 (only on one gun that was by mistake)
 - t1 land scouts tweaked to have sane stats
+-- cybran scout price 10m 150e 50bt (15m 225e 75bt)
+
 - titan shield hp reduced from 1100 to 1000 so it has 3000hp in total
 
 - rhino turret turn rate increased slightly so it can be microed nicer, without retarded behaviour
 - all acus have a slightly higher turret turn rate, for same reason as rhino
 - huge fix to ilshavoh - there was a typo in its name in the bp! also fixed the turret having some silly 70 turn rate, back to 180 like it was before.
+
+---------
+To do in next time:
+- cybran T3 mobile AA change projectile on ground target for same style as T1 mobile aa (track targets)
+-- adjust bouncer for new weapon (probably lower dps)
+
+- add icedremer transport fix (and test and cry for function version, because v 1-20 is probably bugged)
+
 
 
 v.31
