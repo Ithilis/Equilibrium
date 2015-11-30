@@ -4,55 +4,25 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0106",
 
-	Audio = {
-        CaptureLoop = Sound {
-            Bank = 'UAL',
-            Cue = 'UAL0105_Capture_Loop',
-            LodCutoff = 'UnitMove_LodCutoff',
-        },
-		StartCapture = Sound {
-            Bank = 'UAL',
-            Cue = 'UAL0105_Capture_Start',
-            LodCutoff = 'UnitMove_LodCutoff',
-        },
-	},	
-	Categories = {
-        'PRODUCTSC1',
-        'SELECTABLE',
-        'BUILTBYTIER1FACTORY',
-        'BUILTBYTIER2FACTORY',
-        'BUILTBYTIER3FACTORY',
-        'AEON',
-        'MOBILE',
-        'LAND',
-        'TECH1',
-        'DIRECTFIRE',
-        'VISIBLETORECON',
-        'RECLAIMABLE',
-		'CAPTURE',			#add
-        'BOT',
-        'OVERLAYDIRECTFIRE',
-    },
+	
 	Defense = {
         Health = 125,
         MaxHealth = 125,
     },
 	Display = {
         Abilities = {
-			'<LOC ability_Capture>Capture',
+			'<LOC ability_Vision>Vision on Death',
         },
 	},	
 	Economy = {
         BuildCostEnergy = 350,
         BuildCostMass = 35,
         BuildTime = 175,
-		BuildRate = 2.5,
+    },	
+	Intel = {
+        IntelDurationOnDeath = 20,
+        VisionRadiusOnDeath = 28,
     },
-	General = {
-        CommandCaps = {
-			RULEUCC_Capture = true,
-        },
-	},	
 	Physics = {
         MaxAcceleration = 4.2,
         MaxBrake = 4.2,
