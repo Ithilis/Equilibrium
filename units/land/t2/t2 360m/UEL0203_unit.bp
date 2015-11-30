@@ -10,8 +10,8 @@ BlueprintId = "uel0203",
         BuildTime = 1800,
     },
     Defense = {
-        Health = 2200,
-        MaxHealth = 2200,
+        Health = 2000,
+        MaxHealth = 2000,
     },
     Physics = {
         MaxAcceleration = 3.6,
@@ -22,7 +22,7 @@ BlueprintId = "uel0203",
         MaxSteerForce = 3.6,
 		TurnRadius = 1.5,
         TurnRate = 310,
-		WaterSpeedMultiplier = 0.85
+		WaterSpeedMultiplier = 0.85,
     },
 	Buffs = {
         Regen = {
@@ -42,6 +42,19 @@ BlueprintId = "uel0203",
     },
     Weapon = {
         Damage = 18,		#120dps
+		{
+			Damage = 18,		#120dps
+			TargetPriorities = {
+					'SPECIALHIGHPRI',
+					'COMMAND',			#acu is high priority
+					'TECH3 MOBILE',
+					'TECH2 MOBILE',
+					'TECH1 MOBILE',
+					'STRUCTURE DEFENSE',
+					'SPECIALLOWPRI',
+					'ALLUNITS',
+			},
+		},
     },
     AI = {
 		TargetBones = {
