@@ -1,4 +1,4 @@
-#Ilshawor
+#Ilshavoh
 
 UnitBlueprint {
 Merge = true,
@@ -24,5 +24,8 @@ BlueprintId = "xsl0202",
         Level3 = 33,
         Level4 = 44,
         Level5 = 55,
+    },
+	Weapon = {
+		TurretYawSpeed = 180,	#from 70 = on prenerf value
     },
 }

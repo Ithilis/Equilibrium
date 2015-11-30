@@ -4,9 +4,18 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0101",
 
+	Defense = {
+        Health = 30,	#from 29
+        MaxHealth = 30,
+    },
     Economy = {
         BuildCostEnergy = 150,
         BuildCostMass = 15,
         BuildTime = 75,
+    },
+	Weapon = {
+        {
+			MaxRadius = 24, 		#from 25
+        },
     },
 }

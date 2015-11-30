@@ -107,11 +107,15 @@ UnitBlueprint {
 	Weapon = {
         {
 		MaxRadius = 23,  #from 22
+		TurretPitchSpeed = 100,	#from 90
+        TurretYawSpeed = 100,
         },
         {
 		DamageType = 'Overcharge',
 		MaxRadius = 23,  #from 22 
 		RateOfFire = 0.25,			#from 0,3= 4s
+		TurretPitchSpeed = 100,	#from 90
+        TurretYawSpeed = 100,
         },
         {
             MinRadius = 15,
