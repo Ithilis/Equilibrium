@@ -15,7 +15,7 @@ BlueprintId = "uel0101",
     },
 	Weapon = {
         {
-			MaxRadius = 24, 		#from 25
+			MaxRadius = 23, 		#from 25
         },
     },
 }

@@ -33,6 +33,9 @@ BlueprintId = "url0202",
 		{
 		Damage = 9,		#90dps
 		RateOfFire = 5,
+		
+		TurretPitchSpeed = 100,	#from 90
+        TurretYawSpeed = 100,	#from 90
 		},
 	},
 }

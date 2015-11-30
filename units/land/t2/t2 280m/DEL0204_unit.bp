@@ -71,6 +71,7 @@ UnitBlueprint {
             FiringRandomness = 1.75,
 			MaxRadius = 18,
 			CollideFriendly = false,
+			RangeCategory = 'UWRC_IndirectFire',	#from direct fire -> yellow circle for grenades
 			#RateOfFire = 0.15,			this doesnt work, reload time is 7s and change didnt occur
         },	
 	},

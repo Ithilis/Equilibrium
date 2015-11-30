@@ -41,7 +41,7 @@ BlueprintId = "url0203",
 			RateOfFire = 0.3030303030,
             },
 			{
-            Damage = 60,		#30dps
+            Damage = 30,		#30dps, 30*2 = 60 damage
             MaxRadius = 18,
 			RateOfFire = 0.5,
             },
