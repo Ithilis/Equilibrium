@@ -1,23 +1,59 @@
+v.32
+______
+- got a proper changelog
+- got an actual copyright in the mod info
+
+- changed some unit descriptions for more clarity and fun
+- adjusted the mod info in game button - air facs can be used just like normal since v30, so dont need that point.
+- removed cybran lab dummy weapon, saving a ton of space on the mod by hooking it via merge instead
+- wagner bug fixed 
+
+- fixed fire beetle veterancy bug
+- adjusted veterancy threshold - you need 150% of own mass killed to vet up (from 200%)
+- removed special acu code for veterancy. they now get vet like other units
+
+- fixed cybran t1 maa not being able to hit anything in ground fire mode, and made the missiles cooler as well
+- same for cybran t3 maa
+- fixed cybran t1 static aa missing all its shots, unlike all the other factions' aa
+- fixed mongoose grenades being (almost) invisible, and also added separate range circle for them (yellow)
+
+- aeon air transport now has a capture ability
+- aeon lab now leaves a wide vision field when it dies (capture removed)
+
+- seraphim t2 gunship aoe decreased to 0.5 from 1.0
+- t1 land scouts tweaked to have sane stats
+- titan shield hp reduced from 1100 to 1000 so it has 3000hp in total
+
+- rhino turret turn rate increased slightly so it can be microed nicer, without retarded behaviour
+- all acus have a slightly higher turret turn rate, for same reason as rhino
+- huge fix to ilshavoh - there was a typo in its name in the bp! also fixed the turret having some silly 70 turn rate, back to 180 like it was before.
+
+
+v.31
+______
+experimental range rework. not present in the mod atm, but takes up a version number so its listed here too.
+
+
 v.30
 ______
-- add building that explode on icedreamer code, for prevent bug when dont leave wreck after die. 
+- fixed buildings (with death explosions) not leaving wrecks while dieing because of icedreamers vet mod
 --> m/e storage, T1/2/3 pgen, T2/3 fab, Nuke, paragon
 
 
-- air factory T1 change for 210m 3500e 350bt 70s (from 180m 4500e 300bt)
-- tweek T2 air factory for drain corectly with changed T1 air factory. 
+- air factory T1 price changed to 210m 3500e 350bt 70s (from 180m 4500e 300bt)
+- tweaked T2 air factory drain values to take account of the changed T1 air factory. 
 
 
 v.29
 ______
 - selen speed hp 75 (from 85) range 13 (from 18) dps 20 (from 22)
 - hunter aoe 6 (from 5)
-- loyalist EMP disalow stun command units, add yelow range for emp blast, add diplay from volitail to EMP weapon. 
+- loyalist EMP disabled stun on command units, add yellow range indicator for emp blast, changed display from volatile to EMP weapon. 
 
 - acu energy cost 50 000e build time 10 000bt (from 48K 20K) -> for proper number while repairing. 
 - T2 upgrade +500HP
 
-- T1 bomber freintl fire false (from true) 
+- T1 disabled friendly fire on bombers (stops them bombing themselves) 
 
 - veterancy mass multiplier 150% from 100%
 - sacu new max hp after vet bonus 15% from 20%
