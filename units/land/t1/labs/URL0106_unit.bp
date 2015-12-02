@@ -82,6 +82,7 @@ BlueprintId = "url0106",
         Level5 = 5,
     },
     Weapon = {
+		{
         
             Damage = 8,	#24dps
             MaxRadius = 13,
