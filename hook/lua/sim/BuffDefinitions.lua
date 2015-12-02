@@ -347,5 +347,7 @@ TypeTable = {
 	
 	-- fire beetle
 	xrl0302 = 1, 
+	-- ion storm
+	xsl0402 = 1,
 	
 }

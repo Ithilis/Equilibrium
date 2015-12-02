@@ -1,5 +1,8 @@
 v.32
 ______
+
+- add ion storm to vet mod
+
 - edit mod_info file add credit eq instead of mod autor
 
 - riptide weapon fixed, where was missing branch about weapon -> now it have real 120dps (90)
