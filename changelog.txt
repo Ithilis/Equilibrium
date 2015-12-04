@@ -1,8 +1,6 @@
 v.32
 ______
 
-- add IceDreamer transport fix, that will add personal stealth on units while are on transport -> didint work (becasue of course...)
-
 - add ion storm to vet mod
 
 - edit mod_info file add credit eq instead of mod autor

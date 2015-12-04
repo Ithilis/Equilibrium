@@ -1,5 +1,5 @@
 name = "Equilibrium_balance_mod"
-uid = "85d439dd-2a32-43b4-b87b-705ff7de6ca6"
+uid = "EEEEEEEE-EEEE-EEEE-EEQQ-QQQQQQQQQQQQ"
 version = 32
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod"
 description = "Fixes all the common issues with the game, and improves the balance to a much higher level."

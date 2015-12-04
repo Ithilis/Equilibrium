@@ -98,7 +98,8 @@ TypeTable = {
     xrl0403 = 5,
     xsb2401 = 5,
     xsa0402 = 5,
-    xsl0401 = 5,	
+    xsl0401 = 5,
+	xsl0402 = 5,		-- Ion storm
 	xea0002 = 5,
     
 -- Now for the units which do need typing
@@ -166,6 +167,7 @@ TypeTable = {
     uel0202 = 1,
     url0202 = 1,
     xsl0202 = 1,
+	xrl0302 = 1, -- fire beetle
     ual0303 = 1,
     xel0305 = 1,
     xrl0305 = 1,
@@ -344,10 +346,5 @@ TypeTable = {
 	xsb1303 = 1,
 	
 	xab1401 = 1,
-	
-	-- fire beetle
-	xrl0302 = 1, 
-	-- ion storm
-	xsl0402 = 1,
 	
 }

@@ -229,5 +229,5 @@ Unit = Class(oldUnit) {
         return prop
     end,	
 	
-}
 
+}
