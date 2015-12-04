@@ -40,7 +40,8 @@ BlueprintId = "uel0106",
 		MaxRadius = 13,
 		TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'TECH1 MOBILE RADAR',
+				'RADAR',
+				'MOBILE ENGINNER',
 				'COMMAND',				#ACU hight priority for ghetto sniping
 				'TECH1 MOBILE',
                 'TECH2 MOBILE',

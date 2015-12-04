@@ -90,7 +90,8 @@ BlueprintId = "url0106",
             RateOfFire = 1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'TECH1 MOBILE RADAR',
+				'RADAR',
+				'MOBILE ENGINNER',
 				'COMMAND',				#ACU hight priority for ghetto sniping
 				'TECH1 MOBILE',
                 'TECH2 MOBILE',

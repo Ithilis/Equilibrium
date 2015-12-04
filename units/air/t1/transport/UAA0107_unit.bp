@@ -48,7 +48,7 @@ BlueprintId = "uaa0107",
         BuildCostEnergy = 3500,
         BuildCostMass = 105,
         BuildTime = 700,
-		BuildRate = 5,
+		BuildRate = 3,
     },
 	General = {
         CommandCaps = {

@@ -105,6 +105,18 @@ BlueprintId = "ual0001",
 	Weapon = {
         {
 			MaxRadius = 23,  #from 22 
+			TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE TECH1 BOT',
+				'MOBILE ENGINNER',
+				'MOBILE TECH1 TANK',
+				'MOBILE TECH1',
+				'MOBILE TECH2',
+				'MOBILE TECH3',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
 			TurretPitchSpeed = 100,	#from 90
             TurretYawSpeed = 100,
         },

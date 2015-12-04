@@ -1,6 +1,9 @@
 v.32
 ______
 
+- changet target priority of lab for: radar->mobile enginer->command->t1 mobile ->t2 mobile...
+- change target priority on ACU for: t1 bot->enginer->t1 tank->t1 mobile->t2mbile->t3mobile...
+
 - add ion storm to vet mod
 
 - edit mod_info file add credit eq instead of mod autor
@@ -26,7 +29,7 @@ ______
 - fixed cybran t1 static aa missing all its shots, unlike all the other factions' aa -> changed projectile where it was low initial speed and fast accelerate what was kinda ussles, and cause this problems
 - fixed mongoose grenades being (almost) invisible, and also added separate range circle for them (yellow)
 
-- aeon air transport now has a capture ability
+- aeon air transport now has a capture ability (3br)
 - aeon lab now leaves a wide vision field when it dies 28aoe for 20s (capture removed)
 
 - seraphim t2 gunship aoe decreased to 0.5 from 1.0 (only on one gun that was by mistake)
