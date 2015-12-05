@@ -45,7 +45,7 @@ BlueprintId = "xsa0202",
             Damage = 25,						
         },
         {
-            Damage = 950,			#from 1175
+            Damage = 1050,			#from 1175
             DamageRadius = 4,		#from 3
 			FiringTolerance = 20,	#from 6
             MaxRadius = 45, 		#from 60

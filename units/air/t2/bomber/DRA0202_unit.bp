@@ -45,7 +45,7 @@ BlueprintId = "dra0202",
             RateOfFire = 1,
         },
         {
-            Damage = 112.5,				#900dps
+            Damage = 125,				#1000dps
             DamageRadius = 2,
             FiringRandomness = 0.6,		#from 0.8
             FiringTolerance = 6,

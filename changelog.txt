@@ -1,3 +1,10 @@
+v.33
+----
+
+- t2 bombers ground dmg:
+-- cybran 1000 (900)
+-- sera 1050 (950)
+
 v.32
 ______
 
