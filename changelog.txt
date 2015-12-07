@@ -5,6 +5,18 @@ v.33
 -- cybran 1000 (900)
 -- sera 1050 (950)
 
+- fire beetle yellow range for dmg
+- aoe dmg 5.5 (6)
+- Intel 10 (24)
+- energy consume 100 (50)
+--> need check if its not insine strong becasue can destroy 15 t2 tanks in formation with single beetle. 
+--> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
+
+
+- titan hp shield 1050 (1000) -> its for alive fire beetle
+-! brick add {} for anti torpedo -> was missing
+-- change anti-torpedo range category for RangeCategory = 'UWRC_AntiNavy',
+
 v.32
 ______
 

@@ -3,7 +3,18 @@
     UnitBlueprint {
     Merge = true,
     BlueprintId = "xrl0305",
-    
+        
+		AI = {
+        TargetBones = {
+            'Turret',
+            'Right_Leg01_B01',
+            'Right_Leg02_B01',
+            'Left_Leg01_B01',
+            'Left_Leg02_B01',        
+            'Projectile03',
+            'AttachPoint',
+            },
+        },    
         Economy = {
             BuildCostEnergy = 10000,
             BuildCostMass = 1000,
@@ -34,31 +45,24 @@
         },    
         Weapon = {
             {
-            Damage = 120,            --300dps
-            MaxRadius = 33,
-            RateOfFire = 2.5,
+				Damage = 120,            --300dps
+				MaxRadius = 33,
+				RateOfFire = 2.5,
             
-            TurretPitch = 10,
-            TurretPitchRange = 90,
+				TurretPitch = 10,
+				TurretPitchRange = 90,
             },
             {
-            Damage = 40,
-            MaxRadius = 20,        --from 15
-            ProjectilesPerOnFire = 1,
-            RateOfFire = 0.1,
+				Damage = 40,
+				MaxRadius = 20,        --from 32
+				ProjectilesPerOnFire = 1,
+				RateOfFire = 0.1,
             },
+			{
+				RangeCategory = 'UWRC_AntiNavy',
+			},
         },
-        AI = {
-        TargetBones = {
-            'Turret',
-            'Right_Leg01_B01',
-            'Right_Leg02_B01',
-            'Left_Leg01_B01',
-            'Left_Leg02_B01',        
-            'Projectile03',
-            'AttachPoint',
-            },
-        },
+		
         SizeX = 1.4,
         SizeY = 1.9,
         SizeZ = 1.4,

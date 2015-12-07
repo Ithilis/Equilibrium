@@ -36,14 +36,18 @@ BlueprintId = "xrl0302",
         MaxHealth = 300,
         RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
     },
+	Intel = {
+        VisionRadius = 15,		--from 24
+    },
     Transport = {
         TransportClass = 2,
     },
     Weapon = {
         {
             Damage = 3000,                    --from 3500
-            DamageRadius = 6,                --changed from 4.5
+            DamageRadius = 5.5,               --changed from 4.5
             MaxRadius = 5,                    --from4.5
+			RangeCategory = 'UWRC_IndirectFire',	--from none
         },
     },
     Wreckage = {
