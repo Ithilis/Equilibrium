@@ -1,0 +1,99 @@
+--Broodsword uef T3 gunship
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uea0305",
+
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'UEF',
+        'MOBILE',
+        'AIR',
+        'TECH3',
+        'GROUNDATTACK',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYANTIAIR',
+        'OVERLAYDIRECTFIRE',
+        'OVERLAYCOUNTERINTEL',  --add
+    },
+    Defense = {
+        Health = 4500,
+        MaxHealth = 4500,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_aa>Anti-Air',
+            '<LOC ability_jamming>Jamming',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 25000,
+        BuildCostMass = 1000,
+        BuildTime = 6000,
+        MaintenanceConsumptionPerSecondEnergy = 25,
+    },
+    General = {
+        ToggleCaps = {
+            RULEUTC_JammingToggle = true,
+        },
+    },
+    Intel = {
+        JamRadius = {
+            Max = 40,
+            Min = 10,
+        },
+        JammerBlips = 4,
+        VisionRadius = 32,
+    },
+    Physics = {
+        FuelUseTime = 300,            --from800
+    },
+    Veteran = {
+        Level1 = 30,
+        Level2 = 45,
+        Level3 = 60,
+        Level4 = 75,
+        Level5 = 90,
+    },
+    Weapon = {
+        {
+            FiringRandomness = 0,          --from0,3
+            RateOfFire = 2,                --from2,5
+            TargetCheckInterval = 0.5,     --from0,27
+        },
+        {
+            Damage = 25,                   --from32=50dps
+            MaxRadius = 50,                --from44
+            MuzzleVelocity = 90,           --from45
+             RateOfFire = 1,               --from0,75
+            TargetCheckInterval = 0.5,     --from0,25
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TRANSPORTATION',                
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+            Damage = 500,
+            DamageRadius = 3,
+        },
+    },
+}

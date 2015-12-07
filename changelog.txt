@@ -1,6 +1,8 @@
 v.33
 ----
 
+- UEF t3 gunship optimilize file to save +-1MB
+
 - t2 bombers ground dmg:
 -- cybran 1000 (900)
 -- sera 1050 (950)
