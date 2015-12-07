@@ -1,28 +1,28 @@
-#Parashield
+--Parashield
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0307",
 
-	Economy = {
-		BuildCostEnergy = 1125,	#75e per sec
-		BuildCostMass = 105,	#7m per sec
-		BuildTime = 750,		#15s
-		MaintenanceConsumptionPerSecondEnergy = 100,
-	},
-	Defense = {
-        Shield = {
-            ShieldRechargeTime = 25,	#from 24
-        },
-		RegenRate = 5,		#from 0 because cant get veterancy
+    Economy = {
+        BuildCostEnergy = 1125,    --75e per sec
+        BuildCostMass = 105,    --7m per sec
+        BuildTime = 750,        --15s
+        MaintenanceConsumptionPerSecondEnergy = 100,
     },
-	Weapon = {
+    Defense = {
+        Shield = {
+            ShieldRechargeTime = 25,    --from 24
+        },
+        RegenRate = 5,        --from 0 because cant get veterancy
+    },
+    Weapon = {
         {
             AboveWaterTargetsOnly = true,      
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
             CountedProjectile = false,
-            Damage = 0,								#its only for same behaviour 
+            Damage = 0,                                --its only for same behaviour 
             DamageRadius = 0,
             DamageType = 'Normal',
             DisplayName = 'Serpentine Missile',

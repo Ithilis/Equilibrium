@@ -1,83 +1,83 @@
-	#loyalist
-	
-	UnitBlueprint {
-	Merge = true,
+    --loyalist
+    
+    UnitBlueprint {
+    Merge = true,
     BlueprintId = "url0303",
-	
-		Buffs = {
-			Regen = {
-				Level1 = 6,
-				Level2 = 9,
-				Level3 = 12,
-				Level4 = 15,
-				Level5 = 18,
-			},
-			Stun = {
-				Add = {
-					OnDeath = true,
-					OnImpact = true,
-				},
-				AppliedToTarget = true,
-				BuffType = 'STUN',
-				Duration = 2,
-				Radius = 10,
-				TargetAllow = 'MOBILE',
-				TargetDisallow = 'AIR, COMMAND',
-			},
-		},
-		Display = {
-				Abilities = {
-					'<LOC ability_tacticalmissledeflect>Tactical Missile Deflection',
-					'<LOC ability_stun>EMP Weapon',
-				},
-		},		
-		Defense = {
-			Health = 2800,				
-			MaxHealth = 2800,
-		},
-		Economy = {
-			BuildCostEnergy = 6500,
-			BuildCostMass = 520,
-			BuildTime = 2600,
-		},
-		Physics = {
-			MaxAcceleration = 3.7,
-			MaxBrake = 3.7,
-			MaxSpeed = 3.7,
-		},
-		Weapon = {
-			{
-			Damage = 145,				#130dps
-			MaxRadius = 18,
-			RateOfFire = 0.3,
-			},
-			{
-			Damage = 40,				#100dps
-			MaxRadius = 23,
-			RateOfFire = 2.5,
-			},
-			{
+    
+        Buffs = {
+            Regen = {
+                Level1 = 6,
+                Level2 = 9,
+                Level3 = 12,
+                Level4 = 15,
+                Level5 = 18,
+            },
+            Stun = {
+                Add = {
+                    OnDeath = true,
+                    OnImpact = true,
+                },
+                AppliedToTarget = true,
+                BuffType = 'STUN',
+                Duration = 2,
+                Radius = 10,
+                TargetAllow = 'MOBILE',
+                TargetDisallow = 'AIR, COMMAND',
+            },
+        },
+        Display = {
+                Abilities = {
+                    '<LOC ability_tacticalmissledeflect>Tactical Missile Deflection',
+                    '<LOC ability_stun>EMP Weapon',
+                },
+        },        
+        Defense = {
+            Health = 2800,                
+            MaxHealth = 2800,
+        },
+        Economy = {
+            BuildCostEnergy = 6500,
+            BuildCostMass = 520,
+            BuildTime = 2600,
+        },
+        Physics = {
+            MaxAcceleration = 3.7,
+            MaxBrake = 3.7,
+            MaxSpeed = 3.7,
+        },
+        Weapon = {
+            {
+            Damage = 145,                --130dps
+            MaxRadius = 18,
+            RateOfFire = 0.3,
+            },
+            {
+            Damage = 40,                --100dps
+            MaxRadius = 23,
+            RateOfFire = 2.5,
+            },
+            {
             DisplayName = 'EMP',
-			MaxRadius = 10,
+            MaxRadius = 10,
             TargetRestrictDisallow = 'AIR, UNTARGETABLE, COMMAND',
-            RangeCategory = 'UWRC_IndirectFire',		#from direct
-			},
-		},
-		Veteran = {
-			Level1 = 15.5,
-			Level2 = 31,
-			Level3 = 46.5,
-			Level4 = 62,
-			Level5 = 77.5,
-		},
-	AI = {
-		TargetBones = {
-			'LegL_B01',
-			'LegR_B01',
-		},
-	},
-	CollisionOffsetZ = 0.15,
-	SizeX = 1.1,
-	SizeY = 1.2,
-	SizeZ = 0.9,
-	}
+            RangeCategory = 'UWRC_IndirectFire',        --from direct
+            },
+        },
+        Veteran = {
+            Level1 = 15.5,
+            Level2 = 31,
+            Level3 = 46.5,
+            Level4 = 62,
+            Level5 = 77.5,
+        },
+    AI = {
+        TargetBones = {
+            'LegL_B01',
+            'LegR_B01',
+        },
+    },
+    CollisionOffsetZ = 0.15,
+    SizeX = 1.1,
+    SizeY = 1.2,
+    SizeZ = 0.9,
+    }

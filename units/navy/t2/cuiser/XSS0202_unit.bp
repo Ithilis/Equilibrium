@@ -1,4 +1,4 @@
-#T2 Ithalua cruiser
+--T2 Ithalua cruiser
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId="xss0202",
         },
     },
     Economy = {
-        BuildCostEnergy = 13000,	#from 18000
+        BuildCostEnergy = 13000,    --from 18000
         BuildCostMass = 1950,
         BuildTime = 7800,
     },

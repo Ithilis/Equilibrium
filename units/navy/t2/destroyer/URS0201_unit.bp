@@ -1,4 +1,4 @@
-#T2 Destroyer Salem
+--T2 Destroyer Salem
 
 UnitBlueprint {
 Merge = true,
@@ -16,10 +16,10 @@ BlueprintId="urs0201",
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
-        BuildTime = 9000,		#from 10 000bt
+        BuildTime = 9000,        --from 10 000bt
     },
     Intel = {
-        WaterVisionRadius = 30,	#from 45
+        WaterVisionRadius = 30,    --from 45
     },
     Veteran = {
         Level1 = 68,
@@ -30,8 +30,8 @@ BlueprintId="urs0201",
     },
     Weapon = {
         {
-            DamageRadius = 1.5,		#from 1
-            MuzzleVelocity = 35,	#from 30
+            DamageRadius = 1.5,        --from 1
+            MuzzleVelocity = 35,    --from 30
         },
         {
         },
@@ -39,7 +39,7 @@ BlueprintId="urs0201",
         },
         {
         },
-		{
+        {
             Audio = {
                 Fire = Sound {
                     Bank = 'URSWeapon',

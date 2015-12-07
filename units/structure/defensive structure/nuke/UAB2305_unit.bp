@@ -1,4 +1,4 @@
-#Nuke
+--Nuke
 
 UnitBlueprint {
 Merge = true,
@@ -28,7 +28,7 @@ BlueprintId = "uab2305",
     },
     Weapon = {
         {
-            NukeOuterRingDamage = 2500,	#from 500
+            NukeOuterRingDamage = 2500,    --from 500
         },
-	},	
+    },    
 }

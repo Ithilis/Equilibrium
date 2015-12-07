@@ -1,4 +1,4 @@
-#Paragon
+--Paragon
 
 UnitBlueprint {
 Merge = true,
@@ -7,11 +7,11 @@ BlueprintId = "xab1401",
     Defense = {
         Health = 8000,
         MaxHealth = 8000,
-		RegenRate = 25,	#from 0
+        RegenRate = 25,    --from 0
     },
     Economy = {
         BuildCostEnergy = 5400000,
         BuildCostMass = 216000,
-		BuildTime = 90000,
+        BuildTime = 90000,
     },
 }

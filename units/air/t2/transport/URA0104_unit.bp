@@ -1,11 +1,11 @@
-#T2 cybran transport
+--T2 cybran transport
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0104", 
 
-	Air = {
-        MaxAirspeed = 16,		#from15 for not be catch by interceptor
+    Air = {
+        MaxAirspeed = 16,        --from15 for not be catch by interceptor
     },
     Buffs = {
         Regen = {
@@ -16,7 +16,7 @@ BlueprintId = "ura0104",
             Level5 = 12,
         },
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
     Economy = {
@@ -29,7 +29,7 @@ BlueprintId = "ura0104",
     },
     Weapon = {
         {
-			Buffs = {
+            Buffs = {
                 {
                     Add = {
                         OnImpact = true,
@@ -38,7 +38,7 @@ BlueprintId = "ura0104",
                     BuffType = 'STUN',
                     Duration = 3,
                     TargetAllow = 'TECH1',
-					TargetDisallow = 'WALL,EXPERIMENTAL,COMMAND,TECH2',
+                    TargetDisallow = 'WALL,EXPERIMENTAL,COMMAND,TECH2',
                 },
                 {
                     Add = {
@@ -50,7 +50,7 @@ BlueprintId = "ura0104",
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL,EXPERIMENTAL,COMMAND,TECH3',
                 },
-				{
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -60,12 +60,12 @@ BlueprintId = "ura0104",
                     TargetAllow = 'TECH3',
                     TargetDisallow = 'WALL,EXPERIMENTAL,COMMAND',
                 },
-			},
+            },
         },
         {
         },
-		{
-            AboveWaterTargetsOnly = true,	#add crash dmg
+        {
+            AboveWaterTargetsOnly = true,    --add crash dmg
             Damage = 100,
             DamageFriendly = true,
             DamageRadius = 2,

@@ -1,4 +1,4 @@
-# swift wind
+-- swift wind
 
 UnitBlueprint {
 Merge = true,
@@ -21,13 +21,13 @@ BlueprintId = "xaa0202",
     Physics = {
         FuelUseTime = 300,
     },
-	Weapon = {
-		{
-		},
-		{
-	        Damage = 125,
+    Weapon = {
+        {
+        },
+        {
+            Damage = 125,
             DamageRadius = 1.5,
             DisplayName = 'Air Crash',
-		},
-	},
+        },
+    },
 }

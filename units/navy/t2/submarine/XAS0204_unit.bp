@@ -1,4 +1,4 @@
-#T2 submarine Vespa
+--T2 submarine Vespa
 
 UnitBlueprint {
 Merge = true,
@@ -15,28 +15,28 @@ BlueprintId="xas0204",
     },
     Display = {
         Abilities = {
-			'<LOC ability_sonar>Sonar',
-			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_sonarstealth>Sonar Stealth',
             '<LOC ability_submersible>Submersible',
             '<LOC ability_torpedo>Torpedoes',
             '<LOC ability_torpedodef>Torpedo Defense',
         },
-	},
+    },
     Economy = {
         BuildCostEnergy = 7000,
         BuildCostMass = 1050,
         BuildTime = 4200,
-		MaintenanceConsumptionPerSecondEnergy = 25,
+        MaintenanceConsumptionPerSecondEnergy = 25,
     },
     Intel = {
-		SonarStealth = true,
+        SonarStealth = true,
         SonarRadius = 60,
-        VisionRadius = 20,	#from 32
-        WaterVisionRadius = 20,	#from 45
+        VisionRadius = 20,    --from 32
+        WaterVisionRadius = 20,    --from 45
     },
     Physics = {
-        Elevation = -2.5,		#from -1,5
-        MaxAcceleration = 6,	#from 6
+        Elevation = -2.5,        --from -1,5
+        MaxAcceleration = 6,    --from 6
         MaxBrake = 6,
         MaxSpeed = 6,
         MaxSpeedReverse = 6,

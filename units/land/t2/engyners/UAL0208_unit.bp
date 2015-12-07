@@ -2,14 +2,14 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0208",
 
-	Economy = {
-		BuildCostEnergy = 625,
-		BuildCostMass = 125,
-		BuildTime = 625,
-		StorageEnergy = 0,
+    Economy = {
+        BuildCostEnergy = 625,
+        BuildCostMass = 125,
+        BuildTime = 625,
+        StorageEnergy = 0,
         StorageMass = 0,
-		
-		SacrificeMassMult = 0.8,	#from 0.6
-        SacrificeEnergyMult = 3.2,	#from 0.6 = 20x more energy as mass, enginer cost 5x more energy as mass
-	},
+        
+        SacrificeMassMult = 0.8,    --from 0.6
+        SacrificeEnergyMult = 3.2,    --from 0.6 = 20x more energy as mass, enginer cost 5x more energy as mass
+    },
 }

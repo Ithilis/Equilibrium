@@ -1,11 +1,11 @@
-#ASF
+--ASF
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0303", 
 
     Air = {
-        MaxAirspeed = 20,	 		#from25
+        MaxAirspeed = 20,             --from25
     },
     Buffs = {
         Regen = {
@@ -33,8 +33,8 @@ BlueprintId = "uaa0303",
     },
     Weapon = {
         {
-            Damage = 455, 			#303 dps
-            RateOfFire = 0.666,		#from 1s to 1.5s
+            Damage = 455,             --303 dps
+            RateOfFire = 0.666,        --from 1s to 1.5s
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'AIR MOBILE HIGHPRIAIR',
@@ -45,9 +45,9 @@ BlueprintId = "uaa0303",
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-            },			
-            TurretPitchRange = 135,	#from 55
-            TurretYawRange = 135,	#from 55
+            },            
+            TurretPitchRange = 135,    --from 55
+            TurretYawRange = 135,    --from 55
         },
         {
             Damage = 250,
@@ -56,6 +56,6 @@ BlueprintId = "uaa0303",
         },
     },
     Wreckage = {
-		MassMult = 0.9,			#from 0.45
+        MassMult = 0.9,            --from 0.45
     },
 }

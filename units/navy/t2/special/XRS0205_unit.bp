@@ -1,4 +1,4 @@
-#T2 Merimiad stealth boat
+--T2 Merimiad stealth boat
 
 UnitBlueprint {
 Merge = true,
@@ -6,13 +6,13 @@ BlueprintId="xrs0205",
 
 
     Defense = {
-		Health = 1900,		#from 1500
+        Health = 1900,        --from 1500
         MaxHealth = 1900,
-        RegenRate = 5,		#from 0
+        RegenRate = 5,        --from 0
     },
     Economy = {
-        BuildCostEnergy = 7500,	#from 6000
-        BuildCostMass = 750,	#from 600
+        BuildCostEnergy = 7500,    --from 6000
+        BuildCostMass = 750,    --from 600
         BuildTime = 3000,
         MaintenanceConsumptionPerSecondEnergy = 100,
     },

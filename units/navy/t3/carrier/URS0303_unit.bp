@@ -1,4 +1,4 @@
-#Carrier Command
+--Carrier Command
 
 UnitBlueprint {
 Merge = true,
@@ -23,13 +23,13 @@ BlueprintId="urs0303",
         RadarRadius = 200,
         SonarRadius = 40,
         VisionRadius = 85,
-        WaterVisionRadius = 25,		#from 36
+        WaterVisionRadius = 25,        --from 36
     },
-	Veteran = {
+    Veteran = {
         Level1 = 120,
         Level2 = 240,
         Level3 = 360,
         Level4 = 480,
         Level5 = 600,
-    },	
+    },    
 }

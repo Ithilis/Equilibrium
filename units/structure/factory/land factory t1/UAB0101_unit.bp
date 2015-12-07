@@ -2,12 +2,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uab0101",
 
-	Economy = {
+    Economy = {
         BuildCostEnergy = 1500,
         BuildCostMass = 300,
         BuildRate = 25,
         BuildTime = 300,
-		StorageEnergy = 0,
-        StorageMass = 0,	#from 80
+        StorageEnergy = 0,
+        StorageMass = 0,    --from 80
     },
 }

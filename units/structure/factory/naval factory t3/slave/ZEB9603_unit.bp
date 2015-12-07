@@ -1,4 +1,4 @@
-#T3 Slave Naval factory
+--T3 Slave Naval factory
 
 UnitBlueprint {
 Merge = true,
@@ -7,10 +7,10 @@ BlueprintId = "zeb9603",
 Economy = {
         BuildCostEnergy = 13500,
         BuildCostMass = 1350,
-        BuildRate = 180,	#from 120
+        BuildRate = 180,    --from 120
         BuildTime = 1800,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
-		DifferentialUpgradeCostCalculation = false, 
+        DifferentialUpgradeCostCalculation = false, 
     },
-}	
+}    

@@ -1,4 +1,4 @@
-#Renegade
+--Renegade
 
 UnitBlueprint {
 Merge = true,
@@ -13,7 +13,7 @@ BlueprintId = "ura0203",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 7,
         Level2 = 14,
         Level3 = 21,
@@ -21,7 +21,7 @@ BlueprintId = "ura0203",
         Level5 = 35,
     },
     Defense = {
-        Health = 850,			#from 832hp
+        Health = 850,            --from 832hp
         MaxHealth = 850,
     },
     Economy = {
@@ -35,17 +35,17 @@ BlueprintId = "ura0203",
     Weapon = {
         {
             Damage = 20,
-            DamageRadius = 3.5,		#from 3, because corsair is weak against army
+            DamageRadius = 3.5,        --from 3, because corsair is weak against army
             FiringRandomness = 0,
             FiringTolerance = 0.1,
-            MaxRadius = 26,		#from 22 because need stop for firing, because rocket
+            MaxRadius = 26,        --from 22 because need stop for firing, because rocket
             ProjectilesPerOnFire = 3,
             RateOfFire = 1,
         },
         {
             Damage = 250,
             DamageRadius = 2,
-            DisplayName = 'Air Crash',		
+            DisplayName = 'Air Crash',        
         },
     },
 }

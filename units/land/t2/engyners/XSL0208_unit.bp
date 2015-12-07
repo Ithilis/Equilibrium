@@ -2,11 +2,11 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0208",
 
-	Economy = {
-		BuildCostEnergy = 625,
-		BuildCostMass = 125,
-		BuildTime = 625,
-		StorageEnergy = 0,
+    Economy = {
+        BuildCostEnergy = 625,
+        BuildCostMass = 125,
+        BuildTime = 625,
+        StorageEnergy = 0,
         StorageMass = 0,
-	},
+    },
 }

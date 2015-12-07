@@ -1,10 +1,10 @@
-#Cybran Sub Commander Script
+--Cybran Sub Commander Script
 
 local oldURL0301 = URL0301
 URL0301 = Class(oldURL0301) {
 
 
-	OnStopBeingBuilt = function(self,builder,layer)
+    OnStopBeingBuilt = function(self,builder,layer)
         CommandUnit.OnStopBeingBuilt(self,builder,layer)
         self:BuildManipulatorSetEnabled(false)
         self:SetMaintenanceConsumptionInactive()
@@ -22,7 +22,7 @@ URL0301 = Class(oldURL0301) {
         if not bp then return end
         if enh == 'CloakingGenerator' then
             self.StealthEnh = false
-			self.CloakEnh = true
+            self.CloakEnh = true
             self:EnableUnitIntel('Cloak')
             if not Buffs['CybranSCUCloakBonus'] then
                BuffBlueprint {
@@ -59,12 +59,12 @@ URL0301 = Class(oldURL0301) {
             end
             self.CloakEnh = false
             self.StealthEnh = true
-            self:EnableUnitIntel('RadarStealthField')		-- by ithilis
-            self:EnableUnitIntel('SonarStealthField')		-- by ithilis
+            self:EnableUnitIntel('RadarStealthField')        -- by ithilis
+            self:EnableUnitIntel('SonarStealthField')        -- by ithilis
         elseif enh == 'StealthGeneratorRemove' then
             self:RemoveToggleCap('RULEUTC_CloakToggle')
-            self:DisableUnitIntel('RadarStealthField')	-- by ithilis
-            self:DisableUnitIntel('SonarStealthField')	-- by ithilis
+            self:DisableUnitIntel('RadarStealthField')    -- by ithilis
+            self:DisableUnitIntel('SonarStealthField')    -- by ithilis
             self.StealthEnh = false
             self.CloakEnh = false
         elseif enh == 'NaniteMissileSystem' then
@@ -132,17 +132,17 @@ URL0301 = Class(oldURL0301) {
                 Buff.RemoveBuff( self, 'CybranSCUBuildRate' )
             end
 
-		--Fixed damage stacking infinitely and range not being reduced on removal (IceDreamer)
+        --Fixed damage stacking infinitely and range not being reduced on removal (IceDreamer)
         elseif enh == 'FocusConvertor' then
             local wep = self:GetWeaponByLabel('RightDisintegrator')
             wep:AddDamageMod(bp.NewDamageMod or 0)
             wep:ChangeMaxRadius(bp.NewMaxRadius or 35)
-			wep:AddDamageRadiusMod(bp.NewDamageRadius)		--ADD by itilis
+            wep:AddDamageRadiusMod(bp.NewDamageRadius)        --ADD by itilis
         elseif enh == 'FocusConvertorRemove' then
             local wep = self:GetWeaponByLabel('RightDisintegrator')
             wep:AddDamageMod(-self:GetBlueprint().Enhancements['FocusConvertor'].NewDamageMod)
             wep:ChangeMaxRadius(self:GetBlueprint().Weapon[1].MaxRadius or 25)
-			wep:ChangeMaxRadius(bp.NewMaxRadius or 25)		--add by ihtilis
+            wep:ChangeMaxRadius(bp.NewMaxRadius or 25)        --add by ihtilis
         elseif enh == 'EMPCharge' then
             local wep = self:GetWeaponByLabel('RightDisintegrator')
             wep:ReEnableBuff('STUN')
@@ -151,24 +151,24 @@ URL0301 = Class(oldURL0301) {
             wep:DisableBuff('STUN')
         end
     end,
-	
-	
-	OnIntelEnabled = function(self)
+    
+    
+    OnIntelEnabled = function(self)
         CommandUnit.OnIntelEnabled(self)
         if self.CloakEnh and self:IsIntelEnabled('Cloak') then
             self:SetEnergyMaintenanceConsumptionOverride(self:GetBlueprint().Enhancements['CloakingGenerator'].MaintenanceConsumptionPerSecondEnergy or 0)
             self:SetMaintenanceConsumptionActive()
             if not self.IntelEffectsBag then
-			    self.IntelEffectsBag = {}
-			    self.CreateTerrainTypeEffects( self, self.IntelEffects.Cloak, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
-			end
+                self.IntelEffectsBag = {}
+                self.CreateTerrainTypeEffects( self, self.IntelEffects.Cloak, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
+            end
         elseif self.StealthEnh and self:IsIntelEnabled('RadarStealthField') and self:IsIntelEnabled('SonarStealthField') then
             self:SetEnergyMaintenanceConsumptionOverride(self:GetBlueprint().Enhancements['StealthGenerator'].MaintenanceConsumptionPerSecondEnergy or 0)
             self:SetMaintenanceConsumptionActive()
             if not self.IntelEffectsBag then
-	            self.IntelEffectsBag = {}
-		        self.CreateTerrainTypeEffects( self, self.IntelEffects.Field, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
-		    end
+                self.IntelEffectsBag = {}
+                self.CreateTerrainTypeEffects( self, self.IntelEffects.Field, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
+            end
         end
     end,
 

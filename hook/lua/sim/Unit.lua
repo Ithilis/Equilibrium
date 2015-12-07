@@ -6,7 +6,7 @@ Unit = Class(oldUnit) {
 
 
 ---------------
-##VETERANCY###
+----VETERANCY------
 ---------------
 
     OnCreate = function(self)
@@ -181,11 +181,11 @@ Unit = Class(oldUnit) {
     end,
 
 
----------------	
-##RECLAIM###
+---------------    
+----RECLAIM------
 ---------------
 
-	CreateWreckageProp = function( self, overkillRatio )
+    CreateWreckageProp = function( self, overkillRatio )
         local bp = self:GetBlueprint()
         local wreck = bp.Wreckage.Blueprint
 
@@ -195,7 +195,7 @@ Unit = Class(oldUnit) {
 
         local mass = bp.Economy.BuildCostMass * (bp.Wreckage.MassMult or 0)
         local energy = bp.Economy.BuildCostEnergy * (bp.Wreckage.EnergyMult or 0)
-		local time = (bp.Wreckage.ReclaimTimeMultiplier or 1) * 2  --change by Ithilis it for doubled reclaim time 
+        local time = (bp.Wreckage.ReclaimTimeMultiplier or 1) * 2  --change by Ithilis it for doubled reclaim time 
         local pos = self:GetPosition()
         local layer = self:GetCurrentLayer()
 
@@ -227,7 +227,7 @@ Unit = Class(oldUnit) {
         explosion.CreateWreckageEffects(self,prop)
 
         return prop
-    end,	
-	
+    end,    
+    
 
 }

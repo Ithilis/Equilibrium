@@ -1,4 +1,4 @@
-#Fervor
+--Fervor
 
 UnitBlueprint {
 Merge = true,
@@ -9,7 +9,7 @@ BlueprintId = "ual0103",
         BuildCostMass = 35,
         BuildTime = 175,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -18,10 +18,10 @@ BlueprintId = "ual0103",
             Level5 = 6,
         },
     },
-	Display = {
-        UniformScale = 0.09,		#◘from 0,7
+    Display = {
+        UniformScale = 0.09,        --◘from 0,7
     },
-	Veteran = {
+    Veteran = {
         Level1 = 1,
         Level2 = 2,
         Level3 = 3,
@@ -30,13 +30,13 @@ BlueprintId = "ual0103",
     },
     Weapon = {
         {
-            Damage = 100,			#from 200   = same dps but more projectiles
-            DamageRadius = 1,		#from 0,5
-            RateOfFire = 1,			#from 0,5
-			
-            TurretPitchRange = 75,	#from 45
-            TurretYawRange = 75,	#from 45
+            Damage = 100,            --from 200   = same dps but more projectiles
+            DamageRadius = 1,        --from 0,5
+            RateOfFire = 1,            --from 0,5
+            
+            TurretPitchRange = 75,    --from 45
+            TurretYawRange = 75,    --from 45
         },
-    },	
+    },    
 }
 

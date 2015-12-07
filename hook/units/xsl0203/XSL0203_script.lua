@@ -1,9 +1,9 @@
-#Seraphim Amphibious Tank Script
+--Seraphim Amphibious Tank Script
 
 local oldXSL0203 = XSL0203
 XSL0203 = Class(oldXSL0203) {
 
-	OnLayerChange = function(self, new, old)
+    OnLayerChange = function(self, new, old)
         SHoverLandUnit.OnLayerChange(self, new, old)
         if( old != 'None' ) then
             if( new == 'Land' ) then

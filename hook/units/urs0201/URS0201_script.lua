@@ -1,4 +1,4 @@
-#Cybran Destroyer Script
+--Cybran Destroyer Script
 
 local oldURS0201 = URS0201
 URS0201 = Class(oldURS0201) {
@@ -10,7 +10,7 @@ URS0201 = Class(oldURS0201) {
         TorpedoL = Class(CANNaniteTorpedoWeapon) {},
         AntiTorpedoF = Class(CIFSmartCharge) {},
         AntiTorpedoB = Class(CIFSmartCharge) {},
-		TorpedoR = Class(CANNaniteTorpedoWeapon) {},
+        TorpedoR = Class(CANNaniteTorpedoWeapon) {},
         TorpedoL = Class(CANNaniteTorpedoWeapon) {},
     },
 

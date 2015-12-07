@@ -1,4 +1,4 @@
-#T3 cybran submarine Plan B
+--T3 cybran submarine Plan B
 
 UnitBlueprint {
 Merge = true,
@@ -13,15 +13,15 @@ BlueprintId="urs0304",
             Level5 = 24,
         },
     },
-	Defense = {
-        Health = 5000,		#from3500
+    Defense = {
+        Health = 5000,        --from3500
         MaxHealth = 5000,
     },
     Economy = {
         BuildCostEnergy = 78750,
         BuildCostMass = 5250,
         BuildTime = 27000,
-		MaintenanceConsumptionPerSecondEnergy = 100,
+        MaintenanceConsumptionPerSecondEnergy = 100,
     },
     General = {
         OrderOverrides = {
@@ -35,18 +35,18 @@ BlueprintId="urs0304",
         },
     },
     Intel = {
-		RadarStealth = true,
-		SonarStealth = true,
+        RadarStealth = true,
+        SonarStealth = true,
         SonarRadius = 60,
         VisionRadius = 35,
-        WaterVisionRadius = 35,	#from 45
+        WaterVisionRadius = 35,    --from 45
     },
     Physics = {
-        Elevation = -3.5,		#from -1,5
-        MaxAcceleration = 4.5,	#from3,3
+        Elevation = -3.5,        --from -1,5
+        MaxAcceleration = 4.5,    --from3,3
         MaxBrake = 4.5,
         MaxSpeed = 4.5,
-		MaxSpeedReverse = 4.5,
+        MaxSpeedReverse = 4.5,
     },
     Veteran = {
         Level1 = 160,
@@ -57,11 +57,11 @@ BlueprintId="urs0304",
     },
     Weapon = {
         {
-            DamageRadius = 3,		#from4
+            DamageRadius = 3,        --from4
         },
         {
-            Damage = 70,			#from 45 = 350dps
-            MaxRadius = 65,			#from80
+            Damage = 70,            --from 45 = 350dps
+            MaxRadius = 65,            --from80
         },
         {
             Buffs = {
@@ -71,12 +71,12 @@ BlueprintId="urs0304",
                     },
                     AppliedToTarget = true,
                     BuffType = 'STUN',
-                    Duration = 40,	#from 3
+                    Duration = 40,    --from 3
                     Radius = 50,
                     TargetAllow = 'MOBILE',
                     TargetDisallow = 'TECH3,EXPERIMENTAL,COMMAND',
                 },
-				{
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -88,12 +88,12 @@ BlueprintId="urs0304",
                     TargetDisallow = 'COMMAND',
                 },
             },
-            MaxRadius = 256,	#from 410
-            MinRadius = 65,		#from 128
-            NukeInnerRingDamage = 10000,	#from 22000+3000 -> 10000+5000
-            NukeInnerRingRadius = 25,	#from 30
+            MaxRadius = 256,    --from 410
+            MinRadius = 65,        --from 128
+            NukeInnerRingDamage = 10000,    --from 22000+3000 -> 10000+5000
+            NukeInnerRingRadius = 25,    --from 30
             NukeOuterRingDamage = 5000,
-            NukeOuterRingRadius = 50,	#from 40
+            NukeOuterRingRadius = 50,    --from 40
 
         },
     },

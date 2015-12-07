@@ -1,4 +1,4 @@
-#Thunderhead frigate
+--Thunderhead frigate
 
 UnitBlueprint {
 Merge = true,
@@ -25,14 +25,14 @@ BlueprintId="ues0103",
     },
     Intel = {
         JamRadius = {
-            Max = 60,	#from 70
-            Min = 40,	#from 60
+            Max = 60,    --from 70
+            Min = 40,    --from 60
         },
         JammerBlips = 5,
         RadarRadius = 80,
-        SonarRadius = 80,		#from 82
-        VisionRadius = 30,		#from 32
-        WaterVisionRadius = 35,	#from 16
+        SonarRadius = 80,        --from 82
+        VisionRadius = 30,        --from 32
+        WaterVisionRadius = 35,    --from 16
     },
     Veteran = {
         Level1 = 8,
@@ -43,7 +43,7 @@ BlueprintId="ues0103",
     },
     Weapon = {
         {
-            MaxRadius = 30,	#from 28
+            MaxRadius = 30,    --from 28
         },
         {
         },

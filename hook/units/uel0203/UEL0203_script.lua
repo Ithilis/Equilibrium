@@ -1,9 +1,9 @@
-#UEF Amphibious Tank Script
+--UEF Amphibious Tank Script
 
 local oldUEL0203 = UEL0203
 UEL0203 = Class(oldUEL0203) {
 
-	OnLayerChange = function(self, new, old)
+    OnLayerChange = function(self, new, old)
         THoverLandUnit.OnLayerChange(self, new, old)
         if( old != 'None' ) then
             if( new == 'Land' ) then

@@ -1,4 +1,4 @@
-#T1 Point Defense
+--T1 Point Defense
 
 UnitBlueprint {
 Merge = true,
@@ -13,7 +13,7 @@ BlueprintId = "urb2101",
             Level5 = 6,
         },
     },
-	Economy = {
+    Economy = {
         BuildCostEnergy = 2500,
         BuildCostMass = 250,
         BuildTime = 250,
@@ -27,7 +27,7 @@ BlueprintId = "urb2101",
     },
     Weapon = {
         {
-			RateOfFire = 3.333,		#from 3
+            RateOfFire = 3.333,        --from 3
         },
     },
 }

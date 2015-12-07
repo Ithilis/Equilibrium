@@ -1,4 +1,4 @@
-#Novax
+--Novax
 
 UnitBlueprint {
 Merge = true,
@@ -7,7 +7,7 @@ BlueprintId = "xeb2402",
     Defense = {
         Health = 15000,
         MaxHealth = 15000,
-        RegenRate = 25,		#from0
+        RegenRate = 25,        --from0
     },
     Economy = {
         BuildCostEnergy = 450000,

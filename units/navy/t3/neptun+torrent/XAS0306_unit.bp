@@ -1,4 +1,4 @@
-# Torrent ship
+-- Torrent ship
 
 UnitBlueprint {
 Merge = true,
@@ -14,16 +14,16 @@ BlueprintId="xas0306",
         },
     },
     Defense = {
-        Health = 20000,		#from 15000
+        Health = 20000,        --from 15000
         MaxHealth = 20000,
     },
     Economy = {
-        BuildCostEnergy = 105000,	#from 80 000e
+        BuildCostEnergy = 105000,    --from 80 000e
         BuildCostMass = 8000,
-        BuildTime = 36000,			#from 16000bt
+        BuildTime = 36000,            --from 16000bt
     },
     Intel = {
-        WaterVisionRadius = 25,		#from 50
+        WaterVisionRadius = 25,        --from 50
     },
     Veteran = {
         Level1 = 240,
@@ -34,20 +34,20 @@ BlueprintId="xas0306",
     },
     Weapon = {
         {
-            Damage = 1000,		#from 800
-            DamageRadius = 3,	#from 2
+            Damage = 1000,        --from 800
+            DamageRadius = 3,    --from 2
         },
         {
-            Damage = 1000,		#from 800
-            DamageRadius = 3,	#from 2
+            Damage = 1000,        --from 800
+            DamageRadius = 3,    --from 2
         },
         {
         },
-		{
+        {
         },
-		{
+        {
         },
-		{
+        {
         },
     },
 }

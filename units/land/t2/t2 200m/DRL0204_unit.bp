@@ -1,10 +1,10 @@
-#Hoplite
+--Hoplite
 
 UnitBlueprint {
     Merge = true,
     BlueprintId = "drl0204",
 
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -12,8 +12,8 @@ UnitBlueprint {
             Level4 = 10,
             Level5 = 12,
         },
-    },	
-	Economy = {
+    },    
+    Economy = {
         BuildCostEnergy = 1000,
         BuildCostMass = 200,
         BuildTime = 1000,
@@ -23,40 +23,40 @@ UnitBlueprint {
         MaxBrake = 3,
         MaxSpeed = 3,
     },
-	Defense = {
+    Defense = {
         Health = 550,
         MaxHealth = 550,
-	},
-	Intel = {
+    },
+    Intel = {
         VisionRadius = 28,
     },
-	Veteran = {
+    Veteran = {
         Level1 = 6,
         Level2 = 12,
         Level3 = 18,
         Level4 = 24,
         Level5 = 32,
     },
-	SizeX = 0.6,
-	SizeY = 0.9,
-	SizeZ = 1.2,
+    SizeX = 0.6,
+    SizeY = 0.9,
+    SizeZ = 1.2,
     Weapon = {
-		{
-        Damage = 75,		#225dmg per salve
+        {
+        Damage = 75,        --225dmg per salve
         DamageRadius = 2,
-		DamageFriendly = false,
-		MaxRadius = 38,
-		RateOfFire = 0.2,	#from 0,25 = 5s 
-		TargetPriorities = {
+        DamageFriendly = false,
+        MaxRadius = 38,
+        RateOfFire = 0.2,    --from 0,25 = 5s 
+        TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'COMMAND',			#acu is hight priority
+                'COMMAND',            --acu is hight priority
                 'TECH3 MOBILE',
                 'TECH2 MOBILE',
                 'TECH1 MOBILE',
                 'STRUCTURE DEFENSE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-			},
-		},
-	},
+            },
+        },
+    },
 }

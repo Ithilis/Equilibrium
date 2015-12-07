@@ -1,16 +1,16 @@
-#T2.5 sonar 
+--T2.5 sonar 
 
 UnitBlueprint {
 Merge = true,
 BlueprintId="xsb3202",
 
     Economy = {
-		BuildCostEnergy = 6000,
+        BuildCostEnergy = 6000,
         BuildCostMass = 300,
         BuildTime = 937.5,
-        MaintenanceConsumptionPerSecondEnergy = 250,	#from 100
+        MaintenanceConsumptionPerSecondEnergy = 250,    --from 100
     },
     Intel = {
-		WaterVisionRadius = 90,
+        WaterVisionRadius = 90,
     },
 }

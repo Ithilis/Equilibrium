@@ -45,18 +45,18 @@ ProjectileBlueprint {
         HelpText = 0,
     },
     Physics = {
-        Acceleration = 8,		#from 0,5
+        Acceleration = 8,        --from 0,5
         DestroyOnWater = true,
-        InitialSpeed = 5,		#from 20
+        InitialSpeed = 5,        --from 20
         LeadTarget = true,
         Lifetime = 4,
-        MaxSpeed = 25,			#from 20
+        MaxSpeed = 25,            --from 20
         MaxZigZag = 2,
         RotationalVelocityRange = 200,
-        TrackTarget = true,		#from false
-        TurnRate = 50,			#from 0
-        UseGravity = true,		#from false
+        TrackTarget = true,        --from false
+        TurnRate = 50,            --from 0
+        UseGravity = true,        --from false
         VelocityAlign = true,
-        ZigZagFrequency = 0.4,	#from 0,2
+        ZigZagFrequency = 0.4,    --from 0,2
     },
 }

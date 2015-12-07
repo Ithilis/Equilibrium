@@ -1,4 +1,4 @@
-#Torpedo launcher T3
+--Torpedo launcher T3
 
 UnitBlueprint {
 Merge = true,
@@ -13,14 +13,14 @@ BlueprintId = "xrb2308",
             Level5 = 18,
         },
     },
-	Categories = {
+    Categories = {
         'PRODUCTFA',
         'SELECTABLE',
         'BUILTBYTIER3ENGINEER',
         'BUILTBYTIER3COMMANDER',
         'CYBRAN',
-        'MOBILE',			#from structure
-		'NEEDMOBILEBUILD',	#add
+        'MOBILE',            --from structure
+        'NEEDMOBILEBUILD',    --add
         'DEFENSE',
         'TECH3',
         'ANTINAVY',
@@ -33,15 +33,15 @@ BlueprintId = "xrb2308",
         'SORTDEFENSE',
     },
     Defense = {
-		ArmorType = 'Normal',	#from structure
-        Health = 12500,		#from 11000
+        ArmorType = 'Normal',    --from structure
+        Health = 12500,        --from 11000
         MaxHealth = 12500,
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
             '<LOC ability_torpedo>Torpedoes',
-			'<LOC ability_personalstealth>Personal Stealth',
+            '<LOC ability_personalstealth>Personal Stealth',
         },
     },
     Economy = {
@@ -58,12 +58,12 @@ BlueprintId = "xrb2308",
         RadarStealth = true,
         SonarRadius = 60,
         SonarStealth = true,
-        VisionRadius = 35,			#from 20
-        WaterVisionRadius = 50,		#from 45
+        VisionRadius = 35,            --from 20
+        WaterVisionRadius = 50,        --from 45
     },
     Physics = {
         MotionType = 'RULEUMT_SurfacingSub',
-		MaxSpeed = 0.1,		#this is only for not stay visible on radar, it cant move
+        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
     },
     Veteran = {
         Level1 = 60,

@@ -1,11 +1,11 @@
-#Czar
+--Czar
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0310", 
 
     Air = {
-        MaxAirspeed = 5,		#from 8
+        MaxAirspeed = 5,        --from 8
     },
     Buffs = {
         Regen = {
@@ -47,8 +47,8 @@ BlueprintId = "uaa0310",
     },
     Defense = {
         Health = 150000,
-        MaxHealth = 150000,	#from 58 000
-        RegenRate = 25,		#from 15
+        MaxHealth = 150000,    --from 58 000
+        RegenRate = 25,        --from 15
     },
     Display = {
         Abilities = {
@@ -60,28 +60,28 @@ BlueprintId = "uaa0310",
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
         },
-        UniformScale = 0.055,	#from 0,04
+        UniformScale = 0.055,    --from 0,04
     },
     Economy = {
         BuildCostEnergy = 1125000,
         BuildCostMass = 45000,
-        BuildRate = 200,			#from 180
-        BuildTime = 67500,			#it is 4x faster as build same mass in gunships
+        BuildRate = 200,            --from 180
+        BuildTime = 67500,            --it is 4x faster as build same mass in gunships
         BuildableCategory = {
             'BUILTBYTIER3FACTORY AEON MOBILE AIR',
         },
     },
-	LifeBarHeight = 0.075,
+    LifeBarHeight = 0.075,
     LifeBarOffset = 12,
-    LifeBarSize = 30,			#from 20
-    SizeX = 30,					#from 21
-    SizeY = 5,					#from 3
-    SizeZ = 30,					#from 21
+    LifeBarSize = 30,            --from 20
+    SizeX = 30,                    --from 21
+    SizeY = 5,                    --from 3
+    SizeZ = 30,                    --from 21
     Transport = {
-        StorageSlots = 50,		#from 150
+        StorageSlots = 50,        --from 150
     },
     Veteran = {
-	RequirementMult = 0.5,
+    RequirementMult = 0.5,
         Level1 = 135,
         Level2 = 270,
         Level3 = 405,
@@ -90,103 +90,103 @@ BlueprintId = "uaa0310",
     },
     Weapon = {
         {
-			DamageType = 'Normal',  	#from CzarBeam, because damage dont affect air now, 
+            DamageType = 'Normal',      --from CzarBeam, because damage dont affect air now, 
             DisplayName = 'Quantum Beam Generator',
-            Damage = 50,				#from 333 = 1250dmg while 10sec, but when fire 10s on one object then its much more dps because it culminate dmg from place					
+            Damage = 50,                --from 333 = 1250dmg while 10sec, but when fire 10s on one object then its much more dps because it culminate dmg from place                    
             DamageRadius = 4,
-			
-			DoTPulses = 5,				#damage 5x every 0,1s		1=1x počas 1 dot timu
-			DoTTime = 10,				#damage while 10 second 	1=1s
-			
-            FiringTolerance = 30,		
+            
+            DoTPulses = 5,                --damage 5x every 0,1s        1=1x počas 1 dot timu
+            DoTTime = 10,                --damage while 10 second     1=1s
+            
+            FiringTolerance = 30,        
             MaxRadius = 30,
             MaximumBeamLength = 50,
-            RateOfFire = 5,				#from10
+            RateOfFire = 5,                --from10
         },
         {
             Damage = 350,
-			DamageRadius = 1,		#from 0
-            DisplayName = 'Zealot AA Missile',		
-            MaxRadius = 100,		#from 64
-            RateOfFire = 1,			#from 0,8
-			MuzzleVelocity = 75,	#from 50
+            DamageRadius = 1,        --from 0
+            DisplayName = 'Zealot AA Missile',        
+            MaxRadius = 100,        --from 64
+            RateOfFire = 1,            --from 0,8
+            MuzzleVelocity = 75,    --from 50
         },
         {
             Damage = 350,
-			DamageRadius = 1,		#from 0
-            DisplayName = 'Zealot AA Missile',		
-            MaxRadius = 100,		#from 64
-            RateOfFire = 1,			#from 0,8
-			MuzzleVelocity = 75,
+            DamageRadius = 1,        --from 0
+            DisplayName = 'Zealot AA Missile',        
+            MaxRadius = 100,        --from 64
+            RateOfFire = 1,            --from 0,8
+            MuzzleVelocity = 75,
         },
         {
             Damage = 350,
-			DamageRadius = 1,		#from 0
-            DisplayName = 'Zealot AA Missile',		
-            MaxRadius = 100,		#from 64
-            RateOfFire = 1,			#from 0,8
-			MuzzleVelocity = 75,	#from 50
+            DamageRadius = 1,        --from 0
+            DisplayName = 'Zealot AA Missile',        
+            MaxRadius = 100,        --from 64
+            RateOfFire = 1,            --from 0,8
+            MuzzleVelocity = 75,    --from 50
         },
         {
             Damage = 350,
-			DamageRadius = 1,		#from 0
-            DisplayName = 'Zealot AA Missile',		
-            MaxRadius = 100,		#from 64
-            RateOfFire = 1,			#from 0,8
-			MuzzleVelocity = 75,	#from 50
+            DamageRadius = 1,        --from 0
+            DisplayName = 'Zealot AA Missile',        
+            MaxRadius = 100,        --from 64
+            RateOfFire = 1,            --from 0,8
+            MuzzleVelocity = 75,    --from 50
         },
         {
-            Damage = 400,				#from 150 = 100dps
-            DamageRadius = 1.5,			
+            Damage = 400,                --from 150 = 100dps
+            DamageRadius = 1.5,            
             DisplayName = 'Harmonic Depth Charge',
-            FiringRandomness = 0,		#from 1
-            MaxRadius = 80,				#from 50
-            MuzzleSalvoSize = 6,		#from 1
-            MuzzleVelocity = 20,		#from 0
-			ProjectileLifetime = 10,	#added
+            FiringRandomness = 0,        --from 1
+            MaxRadius = 80,                --from 50
+            MuzzleSalvoSize = 6,        --from 1
+            MuzzleVelocity = 20,        --from 0
+            ProjectileLifetime = 10,    --added
             RateOfFire = 0.25,
-            TargetCheckInterval = 1.25,	#from 2
+            TargetCheckInterval = 1.25,    --from 2
         },
         {
-            Damage = 400,				#from 150 = 200dps
-            DamageRadius = 3,			#from 1,5
+            Damage = 400,                --from 150 = 200dps
+            DamageRadius = 3,            --from 1,5
             DisplayName = 'Harmonic Depth Charge',
-            FiringRandomness = 0,		#from 1
-            MaxRadius = 40,				#from 50
-            MuzzleSalvoSize = 6,		#from 1
-            MuzzleVelocity = 20,		#from 0
-			ProjectileLifetime = 10,	#added
-            RateOfFire = 0.5,			#from 0,25 = 2s
-            TargetCheckInterval = 1.25,	#from 2
+            FiringRandomness = 0,        --from 1
+            MaxRadius = 40,                --from 50
+            MuzzleSalvoSize = 6,        --from 1
+            MuzzleVelocity = 20,        --from 0
+            ProjectileLifetime = 10,    --added
+            RateOfFire = 0.5,            --from 0,25 = 2s
+            TargetCheckInterval = 1.25,    --from 2
         },
         {
-            Damage = 300,				#from 240 = 2x600dps
-            DamageRadius = 5,			#from 3
+            Damage = 300,                --from 240 = 2x600dps
+            DamageRadius = 5,            --from 3
             DisplayName = 'Fizz Launcher',
-            FiringRandomness = 2,		#from 3
+            FiringRandomness = 2,        --from 3
             FiringTolerance = 3,
-            MaxRadius = 50,				#from 44
-            MuzzleVelocity = 75,		#from 20
+            MaxRadius = 50,                --from 44
+            MuzzleVelocity = 75,        --from 20
         },
         {
-            Damage = 300,				#from 240
+            Damage = 300,                --from 240
             DamageRadius = 5,
             DisplayName = 'Fizz Launcher',
             FiringRandomness = 2,
             FiringTolerance = 3,
-            MaxRadius = 50,				#from 44
-            MuzzleVelocity = 75,		#from 20
+            MaxRadius = 50,                --from 44
+            MuzzleVelocity = 75,        --from 20
         },
         {
-            AboveWaterTargetsOnly = false,	#from true = hit also submarine
+            AboveWaterTargetsOnly = false,    --from true = hit also submarine
             Damage = 10000,
             DamageRadius = 15,
             DisplayName = 'Air Crash',
         },
     },
     Wreckage = {
-		EnergyMult = 0.45,		#from 0
+        EnergyMult = 0.45,        --from 0
         HealthMult = 0.9,
-        MassMult = 0.45,		#from 0.9
+        MassMult = 0.45,        --from 0.9
     },
 }

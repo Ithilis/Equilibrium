@@ -1,10 +1,10 @@
-# Kennel 2
+-- Kennel 2
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xeb0204", 
 
-	Economy = {
+    Economy = {
         BuildCostEnergy = 4875,
         BuildCostMass = 325,
         BuildRate = 25,

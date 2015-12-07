@@ -1,4 +1,4 @@
-#T3 Aeon submarine Silencer
+--T3 Aeon submarine Silencer
 
 UnitBlueprint {
 Merge = true,
@@ -13,20 +13,20 @@ BlueprintId="uas0304",
             Level5 = 24,
         },
     },
-	Defense = {
-        Health = 4500,		#from3750
+    Defense = {
+        Health = 4500,        --from3750
         MaxHealth = 4500,
     },
-	Display = {
+    Display = {
         Abilities = {
-			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_sonarstealth>Sonar Stealth',
         },
-	},
+    },
     Economy = {
         BuildCostEnergy = 105000,
         BuildCostMass = 7000,
         BuildTime = 36000,
-		MaintenanceConsumptionPerSecondEnergy = 100,
+        MaintenanceConsumptionPerSecondEnergy = 100,
     },
     General = {
         OrderOverrides = {
@@ -40,17 +40,17 @@ BlueprintId="uas0304",
         },
     },
     Intel = {
-		SonarStealth = true,
+        SonarStealth = true,
         SonarRadius = 60,
         VisionRadius = 35,
-        WaterVisionRadius = 35,	#from 45
+        WaterVisionRadius = 35,    --from 45
     },
     Physics = {
-        Elevation = -3.5,		#from -1,5
-        MaxAcceleration = 4.5,	#from3,3
+        Elevation = -3.5,        --from -1,5
+        MaxAcceleration = 4.5,    --from3,3
         MaxBrake = 4.5,
         MaxSpeed = 4.5,
-		MaxSpeedReverse = 4.5,
+        MaxSpeedReverse = 4.5,
     },
     Veteran = {
         Level1 = 210,

@@ -1,4 +1,4 @@
-#Eye of Rhianne
+--Eye of Rhianne
 
 UnitBlueprint {
 Merge = true,
@@ -8,7 +8,7 @@ BlueprintId = "xab3301",
         Health = 2000,
         MaxHealth = 2000,
     },
-	Display = {
+    Display = {
         Tarmacs = {
             {
                 Albedo = 'Tarmacs/Tar6x_aeon_01_albedo',
@@ -16,24 +16,24 @@ BlueprintId = "xab3301",
             },
         },
     },
-	Physics = {
-        SkirtSizeX = 6,		#from 10
-        SkirtSizeZ = 6,		#from 10
+    Physics = {
+        SkirtSizeX = 6,        --from 10
+        SkirtSizeZ = 6,        --from 10
     },
     Economy = {
         BuildCostEnergy = 60000,
         BuildCostMass = 3000,
         BuildTime = 3750,
-        InitialRemoteViewingEnergyDrain = 5000,	#from 10 000
+        InitialRemoteViewingEnergyDrain = 5000,    --from 10 000
         MaintenanceConsumptionPerSecondEnergy = 5000,
     },
-	Footprint = {
+    Footprint = {
         SizeX = 3,
         SizeZ = 3,
     },
     Intel = {
         ReactivateTime = 10,
-        RemoteViewingRadius = 40,	#from 25
+        RemoteViewingRadius = 40,    --from 25
         VisionRadius = 15,
-	},
+    },
 }

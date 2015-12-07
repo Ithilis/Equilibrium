@@ -1,10 +1,10 @@
-#Salvation
+--Salvation
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xab2307", 
 
-	Categories = {
+    Categories = {
         'PRODUCTFA',
         'SELECTABLE',
         'BUILTBYTIER3ENGINEER',
@@ -16,30 +16,30 @@ BlueprintId = "xab2307",
         'INDIRECTFIRE',
         'ARTILLERY',
         'DRAGBUILD',
-        'SIZE16',				#from 20
+        'SIZE16',                --from 20
         'VISIBLETORECON',
         'RECLAIMABLE',
         'OVERLAYINDIRECTFIRE',
         'SORTSTRATEGIC',
     },
-	Display = {
+    Display = {
         Tarmacs = {
             {
-				Albedo = 'Tarmacs/Tar6x_aeon_01_albedo',
+                Albedo = 'Tarmacs/Tar6x_aeon_01_albedo',
                 Normal = 'Tarmacs/Tar6x_aeon_01_normals',
             },
         },
     },
-	Footprint = {
-        SizeX = 5,	#from 7x7
+    Footprint = {
+        SizeX = 5,    --from 7x7
         SizeZ = 5,
     },
-    LifeBarOffset = 2.9,	#from 3,8
+    LifeBarOffset = 2.9,    --from 3,8
     Physics = {
-        SkirtSizeX = 8,	#from 10x10
+        SkirtSizeX = 8,    --from 10x10
         SkirtSizeZ = 8,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 6,
             Level2 = 9,
@@ -64,20 +64,20 @@ BlueprintId = "xab2307",
         Level4 = 576,
         Level5 = 720,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 100,					#from 220
-            DamageRadius = 4,				#from 2
-            EnergyDrainPerSecond = 4250,	#from 12000
-            EnergyRequired = 8500,			#
-            FiringRandomness = 0.35,		#from 0,25
-            FiringTolerance = 0.01,			#from 0,01
-            MaxRadius = 700,				#from 1800
-            MinRadius = 150,				#
-            MuzzleVelocity = 80,			#
-            MuzzleVelocityReduceDistance = 750,	#
-            ProjectilesPerOnFire = 36,		#25 but in reality its 36
-            RateOfFire = 0.166,				#from 0,32 = 6s=600dps
+            Damage = 100,                    --from 220
+            DamageRadius = 4,                --from 2
+            EnergyDrainPerSecond = 4250,    --from 12000
+            EnergyRequired = 8500,            --
+            FiringRandomness = 0.35,        --from 0,25
+            FiringTolerance = 0.01,            --from 0,01
+            MaxRadius = 700,                --from 1800
+            MinRadius = 150,                --
+            MuzzleVelocity = 80,            --
+            MuzzleVelocityReduceDistance = 750,    --
+            ProjectilesPerOnFire = 36,        --25 but in reality its 36
+            RateOfFire = 0.166,                --from 0,32 = 6s=600dps
 
         },
     },

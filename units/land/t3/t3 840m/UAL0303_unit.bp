@@ -1,49 +1,49 @@
-	#Harbrinnger
-	
-	UnitBlueprint {
-	Merge = true,
+    --Harbrinnger
+    
+    UnitBlueprint {
+    Merge = true,
     BlueprintId = "ual0303",
-	
-		Economy = {
-			BuildCostEnergy = 8400,
-			BuildCostMass = 840,
-			BuildTime = 4200,
-			BuildRate = 10,	#from3
-			MaintenanceConsumptionPerSecondEnergy = 1,
-		},
-		Defense = {
-			Health = 3000,			#4500hp
-			MaxHealth = 3000,
-			Shield = {
-				ShieldMaxHealth = 1500,		#from 1300
-				ShieldRechargeTime = 45,	#from 60s
-				ShieldRegenRate = 15,		#from 9
-			},
-		},
-		Buffs = {
-			Regen = {
-				Level1 = 6,
-				Level2 = 9,
-				Level3 = 12,
-				Level4 = 15,
-				Level5 = 18,
-			},
-		},
-		Veteran = {
-			Level1 = 25,
-			Level2 = 50,
-			Level3 = 75,
-			Level4 = 100,
-			Level5 = 125,
-		},
-		Physics = {
+    
+        Economy = {
+            BuildCostEnergy = 8400,
+            BuildCostMass = 840,
+            BuildTime = 4200,
+            BuildRate = 10,    --from3
+            MaintenanceConsumptionPerSecondEnergy = 1,
+        },
+        Defense = {
+            Health = 3000,            --4500hp
+            MaxHealth = 3000,
+            Shield = {
+                ShieldMaxHealth = 1500,        --from 1300
+                ShieldRechargeTime = 45,    --from 60s
+                ShieldRegenRate = 15,        --from 9
+            },
+        },
+        Buffs = {
+            Regen = {
+                Level1 = 6,
+                Level2 = 9,
+                Level3 = 12,
+                Level4 = 15,
+                Level5 = 18,
+            },
+        },
+        Veteran = {
+            Level1 = 25,
+            Level2 = 50,
+            Level3 = 75,
+            Level4 = 100,
+            Level5 = 125,
+        },
+        Physics = {
         MaxAcceleration = 2.8,
         MaxBrake = 2.8,
         MaxSpeed = 2.8,
-		},
-		Weapon = {
-			{
-			Damage = 240,			#300dps
-			},
-		},
-	}
+        },
+        Weapon = {
+            {
+            Damage = 240,            --300dps
+            },
+        },
+    }

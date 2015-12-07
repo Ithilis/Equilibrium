@@ -1,12 +1,12 @@
-#Ahwasa
+--Ahwasa
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsa0402", 
 
     Air = {
-        MaxAirspeed = 17,	#from 20
-        MinAirspeed = 16,	#from 18
+        MaxAirspeed = 17,    --from 20
+        MinAirspeed = 16,    --from 18
     },
     Buffs = {
         Regen = {
@@ -18,17 +18,17 @@ BlueprintId = "xsa0402",
         },
     },
     Defense = {
-        Health = 60000,		#from 52000
+        Health = 60000,        --from 52000
         MaxHealth = 60000,
         RegenRate = 25,
     },
     Economy = {
-        BuildCostEnergy = 1000000,	#from 780000
-        BuildCostMass = 40000,		#from 48000
-        BuildTime = 50000,			#from 36000
+        BuildCostEnergy = 1000000,    --from 780000
+        BuildCostMass = 40000,        --from 48000
+        BuildTime = 50000,            --from 36000
     },
     Veteran = {
-	RequirementMult = 0.5,
+    RequirementMult = 0.5,
         Level1 = 120,
         Level2 = 240,
         Level3 = 360,
@@ -38,45 +38,45 @@ BlueprintId = "xsa0402",
     Weapon = {
         {
             AutoInitiateAttackCommand = true,
-            BombDropThreshold = 20,			#from 4
+            BombDropThreshold = 20,            --from 4
             Damage = 11000,
-            DamageRadius = 15,				#from 20
+            DamageRadius = 15,                --from 20
             DisplayName = 'Othe Tactical Bomb',
             FiringRandomness = 3,
             FiringTolerance = 6,
-            MaxRadius = 60,					#from 90
-            RateOfFire = 0.0666,			#from 0,1 = 15s
+            MaxRadius = 60,                    --from 90
+            RateOfFire = 0.0666,            --from 0,1 = 15s
         },
         {
-            Damage = 500,		#from 450
+            Damage = 500,        --from 450
             DisplayName = 'Losaare AA Autocannon',
-            MaxRadius = 45,		#from 64
+            MaxRadius = 45,        --from 64
         },
         {
-            Damage = 500,		#from 450
+            Damage = 500,        --from 450
             DisplayName = 'Losaare AA Autocannon',
-            MaxRadius = 45,		#from 64
+            MaxRadius = 45,        --from 64
         },
         {
-            Damage = 500,		#from 450
+            Damage = 500,        --from 450
             DisplayName = 'Losaare AA Autocannon',
-            MaxRadius = 45,		#from 64
+            MaxRadius = 45,        --from 64
         },
         {
-            Damage = 500,		#from 450
+            Damage = 500,        --from 450
             DisplayName = 'Losaare AA Autocannon',
-            MaxRadius = 45,		#from 64
+            MaxRadius = 45,        --from 64
         },
         {
-			AboveWaterTargetsOnly = false,	#from true = hit also submarine
+            AboveWaterTargetsOnly = false,    --from true = hit also submarine
             Damage = 10000,
             DamageRadius = 8,
             DisplayName = 'Air Crash',
         },
     },
     Wreckage = {
-		EnergyMult = 0.45,		#from 0
+        EnergyMult = 0.45,        --from 0
         HealthMult = 0.9,
-        MassMult = 0.45,		#from 0.9
+        MassMult = 0.45,        --from 0.9
     },
 }

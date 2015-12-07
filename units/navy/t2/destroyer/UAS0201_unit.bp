@@ -1,4 +1,4 @@
-#T2 Destroyer Exodus
+--T2 Destroyer Exodus
 
 UnitBlueprint {
 Merge = true,
@@ -16,10 +16,10 @@ BlueprintId="uas0201",
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
-        BuildTime = 9000,		#from 10 000bt
+        BuildTime = 9000,        --from 10 000bt
     },
     Intel = {
-        WaterVisionRadius = 30,	#from 45
+        WaterVisionRadius = 30,    --from 45
     },
     Veteran = {
         Level1 = 68,
@@ -30,17 +30,17 @@ BlueprintId="uas0201",
     },
     Weapon = {
         {
-            Damage = 1000,			#from 1060 = 200dps
-            DamageRadius = 2.5,		#from 1
-            MuzzleVelocity = 30,	#from 30
-			FiringRandomness = 0.3,	#from 0,25
+            Damage = 1000,            --from 1060 = 200dps
+            DamageRadius = 2.5,        --from 1
+            MuzzleVelocity = 30,    --from 30
+            FiringRandomness = 0.3,    --from 0,25
         },
         {
-			DisplayName = 'Harmonic Depth Charge',
-			Damage = 400,		#from 350 = 121dps
+            DisplayName = 'Harmonic Depth Charge',
+            Damage = 400,        --from 350 = 121dps
         },
         {
-            Damage = 170,			#from 150 = 85dps on torpedo
+            Damage = 170,            --from 150 = 85dps on torpedo
         },
         {
         },

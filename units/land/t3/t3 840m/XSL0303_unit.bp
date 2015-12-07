@@ -1,18 +1,18 @@
-#Outhuum
+--Outhuum
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0303",
 
-	AI = {
-		TargetBones = {
-			'Turret',
-			'Turret_Barrel',
-			'XSL0303',
-		},
-	},
-	CollisionOffsetY = 0,
-	CollisionOffsetZ = 0.05,
+    AI = {
+        TargetBones = {
+            'Turret',
+            'Turret_Barrel',
+            'XSL0303',
+        },
+    },
+    CollisionOffsetY = 0,
+    CollisionOffsetZ = 0.05,
     SizeX = 1.4,
     SizeY = 0.7,
     SizeZ = 2.0,
@@ -22,47 +22,47 @@ BlueprintId = "xsl0303",
     },
     Economy = {
         BuildCostEnergy = 8400,
-		BuildCostMass = 840,
-		BuildTime = 4200,
+        BuildCostMass = 840,
+        BuildTime = 4200,
     },
     Physics = {
         MaxAcceleration = 2.6,
         MaxBrake = 2.6,
         MaxSpeed = 2.6,
     },
-	Buffs = {
-		Regen = {
-			Level1 = 6,
-			Level2 = 9,
-			Level3 = 12,
-			Level4 = 15,
-			Level5 = 18,
-		},
-	},
-	Intel = {
-        VisionRadius = 22,
-        WaterVisionRadius = 5,	#from 25
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
     },
-	Veteran = {
-			Level1 = 25,
-			Level2 = 50,
-			Level3 = 75,
-			Level4 = 100,
-			Level5 = 125,
-	},	
+    Intel = {
+        VisionRadius = 22,
+        WaterVisionRadius = 5,    --from 25
+    },
+    Veteran = {
+            Level1 = 25,
+            Level2 = 50,
+            Level3 = 75,
+            Level4 = 100,
+            Level5 = 125,
+    },    
     Weapon = {
-		{
-            Damage = 42,		#168 dps
+        {
+            Damage = 42,        --168 dps
             MaxRadius = 23,
-			RateOfFire = 2,
+            RateOfFire = 2,
         },
         {
             Damage = 42,
             MaxRadius = 23,
-			RateOfFire = 2,
+            RateOfFire = 2,
         },
         {
-            Damage = 400,		#100 dps
+            Damage = 400,        --100 dps
             MaxRadius = 33,
         },
         {

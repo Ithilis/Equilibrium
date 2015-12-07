@@ -1,4 +1,4 @@
-#Enginer egg
+--Enginer egg
 
 UnitBlueprint {
 Merge = true,
@@ -7,7 +7,7 @@ BlueprintId = "xrl0002",
     Economy = {
         BuildCostEnergy = 2500,
         BuildCostMass = 250,
-        BuildTime = 500,			#12,5s
+        BuildTime = 500,            --12,5s
         BuildUnit = 'url0309',
     },
 }

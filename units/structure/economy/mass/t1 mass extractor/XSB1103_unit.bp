@@ -1,4 +1,4 @@
-#T1 Mass Extractor
+--T1 Mass Extractor
 
 UnitBlueprint {
 Merge = true,
@@ -10,6 +10,6 @@ BlueprintId = "xsb1103",
         BuildRate = 12.5,
         BuildTime = 50,
         MaintenanceConsumptionPerSecondEnergy = 1,
-		ProductionPerSecondMass = 2,
+        ProductionPerSecondMass = 2,
     },
 }

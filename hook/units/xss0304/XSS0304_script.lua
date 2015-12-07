@@ -1,4 +1,4 @@
-#Seaphim Submarine Hunter Script
+--Seaphim Submarine Hunter Script
 
 local oldXSS0304 = XSS0304
 XSS0304 = Class(oldXSS0304) {
@@ -7,13 +7,13 @@ XSS0304 = Class(oldXSS0304) {
         SSubUnit.OnCreate(self)
         self:SetMaintenanceConsumptionActive()
     end,
-	
-	OnMotionVertEventChange = function( self, new, old )
+    
+    OnMotionVertEventChange = function( self, new, old )
         SSubUnit.OnMotionVertEventChange(self, new, old)
         if new == 'Top' then
-			self:SetMaintenanceConsumptionInactive()
+            self:SetMaintenanceConsumptionInactive()
         elseif new == 'Down' then
-			self:SetMaintenanceConsumptionActive()
+            self:SetMaintenanceConsumptionActive()
         end
     end,
 

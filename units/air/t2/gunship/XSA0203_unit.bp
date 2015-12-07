@@ -1,4 +1,4 @@
-#Vulthoo T2.5 gunship
+--Vulthoo T2.5 gunship
 
 UnitBlueprint {
 Merge = true,
@@ -18,7 +18,7 @@ BlueprintId = "xsa0203",
         MaxHealth = 1200,
     },
     Display = {
-        UniformScale = 0.06,		#from 0,04
+        UniformScale = 0.06,        --from 0,04
     },
     Economy = {
         BuildCostEnergy = 6750,
@@ -37,16 +37,16 @@ BlueprintId = "xsa0203",
     },
     Weapon = {
         {
-            Damage = 20,				#from12 = 80dps
-			DamageRadius = 0.5,			#from 0
-            MaxRadius = 24,				#from 22r
-            ProjectilesPerOnFire = 2,	#from 4
-            RateOfFire = 1,				#from 1.25 = 1,5s
+            Damage = 20,                --from12 = 80dps
+            DamageRadius = 0.5,            --from 0
+            MaxRadius = 24,                --from 22r
+            ProjectilesPerOnFire = 2,    --from 4
+            RateOfFire = 1,                --from 1.25 = 1,5s
         },
         {
-            Damage = 20,				#from12
-			DamageRadius = 0.5,			#from 0
-            MaxRadius = 24,				#from 22r
+            Damage = 20,                --from12
+            DamageRadius = 0.5,            --from 0
+            MaxRadius = 24,                --from 22r
             ProjectilesPerOnFire = 2,
             RateOfFire = 1,
         },

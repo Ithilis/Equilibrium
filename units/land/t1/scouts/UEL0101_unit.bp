@@ -1,11 +1,11 @@
-#UEF scout
+--UEF scout
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0101",
 
-	Defense = {
-        Health = 30,	#from 29
+    Defense = {
+        Health = 30,    --from 29
         MaxHealth = 30,
     },
     Economy = {
@@ -13,9 +13,9 @@ BlueprintId = "uel0101",
         BuildCostMass = 15,
         BuildTime = 75,
     },
-	Weapon = {
+    Weapon = {
         {
-			MaxRadius = 23, 		#from 25
+            MaxRadius = 23,         --from 25
         },
     },
 }

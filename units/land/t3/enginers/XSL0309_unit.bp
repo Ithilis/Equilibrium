@@ -3,11 +3,11 @@ Merge = true,
 BlueprintId = "xsl0309", 
 
     Economy = {
-		BuildCostEnergy = 3750,	#200e/s
-		BuildCostMass = 375,	#20m/s
-		BuildTime = 1875,		#18,75s
-		BuildRate = 37.5,		#from 40
-		StorageEnergy = 0,
+        BuildCostEnergy = 3750,    --200e/s
+        BuildCostMass = 375,    --20m/s
+        BuildTime = 1875,        --18,75s
+        BuildRate = 37.5,        --from 40
+        StorageEnergy = 0,
         StorageMass = 0,
     },
     Categories = {
@@ -22,7 +22,7 @@ BlueprintId = "xsl0309",
         'ENGINEER',
         'REPAIR',
         'RECLAIM',
-		'REBUILDER',	#add
+        'REBUILDER',    --add
         'CAPTURE',
         'HOVER',
         'VISIBLETORECON',

@@ -1,4 +1,4 @@
-#T1 scout
+--T1 scout
 
 UnitBlueprint {
 Merge = true,
@@ -10,6 +10,6 @@ BlueprintId = "ura0101",
         BuildTime = 200,
     },
     Physics = {
-        FuelUseTime = 240,	#from 500
+        FuelUseTime = 240,    --from 500
     },
 }

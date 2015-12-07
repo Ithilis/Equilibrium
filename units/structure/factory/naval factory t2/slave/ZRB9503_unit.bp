@@ -1,16 +1,16 @@
-#T2 Slave Naval factory
+--T2 Slave Naval factory
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "zrb9503",
 
-	Economy = {
+    Economy = {
         BuildCostEnergy = 3000,
         BuildCostMass = 450,
         BuildRate = 60,
         BuildTime = 600,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
-		DifferentialUpgradeCostCalculation = false, 
+        DifferentialUpgradeCostCalculation = false, 
     },
 }

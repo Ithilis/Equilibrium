@@ -1,4 +1,4 @@
-#TML
+--TML
 
 UnitBlueprint {
 Merge = true,
@@ -19,7 +19,7 @@ BlueprintId = "ueb2108",
         BuildTime = 1000,
     },
     Veteran = {
-		Level1 = 16,
+        Level1 = 16,
         Level2 = 32,
         Level3 = 48,
         Level4 = 64,
@@ -27,8 +27,8 @@ BlueprintId = "ueb2108",
     },
     Weapon = {
         {
-            DamageRadius = 3,	#from 2
-			MaxProjectileStorage = 12,
+            DamageRadius = 3,    --from 2
+            MaxProjectileStorage = 12,
         },
     },
 }

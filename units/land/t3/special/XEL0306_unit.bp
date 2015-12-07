@@ -1,11 +1,11 @@
-#Spearhead
+--Spearhead
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xel0306", 
 
-	Defense = {
-        Health = 1500,		#from 1700
+    Defense = {
+        Health = 1500,        --from 1700
         MaxHealth = 1500,
     },
     Economy = {
@@ -13,26 +13,26 @@ BlueprintId = "xel0306",
         BuildCostMass = 441,
         BuildTime = 3150,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
-			Level1 = 6,
-			Level2 = 9,
-			Level3 = 12,
-			Level4 = 15,
-			Level5 = 18,
-		},
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
     },
-	Veteran = {
-		Level1 = 15.5,
-		Level2 = 31,
-		Level3 = 46.5,
-		Level4 = 62,
-		Level5 = 77.5,
-	},
+    Veteran = {
+        Level1 = 15.5,
+        Level2 = 31,
+        Level3 = 46.5,
+        Level4 = 62,
+        Level5 = 77.5,
+    },
     Weapon = {
         {
-            Damage = 800,				#from 800 = 240dps
-            DamageRadius = 1,			#from 0.5
+            Damage = 800,                --from 800 = 240dps
+            DamageRadius = 1,            --from 0.5
          },
     },
 }

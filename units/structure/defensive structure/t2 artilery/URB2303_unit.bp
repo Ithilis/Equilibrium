@@ -1,4 +1,4 @@
-#T2 Atrillery installation
+--T2 Atrillery installation
 
 UnitBlueprint {
 Merge = true,
@@ -13,14 +13,14 @@ BlueprintId = "urb2303",
             Level5 = 12,
         },
     },
-	Defense = {
-        Health = 4750,				#from 3150
+    Defense = {
+        Health = 4750,                --from 3150
         MaxHealth = 4750,
-    },	
+    },    
     Economy = {
-        BuildCostEnergy = 25000,	#from 12000
-        BuildCostMass = 2500,		#from 1680
-        BuildTime = 3125,			#from 1467
+        BuildCostEnergy = 25000,    --from 12000
+        BuildCostMass = 2500,        --from 1680
+        BuildTime = 3125,            --from 1467
     },
     Veteran = {
         Level1 = 50,
@@ -31,7 +31,7 @@ BlueprintId = "urb2303",
     },
     Weapon = {
         {
-			Buffs = {
+            Buffs = {
                 {
                     Add = {
                         OnImpact = true,
@@ -41,7 +41,7 @@ BlueprintId = "urb2303",
                     Duration = 4,
                     Radius = 10,
                     TargetAllow = 'TECH1',
-					TargetDisallow = 'WALL, NAVAL',
+                    TargetDisallow = 'WALL, NAVAL',
                 },
                 {
                     Add = {
@@ -54,7 +54,7 @@ BlueprintId = "urb2303",
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL, NAVAL',
                 },
-				{
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -65,8 +65,8 @@ BlueprintId = "urb2303",
                     TargetAllow = 'TECH3',
                     TargetDisallow = 'WALL, NAVAL',
                 },
-				#Against - NAVY
-				{
+                --Against - NAVY
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -75,7 +75,7 @@ BlueprintId = "urb2303",
                     Duration = 3,
                     Radius = 10,
                     TargetAllow = 'TECH1',
-					TargetDisallow = 'WALL',
+                    TargetDisallow = 'WALL',
                 },
                 {
                     Add = {
@@ -88,7 +88,7 @@ BlueprintId = "urb2303",
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL',
                 },
-				{
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -99,20 +99,20 @@ BlueprintId = "urb2303",
                     TargetAllow = 'TECH3',
                     TargetDisallow = 'WALL',
                 },
-			},
-			
-			Damage = 2250,					#from 1750
+            },
+            
+            Damage = 2250,                    --from 1750
             DamageRadius = 4,
-            FiringRandomness = 1.75,		#from 2,5
-			MaxRadius = 120,				#from 128
-            MinRadius = 10,					#from 5	
-			RateOfFire = 0.0666,			#from 0,05 = 15s
+            FiringRandomness = 1.75,        --from 2,5
+            MaxRadius = 120,                --from 128
+            MinRadius = 10,                    --from 5    
+            RateOfFire = 0.0666,            --from 0,05 = 15s
 
-			EnergyDrainPerSecond = 300,		#from 115
-            EnergyRequired = 3000,			#from 1150
-			
-			TurretPitchSpeed = 15,	#from 6
-			TurretYawSpeed = 15,	#from 6
+            EnergyDrainPerSecond = 300,        --from 115
+            EnergyRequired = 3000,            --from 1150
+            
+            TurretPitchSpeed = 15,    --from 6
+            TurretYawSpeed = 15,    --from 6
         },
-	},	
+    },    
 }

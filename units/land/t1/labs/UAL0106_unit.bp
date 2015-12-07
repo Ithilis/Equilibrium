@@ -1,34 +1,34 @@
-#Flare
+--Flare
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0106",
 
-	
-	Defense = {
+    
+    Defense = {
         Health = 125,
         MaxHealth = 125,
     },
-	Display = {
+    Display = {
         Abilities = {
-			'<LOC ability_Vision>Vision on Death',
+            '<LOC ability_Vision>Vision on Death',
         },
-	},	
-	Economy = {
+    },    
+    Economy = {
         BuildCostEnergy = 350,
         BuildCostMass = 35,
         BuildTime = 175,
-    },	
-	Intel = {
+    },    
+    Intel = {
         IntelDurationOnDeath = 20,
         VisionRadiusOnDeath = 28,
     },
-	Physics = {
+    Physics = {
         MaxAcceleration = 4.2,
         MaxBrake = 4.2,
         MaxSpeed = 4.2,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -37,31 +37,31 @@ BlueprintId = "ual0106",
             Level5 = 6,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 1,
         Level2 = 2,
         Level3 = 3,
         Level4 = 4,
         Level5 = 5,
     },
-	Weapon = {
-		{
-		Damage = 8,			#24dps
-		MaxRadius = 13,
-		TargetPriorities = {
+    Weapon = {
+        {
+        Damage = 8,            --24dps
+        MaxRadius = 13,
+        TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'RADAR',
-				'MOBILE ENGINNER',
-				'COMMAND',				#ACU hight priority for ghetto sniping
-				'TECH1 MOBILE',
+                'RADAR',
+                'MOBILE ENGINNER',
+                'COMMAND',                --ACU hight priority for ghetto sniping
+                'TECH1 MOBILE',
                 'TECH2 MOBILE',
                 'TECH3 MOBILE',
                 'STRUCTURE DEFENSE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-			},
-		},
-	},
-	SizeX = 0.7,
-	SizeZ = 0.7,
+            },
+        },
+    },
+    SizeX = 0.7,
+    SizeZ = 0.7,
 }

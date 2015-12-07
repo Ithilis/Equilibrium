@@ -1,4 +1,4 @@
-#Battleship Huathuum
+--Battleship Huathuum
 
 UnitBlueprint {
 Merge = true,
@@ -30,34 +30,34 @@ BlueprintId="xss0302",
     },
     Weapon = {
         {
-			DamageRadius = 2.5,	#from2
-			MaxRadius = 130,	#from 128
+            DamageRadius = 2.5,    --from2
+            MaxRadius = 130,    --from 128
         },
         {
-            DamageRadius = 2.5,	#from2
-			MaxRadius = 130,	#from 128
+            DamageRadius = 2.5,    --from2
+            MaxRadius = 130,    --from 128
         },
         {
-			DamageRadius = 2.5,	#from2
-			MaxRadius = 130,	#from 128
-        },
-        {
+            DamageRadius = 2.5,    --from2
+            MaxRadius = 130,    --from 128
         },
         {
         },
         {
-			Damage = 25,		#=2x25dps
-			RateOfFire = 0.5,
-			MuzzleVelocity = 30,
-			FiringRandomness = 1,
         },
         {
-			Damage = 25,
-			RateOfFire = 0.5,
-			MuzzleVelocity = 30,
-			FiringRandomness = 1,
+            Damage = 25,        --=2x25dps
+            RateOfFire = 0.5,
+            MuzzleVelocity = 30,
+            FiringRandomness = 1,
         },
-		{
+        {
+            Damage = 25,
+            RateOfFire = 0.5,
+            MuzzleVelocity = 30,
+            FiringRandomness = 1,
+        },
+        {
         },
     },
 }

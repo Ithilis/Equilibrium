@@ -1,64 +1,64 @@
-	#S Sniper
-	
-	UnitBlueprint {
-	Merge = true,
+    --S Sniper
+    
+    UnitBlueprint {
+    Merge = true,
     BlueprintId = "xsl0305",
-	
-	Economy = {
-		BuildCostEnergy = 6800,
-		BuildCostMass = 680,
-		BuildTime = 3400,
-		},
-	Display = {
+    
+    Economy = {
+        BuildCostEnergy = 6800,
+        BuildCostMass = 680,
+        BuildTime = 3400,
+        },
+    Display = {
         Abilities = {
-			'<LOC ability_cloak>Cloaking',
-		},
-	},
-	Defense = {
+            '<LOC ability_cloak>Cloaking',
+        },
+    },
+    Defense = {
         Health = 350,
-        MaxHealth = 350,	#from 500, because mighty cloak
+        MaxHealth = 350,    --from 500, because mighty cloak
     },
     Intel = {
-		Cloak = true,
+        Cloak = true,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
-			Level1 = 6,
-			Level2 = 9,
-			Level3 = 12,
-			Level4 = 15,
-			Level5 = 18,
-		},
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 20.5,
         Level2 = 41,
         Level3 = 61.5,
         Level4 = 82,
         Level5 = 102.5,
     },
-	Physics = {
-		MaxAcceleration = 2.8,			#from 3, on snipe  its speed multiplier with 0.75 
-		MaxSpeed = 2.8,
-		LandSpeedMultiplier = 1,		
-	},
-	SizeX = 0.4,
+    Physics = {
+        MaxAcceleration = 2.8,            --from 3, on snipe  its speed multiplier with 0.75 
+        MaxSpeed = 2.8,
+        LandSpeedMultiplier = 1,        
+    },
+    SizeX = 0.4,
     SizeY = 1.2,
     SizeZ = 0.8,
-	Weapon = {
-		{
-		Damage = 1350,					#from 2000, its 90dps
+    Weapon = {
+        {
+        Damage = 1350,                    --from 2000, its 90dps
         DamageRadius = 1,
-		FiringRandomnessWhileMoving = 0.6,	#from 0,8
-		RateOfFire = 0.0666,			#15sec from 14,3sec
+        FiringRandomnessWhileMoving = 0.6,    --from 0,8
+        RateOfFire = 0.0666,            --15sec from 14,3sec
         MaxRadius = 70,
-		},
-		{
-        Damage = 600,					#120dps
+        },
+        {
+        Damage = 600,                    --120dps
         DamageRadius = 1.5,
-		FiringRandomnessWhileMoving = 0.4,	#from 0,6
+        FiringRandomnessWhileMoving = 0.4,    --from 0,6
         MaxRadius = 38,
-		RateOfFire = 0.2,
-		},
-	},
+        RateOfFire = 0.2,
+        },
+    },
 }

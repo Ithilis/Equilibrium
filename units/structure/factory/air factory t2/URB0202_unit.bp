@@ -1,15 +1,15 @@
-#T2 Air factory
+--T2 Air factory
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "urb0202", 
 
-	Economy = {
+    Economy = {
         BuildCostEnergy = 17000,
         BuildCostMass = 840,
         BuildRate = 40,
         BuildTime = 1800,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
     },
 }

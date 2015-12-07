@@ -1,4 +1,4 @@
-#T3 Static Shield 
+--T3 Static Shield 
 
 UnitBlueprint {
 Merge = true,

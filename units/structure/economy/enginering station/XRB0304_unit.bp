@@ -1,13 +1,13 @@
-# HIVE3
+-- HIVE3
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xrb0304", 
  
-	Economy = {
+    Economy = {
         BuildCostEnergy = 4125,
         BuildCostMass = 275,
         BuildRate = 75,
         BuildTime = 1375,
     },
-}	
+}    

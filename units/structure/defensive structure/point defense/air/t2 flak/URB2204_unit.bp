@@ -1,10 +1,10 @@
-#T2 static flack 
-	
+--T2 static flack 
+    
 UnitBlueprint {
 Merge = true,
 BlueprintId = "urb2204",
-	
-	
+    
+    
     Buffs = {
         Regen = {
             Level1 = 4,
@@ -14,7 +14,7 @@ BlueprintId = "urb2204",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 8,
         Level2 = 16,
         Level3 = 24,
@@ -32,12 +32,12 @@ BlueprintId = "urb2204",
     },
     Weapon = {
         {
-			Damage = 37,
-			ProjectilesPerOnFire = 2,
-			RateOfFire = 2,
+            Damage = 37,
+            ProjectilesPerOnFire = 2,
+            RateOfFire = 2,
             DamageRadius = 6,
             MuzzleVelocity = 25,
-			FiringRandomness = 3,
+            FiringRandomness = 3,
         },
     },
 }

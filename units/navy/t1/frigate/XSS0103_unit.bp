@@ -1,4 +1,4 @@
-#sera frigate
+--sera frigate
 
 UnitBlueprint {
 Merge = true,
@@ -20,9 +20,9 @@ BlueprintId="xss0103",
     },
     Intel = {
         RadarRadius = 80,
-        SonarRadius = 80,		#from 82
-        VisionRadius = 30,		#from 32
-        WaterVisionRadius = 35,	#from 16
+        SonarRadius = 80,        --from 82
+        VisionRadius = 30,        --from 32
+        WaterVisionRadius = 35,    --from 16
     },
     Weapon = {
         {

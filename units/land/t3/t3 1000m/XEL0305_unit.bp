@@ -1,46 +1,46 @@
-	#Percival
-	
-	UnitBlueprint {
-	Merge = true,
+    --Percival
+    
+    UnitBlueprint {
+    Merge = true,
     BlueprintId = "xel0305",
-	
-		Economy = {
-			BuildCostEnergy = 10000,
-			BuildCostMass = 1000,
-			BuildTime = 5000,
-		},
-		Defense = {
-			Health = 6000,				
-			MaxHealth = 6000,
-		},
-		Buffs = {
-			Regen = {
-				Level1 = 6,
-				Level2 = 9,
-				Level3 = 12,
-				Level4 = 15,
-				Level5 = 18,
-			},
-		},
-		Intel = {
-			WaterVisionRadius = 5,	#from 26
-		},
-		Veteran = {
-			Level1 = 30,
-			Level2 = 60,
-			Level3 = 90,
-			Level4 = 120,
-			Level5 = 150,
-		},
-		Weapon = {
-			{
-			Damage = 900,			#300dps
-			MaxRadius = 33,
-			RateOfFire = 0.333,		#from 4s to 3s 
-			},
-		},
-		CollisionOffsetZ = -0.1,
-		SizeX = 1.2,
-		SizeY = 1.65,
-		SizeZ = 1.1,
-	}
+    
+        Economy = {
+            BuildCostEnergy = 10000,
+            BuildCostMass = 1000,
+            BuildTime = 5000,
+        },
+        Defense = {
+            Health = 6000,                
+            MaxHealth = 6000,
+        },
+        Buffs = {
+            Regen = {
+                Level1 = 6,
+                Level2 = 9,
+                Level3 = 12,
+                Level4 = 15,
+                Level5 = 18,
+            },
+        },
+        Intel = {
+            WaterVisionRadius = 5,    --from 26
+        },
+        Veteran = {
+            Level1 = 30,
+            Level2 = 60,
+            Level3 = 90,
+            Level4 = 120,
+            Level5 = 150,
+        },
+        Weapon = {
+            {
+            Damage = 900,            --300dps
+            MaxRadius = 33,
+            RateOfFire = 0.333,        --from 4s to 3s 
+            },
+        },
+        CollisionOffsetZ = -0.1,
+        SizeX = 1.2,
+        SizeY = 1.65,
+        SizeZ = 1.1,
+    }

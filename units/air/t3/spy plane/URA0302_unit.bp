@@ -1,15 +1,15 @@
-#cybran spy plane
+--cybran spy plane
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0302", 
 
     Air = {
-        MaxAirspeed = 25,	#from30
-        MinAirspeed = 20,	#from25
+        MaxAirspeed = 25,    --from30
+        MinAirspeed = 20,    --from25
     },
     Defense = {
-        RegenRate = 5,		#from0
+        RegenRate = 5,        --from0
     },
     Economy = {
         BuildCostEnergy = 7500,
@@ -17,7 +17,7 @@ BlueprintId = "ura0302",
         BuildTime = 1200,
         MaintenanceConsumptionPerSecondEnergy = 25,
     },
-	General = {
+    General = {
         OrderOverrides = {
             RULEUTC_StealthToggle = {
                 bitmapId = 'stealth-personal',
@@ -27,13 +27,13 @@ BlueprintId = "ura0302",
         ToggleCaps = {
             RULEUTC_StealthToggle = true,
         },
-	},
+    },
     Intel = {
         OmniRadius = 30,
-        RadarRadius = 85,	#from96
-        VisionRadius = 55,	#from64
-		RadarStealth = true,
-        SonarRadius = 85,	#from98
+        RadarRadius = 85,    --from96
+        VisionRadius = 55,    --from64
+        RadarStealth = true,
+        SonarRadius = 85,    --from98
     },
     Physics = {
         FuelRechargeRate = 15,

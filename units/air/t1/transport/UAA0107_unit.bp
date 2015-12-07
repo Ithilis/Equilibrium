@@ -1,25 +1,25 @@
-#t1 transport
+--t1 transport
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0107", 
-	
-	Audio = {
+    
+    Audio = {
         CaptureLoop = Sound {
             Bank = 'UAL',
             Cue = 'UAL0105_Capture_Loop',
             LodCutoff = 'UnitMove_LodCutoff',
         },
-		StartCapture = Sound {
+        StartCapture = Sound {
             Bank = 'UAL',
             Cue = 'UAL0105_Capture_Start',
             LodCutoff = 'UnitMove_LodCutoff',
         },
-	},
-    Air = {
-        MaxAirspeed = 12,		#from10
     },
-	Categories = {
+    Air = {
+        MaxAirspeed = 12,        --from10
+    },
+    Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
         'TRANSPORTBUILTBYTIER1FACTORY',
@@ -34,32 +34,32 @@ BlueprintId = "uaa0107",
         'RECLAIMABLE',
         'TRANSPORTFOCUS',
         'CANNOTUSEAIRSTAGING',
-		'CAPTURE',			#add
+        'CAPTURE',            --add
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
-	Display = {
+    Display = {
         Abilities = {
-			'<LOC ability_Capture>Capture',
+            '<LOC ability_Capture>Capture',
         },
-	},
+    },
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 105,
         BuildTime = 700,
-		BuildRate = 3,
+        BuildRate = 3,
     },
-	General = {
+    General = {
         CommandCaps = {
-			RULEUCC_Capture = true,
+            RULEUCC_Capture = true,
         },
-	},
+    },
     Physics = {
         FuelUseTime = 300,
     },
     Weapon = {
-		{
+        {
             Damage = 100,
             DamageRadius = 1,
             DisplayName = 'Air Crash',

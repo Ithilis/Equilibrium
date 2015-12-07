@@ -50,7 +50,7 @@ ProjectileBlueprint {
         HelpText = 0,
     },
     Physics = {
-        Acceleration = 20,		#from 6
+        Acceleration = 20,        --from 6
         DestroyOnWater = true,
         InitialSpeed = 20,
         LeadTarget = false,

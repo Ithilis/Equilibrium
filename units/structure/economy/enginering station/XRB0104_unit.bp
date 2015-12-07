@@ -1,13 +1,13 @@
-# HIVE1
+-- HIVE1
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xrb0104", 
 
     Economy = {
-        BuildCostEnergy = 2750,		#from 1750e
-        BuildCostMass = 275,		#from 350m
+        BuildCostEnergy = 2750,        --from 1750e
+        BuildCostMass = 275,        --from 350m
         BuildRate = 25,
-        BuildTime = 687.5,			#from 1171
+        BuildTime = 687.5,            --from 1171
     },
 }

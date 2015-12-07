@@ -1,18 +1,18 @@
-#aeon spy plane
+--aeon spy plane
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0302", 
 
     Air = {
-        MaxAirspeed = 25,	#from30
-        MinAirspeed = 20,	#from25
+        MaxAirspeed = 25,    --from30
+        MinAirspeed = 20,    --from25
     },
     Defense = {
 
         Health = 1050,
         MaxHealth = 1050,
-        RegenRate = 5,		#from0
+        RegenRate = 5,        --from0
     },
     Economy = {
         BuildCostEnergy = 7500,
@@ -20,7 +20,7 @@ BlueprintId = "uaa0302",
         BuildTime = 1200,
     },
     Intel = {
-        OmniRadius = 35,	#from30
+        OmniRadius = 35,    --from30
         RadarRadius = 100,
         VisionRadius = 65,
     },

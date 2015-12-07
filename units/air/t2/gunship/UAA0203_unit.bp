@@ -1,11 +1,11 @@
-#Spectra T1.75 gunship
+--Spectra T1.75 gunship
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0203",
 
     Air = {
-        MaxAirspeed = 13,		#from12
+        MaxAirspeed = 13,        --from12
     },
     Buffs = {
         Regen = {
@@ -25,7 +25,7 @@ BlueprintId = "uaa0203",
     },
     Defense = {
         Health = 750,
-        MaxHealth = 750,	
+        MaxHealth = 750,    
     },
     Display = {
         UniformScale = 0.15,
@@ -40,7 +40,7 @@ BlueprintId = "uaa0203",
     },
     Weapon = {
         {
-            Damage = 10,	#from 13 = 50dps
+            Damage = 10,    --from 13 = 50dps
             MaxRadius = 22,
             MuzzleVelocity = 40,
             ProjectilesPerOnFire = 4,
@@ -52,7 +52,7 @@ BlueprintId = "uaa0203",
             },
         },
         {
-	        Damage = 250,
+            Damage = 250,
             DamageRadius = 1.5,
             DisplayName = 'Air Crash',
         },

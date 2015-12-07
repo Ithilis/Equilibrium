@@ -1,4 +1,4 @@
-#Carrier Iavish
+--Carrier Iavish
 
 UnitBlueprint {
 Merge = true,
@@ -23,13 +23,13 @@ BlueprintId="xss0303",
         RadarRadius = 200,
         SonarRadius = 40,
         VisionRadius = 85,
-        WaterVisionRadius = 25,		#from 36
+        WaterVisionRadius = 25,        --from 36
     },
-	Veteran = {
+    Veteran = {
         Level1 = 135,
         Level2 = 270,
         Level3 = 405,
         Level4 = 540,
         Level5 = 675,
-    },	
+    },    
 }

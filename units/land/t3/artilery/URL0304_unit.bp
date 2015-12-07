@@ -1,4 +1,4 @@
-# Trebuchet
+-- Trebuchet
 
 UnitBlueprint {
 Merge = true,
@@ -9,28 +9,28 @@ BlueprintId = "url0304",
         BuildCostMass = 840,
         BuildTime = 6000,
     },
-	Buffs = {
-		Regen = {
-			Level1 = 6,
-			Level2 = 9,
-			Level3 = 12,
-			Level4 = 15,
-			Level5 = 18,
-		},
-	},
-	Veteran = {
-		Level1 = 25,
-		Level2 = 50,
-		Level3 = 75,
-		Level4 = 100,
-		Level5 = 125,
-	},
+    Buffs = {
+        Regen = {
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
+    },
+    Veteran = {
+        Level1 = 25,
+        Level2 = 50,
+        Level3 = 75,
+        Level4 = 100,
+        Level5 = 125,
+    },
     Weapon = {
         {
-            Damage = 420,				#70dps
-            DamageRadius = 5,			#from 7
-            FiringRandomness = 1.75, 	#from 2
-            RateOfFire = 0.166,			#from 0.15
+            Damage = 420,                --70dps
+            DamageRadius = 5,            --from 7
+            FiringRandomness = 1.75,     --from 2
+            RateOfFire = 0.166,            --from 0.15
         },
     },
 }

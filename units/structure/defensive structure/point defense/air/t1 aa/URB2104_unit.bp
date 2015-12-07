@@ -1,4 +1,4 @@
-#T1 static AA
+--T1 static AA
 
 UnitBlueprint {
 Merge = true,
@@ -13,14 +13,14 @@ BlueprintId = "urb2104",
             Level5 = 6,
         },
     },
-	Defense = {
+    Defense = {
         Health = 850,
         MaxHealth = 850,
     },
     Economy = {
         BuildCostEnergy = 1500,
         BuildCostMass = 150,
-        BuildTime = 150,	#from 188
+        BuildTime = 150,    --from 188
     },
     Veteran = {
         Level1 = 3,

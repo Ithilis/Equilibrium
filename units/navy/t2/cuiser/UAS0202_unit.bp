@@ -1,4 +1,4 @@
-#T2 Infinite  cruiser
+--T2 Infinite  cruiser
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId="uas0202",
         },
     },
     Economy = {
-        BuildCostEnergy = 13000,	#from 18000
+        BuildCostEnergy = 13000,    --from 18000
         BuildCostMass = 1950,
         BuildTime = 7800,
     },
@@ -31,11 +31,11 @@ BlueprintId="uas0202",
         Level4 = 240,
         Level5 = 300,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 200,				#from 140=100dps
-            FiringRandomness = 0.15,	#from 0,5
-            MaxRadius = 80,				#from 60
+            Damage = 200,                --from 140=100dps
+            FiringRandomness = 0.15,    --from 0,5
+            MaxRadius = 80,                --from 60
 
         },
         {

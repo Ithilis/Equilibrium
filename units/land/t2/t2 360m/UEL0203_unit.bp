@@ -1,11 +1,11 @@
-#Riptide
+--Riptide
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0203",
     
-	Economy = {
-        BuildCostEnergy = 3600,		#2x more Energy
+    Economy = {
+        BuildCostEnergy = 3600,        --2x more Energy
         BuildCostMass = 360,
         BuildTime = 1800,
     },
@@ -17,14 +17,14 @@ BlueprintId = "uel0203",
         MaxAcceleration = 3.6,
         MaxBrake = 3.6,
         MaxSpeed = 3.6,
-		MaxBrake = 10,
+        MaxBrake = 10,
         MaxSpeedReverse = 3.6,
         MaxSteerForce = 3.6,
-		TurnRadius = 1.5,
+        TurnRadius = 1.5,
         TurnRate = 310,
-		WaterSpeedMultiplier = 0.85,
+        WaterSpeedMultiplier = 0.85,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -33,7 +33,7 @@ BlueprintId = "uel0203",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 11,
         Level2 = 22,
         Level3 = 33,
@@ -41,28 +41,28 @@ BlueprintId = "uel0203",
         Level5 = 55,
     },
     Weapon = {
-        Damage = 18,		#120dps
-		{
-			Damage = 18,		#120dps
-			TargetPriorities = {
-					'SPECIALHIGHPRI',
-					'COMMAND',			#acu is high priority
-					'TECH3 MOBILE',
-					'TECH2 MOBILE',
-					'TECH1 MOBILE',
-					'STRUCTURE DEFENSE',
-					'SPECIALLOWPRI',
-					'ALLUNITS',
-			},
-		},
+        Damage = 18,        --120dps
+        {
+            Damage = 18,        --120dps
+            TargetPriorities = {
+                    'SPECIALHIGHPRI',
+                    'COMMAND',            --acu is high priority
+                    'TECH3 MOBILE',
+                    'TECH2 MOBILE',
+                    'TECH1 MOBILE',
+                    'STRUCTURE DEFENSE',
+                    'SPECIALLOWPRI',
+                    'ALLUNITS',
+            },
+        },
     },
     AI = {
-		TargetBones = {
-			'UEL0203',
-			'Turret_Muzzle_01',
-			'Turret_Muzzle_02',
-		},
-	},
-	CollisionOffsetY = -0.1,
-	SizeY = 0.65,
+        TargetBones = {
+            'UEL0203',
+            'Turret_Muzzle_01',
+            'Turret_Muzzle_02',
+        },
+    },
+    CollisionOffsetY = -0.1,
+    SizeY = 0.65,
 }

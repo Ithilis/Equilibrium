@@ -1,5 +1,5 @@
 
-	ADFTractorClaw = Class(DefaultBeamWeapon) {
+    ADFTractorClaw = Class(DefaultBeamWeapon) {
     BeamType = TractorClawCollisionBeam,
     FxMuzzleFlash = {},
    
@@ -137,8 +137,8 @@
         self:ResetTarget()
         self.AimControl:SetResetPoseTime(2)
     end,
-	}
-	ADFTractorClawStructure = Class(DefaultBeamWeapon) {
+    }
+    ADFTractorClawStructure = Class(DefaultBeamWeapon) {
     BeamType = TractorClawCollisionBeam,
     FxMuzzleFlash = {},
-	}
+    }

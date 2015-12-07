@@ -1,11 +1,11 @@
-#T1 interceptor
+--T1 interceptor
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0102", 
 
     Air = {
-        MaxAirspeed = 16,	#from 15
+        MaxAirspeed = 16,    --from 15
     },
     Buffs = {
         Regen = {
@@ -24,14 +24,14 @@ BlueprintId = "ura0102",
     Physics = {
         FuelUseTime = 240,
     },
-	Weapon = {
-		{
-		},
-		{
-		},
-	    {
-            Damage = 50,		#crash dmg
-            DamageRadius = 0.5,	
+    Weapon = {
+        {
         },
-	},
+        {
+        },
+        {
+            Damage = 50,        --crash dmg
+            DamageRadius = 0.5,    
+        },
+    },
 }

@@ -1,13 +1,13 @@
-#T2 sera bomber Notha
+--T2 sera bomber Notha
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsa0202", 
 
 
-	Air = {
-		KLift = 2, # from 1
-        LiftFactor = 10, # from 15
+    Air = {
+        KLift = 2, -- from 1
+        LiftFactor = 10, -- from 15
     },
     Buffs = {
         Regen = {
@@ -34,33 +34,33 @@ BlueprintId = "xsa0202",
         BuildCostMass = 350,
         BuildTime = 2000,
     },
-	Physics = {
-        FuelUseTime = 300,			#from 500
+    Physics = {
+        FuelUseTime = 300,            --from 500
     },
     Weapon = {
         {
-			Damage = 25,
+            Damage = 25,
         },
         {
-            Damage = 25,						
+            Damage = 25,                        
         },
         {
-            Damage = 1050,			#from 1175
-            DamageRadius = 4,		#from 3
-			FiringTolerance = 20,	#from 6
-            MaxRadius = 45, 		#from 60
+            Damage = 1050,            --from 1175
+            DamageRadius = 4,        --from 3
+            FiringTolerance = 20,    --from 6
+            MaxRadius = 45,         --from 60
             RateOfFire = 0.1,
-			TargetPriorities = {
+            TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'LAND MOBILE TECH3 ANTIAIR',
-				'LAND MOBILE TECH2 ANTIAIR',
+                'LAND MOBILE TECH3 ANTIAIR',
+                'LAND MOBILE TECH2 ANTIAIR',
                 'STRUCTURE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
         },
         {
-            Damage = 250,		#from 25
+            Damage = 250,        --from 25
             DamageRadius = 2,
             DisplayName = 'Air Crash',
         },

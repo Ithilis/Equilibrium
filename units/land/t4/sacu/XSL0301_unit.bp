@@ -15,16 +15,16 @@ BlueprintId = "xsl0301",
     Defense = {
         Health = 14500,
         MaxHealth = 14500,
-        RegenRate = 5,		#from 15
+        RegenRate = 5,        --from 15
     },
     Economy = {
         BuildCostEnergy = 100000,
         BuildCostMass = 2000,
-        BuildRate = 25,				#from 56
+        BuildRate = 25,                --from 56
         BuildTime = 5000,
 
-        ProductionPerSecondEnergy = 150,		#from 200
-        ProductionPerSecondMass = 1,		#from 2
+        ProductionPerSecondEnergy = 150,        --from 200
+        ProductionPerSecondMass = 1,        --from 2
         StorageEnergy = 5000,
         StorageMass = 500,
 
@@ -35,57 +35,57 @@ BlueprintId = "xsl0301",
             BuildCostMass = 2000,
             BuildTime = 5000,
             NewHealth = 10500,
-            NewRegenRate = 145,		#from 250
+            NewRegenRate = 145,        --from 250
         },
         EngineeringThroughput = {
             BuildCostEnergy = 30000,
             BuildCostMass = 600,
             BuildTime = 1500,
             NewBuildRate = 100,
-			
-			Slot = 'RCH',
+            
+            Slot = 'RCH',
             UpgradeEffectBones = {
                 'Right_Arm_Muzzle',
                 'Right_Arm_Barrel',
             },
         },
-		EngineeringThroughputRemove = {
+        EngineeringThroughputRemove = {
             Slot = 'RCH',
         },
-		EnhancedSensors = {
+        EnhancedSensors = {
             BuildCostEnergy = 20000,
             BuildCostMass = 400,
             BuildTime = 1000,
 
-            NewMaxRadius = 28,		#from 32
+            NewMaxRadius = 28,        --from 32
             NewOmniRadius = 60,
             NewVisionRadius = 36,
         },
-		Missile = {
+        Missile = {
             BuildCostEnergy = 100000,
             BuildCostMass = 2000,
             BuildTime = 5000,
         },
         Overcharge = {
-            BuildCostEnergy = 250000,	#from 27000
-            BuildCostMass = 5000,		#from 4500
-            BuildTime = 12500,			#from 12600
-			#Range for oc only 28
+            BuildCostEnergy = 250000,    --from 27000
+            BuildCostMass = 5000,        --from 4500
+            BuildTime = 12500,            --from 12600
+            --Range for oc only 28
         },
-		Shield = {
+        Shield = {
             BuildCostEnergy = 100000,
             BuildCostMass = 2000,
             BuildTime = 5000,
-			MaintenanceConsumptionPerSecondEnergy = 250,	#from 300
-			
-			RegenAssistMult = 10,
+            MaintenanceConsumptionPerSecondEnergy = 250,    --from 300
+            
+            RegenAssistMult = 10,
             ShieldEnergyDrainRechargeTime = 5,
             ShieldMaxHealth = 25000,
             ShieldRechargeTime = 160,
             ShieldRegenStartTime = 1,
-            ShieldRegenRate = 100,	#from 22
+            ShieldRegenRate = 100,    --from 22
         },
-		Teleporter = {
+        Teleporter = {
             BuildCostEnergy = 1500000,
             BuildCostMass = 15000,
             BuildTime = 18750,
@@ -101,7 +101,7 @@ BlueprintId = "xsl0301",
             Slot = 'LCH',
         },
     },
-	EnhancementPresets = {
+    EnhancementPresets = {
         AdvancedCombat = {
             BuildIconSortPriority = 30,
             Description = '<LOC xsl0301_AdvancedCombat_desc>SACU (Advanced Combatant preset)',
@@ -150,7 +150,7 @@ BlueprintId = "xsl0301",
             Description = '<LOC xsl0301_NanoCombat_desc>SACU (Nano Combatant preset)',
             Enhancements = {
                 'EnhancedSensors',
-				'EngineeringThroughput',
+                'EngineeringThroughput',
                 'DamageStabilization',
             },
             HelpText = '<LOC xsl0301_NanoCombat_help>Support Armored Command Unit. Enhanced during construction with the enhanced sensor system and nano-repair system enhancements.',
@@ -169,7 +169,7 @@ BlueprintId = "xsl0301",
             SortCategory = 'SORTOTHER',
             UnitName = '<LOC xsl0301_Rambo_name>SACU (Rambo preset)',
         },
-	},	
+    },    
     Veteran = {
         Level1 = 90,
         Level2 = 180,
@@ -179,14 +179,14 @@ BlueprintId = "xsl0301",
     },
     Weapon = {
         {
-            Damage = 250,			#from 400
-			DamageRadius = 0,		#from 0
-            MaxRadius = 23,			#from 25
+            Damage = 250,            --from 400
+            DamageRadius = 0,        --from 0
+            MaxRadius = 23,            --from 25
 
             RateOfFire = 1,
         },
         {
-            Damage = 6000,				#from 12000
+            Damage = 6000,                --from 12000
             DamageRadius = 3.5,
             DamageType = 'Overcharge',
 
@@ -194,30 +194,30 @@ BlueprintId = "xsl0301",
             EnergyRequired = 5000,
 
             ManualFire = true,
-            MaxRadius = 28,				#from25
-            MuzzleVelocity = 25,		#from22 -> as projectile
-            RateOfFire = 0.1,			#from 0,2
+            MaxRadius = 28,                --from25
+            MuzzleVelocity = 25,        --from22 -> as projectile
+            RateOfFire = 0.1,            --from 0,2
         },
         {
-            Damage = 2500,				#from 1000
+            Damage = 2500,                --from 1000
             DamageFriendly = true,
             DamageRadius = 10,
-            DamageType = 'Deathnuke',	#from normal 
+            DamageType = 'Deathnuke',    --from normal 
 
         },
         {
             Damage = 6000,
             DamageFriendly = true,
-            DamageRadius = 3.5,			#from3
-            MaxProjectileStorage = 3,	#from 1
+            DamageRadius = 3.5,            --from3
+            MaxProjectileStorage = 3,    --from 1
             MaxRadius = 256,
             MinRadius = 15,
         },
         {
-			#Teleport
+            --Teleport
         },
     },
-	Wreckage = {
-        ReclaimTimeMultiplier = 2,	#from 1
+    Wreckage = {
+        ReclaimTimeMultiplier = 2,    --from 1
     },
 }

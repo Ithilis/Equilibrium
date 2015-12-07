@@ -1,17 +1,17 @@
-#T2 sonar 
+--T2 sonar 
 
 UnitBlueprint {
 Merge = true,
 BlueprintId="ueb3202",
 
     Economy = {
-		BuildCostEnergy = 4000,
+        BuildCostEnergy = 4000,
         BuildCostMass = 200,
         BuildTime = 625,
-		BuildRate = 25,
-        MaintenanceConsumptionPerSecondEnergy = 150,	#from 100
+        BuildRate = 25,
+        MaintenanceConsumptionPerSecondEnergy = 150,    --from 100
     },
     Intel = {
-		WaterVisionRadius = 80,
+        WaterVisionRadius = 80,
     },
 }

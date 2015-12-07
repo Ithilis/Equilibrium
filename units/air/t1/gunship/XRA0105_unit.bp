@@ -3,7 +3,7 @@ Merge = true,
 BlueprintId = "xra0105", 
 
     Air = {
-        MaxAirspeed = 10,	#from 12
+        MaxAirspeed = 10,    --from 12
     },
     Economy = {
         BuildCostEnergy = 3500,
@@ -22,9 +22,9 @@ BlueprintId = "xra0105",
     },
     Weapon = {
         {
-            Damage = 22,	#from 16 =55dps
+            Damage = 22,    --from 16 =55dps
             MaxRadius = 20,
-            RateOfFire = 2.5,	#from3 = 0,4s
+            RateOfFire = 2.5,    --from3 = 0,4s
         },
         {
         },

@@ -1,15 +1,15 @@
-#Ilshavoh
+--Ilshavoh
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0202",
-	
-	Economy = {
-		BuildCostEnergy = 1800,
-		BuildCostMass = 360,
-		BuildTime = 1800,
-	},
-	Buffs = {
+    
+    Economy = {
+        BuildCostEnergy = 1800,
+        BuildCostMass = 360,
+        BuildTime = 1800,
+    },
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -18,14 +18,14 @@ BlueprintId = "xsl0202",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 11,
         Level2 = 22,
         Level3 = 33,
         Level4 = 44,
         Level5 = 55,
     },
-	Weapon = {
-		TurretYawSpeed = 180,	#from 70 = on prenerf value
+    Weapon = {
+        TurretYawSpeed = 180,    --from 70 = on prenerf value
     },
 }

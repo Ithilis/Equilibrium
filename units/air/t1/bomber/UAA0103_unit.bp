@@ -1,13 +1,13 @@
-#T1 aeon bomber
+--T1 aeon bomber
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0103", 
 
     Air = {
-        MaxAirspeed = 11,		#from 10
+        MaxAirspeed = 11,        --from 10
         MinAirspeed = 11,
-		BreakOffDistance = 28,	#from 30
+        BreakOffDistance = 28,    --from 30
     },
     Buffs = {
         Regen = {
@@ -38,7 +38,7 @@ BlueprintId = "uaa0103",
                     Duration = 3,
                     Radius = 10,
                     TargetAllow = 'TECH1',
-					TargetDisallow = 'TECH2, WALL',
+                    TargetDisallow = 'TECH2, WALL',
                 },
                 {
                     Add = {
@@ -51,7 +51,7 @@ BlueprintId = "uaa0103",
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL, TECH3',
                 },
-				{
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -62,17 +62,17 @@ BlueprintId = "uaa0103",
                     TargetAllow = 'TECH3',
                     TargetDisallow = 'WALL, NAVAL',
                 },
-			},
-			DamageFriendly = false,	#from true, for not stunn ally units
+            },
+            DamageFriendly = false,    --from true, for not stunn ally units
             DamageRadius = 2.5,
-			Damage = 400,			#strong against single building
-            RateOfFire = 0.1666, 	#from 0.25 = 5sec
-			TargetPriorities = {
+            Damage = 400,            --strong against single building
+            RateOfFire = 0.1666,     --from 0.25 = 5sec
+            TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'ENGINEER',
-				'LAND MOBILE TECH2 ANTIAIR',
-				'LAND MOBILE TECH2',
-				'LAND MOBILE',
+                'ENGINEER',
+                'LAND MOBILE TECH2 ANTIAIR',
+                'LAND MOBILE TECH2',
+                'LAND MOBILE',
                 'STRUCTURE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',

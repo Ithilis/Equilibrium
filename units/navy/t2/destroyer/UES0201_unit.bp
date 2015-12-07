@@ -1,4 +1,4 @@
-#T2 Destroyer Valiant
+--T2 Destroyer Valiant
 
 UnitBlueprint {
 Merge = true,
@@ -16,10 +16,10 @@ BlueprintId="ues0201",
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
-        BuildTime = 9000,		#from 10 000bt
+        BuildTime = 9000,        --from 10 000bt
     },
     Intel = {
-        WaterVisionRadius = 30,	#from 45
+        WaterVisionRadius = 30,    --from 45
     },
     Veteran = {
         Level1 = 68,
@@ -29,7 +29,7 @@ BlueprintId="ues0201",
         Level5 = 340,
     },
     Physics = {
-        MaxAcceleration = 5.5,	#from 5
+        MaxAcceleration = 5.5,    --from 5
         MaxBrake = 5.5,
         MaxSpeed = 5.5,
         MaxSpeedReverse = 5.5,
@@ -37,22 +37,22 @@ BlueprintId="ues0201",
     },
     Weapon = {
         {
-            DamageRadius = 1.5,		#from 1
-            MuzzleVelocity = 35,	#from 30
+            DamageRadius = 1.5,        --from 1
+            MuzzleVelocity = 35,    --from 30
 
         },
         {
-			DamageRadius = 1.5,		#from 1
-            MuzzleVelocity = 35,	#from 30
+            DamageRadius = 1.5,        --from 1
+            MuzzleVelocity = 35,    --from 30
         },
         {
-            Damage = 30,		#from 10 = 42aa dps
-        },
-        {
+            Damage = 30,        --from 10 = 42aa dps
         },
         {
         },
-		{
+        {
+        },
+        {
             Audio = {
                 Fire = Sound {
                     Bank = 'UESWeapon',
@@ -62,7 +62,7 @@ BlueprintId="ues0201",
             },
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
-            Damage = 75,	#30dps
+            Damage = 75,    --30dps
             DamageType = 'Normal',
             DisplayName = 'Angler Torpedo',
             FireTargetLayerCapsTable = {
@@ -129,7 +129,7 @@ BlueprintId="ues0201",
             RackSalvoSize = 1,
             RackSlavedToTurret = false,
             RangeCategory = 'UWRC_AntiNavy',
-            RateOfFire = 0.2,	
+            RateOfFire = 0.2,    
             TargetCheckInterval = 2,
             TargetPriorities = {
                 'SPECIALHIGHPRI',

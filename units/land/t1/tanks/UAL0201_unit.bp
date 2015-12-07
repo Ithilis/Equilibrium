@@ -1,4 +1,4 @@
-#Aurora
+--Aurora
 
 UnitBlueprint {
 Merge = true,
@@ -9,17 +9,17 @@ BlueprintId = "ual0201",
         BuildCostMass = 55,
         BuildTime = 275,
     },
-	Defense = {
-        Health = 205,	#from 255/140
+    Defense = {
+        Health = 205,    --from 255/140
         MaxHealth = 205,
     },
-	Physics = {
+    Physics = {
         MaxAcceleration = 2.8,
-        MaxSpeed = 2.8, 			#from 2.9
-        MaxSpeedReverse = 2, 		#from 2,9
+        MaxSpeed = 2.8,             --from 2.9
+        MaxSpeedReverse = 2,         --from 2,9
         MaxSteerForce = 2.8, 
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -28,28 +28,28 @@ BlueprintId = "ual0201",
             Level5 = 6,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 2,
         Level2 = 4,
         Level3 = 6,
         Level4 = 8,
         Level5 = 10,
     },
-	AI = {
-		TargetBones = {
-			'Turret',
-			'Exhaust_Left',
-		},
-	},
-	CollisionOffsetY = -0.1,
-	SizeX = 0.8,
-	SizeY = 0.6,
-	SizeZ = 1.0,
-	Weapon = {
-		{
-		MaxRadius = 23,			#from 26
-		Damage = 48,			#24dps from 26
-		RateOfFire = 0.5,
-		},
-	},
+    AI = {
+        TargetBones = {
+            'Turret',
+            'Exhaust_Left',
+        },
+    },
+    CollisionOffsetY = -0.1,
+    SizeX = 0.8,
+    SizeY = 0.6,
+    SizeZ = 1.0,
+    Weapon = {
+        {
+        MaxRadius = 23,            --from 26
+        Damage = 48,            --24dps from 26
+        RateOfFire = 0.5,
+        },
+    },
 }

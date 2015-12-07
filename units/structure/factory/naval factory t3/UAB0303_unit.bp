@@ -1,19 +1,19 @@
-#T3 Naval factory
+--T3 Naval factory
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uab0303", 
 
-	Defense = {
+    Defense = {
         Health = 35000,
         MaxHealth = 35000,
     },
-	Economy = {
+    Economy = {
         BuildCostEnergy = 66000,
         BuildCostMass = 7050,
-        BuildRate = 180,	#from 120
+        BuildRate = 180,    --from 120
         BuildTime = 7200,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
     },
-}	
+}    

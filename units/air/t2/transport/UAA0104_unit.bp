@@ -1,11 +1,11 @@
-#T2 aeon transport
+--T2 aeon transport
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0104", 
 
-	Air = {
-        MaxAirspeed = 16,		#from15 for not be catch by interceptor
+    Air = {
+        MaxAirspeed = 16,        --from15 for not be catch by interceptor
     },
     Buffs = {
         Regen = {
@@ -16,7 +16,7 @@ BlueprintId = "uaa0104",
             Level5 = 12,
         },
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
     Economy = {
@@ -36,19 +36,19 @@ BlueprintId = "uaa0104",
     },
     Weapon = {
         {
-            Damage = 15,	#from6 = 72AA dps
+            Damage = 15,    --from6 = 72AA dps
         },
         {
-			Damage = 15,	#from6
+            Damage = 15,    --from6
         },
         {
- 			Damage = 15,	#from6
+             Damage = 15,    --from6
         },
         {
-			Damage = 15,	#from6
+            Damage = 15,    --from6
         },
-		{
-            AboveWaterTargetsOnly = true,	#add crash dmg
+        {
+            AboveWaterTargetsOnly = true,    --add crash dmg
             Damage = 100,
             DamageFriendly = true,
             DamageRadius = 2,

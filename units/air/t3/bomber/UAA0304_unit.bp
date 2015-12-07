@@ -1,11 +1,11 @@
-#Shocker
+--Shocker
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uaa0304", 
 
     Air = {
-        MaxAirspeed = 16,	#from 17
+        MaxAirspeed = 16,    --from 17
         MinAirspeed = 14,
     },
     Buffs = {
@@ -40,13 +40,13 @@ BlueprintId = "uaa0304",
     Weapon = {
         {
             Damage = 3300,
-            DamageRadius = 5,		#from 4
-            MaxRadius = 80,			#from 90
-            RateOfFire = 0.1666,	#from 0.2
+            DamageRadius = 5,        --from 4
+            MaxRadius = 80,            --from 90
+            RateOfFire = 0.1666,    --from 0.2
         },
         {
             Damage = 500,
-            DamageRadius = 3,		#from 1
+            DamageRadius = 3,        --from 1
             DisplayName = 'Air Crash',
         },
     },

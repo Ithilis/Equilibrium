@@ -1,11 +1,11 @@
-#Restorer
+--Restorer
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xaa0305", 
 
     Air = {
-        MaxAirspeed = 10,	#from 8
+        MaxAirspeed = 10,    --from 8
     },
     Buffs = {
         Regen = {
@@ -24,7 +24,7 @@ BlueprintId = "xaa0305",
         Level5 = 90,
     },
     Defense = {
-        Health = 4500,		#from6000
+        Health = 4500,        --from6000
         MaxHealth = 4500,
     },
     Economy = {
@@ -38,7 +38,7 @@ BlueprintId = "xaa0305",
     },
     Weapon = {
         {
-            Damage = 25,		#from24
+            Damage = 25,        --from24
             MaxRadius = 25,
             ProjectilesPerOnFire = 4,
             RateOfFire = 1.25,
@@ -49,34 +49,34 @@ BlueprintId = "xaa0305",
             },
         },
         {
-            Damage = 65,		#130AA dps
-            MaxRadius = 50,		#from60
+            Damage = 65,        --130AA dps
+            MaxRadius = 50,        --from60
             MuzzleVelocity = 35,
             RateOfFire = 1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'AIR MOBILE HIGHPRIAIR',
-                'AIR MOBILE TRANSPORTATION',				
+                'AIR MOBILE TRANSPORTATION',                
                 'AIR MOBILE TECH3 BOMBER',
                 'AIR MOBILE BOMBER',
-	            'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE GROUNDATTACK',
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
         },
         {
-            Damage = 65,		#130AA dps
-            MaxRadius = 50,		#from60
+            Damage = 65,        --130AA dps
+            MaxRadius = 50,        --from60
             MuzzleVelocity = 35,
             RateOfFire = 1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'AIR MOBILE HIGHPRIAIR',
-                'AIR MOBILE TRANSPORTATION',				
+                'AIR MOBILE TRANSPORTATION',                
                 'AIR MOBILE TECH3 BOMBER',
                 'AIR MOBILE BOMBER',
-	            'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE GROUNDATTACK',
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',

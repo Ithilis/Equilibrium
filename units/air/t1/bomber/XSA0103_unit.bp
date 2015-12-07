@@ -1,4 +1,4 @@
-#T1 sera bomber
+--T1 sera bomber
 
 UnitBlueprint {
 Merge = true,
@@ -6,9 +6,9 @@ BlueprintId = "xsa0103",
 
 
     Air = {
-        MaxAirspeed = 11,		#from 10
+        MaxAirspeed = 11,        --from 10
         MinAirspeed = 11,
-		BreakOffDistance = 28,	#from 30
+        BreakOffDistance = 28,    --from 30
     },
     Buffs = {
         Regen = {
@@ -30,11 +30,11 @@ BlueprintId = "xsa0103",
     Weapon = {
         {
             DamageRadius = 4.5,
-			DamageFriendly = false,
-            RateOfFire = 0.1666, 	#from 0.25 = 6sec
+            DamageFriendly = false,
+            RateOfFire = 0.1666,     --from 0.25 = 6sec
             TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'ENGINEER',
+                'ENGINEER',
                 'LAND MOBILE TECH1',
                 'LAND MOBILE',
                 'SPECIALLOWPRI',

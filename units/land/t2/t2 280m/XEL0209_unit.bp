@@ -1,23 +1,23 @@
-#Sparky
+--Sparky
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xel0209",
 
-	Economy = {
-		BuildCostEnergy = 2100,	#75e per sec
-		BuildCostMass = 280,	#10m per sec
-		BuildTime = 1400,		#25s
-		BuildRate = 20,			#17,5
-		StorageEnergy = 0,
+    Economy = {
+        BuildCostEnergy = 2100,    --75e per sec
+        BuildCostMass = 280,    --10m per sec
+        BuildTime = 1400,        --25s
+        BuildRate = 20,            --17,5
+        StorageEnergy = 0,
         StorageMass = 0,
-	},
-	Categories = {				#Not build-able on AIR/NAVAL factory -> i cant remove it and dont cause crazy bug with T2 air factory, that would be able build only sacu and T3 enginer... 
-		'PRODUCTFA',
+    },
+    Categories = {                --Not build-able on AIR/NAVAL factory -> i cant remove it and dont cause crazy bug with T2 air factory, that would be able build only sacu and T3 enginer... 
+        'PRODUCTFA',
         'SELECTABLE',
         'BUILTBYLANDTIER2FACTORY',
         'BUILTBYLANDTIER3FACTORY',
-        'BUILTBYAIRTIER2FACTORY',	
+        'BUILTBYAIRTIER2FACTORY',    
         'BUILTBYAIRTIER3FACTORY',
         'BUILTBYNAVALTIER2FACTORY',
         'BUILTBYNAVALTIER3FACTORY',
@@ -29,7 +29,7 @@ BlueprintId = "xel0209",
         'ENGINEER',
         'REPAIR',
         'RECLAIM',
-		'REBUILDER',		#add rebuild structure that is assisting
+        'REBUILDER',        --add rebuild structure that is assisting
         'FIELDENGINEER',
         'CAPTURE',
         'VISIBLETORECON',
@@ -40,16 +40,16 @@ BlueprintId = "xel0209",
         'OVERLAYCOUNTERINTEL',
         'OVERLAYDIRECTFIRE',
     },
-	Defense = {
+    Defense = {
         Health = 1250,
         MaxHealth = 1250,
     },
-	Physics = {
+    Physics = {
         MaxAcceleration = 2.8,
         MaxBrake = 2.8,
         MaxSpeed = 2.8,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -58,7 +58,7 @@ BlueprintId = "xel0209",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 8.5,
         Level2 = 17,
         Level3 = 25.5,

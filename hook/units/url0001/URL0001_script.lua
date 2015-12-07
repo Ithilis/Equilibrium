@@ -1,4 +1,4 @@
-#Cybran ACU
+--Cybran ACU
 
 local oldURL0001 = URL0001
 URL0001 = Class(oldURL0001) {
@@ -43,7 +43,7 @@ URL0001 = Class(oldURL0001) {
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
             self.StealthEnh = false
-			self.CloakEnh = true 
+            self.CloakEnh = true 
             self:EnableUnitIntel('Cloak')
             if not Buffs['CybranACUCloakBonus'] then
                BuffBlueprint {
@@ -63,7 +63,7 @@ URL0001 = Class(oldURL0001) {
             if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
             end  
-            Buff.ApplyBuff(self, 'CybranACUCloakBonus')                		
+            Buff.ApplyBuff(self, 'CybranACUCloakBonus')                        
         elseif enh == 'CloakingGeneratorRemove' then
             self:RemoveToggleCap('RULEUTC_CloakToggle')
             self:DisableUnitIntel('Cloak')
@@ -71,7 +71,7 @@ URL0001 = Class(oldURL0001) {
             if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
             end              
-        #T2 Engineering
+        --T2 Engineering
         elseif enh =='AdvancedEngineering' then
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
@@ -101,8 +101,8 @@ URL0001 = Class(oldURL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'CybranACUT2BuildRate')
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
         elseif enh =='AdvancedEngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
@@ -111,9 +111,9 @@ URL0001 = Class(oldURL0001) {
             if Buff.HasBuff( self, 'CybranACUT2BuildRate' ) then
                 Buff.RemoveBuff( self, 'CybranACUT2BuildRate' )
             end
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
-        #T3 Engineering
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
+        --T3 Engineering
         elseif enh =='T3Engineering' then
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
@@ -143,8 +143,8 @@ URL0001 = Class(oldURL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'CybranACUT3BuildRate')
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
         elseif enh =='T3EngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
@@ -154,8 +154,8 @@ URL0001 = Class(oldURL0001) {
             end
             self:AddBuildRestriction( categories.CYBRAN * ( categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
 
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
         elseif enh =='CoolingUpgrade' then
             local bp = self:GetBlueprint().Enhancements[enh]
             local wep = self:GetWeaponByLabel('RightRipper')
@@ -165,8 +165,8 @@ URL0001 = Class(oldURL0001) {
             microwave:ChangeMaxRadius(bp.NewMaxRadius or 44)
             local oc = self:GetWeaponByLabel('OverCharge')
             oc:ChangeMaxRadius(bp.NewMaxRadius or 44)
-			
-			if not Buffs['CybranGunHP'] then
+            
+            if not Buffs['CybranGunHP'] then
                 BuffBlueprint {
                     Name = 'CybranGunHP',
                     DisplayName = 'CybranGunHP',
@@ -182,7 +182,7 @@ URL0001 = Class(oldURL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'CybranGunHP')
-			
+            
         elseif enh == 'CoolingUpgradeRemove' then
             local wep = self:GetWeaponByLabel('RightRipper')
             local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
@@ -193,8 +193,8 @@ URL0001 = Class(oldURL0001) {
             microwave:ChangeMaxRadius(bpDisrupt or 22)
             local oc = self:GetWeaponByLabel('OverCharge')
             oc:ChangeMaxRadius(bpDisrupt or 22)
-			
-			if Buff.HasBuff( self, 'CybranGunHP' ) then
+            
+            if Buff.HasBuff( self, 'CybranGunHP' ) then
                 Buff.RemoveBuff( self, 'CybranGunHP' )
             end
             
@@ -207,7 +207,7 @@ URL0001 = Class(oldURL0001) {
             self:EnableUnitIntel('Sonar')
         elseif enh == 'NaniteTorpedoTubeRemove' then
             self:SetWeaponEnabledByLabel('Torpedo', false)
-			self:DisableUnitIntel('Sonar')
+            self:DisableUnitIntel('Sonar')
         end             
     end,
 

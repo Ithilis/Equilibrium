@@ -1,9 +1,9 @@
-#UEF Strategic Missile Submarine Script
+--UEF Strategic Missile Submarine Script
 
 local oldUES0304 = UES0304
 UES0304 = Class(oldUES0304) {
 
-	OnCreate = function(self)
+    OnCreate = function(self)
         TSubUnit.OnCreate(self)
         self:SetMaintenanceConsumptionActive()
     end,

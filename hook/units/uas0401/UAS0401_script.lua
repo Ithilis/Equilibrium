@@ -1,4 +1,4 @@
-#Aeon Experimental Submarine
+--Aeon Experimental Submarine
 
 local oldUAS0401 = UAS0401
 UAS0401 = Class(oldUAS0401) {
@@ -9,7 +9,7 @@ UAS0401 = Class(oldUAS0401) {
         if layer == 'Water' then
             self:RestoreBuildRestrictions()
             self:RequestRefreshUI()
-			self:SetMaintenanceConsumptionInactive()
+            self:SetMaintenanceConsumptionInactive()
         else
             self:AddBuildRestriction(categories.ALLUNITS)
             self:RequestRefreshUI()
@@ -24,16 +24,16 @@ UAS0401 = Class(oldUAS0401) {
             self:RequestRefreshUI()
             self:SetWeaponEnabledByLabel('MainGun', true)
             self:PlayUnitSound('Open')
-			self:SetMaintenanceConsumptionInactive()
+            self:SetMaintenanceConsumptionInactive()
         elseif new == 'Down' then
             self:SetWeaponEnabledByLabel('MainGun', false)
             self:AddBuildRestriction(categories.ALLUNITS)
             self:RequestRefreshUI()
             self:PlayUnitSound('Close')
-			self:SetMaintenanceConsumptionActive()
+            self:SetMaintenanceConsumptionActive()
         end
     end,
-	
+    
 }
 
 TypeClass = UAS0401

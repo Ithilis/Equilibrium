@@ -2,8 +2,8 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0208",
 
-	Categories = {
-		'PRODUCTSC1',
+    Categories = {
+        'PRODUCTSC1',
         'SELECTABLE',
         'BUILTBYTIER2FACTORY',
         'BUILTBYTIER3FACTORY',
@@ -20,22 +20,22 @@ BlueprintId = "url0208",
         'RECLAIMABLE',
         'PATROLHELPER',
         'SHOWQUEUE',
-		'HOVER',			#add
+        'HOVER',            --add
     },
-	Economy = {
-		BuildCostEnergy = 625,
-		BuildCostMass = 125,
-		BuildTime = 625,
-		StorageEnergy = 0,
+    Economy = {
+        BuildCostEnergy = 625,
+        BuildCostMass = 125,
+        BuildTime = 625,
+        StorageEnergy = 0,
         StorageMass = 0,
-	},
-	Display = {
+    },
+    Display = {
         Abilities = {
             '<LOC ability_hover>Hover',
             '<LOC ability_engineeringsuite>Engineering Suite',
         },
-	},
-	Physics = {
-		Elevation = 0.5,
+    },
+    Physics = {
+        Elevation = 0.5,
     },
 }

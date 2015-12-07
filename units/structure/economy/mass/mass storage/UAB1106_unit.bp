@@ -1,4 +1,4 @@
-#T1 mass storage
+--T1 mass storage
 
 UnitBlueprint {
 Merge = true,
@@ -12,14 +12,14 @@ BlueprintId = "uab1106",
         BuildCostEnergy = 1500,
         BuildCostMass = 150,
         BuildTime = 187.5,
-		StorageMass = 1000,
+        StorageMass = 1000,
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_deathaoe>Volatile',
         },
-	},	
-	Weapon = {
+    },    
+    Weapon = {
         {
             Damage = 750,
             DamageFriendly = true,

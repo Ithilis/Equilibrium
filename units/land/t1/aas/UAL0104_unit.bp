@@ -1,4 +1,4 @@
-#Thistle
+--Thistle
 
 UnitBlueprint {
 Merge = true,
@@ -9,7 +9,7 @@ BlueprintId = "ual0104",
         BuildCostMass = 30,
         BuildTime = 150,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -18,22 +18,22 @@ BlueprintId = "ual0104",
             Level5 = 6,
         },
     },
-	Physics = {
+    Physics = {
         MaxAcceleration = 3.5,
         MaxBrake = 3.5,
         MaxSpeed = 3.5,
     },
-	Veteran = {
+    Veteran = {
         Level1 = 1,
         Level2 = 2,
         Level3 = 3,
         Level4 = 4,
         Level5 = 5,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 7,		#from 5 = 21dps
-			MuzzleVelocity = 60,	#from 45
+            Damage = 7,        --from 5 = 21dps
+            MuzzleVelocity = 60,    --from 45
         },
     },
 }

@@ -1,4 +1,4 @@
-#Galactic Colossus
+--Galactic Colossus
 
 UnitBlueprint {
 Merge = true,
@@ -13,8 +13,8 @@ BlueprintId = "ual0401",
             Level5 = 75,
         },
     },
-	Veteran = {
-	RequirementMult = 0.5,
+    Veteran = {
+    RequirementMult = 0.5,
         Level1 = 85,
         Level2 = 170,
         Level3 = 255,
@@ -22,14 +22,14 @@ BlueprintId = "ual0401",
         Level5 = 425,
     },
     Defense = {
-		Health = 85000,			#from 99999
+        Health = 85000,            --from 99999
         MaxHealth = 85000,
-        RegenRate = 15,			#from 10, 15 is same for all land exp
+        RegenRate = 15,            --from 10, 15 is same for all land exp
     },
     Economy = {
         BuildCostEnergy = 350000, 
         BuildCostMass = 28000,
-        BuildTime = 46666,					# its three time faster as build same mass in percivals/bricks
+        BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
     },
     Weapon = {
         {

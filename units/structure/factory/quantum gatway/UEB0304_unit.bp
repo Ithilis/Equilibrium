@@ -1,8 +1,8 @@
-# Quantume gateway
+-- Quantume gateway
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "ueb0304",	
+BlueprintId = "ueb0304",    
 
     Economy = {
         BuildCostEnergy = 45000,

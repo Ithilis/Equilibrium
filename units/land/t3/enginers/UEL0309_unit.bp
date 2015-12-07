@@ -2,19 +2,19 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0309", 
 
-	Defense = {
-        Health = 400,			#from 600
+    Defense = {
+        Health = 400,            --from 600
         MaxHealth = 400,
     },
     Economy = {
-		BuildCostEnergy = 2500,	#200e/s
-		BuildCostMass = 250,	#20m/s
-		BuildTime = 1250,		#12,5s
-		BuildRate = 25,			#from 30
-		StorageEnergy = 0,
+        BuildCostEnergy = 2500,    --200e/s
+        BuildCostMass = 250,    --20m/s
+        BuildTime = 1250,        --12,5s
+        BuildRate = 25,            --from 30
+        StorageEnergy = 0,
         StorageMass = 0,
     },
-	Categories = {
+    Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
         'BUILTBYTIER3FACTORY',
@@ -26,21 +26,21 @@ BlueprintId = "uel0309",
         'ENGINEER',
         'REPAIR',
         'RECLAIM',
-		'REBUILDER',	#add
+        'REBUILDER',    --add
         'CAPTURE',
         'VISIBLETORECON',
         'RECLAIMABLE',
         'PATROLHELPER',
         'SHOWQUEUE',
-		'HOVER',			#add
+        'HOVER',            --add
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_hover>Hover',
             '<LOC ability_engineeringsuite>Engineering Suite',
         },
-	},
-	Physics = {
-		Elevation = 0.5,
+    },
+    Physics = {
+        Elevation = 0.5,
     },
 }

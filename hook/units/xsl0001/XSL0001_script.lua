@@ -1,4 +1,4 @@
-#Sera ACU
+--Sera ACU
 
 local oldXSL0001 = XSL0001
 XSL0001 = Class(oldXSL0001) {
@@ -27,9 +27,9 @@ XSL0001 = Class(oldXSL0001) {
                         Regen = {
                             Add = 0,
                             Mult = bp.RegenPerSecond or 0.1,
-							Ceil = bp.RegenCeiling or 0.1,
+                            Ceil = bp.RegenCeiling or 0.1,
                         },
-						MaxHealth = {
+                        MaxHealth = {
                             Add = 0,
                             Mult = bp.MaxHealthFactor or 1.0,
                             DoNoFill = true,
@@ -78,8 +78,8 @@ XSL0001 = Class(oldXSL0001) {
                 for k, v in self.ShieldEffectsBag do
                     v:Destroy()
                 end
-		        self.ShieldEffectsBag = {}
-		    end
+                self.ShieldEffectsBag = {}
+            end
 
             KillThread(self.RegenThreadHandle)
             self.RegenThreadHandle = nil
@@ -88,7 +88,7 @@ XSL0001 = Class(oldXSL0001) {
                     Buff.RemoveBuff(self, b .. 'SelfBuff')
                 end
             end
-        #Resource Allocation
+        --Resource Allocation
         elseif enh == 'ResourceAllocation' then
             local bp = self:GetBlueprint().Enhancements[enh]
             local bpEcon = self:GetBlueprint().Economy
@@ -109,7 +109,7 @@ XSL0001 = Class(oldXSL0001) {
             local bpEcon = self:GetBlueprint().Economy
             self:SetProductionPerSecondEnergy(bpEcon.ProductionPerSecondEnergy or 0)
             self:SetProductionPerSecondMass(bpEcon.ProductionPerSecondMass or 0)
-        #Damage Stabilization
+        --Damage Stabilization
         elseif enh == 'DamageStabilization' then
             if not Buffs['SeraphimACUDamageStabilization'] then
                BuffBlueprint {
@@ -134,7 +134,7 @@ XSL0001 = Class(oldXSL0001) {
                 Buff.RemoveBuff( self, 'SeraphimACUDamageStabilization' )
             end  
             Buff.ApplyBuff(self, 'SeraphimACUDamageStabilization')    
-      	elseif enh == 'DamageStabilizationAdvanced' then
+          elseif enh == 'DamageStabilizationAdvanced' then
             if not Buffs['SeraphimACUDamageStabilizationAdv'] then
                BuffBlueprint {
                     Name = 'SeraphimACUDamageStabilizationAdv',
@@ -157,9 +157,9 @@ XSL0001 = Class(oldXSL0001) {
             if Buff.HasBuff( self, 'SeraphimACUDamageStabilizationAdv' ) then
                 Buff.RemoveBuff( self, 'SeraphimACUDamageStabilizationAdv' )
             end  
-            Buff.ApplyBuff(self, 'SeraphimACUDamageStabilizationAdv')     	    
+            Buff.ApplyBuff(self, 'SeraphimACUDamageStabilizationAdv')             
         elseif enh == 'DamageStabilizationAdvancedRemove' then
-            # since there's no way to just remove an upgrade anymore, if we're remove adv, were removing both
+            -- since there's no way to just remove an upgrade anymore, if we're remove adv, were removing both
             if Buff.HasBuff( self, 'SeraphimACUDamageStabilizationAdv' ) then
                 Buff.RemoveBuff( self, 'SeraphimACUDamageStabilizationAdv' )
             end
@@ -170,12 +170,12 @@ XSL0001 = Class(oldXSL0001) {
             if Buff.HasBuff( self, 'SeraphimACUDamageStabilization' ) then
                 Buff.RemoveBuff( self, 'SeraphimACUDamageStabilization' )
             end           
-        #Teleporter
+        --Teleporter
         elseif enh == 'Teleporter' then
             self:AddCommandCap('RULEUCC_Teleport')
         elseif enh == 'TeleporterRemove' then
             self:RemoveCommandCap('RULEUCC_Teleport')
-        # Tactical Missile
+        -- Tactical Missile
         elseif enh == 'Missile' then
             self:AddCommandCap('RULEUCC_Tactical')
             self:AddCommandCap('RULEUCC_SiloBuildTactical')        
@@ -184,7 +184,7 @@ XSL0001 = Class(oldXSL0001) {
             self:RemoveCommandCap('RULEUCC_Tactical')
             self:RemoveCommandCap('RULEUCC_SiloBuildTactical')        
             self:SetWeaponEnabledByLabel('Missile', false)
-        #T2 Engineering
+        --T2 Engineering
         elseif enh =='AdvancedEngineering' then
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
@@ -214,8 +214,8 @@ XSL0001 = Class(oldXSL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'SeraphimACUT2BuildRate')
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
 
         elseif enh =='AdvancedEngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
@@ -224,11 +224,11 @@ XSL0001 = Class(oldXSL0001) {
             self:AddBuildRestriction( categories.SERAPHIM * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
             if Buff.HasBuff( self, 'SeraphimACUT2BuildRate' ) then
                 Buff.RemoveBuff( self, 'SeraphimACUT2BuildRate' )
-	     end
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
+         end
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
 
-        #T3 Engineering
+        --T3 Engineering
         elseif enh =='T3Engineering' then
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
@@ -258,8 +258,8 @@ XSL0001 = Class(oldXSL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'SeraphimACUT3BuildRate')
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
         elseif enh =='T3EngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
@@ -268,24 +268,24 @@ XSL0001 = Class(oldXSL0001) {
                 Buff.RemoveBuff( self, 'SeraphimACUT3BuildRate' )
             end
             self:AddBuildRestriction( categories.SERAPHIM * ( categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
-	    -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-	    self:updateBuildRestrictions()
-        #Blast Attack
+        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+        self:updateBuildRestrictions()
+        --Blast Attack
         elseif enh == 'BlastAttack' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
             wep:AddDamageRadiusMod(bp.NewDamageRadius or 5)
             wep:AddDamageMod(bp.AdditionalDamage)
-			wep:ChangeMaxRadius(bp.NewMaxRadius or 26)
-			local oc = self:GetWeaponByLabel('OverCharge')
+            wep:ChangeMaxRadius(bp.NewMaxRadius or 26)
+            local oc = self:GetWeaponByLabel('OverCharge')
             oc:ChangeMaxRadius(bp.NewMaxRadius or 26)
         elseif enh == 'BlastAttackRemove' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
-            wep:AddDamageRadiusMod(-self:GetBlueprint().Enhancements['BlastAttack'].NewDamageRadius) # unlimited AOE bug fix by brute51 [117]
+            wep:AddDamageRadiusMod(-self:GetBlueprint().Enhancements['BlastAttack'].NewDamageRadius) -- unlimited AOE bug fix by brute51 [117]
             wep:AddDamageMod(-self:GetBlueprint().Enhancements['BlastAttack'].AdditionalDamage)
-			wep:ChangeMaxRadius(bpDisrupt or 22)
-			local oc = self:GetWeaponByLabel('OverCharge')
+            wep:ChangeMaxRadius(bpDisrupt or 22)
+            local oc = self:GetWeaponByLabel('OverCharge')
             oc:ChangeMaxRadius(bpDisrupt or 22) 
-        #Heat Sink Augmentation
+        --Heat Sink Augmentation
         elseif enh == 'RateOfFire' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
             wep:ChangeRateOfFire(bp.NewRateOfFire or 2)

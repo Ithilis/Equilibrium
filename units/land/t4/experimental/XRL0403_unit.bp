@@ -1,4 +1,4 @@
-#Megalith
+--Megalith
 
 UnitBlueprint {
 Merge = true,
@@ -13,11 +13,11 @@ BlueprintId = "xrl0403",
             Level5 = 75,
         },
     },
-	Intel = {
-        WaterVisionRadius = 45,	#from 32
+    Intel = {
+        WaterVisionRadius = 45,    --from 32
     },
-	Veteran = {
-	RequirementMult = 0.5,
+    Veteran = {
+    RequirementMult = 0.5,
         Level1 = 115,
         Level2 = 230,
         Level3 = 345,
@@ -25,15 +25,15 @@ BlueprintId = "xrl0403",
         Level5 = 575,
     },
     Defense = {
-        Health = 95000,				#from 110 000
+        Health = 95000,                --from 110 000
         MaxHealth = 95000,
-        RegenRate = 15,				#from 0.5
+        RegenRate = 15,                --from 0.5
     },
     Economy = {
-        BuildCostEnergy = 475000, 	#from 437500,
+        BuildCostEnergy = 475000,     --from 437500,
         BuildCostMass = 38000,
-        BuildRate = 40,				#from 180 for fixing reclaim bug
-        BuildTime = 63333,			#from 18750  its three time faster as build same mass in percivals/bricks
+        BuildRate = 40,                --from 180 for fixing reclaim bug
+        BuildTime = 63333,            --from 18750  its three time faster as build same mass in percivals/bricks
         BuildableCategory = {
             'xrl0002',
             'xrl0003',

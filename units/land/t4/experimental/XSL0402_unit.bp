@@ -1,4 +1,4 @@
-#Ion storm
+--Ion storm
 
 UnitBlueprint {
 Merge = true,
@@ -6,25 +6,25 @@ BlueprintId = "xsl0402",
 
     Intel = {
         VisionRadius = 45,
-		
-		},
-		
-	LifeBarHeight = 0.01,
+        
+        },
+        
+    LifeBarHeight = 0.01,
     LifeBarOffset = 0.01,
     LifeBarSize = 0.01,
-	
-	Lifetime = 45,	#from 30
+    
+    Lifetime = 45,    --from 30
      Weapon = {
         {
             CollideFriendly = false,
             ContinuousBeam = false,
-			
-            Damage = 400,	#from 1000
+            
+            Damage = 400,    --from 1000
             DamageFriendly = false,
-            DamageRadius = 0.5,							#from 0,1
-            MaxRadius = 28,								#from20
-            MinRadius = 3,		#from5
-            RateOfFire = 3,		#from3
+            DamageRadius = 0.5,                            --from 0,1
+            MaxRadius = 28,                                --from20
+            MinRadius = 3,        --from5
+            RateOfFire = 3,        --from3
         },
     },
 }

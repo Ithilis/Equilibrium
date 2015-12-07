@@ -1,25 +1,25 @@
-#Yenzee
+--Yenzee
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0203",
     
-	Economy = {
-        BuildCostEnergy = 2000,		#2x more Energy
+    Economy = {
+        BuildCostEnergy = 2000,        --2x more Energy
         BuildCostMass = 200,
         BuildTime = 1000,
     },
     Defense = {
         Health = 1300,
         MaxHealth = 1300,
-	},
+    },
     Physics = {
         MaxAcceleration = 4,
         MaxBrake = 4,
         MaxSpeed = 4,
-		WaterSpeedMultiplier = 0.85,
+        WaterSpeedMultiplier = 0.85,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -28,27 +28,27 @@ BlueprintId = "xsl0203",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 6,
         Level2 = 12,
         Level3 = 18,
         Level4 = 24,
         Level5 = 32,
     },
-	Weapon = {
-		{
-        Damage = 180,		#60dps
-		RateOfFire = 0.333,
-		},
+    Weapon = {
+        {
+        Damage = 180,        --60dps
+        RateOfFire = 0.333,
+        },
     },
-	AI = {
-		TargetBones = {
-			'XSL0203',
-			'Turret',
-		},
-	},
-	CollisionOffsetX = 0.14,
-	CollisionOffsetY = -0.1,
-	SizeX = 0.7,
-	SizeY = 0.7,
+    AI = {
+        TargetBones = {
+            'XSL0203',
+            'Turret',
+        },
+    },
+    CollisionOffsetX = 0.14,
+    CollisionOffsetY = -0.1,
+    SizeX = 0.7,
+    SizeY = 0.7,
 }

@@ -1,4 +1,4 @@
-#Shard AA boat
+--Shard AA boat
 
 UnitBlueprint {
 Merge = true,
@@ -14,31 +14,31 @@ BlueprintId="uas0102",
         },
     },
     Defense = {
-        Health = 1000,	#from 750
+        Health = 1000,    --from 750
         MaxHealth = 1000,
     },
     Display = {
         Abilities = {
             '<LOC ability_aa>Anti-Air',
         },
-        UniformScale = 0.09,	#from 0,06
+        UniformScale = 0.09,    --from 0,06
     },
-	Economy = {
+    Economy = {
         BuildCostEnergy = 1500,
-        BuildCostMass = 150,	#from 120
+        BuildCostMass = 150,    --from 120
         BuildTime = 600,
     },
 
     Intel = {
-        VisionRadius = 50,	#from 32
+        VisionRadius = 50,    --from 32
     },
 
     LifeBarHeight = 0.075,
     LifeBarOffset = 0.55,
     LifeBarSize = 0.5,
-	
+    
     Physics = {
-        MaxAcceleration = 7,	#from 8
+        MaxAcceleration = 7,    --from 8
         MaxBrake = 7,
         MaxSpeed = 7,
         MaxSpeedReverse = 7,
@@ -53,8 +53,8 @@ BlueprintId="uas0102",
     },
     Weapon = {
         {
-			Damage = 9,			#from 7 = 45dps
-            MaxRadius = 50,		#from48
+            Damage = 9,            --from 7 = 45dps
+            MaxRadius = 50,        --from48
         },
     },
 }

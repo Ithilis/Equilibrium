@@ -1,4 +1,4 @@
-#T3 sera submarine
+--T3 sera submarine
 
 UnitBlueprint {
 Merge = true,
@@ -16,27 +16,27 @@ BlueprintId="xss0304",
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
-			'<LOC ability_sonarstealth>Sonar Stealth',			
+            '<LOC ability_sonarstealth>Sonar Stealth',            
             '<LOC ability_submersible>Submersible',
             '<LOC ability_torpedo>Torpedoes',
             '<LOC ability_torpedodef>Torpedo Defense',
         },
-	},
+    },
     Economy = {
         BuildCostEnergy = 30000,
         BuildCostMass = 3000,
         BuildTime = 21600,
-		MaintenanceConsumptionPerSecondEnergy = 50,
+        MaintenanceConsumptionPerSecondEnergy = 50,
     },
     Intel = {
-		SonarStealth = true,
+        SonarStealth = true,
         SonarRadius = 60,
-        VisionRadius = 35,	#from 32
-        WaterVisionRadius = 35,	#from 45
+        VisionRadius = 35,    --from 32
+        WaterVisionRadius = 35,    --from 45
     },
     Physics = {
-        Elevation = -3.5,		#from -1,5
-        MaxAcceleration = 5,	#from6
+        Elevation = -3.5,        --from -1,5
+        MaxAcceleration = 5,    --from6
         MaxBrake = 5,
         MaxSpeed = 5,
     },
@@ -49,7 +49,7 @@ BlueprintId="xss0304",
     },
     Weapon = {
         {
-            MaxRadius = 55,		#from 65
+            MaxRadius = 55,        --from 65
         },
         {
         },

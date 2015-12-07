@@ -1,12 +1,12 @@
-#T3AA Cybran Egg
+--T3AA Cybran Egg
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "drlk005", 
 
-	Economy = {
+    Economy = {
         BuildCostEnergy = 10500,
         BuildCostMass = 840,
-        BuildTime = 840,	#21s
+        BuildTime = 840,    --21s
     },
 }

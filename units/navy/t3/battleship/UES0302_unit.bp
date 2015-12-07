@@ -1,4 +1,4 @@
-#Battleship Summit
+--Battleship Summit
 
 UnitBlueprint {
 Merge = true,
@@ -13,8 +13,8 @@ BlueprintId="ues0302",
             Level5 = 40,
         },
     },
-	Defense = {
-        Health = 50000,		#from 51000
+    Defense = {
+        Health = 50000,        --from 51000
         MaxHealth = 50000,
     },
     Economy = {
@@ -34,35 +34,35 @@ BlueprintId="ues0302",
     },
     Weapon = {
         {
-			DamageRadius = 2.5,	#from2
-			Damage = 900,	#from 1000 = 405dps
-			MuzzleVelocity = 28,	#from 30
+            DamageRadius = 2.5,    --from2
+            Damage = 900,    --from 1000 = 405dps
+            MuzzleVelocity = 28,    --from 30
         },
         {
-            DamageRadius = 2.5,	#from2
-			Damage = 900,	#from 1000 = 405dps
-			MuzzleVelocity = 28,	#from 30
+            DamageRadius = 2.5,    --from2
+            Damage = 900,    --from 1000 = 405dps
+            MuzzleVelocity = 28,    --from 30
         },
         {
-			DamageRadius = 2.5,	#from2
-			Damage = 900,	#from 1000 = 405dps
-			MuzzleVelocity = 28,	#from 30
+            DamageRadius = 2.5,    --from2
+            Damage = 900,    --from 1000 = 405dps
+            MuzzleVelocity = 28,    --from 30
         },
         {
-			Damage = 17,	#From 12 = 4x20dps
+            Damage = 17,    --From 12 = 4x20dps
         },
         {
-			Damage = 17,
+            Damage = 17,
         },
         {
-			Damage = 17,
+            Damage = 17,
         },
         {
-			Damage = 17,
+            Damage = 17,
         },
-		{
+        {
         },
-		{
+        {
         },
     },
 }

@@ -8,7 +8,7 @@ Economy = {
         BuildRate = 50,
         BuildTime = 750,
         StorageEnergy = 0,
-		StorageMass = 0,
-		DifferentialUpgradeCostCalculation = false, 
+        StorageMass = 0,
+        DifferentialUpgradeCostCalculation = false, 
     },
 }

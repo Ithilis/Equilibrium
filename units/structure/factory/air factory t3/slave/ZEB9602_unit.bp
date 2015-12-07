@@ -1,16 +1,16 @@
-#T3 Slave Air factory
+--T3 Slave Air factory
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "zeb9602", 
 
-	Economy = {
-        BuildCostEnergy = 30000,	#from 45 000 potom to niekedy daj spet,
+    Economy = {
+        BuildCostEnergy = 30000,    --from 45 000 potom to niekedy daj spet,
         BuildCostMass = 900,
         BuildRate = 120,
-        BuildTime = 2400,			# from 1800
-		StorageEnergy = 0,
+        BuildTime = 2400,            -- from 1800
+        StorageEnergy = 0,
         StorageMass = 0,
-		DifferentialUpgradeCostCalculation = false, 
+        DifferentialUpgradeCostCalculation = false, 
     },
 }

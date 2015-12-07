@@ -1,4 +1,4 @@
-#T1 uef bomber
+--T1 uef bomber
 
 UnitBlueprint {
 Merge = true,
@@ -6,9 +6,9 @@ BlueprintId = "uea0103",
 
 
     Air = {
-        MaxAirspeed = 11,		#from 10
+        MaxAirspeed = 11,        --from 10
         MinAirspeed = 11,
-		BreakOffDistance = 28,	#from 30
+        BreakOffDistance = 28,    --from 30
     },
     Buffs = {
         Regen = {
@@ -28,13 +28,13 @@ BlueprintId = "uea0103",
         FuelUseTime = 240,
     },
     Weapon = {
-        {			
-            DamageRadius = 3.5,			#from3
-			DamageFriendly = false,
-            RateOfFire = 0.1666,		#from 4s
+        {            
+            DamageRadius = 3.5,            --from3
+            DamageFriendly = false,
+            RateOfFire = 0.1666,        --from 4s
             TargetPriorities = {
-                'SPECIALHIGHPRI',		#from prioritize air units :D
-				'ENGINEER',
+                'SPECIALHIGHPRI',        --from prioritize air units :D
+                'ENGINEER',
                 'LAND MOBILE TECH1',
                 'LAND MOBILE',
                 'SPECIALLOWPRI',

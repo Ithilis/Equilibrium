@@ -1,4 +1,4 @@
-#T3 Artilery
+--T3 Artilery
 
 UnitBlueprint {
 Merge = true,
@@ -33,9 +33,9 @@ BlueprintId = "urb2302",
         {
             MaxRadius = 700,
             MinRadius = 150,
-			FiringRandomness = 0.525,
-			Damage = 4500,
-			DamageRadius = 8,
+            FiringRandomness = 0.525,
+            Damage = 4500,
+            DamageRadius = 8,
         },
     },
 }

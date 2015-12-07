@@ -8,6 +8,6 @@ Economy = {
         BuildRate = 50,
         BuildTime = 2250,
         StorageEnergy = 0,
-		StorageMass = 0,
+        StorageMass = 0,
     },
-}	
+}    

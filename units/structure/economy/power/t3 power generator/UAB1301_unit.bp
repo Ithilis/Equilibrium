@@ -1,4 +1,4 @@
-#T3 Power Generator
+--T3 Power Generator
 
 UnitBlueprint {
 Merge = true,
@@ -14,9 +14,9 @@ BlueprintId = "uab1301",
         BuildTime = 5000,
         ProductionPerSecondEnergy = 2500,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 7500,		#from 8000
+            Damage = 7500,        --from 8000
             DamageRadius = 10,
             DisplayName = 'Death Weapon',
         },

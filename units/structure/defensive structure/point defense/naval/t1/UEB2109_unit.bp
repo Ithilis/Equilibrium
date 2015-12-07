@@ -1,4 +1,4 @@
-# T1 torpedo launcher
+-- T1 torpedo launcher
 
 UnitBlueprint {
 Merge = true,
@@ -18,14 +18,14 @@ BlueprintId = "ueb2109",
         MaxHealth = 2000,
     },
     Economy = {
-        BuildCostEnergy = 2500,	#from 3600
-        BuildCostMass = 250,	#from 450
-        BuildTime = 250,		#from 450
+        BuildCostEnergy = 2500,    --from 3600
+        BuildCostMass = 250,    --from 450
+        BuildTime = 250,        --from 450
     },
     Intel = {
-        SonarRadius = 45,	#from 35
-        VisionRadius = 45,	#from 12
-        WaterVisionRadius = 30,	#from 45
+        SonarRadius = 45,    --from 35
+        VisionRadius = 45,    --from 12
+        WaterVisionRadius = 30,    --from 45
     },
     Veteran = {
         Level1 = 5,
@@ -36,7 +36,7 @@ BlueprintId = "ueb2109",
     },
     Weapon = {
         {
-            Damage = 120,	#from 150 = 60dps
+            Damage = 120,    --from 150 = 60dps
             MaxRadius = 50,
             RateOfFire = 0.25,
         },

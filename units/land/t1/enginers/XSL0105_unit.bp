@@ -6,7 +6,7 @@ BlueprintId = "xsl0105",
         BuildCostEnergy = 250,
         BuildCostMass = 50,
         BuildTime = 250,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
     },
 }

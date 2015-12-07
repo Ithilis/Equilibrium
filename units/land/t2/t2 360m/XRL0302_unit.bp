@@ -1,15 +1,15 @@
-#Fire Beetle
+--Fire Beetle
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xrl0302",
 
-	Economy = {
-		BuildCostEnergy = 3600,	#100e per sec
-		BuildCostMass = 360,	#20m per sec
-		BuildTime = 1800,		#18s
-		MaintenanceConsumptionPerSecondEnergy = 50,
-	},
+    Economy = {
+        BuildCostEnergy = 3600,    --100e per sec
+        BuildCostMass = 360,    --20m per sec
+        BuildTime = 1800,        --18s
+        MaintenanceConsumptionPerSecondEnergy = 50,
+    },
     Display = {
         Abilities = {
             '<LOC ability_cloak>Cloaking',
@@ -26,32 +26,32 @@ BlueprintId = "xrl0302",
         StealthWaitTime = 1,
         VisionRadius = 20,
     },
-	Physics = {
-        MaxAcceleration = 4,	#from5 = same speed as deciver
+    Physics = {
+        MaxAcceleration = 4,    --from5 = same speed as deciver
         MaxBrake = 4,
         MaxSpeed = 4,
     },
-	Defense = {
+    Defense = {
         Health = 300,
         MaxHealth = 300,
-        RegenRate = 5,		#from 0 for slow regenerate while chilling in cloak
+        RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
     },
-	Transport = {
+    Transport = {
         TransportClass = 2,
     },
     Weapon = {
         {
-            Damage = 3000,					#from 3500
-            DamageRadius = 6,				#changed from 4.5
-            MaxRadius = 5,					#from4.5
+            Damage = 3000,                    --from 3500
+            DamageRadius = 6,                --changed from 4.5
+            MaxRadius = 5,                    --from4.5
         },
-	},
+    },
     Wreckage = {
-	    HealthMult = 0.1,	#from 0,9 because wreck still occur
-        MassMult = 0.1,		#from 0,9 because wreak still occur
+        HealthMult = 0.1,    --from 0,9 because wreck still occur
+        MassMult = 0.1,        --from 0,9 because wreak still occur
         WreckageLayers = {
             Air = false,
-            Land = false,		#dont leave wreck
+            Land = false,        --dont leave wreck
             Seabed = false,
             Sub = false,
             Water = false,

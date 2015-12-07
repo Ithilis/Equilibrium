@@ -1,4 +1,4 @@
-#T3 Static Shield ED4
+--T3 Static Shield ED4
 
 UnitBlueprint {
 Merge = true,
@@ -10,7 +10,7 @@ BlueprintId = "urb4206",
         'CYBRAN',
         'STRUCTURE',
         'DEFENSE',
-        'TECH3',	#from t2
+        'TECH3',    --from t2
         'SHIELD',
         'DRAGBUILD',
         'SIZE12',
@@ -28,7 +28,7 @@ BlueprintId = "urb4206",
             ShieldRechargeTime = 20,
             ShieldRegenRate = 120,
             ShieldSize = 35,
-			ShieldVerticalOffset = -5,
+            ShieldVerticalOffset = -5,
         },
     },
     Economy = {
@@ -38,7 +38,7 @@ BlueprintId = "urb4206",
         BuildTime = 1750,
         MaintenanceConsumptionPerSecondEnergy = 350,
     },
-	General = {
+    General = {
         CommandCaps = {
             RULEUCC_Attack = false,
             RULEUCC_CallTransport = false,
@@ -47,15 +47,15 @@ BlueprintId = "urb4206",
             RULEUCC_Move = false,
             RULEUCC_Nuke = false,
             RULEUCC_Patrol = false,
-			RULEUCC_Pause = false,
+            RULEUCC_Pause = false,
             RULEUCC_Reclaim = false,
             RULEUCC_Repair = false,
             RULEUCC_RetaliateToggle = false,
             RULEUCC_Stop = true,
             RULEUCC_Transport = false,
         },
-	},
-	Intel = {
+    },
+    Intel = {
         RadarStealth = true,
     },
 }

@@ -1,4 +1,4 @@
-#Mavor
+--Mavor
 
 UnitBlueprint {
 Merge = true,
@@ -16,7 +16,7 @@ BlueprintId = "ueb2401",
     Defense = {
         Health = 15000,
         MaxHealth = 15000,
-		RegenRate = 5,	#from 0
+        RegenRate = 5,    --from 0
     },
     Economy = {
         BuildCostEnergy = 4320000,
@@ -30,9 +30,9 @@ BlueprintId = "ueb2401",
         Level4 = 1728,
         Level5 = 2160,
     },
-	Weapon = {
+    Weapon = {
         {
-            FiringRandomness = 0.15,		#from 0,22
+            FiringRandomness = 0.15,        --from 0,22
         },
     },
 }

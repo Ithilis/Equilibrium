@@ -1,4 +1,4 @@
-#Scatis
+--Scatis
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId = "url0401",
         },
     },
     Veteran = {
-	RequirementMult = 0.5,
+    RequirementMult = 0.5,
         Level1 = 90,
         Level2 = 180,
         Level3 = 270,
@@ -24,31 +24,31 @@ BlueprintId = "url0401",
     Defense = {
         Health = 25000,
         MaxHealth = 25000,
-		RegenRate = 15,
+        RegenRate = 15,
     },
     Display = {
         Abilities = {
             '<LOC ability_stun>EMP Weapon',
         },
-	},
+    },
     Economy = {
         BuildCostEnergy = 375000,
         BuildCostMass = 30000,
-        BuildTime = 50000,	# its three time faster as build same mass in percivals/bricks
+        BuildTime = 50000,    -- its three time faster as build same mass in percivals/bricks
     },
     Physics = {
         MaxAcceleration = 1.5,
-        MaxBrake = 2,		#from 1.5
-        MaxSpeed = 2,		#from 1.5
+        MaxBrake = 2,        --from 1.5
+        MaxSpeed = 2,        --from 1.5
     },
     Weapon = {
         {
-			Buffs = {
+            Buffs = {
                 {
                     Add = {
                         ImpactTypeDisallow = {
                             'Shield',
-                        },					
+                        },                    
                         OnImpact = true,
                     },
                     AppliedToTarget = true,
@@ -56,13 +56,13 @@ BlueprintId = "url0401",
                     Duration = 2.5,
                     Radius = 10,
                     TargetAllow = 'TECH1',
-					TargetDisallow = 'TECH2,WALL',
+                    TargetDisallow = 'TECH2,WALL',
                 },
                 {
                     Add = {
                         ImpactTypeDisallow = {
                             'Shield',
-                        },					
+                        },                    
                         OnImpact = true,
                     },
                     AppliedToTarget = true,
@@ -72,11 +72,11 @@ BlueprintId = "url0401",
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL',
                 },
-				{
+                {
                     Add = {
                         ImpactTypeDisallow = {
                             'Shield',
-                        },					
+                        },                    
                         OnImpact = true,
                     },
                     AppliedToTarget = true,
@@ -88,18 +88,18 @@ BlueprintId = "url0401",
                 },
             },
             CollideFriendly = false,
-            Damage = 1000,					#from 3000 = 500dps
+            Damage = 1000,                    --from 3000 = 500dps
             DamageFriendly = true,
-            DamageRadius = 5,				#from 7
-            EnergyDrainPerSecond = 1000,	#from 2000
+            DamageRadius = 5,                --from 7
+            EnergyDrainPerSecond = 1000,    --from 2000
             EnergyRequired = 1000,
-            FiringRandomness = 0.4,			#from 0.3
-            FiringTolerance = 2,			#from 0
+            FiringRandomness = 0.4,            --from 0.3
+            FiringTolerance = 2,            --from 0
             LeadTarget = true,
-            MaxRadius = 200,				#from 330
-            MinRadius = 35,					#from 50
-            MuzzleVelocity = 160,			#from 160
-            RateOfFire = 0.5,				#from 0.53
+            MaxRadius = 200,                --from 330
+            MinRadius = 35,                    --from 50
+            MuzzleVelocity = 160,            --from 160
+            RateOfFire = 0.5,                --from 0.53
         },
     },
 }

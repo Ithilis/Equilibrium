@@ -1,4 +1,4 @@
-#T1 Power generator
+--T1 Power generator
 
 UnitBlueprint {
 Merge = true,
@@ -9,9 +9,9 @@ BlueprintId = "ueb1101",
         BuildCostMass = 75,
         BuildTime = 125,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 300,		#from 250
+            Damage = 300,        --from 250
             DamageRadius = 2.5,
             DisplayName = 'Death Weapon',
         },

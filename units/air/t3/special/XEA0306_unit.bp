@@ -1,4 +1,4 @@
-#Continental
+--Continental
 
 UnitBlueprint {
 Merge = true,
@@ -14,17 +14,17 @@ BlueprintId = "xea0306",
             Level5 = 18,
         },
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
     Defense = {
-        Health = 2000,					#from4500
+        Health = 2000,                    --from4500
         MaxHealth = 2000,
         Shield = {
-            ShieldMaxHealth = 4000,		#from3000
-            ShieldRechargeTime = 50,	#from35
-            ShieldRegenRate = 25,		#from30
-			ShieldSize = 11,			#from 8,5
+            ShieldMaxHealth = 4000,        --from3000
+            ShieldRechargeTime = 50,    --from35
+            ShieldRegenRate = 25,        --from30
+            ShieldSize = 11,            --from 8,5
         },
     },
     Economy = {
@@ -46,33 +46,33 @@ BlueprintId = "xea0306",
     },
     Weapon = {
         {
-											#Ground Fire=60dps
+                                            --Ground Fire=60dps
         },
         {
         },
         {
-            Damage = 30,					#from 20 = 120dps
+            Damage = 30,                    --from 20 = 120dps
             DisplayName = 'Flayer SAM Launcher',
-            RateOfFire = 1,					#from 3
-            TargetCheckInterval = 0.5,		#from 0,16
+            RateOfFire = 1,                    --from 3
+            TargetCheckInterval = 0.5,        --from 0,16
         },
         {
-            Damage = 30,					#from 20 
+            Damage = 30,                    --from 20 
             DisplayName = 'Flayer SAM Launcher',
-            RateOfFire = 1,					#from 3
-            TargetCheckInterval = 0.5,		#from 0,16
+            RateOfFire = 1,                    --from 3
+            TargetCheckInterval = 0.5,        --from 0,16
         },
         {
-            Damage = 30,					#from 20 
+            Damage = 30,                    --from 20 
             DisplayName = 'Flayer SAM Launcher',
-            RateOfFire = 1,					#from 3
-            TargetCheckInterval = 0.5,		#from 0,16
+            RateOfFire = 1,                    --from 3
+            TargetCheckInterval = 0.5,        --from 0,16
         },
         {
-            Damage = 30,					#from 20 
+            Damage = 30,                    --from 20 
             DisplayName = 'Flayer SAM Launcher',
-            RateOfFire = 1,					#from 3
-            TargetCheckInterval = 0.5,		#from 0,16
+            RateOfFire = 1,                    --from 3
+            TargetCheckInterval = 0.5,        --from 0,16
         },
         {
             Damage = 500,

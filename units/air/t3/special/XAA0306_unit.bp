@@ -1,4 +1,4 @@
-#Solace
+--Solace
 
 UnitBlueprint {
 Merge = true,
@@ -35,7 +35,7 @@ BlueprintId = "xaa0306",
     },
     Weapon = {
         {
-            Damage = 500,		#4000dps per pass
+            Damage = 500,        --4000dps per pass
             MaxRadius = 32,
             MinRadius = 4,
             ProjectilesPerOnFire = 4,

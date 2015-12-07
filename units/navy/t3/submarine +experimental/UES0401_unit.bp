@@ -1,4 +1,4 @@
-# Atlantis
+-- Atlantis
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId="ues0401",
         },
     },
     Defense = {
-        RegenRate = 15,	#from 0
+        RegenRate = 15,    --from 0
     },
     Display = {
         Abilities = {
@@ -23,7 +23,7 @@ BlueprintId="ues0401",
             '<LOC ability_factory>Factory',
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
-			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_sonarstealth>Sonar Stealth',
             '<LOC ability_torpedo>Torpedoes',
         },
     },
@@ -32,31 +32,31 @@ BlueprintId="ues0401",
         BuildCostMass = 12000,
         BuildRate = 240,
         BuildTime = 36000,
-		MaintenanceConsumptionPerSecondEnergy = 150,
+        MaintenanceConsumptionPerSecondEnergy = 150,
         BuildableCategory = {
             'BUILTBYTIER3FACTORY UEF MOBILE AIR',
         },
     },
     Intel = {
         RadarRadius = 250,
-        SonarRadius = 250,			#from 252
-		SonarStealth = true,
+        SonarRadius = 250,            --from 252
+        SonarStealth = true,
         VisionRadius = 100,
-        WaterVisionRadius = 55,		#from 100
+        WaterVisionRadius = 55,        --from 100
     },
     Transport = {
         ClassGenericUpTo = 2,
-        StorageSlots = 50,		#from 150
+        StorageSlots = 50,        --from 150
         TransportClass = 10,
     },
-	Physics = {
+    Physics = {
         MaxAcceleration = 3.5,
         MaxBrake = 3.3,
-        MaxSpeed = 3.5,		#from 2,8
+        MaxSpeed = 3.5,        --from 2,8
         MaxSpeedReverse = 3.3,
     },
     Veteran = {
-	RequirementMult = 0.5,
+    RequirementMult = 0.5,
         Level1 = 240,
         Level2 = 480,
         Level3 = 720,
@@ -64,34 +64,34 @@ BlueprintId="ues0401",
         Level5 = 1200,
     },
     Weapon = {
-		{
-			Damage = 200,		#4 projectiles = 400dps
-            MaxRadius = 75,		#from 80
-			RateOfFire = 0.5,
+        {
+            Damage = 200,        --4 projectiles = 400dps
+            MaxRadius = 75,        --from 80
+            RateOfFire = 0.5,
         },
         {
-			Damage = 280,		#sams is unchanged
-			DamageRadius = 1.5,
-			MaxRadius = 100,
-			RateOfFire = 1,
+            Damage = 280,        --sams is unchanged
+            DamageRadius = 1.5,
+            MaxRadius = 100,
+            RateOfFire = 1,
         },
         {
-			Damage = 280,		#sams is unchanged
-			DamageRadius = 1.5,
-			MaxRadius = 100,
-			RateOfFire = 1,			
+            Damage = 280,        --sams is unchanged
+            DamageRadius = 1.5,
+            MaxRadius = 100,
+            RateOfFire = 1,            
         },
         {
-			Damage = 280,		#sams is unchanged
-			DamageRadius = 1.5,
-			MaxRadius = 100,
-			RateOfFire = 1,		
+            Damage = 280,        --sams is unchanged
+            DamageRadius = 1.5,
+            MaxRadius = 100,
+            RateOfFire = 1,        
         },
         {
-			Damage = 280,		#sams is unchanged
-			DamageRadius = 1.5,
-			MaxRadius = 100,
-			RateOfFire = 1,		
+            Damage = 280,        --sams is unchanged
+            DamageRadius = 1.5,
+            MaxRadius = 100,
+            RateOfFire = 1,        
         },
     },
 }

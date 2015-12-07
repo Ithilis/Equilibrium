@@ -1,27 +1,27 @@
-#Deceiver
+--Deceiver
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "url0306",
 
-	Defense = {
-	    Health = 350,
+    Defense = {
+        Health = 350,
         MaxHealth = 350,
-        RegenRate = 5,		#from 0 because cant get veterancy
+        RegenRate = 5,        --from 0 because cant get veterancy
     },
-	Economy = {
-		BuildCostEnergy = 900,	#75e per sec
-		BuildCostMass = 84,		#7m per sec
-		BuildTime = 600,		#12s
-		MaintenanceConsumptionPerSecondEnergy = 50,
-	},
-	Weapon = {
+    Economy = {
+        BuildCostEnergy = 900,    --75e per sec
+        BuildCostMass = 84,        --7m per sec
+        BuildTime = 600,        --12s
+        MaintenanceConsumptionPerSecondEnergy = 50,
+    },
+    Weapon = {
         {
             AboveWaterTargetsOnly = true,      
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
             CountedProjectile = false,
-            Damage = 0,								#its only for same behaviour 
+            Damage = 0,                                --its only for same behaviour 
             DamageRadius = 0,
             DamageType = 'Normal',
             DisplayName = 'Serpentine Missile',

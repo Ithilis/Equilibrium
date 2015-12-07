@@ -1,17 +1,17 @@
-#uef spy plane
+--uef spy plane
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0302", 
 
     Air = {
-        MaxAirspeed = 27,	#from30
-        MinAirspeed = 22,	#from25
+        MaxAirspeed = 27,    --from30
+        MinAirspeed = 22,    --from25
     },
     Defense = {
         Health = 1200,
         MaxHealth = 1200,
-        RegenRate = 5,		#from0
+        RegenRate = 5,        --from0
     },
     Economy = {
         BuildCostEnergy = 7500,
@@ -20,8 +20,8 @@ BlueprintId = "uea0302",
     },
     Intel = {
         OmniRadius = 30,
-        RadarRadius = 85,	#from96
-        VisionRadius = 55,	#from64
+        RadarRadius = 85,    --from96
+        VisionRadius = 55,    --from64
     },
     Physics = {
         FuelRechargeRate = 15,

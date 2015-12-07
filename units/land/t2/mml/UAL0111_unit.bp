@@ -1,15 +1,15 @@
-#Eversong
+--Eversong
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0111",
 
-	Economy = {
-		BuildCostEnergy = 1400,
-		BuildCostMass = 196,
-		BuildTime = 1400,
-	},
-	Buffs = {
+    Economy = {
+        BuildCostEnergy = 1400,
+        BuildCostMass = 196,
+        BuildTime = 1400,
+    },
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -18,17 +18,17 @@ BlueprintId = "ual0111",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 6,
         Level2 = 12,
         Level3 = 18,
         Level4 = 24,
         Level5 = 32,
     },
-	Weapon = {
+    Weapon = {
         {
-        Damage = 275,		#55dps
-		RateOfFire = 0.2,
-		},
-	},
+        Damage = 275,        --55dps
+        RateOfFire = 0.2,
+        },
+    },
 }

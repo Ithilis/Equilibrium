@@ -1,13 +1,13 @@
-# Kennel drone
+-- Kennel drone
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xea3204", 
 
-	Economy = {
-        BuildCostEnergy = 1250,	#from 2500
-        BuildCostMass = 125,	#from 250
+    Economy = {
+        BuildCostEnergy = 1250,    --from 2500
+        BuildCostMass = 125,    --from 250
         BuildRate = 25,
-        BuildTime = 625,		#from750
+        BuildTime = 625,        --from750
     },
-}	
+}    

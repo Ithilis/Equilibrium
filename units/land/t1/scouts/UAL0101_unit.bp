@@ -1,4 +1,4 @@
-#Aeon scout
+--Aeon scout
 
 UnitBlueprint {
 Merge = true,
@@ -9,9 +9,9 @@ BlueprintId = "ual0101",
         BuildCostMass = 15,
         BuildTime = 75,
     },
-	Weapon = {
+    Weapon = {
         {
-			MaxRadius = 23, 		#from 25
+            MaxRadius = 23,         --from 25
         },
     },
 }

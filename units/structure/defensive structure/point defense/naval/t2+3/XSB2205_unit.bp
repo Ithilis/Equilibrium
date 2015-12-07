@@ -1,4 +1,4 @@
-#Torpedo launcher T2
+--Torpedo launcher T2
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId = "xsb2205",
             Level5 = 12,
         },
     },
-	Categories = {
+    Categories = {
         'PRODUCTFA',
         'SELECTABLE',
         'BUILTBYTIER2ENGINEER',
@@ -22,8 +22,8 @@ BlueprintId = "xsb2205",
         'BUILTBYTIER2COMMANDER',
         'BUILTBYTIER3COMMANDER',
         'SERAPHIM',
-        'MOBILE',			#from structure
-		'NEEDMOBILEBUILD',	#add
+        'MOBILE',            --from structure
+        'NEEDMOBILEBUILD',    --add
         'DEFENSE',
         'TECH2',
         'ANTINAVY',
@@ -36,14 +36,14 @@ BlueprintId = "xsb2205",
         'OVERLAYDEFENSE',
         'SORTDEFENSE',
     },
-	Defense = {
-        ArmorType = 'Normal',	#from structure
+    Defense = {
+        ArmorType = 'Normal',    --from structure
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
             '<LOC ability_torpedo>Torpedoes',
-			'<LOC ability_personalstealth>Personal Stealth',
+            '<LOC ability_personalstealth>Personal Stealth',
         },
     },
     Economy = {
@@ -53,14 +53,14 @@ BlueprintId = "xsb2205",
     },
     Intel = {
         RadarStealth = true,
-        SonarRadius = 55,	#from 45
+        SonarRadius = 55,    --from 45
         SonarStealth = true,
-        VisionRadius = 30,	#from 20
+        VisionRadius = 30,    --from 20
         WaterVisionRadius = 45,
     },
-	Physics = {
+    Physics = {
         MotionType = 'RULEUMT_Water',
-		MaxSpeed = 0.1,		#this is only for not stay visible on radar, it cant move
+        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
     },
     Veteran = {
         Level1 = 20,

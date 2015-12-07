@@ -1,4 +1,4 @@
-#T3 Point Defense
+--T3 Point Defense
 
 UnitBlueprint {
 Merge = true,
@@ -13,11 +13,11 @@ BlueprintId = "xeb2306",
             Level5 = 18,
         },
     },
-	Defense = {
-        Health = 6500,		#from 7500
+    Defense = {
+        Health = 6500,        --from 7500
         MaxHealth = 6500,
     },
-	Economy = {
+    Economy = {
         BuildCostEnergy = 18000,
         BuildCostMass = 1800,
         BuildTime = 1500,
@@ -29,9 +29,9 @@ BlueprintId = "xeb2306",
         Level4 = 160,
         Level5 = 200,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 135,		#from 175 = 253dps
+            Damage = 135,        --from 175 = 253dps
             DamageRadius = 1,
             FiringRandomness = 0.2,
             FiringTolerance = 2,

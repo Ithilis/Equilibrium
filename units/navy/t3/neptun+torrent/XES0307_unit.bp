@@ -1,4 +1,4 @@
-# Neptun class
+-- Neptun class
 
 UnitBlueprint {
 Merge = true,
@@ -14,12 +14,12 @@ BlueprintId="xes0307",
         },
     },
     Economy = {
-        BuildCostEnergy = 90000,	#from 80 000e
+        BuildCostEnergy = 90000,    --from 80 000e
         BuildCostMass = 8000,
-        BuildTime = 36000,			#from 25200bt
+        BuildTime = 36000,            --from 25200bt
     },
     Intel = {
-        WaterVisionRadius = 25,		#from 50
+        WaterVisionRadius = 25,        --from 50
     },
     Veteran = {
         Level1 = 240,
@@ -29,7 +29,7 @@ BlueprintId="xes0307",
         Level5 = 1200,
     },
     Physics = {
-        MaxAcceleration = 4,	#from 4,25
+        MaxAcceleration = 4,    --from 4,25
         MaxBrake = 4,
         MaxSpeed = 4,
         MaxSpeedReverse = 4,

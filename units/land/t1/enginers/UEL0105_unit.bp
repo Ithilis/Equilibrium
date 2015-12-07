@@ -2,7 +2,7 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0105",
 
-	Categories = {
+    Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
         'BUILTBYTIER1FACTORY',
@@ -13,7 +13,7 @@ BlueprintId = "uel0105",
         'LAND',
         'TECH1',
         'CONSTRUCTION',
-		'HOVER',			#add
+        'HOVER',            --add
         'ENGINEER',
         'REPAIR',
         'RECLAIM',
@@ -23,20 +23,20 @@ BlueprintId = "uel0105",
         'PATROLHELPER',
         'SHOWQUEUE',
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_hover>Hover',
             '<LOC ability_engineeringsuite>Engineering Suite',
         },
-	},	
+    },    
     Economy = {
         BuildCostEnergy = 250,
         BuildCostMass = 50,
         BuildTime = 250,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
     },
-	Physics = {
-		Elevation = 0.5,
+    Physics = {
+        Elevation = 0.5,
     },
 }

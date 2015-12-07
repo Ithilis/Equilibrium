@@ -102,9 +102,9 @@ UAL0301 = Class(CommandUnit) {
                 }
             end
             Buff.ApplyBuff(self, 'AeonSCUBuildRate')
-			self:AddCommandCap('RULEUCC_Sacrifice')			-- add by ithilis
+            self:AddCommandCap('RULEUCC_Sacrifice')            -- add by ithilis
         elseif enh == 'EngineeringFocusingModuleRemove' then
-			self:RemoveCommandCap('RULEUCC_Sacrifice')		-- add by ithilis
+            self:RemoveCommandCap('RULEUCC_Sacrifice')        -- add by ithilis
             if Buff.HasBuff( self, 'AeonSCUBuildRate' ) then
                 Buff.RemoveBuff( self, 'AeonSCUBuildRate' )
             end
@@ -126,14 +126,14 @@ UAL0301 = Class(CommandUnit) {
                     },
                 }
             end
-			Buff.ApplyBuff(self, name)		
-		elseif enh == 'SystemIntegrityCompensatorRemove' then
+            Buff.ApplyBuff(self, name)        
+        elseif enh == 'SystemIntegrityCompensatorRemove' then
             if Buff.HasBuff( self, 'AeonSCURegenRate' ) then
                 Buff.RemoveBuff( self, 'AeonSCURegenRate' )
             end
-		--sarci system move on engineering upgrade
-		
-		--StabilitySupressant
+        --sarci system move on engineering upgrade
+        
+        --StabilitySupressant
         elseif enh =='StabilitySuppressant' then
             local wep = self:GetWeaponByLabel('RightReactonCannon')
             wep:AddDamageRadiusMod(bp.NewDamageRadiusMod or 0)
@@ -145,7 +145,7 @@ UAL0301 = Class(CommandUnit) {
         end
     end,
 
-	CreateHeavyShield = function(self, bp)
+    CreateHeavyShield = function(self, bp)
         WaitTicks(1)
         self:CreateShield(bp)
         self:SetEnergyMaintenanceConsumptionOverride(bp.MaintenanceConsumptionPerSecondEnergy or 0)

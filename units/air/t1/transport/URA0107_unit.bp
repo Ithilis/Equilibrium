@@ -1,13 +1,13 @@
-#t1 transport
+--t1 transport
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0107", 
 
     Air = {
-        MaxAirspeed = 12,		#from10
+        MaxAirspeed = 12,        --from10
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
     Economy = {
@@ -19,10 +19,10 @@ BlueprintId = "ura0107",
         FuelUseTime = 300,
     },
     Weapon = {
-		{
+        {
             Damage = 100,
             DamageRadius = 1,
             DisplayName = 'Air Crash',
         },
-    },	
+    },    
 }

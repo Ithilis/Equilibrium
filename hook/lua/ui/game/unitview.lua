@@ -1,6 +1,6 @@
 
----------------	
-##CYBRAN T3 SHIELD ICON###
+---------------    
+----CYBRAN T3 SHIELD ICON------
 ---------------
 
 do
@@ -30,8 +30,8 @@ end
 
 
 
----------------	
-##VETERANCY###
+---------------    
+----VETERANCY------
 ---------------
 
 function UpdateWindow(info)
@@ -102,10 +102,10 @@ function UpdateWindow(info)
                     controls.statGroups[i].icon:SetTexture(iconType)
                     controls.statGroups[i].value:SetText(value)
                 elseif i == 3 then
-					local value, iconType, color = statFuncs[i](info, bp)
-					controls.statGroups[i].value:SetText(value)
-					controls.statGroups[i].icon:SetTexture(UIUtil.UIFile(Factions.Factions[Factions.FactionIndexMap[string.lower(bp.General.FactionName)]].VeteranIcon))
-				elseif i == 5 then
+                    local value, iconType, color = statFuncs[i](info, bp)
+                    controls.statGroups[i].value:SetText(value)
+                    controls.statGroups[i].icon:SetTexture(UIUtil.UIFile(Factions.Factions[Factions.FactionIndexMap[string.lower(bp.General.FactionName)]].VeteranIcon))
+                elseif i == 5 then
                     local text, iconType = statFuncs[i](info, bp)
                     controls.statGroups[i].value:SetText(text)
                     if iconType == 'strategic' then

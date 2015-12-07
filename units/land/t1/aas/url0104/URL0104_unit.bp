@@ -143,7 +143,7 @@ UnitBlueprint {
         UnitWeight = 1,
     },
     Intel = {
-        VisionRadius = 20, # 18
+        VisionRadius = 20, -- 18
     },
     Interface = {
         HelpText = '<LOC url0104_help>Mobile Anti-Air Gun',
@@ -162,9 +162,9 @@ UnitBlueprint {
             LAYER_Water = false,
         },
         DragCoefficient = 0.2,
-        MaxAcceleration = 2.7,	#from 2,9
-        MaxBrake = 2.7,			#from 2,9
-        MaxSpeed = 2.7,			#from 2,9
+        MaxAcceleration = 2.7,    --from 2,9
+        MaxBrake = 2.7,            --from 2,9
+        MaxSpeed = 2.7,            --from 2,9
         MaxSpeedReverse = 0,
         MaxSteerForce = 10,
         MinSpeedPercent = 0,
@@ -181,7 +181,7 @@ UnitBlueprint {
     SelectionThickness = 0.83,
     SizeX = 0.55,
     SizeY = 0.3,
-    SizeZ = 1, # 0.65
+    SizeZ = 1, -- 0.65
     StrategicIconName = 'icon_land1_antiair',
     StrategicIconSortPriority = 135,
     Transport = {
@@ -208,7 +208,7 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CannotAttackGround = true,
             CollideFriendly = false,
-            Damage = 13,					#26dps
+            Damage = 13,                    --26dps
             DamageType = 'Normal',
             DisplayName = 'Nanodart Launcher',
             FireTargetLayerCapsTable = {
@@ -219,10 +219,10 @@ UnitBlueprint {
             FiringRandomness = 1.5,
             FiringTolerance = 2,
             Label = 'AAGun',
-            MaxRadius = 35,					#from 32, because dont have speed
+            MaxRadius = 35,                    --from 32, because dont have speed
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
-            MuzzleVelocity = 35,	#from 15
+            MuzzleVelocity = 35,    --from 15
             ProjectileId = '/projectiles/CAANanoDart01/CAANanoDart01_proj.bp',
             ProjectileLifetime = 3.5,
             ProjectilesPerOnFire = 1,
@@ -284,7 +284,7 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CannotAttackGround = false,
             CollideFriendly = false,
-            Damage = 9,	#from 20dps
+            Damage = 9,    --from 20dps
             DamageType = 'Normal',
             DisplayName = 'Nanodart Launcher',
             FireTargetLayerCapsTable = {

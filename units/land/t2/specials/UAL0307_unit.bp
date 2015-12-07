@@ -1,10 +1,10 @@
-#Asylum - mobile shield
+--Asylum - mobile shield
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0307",
 
-	Categories = {
+    Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
         'BUILTBYTIER2FACTORY',
@@ -12,7 +12,7 @@ BlueprintId = "ual0307",
         'AEON',
         'MOBILE',
         'LAND',
-		'NAVAL',
+        'NAVAL',
         'TECH2',
         'SHIELD',
         'DEFENSE',
@@ -21,26 +21,26 @@ BlueprintId = "ual0307",
         'RECLAIMABLE',
         'OVERLAYDEFENSE',
     },
-	Economy = {
-		BuildCostEnergy = 1350,	#75e per sec
-		BuildCostMass = 126,	#7m per sec
-		BuildTime = 900,		#18s
-	},
-	Defense = {
-        Shield = {
-            ShieldMaxHealth = 3750,		#from 3800
-            ShieldRechargeTime = 25,	#from 28s
-            ShieldRegenRate = 60,		#from 58
-        },
-		RegenRate = 5,		#from 0 because cant get veterancy	
+    Economy = {
+        BuildCostEnergy = 1350,    --75e per sec
+        BuildCostMass = 126,    --7m per sec
+        BuildTime = 900,        --18s
     },
-	Weapon = {
+    Defense = {
+        Shield = {
+            ShieldMaxHealth = 3750,        --from 3800
+            ShieldRechargeTime = 25,    --from 28s
+            ShieldRegenRate = 60,        --from 58
+        },
+        RegenRate = 5,        --from 0 because cant get veterancy    
+    },
+    Weapon = {
         {
             AboveWaterTargetsOnly = true,      
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
             CountedProjectile = false,
-            Damage = 0,								#its only for same behaviour 
+            Damage = 0,                                --its only for same behaviour 
             DamageRadius = 0,
             DamageType = 'Normal',
             DisplayName = 'Serpentine Missile',

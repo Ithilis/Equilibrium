@@ -1,11 +1,11 @@
-#ASF
+--ASF
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0303", 
 
     Air = {
-        MaxAirspeed = 20,	 	#from25
+        MaxAirspeed = 20,         --from25
     },
     Buffs = {
         Regen = {
@@ -45,7 +45,7 @@ BlueprintId = "uea0303",
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-            },			
+            },            
             TurretPitchRange = 135,
             TurretYawRange = 135,
         },
@@ -62,7 +62,7 @@ BlueprintId = "uea0303",
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-            },			
+            },            
             TurretPitchRange = 135,
             TurretYawRange = 135,
         },
@@ -73,6 +73,6 @@ BlueprintId = "uea0303",
         },
     },
     Wreckage = {
-		MassMult = 0.9,			#from 0.45
+        MassMult = 0.9,            --from 0.45
     },
 }

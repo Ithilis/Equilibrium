@@ -1,11 +1,11 @@
-#T2 uef transport
+--T2 uef transport
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0104", 
 
-	Air = {
-        MaxAirspeed = 16,		#from15 for not be catch by interceptor
+    Air = {
+        MaxAirspeed = 16,        --from15 for not be catch by interceptor
     },
     Buffs = {
         Regen = {
@@ -16,7 +16,7 @@ BlueprintId = "uea0104",
             Level5 = 12,
         },
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
     Economy = {
@@ -32,7 +32,7 @@ BlueprintId = "uea0104",
         },
         {
         },
-		{
+        {
             AboveWaterTargetsOnly = true,
             Damage = 100,
             DamageFriendly = true,

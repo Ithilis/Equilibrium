@@ -1,4 +1,4 @@
-#T2 Bulwark shield boat
+--T2 Bulwark shield boat
 
 UnitBlueprint {
 Merge = true,
@@ -6,16 +6,16 @@ BlueprintId="xes0205",
 
 
     Defense = {
-        RegenRate = 5,	#from 0
-		Shield = {
-            ShieldSize = 80,	#from 120
+        RegenRate = 5,    --from 0
+        Shield = {
+            ShieldSize = 80,    --from 120
             ShieldVerticalOffset = -35,
         },
     },
     Economy = {
-        BuildCostEnergy = 13500,	#from 13000
-        BuildCostMass = 1350,		#from 1300
-        BuildTime = 5400,			#from 5200
+        BuildCostEnergy = 13500,    --from 13000
+        BuildCostMass = 1350,        --from 1300
+        BuildTime = 5400,            --from 5200
     },
     Intel = {
         SonarRadius = 60,

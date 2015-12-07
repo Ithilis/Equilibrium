@@ -1,10 +1,10 @@
-#Blaze
+--Blaze
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xal0203",
     
-	Economy = {
+    Economy = {
         BuildCostEnergy = 2000,
         BuildCostMass = 200,
         BuildTime = 1000,
@@ -12,12 +12,12 @@ BlueprintId = "xal0203",
     Defense = {
         Health = 1150,
         MaxHealth = 1150,
-	},
+    },
     Physics = {
         MaxAcceleration = 4,
         MaxSpeed = 4,
-		WaterSpeedMultiplier = 0.85,	
-		DragCoefficient = 0.2,
+        WaterSpeedMultiplier = 0.85,    
+        DragCoefficient = 0.2,
         Elevation = 0.15,
         MaxBrake = 15,
         MaxSpeedReverse = 4,
@@ -26,14 +26,14 @@ BlueprintId = "xal0203",
         MeshExtentsY = 0.5,
         MeshExtentsZ = 1,
         TurnRadius = 1.2,
-        TurnRate = 310,				#move on command while fight
+        TurnRate = 310,                --move on command while fight
         WobbleFactor = 0.1,
         WobbleSpeed = 0.01,
     },
-	Display = {
-	    UniformScale = 0.03,		#from0.4 what looks vierd (its bigger as obsi then)
+    Display = {
+        UniformScale = 0.03,        --from0.4 what looks vierd (its bigger as obsi then)
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -42,7 +42,7 @@ BlueprintId = "xal0203",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 6,
         Level2 = 12,
         Level3 = 18,
@@ -50,17 +50,17 @@ BlueprintId = "xal0203",
         Level5 = 32,
     },
     Weapon = {
-		{
-        Damage = 18,				#60dps
-		},
+        {
+        Damage = 18,                --60dps
+        },
     },
-	AI = {
-		TargetBones = {				#ships dont miss
-			'XAL0203',
-			'Gun_Turret',
-		},
-	},
-	CollisionOffsetY = -0.1,
-	SizeY = 0.7,
-	SizeZ = 1.4,
+    AI = {
+        TargetBones = {                --ships dont miss
+            'XAL0203',
+            'Gun_Turret',
+        },
+    },
+    CollisionOffsetY = -0.1,
+    SizeY = 0.7,
+    SizeZ = 1.4,
 }

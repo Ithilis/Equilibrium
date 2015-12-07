@@ -1,60 +1,60 @@
-	#Titan
-	
-	UnitBlueprint {
-	Merge = true,
+    --Titan
+    
+    UnitBlueprint {
+    Merge = true,
     BlueprintId = "uel0303",
-	
-		Economy = {
-			BuildCostEnergy = 6500,
-			BuildCostMass = 520,
-			BuildTime = 2600,
-			MaintenanceConsumptionPerSecondEnergy = 1,
-		},
-		Defense = {
-			Health = 2000,				#3000hp in total
-			MaxHealth = 2000,
-			Shield = {
-				ShieldMaxHealth = 1000,
-				ShieldRechargeTime = 45,
-				ShieldRegenRate = 10,
-			},
-		},
-		Weapon = {
-			{
-			Damage = 84,				#210dps
-			MaxRadius = 23,
-			RateOfFire = 2.5,
-			},
-		},
-		Buffs = {
-			Regen = {
-				Level1 = 6,
-				Level2 = 9,
-				Level3 = 12,
-				Level4 = 15,
-				Level5 = 18,
-			},
-		},
-		Veteran = {
-			Level1 = 15.5,
-			Level2 = 31,
-			Level3 = 46.5,
-			Level4 = 62,
-			Level5 = 77.5,
-		},
-		Physics = {
-			MaxAcceleration = 3.5,
-			MaxBrake = 3.5,
-			MaxSpeed = 3.5,
-		},
-		AI = {
-			TargetBones = {
-				'LegL_B01',
-				'LegR_B01',
-			},
-			},
-		CollisionOffsetZ = 0.15,
-		SizeX = 1.1,
-		SizeY = 1.2,
-		SizeZ = 0.9,
-	}
+    
+        Economy = {
+            BuildCostEnergy = 6500,
+            BuildCostMass = 520,
+            BuildTime = 2600,
+            MaintenanceConsumptionPerSecondEnergy = 1,
+        },
+        Defense = {
+            Health = 2000,                --3000hp in total
+            MaxHealth = 2000,
+            Shield = {
+                ShieldMaxHealth = 1000,
+                ShieldRechargeTime = 45,
+                ShieldRegenRate = 10,
+            },
+        },
+        Weapon = {
+            {
+            Damage = 84,                --210dps
+            MaxRadius = 23,
+            RateOfFire = 2.5,
+            },
+        },
+        Buffs = {
+            Regen = {
+                Level1 = 6,
+                Level2 = 9,
+                Level3 = 12,
+                Level4 = 15,
+                Level5 = 18,
+            },
+        },
+        Veteran = {
+            Level1 = 15.5,
+            Level2 = 31,
+            Level3 = 46.5,
+            Level4 = 62,
+            Level5 = 77.5,
+        },
+        Physics = {
+            MaxAcceleration = 3.5,
+            MaxBrake = 3.5,
+            MaxSpeed = 3.5,
+        },
+        AI = {
+            TargetBones = {
+                'LegL_B01',
+                'LegR_B01',
+            },
+            },
+        CollisionOffsetZ = 0.15,
+        SizeX = 1.1,
+        SizeY = 1.2,
+        SizeZ = 0.9,
+    }

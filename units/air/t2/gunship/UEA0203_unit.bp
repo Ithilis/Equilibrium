@@ -1,4 +1,4 @@
-#stinger
+--stinger
 
 UnitBlueprint {
 Merge = true,
@@ -13,7 +13,7 @@ BlueprintId = "uea0203",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 7,
         Level2 = 14,
         Level3 = 21,
@@ -24,7 +24,7 @@ BlueprintId = "uea0203",
         AirThreatLevel = 0,
         ArmorType = 'Light',
         EconomyThreatLevel = 0,
-        Health = 900,			#from 880hp
+        Health = 900,            --from 880hp
         MaxHealth = 900,
         RegenRate = 0,
         SubThreatLevel = 0,

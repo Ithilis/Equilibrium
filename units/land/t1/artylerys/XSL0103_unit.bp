@@ -1,4 +1,4 @@
-#Zthuee
+--Zthuee
 
 UnitBlueprint {
 Merge = true,
@@ -9,7 +9,7 @@ BlueprintId = "xsl0103",
         BuildCostMass = 50,
         BuildTime = 250,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -18,7 +18,7 @@ BlueprintId = "xsl0103",
             Level5 = 6,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 1,
         Level2 = 2,
         Level3 = 3,

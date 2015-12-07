@@ -1,4 +1,4 @@
-#T2 Cooper
+--T2 Cooper
 
 UnitBlueprint {
 Merge = true,
@@ -14,13 +14,13 @@ BlueprintId="xes0102",
         },
     },
     Economy = {
-        BuildCostEnergy = 7000,	#from 7200e
+        BuildCostEnergy = 7000,    --from 7200e
         BuildCostMass = 1050,
         BuildTime = 4200,
     },
-	SizeX = 0.8,	#0,6
-    SizeY = 1.2,	#0,65
-    SizeZ = 3.2,	#2
+    SizeX = 0.8,    --0,6
+    SizeY = 1.2,    --0,65
+    SizeZ = 3.2,    --2
     Veteran = {
         Level1 = 27,
         Level2 = 54,
@@ -28,15 +28,15 @@ BlueprintId="xes0102",
         Level4 = 108,
         Level5 = 135,
     },
-	Weapon = {
+    Weapon = {
         {
-            Damage = 90,	#90dps 
+            Damage = 90,    --90dps 
             MaxRadius = 50,
-            RateOfFire = 0.25,	#from 0,3=4s
+            RateOfFire = 0.25,    --from 0,3=4s
         },
         {
             DisplayName = 'Smart Charge AntiTorpedo',
-            RateOfFire = 0.333,	#from 0,4=3s
+            RateOfFire = 0.333,    --from 0,4=3s
         },
     },
 }

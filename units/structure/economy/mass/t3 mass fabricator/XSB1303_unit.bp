@@ -1,4 +1,4 @@
-#T3 Mass Fabricator
+--T3 Mass Fabricator
 
 UnitBlueprint {
 Merge = true,
@@ -17,7 +17,7 @@ BlueprintId = "xsb1303",
     },
     Weapon = {
         {
-            Damage = 5000,		# destroy T3 HQ when are 4 around
+            Damage = 5000,        -- destroy T3 HQ when are 4 around
             DamageFriendly = true,
             DamageRadius = 10,
             DamageType = 'Normal',

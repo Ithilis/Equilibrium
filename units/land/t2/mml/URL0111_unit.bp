@@ -2,12 +2,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0111",
 
-	Economy = {
-		BuildCostEnergy = 1400,
-		BuildCostMass = 196,
-		BuildTime = 1400,
-	},
-	Buffs = {
+    Economy = {
+        BuildCostEnergy = 1400,
+        BuildCostMass = 196,
+        BuildTime = 1400,
+    },
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -16,7 +16,7 @@ BlueprintId = "url0111",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 6,
         Level2 = 12,
         Level3 = 18,

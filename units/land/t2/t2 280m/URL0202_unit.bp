@@ -1,10 +1,10 @@
-#Rhino
+--Rhino
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "url0202",
 
-	Economy = {
+    Economy = {
         BuildCostEnergy = 1400,
         BuildCostMass = 280,
         BuildTime = 1400,
@@ -13,7 +13,7 @@ BlueprintId = "url0202",
         Health = 1900,
         MaxHealth = 1900,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -22,20 +22,20 @@ BlueprintId = "url0202",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 8.5,
         Level2 = 17,
         Level3 = 25.5,
         Level4 = 34,
         Level5 = 42.5,
     },
-	Weapon = {
-		{
-		Damage = 9,		#90dps
-		RateOfFire = 5,
-		
-		TurretPitchSpeed = 100,	#from 90
-        TurretYawSpeed = 100,	#from 90
-		},
-	},
+    Weapon = {
+        {
+        Damage = 9,        --90dps
+        RateOfFire = 5,
+        
+        TurretPitchSpeed = 100,    --from 90
+        TurretYawSpeed = 100,    --from 90
+        },
+    },
 }

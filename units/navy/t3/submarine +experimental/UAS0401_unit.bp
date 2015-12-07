@@ -1,4 +1,4 @@
-#Tempest
+--Tempest
 
 UnitBlueprint {
 Merge = true,
@@ -14,17 +14,17 @@ BlueprintId="uas0401",
             Level5 = 40,
         },
     },
-	Defense = {
-		Health = 125000,
+    Defense = {
+        Health = 125000,
         MaxHealth = 125000,
-        RegenRate = 15,		#from 0
+        RegenRate = 15,        --from 0
     },
     Display = {
         Abilities = {
             '<LOC ability_factory>Factory',
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
-			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_sonarstealth>Sonar Stealth',
             '<LOC ability_torpedo>Torpedoes',
             '<LOC ability_torpedodef>Torpedo Defense',
         },
@@ -32,9 +32,9 @@ BlueprintId="uas0401",
     Economy = {
         BuildCostEnergy = 350000,
         BuildCostMass = 24000,
-        BuildRate = 360,	#from240 
+        BuildRate = 360,    --from240 
         BuildTime = 54000,
-		MaintenanceConsumptionPerSecondEnergy = 150,
+        MaintenanceConsumptionPerSecondEnergy = 150,
         BuildableCategory = {
             'BUILTBYTIER3FACTORY AEON MOBILE CONSTRUCTION',
             'BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION',
@@ -45,17 +45,17 @@ BlueprintId="uas0401",
     Intel = {
         RadarRadius = 150,
         SonarRadius = 250,
-		SonarStealth = true,
+        SonarStealth = true,
         VisionRadius = 100,
-        WaterVisionRadius = 55,		#from 100
+        WaterVisionRadius = 55,        --from 100
     },
     Physics = {
         MaxAcceleration = 2.8,
-        MaxBrake = 2.8,	
-        MaxSpeed = 2.8,					#from 2,5
+        MaxBrake = 2.8,    
+        MaxSpeed = 2.8,                    --from 2,5
     },
     Veteran = {
-	RequirementMult = 0.5,
+    RequirementMult = 0.5,
         Level1 = 300,
         Level2 = 600,
         Level3 = 900,
@@ -64,13 +64,13 @@ BlueprintId="uas0401",
     },
     Weapon = {
         {
-			RateOfFire = 0.08,	#from 0,1 = 12,5s = 600dps
-			DamageRadius = 7,	#from 5
-			Damage = 7500,
+            RateOfFire = 0.08,    --from 0,1 = 12,5s = 600dps
+            DamageRadius = 7,    --from 5
+            Damage = 7500,
         },
         {
-            MaxRadius = 75,		#from 80r
-			Damage = 275,		#from 350 = 330dps
+            MaxRadius = 75,        --from 80r
+            Damage = 275,        --from 350 = 330dps
         },
         {
         },

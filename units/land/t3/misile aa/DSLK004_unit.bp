@@ -1,9 +1,9 @@
-#T3AA Ligting tank
+--T3AA Ligting tank
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "dslk004", 
-	
+    
     Buffs = {
         Regen = {
             Level1 = 6,
@@ -11,7 +11,7 @@ BlueprintId = "dslk004",
             Level3 = 12,
             Level4 = 15,
             Level5 = 18,
-		},
+        },
     },
     Defense = {
         Health = 2000,
@@ -22,11 +22,11 @@ BlueprintId = "dslk004",
         BuildCostMass = 840,
         BuildTime = 4200,
     },
-	Physics = {
+    Physics = {
         MaxAcceleration = 2.6,
         MaxBrake = 2.6,
         MaxSpeed = 2.6,
-	},
+    },
     Veteran = {
         Level1 = 28,
         Level2 = 56,
@@ -35,22 +35,22 @@ BlueprintId = "dslk004",
         Level5 = 140,
     },
     Weapon = {
-		{
-			BeamCollisionDelay = 0.01,	#from 0,01
-            BeamLifetime = 0.4,			#from 0,6
-			
-            Damage = 200,			#300dps for 4sec 
-			RateOfFire = 1,
+        {
+            BeamCollisionDelay = 0.01,    --from 0,01
+            BeamLifetime = 0.4,            --from 0,6
+            
+            Damage = 200,            --300dps for 4sec 
+            RateOfFire = 1,
             MaxRadius = 48,
         },
-		{
-			BeamCollisionDelay = 0.05,
+        {
+            BeamCollisionDelay = 0.05,
             BeamLifetime = 0.4,
-			
-            Damage = 270,			#180dps
+            
+            Damage = 270,            --180dps
             DamageRadius = 0.5,
             MaxRadius = 28,
-			RateOfFire = 0.1666,	#from 4s, 6s
+            RateOfFire = 0.1666,    --from 4s, 6s
         },
     },
 }

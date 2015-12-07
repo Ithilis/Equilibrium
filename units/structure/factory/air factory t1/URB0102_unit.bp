@@ -1,4 +1,4 @@
-#T1 Air factory
+--T1 Air factory
 
 UnitBlueprint {
 Merge = true,
@@ -9,7 +9,7 @@ Economy = {
         BuildCostMass = 210,
         BuildRate = 20,
         BuildTime = 350,
-		StorageEnergy = 0,
+        StorageEnergy = 0,
         StorageMass = 0,
     },
-}	
+}    

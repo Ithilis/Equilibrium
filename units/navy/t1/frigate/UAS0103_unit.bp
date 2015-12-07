@@ -1,4 +1,4 @@
-#Bacon frigate
+--Bacon frigate
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId="uas0103",
         },
     },
     Defense = {
-        Health = 2000,	#from 1800
+        Health = 2000,    --from 1800
         MaxHealth = 2000,
     },
     Economy = {
@@ -24,12 +24,12 @@ BlueprintId="uas0103",
     },
     Intel = {
         RadarRadius = 80,
-        SonarRadius = 80,		#from 82
-        VisionRadius = 30,		#from 32
-        WaterVisionRadius = 35,	#from 16
+        SonarRadius = 80,        --from 82
+        VisionRadius = 30,        --from 32
+        WaterVisionRadius = 35,    --from 16
     },
     Physics = {
-        MaxAcceleration = 5.8,	#from 6
+        MaxAcceleration = 5.8,    --from 6
         MaxBrake = 5.8,
         MaxSpeed = 5.8,
         MaxSpeedReverse = 5.8,
@@ -43,20 +43,20 @@ BlueprintId="uas0103",
     },
     Weapon = {
         {
-            Damage = 150,			#from 140
-			RateOfFire = 0.2,
-            MaxRadius = 35,			#from 31
-			MuzzleChargeDelay = 0.5,
+            Damage = 150,            --from 140
+            RateOfFire = 0.2,
+            MaxRadius = 35,            --from 31
+            MuzzleChargeDelay = 0.5,
         },
         {
-            Damage = 150,			#from 140
-			RateOfFire = 0.2,
-            MaxRadius = 35,			#from 31
-			MuzzleChargeDelay = 0.5,
+            Damage = 150,            --from 140
+            RateOfFire = 0.2,
+            MaxRadius = 35,            --from 31
+            MuzzleChargeDelay = 0.5,
         },
         {
-			RateOfFire = 0.2,		#from 0,1
-			MaxRadius = 35,			#from 31
+            RateOfFire = 0.2,        --from 0,1
+            MaxRadius = 35,            --from 31
         },
     },
 }

@@ -1,4 +1,4 @@
-#T2 Destroyer Uashavoh
+--T2 Destroyer Uashavoh
 
 UnitBlueprint {
 Merge = true,
@@ -13,29 +13,29 @@ BlueprintId="xss0201",
             Level5 = 24,
         },
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
-			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_sonarstealth>Sonar Stealth',
             '<LOC ability_submersible>Submersible',
             '<LOC ability_torpedo>Torpedoes',
             '<LOC ability_torpedodef>Torpedo Defense',
         },
-	},	
+    },    
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
-        BuildTime = 9000,		#from 10 000bt
-		MaintenanceConsumptionPerSecondEnergy = 35,
+        BuildTime = 9000,        --from 10 000bt
+        MaintenanceConsumptionPerSecondEnergy = 35,
     },
     Intel = {
-		SonarStealth = true,
-        WaterVisionRadius = 30,	#from 45
+        SonarStealth = true,
+        WaterVisionRadius = 30,    --from 45
     },
-	Physics = {
-        Elevation = -2.5,		#from -2
-	},	
+    Physics = {
+        Elevation = -2.5,        --from -2
+    },    
     Veteran = {
         Level1 = 68,
         Level2 = 136,
@@ -43,7 +43,7 @@ BlueprintId="xss0201",
         Level4 = 272,
         Level5 = 340,
     },
-	Weapon = {
+    Weapon = {
         {
         },
         {
@@ -52,7 +52,7 @@ BlueprintId="xss0201",
         },
         {
         },
-		{
+        {
             Audio = {
                 Fire = Sound {
                     Bank = 'XSS_Weapon',
@@ -62,7 +62,7 @@ BlueprintId="xss0201",
             },
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
-            Damage = 250,	#100dps
+            Damage = 250,    --100dps
             DamageType = 'Normal',
             DisplayName = 'Ana-it Torpedo Launcher',
             FireTargetLayerCapsTable = {
@@ -93,7 +93,7 @@ BlueprintId="xss0201",
             RackSalvoSize = 1,
             RackSlavedToTurret = false,
             RangeCategory = 'UWRC_AntiNavy',
-            RateOfFire = 0.2,	
+            RateOfFire = 0.2,    
             TargetCheckInterval = 2,
             TargetPriorities = {
                 'SPECIALHIGHPRI',

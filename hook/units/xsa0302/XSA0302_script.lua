@@ -1,30 +1,30 @@
-# Sera Spy Plane Script
+-- Sera Spy Plane Script
 
 local oldXSA0302 = XSA0302
 XSA0302 = Class(oldXSA0302) {
 
-	OnStopBeingBuilt = function(self, builder, layer)
+    OnStopBeingBuilt = function(self, builder, layer)
         SAirUnit.OnStopBeingBuilt(self, builder, layer)
         self:SetMaintenanceConsumptionInactive()
         self:SetScriptBit('RULEUTC_StealthToggle', true)
         self:RequestRefreshUI()
         self:DisableUnitIntel('RadarStealth')
-		self:DisableUnitIntel('Cloak')
-		self.Cloaked = false
-        ChangeState( self, self.InvisState ) # If spawned in we want the unit to be invis, normally the unit will immediately start moving
+        self:DisableUnitIntel('Cloak')
+        self.Cloaked = false
+        ChangeState( self, self.InvisState ) -- If spawned in we want the unit to be invis, normally the unit will immediately start moving
     end,
-	
-	
-	InvisState = State() {
+    
+    
+    InvisState = State() {
         Main = function(self)
             self.Cloaked = false
             local bp = self:GetBlueprint()
             if bp.Intel.StealthWaitTime then
                 WaitSeconds( bp.Intel.StealthWaitTime )
             end
-			self:EnableUnitIntel('RadarStealth')
-			self:EnableUnitIntel('Cloak')
-			self.Cloaked = true
+            self:EnableUnitIntel('RadarStealth')
+            self:EnableUnitIntel('Cloak')
+            self.Cloaked = true
         end,
         
         OnMotionHorzEventChange = function(self, new, old)
@@ -39,8 +39,8 @@ XSA0302 = Class(oldXSA0302) {
         Main = function(self)
             if self.Cloaked then
                 self:DisableUnitIntel('RadarStealth')
-			    self:DisableUnitIntel('Cloak')
-			end
+                self:DisableUnitIntel('Cloak')
+            end
         end,
         
         OnMotionHorzEventChange = function(self, new, old)

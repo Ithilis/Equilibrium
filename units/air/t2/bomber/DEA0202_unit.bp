@@ -1,10 +1,10 @@
-#T2 UEF bomber Janus
+--T2 UEF bomber Janus
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "dea0202", 
    
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -29,28 +29,28 @@ BlueprintId = "dea0202",
         BuildCostMass = 350,
         BuildTime = 2000,
     },
-	Physics = {
-        FuelUseTime = 300,				#from 500
+    Physics = {
+        FuelUseTime = 300,                --from 500
     },
     Weapon = {
         {
-		Damage = 75,
+        Damage = 75,
         },
         {
-		Damage = 75,
+        Damage = 75,
         },
         {
             BombDropThreshold = 4,
-            Damage = 5,					#600dmg by fire
+            Damage = 5,                    --600dmg by fire
             DamageRadius = 4.5,
             DoTPulses = 15,
             DoTTime = 2.5,
-            InitialDamage = 50, 		#400intial dmg from 600
+            InitialDamage = 50,         --400intial dmg from 600
             MaxRadius = 60,
-			TargetPriorities = {
+            TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'LAND MOBILE TECH3 ANTIAIR',
-				'LAND MOBILE TECH2 ANTIAIR',
+                'LAND MOBILE TECH3 ANTIAIR',
+                'LAND MOBILE TECH2 ANTIAIR',
                 'STRUCTURE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',

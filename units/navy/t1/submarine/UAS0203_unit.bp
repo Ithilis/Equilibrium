@@ -1,9 +1,9 @@
-#t1 aeon submarine Sylph
+--t1 aeon submarine Sylph
 
 UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
-	
+    
     Buffs = {
         Regen = {
             Level1 = 2,
@@ -13,10 +13,10 @@ BlueprintId="uas0203",
             Level5 = 10,
         },
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
-			'<LOC ability_sonarstealth>Sonar Stealth',
+            '<LOC ability_sonarstealth>Sonar Stealth',
             '<LOC ability_submersible>Submersible',
             '<LOC ability_torpedo>Torpedoes',
         },
@@ -25,21 +25,21 @@ BlueprintId="uas0203",
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
         BuildTime = 1400,
-		MaintenanceConsumptionPerSecondEnergy = 10,
+        MaintenanceConsumptionPerSecondEnergy = 10,
     },
     Intel = {
         SonarRadius = 60,
-		SonarStealth = true,
-        VisionRadius = 15,		#from 32
-        WaterVisionRadius = 15,	#from 32
-		SonarStealth = true,
+        SonarStealth = true,
+        VisionRadius = 15,        --from 32
+        WaterVisionRadius = 15,    --from 32
+        SonarStealth = true,
     },
     Physics = {
-        Elevation = -2.5,		#from -1,5
-        MaxAcceleration = 7,	#from 6
+        Elevation = -2.5,        --from -1,5
+        MaxAcceleration = 7,    --from 6
         MaxBrake = 7,
         MaxSpeed = 7,
-        MaxSpeedReverse = 7,		
+        MaxSpeedReverse = 7,        
     },
     Veteran = {
         Level1 = 11,
@@ -50,7 +50,7 @@ BlueprintId="uas0203",
     },
     Weapon = {
         {
-            MaxRadius = 35,	#from 32
+            MaxRadius = 35,    --from 32
         },
     },
 }

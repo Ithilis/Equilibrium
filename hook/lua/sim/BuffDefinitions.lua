@@ -35,8 +35,8 @@ MultsTable = {
     VETERANCYMAXHEALTH = {
         TECH1 = 1.2,
         TECH2 = 1.2,
-        TECH3 = 1.15,			--> big risk to be too dangerous, promote use T2 units
-        EXPERIMENTAL = 1.1,		--> because mass mult for vet lvl is 50% own mass
+        TECH3 = 1.15,            --> big risk to be too dangerous, promote use T2 units
+        EXPERIMENTAL = 1.1,        --> because mass mult for vet lvl is 50% own mass
         COMMAND = 1.2,
         SUBCOMMANDER = 1.15,
     },
@@ -94,13 +94,13 @@ TypeTable = {
     ues0401 = 5,
     ura0401 = 5,
     url0402 = 5,
-	url0401 = 5,
+    url0401 = 5,
     xrl0403 = 5,
     xsb2401 = 5,
     xsa0402 = 5,
     xsl0401 = 5,
-	xsl0402 = 5,		-- Ion storm
-	xea0002 = 5,
+    xsl0402 = 5,        -- Ion storm
+    xea0002 = 5,
     
 -- Now for the units which do need typing
 -- COMBAT
@@ -137,7 +137,7 @@ TypeTable = {
     urb2205 = 1,
     xsb2205 = 1,
     xrb2308 = 1,
-	-- T2 Arty
+    -- T2 Arty
     uab2303 = 1,
     ueb2303 = 1,
     urb2303 = 1,
@@ -167,12 +167,12 @@ TypeTable = {
     uel0202 = 1,
     url0202 = 1,
     xsl0202 = 1,
-	xrl0302 = 1, -- fire beetle
+    xrl0302 = 1, -- fire beetle
     ual0303 = 1,
     xel0305 = 1,
     xrl0305 = 1,
     xsl0303 = 1,
-	-- Mobile Arty
+    -- Mobile Arty
     ual0103 = 1,
     uel0103 = 1,
     url0103 = 1,
@@ -187,7 +187,7 @@ TypeTable = {
     xsl0304 = 1,
     xel0306 = 1,
     dal0310 = 1,
-	-- MAA
+    -- MAA
     ual0104 = 1,
     uel0104 = 1,
     url0104 = 1,
@@ -199,14 +199,14 @@ TypeTable = {
     drlk001 = 1,
     dslk004 = 1,
     dalk003 = 1,
-    delk002 = 1,	
-	-- Intie
+    delk002 = 1,    
+    -- Intie
     uaa0102 = 1,
     uea0102 = 1,
     ura0102 = 1,
     xsa0102 = 1,
     xaa0202 = 1,
-	-- ASF
+    -- ASF
     uaa0303 = 1,
     uea0303 = 1,
     ura0303 = 1,
@@ -215,7 +215,7 @@ TypeTable = {
     dea0202 = 1,
     dra0202 = 1,
     xsa0202 = 1,
-	-- T1 Gunship
+    -- T1 Gunship
     xra0105 = 1,
     -- T2 Gunship
     uaa0203 = 1,
@@ -235,27 +235,27 @@ TypeTable = {
     ual0106 = 2,
     uel0106 = 2,
     url0106 = 2,
-	xsl0101 = 2,
+    xsl0101 = 2,
     -- Hovertanks
     xal0203 = 2,
     uel0203 = 2,
     url0203 = 2,
     xsl0203 = 2,
-	-- T2 Range Bots
+    -- T2 Range Bots
     drl0204 = 2,
     del0204 = 2,
-	-- T3 Raid Bots
-	url0303 = 2,
-	uel0303 = 2,
-	-- T3 Sniper bots
-	xal0305 = 2,
+    -- T3 Raid Bots
+    url0303 = 2,
+    uel0303 = 2,
+    -- T3 Sniper bots
+    xal0305 = 2,
     xsl0305 = 2,
-	-- Bomber
+    -- Bomber
     uaa0103 = 2,
     uea0103 = 2,
     ura0103 = 2,
     xsa0103 = 2,
-	-- Strats
+    -- Strats
     uaa0304 = 2,
     uea0304 = 2,
     ura0304 = 2,
@@ -308,43 +308,43 @@ TypeTable = {
     uas0304 = 4,
     ues0304 = 4,
     urs0304 = 4,
-	
+    
  -- VOLATILE BUILDINGS (preventing bug where buildings don't leave wreck after death)
     uab1105 = 1,
-	ueb1105 = 1,
-	urb1105 = 1,
-	xsb1105 = 1,
-	
-	uab1106 = 1,
-	ueb1106 = 1,
-	urb1106 = 1,
-	xsb1106 = 1,
-	
-	uab1101 = 1,
-	ueb1101 = 1,
-	urb1101 = 1,
-	xsb1101 = 1,
-	
-	uab1201 = 1,
-	ueb1201 = 1,
-	urb1201 = 1,
-	xsb1201 = 1,
-	
-	uab1301 = 1,
-	ueb1301 = 1,
-	urb1301 = 1,
-	xsb1301 = 1,
-	
-	uab1104 = 1,
-	ueb1104 = 1,
-	urb1104 = 1,
-	xsb1104 = 1,
-	
-	uab1303 = 1,
-	ueb1303 = 1,
-	urb1303 = 1,
-	xsb1303 = 1,
-	
-	xab1401 = 1,
-	
+    ueb1105 = 1,
+    urb1105 = 1,
+    xsb1105 = 1,
+    
+    uab1106 = 1,
+    ueb1106 = 1,
+    urb1106 = 1,
+    xsb1106 = 1,
+    
+    uab1101 = 1,
+    ueb1101 = 1,
+    urb1101 = 1,
+    xsb1101 = 1,
+    
+    uab1201 = 1,
+    ueb1201 = 1,
+    urb1201 = 1,
+    xsb1201 = 1,
+    
+    uab1301 = 1,
+    ueb1301 = 1,
+    urb1301 = 1,
+    xsb1301 = 1,
+    
+    uab1104 = 1,
+    ueb1104 = 1,
+    urb1104 = 1,
+    xsb1104 = 1,
+    
+    uab1303 = 1,
+    ueb1303 = 1,
+    urb1303 = 1,
+    xsb1303 = 1,
+    
+    xab1401 = 1,
+    
 }

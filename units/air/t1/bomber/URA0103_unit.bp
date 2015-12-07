@@ -1,4 +1,4 @@
-#T1 cybran bomber
+--T1 cybran bomber
 
 UnitBlueprint {
 Merge = true,
@@ -6,9 +6,9 @@ BlueprintId = "ura0103",
 
 
     Air = {
-        MaxAirspeed = 11,		#from 10
+        MaxAirspeed = 11,        --from 10
         MinAirspeed = 11,
-		BreakOffDistance = 28,	#from 30
+        BreakOffDistance = 28,    --from 30
     },
     Buffs = {
         Regen = {
@@ -29,10 +29,10 @@ BlueprintId = "ura0103",
     },
     Weapon = {
         {
-            Damage = 60,				#from 50	
-			DamageFriendly = false,			
-            DamageRadius = 3.5,			#from3
-            FiringRandomness = 3,		#from3
+            Damage = 60,                --from 50    
+            DamageFriendly = false,            
+            DamageRadius = 3.5,            --from3
+            FiringRandomness = 3,        --from3
             MaxRadius = 40,
             MuzzleSalvoDelay = 0.2,
             MuzzleSalvoSize = 6,
@@ -51,10 +51,10 @@ BlueprintId = "ura0103",
                     RackBone = 'Muzzle_L03',
                 },
             },
-            RateOfFire = 0.1666, #from 4s
+            RateOfFire = 0.1666, --from 4s
             TargetPriorities = {
-                'SPECIALHIGHPRI',		#from prioritize air units :D
-				'ENGINEER',
+                'SPECIALHIGHPRI',        --from prioritize air units :D
+                'ENGINEER',
                 'LAND MOBILE TECH1',
                 'LAND MOBILE',
                 'SPECIALLOWPRI',

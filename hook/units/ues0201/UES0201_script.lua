@@ -1,4 +1,4 @@
-#UEF Destroyer
+--UEF Destroyer
 
 local oldUES0201 = UES0201
 UES0201 = Class(oldUES0201) {
@@ -9,7 +9,7 @@ UES0201 = Class(oldUES0201) {
         FrontTurret02 = Class(TAALinkedRailgun) {},
         Torpedo01 = Class(TANTorpedoAngler) {},
         AntiTorpedo = Class(TIFSmartCharge) {},
-		Torpedo02 = Class(TANTorpedoAngler) {},
+        Torpedo02 = Class(TANTorpedoAngler) {},
     },
 
 }

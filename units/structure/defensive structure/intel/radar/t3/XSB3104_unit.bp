@@ -1,4 +1,4 @@
-#T3 Radar
+--T3 Radar
 
 UnitBlueprint {
 Merge = true,
@@ -10,9 +10,9 @@ BlueprintId = "xsb3104",
         BuildTime = 3750,
         MaintenanceConsumptionPerSecondEnergy = 2000,
     },
-	Intel = {
-        OmniRadius = 200,	#from 200
-        RadarRadius = 500,	#from 600
+    Intel = {
+        OmniRadius = 200,    --from 200
+        RadarRadius = 500,    --from 600
         VisionRadius = 30,
     },
 }

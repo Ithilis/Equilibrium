@@ -1,4 +1,4 @@
-#T2 submarine Baracuda 
+--T2 submarine Baracuda 
 
 UnitBlueprint {
     AI = {
@@ -220,7 +220,7 @@ UnitBlueprint {
         BuildCostEnergy = 7000,
         BuildCostMass = 1050,
         BuildTime = 4200,
-		MaintenanceConsumptionPerSecondEnergy = 25,
+        MaintenanceConsumptionPerSecondEnergy = 25,
     },
     Footprint = {
         SizeX = 2,
@@ -255,8 +255,8 @@ UnitBlueprint {
         RadarStealth = true,
         SonarRadius = 60,
         SonarStealth = true,
-        VisionRadius = 20,		#from 32
-        WaterVisionRadius = 20,	#from32
+        VisionRadius = 20,        --from 32
+        WaterVisionRadius = 20,    --from32
     },
     Interface = {
         HelpText = '<LOC xrs0204_help>Submarine Killer',
@@ -277,7 +277,7 @@ UnitBlueprint {
         },
         CatchUpAcc = 10,
         DragCoefficient = 0.2,
-        Elevation = -2.5,		#from -1,5
+        Elevation = -2.5,        --from -1,5
         MaxAcceleration = 6,
         MaxBrake = 6,
         MaxSpeed = 6,

@@ -1,12 +1,12 @@
-#****************************************************************************
-#**
-#**  File     :  /cdimage/units/URB4206/URB4206_script.lua
-#**  Author(s):  David Tomandl, Greg Kohne
-#**
-#**  Summary  :  Cybran Shield Generator lvl 4 Script
-#**
-#**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
-#****************************************************************************
+--****************************************************************************
+--**
+--**  File     :  /cdimage/units/URB4206/URB4206_script.lua
+--**  Author(s):  David Tomandl, Greg Kohne
+--**
+--**  Summary  :  Cybran Shield Generator lvl 4 Script
+--**
+--**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
+--****************************************************************************
 
 local CShieldStructureUnit = import('/lua/cybranunits.lua').CShieldStructureUnit
 local Shield = import('/lua/shield.lua').Shield
@@ -23,7 +23,7 @@ ERB4206 = Class(CShieldStructureUnit) {
         CShieldStructureUnit.OnStopBeingBuilt(self,builder,layer)
         self.Rotator1 = CreateRotator(self, 'Shaft', 'z', nil, 30, 5, 30)
         self.Trash:Add(self.Rotator1)
-		self.ShieldEffectsBag = {}
+        self.ShieldEffectsBag = {}
     end,
 
     OnShieldEnabled = function(self)
@@ -36,8 +36,8 @@ ERB4206 = Class(CShieldStructureUnit) {
             for k, v in self.ShieldEffectsBag do
                 v:Destroy()
             end
-		    self.ShieldEffectsBag = {}
-		end
+            self.ShieldEffectsBag = {}
+        end
         for k, v in self.ShieldEffects do
             table.insert( self.ShieldEffectsBag, CreateAttachedEmitter( self, 'Shaft', self:GetArmy(), v ) )
         end
@@ -51,8 +51,8 @@ ERB4206 = Class(CShieldStructureUnit) {
             for k, v in self.ShieldEffectsBag do
                 v:Destroy()
             end
-		    self.ShieldEffectsBag = {}
-		end
+            self.ShieldEffectsBag = {}
+        end
     end,
 }
 

@@ -1,4 +1,4 @@
-#Trident frigate
+--Trident frigate
 
 UnitBlueprint {
 Merge = true,
@@ -14,7 +14,7 @@ BlueprintId="urs0103",
         },
     },
     Defense = {
-        Health = 1800,		#from 1900
+        Health = 1800,        --from 1900
         MaxHealth = 1800,
     },
     Economy = {
@@ -24,21 +24,21 @@ BlueprintId="urs0103",
     },
     Intel = {
         RadarRadius = 80,
-			SonarRadius = 80,		#from 82
-			VisionRadius = 30,		#from 32
-			WaterVisionRadius = 35,	#from 16
-		},
-		Veteran = {
-			Level1 = 8,
-			Level2 = 16,
-			Level3 = 24,
-			Level4 = 32,
-			Level5 = 40,
-		},
-		Weapon = {
-			{
-				Damage = 42, 	# from45 = 60dps
-				MaxRadius = 30,	#from 28
+            SonarRadius = 80,        --from 82
+            VisionRadius = 30,        --from 32
+            WaterVisionRadius = 35,    --from 16
+        },
+        Veteran = {
+            Level1 = 8,
+            Level2 = 16,
+            Level3 = 24,
+            Level4 = 32,
+            Level5 = 40,
+        },
+        Weapon = {
+            {
+                Damage = 42,     -- from45 = 60dps
+                MaxRadius = 30,    --from 28
         },
         {
         },

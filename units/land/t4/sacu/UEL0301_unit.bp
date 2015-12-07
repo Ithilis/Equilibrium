@@ -12,14 +12,14 @@ BlueprintId = "uel0301",
         },
     },
     Defense = {
-        Health = 16000,	
+        Health = 16000,    
         MaxHealth = 16000,
-        RegenRate = 5,			#from 20
+        RegenRate = 5,            --from 20
     },
     Economy = {
         BuildCostEnergy = 90000,
         BuildCostMass = 1800,
-        BuildRate = 25,				#from 56
+        BuildRate = 25,                --from 56
         BuildTime = 4500,
 
         ProductionPerSecondEnergy = 20,
@@ -33,22 +33,22 @@ BlueprintId = "uel0301",
             BuildCostMass = 1000,
             BuildTime = 2500,
 
-            NewRateOfFire = 2,		#from 2,5
+            NewRateOfFire = 2,        --from 2,5
         },
         HighExplosiveOrdnance = {
             BuildCostEnergy = 60000,
             BuildCostMass = 1200,
             BuildTime = 3000,
 
-            NewDamageRadius = 2,	#from 2,5
-            NewMaxRadius = 33,		#from 35
+            NewDamageRadius = 2,    --from 2,5
+            NewMaxRadius = 33,        --from 35
         },
-		Pod = {
+        Pod = {
             BuildCostEnergy = 20000,
             BuildCostMass = 400,
             BuildTime = 1000,
-			
-			NewBuildRate = 50,		#ADD
+            
+            NewBuildRate = 50,        --ADD
         },
         RadarJammer = {
             BuildCostEnergy = 20000,
@@ -58,7 +58,7 @@ BlueprintId = "uel0301",
             MaintenanceConsumptionPerSecondEnergy = 100,
             NewJammerRadius = 26,
         },
-		ResourceAllocation = {
+        ResourceAllocation = {
             BuildCostEnergy = 210000,
             BuildCostMass = 4200,
             BuildTime = 10500,
@@ -66,7 +66,7 @@ BlueprintId = "uel0301",
             ProductionPerSecondEnergy = 1000,
             ProductionPerSecondMass = 10,
         },
-		SensorRangeEnhancer = {
+        SensorRangeEnhancer = {
             BuildCostEnergy = 20000,
             BuildCostMass = 400,
             BuildTime = 1000,
@@ -74,7 +74,7 @@ BlueprintId = "uel0301",
             NewOmniRadius = 80,
             NewVisionRadius = 45,
         },
-		Shield = {
+        Shield = {
             BuildCostEnergy = 80000,
             BuildCostMass = 1600,
             BuildTime = 4000,
@@ -102,7 +102,7 @@ BlueprintId = "uel0301",
             ShieldSpillOverDamageMod = 0.5,
         },
     },
-	EnhancementPresets = {
+    EnhancementPresets = {
         BubbleShield = {
             BuildIconSortPriority = 35,
             Description = '<LOC uel0301_BubbleShield_desc>SACU (Shield preset)',
@@ -178,20 +178,20 @@ BlueprintId = "uel0301",
     },
     Weapon = {
         {
-            Damage = 200,						#from 300
-            MaxRadius = 23,		#from 25
+            Damage = 200,                        --from 300
+            MaxRadius = 23,        --from 25
             RateOfFire = 1,
         },
         {
             CollideFriendly = false,
-            Damage = 2500,				#from 1000
+            Damage = 2500,                --from 1000
             DamageFriendly = true,
             DamageRadius = 10,
 
-			DamageType = 'Deathnuke',		#from normal 
+            DamageType = 'Deathnuke',        --from normal 
         },
     },
-	Wreckage = {
-        ReclaimTimeMultiplier = 2,	#from 1
+    Wreckage = {
+        ReclaimTimeMultiplier = 2,    --from 1
     },
 }

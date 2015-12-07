@@ -1,4 +1,4 @@
-#T3 sonar
+--T3 sonar
 
 UnitBlueprint {
 Merge = true,
@@ -19,16 +19,16 @@ BlueprintId="uas0305",
         MaxHealth = 2000,
     },
     Economy = {
-        BuildCostEnergy = 24000,	#from 12000
-        BuildCostMass = 1200,		#from 480
+        BuildCostEnergy = 24000,    --from 12000
+        BuildCostMass = 1200,        --from 480
         BuildTime = 1875,
-        MaintenanceConsumptionPerSecondEnergy = 500,	#from 100
+        MaintenanceConsumptionPerSecondEnergy = 500,    --from 100
     },
     Intel = {
-        WaterVisionRadius = 100,	#from 24
+        WaterVisionRadius = 100,    --from 24
     },
-	Physics = {
-        MaxAcceleration = 2,		#from 4,5
+    Physics = {
+        MaxAcceleration = 2,        --from 4,5
         MaxBrake = 2,
         MaxSpeed = 2,
     },
@@ -41,8 +41,8 @@ BlueprintId="uas0305",
     },
     Weapon = {
         {
-            MaxRadius = 45,		#from 32
-            RateOfFire = 0.5,	#from 0,15 = 2s
+            MaxRadius = 45,        --from 32
+            RateOfFire = 0.5,    --from 0,15 = 2s
         },
     },
 }

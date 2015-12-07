@@ -1,11 +1,11 @@
-#T2 sera transport
+--T2 sera transport
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsa0104", 
 
-	Air = {
-        MaxAirspeed = 16,		#from15 for not be catch by interceptor
+    Air = {
+        MaxAirspeed = 16,        --from15 for not be catch by interceptor
     },
     Buffs = {
         Regen = {
@@ -16,7 +16,7 @@ BlueprintId = "xsa0104",
             Level5 = 12,
         },
     },
-	Defense = {
+    Defense = {
         RegenRate = 5,
     },
     Economy = {
@@ -33,11 +33,11 @@ BlueprintId = "xsa0104",
         {
         },
         {
-            Damage = 8,		#from2 land dmg = 20dps
+            Damage = 8,        --from2 land dmg = 20dps
         },
         {
-            Damage = 100,	#from 25, crash dmg
-			DamageRadius = 2,
+            Damage = 100,    --from 25, crash dmg
+            DamageRadius = 2,
         },
     },
 }

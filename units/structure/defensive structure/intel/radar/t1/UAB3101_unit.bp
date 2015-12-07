@@ -1,4 +1,4 @@
-#T1 Radar 
+--T1 Radar 
 
 UnitBlueprint {
 Merge = true,
@@ -9,9 +9,9 @@ BlueprintId="uab3101",
         BuildCostMass = 100,
         BuildRate = 12.5,
         BuildTime = 100,
-		MaintenanceConsumptionPerSecondEnergy = 20,
+        MaintenanceConsumptionPerSecondEnergy = 20,
     },
-	Intel = {
-		RadarStealth = true,
+    Intel = {
+        RadarStealth = true,
     },
 }

@@ -1,4 +1,4 @@
-#Medusa
+--Medusa
 
 UnitBlueprint {
 Merge = true,
@@ -9,7 +9,7 @@ BlueprintId = "url0103",
         BuildCostMass = 40,
         BuildTime = 200,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -18,7 +18,7 @@ BlueprintId = "url0103",
             Level5 = 6,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 1,
         Level2 = 2,
         Level3 = 3,
@@ -41,7 +41,7 @@ BlueprintId = "url0103",
                     Duration = 3,
                     Radius = 2,
                     TargetAllow = 'TECH1',
-					TargetDisallow = 'TECH2, WALL',
+                    TargetDisallow = 'TECH2, WALL',
                 },
                 {
                     Add = {
@@ -50,11 +50,11 @@ BlueprintId = "url0103",
                     AppliedToTarget = true,
                     BuffType = 'STUN',
                     Duration = 2,
-                    Radius = 1.5,	#from 2
+                    Radius = 1.5,    --from 2
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL, TECH3',
                 },
-				{
+                {
                     Add = {
                         OnImpact = true,
                     },
@@ -66,8 +66,8 @@ BlueprintId = "url0103",
                     TargetDisallow = 'WALL, NAVAL',
                 },
             },
-		Damage = 250, # from230
-	    RateOfFire = 0.2, 	#from 1.666 =6sec to 5sec
-		},
-	},
+        Damage = 250, -- from230
+        RateOfFire = 0.2,     --from 1.666 =6sec to 5sec
+        },
+    },
 }

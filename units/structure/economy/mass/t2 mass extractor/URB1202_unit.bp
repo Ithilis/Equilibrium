@@ -1,4 +1,4 @@
-#T2 Mass Extractor
+--T2 Mass Extractor
 
 UnitBlueprint {
 Merge = true,
@@ -13,6 +13,6 @@ BlueprintId = "urb1202",
         ProductionPerSecondMass = 6,
     },
     Intel = {
-		RadarStealth = true,	  #for not be visible on radar after upgradeing
+        RadarStealth = true,      --for not be visible on radar after upgradeing
     },
 }

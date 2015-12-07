@@ -1,34 +1,34 @@
-#mercy
+--mercy
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "daa0206", 
 
     Air = {
-        MaxAirspeed = 11,	#from 10
+        MaxAirspeed = 11,    --from 10
         MinAirspeed = 8,
     },
     Defense = {
         Health = 10,
         MaxHealth = 10,
     },
-	Display = {
+    Display = {
         Abilities = {
             '<LOC ability_stun>EMP Weapon',
-			'<LOC ability_suicideweapon>Suicide Weapon',
+            '<LOC ability_suicideweapon>Suicide Weapon',
         },
-	},
+    },
     Economy = {
         BuildCostEnergy = 6000,
         BuildCostMass = 280,
         BuildTime = 1600,
-    },	
+    },    
     General = {
         CommandCaps = {
             RULEUCC_Attack = true,
             RULEUCC_CallTransport = false,
             RULEUCC_Capture = false,
-            RULEUCC_Dock = true,		#from false
+            RULEUCC_Dock = true,        --from false
             RULEUCC_Guard = false,
             RULEUCC_Move = true,
             RULEUCC_Nuke = false,
@@ -41,22 +41,22 @@ BlueprintId = "daa0206",
         },
     },
     Physics = {
-        FuelRechargeRate = 5,		#from 0
+        FuelRechargeRate = 5,        --from 0
         FuelUseTime = 120,
-        MaxSpeed = 11,				#from 10
+        MaxSpeed = 11,                --from 10
     },
     Weapon = {
         {
-            Damage = 375,			#from2400 =3000dmg after 4s
-            DamageRadius = 4.5,		#from 3
+            Damage = 375,            --from2400 =3000dmg after 4s
+            DamageRadius = 4.5,        --from 3
             FiringTolerance = 6,
             MaxRadius = 25,
-            MuzzleVelocity = 10,		#from 18
-            DoTPulses = 8,				#damage 8x every 0,5s		1=1x počas 1 dot timu
-			DoTTime = 8,				#damage while 4 second 	1=0,5s
-			
+            MuzzleVelocity = 10,        --from 18
+            DoTPulses = 8,                --damage 8x every 0,5s        1=1x počas 1 dot timu
+            DoTTime = 8,                --damage while 4 second     1=0,5s
+            
         },
-		{
+        {
             Damage = 500,
             DamageRadius = 3,
             DisplayName = 'Air Crash',

@@ -1,4 +1,4 @@
-#Sera Selen
+--Sera Selen
 
 local oldXSL0101 = XSL0101
 XSL0101 = Class(oldXSL0101) {
@@ -10,10 +10,10 @@ XSL0101 = Class(oldXSL0101) {
             if bp.Intel.StealthWaitTime then
                 WaitSeconds( bp.Intel.StealthWaitTime )
             end
-			self:EnableUnitIntel('RadarStealth')
-			self:EnableUnitIntel('Cloak')
-			self:SetWeaponEnabledByLabel('LaserTurret', false)	--add Ithilis
-			self.Cloaked = true
+            self:EnableUnitIntel('RadarStealth')
+            self:EnableUnitIntel('Cloak')
+            self:SetWeaponEnabledByLabel('LaserTurret', false)    --add Ithilis
+            self.Cloaked = true
         end,
         
         OnMotionHorzEventChange = function(self, new, old)
@@ -28,9 +28,9 @@ XSL0101 = Class(oldXSL0101) {
         Main = function(self)
             if self.Cloaked then
                 self:DisableUnitIntel('RadarStealth')
-			    self:DisableUnitIntel('Cloak')
-				self:SetWeaponEnabledByLabel('LaserTurret', true)	--add Ithilis
-			end
+                self:DisableUnitIntel('Cloak')
+                self:SetWeaponEnabledByLabel('LaserTurret', true)    --add Ithilis
+            end
         end,
         
         OnMotionHorzEventChange = function(self, new, old)
@@ -40,6 +40,6 @@ XSL0101 = Class(oldXSL0101) {
             SWalkingLandUnit.OnMotionHorzEventChange(self, new, old)
         end,
     },
-	
+    
 }
 TypeClass = XSL0101

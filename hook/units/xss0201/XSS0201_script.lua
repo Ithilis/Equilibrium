@@ -1,4 +1,4 @@
-#Seraphim Destroyer Script
+--Seraphim Destroyer Script
 
 local oldXSS0201 = XSS0201
 XSS0201 = Class(oldXSS0201) {
@@ -8,7 +8,7 @@ XSS0201 = Class(oldXSS0201) {
         BackTurret = Class(SDFUltraChromaticBeamGenerator) {},
         Torpedo1 = Class(SANAnaitTorpedo) {},
         AntiTorpedo = Class(SDFAjelluAntiTorpedoDefense) {},
-		Torpedo2 = Class(SANAnaitTorpedo) {},
+        Torpedo2 = Class(SANAnaitTorpedo) {},
     },
 
     OnMotionVertEventChange = function( self, new, old )
@@ -16,11 +16,11 @@ XSS0201 = Class(oldXSS0201) {
         if new == 'Top' then
             self:SetWeaponEnabledByLabel('FrontTurret', true)
             self:SetWeaponEnabledByLabel('BackTurret', true)
-			self:SetMaintenanceConsumptionInactive()
+            self:SetMaintenanceConsumptionInactive()
         elseif new == 'Down' then
             self:SetWeaponEnabledByLabel('FrontTurret', false)
             self:SetWeaponEnabledByLabel('BackTurret', false)
-			self:SetMaintenanceConsumptionActive()
+            self:SetMaintenanceConsumptionActive()
         end
     end,
 }

@@ -1,4 +1,4 @@
-#T3 Mass Extractor
+--T3 Mass Extractor
 
 UnitBlueprint {
 Merge = true,
@@ -16,6 +16,6 @@ BlueprintId = "xsb1302",
         ProductionPerSecondMass = 16,
     },
     Intel = {
-		RadarStealth = true,	#for not change color after upgrade -> its still visible on radar no idea why, but at least dont change collor
+        RadarStealth = true,    --for not change color after upgrade -> its still visible on radar no idea why, but at least dont change collor
     },
 }

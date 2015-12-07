@@ -1,4 +1,4 @@
-#TML
+--TML
 
 UnitBlueprint {
 Merge = true,
@@ -27,8 +27,8 @@ BlueprintId = "xsb2108",
     },
     Weapon = {
         {
-            DamageRadius = 3,	#from 2
-			MaxProjectileStorage = 12,	#from 20
+            DamageRadius = 3,    --from 2
+            MaxProjectileStorage = 12,    --from 20
         },
     },
 }

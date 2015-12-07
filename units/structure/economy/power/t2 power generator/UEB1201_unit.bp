@@ -1,4 +1,4 @@
-#T2 Power generator
+--T2 Power generator
 
 UnitBlueprint {
 Merge = true,

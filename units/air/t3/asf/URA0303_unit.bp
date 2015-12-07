@@ -1,11 +1,11 @@
-#ASF
+--ASF
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0303", 
 
     Air = {
-        MaxAirspeed = 20,	 	#from25
+        MaxAirspeed = 20,         --from25
     },
     Buffs = {
         Regen = {
@@ -34,7 +34,7 @@ BlueprintId = "ura0303",
         'TECH3',
         'ANTIAIR',
         'VISIBLETORECON',
-		'COUNTERINTELLIGENCE',		#add because have stealth
+        'COUNTERINTELLIGENCE',        --add because have stealth
         'RECLAIMABLE',
         'OVERLAYANTIAIR',
     },
@@ -77,7 +77,7 @@ BlueprintId = "ura0303",
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-            },			
+            },            
             TurretPitchRange = 135,
             TurretYawRange = 135,
         },
@@ -87,7 +87,7 @@ BlueprintId = "ura0303",
             DisplayName = 'Air Crash',
         },
     },
-	Wreckage = {
-		MassMult = 0.9,			#from 0.45
+    Wreckage = {
+        MassMult = 0.9,            --from 0.45
     },
 }

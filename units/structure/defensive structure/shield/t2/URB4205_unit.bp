@@ -1,4 +1,4 @@
-#T2 Static Shield ED3
+--T2 Static Shield ED3
 
 UnitBlueprint {
 Merge = true,
@@ -21,7 +21,7 @@ BlueprintId = "urb4205",
         BuildTime = 750,
         MaintenanceConsumptionPerSecondEnergy = 250,
     },
-	General = {
+    General = {
         CommandCaps = {
             RULEUCC_Attack = false,
             RULEUCC_CallTransport = false,
@@ -30,14 +30,14 @@ BlueprintId = "urb4205",
             RULEUCC_Move = false,
             RULEUCC_Nuke = false,
             RULEUCC_Patrol = false,
-			RULEUCC_Pause = false,
+            RULEUCC_Pause = false,
             RULEUCC_Reclaim = false,
             RULEUCC_Repair = false,
             RULEUCC_RetaliateToggle = false,
             RULEUCC_Stop = true,
             RULEUCC_Transport = false,
         },
-	},
+    },
     Intel = {
         RadarStealth = true,
     },

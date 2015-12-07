@@ -1,10 +1,10 @@
-#Hunter
+--Hunter
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "url0106",
     
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 2,
             Level2 = 3,
@@ -12,8 +12,8 @@ BlueprintId = "url0106",
             Level4 = 5,
             Level5 = 6,
         },
-		Stun = {
-		    Add = {
+        Stun = {
+            Add = {
                 OnDeath = true,
                 OnImpact = true,
             },
@@ -22,7 +22,7 @@ BlueprintId = "url0106",
             Duration = 1.5,
             Radius = 6,
             TargetAllow = 'MOBILE, LAND',
-			TargetDisallow = 'TECH3, COMMAND, EXPERIMENTAL',
+            TargetDisallow = 'TECH3, COMMAND, EXPERIMENTAL',
         },
     },
     BuildIconSortPriority = 30,
@@ -54,7 +54,7 @@ BlueprintId = "url0106",
     },
     Description = '<LOC url0106_desc>Light Assault Bot',
     Display = {
-		Abilities = {
+        Abilities = {
             '<LOC ability_stun>EMP Weapon',
         },
         
@@ -82,26 +82,26 @@ BlueprintId = "url0106",
         Level5 = 5,
     },
     Weapon = {
-		{
+        {
         
-            Damage = 8,	#24dps
+            Damage = 8,    --24dps
             MaxRadius = 13,
             MuzzleVelocity = 25,
             RateOfFire = 1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'RADAR',
-				'MOBILE ENGINNER',
-				'COMMAND',				#ACU hight priority for ghetto sniping
-				'TECH1 MOBILE',
+                'RADAR',
+                'MOBILE ENGINNER',
+                'COMMAND',                --ACU hight priority for ghetto sniping
+                'TECH1 MOBILE',
                 'TECH2 MOBILE',
                 'TECH3 MOBILE',
                 'STRUCTURE DEFENSE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-			},
+            },
         },
-		{
+        {
             AboveWaterTargetsOnly = true,
             Accurate = true,
             BallisticArc = 'RULEUBA_None',
@@ -131,7 +131,7 @@ BlueprintId = "url0106",
                     RackBone = 0,
                 },
             },
-            RangeCategory = 'UWRC_IndirectFire',		#from direct
+            RangeCategory = 'UWRC_IndirectFire',        --from direct
             RateOfFire = 0.5,
             SalvoSize = 1,
             SlavedToBody = true,

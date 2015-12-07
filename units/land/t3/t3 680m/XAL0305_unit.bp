@@ -1,20 +1,20 @@
-#A Sniper
-	
+--A Sniper
+    
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xal0305",
-	
-	Economy = {
-			BuildCostEnergy = 6800,
-			BuildCostMass = 680,
-			BuildTime = 3400,
-			MaintenanceConsumptionPerSecondEnergy = 50,
-	},
-	Display = {
+    
+    Economy = {
+            BuildCostEnergy = 6800,
+            BuildCostMass = 680,
+            BuildTime = 3400,
+            MaintenanceConsumptionPerSecondEnergy = 50,
+    },
+    Display = {
         Abilities = {
             '<LOC ability_personalstealth>Personal Stealth',
-		},
-	},
+        },
+    },
     General = {
         OrderOverrides = {
             RULEUTC_StealthToggle = {
@@ -29,29 +29,29 @@ BlueprintId = "xal0305",
     Intel = {
         RadarStealth = true,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
-			Level1 = 6,
-			Level2 = 9,
-			Level3 = 12,
-			Level4 = 15,
-			Level5 = 18,
-		},
+            Level1 = 6,
+            Level2 = 9,
+            Level3 = 12,
+            Level4 = 15,
+            Level5 = 18,
+        },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 20.5,
         Level2 = 41,
         Level3 = 61.5,
         Level4 = 82,
         Level5 = 102.5,
     },
-	Weapon = {
-		{
-        Damage = 600,			#from 950, its 100dps, still more as artilery, 
+    Weapon = {
+        {
+        Damage = 600,            --from 950, its 100dps, still more as artilery, 
         DamageRadius = 1,
-		FiringRandomnessWhileMoving = 0.5,	#from 0,75
-		RateOfFire = 0.1666,	#from 7s to 6s, for be more effective against army
+        FiringRandomnessWhileMoving = 0.5,    --from 0,75
+        RateOfFire = 0.1666,    --from 7s to 6s, for be more effective against army
         MaxRadius = 65,
-		},
-	},
+        },
+    },
 }

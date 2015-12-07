@@ -1,22 +1,22 @@
-#Obsidian
+--Obsidian
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0202",
-	
-	Economy = {
-		BuildCostEnergy = 1800,
-		BuildCostMass = 360,
-		BuildTime = 1800,
-		MaintenanceConsumptionPerSecondEnergy = 1,
-	},
-	Defense = {
+    
+    Economy = {
+        BuildCostEnergy = 1800,
+        BuildCostMass = 360,
+        BuildTime = 1800,
+        MaintenanceConsumptionPerSecondEnergy = 1,
+    },
+    Defense = {
         Health = 1500,
         MaxHealth = 1500,
-		Shield = {
+        Shield = {
             ShieldMaxHealth = 1125,
-			ShieldRechargeTime = 60,	#from 75s
-            ShieldRegenRate = 5,		#from2
+            ShieldRechargeTime = 60,    --from 75s
+            ShieldRegenRate = 5,        --from2
         },
     },
     Physics = {
@@ -24,7 +24,7 @@ BlueprintId = "ual0202",
         MaxBrake = 2.65,
         MaxSpeed = 2.65,
     },
-	Buffs = {
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -33,7 +33,7 @@ BlueprintId = "ual0202",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 11,
         Level2 = 22,
         Level3 = 33,
@@ -41,19 +41,19 @@ BlueprintId = "ual0202",
         Level5 = 55,
     },
     Weapon = {
-			{
+            {
             Damage = 400,
-			RateOfFire = 0.3,
-			TargetPriorities = {
+            RateOfFire = 0.3,
+            TargetPriorities = {
                 'SPECIALHIGHPRI',
-				'COMMAND',			#acu is hight priority
+                'COMMAND',            --acu is hight priority
                 'TECH3 MOBILE',
                 'TECH2 MOBILE',
                 'TECH1 MOBILE',
                 'STRUCTURE DEFENSE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-			},
-			},
-	},
+            },
+            },
+    },
 }

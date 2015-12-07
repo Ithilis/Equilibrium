@@ -1,14 +1,14 @@
-#T1 sonar 
+--T1 sonar 
 
 UnitBlueprint {
 Merge = true,
 BlueprintId="urb3102",
 
-	Economy = {
-        BuildCostEnergy = 500,	#from 544
-        BuildCostMass = 50,		#from 64
-        BuildTime = 50,			#from 80
-		BuildRate = 12.5,
+    Economy = {
+        BuildCostEnergy = 500,    --from 544
+        BuildCostMass = 50,        --from 64
+        BuildTime = 50,            --from 80
+        BuildRate = 12.5,
     },
     Intel = {
         WaterVisionRadius = 60,

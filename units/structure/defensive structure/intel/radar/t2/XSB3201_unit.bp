@@ -1,4 +1,4 @@
-#T2 Radar 
+--T2 Radar 
 
 UnitBlueprint {
 Merge = true,
@@ -11,7 +11,7 @@ BlueprintId="xsb3201",
         BuildTime = 625,
         MaintenanceConsumptionPerSecondEnergy = 250,
     },
-	Intel = {
-		RadarStealth = true,
+    Intel = {
+        RadarStealth = true,
     },
 }
