@@ -15,7 +15,6 @@ v.33
 --> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
 
 
-- titan hp shield 1050 (1000) -> its for alive fire beetle
 -! brick add {} for anti torpedo -> was missing
 -- change anti-torpedo range category for RangeCategory = 'UWRC_AntiNavy',
 

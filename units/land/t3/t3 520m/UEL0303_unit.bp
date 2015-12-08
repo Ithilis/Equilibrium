@@ -14,7 +14,7 @@
             Health = 2000,                --3000hp in total
             MaxHealth = 2000,
             Shield = {
-                ShieldMaxHealth = 1050,
+                ShieldMaxHealth = 1000,
                 ShieldRechargeTime = 45,
                 ShieldRegenRate = 10,
             },
