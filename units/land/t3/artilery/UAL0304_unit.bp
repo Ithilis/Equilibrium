@@ -30,7 +30,6 @@ BlueprintId = "ual0304",
             DamageRadius = 3,
             DoTPulses = 15,
             DoTTime = 5,
-            MuzzleVelocity = 25,    --from 22
         },
     },
 }

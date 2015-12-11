@@ -189,9 +189,9 @@ UAL0001 = Class(oldUAL0001) {
         elseif enh == 'CrysalisBeamRemove' then
             local wep = self:GetWeaponByLabel('RightDisruptor')
             local bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius
-            wep:ChangeMaxRadius(bpDisrupt or 22)
+            wep:ChangeMaxRadius(bpDisrupt or 23)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 22)
+            oc:ChangeMaxRadius(bpDisrupt or 23)
         --Heat Sink Augmentation
         elseif enh == 'HeatSink' then
             local wep = self:GetWeaponByLabel('RightDisruptor')

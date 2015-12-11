@@ -1,5 +1,6 @@
 v.33
 ----
+- aeon t3 mobile artilery muzzle velocity change removed (cause miss issue) 
 
 - UEF t3 gunship optimilize file to save +-1MB
 
@@ -13,10 +14,21 @@ v.33
 - energy consume 100 (50)
 --> need check if its not insine strong becasue can destroy 15 t2 tanks in formation with single beetle. 
 --> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
+--> when bug that destroy even whendestroyed will be fixed, then add volatility with half dmg after death. 
+
 
 
 -! brick add {} for anti torpedo -> was missing
 -- change anti-torpedo range category for RangeCategory = 'UWRC_AntiNavy',
+
+- T1 mex add stealth (for not be visible after upgrade as gray color)
+- t1 air/land/naval factory add stealth
+- t2 air/land/naval factory add stealth
+- t3 air/land/naval factory add stealth
+--> keep this change until regular game fix intel issue. 
+
+--
+mantis ma vraj problem hitnut hybajuce sa jednotky, pridaj muzzle ak je to naozaj problem. 
 
 v.32
 ______

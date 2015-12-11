@@ -16,4 +16,7 @@ BlueprintId = "urb0303",
         StorageEnergy = 0,
         StorageMass = 0,
     },
+    Intel = {
+        RadarStealth = true,      --for not be visible on radar after upgrading
+    },
 }    

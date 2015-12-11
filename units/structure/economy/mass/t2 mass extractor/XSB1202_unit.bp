@@ -13,6 +13,6 @@ BlueprintId = "xsb1202",
         ProductionPerSecondMass = 6,
     },
     Intel = {
-        RadarStealth = true,      --for not be visible on radar after upgradeing
+        RadarStealth = true,      --for not be visible on radar after upgrading
     },
 }
