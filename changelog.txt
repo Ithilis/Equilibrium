@@ -28,7 +28,12 @@ v.33
 --> keep this change until regular game fix intel issue. 
 
 --
-mantis ma vraj problem hitnut hybajuce sa jednotky, pridaj muzzle ak je to naozaj problem. 
+- static flak, more muzzle as well, probably slightly more hp. 
+- sera spy plane 700hp (200) remove toggle, make selen invis for free
+- janus burst dmg +100 (for 500+600dmg) aoe 5 (4,5)
+
+- t2 bomber change rof for kill t1 intie for single shot
+-- maybe slightly more hp? 
 
 v.32
 ______
