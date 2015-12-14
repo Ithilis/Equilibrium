@@ -2,12 +2,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0205",
 
-	Economy = {
-		BuildCostEnergy = 1000,
-		BuildCostMass = 200,
-		BuildTime = 1000,
-	},
-	Buffs = {
+    Economy = {
+        BuildCostEnergy = 1000,
+        BuildCostMass = 200,
+        BuildTime = 1000,
+    },
+    Buffs = {
         Regen = {
             Level1 = 4,
             Level2 = 6,
@@ -16,38 +16,38 @@ BlueprintId = "xsl0205",
             Level5 = 12,
         },
     },
-	Veteran = {
+    Veteran = {
         Level1 = 6,
         Level2 = 12,
         Level3 = 18,
         Level4 = 24,
         Level5 = 32,
     },
-	Weapon = {
+    Weapon = {
         {
-        Damage = 90,
-		DamageRadius = 2.5,		#from 4
-		MuzzleVelocity = 27.5,	#from 20
-		MaxRadius = 38,			#from 40
-		TargetPriorities = {
+        Damage = 80,
+        DamageRadius = 3,        --from 4
+        MuzzleVelocity = 60,    --from 20
+        MaxRadius = 38,            --from 40
+        TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'EXPERIMENTAL',
                 'AIR MOBILE HIGHPRIAIR',
-				'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE GROUNDATTACK',
                 'AIR MOBILE TECH3 BOMBER',
                 'AIR MOBILE BOMBER',
                 'AIR MOBILE TRANSPORTATION',
                 'AIR MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
-			},
-		},
-		{
+            },
+        },
+        {
             AboveWaterTargetsOnly = true,      
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
             CountedProjectile = false,
-            Damage = 0,								#its only for same behaviour
+            Damage = 0,                                --its only for same behaviour
             DamageRadius = 0,
             DamageType = 'Normal',
             DisplayName = 'Serpentine Missile',
@@ -71,5 +71,5 @@ BlueprintId = "xsl0205",
             WeaponRepackTimeout = 0,
             WeaponUnpacks = false,
         },
-	},
+    },
 }
