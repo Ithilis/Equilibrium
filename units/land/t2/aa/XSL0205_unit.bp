@@ -25,9 +25,9 @@ BlueprintId = "xsl0205",
     },
     Weapon = {
         {
-        Damage = 90,
-        DamageRadius = 2.5,        --from 4
-        MuzzleVelocity = 27.5,    --from 20
+        Damage = 80,
+        DamageRadius = 3,        --from 4
+        MuzzleVelocity = 60,    --from 20
         MaxRadius = 38,            --from 40
         TargetPriorities = {
                 'SPECIALHIGHPRI',
