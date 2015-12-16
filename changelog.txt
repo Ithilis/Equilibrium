@@ -1,5 +1,36 @@
 v.33
 ----
+- SERA/AEON mobile flak
+-- 60muzzle (27,5)
+-- 140dps
+-- 3rof (2.5)
+- CYB/UEF mobile flak
+-- 55muzzle (25)
+-- 112dps
+-- 4aoe (3)
+
+- STATIC FLAK
+-- SERA/CYB muzzle 55(25) 48r(44)
+-- AOEN/UEF muzzle 60(30) 54r(50)
+
+
+- janus AA 300per shot (150) 
+-- rof 2s (1x)
+-- ground burst damage 600 (400)
+-- ground aoe 5 (4,5)
+- corsair rof 2s (1s) double damage
+-- remove code from weapon that was same as is standard code
+- notha rof 2s(1s, double AA dmg, 
+- swift winds 1000hp (800)
+
+- T3 bombers 16sp(15) change only in excel file, because already done :) 
+- asf 450m 30 000e 3600bt (500m 25000e 3000bt)
+
+- sera t3 spy plane remove toggle for stealth, remove maintance cost, full invis is for free when not move. 
+-- 700hp (200)
+
+- pilar speed 2,9 (3)
+- sera t3 mobile shield 2000hp (1000)
 - aeon t3 mobile artilery muzzle velocity change removed (cause miss issue) 
 
 - UEF t3 gunship optimilize file to save +-1MB
@@ -27,13 +58,14 @@ v.33
 - t3 air/land/naval factory add stealth
 --> keep this change until regular game fix intel issue. 
 
---
+-----
 - static flak, more muzzle as well, probably slightly more hp. 
 - sera spy plane 700hp (200) remove toggle, make selen invis for free
 - janus burst dmg +100 (for 500+600dmg) aoe 5 (4,5)
 
 - t2 bomber change rof for kill t1 intie for single shot
 -- maybe slightly more hp? 
+
 
 v.32
 ______

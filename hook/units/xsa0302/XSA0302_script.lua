@@ -5,9 +5,6 @@ XSA0302 = Class(oldXSA0302) {
 
     OnStopBeingBuilt = function(self, builder, layer)
         SAirUnit.OnStopBeingBuilt(self, builder, layer)
-        self:SetMaintenanceConsumptionInactive()
-        self:SetScriptBit('RULEUTC_StealthToggle', true)
-        self:RequestRefreshUI()
         self:DisableUnitIntel('RadarStealth')
         self:DisableUnitIntel('Cloak')
         self.Cloaked = false

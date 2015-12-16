@@ -9,15 +9,14 @@ BlueprintId = "xsa0302",
         MinAirspeed = 20,    --from25
     },
     Defense = {
-        Health = 200,        --from1100
-        MaxHealth = 200,
+        Health = 700,        --from1100
+        MaxHealth = 700,
         RegenRate = 5,        --from0
     },
     Economy = {
         BuildCostEnergy = 7500,
         BuildCostMass = 200,
         BuildTime = 1200,
-        MaintenanceConsumptionPerSecondEnergy = 150,    --for stealth when not moving
     },
     Categories = {
         'PRODUCTFA',
@@ -46,23 +45,12 @@ BlueprintId = "xsa0302",
             '<LOC ability_sonar>Sonar',
         },
     },
-    General = {
-        OrderOverrides = {
-            RULEUTC_StealthToggle = {
-                bitmapId = 'stealth-personal',
-                helpText = 'toggle_stealth_personal',
-            },
-        },
-        ToggleCaps = {
-            RULEUTC_StealthToggle = true,
-        },
-    },
     Intel = {
         Cloak = true,    
         RadarStealth = true,        
-        OmniRadius = 25,    --from 30
+        OmniRadius = 25,     --from 30
         RadarRadius = 80,    --from96/85
-        VisionRadius = 50,    --from64/55
+        VisionRadius = 50,   --from64/55
         SonarRadius = 85,    --from98
     },
     Physics = {

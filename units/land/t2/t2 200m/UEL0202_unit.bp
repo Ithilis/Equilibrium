@@ -9,6 +9,11 @@ BlueprintId = "uel0202",
         BuildCostMass = 200,
         BuildTime = 1000,
     },
+    Physics = {
+        MaxAcceleration = 2.9,  --from 3
+        MaxSpeed = 2.9,
+        MaxSpeedReverse = 2.9,
+    },
     Weapon = {
         {
         Damage = 60,        --60dps

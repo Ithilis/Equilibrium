@@ -34,18 +34,20 @@ BlueprintId = "dea0202",
     },
     Weapon = {
         {
-        Damage = 75,
+            Damage = 150,              -- from 2x75
+            RateOfFire = 0.5,          -- from 1
         },
         {
-        Damage = 75,
+            Damage = 150,
+            RateOfFire = 0.5,
         },
         {
             BombDropThreshold = 4,
             Damage = 5,                    --600dmg by fire
-            DamageRadius = 4.5,
+            DamageRadius = 5,              -- from 3
             DoTPulses = 15,
             DoTTime = 2.5,
-            InitialDamage = 50,         --400intial dmg from 600
+            InitialDamage = 75,
             MaxRadius = 60,
             TargetPriorities = {
                 'SPECIALHIGHPRI',

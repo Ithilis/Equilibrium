@@ -39,9 +39,9 @@ BlueprintId = "ura0303",
         'OVERLAYANTIAIR',
     },
     Economy = {
-        BuildCostEnergy = 25000,
-        BuildCostMass = 500,
-        BuildTime = 3000,
+        BuildCostEnergy = 30000,
+        BuildCostMass = 450,
+        BuildTime = 3600,
     },
     Physics = {
         FuelUseTime = 360,

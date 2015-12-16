@@ -34,9 +34,10 @@ BlueprintId = "ueb2204",
         {
             Damage = 150,
             DamageRadius = 4,
-            MuzzleVelocity = 30,
+            MuzzleVelocity = 60,
             RateofFire = 1,
             FiringRandomness = 2,
+            MaxRadius = 54,         --50
         },
     },
 }

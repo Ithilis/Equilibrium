@@ -39,10 +39,12 @@ BlueprintId = "xsa0202",
     },
     Weapon = {
         {
-            Damage = 25,
+            Damage = 50,                -- from 25
+            RateOfFire = 0.5,           -- from1
         },
         {
-            Damage = 25,                        
+            Damage = 50,  
+            RateOfFire = 0.5,           -- from1
         },
         {
             Damage = 1050,            --from 1175

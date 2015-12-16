@@ -21,8 +21,8 @@ BlueprintId = "xsl0307",
         'OVERLAYDEFENSE',
     },
     Defense = {
-        Health = 1000,    --from 400
-        MaxHealth = 1000,
+        Health = 2000,    --from 400
+        MaxHealth = 2000,
         RegenRate = 5,
         Shield = {
             ShieldRechargeTime = 50,
@@ -57,9 +57,7 @@ BlueprintId = "xsl0307",
             RateOfFire = 0,
             RenderFireClock = true,
             SlavedToBody = true,
-            TargetCheckInterval = 2,
             TargetRestrictDisallow = 'UNTARGETABLE',
-            TrackingRadius = 1.15,
             TurretDualManipulators = false,
             Turreted = false,
             WeaponCategory = 'Missile',

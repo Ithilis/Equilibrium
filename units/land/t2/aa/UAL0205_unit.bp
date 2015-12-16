@@ -29,10 +29,11 @@ BlueprintId = "ual0205",
     },
     Weapon = {
         {
-        Damage = 80,
+        Damage = 70,
         DamageRadius = 3,        --from 4
         MuzzleVelocity = 60,    --from 20
         MaxRadius = 38,            --from 40
+        RateOfFire = 2,
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'EXPERIMENTAL',
