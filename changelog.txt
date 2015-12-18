@@ -1,5 +1,10 @@
 v.33
 ----
+
+- experimental land units change target priority for acu on higer priority
+-- gc, ml, mega, yotha, fateboy
+-- some small tweak of priority as defensive structure add higer as T2/t3 units
+
 - SERA/AEON mobile flak
 -- 60muzzle (27,5)
 -- 140dps
@@ -9,18 +14,23 @@ v.33
 -- 112dps
 -- 4aoe (3)
 
-- STATIC FLAK
+- STATIC FLAK    ---> maybe need better visible projectile
 -- SERA/CYB muzzle 55(25) 48r(44)
 -- AOEN/UEF muzzle 60(30) 54r(50)
 
 
 - janus AA 300per shot (150) 
 -- rof 2s (1x)
--- ground burst damage 600 (400)
+-- ground fire damage 800 (600)
+-- ground burst dmg 300 (400)
 -- ground aoe 5 (4,5)
-- corsair rof 2s (1s) double damage
+- corsair rof 2s (1s) double aa damage 
+-- ground damage 1000 (900)
+-- aoe 2,5(2)
+-- remove change firing randomnes
 -- remove code from weapon that was same as is standard code
 - notha rof 2s(1s, double AA dmg, 
+-- ground damage 1050 (950)
 - swift winds 1000hp (800)
 
 - T3 bombers 16sp(15) change only in excel file, because already done :) 
@@ -35,13 +45,10 @@ v.33
 
 - UEF t3 gunship optimilize file to save +-1MB
 
-- t2 bombers ground dmg:
--- cybran 1000 (900)
--- sera 1050 (950)
 
 - fire beetle yellow range for dmg
 - aoe dmg 5.5 (6)
-- Intel 10 (24)
+- Intel 15 (24)
 - energy consume 100 (50)
 --> need check if its not insine strong becasue can destroy 15 t2 tanks in formation with single beetle. 
 --> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
@@ -57,14 +64,6 @@ v.33
 - t2 air/land/naval factory add stealth
 - t3 air/land/naval factory add stealth
 --> keep this change until regular game fix intel issue. 
-
------
-- static flak, more muzzle as well, probably slightly more hp. 
-- sera spy plane 700hp (200) remove toggle, make selen invis for free
-- janus burst dmg +100 (for 500+600dmg) aoe 5 (4,5)
-
-- t2 bomber change rof for kill t1 intie for single shot
--- maybe slightly more hp? 
 
 
 v.32

@@ -33,6 +33,19 @@ BlueprintId = "ual0401",
     },
     Weapon = {
         {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMANDER',            --add
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'TECH3 STRUCTURE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             AboveWaterFireOnly = true,

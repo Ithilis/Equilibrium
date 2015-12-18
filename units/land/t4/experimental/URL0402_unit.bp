@@ -34,8 +34,40 @@ BlueprintId = "url0402",
     },
     Weapon = {
         {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMANDER',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMANDER',
+                'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMANDER',
+                'TECH1 MOBILE',
+                'TECH2 MOBILE',
+                'TECH3 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
         },
@@ -45,7 +77,6 @@ BlueprintId = "url0402",
         },
         {
             Damage = 100,        --from 50 = 100dps
-            DamageType = 'Normal',
         },
         {
         },

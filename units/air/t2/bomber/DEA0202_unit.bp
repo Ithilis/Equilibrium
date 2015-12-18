@@ -43,11 +43,11 @@ BlueprintId = "dea0202",
         },
         {
             BombDropThreshold = 4,
-            Damage = 5,                    --600dmg by fire
+            Damage = 10,                    --800dmg by fire
             DamageRadius = 5,              -- from 3
-            DoTPulses = 15,
+            DoTPulses = 10,
             DoTTime = 2.5,
-            InitialDamage = 75,
+            InitialDamage = 37.5,             -- 300burst dmg
             MaxRadius = 60,
             TargetPriorities = {
                 'SPECIALHIGHPRI',

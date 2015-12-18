@@ -13,17 +13,6 @@ BlueprintId = "xrl0403",
             Level5 = 75,
         },
     },
-    Intel = {
-        WaterVisionRadius = 45,    --from 32
-    },
-    Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 115,
-        Level2 = 230,
-        Level3 = 345,
-        Level4 = 460,
-        Level5 = 575,
-    },
     Defense = {
         Health = 95000,                --from 110 000
         MaxHealth = 95000,
@@ -40,6 +29,58 @@ BlueprintId = "xrl0403",
             'xrl0004',
             'xrl0005',
             'drlk005',
+        },
+    },
+    Intel = {
+        WaterVisionRadius = 45,    --from 32
+    },
+    Veteran = {
+        RequirementMult = 0.5,
+        Level1 = 115,
+        Level2 = 230,
+        Level3 = 345,
+        Level4 = 460,
+        Level5 = 575,
+    },
+    Weapon = {
+        {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMANDER',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'NAVAL MOBILE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMANDER',
+                'EXPERIMENTAL',
+                'SUBCOMMANDER',
+                'NAVAL MOBILE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+            WeaponCategory = 'Death',
         },
     },
 }

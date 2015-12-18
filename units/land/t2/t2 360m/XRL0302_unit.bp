@@ -24,7 +24,7 @@ BlueprintId = "xrl0302",
     Intel = {
         Cloak = true,
         StealthWaitTime = 1,
-        VisionRadius = 20,
+        VisionRadius = 15,
     },
     Physics = {
         MaxAcceleration = 4,    --from5 = same speed as deciver
