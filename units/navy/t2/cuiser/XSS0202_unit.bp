@@ -31,4 +31,18 @@ BlueprintId="xss0202",
         Level4 = 240,
         Level5 = 300,
     },
+    Weapon = {
+        {
+        },
+        {
+                        -- flak
+            Damage = 100,   -- from 120
+            DamageRadius = 3,   -- from 4
+            MuzzleVelocity = 30,    -- from 20
+        },
+        {
+        },
+        {
+        },
+    },
 }

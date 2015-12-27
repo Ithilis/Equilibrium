@@ -1,10 +1,15 @@
 v.33
 ----
 
+- cybran lab, cleaning ussles code
+
+
 -sera lab, remove script with dont fire while in invis, because it colide with fire from transport so labs dnt fire from transport. 
 -- it need some line of cide, that would be as: if not in transport then... (but dont know how to do it right now)
 
-
+- sera cruiser flak 30muzzle (20)
+-- 100dmg (from 120)
+-- 3aoe (from 4)
 
 - experimental land units change target priority for acu on higer priority
 -- gc, ml, mega, yotha, fateboy
