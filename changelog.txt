@@ -1,6 +1,11 @@
 v.33
 ----
 
+-sera lab, remove script with dont fire while in invis, because it colide with fire from transport so labs dnt fire from transport. 
+-- it need some line of cide, that would be as: if not in transport then... (but dont know how to do it right now)
+
+
+
 - experimental land units change target priority for acu on higer priority
 -- gc, ml, mega, yotha, fateboy
 -- some small tweak of priority as defensive structure add higer as T2/t3 units
@@ -31,10 +36,10 @@ v.33
 -- remove code from weapon that was same as is standard code
 - notha rof 2s(1s, double AA dmg, 
 -- ground damage 1050 (950)
-- swift winds 1000hp (800)
+- swift winds 900hp (800)
 
 - T3 bombers 16sp(15) change only in excel file, because already done :) 
-- asf 450m 30 000e 3600bt (500m 25000e 3000bt)
+- asf 525m 35 000e 4200bt (500m 25000e 3000bt)
 
 - sera t3 spy plane remove toggle for stealth, remove maintance cost, full invis is for free when not move. 
 -- 700hp (200)
@@ -64,6 +69,9 @@ v.33
 - t2 air/land/naval factory add stealth
 - t3 air/land/naval factory add stealth
 --> keep this change until regular game fix intel issue. 
+_____________
+outhum 2*vet have 7799hp wtf is this? it whould be 7935hp
+
 
 
 v.32

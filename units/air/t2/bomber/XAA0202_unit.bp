@@ -14,8 +14,8 @@ BlueprintId = "xaa0202",
         },
     },
     Defense = {
-        Health = 1000,      --from 800
-        MaxHealth = 1000,
+        Health = 900,      --from 800
+        MaxHealth = 900,
     },
     Economy = {
         BuildCostEnergy = 4500,

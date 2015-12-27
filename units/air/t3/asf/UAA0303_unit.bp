@@ -24,9 +24,9 @@ BlueprintId = "uaa0303",
         Level5 = 75,
     },
     Economy = {
-        BuildCostEnergy = 30000,
-        BuildCostMass = 450,
-        BuildTime = 3600,
+        BuildCostEnergy = 35000,
+        BuildCostMass = 525,
+        BuildTime = 4200,
     },
     Physics = {
         FuelUseTime = 360,
