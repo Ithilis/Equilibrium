@@ -85,7 +85,6 @@ BlueprintId = "url0001",
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE TECH1 BOT',
-                'MOBILE ENGINNER',
                 'MOBILE TECH1 TANK',
                 'MOBILE TECH1',
                 'MOBILE TECH2',
