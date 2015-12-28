@@ -12,6 +12,7 @@ BlueprintId = "ual0106",
     Display = {
         Abilities = {
             '<LOC ability_Vision>Vision on Death',
+            '<LOC ability_Ghetto>Ghetto',
         },
     },    
     Economy = {

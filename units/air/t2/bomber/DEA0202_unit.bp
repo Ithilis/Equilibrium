@@ -21,8 +21,8 @@ BlueprintId = "dea0202",
         Level5 = 55,
     },
     Defense = {
-        Health = 975,
-        MaxHealth = 975,
+        Health = 950,
+        MaxHealth = 950,
     },
     Economy = {
         BuildCostEnergy = 7500,

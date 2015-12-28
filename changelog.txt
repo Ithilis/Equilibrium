@@ -1,6 +1,19 @@
 v.33
 ----
 
+- Bouncer GF projectile lead target
+-- dps 150 (180)
+-- hp 1800 (2100)
+-- speed 2,6 (2,7)
+
+- Sky slammer AA can fire from transport -> its feauture, not bug
+-- add diplay "AA Ghetto"
+
+- Lab + selen add "Ghetto" on dysplay
+
+- add Washy ui mod that refresh jaming every 5second, 
+--its not ideal because its ui mod and as sim can be better. 
+
 - cybran/uef/sera tmd range 31(30) for prevent ground fire tml abuse. 
 
 - aeon tmd projectile, change acceleration 5 (1) -> it dont allow tml fly on place aware tmd, work as other tmd now. 
@@ -40,14 +53,21 @@ v.33
 -- ground fire damage 800 (600)
 -- ground burst dmg 300 (400)
 -- ground aoe 5 (4,5)
+-- 950hp (975)
+
 - corsair rof 2s (1s) double aa damage 
 -- ground damage 1000 (900)
 -- aoe 2,5(2)
 -- remove change firing randomnes
 -- remove code from weapon that was same as is standard code
+-- hp 900 (925)
+
 - notha rof 2s(1s, double AA dmg, 
 -- ground damage 1050 (950)
+-- hp 925(950)
+
 - swift winds 900hp (800)
+
 
 - T3 bombers 16sp(15) change only in excel file, because already done :) 
 - asf 525m 35 000e 4200bt (500m 25000e 3000bt)
@@ -68,7 +88,7 @@ v.33
 - energy consume 100 (50)
 --> need check if its not insine strong becasue can destroy 15 t2 tanks in formation with single beetle. 
 --> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
---> when bug that destroy even whendestroyed will be fixed, then add volatility with half dmg after death. 
+--> when bug that destroy even whendestroyed will be fixed, then add volatility with half dmg and less aoe after death. 
 
 
 
@@ -80,8 +100,6 @@ v.33
 - t2 air/land/naval factory add stealth
 - t3 air/land/naval factory add stealth
 --> keep this change until regular game fix intel issue. 
-_____________
-outhum 2*vet have 7799hp wtf is this? it whould be 7935hp
 
 
 

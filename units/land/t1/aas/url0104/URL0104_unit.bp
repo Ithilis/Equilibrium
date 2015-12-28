@@ -66,6 +66,7 @@ UnitBlueprint {
     Display = {
         Abilities = {
             '<LOC ability_aa>Anti-Air',
+            '<LOC ability_aa_Ghetto>AA Ghetto',
         },
         Mesh = {
             IconFadeInZoom = 130,
@@ -185,7 +186,7 @@ UnitBlueprint {
     StrategicIconName = 'icon_land1_antiair',
     StrategicIconSortPriority = 135,
     Transport = {
-        CanFireFromTransport = false,
+        CanFireFromTransport = true, --from false
     },
     Veteran = {
         Level1 = 1,

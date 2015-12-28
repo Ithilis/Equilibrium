@@ -32,6 +32,7 @@ BlueprintId = "url0106",
     Display = {
         Abilities = {
             '<LOC ability_stun>EMP Weapon',
+            '<LOC ability_Ghetto>Ghetto',
         },
     },
     Economy = {

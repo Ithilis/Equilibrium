@@ -70,8 +70,8 @@ UnitBlueprint {
         AirThreatLevel = 27,
         ArmorType = 'Normal',
         EconomyThreatLevel = 0,
-        Health = 2100,
-        MaxHealth = 2100,
+        Health = 1800,
+        MaxHealth = 1800,
         RegenRate = 0,
         SubThreatLevel = 0,
         SurfaceThreatLevel = 0,
@@ -182,9 +182,9 @@ UnitBlueprint {
             LAYER_Water = false,
         },
         DragCoefficient = 0.2,
-        MaxAcceleration = 2.7,
-        MaxBrake = 2.7,
-        MaxSpeed = 2.7,
+        MaxAcceleration = 2.6,
+        MaxBrake = 2.6,
+        MaxSpeed = 2.6,
         MaxSpeedReverse = 0,
         MaxSteerForce = 7,
         MinSpeedPercent = 0,
@@ -410,7 +410,7 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CannotAttackGround = false,
             CollideFriendly = false,
-            Damage = 54,                --180dps
+            Damage = 45,                --150dps
             DamageType = 'Normal',
             DisplayName = 'Nanodart Ground Launcher',
             FireTargetLayerCapsTable = {

@@ -13,6 +13,11 @@ BlueprintId = "uel0106",
         Health = 145,
         MaxHealth = 145,
     },
+    Display = {
+        Abilities = {
+            '<LOC ability_Ghetto>Ghetto',
+        },
+    },
     Physics = {
         MaxAcceleration = 4.2,
         MaxBrake = 4.2,

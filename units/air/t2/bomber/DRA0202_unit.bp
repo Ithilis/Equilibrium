@@ -21,8 +21,8 @@ BlueprintId = "dra0202",
         Level5 = 55,
     },
     Defense = {
-        Health = 925,
-        MaxHealth = 925,
+        Health = 900,
+        MaxHealth = 900,
     },
     Economy = {
         BuildCostEnergy = 7500,
