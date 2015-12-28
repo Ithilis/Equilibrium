@@ -1,11 +1,17 @@
 v.33
 ----
 
-- cybran lab, cleaning ussles code
+- cybran/uef/sera tmd range 31(30) for prevent ground fire tml abuse. 
 
+- aeon tmd projectile, change acceleration 5 (1) -> it dont allow tml fly on place aware tmd, work as other tmd now. 
+-- tmd bubble life time 2s (4s) (changed also on projectile)
+-- tmd bubble rof 0,666 (0,32)
+-- price: 300m (200) 3000e (2000) 375bt (312,5)
 
 -sera lab, remove script with dont fire while in invis, because it colide with fire from transport so labs dnt fire from transport. 
 -- it need some line of cide, that would be as: if not in transport then... (but dont know how to do it right now)
+
+- acu target priority -> removed mobile enginer from TP (no clue why i even add it)
 
 - sera cruiser flak 30muzzle (20)
 -- 100dmg (from 120)

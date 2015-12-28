@@ -5,8 +5,14 @@ Merge = true,
 BlueprintId = "uab4201",
 
     Economy = {
-        BuildCostEnergy = 2000,
-        BuildCostMass = 200,
-        BuildTime = 312.5,
+        BuildCostEnergy = 3000,
+        BuildCostMass = 300,
+        BuildTime = 375,
+    },
+    Weapon = {
+        {
+            RateOfFire = 0.66,          -- fromo 0,32
+            ProjectileLifetime = 2,     -- from4
+        },
     },
 }

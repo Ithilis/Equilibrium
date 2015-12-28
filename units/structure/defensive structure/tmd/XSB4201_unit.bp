@@ -9,4 +9,9 @@ BlueprintId = "xsb4201",
         BuildCostMass = 340,
         BuildTime = 425,
     },
+    Weapon = {
+        {
+            MaxRadius = 31,     --from30 for prevent ground fire tml abuse
+        },
+    },
 }
