@@ -80,6 +80,7 @@ UnitBlueprint {
     Display = {
         Abilities = {
             '<LOC ability_aa>Anti-Air',
+            '<LOC ability_AA_Ghetto>AA_Ghetto',
         },
         AnimationDeath = {
             {
@@ -203,7 +204,7 @@ UnitBlueprint {
     StrategicIconName = 'icon_bot3_antiair',
     StrategicIconSortPriority = 155,
     Transport = {
-        CanFireFromTransport = false,
+        CanFireFromTransport = true,    -- from false
         TransportClass = 3,
     },
     Veteran = {
@@ -410,11 +411,11 @@ UnitBlueprint {
             BallisticArc = 'RULEUBA_None',
             CannotAttackGround = false,
             CollideFriendly = false,
-            Damage = 45,                --150dps
+            Damage = 30,                --100dps
             DamageType = 'Normal',
             DisplayName = 'Nanodart Ground Launcher',
             FireTargetLayerCapsTable = {
-                Air = 'Land',
+                --Air = 'Land',
                 Land = 'Land',
                 Water = 'Land',
             },

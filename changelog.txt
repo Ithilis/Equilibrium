@@ -1,10 +1,12 @@
 v.33
 ----
+- Light tank ground fire aoe 1 (0.5)
 
 - Bouncer GF projectile lead target
--- dps 150 (180)
+-- dps 100 (180)
 -- hp 1800 (2100)
 -- speed 2,6 (2,7)
+-- AA able fire from transport, add diplay AA ghetto
 
 - Sky slammer AA can fire from transport -> its feauture, not bug
 -- add diplay "AA Ghetto"
@@ -15,6 +17,7 @@ v.33
 --its not ideal because its ui mod and as sim can be better. 
 
 - cybran/uef/sera tmd range 31(30) for prevent ground fire tml abuse. 
+-- muzzle velocity 150 (100)
 
 - aeon tmd projectile, change acceleration 5 (1) -> it dont allow tml fly on place aware tmd, work as other tmd now. 
 -- tmd bubble life time 2s (4s) (changed also on projectile)

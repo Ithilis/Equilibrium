@@ -48,7 +48,7 @@ BlueprintId = "dslk004",
             BeamLifetime = 0.4,
             
             Damage = 270,            --180dps
-            DamageRadius = 0.5,
+            DamageRadius = 1,
             MaxRadius = 28,
             RateOfFire = 0.1666,    --from 4s, 6s
         },
