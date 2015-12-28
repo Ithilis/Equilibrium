@@ -1,6 +1,6 @@
 v.33
 ----
-- air staging facility T1 building,  and some tweak
+- air staging facility T1 building,  e 1500(2250) bt 150(187,5)
 
 
 - Light tank ground fire aoe 1 (0.5)

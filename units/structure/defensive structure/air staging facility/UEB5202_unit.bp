@@ -25,14 +25,9 @@ BlueprintId = "ueb5202",
         'SORTSTRATEGIC',
     },
     Economy = {
-        BuildCostEnergy = 2250,
+        BuildCostEnergy = 1500,
         BuildCostMass = 150,
         BuildTime = 150,
     },
     StrategicIconName = 'icon_structure1_air',
-    Transport = {
-        Class2AttachSize = 2,       --2
-        Class3AttachSize = 2,      --4
-        StorageSlots = 10,      -- from 0
-    },
 }

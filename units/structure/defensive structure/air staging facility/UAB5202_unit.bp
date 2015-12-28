@@ -30,10 +30,4 @@ BlueprintId = "uab5202",
         BuildTime = 150,
     },
     StrategicIconName = 'icon_structure1_air',
-    Transport = {
-        Class2AttachSize = 1.5,    --2
-        Class3AttachSize = 2,      --4
-        DockingSlots = 5,
-        StorageSlots = 10,      -- from 0
-    },
 }
