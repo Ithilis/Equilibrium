@@ -4,9 +4,36 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uab5202", 
 
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER1ENGINEER', -- add
+        'BUILTBYTIER2ENGINEER',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER2COMMANDER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'STRUCTURE',
+        'STRATEGIC',
+        'TECH1',        -- from TECH2
+        'AIRSTAGINGPLATFORM',
+        'DRAGBUILD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYMISC',
+        'SORTSTRATEGIC',
+    },
     Economy = {
         BuildCostEnergy = 2250,
         BuildCostMass = 150,
-        BuildTime = 187.5,
+        BuildTime = 150,
+    },
+    StrategicIconName = 'icon_structure1_air',
+    Transport = {
+        Class2AttachSize = 1.5,    --2
+        Class3AttachSize = 2,      --4
+        DockingSlots = 5,
+        StorageSlots = 10,      -- from 0
     },
 }
