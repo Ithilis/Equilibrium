@@ -8,7 +8,7 @@ BlueprintId = "xrl0302",
         BuildCostEnergy = 3600,    --100e per sec
         BuildCostMass = 360,    --20m per sec
         BuildTime = 1800,        --18s
-        MaintenanceConsumptionPerSecondEnergy = 50,
+        MaintenanceConsumptionPerSecondEnergy = 75,
     },
     Display = {
         Abilities = {
@@ -27,7 +27,7 @@ BlueprintId = "xrl0302",
         VisionRadius = 15,
     },
     Physics = {
-        MaxAcceleration = 4,    --from5 = same speed as deciver
+        MaxAcceleration = 4,    --from5 = same speed as deceiver
         MaxBrake = 4,
         MaxSpeed = 4,
     },
@@ -35,9 +35,6 @@ BlueprintId = "xrl0302",
         Health = 300,
         MaxHealth = 300,
         RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
-    },
-	Intel = {
-        VisionRadius = 15,		--from 24
     },
     Transport = {
         TransportClass = 2,

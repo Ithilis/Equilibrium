@@ -1,9 +1,9 @@
 v.33
 ----
+
 - air staging facility T1 building,  e 1500(2250) bt 150(187,5)
 
-
-- Light tank ground fire aoe 1 (0.5)
+- Sera Litning tank ground fire aoe 1 (0.5)
 
 - Bouncer GF projectile lead target
 -- dps 100 (180)
@@ -17,8 +17,6 @@ v.33
 
 - Lab + selen add "Ghetto" on dysplay
 
-- add Washy ui mod that refresh jaming every 5second,  didnt work, now
---its not ideal because its ui mod and as sim can be better. 
 
 - cybran/uef/sera tmd range 31.5(30) for prevent ground fire tml abuse. 
 -- muzzle velocity 150 (100)
@@ -54,7 +52,6 @@ v.33
 -- SERA/CYB muzzle 55(25) 48r(44)
 -- AOEN/UEF muzzle 60(30) 54r(50)
 
-
 - janus AA 300per shot (150) 
 -- rof 2s (1x)
 -- ground fire damage 800 (600)
@@ -75,7 +72,6 @@ v.33
 
 - swift winds 900hp (800)
 
-
 - T3 bombers 16sp(15) change only in excel file, because already done :) 
 - asf 525m 35 000e 4200bt (500m 25000e 3000bt)
 
@@ -88,7 +84,6 @@ v.33
 
 - UEF t3 gunship optimilize file to save +-1MB
 
-
 - fire beetle yellow range for dmg
 - aoe dmg 5.5 (6)
 - Intel 15 (24)
@@ -96,8 +91,6 @@ v.33
 --> need check if its not insine strong becasue can destroy 15 t2 tanks in formation with single beetle. 
 --> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
 --> when bug that destroy even whendestroyed will be fixed, then add volatility with half dmg and less aoe after death. 
-
-
 
 -! brick add {} for anti torpedo -> was missing
 -- change anti-torpedo range category for RangeCategory = 'UWRC_AntiNavy',
