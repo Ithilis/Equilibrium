@@ -25,7 +25,7 @@ BlueprintId = "uab5202",
         'SORTSTRATEGIC',
     },
     Economy = {
-        BuildCostEnergy = 2250,
+        BuildCostEnergy = 1500,
         BuildCostMass = 150,
         BuildTime = 150,
     },

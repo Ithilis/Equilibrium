@@ -10,16 +10,17 @@ v.33
 -- hp 1800 (2100)
 -- speed 2,6 (2,7)
 -- AA able fire from transport, add diplay AA ghetto
+-- removet targeting lasser becasue cause problems by shitons of cry in log
 
 - Sky slammer AA can fire from transport -> its feauture, not bug
 -- add diplay "AA Ghetto"
 
 - Lab + selen add "Ghetto" on dysplay
 
-- add Washy ui mod that refresh jaming every 5second, 
+- add Washy ui mod that refresh jaming every 5second,  didnt work, now
 --its not ideal because its ui mod and as sim can be better. 
 
-- cybran/uef/sera tmd range 31(30) for prevent ground fire tml abuse. 
+- cybran/uef/sera tmd range 31.5(30) for prevent ground fire tml abuse. 
 -- muzzle velocity 150 (100)
 
 - aeon tmd projectile, change acceleration 5 (1) -> it dont allow tml fly on place aware tmd, work as other tmd now. 
