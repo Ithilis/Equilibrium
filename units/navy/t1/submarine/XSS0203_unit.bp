@@ -56,6 +56,7 @@ BlueprintId="xss0203",
         {
         },
         {
+            MaxRadius = 24,    --from 32
         },
     },
 }

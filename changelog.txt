@@ -1,3 +1,10 @@
+v. 34
+-----
+
+- T1 submarines direct fire canon range 24 (32)
+
+
+_____________________
 v.33
 ----
 
@@ -87,7 +94,7 @@ v.33
 - fire beetle yellow range for dmg
 - aoe dmg 5.5 (6)
 - Intel 15 (24)
-- energy consume 100 (50)
+- energy consume 75 (50)
 --> need check if its not insine strong becasue can destroy 15 t2 tanks in formation with single beetle. 
 --> because also destroy ally unit even when its destroed so can be super cancer even for owner. 
 --> when bug that destroy even whendestroyed will be fixed, then add volatility with half dmg and less aoe after death. 

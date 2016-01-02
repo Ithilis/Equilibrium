@@ -53,6 +53,7 @@ BlueprintId="urs0203",
             MaxRadius = 35,    --from 32
         },
         {
+            MaxRadius = 24,    --from 32
         },
     },
 }
