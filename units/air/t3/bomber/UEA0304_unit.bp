@@ -39,6 +39,7 @@ BlueprintId = "uea0304",
     },
     Weapon = {
         {
+            DamageFriendly = false,     --from true
             Damage = 3000,
             DamageRadius = 6,
             MaxRadius = 80,            --from 90

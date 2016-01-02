@@ -40,6 +40,7 @@ BlueprintId = "ura0304",
     },
     Weapon = {
         {
+            DamageFriendly = false,     --from true
             Damage = 2850,
             DamageRadius = 6.5,        --from7
             MaxRadius = 80,            --from 90

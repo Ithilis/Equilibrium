@@ -39,6 +39,7 @@ BlueprintId = "xsa0304",
     },
     Weapon = {
         {
+            DamageFriendly = false,     --from true
             Damage = 3150,
             DamageRadius = 5.5,        --from 5
             MaxRadius = 80,            --from 90

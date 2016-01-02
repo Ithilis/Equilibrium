@@ -3,6 +3,7 @@ v. 34
 
 - T1 submarines direct fire canon range 24 (32)
 
+- T3 bombers dont damage freindly units -> for avodi destroy own bombers on snipe attempt
 
 _____________________
 v.33
