@@ -5,6 +5,20 @@ v. 34
 
 - T3 bombers dont damage freindly units -> for avodi destroy own bombers on snipe attempt
 
+- T1 aeon bomber stun T2 5Oaoe (7.5aoe)T3 2,5aoe (5aoe)
+
+- loyalist stun on acu back (:()
+
+- acu veterancy +15% (20%)
+
+- sera acu double nano 15K hp (21k)
+-- advance regen aura +3500hp (+4500hp)
+
+-- T3 acu upgrade 4000hp (7000)
+
+------
+maybe decrese dmg of flak, mainly mobile but need test and im already too tired. 
+
 _____________________
 v.33
 ----

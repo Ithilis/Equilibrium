@@ -37,7 +37,7 @@ MultsTable = {
         TECH2 = 1.2,
         TECH3 = 1.15,            --> big risk to be too dangerous, promote use T2 units
         EXPERIMENTAL = 1.1,        --> because mass mult for vet lvl is 50% own mass
-        COMMAND = 1.2,
+        COMMAND = 1.15,
         SUBCOMMANDER = 1.15,
     },
 }

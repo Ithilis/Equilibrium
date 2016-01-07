@@ -35,6 +35,7 @@ BlueprintId = "url0001",
         },
         T3Engineering = {
             NewBuildRate = 120,            --from 126
+            NewHealth = 4000,              --from 7000hp
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s

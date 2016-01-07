@@ -43,11 +43,12 @@ UnitBlueprint {
             BuildCostMass = 4500,
             BuildTime = 3000,        --from 4200
 
-            NewHealth = 21000,
+            NewHealth = 15000,          --from 20 000
             NewRegenRate = 125,        --its 75+125 = 200hp/s
         },
         T3Engineering = {
             NewBuildRate = 120,            --from 126
+            NewHealth = 4000,              --from 7000
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
@@ -83,7 +84,6 @@ UnitBlueprint {
             BuildCostMass = 5000,
             BuildTime = 2500,            --from 1400bt
         },
-        
         RegenAura = {
             ACUAddHealth = 1500,            --from 1000
             NewRegenRate = 15,                --from 0
@@ -97,7 +97,7 @@ UnitBlueprint {
             RegenPerSecond = 0.02,             
         },
         AdvancedRegenAura = {
-            ACUAddHealth = 4500,             --from 2500
+            ACUAddHealth = 3500,             --from 2500
             NewRegenRate = 30,                --from 0
             BuildCostEnergy = 42000,        --from 31250    drain 300e/s
             BuildCostMass = 1400,            -- drain 10m/s

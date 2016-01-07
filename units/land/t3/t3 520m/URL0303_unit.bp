@@ -22,7 +22,7 @@
                 Duration = 2,
                 Radius = 10,
                 TargetAllow = 'MOBILE',
-                TargetDisallow = 'AIR, COMMAND',
+                TargetDisallow = 'AIR,',
             },
         },
         Display = {
