@@ -54,7 +54,6 @@ BlueprintId = "ura0401",
         },
     },
     Wreckage = {
-        EnergyMult = 0.45,        --from 0
         HealthMult = 0.9,
         MassMult = 0.45,        --from 0.9
     },

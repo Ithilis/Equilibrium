@@ -17,10 +17,6 @@ BlueprintId = "ura0304",
             Level5 = 18,
         },
     },
-    Defense = {
-        Health = 3200,
-        MaxHealth = 3200,
-    },
     Economy = {
         BuildCostEnergy = 100000,
         BuildCostMass = 2000,

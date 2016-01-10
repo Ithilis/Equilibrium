@@ -3,22 +3,48 @@ v. 34
 
 - T1 submarines direct fire canon range 24 (32)
 
-- T3 bombers dont damage freindly units -> for avodi destroy own bombers on snipe attempt
-
-- T1 aeon bomber stun T2 5Oaoe (7.5aoe)T3 2,5aoe (5aoe)
-
 - loyalist stun on acu back (:()
 
 - acu veterancy +15% (20%)
 
-- sera acu double nano 15K hp (21k)
+- sera acu double nano 15K hp (21k) [20K]
 -- advance regen aura +3500hp (+4500hp)
 
 -- T3 acu upgrade 4000hp (7000)
 
-------
-maybe decrese dmg of flak, mainly mobile but need test and im already too tired. 
+- mobile flak
+-- firing randomnes 4(2.5)
+-- aeon 120dps (140) 2.5aoe (3) 220m 1100e 1100bt (200m 1000e 1000bt)
+-- uef 100dps (112) 3aoe(4) 200m 1000e 1000bt (180m 900e 900bt)
+-- cybran 100,8 dps (112) 3aoe(4) 200m 1000e 1000bt (180m 900e 900bt)
+-- sera 120dps (140) 2.5aoe (3) 220m 1100e 1100bt (200m 1000e 1000bt)
 
+- T2 static flak cost +100m /+ eqivalent e and bt
+- T3 static AA cost +400m +4000e
+
+- T1 aeon bomber stun T2 5Oaoe (7.5aoe)T3 2,5aoe (5aoe)
+
+- sera T2 gunship hp bar increase (only grafical stuf)
+
+- asf wrecage mass 0.45 (0,9) [0,45] 
+- T4 air wrecage energy 0 (0,45) mass 0,45 (0,45) [0,9]
+
+- T3 bomber revers hp nerf (= +500hp)
+-- T3 bombers dont damage freindly units -> for avoid destroy own bombers on snipe attempt
+
+- czar 
+-- build rate 240 (200) [180]
+-- flak dmg 250 (300) [240]
+-- flak muzzle 60 (75 [20]
+--- missile aoe 0 (1) [0]
+--- missile damage 500 (350) 
+
+- ahwasa range 80 (60) [90]   -> have reaports about its not droping. need investigate it closely later. 
+
+ 
+- cybran perimeter 2750hp (3000) [500] -> for be destroyed by single strat.
+
+- tmd remove placebo change of muzzle velocity
 _____________________
 v.33
 ----

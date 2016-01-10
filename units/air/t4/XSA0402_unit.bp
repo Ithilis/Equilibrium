@@ -44,7 +44,7 @@ BlueprintId = "xsa0402",
             DisplayName = 'Othe Tactical Bomb',
             FiringRandomness = 3,
             FiringTolerance = 6,
-            MaxRadius = 60,                    --from 90
+            MaxRadius = 80,                    --from 90
             RateOfFire = 0.0666,            --from 0,1 = 15s
         },
         {
@@ -75,7 +75,6 @@ BlueprintId = "xsa0402",
         },
     },
     Wreckage = {
-        EnergyMult = 0.45,        --from 0
         HealthMult = 0.9,
         MassMult = 0.45,        --from 0.9
     },

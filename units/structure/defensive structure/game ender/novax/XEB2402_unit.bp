@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "xeb2402", 
 
     Defense = {
-        Health = 15000,
+        Health = 15000,     --from9000
         MaxHealth = 15000,
         RegenRate = 25,        --from0
     },

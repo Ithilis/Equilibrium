@@ -17,10 +17,6 @@ BlueprintId = "xsa0304",
             Level5 = 18,
         },
     },
-    Defense = {
-        Health = 3400,
-        MaxHealth = 3400,
-    },
     Economy = {
         BuildCostEnergy = 100000,
         BuildCostMass = 2000,

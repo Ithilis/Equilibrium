@@ -2,7 +2,7 @@
     
 UnitBlueprint {
 Merge = true,
-BlueprintId = "ueb2204",
+BlueprintId = "uab2204",
     
     
     Buffs = {
@@ -22,20 +22,20 @@ BlueprintId = "ueb2204",
         Level5 = 48,
     },
     Defense = {
-        Health = 2600,
-        MaxHealth = 2600,
+        Health = 2400,
+        MaxHealth = 2400,
     },
     Economy = {
-        BuildCostEnergy = 4000,
-        BuildCostMass = 400,
-        BuildTime = 500,
+        BuildCostEnergy = 5200,
+        BuildCostMass = 520,
+        BuildTime = 650,
     },
     Weapon = {
         {
-            Damage = 150,
-            DamageRadius = 4,
+            Damage = 300,
+            DamageRadius = 3.5,
             MuzzleVelocity = 60,
-            RateofFire = 1,
+            RateOfFire = 0.5,
             FiringRandomness = 2,
             MaxRadius = 54,         --50
         },

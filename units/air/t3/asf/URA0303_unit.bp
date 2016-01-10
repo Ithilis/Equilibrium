@@ -87,7 +87,4 @@ BlueprintId = "ura0303",
             DisplayName = 'Air Crash',
         },
     },
-    Wreckage = {
-        MassMult = 0.9,            --from 0.45
-    },
 }

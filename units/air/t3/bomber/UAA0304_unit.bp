@@ -17,10 +17,6 @@ BlueprintId = "uaa0304",
             Level5 = 18,
         },
     },
-    Defense = {
-        Health = 3300,
-        MaxHealth = 3300,
-    },
     Economy = {
         BuildCostEnergy = 100000,
         BuildCostMass = 2000,

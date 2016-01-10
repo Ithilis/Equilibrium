@@ -65,7 +65,7 @@ BlueprintId = "uaa0310",
     Economy = {
         BuildCostEnergy = 1125000,
         BuildCostMass = 45000,
-        BuildRate = 200,            --from 180
+        BuildRate = 240,            --from 180
         BuildTime = 67500,            --it is 4x faster as build same mass in gunships
         BuildableCategory = {
             'BUILTBYTIER3FACTORY AEON MOBILE AIR',
@@ -104,32 +104,32 @@ BlueprintId = "uaa0310",
             RateOfFire = 5,                --from10
         },
         {
-            Damage = 350,
-            DamageRadius = 1,        --from 0
+            Damage = 500,
+            DamageRadius = 0,        --from 0
             DisplayName = 'Zealot AA Missile',        
             MaxRadius = 100,        --from 64
             RateOfFire = 1,            --from 0,8
             MuzzleVelocity = 75,    --from 50
         },
         {
-            Damage = 350,
-            DamageRadius = 1,        --from 0
+            Damage = 500,
+            DamageRadius = 0,        --from 0
             DisplayName = 'Zealot AA Missile',        
             MaxRadius = 100,        --from 64
             RateOfFire = 1,            --from 0,8
             MuzzleVelocity = 75,
         },
         {
-            Damage = 350,
-            DamageRadius = 1,        --from 0
+            Damage = 500,
+            DamageRadius = 0,        --from 0
             DisplayName = 'Zealot AA Missile',        
             MaxRadius = 100,        --from 64
             RateOfFire = 1,            --from 0,8
             MuzzleVelocity = 75,    --from 50
         },
         {
-            Damage = 350,
-            DamageRadius = 1,        --from 0
+            Damage = 500,
+            DamageRadius = 0,        --from 0
             DisplayName = 'Zealot AA Missile',        
             MaxRadius = 100,        --from 64
             RateOfFire = 1,            --from 0,8
@@ -160,22 +160,22 @@ BlueprintId = "uaa0310",
             TargetCheckInterval = 1.25,    --from 2
         },
         {
-            Damage = 300,                --from 240 = 2x600dps
+            Damage = 250,                --from 240 = 2x600dps
             DamageRadius = 5,            --from 3
             DisplayName = 'Fizz Launcher',
             FiringRandomness = 2,        --from 3
             FiringTolerance = 3,
             MaxRadius = 50,                --from 44
-            MuzzleVelocity = 75,        --from 20
+            MuzzleVelocity = 60,        --from 20
         },
         {
-            Damage = 300,                --from 240
+            Damage = 250,                --from 240
             DamageRadius = 5,
             DisplayName = 'Fizz Launcher',
             FiringRandomness = 2,
             FiringTolerance = 3,
             MaxRadius = 50,                --from 44
-            MuzzleVelocity = 75,        --from 20
+            MuzzleVelocity = 60,        --from 20
         },
         {
             AboveWaterTargetsOnly = false,    --from true = hit also submarine
@@ -185,7 +185,6 @@ BlueprintId = "uaa0310",
         },
     },
     Wreckage = {
-        EnergyMult = 0.45,        --from 0
         HealthMult = 0.9,
         MassMult = 0.45,        --from 0.9
     },

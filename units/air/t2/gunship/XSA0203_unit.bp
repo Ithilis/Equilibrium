@@ -1,4 +1,4 @@
---Vulthoo T2.5 gunship
+--Vulthoo T2.25 gunship
 
 UnitBlueprint {
 Merge = true,
@@ -20,6 +20,9 @@ BlueprintId = "xsa0203",
     Display = {
         UniformScale = 0.06,        --from 0,04
     },
+    LifeBarHeight = 0.075,
+    LifeBarOffset = 0.45,
+    LifeBarSize = 1,
     Economy = {
         BuildCostEnergy = 6750,
         BuildCostMass = 315,

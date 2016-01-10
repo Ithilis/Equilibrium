@@ -3,9 +3,9 @@ Merge = true,
 BlueprintId = "xsl0205",
 
     Economy = {
-        BuildCostEnergy = 1000,
-        BuildCostMass = 200,
-        BuildTime = 1000,
+        BuildCostEnergy = 1100,
+        BuildCostMass = 220,
+        BuildTime = 1100,
     },
     Buffs = {
         Regen = {
@@ -25,11 +25,12 @@ BlueprintId = "xsl0205",
     },
     Weapon = {
         {
-        Damage = 70,
-        DamageRadius = 3,        --from 4
+        Damage = 60,    --120dps
+        DamageRadius = 2.5,        --from 4
         MuzzleVelocity = 60,    --from 20
         MaxRadius = 38,            --from 40
         RateOfFire = 2,
+        FiringRandomness = 4,   --from 2,5
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'EXPERIMENTAL',
@@ -59,7 +60,7 @@ BlueprintId = "xsl0205",
             Label = 'MissileRack',
             MaxRadius = 28,
             RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_IndirectFire',
+            RangeCategory = 'UWRC_AntiAir',
             RateOfFire = 0,
             RenderFireClock = true,
             SlavedToBody = true,

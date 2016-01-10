@@ -3,9 +3,9 @@ Merge = true,
 BlueprintId = "url0205",
 
     Economy = {
-        BuildCostEnergy = 900,
-        BuildCostMass = 180,
-        BuildTime = 900,
+        BuildCostEnergy = 1000,
+        BuildCostMass = 200,
+        BuildTime = 1000,
     },
     Buffs = {
         Regen = {
@@ -25,11 +25,12 @@ BlueprintId = "url0205",
     },
     Weapon = {
         {
-        Damage = 70,
-        DamageRadius = 4,        --from 4
+        Damage = 63,            --100,8dps
+        DamageRadius = 3,        --from 4
         MuzzleVelocity = 55,    --from 20
         MaxRadius = 38,            --from 40
         RateOfFire = 1.6,
+        FiringRandomness = 4,   --from 2,5
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'EXPERIMENTAL',
@@ -59,7 +60,7 @@ BlueprintId = "url0205",
             Label = 'MissileRack',
             MaxRadius = 28,
             RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_IndirectFire',
+            RangeCategory = 'UWRC_AntiAir',
             RateOfFire = 0,
             RenderFireClock = true,
             SlavedToBody = true,
@@ -69,7 +70,6 @@ BlueprintId = "url0205",
             TurretDualManipulators = false,
             Turreted = false,
             WeaponCategory = 'Missile',
-            WeaponRepackTimeout = 0,
             WeaponUnpacks = false,
         },
     },

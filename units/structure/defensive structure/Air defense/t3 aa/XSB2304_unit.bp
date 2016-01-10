@@ -2,7 +2,7 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId="ueb2304",
+BlueprintId="xsb2304",
 
     Buffs = {
         Regen = {
@@ -14,8 +14,8 @@ BlueprintId="ueb2304",
         },
     },
     Economy = {
-        BuildCostEnergy = 8000,
-        BuildCostMass = 800,
+        BuildCostEnergy = 12000,
+        BuildCostMass = 1200,
         BuildTime = 1000,
     },
     Veteran = {
