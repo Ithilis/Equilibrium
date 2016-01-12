@@ -459,6 +459,15 @@
 			T1 land factories drain 5m/25e when producing main land units
             
 			<p>
+            
+            Scouts: 
+            <ul>
+                <li> Aeon <strike>8m, 40e, 80bt, 25r</strike> → 15m, 150e, 75bt, 23r
+                <li> Cybran <strike>8m, 40e, 80bt</strike> → 10m, 100e, 50bt
+                <li> UEF <strike>12m, 80e, 80bt, 25r, 29hp</strike> → 15m, 150e, 75bt, 23r, 30hp
+			</ul>
+            
+            
 			1.Labs: Changed target priority to ACU -> mobile radar -> T1/2/3... + display "ghetto" on unit
 			<ul>
 			<li>Selen: <strike>20m 35hp, 13dps, 16r 4sp</strike> → 30m 450e 85hp 22dps 18r 4,5 speed 
@@ -478,9 +487,8 @@
 			
 			<li>Mech Marine: <strike>35m 140e 140bt 75hp, 23dps,14r</strike> → 35m 350e 175bt  145hp, 25.5dps,13r 4.2sp
 			<p>
-			<li>Scouts: <strike>12</strike> → 10m
 			</ul>
-			
+            
 			2.Mobile AA: <strike>28</strike> → 30m ; AA DPS: <strike>15/16</strike> → 20/21 ;  Movement Speed: <strike>3</strike> → 3.5 ; Muzzle Velocity: <strike>45</strike> → 60
 			<ul>
 			<li>Sky Slammer: <strike>28m, 130hp, 16/20dps, 0,75fr, 2,9sp 15muzzle 18/32r</strike> → 40m, 200hp, 18gf/26aa dps, homing missile, 23/35r, 2.7sp 35muzzle
@@ -490,16 +498,16 @@
 				</ul>
 			</ul>
 			
-			3.Mobile Artillery: <strike>36</strike> → 35m
+			3.Mobile Artillery: Aeon/UEF <strike>36m, 180e, 180bt</strike> → 35m, 175e, 175bt
 			<ul>
-			<li>Medusa: 40m 150hp 50dps (250dmg/5s), EMP:
+			<li>Medusa: <strike>36m, 180e, 180bt, 140hp, 38dps</strike> → 40m, 200e, 200bt, 150hp, 50dps (250dmg/5s), EMP:
 				<ul>
 				<li>T1 3s 2aoe
 				<li>T2 2s 1,5aoe
 				<li>T3 1s 1aoe (not able stun T3 naval)
 				</ul>
 			
-			<li>Zthuee: <strike>54m 180e</strike> → 50m 250e
+			<li>Zthuee: <strike>54m 180e 180bt</strike> → 50m 250e 250bt
 			<li>Fervor: Reload Time: <strike>2</strike> → 1s ; AOE: <strike>0,5</strike> → 1 Damage: <strike>200</strike> → 100 ; Turret pitch range: <strike>45</strike> → 75 ; Uniform scale: <strike>0,07</strike> → 0,09
 			<li>Lobo: AOE: <strike>1</strike> → 1,2 ; Vision on projectile: <strike>5aoe ; 5s</strike> → 8aoe and 8s 
 			</ul>
@@ -724,6 +732,7 @@
             
 			<li>Loyalist: <strike>480m 5400e 3100hp 190dps 25r 4sp</strike> → 520m 6500e 2700hp 100+130dps 23/18r 3,7sp
                 <ul>
+                <li>STUN <strike>2s</strike> → 1.5s
                 <li>Added yellow range for indicate range of emp blast
                 <li>Changed display ability from volatile to EMP
                 </ul>
@@ -1507,6 +1516,8 @@
 
 			<h3><img src="http://wiki.faforever.com/images/e/e0/Cybran_T2_PD.png">Land Defensive buildings</h3>
             
+
+            
             T1 Point Defense
                 <ul>
                 <li><strike>2000e reload time 0.333s =166dps</strike> → 2500e reload time 0.3s =150dps
@@ -1534,10 +1545,10 @@
             
             Tactical missile launchers aoe: <strike>2</strike> → 3
                 <ul>
-                <li>Aeon: 700m <strike>18</strike> → 10ammo
-                <li>UEF: 800m <strike>18</strike> → 12ammo
-                <li>Sera: <strike>820m 20ammo</strike> → 800m 12ammo
-                <li>Cybran: 850m <strike>10</strike> → 8ammo
+                <li>Aeon: 700m <strike>3500e, 700bt, 18ammo</strike> → 7000e, 875bt, 10ammo
+                <li>UEF: 800m <strike>4000e, 800bt, 18ammo</strike> → 8000e, 1000bt, 12ammo
+                <li>Sera: <strike>825m, 4500e, 700bt, 20ammo</strike> → 800m, 8000e, 1000bt, 12ammo
+                <li>Cybran: 850m <strike>5100e, 850bt, 10ammo</strike> → 8500e, 1062.5bt, 8ammo
                 </ul>
             <p>
             
@@ -1569,10 +1580,10 @@
             
         <div id="airdefense" class="card">
 
-			<h3><img src="http://wiki.faforever.com/images/7/7e/Cybran_T3_Static_AA.png">Air Defensive buildings</h3>
+			<h3><img src="http://wiki.faforever.com/images/8/87/Cybran_T2_Static_AA.png.png">Air Defensive buildings</h3>
 
             
-            T1 static AA:
+            T1 static AA: <strike>800hp, 188bt</strike> 150bt, 850hp
                 <ul>
                 <li>Cybran: changed projectile script: Initial speed changed to be the same as other T1 static AA
                 </ul>
@@ -1593,17 +1604,24 @@
             <h4>Purpose:</h4>
             
             <ol>
-            <li>T1 Cybran AA: for be able hit scout, oh yeah so epic!
+            <li>T1 AA: more hp for don't allow aeon bomber destroy it for two pass. Cybran AA: for be able hit scout, oh yeah so epic!
 			<li>T2 Flak: Increased the faction diversity of flak, not just pd. Muzzle velocity and aoe increased so flak is usable vs T3 air, so you can build them in combination with SAMs for a great air defense. Bigger cost as result of more expensive SAM and mobile flak. 
             <li>T3 Sam: cost increase which is so low because its only defence against T3 air. That is now not cause, because T2 flak can hit T3 air.
             </ol>
         
         </div>
         
-        <div id="defense" class="card">
+        <div id="defense&Intel" class="card">
 
-			<h3><img src="http://wiki.faforever.com/images/d/d8/Cybran_T2_Static_Shield.png">Defensive buildings</h3>
+			<h3><img src="http://wiki.faforever.com/images/d/d8/Cybran_T2_Static_Shield.png">Defensive buildings & Intel</h3>
         
+            Wall
+                <ul>
+                <li> <strike>4000hp</strike> → 2000hp
+                <li> unit weight <strike>1</strike> → 0.01 -> unit limit indicator
+                <li> Reclaim Time Multiplier<strike>1</strike> → 50 -> mean that for reclaim need same time as for build
+                </ul>
+            <p>
             
             T2 shields:
                 <ul>
@@ -1629,8 +1647,28 @@
                 <li>UEF: <strike>3000m 50000e 4988bt 400e/s 131reg 44aoe</strike> → 3000m 60000e 3750bt 500hp 130reg 400e/s 45aoe
                 <li>Sera: <strike>3600m 60000e 5841bt 600hp 168reg 46aoe</strike> → 3600m 72000e 45000bt 700hp 160reg 500e/s 50aoe
                 </ul>
+               
+            T2 Stealth Field generator: add 'DEFENSE' categories -> sparky can build them
+                <ul>
+                <li>Aeon/UEF <strike>726/664bt</strike> → 500bt
+                <li>Cybran: <strike>320m 4000e 400bt </strike> → 300m 4500e 375bt
+                <li>Sera: <strike>626bt, 125e/s</strike> → 500bt, 150e/s
+                    <ul>
+                    <li>free personal cloak ability
+                    <li>visual radius <strike>20</strike> → 5
+                    </ul>
+                </ul>               
             
-            T3 Radar: radar radius <strike>600</strike> → 500
+            T1 Radar: <strike>80m, 720e, 80bt, 14.08br</strike> → 100m, 1000e, 100bt, 12.5br
+            <p>
+            
+            T2 Radar: <strike>180m, 3600e, 845bt, 21.46br</strike> → 200m, 4000e, 625bt, 25br
+            <p>
+            
+            T3 Radar: <strike>2400m, 30000e, 2575bt</strike> → 2400m, 48000e, 3750bt
+                <ul>
+                <li>radar radius <strike>600</strike> → 500
+                </ul>
             <p>
             
             Cybran T3 Perimeter Monitoring System:
@@ -1651,8 +1689,11 @@
             <h4>Purpose:</h4>
             
             <ol>
+            <li>Wall: For make them more consistent unit where need same time for reclaim as for build but its easier to destroy. Also decrese opnes of T1PD with walls. 
             <li>Shields in this game remain mostly the same, with a couple of nudges here and there to keep with the changed unit balance. A notable change is that the Cybran shield ED4 can now be built at T3, then upgraded once to the ED5 if needed.
-            <li>In most played map single omni sensor on back is enough to see whole map. This small change need move omni more in centre.
+            <li>Stealth: Seraphim personal cloak was added so that this building is fully invisible, except for a visual effect. This makes it easier to use offensively since the generator itself is harder to find. To prevent it from being used as a stealth intel system, its visual radius was reduced. It add more faction diversity to game.
+            <li>T1/2 Radar: resource adjusted for building patter where units on same type and tech drain same resource while building.
+            <li>T3 Radar: In most played map single omni sensor on back is enough to see whole map. This small change need move omni more in centre.
             <li>Perimeter: more hp, because its expensive T3 building witch in lot of cause then don't leave reclaim and its extremly easy to snipe.
             <li>Quantum optics: same place as on perimeter, more hp for same reason as on perimeter, buff action radius to safe multiple clicking to scout enemy base. Less initial energy to work with single storage and don't create "why its not working" situation.
             </ol>
@@ -1793,8 +1834,8 @@
 		<p>Buildings<br>
 		<a href="#navaldefense"><img src="http://wiki.faforever.com/images/3/30/Cybran_T2_Torpedo_Launcher.png"></a>
 		<a href="#landdefense"><img src="http://wiki.faforever.com/images/e/e0/Cybran_T2_PD.png"></a>
-        <a href="#airdefense"><img src="http://wiki.faforever.com/images/7/7e/Cybran_T3_Static_AA.png"></a>
-        <a href="#defense"><img src="http://wiki.faforever.com/images/d/d8/Cybran_T2_Static_Shield.png"></a>
+        <a href="#airdefense"><img src="http://wiki.faforever.com/images/8/87/Cybran_T2_Static_AA.png.png"></a>
+        <a href="#defense&Intel"><img src="http://wiki.faforever.com/images/d/d8/Cybran_T2_Static_Shield.png"></a>
         <a href="#gameender"><img src="http://wiki.faforever.com/images/f/f6/Cybran_T3_Nuke.png"></a>
 		
 		</div>

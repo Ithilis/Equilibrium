@@ -1,0 +1,16 @@
+-- wall
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "ueb5101",
+    
+    Defense = {
+        Health = 2000,      --4000hp
+        MaxHealth = 2000,
+    },
+    General = {
+        UnitWeight = 0.01,    --from1
+    },
+    Wreckage = {
+        ReclaimTimeMultiplier = 50,  --from1-> its same as build time
+    },
+}

@@ -5,12 +5,11 @@ Merge = true,
 BlueprintId = "urb4203", 
 
     Categories = {
-        'DEFENSE',        --Add 
+        'DEFENSE',        --Add for sparky be able build it
     },
     Display = {
         Abilities = {
             '<LOC ability_stealthfield>Stealth Field',
-            '<LOC ability_cloak>Cloaking',
         },
     },
     Economy = {
@@ -20,9 +19,7 @@ BlueprintId = "urb4203",
         MaintenanceConsumptionPerSecondEnergy = 100,
     },
     Intel = {
-        Cloak = true,                    --personal cloac
         RadarStealthFieldRadius = 32,
         SonarStealthFieldRadius = 32,
-        VisionRadius = 5,                --5 for not be effective as intel
     },
 }

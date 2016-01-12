@@ -9,9 +9,9 @@ BlueprintId = "uel0101",
         MaxHealth = 30,
     },
     Economy = {
-        BuildCostEnergy = 150,
-        BuildCostMass = 15,
-        BuildTime = 75,
+        BuildCostEnergy = 150,      --80e
+        BuildCostMass = 15,         --12m
+        BuildTime = 75,             --80bt
     },
     Weapon = {
         {

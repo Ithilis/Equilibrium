@@ -2,15 +2,14 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "xsb4203", 
+BlueprintId = "ueb4203", 
 
     Categories = {
-        'DEFENSE',        --Add 
+        'DEFENSE',        --Add for sparky be able build it
     },
     Display = {
         Abilities = {
             '<LOC ability_stealthfield>Stealth Field',
-            '<LOC ability_cloak>Cloaking',
         },
     },
     Economy = {
@@ -20,9 +19,7 @@ BlueprintId = "xsb4203",
         MaintenanceConsumptionPerSecondEnergy = 125,
     },
     Intel = {
-        Cloak = true,                    --personal cloac
         RadarStealthFieldRadius = 24,
         SonarStealthFieldRadius = 24,
-        VisionRadius = 5,
     },
 }

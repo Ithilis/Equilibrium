@@ -19,7 +19,7 @@
                 },
                 AppliedToTarget = true,
                 BuffType = 'STUN',
-                Duration = 2,
+                Duration = 1.5,
                 Radius = 10,
                 TargetAllow = 'MOBILE',
                 TargetDisallow = 'AIR,',

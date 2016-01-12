@@ -14,9 +14,9 @@ BlueprintId = "xsb2108",
         },
     },
     Economy = {
-        BuildCostEnergy = 8000,
-        BuildCostMass = 800,
-        BuildTime = 1000,
+        BuildCostEnergy = 8000,     --4500e
+        BuildCostMass = 800,        --825m
+        BuildTime = 1000,           --700bt
     },
     Veteran = {
         Level1 = 16,

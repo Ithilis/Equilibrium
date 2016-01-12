@@ -14,7 +14,7 @@ BlueprintId = "uab2101",
         },
     },
     Economy = {
-        BuildCostEnergy = 2500,
+        BuildCostEnergy = 2500,     --from 2000e
         BuildCostMass = 250,
         BuildTime = 250,
     },

@@ -4,6 +4,7 @@ v. 34
 - T1 submarines direct fire canon range 24 (32)
 
 - loyalist stun on acu back (:()
+-- EMP 1.5s (2s)
 
 - acu veterancy +15% (20%)
 
@@ -45,6 +46,16 @@ v. 34
 - cybran perimeter 2750hp (3000) [500] -> for be destroyed by single strat.
 
 - tmd remove placebo change of muzzle velocity
+
+- wall 2000hp (4000hp)
+-- unit weight 0.01 (1)    -> not 0 to avoid some potencial problem
+-- reclaim time multiplier 50 (1)   -> this mean that reclaim wall get double time as build it
+
+- static stealth - reverse change except sera
+-- sera 150e drain (125)
+
+
+
 _____________________
 v.33
 ----

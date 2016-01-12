@@ -2,7 +2,7 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "ueb4203", 
+BlueprintId = "xsb4203", 
 
     Categories = {
         'DEFENSE',        --Add for sparky be able build it
@@ -17,7 +17,7 @@ BlueprintId = "ueb4203",
         BuildCostEnergy = 6000,
         BuildCostMass = 400,
         BuildTime = 500,
-        MaintenanceConsumptionPerSecondEnergy = 125,
+        MaintenanceConsumptionPerSecondEnergy = 150,    --from 125
     },
     Intel = {
         Cloak = true,                    --personal cloac

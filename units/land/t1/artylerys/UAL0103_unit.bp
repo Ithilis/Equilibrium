@@ -5,9 +5,9 @@ Merge = true,
 BlueprintId = "ual0103",
 
     Economy = {
-        BuildCostEnergy = 175,
-        BuildCostMass = 35,
-        BuildTime = 175,
+        BuildCostEnergy = 175,  --180e
+        BuildCostMass = 35,     --36m 
+        BuildTime = 175,        --180bt
     },
     Buffs = {
         Regen = {

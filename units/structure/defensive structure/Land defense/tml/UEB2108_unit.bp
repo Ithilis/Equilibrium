@@ -14,9 +14,9 @@ BlueprintId = "ueb2108",
         },
     },
     Economy = {
-        BuildCostEnergy = 8000,
+        BuildCostEnergy = 8000,     --4000e
         BuildCostMass = 800,
-        BuildTime = 1000,
+        BuildTime = 1000,           --800bt
     },
     Veteran = {
         Level1 = 16,
