@@ -55,7 +55,4 @@ BlueprintId = "urb4206",
             RULEUCC_Transport = false,
         },
     },
-    Intel = {
-        RadarStealth = true,
-    },
 }

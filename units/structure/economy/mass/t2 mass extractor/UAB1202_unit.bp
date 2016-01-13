@@ -12,7 +12,4 @@ BlueprintId = "uab1202",
         MaintenanceConsumptionPerSecondEnergy = 10,
         ProductionPerSecondMass = 6,
     },
-    Intel = {
-        RadarStealth = true,      --for not be visible on radar after upgrading
-    },
 }

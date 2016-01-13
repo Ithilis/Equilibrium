@@ -11,7 +11,4 @@ BlueprintId="xsb3101",
         BuildTime = 100,
         MaintenanceConsumptionPerSecondEnergy = 20,
     },
-    Intel = {
-        RadarStealth = true,
-    },
 }

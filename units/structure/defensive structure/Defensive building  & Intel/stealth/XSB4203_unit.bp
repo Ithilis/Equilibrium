@@ -20,7 +20,7 @@ BlueprintId = "xsb4203",
         MaintenanceConsumptionPerSecondEnergy = 150,    --from 125
     },
     Intel = {
-        Cloak = true,                    --personal cloac
+        Cloak = true,                    --personal cloak
         RadarStealthFieldRadius = 24,
         SonarStealthFieldRadius = 24,
         VisionRadius = 5,

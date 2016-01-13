@@ -11,7 +11,4 @@ BlueprintId="urb3201",
         BuildTime = 625,
         MaintenanceConsumptionPerSecondEnergy = 250,
     },
-    Intel = {
-        RadarStealth = true,
-    },
 }

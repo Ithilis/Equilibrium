@@ -37,8 +37,5 @@ BlueprintId = "xsb4202",
             RULEUCC_Stop = true,
             RULEUCC_Transport = false,
         },
-    },    
-    Intel = {
-        RadarStealth = true,
     },
 }

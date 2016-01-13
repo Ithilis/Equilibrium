@@ -12,7 +12,4 @@ BlueprintId = "urb1103",
         MaintenanceConsumptionPerSecondEnergy = 1,
         ProductionPerSecondMass = 2,
     },
-    Intel = {
-        RadarStealth = true,      --for not be visible on radar after upgrading
-    },
 }

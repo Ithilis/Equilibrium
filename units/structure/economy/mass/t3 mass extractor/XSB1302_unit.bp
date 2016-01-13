@@ -15,7 +15,4 @@ BlueprintId = "xsb1302",
         MaintenanceConsumptionPerSecondEnergy = 50,
         ProductionPerSecondMass = 16,
     },
-    Intel = {
-        RadarStealth = true,    --for not change color after upgrade -> its still visible on radar no idea why, but at least dont change collor
-    },
 }

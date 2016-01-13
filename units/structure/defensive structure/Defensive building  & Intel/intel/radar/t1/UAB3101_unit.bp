@@ -11,7 +11,4 @@ BlueprintId="uab3101",
         BuildTime = 100,        --80bt
         MaintenanceConsumptionPerSecondEnergy = 20,
     },
-    Intel = {
-        RadarStealth = true,
-    },
 }
