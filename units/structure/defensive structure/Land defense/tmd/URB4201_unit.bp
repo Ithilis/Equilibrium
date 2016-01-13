@@ -11,7 +11,7 @@ BlueprintId = "urb4201",
     },
     Weapon = {
         {
-            MaxRadius = 31.5,     --from30 for prevent ground fire tml abuse
+            MaxRadius = 32,    --from30 for prevent ground fire tml abuse
         },
     },
 }

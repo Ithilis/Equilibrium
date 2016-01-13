@@ -54,7 +54,16 @@ v. 34
 - static stealth - reverse change except sera
 -- sera 150e drain (125)
 
+- T1 bombers more manevrability, 
+-- add price for 90m (75) [80] 2250e (1875) [2250] 600bt ([500bt])
 
+- T1 transport  -> repair patern cryme. 
+-- 120m (105) [120] 3000e (3500e )[4800] 800bt (700bt)
+
+- T2 transport
+-- 6000e (8000e) [12000e]   -> for factory drain reasons, to drain as other T2air
+
+- tmd radius 32 (31,5) [30]
 
 _____________________
 v.33

@@ -20,9 +20,9 @@ BlueprintId = "uaa0104",
         RegenRate = 5,
     },
     Economy = {
-        BuildCostEnergy = 8000,
-        BuildCostMass = 280,
-        BuildTime = 1600,
+        BuildCostEnergy = 6000,     --12000e
+        BuildCostMass = 280,        --300m
+        BuildTime = 1600,           --2400bt
     },
     Physics = {
         FuelUseTime = 420,

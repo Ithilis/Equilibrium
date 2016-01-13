@@ -11,9 +11,9 @@ BlueprintId = "xsa0107",
         RegenRate = 5,
     },
     Economy = {
-        BuildCostEnergy = 3500,
-        BuildCostMass = 105,
-        BuildTime = 700,
+        BuildCostEnergy = 3000,     --4800e
+        BuildCostMass = 120,        --120m
+        BuildTime = 800,
     },
     Physics = {
         FuelUseTime = 300,

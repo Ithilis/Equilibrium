@@ -45,9 +45,9 @@ BlueprintId = "uaa0107",
         },
     },
     Economy = {
-        BuildCostEnergy = 3500,
-        BuildCostMass = 105,
-        BuildTime = 700,
+        BuildCostEnergy = 3000,     --4800e
+        BuildCostMass = 120,        --120m
+        BuildTime = 800,
         BuildRate = 3,
     },
     General = {

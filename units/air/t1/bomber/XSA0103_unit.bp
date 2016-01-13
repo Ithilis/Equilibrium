@@ -8,7 +8,13 @@ BlueprintId = "xsa0103",
     Air = {
         MaxAirspeed = 11,        --from 10
         MinAirspeed = 11,
-        BreakOffDistance = 28,    --from 30
+        
+        BreakOffDistance = 15,          --30
+        CombatTurnSpeed = 2.0,          --0,75
+        PredictAheadForBombDrop = 2,    --3
+        KTurn = 0.85,                   --0,75
+        StartTurnDistance = 3,          --5
+        TurnSpeed = 2.0,                --0,75
     },
     Buffs = {
         Regen = {
@@ -20,9 +26,9 @@ BlueprintId = "xsa0103",
         },
     },
     Economy = {
-        BuildCostEnergy = 1875,
-        BuildCostMass = 75,
-        BuildTime = 500,
+        BuildCostEnergy = 2250,
+        BuildCostMass = 90,
+        BuildTime = 600,
     },
     Physics = {
         FuelUseTime = 240,

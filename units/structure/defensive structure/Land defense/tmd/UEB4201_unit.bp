@@ -11,7 +11,7 @@ BlueprintId = "ueb4201",
     },
     Weapon = {
         {
-            MaxRadius = 31.5,     --from30 for prevent ground fire tml abuse
+            MaxRadius = 32,     --from30 for prevent ground fire tml abuse
             TargetCheckInterval = 0.1,
             TrackingRadius = 1.1,
         },
