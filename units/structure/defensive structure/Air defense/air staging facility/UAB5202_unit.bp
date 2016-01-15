@@ -4,6 +4,13 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uab5202", 
 
+    AI = {
+        GuardScanRadius = 300,
+        RefuelingMultiplier = 50,
+        RefuelingRepairAmount = 500,
+        RepairConsumeEnergy = 0, -- making repair free
+        RepairConsumeMass = 0, -- making repair free
+    },
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
