@@ -28,6 +28,10 @@ BlueprintId = "uea0305",
         'OVERLAYDIRECTFIRE',
         'OVERLAYCOUNTERINTEL',  --add
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 2,
+    },
     Defense = {
         Health = 4500,
         MaxHealth = 4500,

@@ -18,6 +18,9 @@ BlueprintId = "daa0206",
             '<LOC ability_suicideweapon>Suicide Weapon',
         },
     },
+    Transport = {
+        AirClass = false,
+    },
     Economy = {
         BuildCostEnergy = 6000,
         BuildCostMass = 280,
@@ -28,7 +31,7 @@ BlueprintId = "daa0206",
             RULEUCC_Attack = true,
             RULEUCC_CallTransport = false,
             RULEUCC_Capture = false,
-            RULEUCC_Dock = true,        --from false
+            RULEUCC_Dock = false,        --from false
             RULEUCC_Guard = false,
             RULEUCC_Move = true,
             RULEUCC_Nuke = false,

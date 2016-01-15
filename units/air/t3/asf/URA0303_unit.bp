@@ -23,6 +23,10 @@ BlueprintId = "ura0303",
         Level4 = 60,
         Level5 = 75,
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
+    },
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',

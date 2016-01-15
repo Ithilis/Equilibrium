@@ -23,6 +23,10 @@ BlueprintId = "xsa0203",
     LifeBarHeight = 0.075,
     LifeBarOffset = 0.45,
     LifeBarSize = 1,
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
+    },
     Economy = {
         BuildCostEnergy = 6750,
         BuildCostMass = 315,

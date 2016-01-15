@@ -30,6 +30,10 @@ BlueprintId = "uea0203",
         SubThreatLevel = 0,
         SurfaceThreatLevel = 6,
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
+    },
     Economy = {
         BuildCostEnergy = 5250,
         BuildCostMass = 245,

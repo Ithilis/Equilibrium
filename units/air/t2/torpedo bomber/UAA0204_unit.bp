@@ -31,6 +31,10 @@ BlueprintId = "uaa0204",
         Level4 = 28,
         Level5 = 35,
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
+    },
     Economy = {
         BuildCostEnergy = 5250,
         BuildCostMass = 245,

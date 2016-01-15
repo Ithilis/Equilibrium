@@ -24,6 +24,10 @@ BlueprintId = "ura0203",
         Health = 850,            --from 832hp
         MaxHealth = 850,
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
+    },
     Economy = {
         BuildCostEnergy = 5250,
         BuildCostMass = 245,

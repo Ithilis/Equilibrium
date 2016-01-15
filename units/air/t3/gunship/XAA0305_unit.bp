@@ -16,6 +16,10 @@ BlueprintId = "xaa0305",
             Level5 = 18,
         },
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 2,
+    },
     Veteran = {
         Level1 = 30,
         Level2 = 45,
