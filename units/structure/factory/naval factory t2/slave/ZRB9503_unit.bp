@@ -5,12 +5,12 @@ Merge = true,
 BlueprintId = "zrb9503",
 
     Economy = {
-        BuildCostEnergy = 3000,
-        BuildCostMass = 450,
+        BuildCostEnergy = 6000,
+        BuildCostMass = 750,
         BuildRate = 60,
-        BuildTime = 600,
+        BuildTime = 900,
         StorageEnergy = 0,
         StorageMass = 0,
-        DifferentialUpgradeCostCalculation = false, 
+        DifferentialUpgradeCostCalculation = true, 
     },
 }
