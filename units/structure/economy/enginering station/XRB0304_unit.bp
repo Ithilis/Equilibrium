@@ -9,5 +9,6 @@ BlueprintId = "xrb0304",
         BuildCostMass = 275,
         BuildRate = 75,
         BuildTime = 1375,
+        DifferentialUpgradeCostCalculation = false, 
     },
 }    
