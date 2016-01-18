@@ -11,6 +11,8 @@ BlueprintId = "urb4206",
         'STRUCTURE',
         'DEFENSE',
         'TECH3',    --from t2
+        'BUILTBYTIER3ENGINEER', -- now buildable by t3 engies directly
+        'BUILTBYTIER3COMMANDER', -- same for t3 acu/sacu
         'SHIELD',
         'DRAGBUILD',
         'SIZE12',
@@ -35,8 +37,9 @@ BlueprintId = "urb4206",
         BuildCostEnergy = 43000,
         BuildCostMass = 2400,
         BuildRate = 25,
-        BuildTime = 1750,
+        BuildTime = 2500,
         MaintenanceConsumptionPerSecondEnergy = 350,
+        DifferentialUpgradeCostCalculation = true, 
     },
     General = {
         CommandCaps = {
