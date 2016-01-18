@@ -20,6 +20,7 @@ BlueprintId = "xsb4202",
         BuildRate = 25,
         BuildTime = 875,
         MaintenanceConsumptionPerSecondEnergy = 250,
+        DifferentialUpgradeCostCalculation = false, 
     },
     General = {
         CommandCaps = {

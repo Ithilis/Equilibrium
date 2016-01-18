@@ -37,6 +37,7 @@ BlueprintId = "urb4207",
         BuildRate = 25,
         BuildTime = 2000,
         MaintenanceConsumptionPerSecondEnergy = 500,
+        DifferentialUpgradeCostCalculation = true, 
     },
     General = {
         CommandCaps = {

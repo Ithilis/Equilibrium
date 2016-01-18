@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "urb4204", 
 
     Defense = {
-        Health = 200,
-        MaxHealth = 200,
+        Health = 600,
+        MaxHealth = 600,
         Shield = {
             ShieldMaxHealth = 7000,
             ShieldRechargeTime = 18,
@@ -20,6 +20,7 @@ BlueprintId = "urb4204",
         BuildRate = 12.5,
         BuildTime = 250,
         MaintenanceConsumptionPerSecondEnergy = 150,
+        DifferentialUpgradeCostCalculation = true, 
     },
     General = {
         CommandCaps = {
