@@ -1,5 +1,7 @@
 v. 35
 -----
+- remove ussles code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon parth from "unitview"
+
 -scathis buffed a bit to be more useable as a mobile artillery piece:
 --movement speed: 3 (2)
 --muzzle velocity: 120 (160) - now its shells get to their targets faster (interestingly).
