@@ -1,3 +1,44 @@
+v. 35
+-----
+-scathis buffed a bit to be more useable as a mobile artillery piece:
+--movement speed: 3 (2)
+--muzzle velocity: 120 (160) - now its shells get to their targets faster (interestingly).
+-- turn radius: 5 (2) to stop it from looking silly while turning at high speeds
+-- acceleration: 1 (1.5) puts some weight behind its movemement, making it look like some experimental and not a lab.
+
+- reverted the upgradable building stealth fix - it stopped working and serves no purpose now.
+
+- there was an issue with support factory prices not working correctly in equilibrium. its fixed now and works just like in the normal game. 
+--also fixed the fact that the build time calculations were not being done.
+
+- improved uef and cybran bombers a little - they should now drop a bit better
+
+- Air staging improved:
+- They now repair for free - this means they don't hog your aircraft anymore if you are stalling mass.
+- Aircraft can land on them in greater numbers:
+
+--For UEF/Cybran:
+--ASF 4 (1)
+--Torpedo Bombers 4 (2)
+--Aeon T3 Torpedo Bomber 2 (1)
+--T3 Spy planes 4 (2)
+--T2 Fighters 4 (2)
+--T2 Gunships 4 (2)
+--T3 Gunships 2 (1)
+--Mercies (still) cant refuel
+--Aeon/Sera have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
+
+
+-Torpedo bombers are a bit nicer to use - turn faster but have the same performance.
+
+-fixed a strange issue with hives and engymod giving them incorrect prices
+
+-Cybran shields got an hp buff to the shield buildings, increasing faction diversity
+--ED4 shield code cleaned up (because its directly buildable at t3), and mod made smaller - no gameplay changes
+
+
+
+_____________________
 v. 34
 -----
 
