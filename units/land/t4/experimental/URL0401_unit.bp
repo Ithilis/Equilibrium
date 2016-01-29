@@ -1,4 +1,4 @@
---Scatis
+--Scathis
 
 UnitBlueprint {
 Merge = true,
@@ -34,12 +34,13 @@ BlueprintId = "url0401",
     Economy = {
         BuildCostEnergy = 375000,
         BuildCostMass = 30000,
-        BuildTime = 50000,    -- its three time faster as build same mass in percivals/bricks
+        BuildTime = 50000,    -- its three times faster to build than equal mass in percivals/bricks
     },
     Physics = {
-        MaxAcceleration = 1.5,
+        MaxAcceleration = 1.0, -- from 1.5
         MaxBrake = 2,        --from 1.5
-        MaxSpeed = 2,        --from 1.5
+        MaxSpeed = 3,        --from 1.5
+        TurnRadius = 5,      -- from 2
     },
     Weapon = {
         {
@@ -93,12 +94,12 @@ BlueprintId = "url0401",
             DamageRadius = 5,                --from 7
             EnergyDrainPerSecond = 1000,    --from 2000
             EnergyRequired = 1000,
-            FiringRandomness = 0.4,            --from 0.3
+            FiringRandomness = 0.35,            --from 0.3
             FiringTolerance = 2,            --from 0
             LeadTarget = true,
             MaxRadius = 200,                --from 330
             MinRadius = 35,                    --from 50
-            MuzzleVelocity = 160,            --from 160
+            MuzzleVelocity = 120,            --from 160
             RateOfFire = 0.5,                --from 0.53
         },
     },
