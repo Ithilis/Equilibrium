@@ -1,6 +1,10 @@
 v. 35
 -----
-- remove ussles code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon parth from "unitview"
+
+-GC tractor claws were experiencing buggy behavior so they were adjusted to be more consistent & reasonable
+
+- removed some useless code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon part from "unitview.lua"
+
 
 -scathis buffed a bit to be more useable as a mobile artillery piece:
 --movement speed: 3 (2)

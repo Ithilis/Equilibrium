@@ -22,14 +22,14 @@ BlueprintId = "ual0401",
         Level5 = 425,
     },
     Defense = {
-        Health = 85000,            --from 99999
+        Health = 85000,            --from 99999, sorry
         MaxHealth = 85000,
-        RegenRate = 15,            --from 10, 15 is same for all land exp
+        RegenRate = 15,            --from 10, 15 is the same for all land exp
     },
     Economy = {
         BuildCostEnergy = 350000, 
         BuildCostMass = 28000,
-        BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
+        BuildTime = 46666,                    -- 3 times faster to build than equivalent mass in percies/bricks
     },
     Weapon = {
         {
@@ -95,7 +95,7 @@ BlueprintId = "ual0401",
             RackSalvoReloadTime = 0,
             RackSalvoSize = 1,
             RackSlavedToTurret = false,
-            RateOfFire = 10,
+            RateOfFire = 0.1,
             TargetCheckInterval = 0.1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -186,7 +186,7 @@ BlueprintId = "ual0401",
             RackSalvoReloadTime = 0,
             RackSalvoSize = 1,
             RackSlavedToTurret = false,
-            RateOfFire = 10,
+            RateOfFire = 0.1,
             TargetCheckInterval = 0.1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
