@@ -1,4 +1,4 @@
---Ylona Oss
+--Yolona Oss
 
 UnitBlueprint {
 Merge = true,
@@ -14,13 +14,13 @@ BlueprintId = "xsb2401",
         },
     },
     Defense = {
-        Health = 15000,
-        MaxHealth = 15000,
+        Health = 10000,
+        MaxHealth = 10000,
         RegenRate = 5,    --from 0
     },
     Economy = {
-        BuildCostEnergy = 5400000,
-        BuildCostMass = 216000,
+        BuildCostEnergy = 10800000,
+        BuildCostMass = 180000,
         BuildTime = 90000,
     },
     Veteran = {

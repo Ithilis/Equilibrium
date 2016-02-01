@@ -5,13 +5,13 @@ Merge = true,
 BlueprintId = "xab1401", 
 
     Defense = {
-        Health = 8000,
-        MaxHealth = 8000,
+        Health = 6000,
+        MaxHealth = 6000,
         RegenRate = 25,    --from 0
     },
     Economy = {
-        BuildCostEnergy = 5400000,
-        BuildCostMass = 216000,
-        BuildTime = 90000,
+        BuildCostEnergy = 6300000,
+        BuildCostMass = 252000,
+        BuildTime = 1050000,
     },
 }

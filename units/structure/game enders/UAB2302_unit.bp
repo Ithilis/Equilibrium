@@ -32,8 +32,8 @@ BlueprintId = "uab2302",
         },
     },
     Defense = {
-        Health = 15000,
-        MaxHealth = 15000,
+        Health = 8000,
+        MaxHealth = 8000,
         RegenRate = 5,        --from 0
     },
     Economy = {
@@ -50,16 +50,25 @@ BlueprintId = "uab2302",
     },
     Weapon = {
         {
-            Damage = 15000,        --from 6000 = 2000dps
+            Damage = 2500,        --from 6000 = 2000dps
             DamageRadius = 6,        --from5
+            DoTPulses = 12,         -- every 0.5 seconds
+            DoTTime = 6,
             EnergyDrainPerSecond = 7500,    --
             EnergyRequired = 15000,            --
             FiringRandomness = 0.2,    --from 0,35
+            FiringTolerance = 1,
             MaxRadius = 1800,    --
             MinRadius = 175,    --
             MuzzleVelocity = 100,    --from 65
             MuzzleVelocityReduceDistance = 1750,    --
+            RackRecoilDistance = -5,
             RateOfFire = 0.0666,    --15s
+            TurretPitchRange = 45,
+            TurretPitchSpeed = 6,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 6,
         },
     },
 }
