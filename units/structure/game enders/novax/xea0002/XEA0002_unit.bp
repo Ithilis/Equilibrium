@@ -2,15 +2,19 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "ura0204", 
+BlueprintId = "xea0002", 
 
-
+Air = {
+        MaxAirspeed = 8,        --from6
+    },
 Intel = {
-        RadarRadius = 100,    --from 70
+        OmniRadius = 30,      --added
+        RadarRadius = 150,    --from 70
         VisionRadius = 50,    --from 40
     },
 Weapon = {
         {
+            DamageRadius = 2.5,   --from1
         },
         {
             Damage = 500,        --from 3000

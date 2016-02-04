@@ -1,6 +1,11 @@
 v. 35
 -----
 
+- novax satelite -> fixed crucial bug in code
+-- speed 8 [6]
+-- add 30aoe omni, 150aoe radar (100)
+-- aoe 2.5 [1]
+
 - T1bomber 
 -- cybran - 3aoe (3,5) [3] + remove ussles code
 -- sera 4aoe (4,5) [4]
