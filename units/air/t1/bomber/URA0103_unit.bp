@@ -37,28 +37,12 @@ BlueprintId = "ura0103",
         {
             Damage = 60,
             BombDropThreshold = 7,          --from 3
-            DamageRadius = 3.5,            --from3
+            DamageRadius = 3,            --from3
             DamageFriendly = false,
             FiringRandomness = 0,           --from 3
             FiringTolerance = 4,            --from 6
             MaxRadius = 40,
-            MuzzleSalvoDelay = 0.2,
-            MuzzleSalvoSize = 6,
-            MuzzleVelocity = 0,
             ProjectilesPerOnFire = 6,
-            RackBones = {
-                {
-                    MuzzleBones = {
-                        'Muzzle_L03',
-                        'Muzzle_R03',
-                        'Muzzle_L02',
-                        'Muzzle_R02',
-                        'Muzzle_L01',
-                        'Muzzle_R01',
-                    },
-                    RackBone = 'Muzzle_L03',
-                },
-            },
             RateOfFire = 0.1666, --from 4s
             TargetPriorities = {
                 'SPECIALHIGHPRI',        --from prioritize air units :D
