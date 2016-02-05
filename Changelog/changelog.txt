@@ -10,7 +10,8 @@ v. 35
 -- cybran - 3aoe (3,5) [3] + remove ussles code
 -- sera 4aoe (4,5) [4]
 
--GC tractor claws were experiencing buggy behavior so they were adjusted to be more consistent & reasonable
+- GC tractor claws were experiencing buggy behavior so they were adjusted to be more consistent & reasonable
+-- reload time 10s [0,1s]
 
 - removed some useless code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon part from "unitview.lua"
 
