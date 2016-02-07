@@ -1,5 +1,8 @@
 v. 35
 -----
+- mercy removed ussles code
+
+- restorer energy cost repair wrong number (was one more 0 as intended)
 
 - novax satelite -> fixed crucial bug in code
 -- speed 8 [6]

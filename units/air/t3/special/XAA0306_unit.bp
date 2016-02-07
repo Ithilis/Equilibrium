@@ -22,9 +22,9 @@ BlueprintId = "xaa0306",
         MaxHealth = 3750,
     },
     Economy = {
-        BuildCostEnergy = 487500,
-        BuildCostMass = 1625,
-        BuildTime = 7800,
+        BuildCostEnergy = 48750,   --55000e
+        BuildCostMass = 1625,       --1650m
+        BuildTime = 7800,           --6600bt
     },
     Physics = {
         FuelRechargeRate = 15,
