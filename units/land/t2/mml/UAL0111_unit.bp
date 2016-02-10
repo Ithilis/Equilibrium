@@ -4,31 +4,27 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0111",
 
+    Defense = {
+        Health = 650,   --from 750
+        MaxHealth = 650,
+    },
     Economy = {
-        BuildCostEnergy = 1400,
+        BuildCostEnergy = 2100,
         BuildCostMass = 196,
         BuildTime = 1400,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 6,
-        Level2 = 12,
-        Level3 = 18,
-        Level4 = 24,
-        Level5 = 32,
+    Physics = {
+        MaxAcceleration = 2.6,  --from 2.7
+        MaxBrake = 2.6,
+        MaxSpeed = 2.6,
+        MaxSpeedReverse = 2.6,
     },
     Weapon = {
         {
-        Damage = 275,        --55dps
-        RateOfFire = 0.2,
+            Damage = 600,
+            RateOfFire = 0.1,
+            MuzzleVelocity = 3,   --3
+            DamageRadius = 1.5,     --1
         },
     },
 }
