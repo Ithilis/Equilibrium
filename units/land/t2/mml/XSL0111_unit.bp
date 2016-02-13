@@ -24,86 +24,9 @@ BlueprintId = "xsl0111",
             DamageRadius = 0.5,
             Label = 'MissileRack',
             MaxRadius = 60,
-            MinRadius = 38, --from5
+            MinRadius = 5, --from5
             RateOfFire = 0.15,
             RackFireTogether = false,   --added
-        },
-        {
-            AboveWaterTargetsOnly = true,
-            AlwaysRecheckTarget = true,     --added
-            AnimationReload = '/units/xsl0111/xsl0111_areload.sca',
-            Audio = {
-                Fire = Sound {
-                    Bank = 'XSL_Weapon',
-                    Cue = 'XSL0111_LaanseMissile',
-                    LodCutoff = 'Weapon_LodCutoff',
-                },
-            },
-            BallisticArc = 'RULEUBA_None',
-            CollideFriendly = false,
-            CountedProjectile = false,
-            Damage = 200,
-            DamageRadius = 0.5,
-            DamageType = 'Normal',
-            DisplayName = 'Laanse Tactical Missile Launcher',
-            FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
-            },
-            FiringTolerance = 5,
-            Label = 'HomingMissile',     --from MissileRack
-            MaxRadius = 38,             --38
-            MinRadius = 4,
-            MuzzleChargeDelay = 0.1,
-            MuzzleSalvoDelay = 0,
-            MuzzleSalvoSize = 1,
-            MuzzleVelocity = 3,
-            ProjectileId = '/projectiles/SIFLaanseTacticalMissile01EQ/SIFLaanseTacticalMissile01EQ_proj.bp',    --add EQ on end
-            ProjectileLifetime = 25,
-            ProjectilesPerOnFire = 1,
-            RackBones = {
-                {
-                    HideMuzzle = true,
-                    MuzzleBones = {
-                        'missile',
-                    },
-                    RackBone = 'missile',
-                },
-            },
-            RackFireTogether = false,   --added
-            RackRecoilDistance = -1,
-            RackReloadTimeout = 10,
-            RackSalvoChargeTime = 0,
-            RackSalvoReloadTime = 6.6666,
-            RackSalvoSize = 1,
-            RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_DirectFire',  --indirect
-            RateOfFire = 0.15,
-            RenderFireClock = true,
-            SlavedToBody = true,
-            TargetCheckInterval = 2,
-            TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'STRUCTURE DEFENSE',
-                'TECH3 MOBILE',
-                'TECH2 MOBILE',
-                'TECH1 MOBILE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-            TargetRestrictDisallow = 'UNTARGETABLE',
-            TrackingRadius = 1.15,
-            TurretDualManipulators = false,
-            TurretPitch = 0,
-            TurretPitchRange = 0,
-            TurretPitchSpeed = 0,
-            TurretYaw = 0,
-            TurretYawRange = 0,
-            TurretYawSpeed = 0,
-            Turreted = false,
-            WeaponCategory = 'Missile',
-            WeaponRepackTimeout = 0,
-            WeaponUnpacks = false,
         },
     },
 

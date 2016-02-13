@@ -10,7 +10,7 @@
 
 local SLaanseTacticalMissile = import('/lua/seraphimprojectiles.lua').SLaanseTacticalMissile
 
-SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
+SIFLaanseTacticalMissile02EQ = Class(SLaanseTacticalMissile) {
     
     OnCreate = function(self)
         SLaanseTacticalMissile.OnCreate(self)
@@ -21,7 +21,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
     MovementThread = function(self)        
         self.WaitTime = 0.1
         self.Distance = self:GetDistanceToTarget()
-        self:SetTurnRate(8)
+        self:SetTurnRate(10)
         WaitSeconds(0.3)        
         while not self:BeenDestroyed() do
             self:SetTurnRateByDist()
@@ -34,13 +34,13 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         if dist > self.Distance then
         	self:SetTurnRate(75)
         	WaitSeconds(3)
-        	self:SetTurnRate(8)
+        	self:SetTurnRate(10)
         	self.Distance = self:GetDistanceToTarget()
         end
         if dist > 50 then        
             #Freeze the turn rate as to prevent steep angles at long distance targets
             WaitSeconds(2)
-            self:SetTurnRate(10)
+            self:SetTurnRate(12)
         elseif dist > 30 and dist <= 50 then
 						self:SetTurnRate(12)
 						WaitSeconds(1.5)
@@ -49,7 +49,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
             WaitSeconds(0.3)
             self:SetTurnRate(50)
 				elseif dist > 0 and dist <= 10 then           
-            self:SetTurnRate(100)   
+            self:SetTurnRate(8)   
             KillThread(self.MoveThread)         
         end
     end,        
@@ -61,5 +61,5 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         return dist
     end,
 }
-TypeClass = SIFLaanseTacticalMissile01EQ
+TypeClass = SIFLaanseTacticalMissile02EQ
 
