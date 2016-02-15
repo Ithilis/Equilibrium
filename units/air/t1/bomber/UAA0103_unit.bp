@@ -8,11 +8,11 @@ BlueprintId = "uaa0103",
         MaxAirspeed = 11,        --from 10
         MinAirspeed = 11,
         
-        BreakOffDistance = 15,          --30
+        BreakOffDistance = 20,          --30
         CombatTurnSpeed = 2.0,          --0,75
         PredictAheadForBombDrop = 2,    --3
         KTurn = 0.85,                   --0,75
-        StartTurnDistance = 3,          --5
+        StartTurnDistance = 6,          --5
         TurnSpeed = 2.0,                --0,75
     },
     Buffs = {
