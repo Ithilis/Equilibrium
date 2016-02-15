@@ -6,6 +6,11 @@ BlueprintId = "xsl0111",
         Health = 625,   --from 800
         MaxHealth = 625,
     },
+    Display = {
+        Abilities = {
+            '<LOC ability_Homming missile',
+        },
+    }, 
     Economy = {
         BuildCostEnergy = 2100,
         BuildCostMass = 196,
