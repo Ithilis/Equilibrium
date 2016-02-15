@@ -28,6 +28,10 @@ BlueprintId = "xsl0111",
             RateOfFire = 0.15,
             RackFireTogether = false,   --added
         },
+        {
+            MaxRadius = 38,
+            RangeCategory = 'UWRC_DirectFire',
+        },
     },
 
 }

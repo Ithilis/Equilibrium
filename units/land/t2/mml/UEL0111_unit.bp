@@ -7,11 +7,10 @@ BlueprintId = "uel0111",
         BuildCostMass = 196,
         BuildTime = 1400,
     },
-    
     Weapon = {
         {
-            CameraLifetime = 12,        --from 5
-            CameraVisionRadius = 12,    --from 5
+            CameraLifetime = 5,         --added
+            CameraVisionRadius = 10,    --added
         },
     },
 }
