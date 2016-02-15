@@ -24,14 +24,23 @@ BlueprintId = "xsl0111",
     },
     Weapon = {
         {
-            AlwaysRecheckTarget = true, --added
             Damage = 200,   --from 405 - this is because it deals more damage on long range - 400 on long range, 200 on short range.
             DamageRadius = 0.5,
             Label = 'MissileRack',
             MaxRadius = 60,
             MinRadius = 5, --from 5
             RateOfFire = 0.15,
-            RackFireTogether = false,   --added
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'STRUCTURE DEFENSE',
+                'TECH2 BOT UEF CYBRAN',
+                'COMMAND',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             MaxRadius = 38,             -- this dummy weapon is to give a range indocator of where the short range missile starts - its not super accurate but oh well.

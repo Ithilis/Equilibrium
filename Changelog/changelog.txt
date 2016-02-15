@@ -1,13 +1,14 @@
 v. 35
 -----
 
--!need testing sera mml 625hp (850), 2100e(1400)
--- 4-38r homing projectile 39-60 normal projectile  -> creating new projectil that is identical as previous but with 50 turn rate (0)
+- uef mml add camera on projectile 10aoe 5s
+
+-sera mml 625hp (850), 2100e(1400)
+-- beyond range 38 its homing with 30dps
 -- 400 dmg (405) -> on long range
---> not working, say some shit that projectil didnt work, and cause red chemtrails :D
+-- target priority: defence struture -> T2 bot uef cybran ->command ->T3 mobile ->t2 mobile... 
 
-
-!need testing- aeon mml, 650hp ([750]), energy cost 2100 (1400), speed 2.6 [(2.7)]
+- aeon mml, 650hp ([750]), energy cost 2100 (1400),
 -- dps 60 (55) [60], aoe 1.5 (1), reload time 10s (5s) [10s]
 -- missile hp 2 [(1)], speed acceleration 2  [(3)] max speed 10 (12)
 
