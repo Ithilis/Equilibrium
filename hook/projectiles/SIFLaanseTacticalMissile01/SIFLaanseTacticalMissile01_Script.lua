@@ -23,13 +23,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         self.Distance = self:GetDistanceToTarget()
         local MissileCheck = self.Distance
         
-        if MissileCheck < 10 then
-            self:SetTurnRate(50) -- high turn rate cos target is really close!
-            else 
-            self:SetTurnRate(8) -- making the missile go up a bit before activating tracking/long range mode
-        end
-        
-        WaitSeconds(0.8)    
+
         
         if MissileCheck < 40 then -- check if we want to use the short range missile or not.    
             while not self:BeenDestroyed() do
@@ -43,15 +37,24 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
                 -- get own values and prepare to create new projectile
             local vx, vy, vz = self:GetVelocity()
             local DamageMult = 2
-            local ChildProjectileBP = '/Mods/Equilbrium/projectiles/SIFLaanseTacticalMissile02EQ/SIFLaanseTacticalMissile02EQ_proj.bp'   -- this is the tml one i think - needs changing to its own custom one! as soon as i get that to work :(
+            local ChildProjectileBP = '/Mods/Equilibrium/projectiles/SIFLaanseTacticalMissile02EQ/SIFLaanseTacticalMissile02EQ_proj.bp'   -- this is the tml one i think - needs changing to its own custom one! as soon as i get that to work :(
             
-            self.DamageData.DamageAmount = self.DamageData.DamageAmount * DamageMult --increase the damage since we are going into long range mode
+            self.DamageData.DamageAmount = (self.DamageData.DamageAmount * DamageMult) --increase the damage since we are going into long range mode
             
             local proj = self:CreateChildProjectile(ChildProjectileBP)
             proj:SetVelocity( vx, vy, vz )
             proj:PassDamageData(self.DamageData)
             self:Destroy()
         end
+        
+        if MissileCheck < 10 then -- if we havent switched then start launch procedures
+            self:SetTurnRate(50) -- high turn rate cos target is really close!
+            else 
+            self:SetTurnRate(8) -- making the missile go up a bit before activating tracking/long range mode
+        end
+        
+        WaitSeconds(0.8)    
+        
     end,
 
     SetTurnRateByDist = function(self)

@@ -21,8 +21,8 @@ SIFLaanseTacticalMissile02EQ = Class(SLaanseTacticalMissile) {
     MovementThread = function(self)        
         self.WaitTime = 0.1
         self.Distance = self:GetDistanceToTarget()
-        self:SetTurnRate(10)
-        WaitSeconds(0.3)        
+        self:SetTurnRate(4)
+        WaitSeconds(0.6)        
         while not self:BeenDestroyed() do
             self:SetTurnRateByDist()
             WaitSeconds(self.WaitTime)
@@ -34,7 +34,7 @@ SIFLaanseTacticalMissile02EQ = Class(SLaanseTacticalMissile) {
         if dist > self.Distance then
         	self:SetTurnRate(75)
         	WaitSeconds(3)
-        	self:SetTurnRate(10)
+        	self:SetTurnRate(12)
         	self.Distance = self:GetDistanceToTarget()
         end
         if dist > 50 then        
@@ -46,7 +46,7 @@ SIFLaanseTacticalMissile02EQ = Class(SLaanseTacticalMissile) {
 						WaitSeconds(1.5)
             self:SetTurnRate(12)
         elseif dist > 10 and dist <= 25 then
-            WaitSeconds(0.3)
+            WaitSeconds(0.1)
             self:SetTurnRate(50)
 				elseif dist > 0 and dist <= 10 then           
             self:SetTurnRate(8)   

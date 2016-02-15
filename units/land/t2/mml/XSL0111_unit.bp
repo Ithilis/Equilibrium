@@ -8,7 +8,7 @@ BlueprintId = "xsl0111",
     },
     Display = {
         Abilities = {
-            '<LOC ability_Homming missile',
+            '<LOC ability_Homing missile',
         },
     }, 
     Economy = {
@@ -25,16 +25,16 @@ BlueprintId = "xsl0111",
     Weapon = {
         {
             AlwaysRecheckTarget = true, --added
-            Damage = 400,   --from 405
+            Damage = 200,   --from 405 - this is because it deals more damage on long range - 400 on long range, 200 on short range.
             DamageRadius = 0.5,
             Label = 'MissileRack',
             MaxRadius = 60,
-            MinRadius = 5, --from5
+            MinRadius = 5, --from 5
             RateOfFire = 0.15,
             RackFireTogether = false,   --added
         },
         {
-            MaxRadius = 38,
+            MaxRadius = 38,             -- this dummy weapon is to give a range indocator of where the short range missile starts - its not super accurate but oh well.
             RangeCategory = 'UWRC_DirectFire',
         },
     },
