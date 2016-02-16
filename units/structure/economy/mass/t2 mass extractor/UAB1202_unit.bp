@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "uab1202",
 
     Economy = {
-        BuildCostEnergy = 5900,
+        BuildCostEnergy = 6000,
         BuildCostMass = 800,
         BuildRate = 25,
         BuildTime = 1250,

@@ -1,7 +1,14 @@
 v. 35
 -----
 
-- uef mml add camera on projectile 10aoe 5s
+Drain reason change:
+
+- T1 mex 30m (20) 300e (250e) 
+- T2 mex 6000e (5900e)
+- T3 mex 40 000e (38 000e)
+_________
+
+- uef mml add visibility on projectile 10aoe 5s
 
 -sera mml 625hp (850), 2100e(1400)
 -- beyond range 38 its homing with 30dps
@@ -23,6 +30,7 @@ v. 35
 -- aoe 2.5 [1]
 
 - T1bomber 
+-- tweak manevrability a litle bit
 -- cybran - 3aoe (3,5) [3] + remove ussles code
 -- sera 4aoe (4,5) [4]
 
@@ -33,10 +41,11 @@ v. 35
 
 
 -scathis buffed a bit to be more useable as a mobile artillery piece:
---movement speed: 3 (2)
---muzzle velocity: 120 (160) - now its shells get to their targets faster (interestingly).
+-- movement speed: 3 (2)
+-- muzzle velocity: 120 (160) - now its shells get to their targets faster (interestingly).
 -- turn radius: 5 (2) to stop it from looking silly while turning at high speeds
 -- acceleration: 1 (1.5) puts some weight behind its movemement, making it look like some experimental and not a lab.
+-- able to fire from deep underwater
 
 - reverted the upgradable building stealth fix - it stopped working and serves no purpose now.
 
