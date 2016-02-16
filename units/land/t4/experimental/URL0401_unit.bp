@@ -101,6 +101,10 @@ BlueprintId = "url0401",
             MinRadius = 35,                    --from 50
             MuzzleVelocity = 120,            --from 160
             RateOfFire = 0.5,                --from 0.53
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',
+            },
         },
     },
 }
