@@ -8,74 +8,113 @@ Drain reason change:
 - T3 mex 40 000e (38 000e)
 _________
 
-- uef mml add visibility on projectile 10aoe 5s
+There were some improvements and rebalances in this version:
 
--sera mml 625hp (850), 2100e(1400)
--- beyond range 38 its homing with 30dps
+
+
+- Mobile missile launchers got a balance pass:
+
+- UEF mmls now have a camera on their missiled like the Lobo: 10aoe 5s
+
+-Sera mmls 625hp (850), 2100e(1400)
+- It now has a new feature - intelligent missile selection:
+- for targets below 38 range it deals half damage but its missiles home in, letting it be used against mobile units to some extent. Just like other units in the seraphim army it is more versatile and has multiple functions now.
 -- 400 dmg (405) -> on long range
 -- target priority: defence struture -> T2 bot uef cybran ->command ->T3 mobile ->t2 mobile... 
 
-- aeon mml, 650hp ([750]), energy cost 2100 (1400),
+- aeon mmls, 650hp ([750]), energy cost 2100 (1400),
 -- dps 60 (55) [60], aoe 1.5 (1), reload time 10s (5s) [10s]
 -- missile hp 2 [(1)], speed acceleration 2  [(3)] max speed 10 (12)
 
 
-- mercy removed ussles code
 
-- restorer energy cost repair wrong number (was one more 0 as intended)
-
-- novax satelite -> fixed crucial bug in code
--- speed 8 [6]
--- add 30aoe omni, 150aoe radar (100)
--- aoe 2.5 [1]
-
-- T1bomber 
--- tweak manevrability a litle bit
--- cybran - 3aoe (3,5) [3] + remove ussles code
+- T1 bombers got another balance pass after providing Zock with a mini-mod, which helped get more testing done:
+-- tweaked maneuverability a little bit
+-- cybran - 3aoe (3,5) [3] + removed useless code
 -- sera 4aoe (4,5) [4]
-
-- GC tractor claws were experiencing buggy behavior so they were adjusted to be more consistent & reasonable
--- reload time 10s [0,1s]
-
-- removed some useless code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon part from "unitview.lua"
+-- improved uef and cybran bombers a little - they should now drop a bit better
 
 
--scathis buffed a bit to be more useable as a mobile artillery piece:
+
+-Scathis was buffed a bit to be more useable as a mobile artillery piece:
 -- movement speed: 3 (2)
 -- muzzle velocity: 120 (160) - now its shells get to their targets faster (interestingly).
 -- turn radius: 5 (2) to stop it from looking silly while turning at high speeds
 -- acceleration: 1 (1.5) puts some weight behind its movemement, making it look like some experimental and not a lab.
 -- able to fire from deep underwater
 
-- reverted the upgradable building stealth fix - it stopped working and serves no purpose now.
 
-- there was an issue with support factory prices not working correctly in equilibrium. its fixed now and works just like in the normal game. 
---also fixed the fact that the build time calculations were not being done.
 
-- improved uef and cybran bombers a little - they should now drop a bit better
-
-- Air staging improved:
+- Air staging drastically improved:
 - They now repair for free - this means they don't hog your aircraft anymore if you are stalling mass.
 - Aircraft can land on them in greater numbers:
 
---For UEF/Cybran:
---ASF 4 (1)
---Torpedo Bombers 4 (2)
---Aeon T3 Torpedo Bomber 2 (1)
---T3 Spy planes 4 (2)
---T2 Fighters 4 (2)
---T2 Gunships 4 (2)
---T3 Gunships 2 (1)
---Mercies (still) cant refuel
+--For UEF/Cybran stagin facilities:
+--ASF - 4 (1)
+--Torpedo Bombers - 4 (2)
+--Aeon T3 Torpedo Bomber - 2 (1)
+--T3 Spy planes - 4 (2)
+--T2 Fighters - 4 (2)
+--T2 Gunships - 4 (2)
+--T3 Gunships - 2 (1)
+--Mercies (still) can't refuel
 --Aeon/Sera have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
 
 
--Torpedo bombers are a bit nicer to use - turn faster but have the same performance.
 
--fixed a strange issue with hives and engymod giving them incorrect prices
+-Torpedo bombers are a bit nicer to use - they now turn faster but have the same performance.
+
+
 
 -Cybran shields got an hp buff to the shield buildings, increasing faction diversity
 --ED4 shield code cleaned up (because its directly buildable at t3), and mod made smaller - no gameplay changes
+
+
+
+- game enders got a price rebalance to make them a bit more expensive and diverse - dont forget that eco is different in equilibrium so the prices for these should be different also.
+-- aeon t3 heavy artillery (200k mass one) got rebalanced a little so its more consistent in its damage - this was done by increasing its damage over time so shields have less chance to recover.
+-- aeon t3 heavy artillery had its prjectile improved a little bit - you can now see its damage over time effect better and also now its visible in water.
+-- Yolona Oss now has a more diverse price - more energy and less mass cost.
+-- Pagaron got a price increase
+
+- novax satellite -> fixed a bug in the code
+-- speed 8 [6]
+-- added 30aoe omni, 150aoe radar (100)
+-- aoe 2.5 [1]
+
+
+
+
+
+General mod structure, organization and versioning improved a little bit
+
+- removed some useless code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon part from "unitview.lua" now the mod should be smaller in size.
+- Mecries had some useless code which was removed.
+
+
+
+
+There were some fixes of both the normal game and the previous version of the mod:
+
+
+- Restorers had a typo in the energy cost which has now been fixed.
+
+- fixed a strange issue with hives and engymod giving them incorrect prices
+
+- there was an issue with support factory prices not working correctly in equilibrium. its fixed now and works just like in the normal game. 
+--also fixed the fact that the build time calculations were not being done in engy mod in the base game.
+
+- GC tractor claws were experiencing buggy behavior so they were adjusted to be more consistent & reasonable - now you get the improved version from the base game without it being silly.
+-- reload time 10s [0,1s]
+
+- reverted the upgradable building stealth fix - it stopped working and serves no purpose now.
+
+
+
+
+
+
+
 
 
 
