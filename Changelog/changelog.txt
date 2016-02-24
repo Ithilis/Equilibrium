@@ -97,7 +97,7 @@ General mod structure, organization and versioning improved a little bit
 There were some fixes of both the normal game and the previous version of the mod:
 
 
-- Restorers had a typo in the energy cost which has now been fixed.
+- Solace had a typo in the energy cost which has now been fixed.
 
 - fixed a strange issue with hives and engymod giving them incorrect prices
 
