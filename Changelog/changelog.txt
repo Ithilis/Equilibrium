@@ -49,7 +49,7 @@ There were some improvements and rebalances in this version:
 - They now repair for free - this means they don't hog your aircraft anymore if you are stalling mass.
 - Aircraft can land on them in greater numbers:
 
---For UEF/Cybran stagin facilities:
+--For UEF/Cybran staging facilities:
 --ASF - 4 (1)
 --Torpedo Bombers - 4 (2)
 --Aeon T3 Torpedo Bomber - 2 (1)
@@ -184,7 +184,7 @@ v. 34
 - T2 transport
 -- 6000e (8000e) [12000e]   -> for factory drain reasons, to drain as other T2air
 
-- tmd radius 32 (31,5) [30]
+- tmd radius 32 (31,5) [31]
 
 _____________________
 v.33
