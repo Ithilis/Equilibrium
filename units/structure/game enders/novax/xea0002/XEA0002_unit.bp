@@ -7,10 +7,26 @@ BlueprintId = "xea0002",
 Air = {
         MaxAirspeed = 8,        --from6
     },
+General = {
+        OrderOverrides = {
+            RULEUTC_JammingToggle = {
+                bitmapId = 'jamming',
+                helpText = 'toggle_jamming',
+            },
+        },
+        ToggleCaps = {
+            RULEUTC_JammingToggle = true,
+        },
+    }, 
 Intel = {
         OmniRadius = 30,      --added
         RadarRadius = 150,    --from 70
         VisionRadius = 50,    --from 40
+        JamRadius = {
+            Max = 30,
+            Min = 30,
+        },
+        JammerBlips = 20,
     },
 Weapon = {
         {
