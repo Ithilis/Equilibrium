@@ -1,4 +1,7 @@
 UnitBlueprint {
+Merge = true,
+BlueprintId = "xsc9010", 
+
     Audio = {
         DeathExplosion = Sound {
             Bank = 'XSL_Destroy',

@@ -101,6 +101,8 @@ TypeTable = {
     xsl0401 = 5,
     xsl0402 = 5,        -- Ion storm
     xea0002 = 5,
+    xsc9010 = 5,        -- Novax jamming blips (jamming cristal units)
+    xsc9011 = 5,        -- Novax jamming blips (sera jamming cristal units)
     
 -- Now for the units which do need typing
 -- COMBAT
