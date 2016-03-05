@@ -33,7 +33,6 @@
 			<h3><img src="http://wiki.faforever.com/images/f/ff/Cybran_Wall.png"> Quick Summary</h3>
 			There are many changes in this mod, but don't worry, you need to remember only a few of them! The rest are designed to bring improvements while not compromising your gameplay.
 			<ul>
-			<li> Air factories cost more energy, but air is cheaper. Build 1-2 extra pgens before building an air factory!
 			<li> Mercies deal damage over time! Moving targets receive only a fraction of the damage.
 			<li> Mass storages are cheaper, provide less mass, and explode on death! Consider safety and use adjacency.
 			<li> Energy storages, provide much more adjacency bonus, use them for fix your energy problem.
@@ -129,15 +128,15 @@
             <p>
 			2. The sACU wreck is reclaimable 2x <a href="http://recordit.co/otLq64yEel"> slower than other units<a/>.
             <p>
-            3. <a href="http://recordit.co/o3n6d4imXh"> Megalith’s egg reclaim abuse<a/> <strike>1800m/s</strike> → 200m/s 
+            3. <a href="http://recordit.co/o3n6d4imXh"> Megalith’s egg reclaim abuse<a/> is now minimized: <strike>1800m/s</strike> → 200m/s 
             <p>
-            4. Air experimental units wrecks gain <strike>81% mass</strike> → 40.5% mass 
+            4. Air experimental unit wrecks contain: <strike>81% mass</strike> → 40.5% mass 
 			<h4>Purpose</h4>
             <ol>
 			<li>To make it harder to secure a reclaim field after a fight, meaning that the map becomes more dynamic as there are reclaim fields to fight over for longer.</ul>
 			<li>Taking more time to be reclaimed, sACU spam will no longer instantly be converted into mass as soon as one of them dies.
-            <li>To prevent situation where megalith immediately reclaim experimental from battle field. 
-            <li>Air experimentals leave half of their mass in wrecks now - this is because they are likely to die quickly and this decreases the amount of mass delivery. Its similar reason as on ASF - be more free to use them on enemy territory.
+            <li>To prevent situationa where a megalith immediately reclaims experimentals from the battle field. 
+            <li>Air experimentals leave half of their mass in wrecks now - this is because they are likely to die quickly and this decreases the amount of mass delivery. Its similar to the reason why FAF changed it on ASF - To have more freedom while using htem on enemy territory.
             </ol>
             
 		</div>
@@ -161,9 +160,11 @@
             <li>Naval:<strike>300m 1500e 300bt - 1370m 6600e 1800bt - 5450m  24472e 9180bt</strike> →
 			<li>Naval:300m 3000e 300bt  - 1350m 9000e 1800bt - 3600m 36000e 9000bt
 			</ul>
-			3.The same rule applies to slave factory upgrades
+			3.The same rule applies to slave factory upgrades:
 			<ul>
-            <li>T2/3 slave factories are built 3 times faster than HQs
+            <li>T2/3 slave factories are built 3 times faster than HQs (when upgraded from an existing factory)
+            <li>In FAF, factories change their price depending on if you upgrade them or build with a higher tech engy. In equilibrium, the prices are tuned towards upgrading from existing factories, so building with engies may not give consistent drain values.
+            <li>Additionally, in FAF this dynamic price function was not fully working. It's fixed in equilibrium - now the build time is also included in the dynamic price adjustment, so building with an engy is now at the correct speed.
 			</ul>
 			
 			4.Factory build rates:
@@ -186,6 +187,7 @@
 			<li>Naval: 37500hp
 			</ul>
 			
+            
 			<h4>Purpose</h4>
 			<ol>
 			<li>To be able to more easily predict resource consumption of factories
@@ -902,7 +904,7 @@
 			
             Galactic Colossus: <strike>27 500m 20 625bt 99 999hp</strike> → 28000m 46 660bt 85 000hp
 			<ul>
-			<li>Magnet claws now work better and more consistently
+			<li>Magnet claws now work better and more consistently, they can fire once every 10 seconds, or an equivalent of 600dps per claw when facing bricks/percies (6000hp units).
 			</ul>
 			
             Fatboy: <strike>21 000bt 32500hp -500e/s 180br</strike> → 46 660bt 35 000hp -250e/s 200br
@@ -929,10 +931,12 @@
 			<li>T3 units are weaker in this mod (-25%dps -35%hp), so experimentals are changed to maintain balance.
 			<li>Price increased because Ion storm is now extremely useful for supporting your army.
 			<li>DPS moved  from long range to short, because T3 units have less hp, and dps, short range is less annoying and gives more time for opponents to deal with the fatboy.
-			<li>Scathis was a very cheap game ender on small maps, and useless on larger ones.
+			<li>Scathis was a very cheap game ender on small maps, and useless on larger ones. 
 				<ul>
-				<li>Reworked to be more like experimental mobile artillery, and less like a game ender.
+				<li>Reworked as a mobile artillery piece, with more versatility but far less destructive power.
 				<li>EMP is for supporting allied armies, and to disrupt the enemy.
+                <li>It can now mover faster, but is slow to accelearate, like a train.
+                <li>It is now able to support navies by firing from underwater - this is only usefull on mostly water maps since on land you can have it shielded, and it is vulnerable to torpedo bombers.
 				</ul>
 			</ol>
 		
@@ -991,7 +995,7 @@
 						
 			6.Cybran: 20 000hp 175dmg/1s reload time
 			<ul>
-			<li>Stealth: 200m 10 000e 500bt, change for stealth field with 16aoe
+			<li>Stealth: 200m 10 000e 500bt, changed to stealth field with 16aoe
 			<li>AA: 600m 30 000e 1500bt 400dps, rof 1/3s
 			<li>EMP: 800m 40 000e 2000bt T1/2 3s 3aoe T3 2s 2aoe
                 <ul>
@@ -1087,6 +1091,21 @@
             
             <li>Crash damage is now more predictable - higher tech units deal more crash damage
             <li>Air staging facility: buildable as T1 building, <strike>175m, 2100e, 534bt</strike> →  150m, 1500e, 150bt
+            
+            <li> Air staging facilities now can acommodate more planes of higher tech levels at once:
+                <ul>
+                <li> For UEF/Cybran staging facilities:
+                <li> ASF: <strike>1</strike> →  4
+                <li> Torpedo Bombers: <strike>2</strike> →  4
+                <li> Aeon T3 Torpedo Bomber: <strike>1</strike> →  2
+                <li> T3 Spy planes: <strike>2</strike> →  4
+                <li> T2 Fighters: <strike>2</strike> →  4
+                <li> T2 Gunships: <strike>2</strike> →  4
+                <li> T3 Gunships: <strike>1</strike> →  2
+                <li> Mercies (still) can't refuel
+                <li> Aeon/Sera have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
+                </ul>
+            <li> Air Staging facilities now repair for free.
 			</ul>
 			
 			
@@ -1095,6 +1114,7 @@
             <ol>
 			<li>To re-enable the fuel mechanic which is currently non-existent and to give air staging facilities and carriers a purpose again, leading in general to more selective and locational use of air, rather than just denying all air after 1 fight.
             <li>Airstaging was needed at T1, and was priced like a T1 building, so it was moved there for convenience.
+            <li>The free repair prevents them from seizing up when you are stalling, and effectively trapping your aircraft in them.
             </ol>
         
         </div>
@@ -1178,6 +1198,7 @@
             Torpedo bombers:<strike>240m 4800e 1600bt</strike> → 245m 5250e 1400bt
             <ul>
             <li><strike>15sp, no omni</strike> → 16speed, 20omni range
+            <li><strike>0.5 Turn Speed, 34 Break Off Distance</strike> → 0.5 Turn Speed, 55 Break Off Distance
             </ul>
             <p>    
             
@@ -1228,7 +1249,7 @@
                 <li>Renegades have  more range because they can't move while firing effectively
                 <li>Vulthoos are stronger because Seraphim doesn't have T3 gunships 
                 </ul>
-			<li>Torpedo Bombers are slightly better with a bit more speed, and I added small a omni radius to make it possible for them to see submarines which now have sonar stealth.
+			<li>Torpedo Bombers are slightly better with a bit more speed adn turn rate, and I added small a omni radius to make it possible for them to see submarines which now have sonar stealth.
 			<li>T2 air needed to be better against T3 air, so T2fighter/bombers cost less, have less ground damage and health, but AA dps is unchanged. Also the Notha firing tolerance changed so it doesn't miss as much. 
                 <ul>
                 <li>Target priorities to make using them less frustrating
@@ -1751,16 +1772,16 @@
                 </ul>
             Cybran: 
                 <ul>
-                <li>ED1:<strike>160m 2000e 600bt 15.53bt 500hp 100e/s 45reg</strike> → 200m 3000e 500bt 12.5br 100hp 40regen 75e/s 18aoe
-                <li>ED2:<strike>300m(460) 3000e 466bt 13,34br 200e/s 500hp 88reg 16s recharge 22aoe</strike> → 200m(400) 3000e(6000) 250bt 12.5br 200hp 80reg 150e/s 18s recharge 20aoe
-                <li>ED3:<strike>800m(1260) 12000e 1067bt 12,23br 300e/s 500hp 112reg 28aoe</strike> → 600m(1000)  9000e(15000) 750bt 25br 400hp 100reg 250e/s 25aoe
+                <li>ED1:<strike>160m 2000e 600bt 15.53bt 500hp 100e/s 45reg</strike> → 200m 3000e 500bt 12.5br 500hp 40regen 75e/s 18aoe
+                <li>ED2:<strike>300m(460) 3000e 466bt 13,34br 200e/s 500hp 88reg 16s recharge 22aoe</strike> → 200m(400) 3000e(6000) 250bt 12.5br 600hp 80reg 150e/s 18s recharge 20aoe
+                <li>ED3:<strike>800m(1260) 12000e 1067bt 12,23br 300e/s 500hp 112reg 28aoe</strike> → 600m(1000)  9000e(15000) 750bt 25br 700hp 100reg 250e/s 25aoe
                 </ul>
 
             T3 shields:
                 <ul>
                 <li>ED4: <strike>1200m(2460) 24000e 1467bt 11,81br 500hp 130reg 34aoe</strike> → 1400m(2400) 2800e(43000) 1750bt 25br 800hp 120reg 350e/s 35aoe 
                 <ul>
-                <li>buildable as a T3 shield
+                <li>Buildable as a T3 shield.
                 </ul>
                 <li>ED5: <strike>1800m(4060) 26666e 1654bt 500hp 140reg</strike> → 1600m(4000) 32000e(75000) 2000bt 1000hp 140reg 500e/s
                 <li>Aeon: <strike>2400m 44000e 4097bt 300e/s 150reg</strike> → 2400m 48000e 3000bt 300hp 150reg 300e/s
@@ -1768,13 +1789,13 @@
                 <li>Sera: <strike>3600m 60000e 5841bt 600hp 168reg 46aoe</strike> → 3600m 72000e 45000bt 700hp 160reg 500e/s 50aoe
                 </ul>
                
-            T2 Stealth Field generator: add 'DEFENSE' categories -> sparky can build them
+            T2 Stealth Field generators: added 'DEFENSE' categories → sparky can build them
                 <ul>
                 <li>Aeon/UEF <strike>726/664bt</strike> → 500bt
                 <li>Cybran: <strike>320m 4000e 400bt </strike> → 300m 4500e 375bt
                 <li>Sera: <strike>626bt, 125e/s</strike> → 500bt, 150e/s
                     <ul>
-                    <li>free personal cloak ability
+                    <li>Free personal cloak ability
                     <li>visual radius <strike>20</strike> → 5
                     </ul>
                 </ul>               
@@ -1867,31 +1888,32 @@
             
             Game Enders:
                 <ul>
-                <li>Paragon: <strike>250200m 7506000e 125100bt</strike> → 216000m 5400000e 90 000bt
+                <li>Paragon: <strike>250200m 7506000e 125100bt</strike> → 252000m 6300000e 105 000bt
                     <ul>
-                    <li> <strike>5000hp 0hp/s</strike> → 8000hp, 25hp/s regeneration
+                    <li> <strike>5000hp 0hp/s</strike> → 6000hp, 25hp/s regeneration
                     </ul>
                     
-                <li>Yolona Oss: <strike>187650m 10008000e 125100bt</strike> → 216000m 5400000e 90 000bt
+                <li>Yolona Oss: <strike>187650m 10008000e 125100bt</strike> → 180000m 10800000e 90 000bt
                     <ul>
-                    <li> <strike>12000hp 0hp/s</strike> → 15000hp, 5hp/s regeneration
+                    <li> <strike>12000hp 0hp/s</strike> → 10000hp, 5hp/s regeneration
                     </ul>
                     
                 <li>Mavor: <strike>224775m 5994000e 99900bt</strike> → 216000m 4320000e 90 000bt
                     <ul>
-                    <li><strike>8000hp 0hp/s</strike> → 15000hp, 5hp/s regeneration
+                    <li><strike>8000hp 0hp/s</strike> → 10000hp, 5hp/s regeneration
                     <li> firing randomness <strike>0.22</strike> → 0.15
                     </ul>
                     
                 <li>Emissary: <strike>73200m 91500e 30764bt</strike> →  216000m 4320000e 90 000bt
                     <ul>
-                    <li> <strike>12000hp 0hp/s</strike> → 15000hp, 5hp/s
+                    <li> <strike>12000hp 0hp/s</strike> → 8000hp, 5hp/s
                     <li> Range <strike>150-900</strike> → 175-1800
-                    <li> Damage: <strike>12000</strike> → 30000 = 2000dps, damage radius <strike>5</strike> → 6
+                    <li> Damage: <strike>12000</strike> → 30000 in 12 pulses over 6 seconds = 2000dps, damage radius <strike>5</strike> → 6
                     <li> Rate of fire <strike>20s</strike> → 15s
                     <li> Firing randomness <strike>0.35</strike> → 0.2; muzzle velocity <strike>65</strike> → 100
                     <li> Energy drain per shot <strike>4250e</strike> → 7500e
                     <li> Emissary shows as a T4 unit, so you don’t confuse it with the Salvation.
+                    <li> It now uses a different and more visible impact effect, and now shows on water and shields correctly.
                     </ul>
                 </ul>    
                 
@@ -1903,7 +1925,7 @@
             <li>T3 artillery: Prices and ranges unified, to avoid situations where you can build Aeon artillery out of range of the enemy artillery. They now have more HP so they can survive a single T3 arty shot from any faction.
             <ul>
                 <li>The Salvation was swapped with T3, to increase faction diversity - T3 arty is build more often than game enders. Now Aeon T3 arty is better against armies and worse against bases.
-                <li>Likewise, the emmisary is now more similar to a Mavor, but has lower range and higher dps - on 20km maps
+                <li>Likewise, the Emmisary is now more similar to a Mavor, but has lower range and higher dps - it makes much more use of the damage over time mechanic making shields less able to recover from its shells.
             </ul>
             <li> The Novax was almost in the right place, it just needed a nudge to make it nicer to use - since its a spy satellite and the uef doesn't have an advanced intel structure (or rather this is it) it got a slight intel boost. And that abuse where you ctrl-k Novaxes to kill SMD, Mavors, arties, ect is fixed. 
             <li> Game enders: Adjusted resource prices for them all to be cheaper. <b>Remember that late game eco has been nerfed!</b> Also game enders now have more HP so they can survive a single T3 arty shot.

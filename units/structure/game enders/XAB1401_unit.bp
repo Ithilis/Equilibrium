@@ -12,6 +12,6 @@ BlueprintId = "xab1401",
     Economy = {
         BuildCostEnergy = 6300000,
         BuildCostMass = 252000,
-        BuildTime = 1050000,
+        BuildTime = 105000,
     },
 }
