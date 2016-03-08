@@ -75,7 +75,7 @@ There were some improvements and rebalances in this version:
 -- aeon t3 heavy artillery (200k mass one) got rebalanced a little so its more consistent in its damage - this was done by increasing its damage over time so shields have less chance to recover.
 -- aeon t3 heavy artillery had its prjectile improved a little bit - you can now see its damage over time effect better and also now its visible when landing on water.
 -- Yolona Oss now has a more diverse price - more energy and less mass cost.
--- Pagaron got a price increase - now it costs the same as in the normal game, but since in there is less mass income its much harder to build.
+-- Pagaron got a price increase - now it costs the same as in the normal game, but since in there is less mass income its harder to build.
 
 - novax satellite -> fixed a bug in the code
 -- speed 8 [6]

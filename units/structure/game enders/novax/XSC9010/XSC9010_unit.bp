@@ -2,23 +2,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsc9010", 
 
-    Audio = {
-        DeathExplosion = Sound {
-            Bank = 'XSL_Destroy',
-            Cue = 'XSB_Destroy_Lrg_PreDestroy',
-            LodCutoff = 'UnitMove_LodCutoff',
-        },
-        Destroyed = Sound {
-            Bank = 'XSL_Destroy',
-            Cue = 'XSB_Destroy_Huge',
-            LodCutoff = 'UnitMove_LodCutoff',
-        },
-        UISelection = Sound {
-            Bank = 'SeraphimSelect',
-            Cue = 'Seraphim_Select_Structure',
-            LodCutoff = 'UnitMove_LodCutoff',
-        },
-    },
     Categories = {
         --'INVULNERABLE',
         'UEF',      --sera
@@ -35,8 +18,8 @@ BlueprintId = "xsc9010",
     CollisionOffsetZ = 0,
     Defense = {
         ArmorType = 'Normal',
-        Health = 50,
-        MaxHealth = 50,
+        Health = 0,
+        MaxHealth = 0,
         RegenRate = 0,
     },
     Description = '<LOC xsc9010_desc>Jammer Crystal',
@@ -45,7 +28,7 @@ BlueprintId = "xsc9010",
             IconFadeInZoom = 99999999,
             LODs = {
                 {
-                    LODCutoff = 120,
+                    LODCutoff = 20,
                     ShaderName = 'Seraphim',
                 },
             },
@@ -84,7 +67,7 @@ BlueprintId = "xsc9010",
         Icon = 'land',
         SelectionPriority = 5,
         TechLevel = 'RULEUTL_Basic',
-        UnitWeight = 1,
+        UnitWeight = 0,
     },
     Intel = {
         VisionRadius = 0,   --add
@@ -97,9 +80,9 @@ BlueprintId = "xsc9010",
     Interface = {
         HelpText = '<LOC xsc9010_help>Jammer Crystal',
     },
-    LifeBarHeight = 0.075,
-    LifeBarOffset = 0.6,
-    LifeBarSize = 1,
+    LifeBarHeight = 0.001,
+    LifeBarOffset = 0.001,
+    LifeBarSize = 0.001,
     Physics = {
         BankingSlope = 0,
         BuildOnLayerCaps = {
@@ -124,12 +107,11 @@ BlueprintId = "xsc9010",
         TurnRadius = 0,
         TurnRate = 80,
     },
-    SelectionSizeX = 0.3,
-    SelectionSizeZ = 0.3,
-    SelectionThickness = 1.2,
+    SelectionSizeX = 0.01,
+    SelectionSizeZ = 0.01,
+    SelectionThickness = 0.01,
     SizeX = 0.01,
     SizeY = 0.01,
     SizeZ = 0.01,
     StrategicIconName = 'icon_bot3_armored',    --from bot3_directfire
-    StrategicIconSortPriority = 207,
 }
