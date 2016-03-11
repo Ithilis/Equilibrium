@@ -24,8 +24,8 @@ UnitBlueprint {
         MaxSpeed = 3,
     },
     Defense = {
-        Health = 550,
-        MaxHealth = 550,
+        Health = 500,
+        MaxHealth = 500,
     },
     Intel = {
         VisionRadius = 28,
