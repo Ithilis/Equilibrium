@@ -1,6 +1,8 @@
 v. 35
 -----
 
+-- uef stealth generator get jamming ability, 4 blips, disabled from start
+
 Drain reason change:
 
 - T1 mex 30m (20) 300e (250e) 

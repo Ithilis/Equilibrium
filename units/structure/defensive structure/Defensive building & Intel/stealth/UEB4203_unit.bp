@@ -10,6 +10,7 @@ BlueprintId = "ueb4203",
     Display = {
         Abilities = {
             '<LOC ability_stealthfield>Stealth Field',
+            '<LOC ability_jamming>Jamming',
         },
     },
     Economy = {
@@ -18,8 +19,24 @@ BlueprintId = "ueb4203",
         BuildTime = 500,
         MaintenanceConsumptionPerSecondEnergy = 125,
     },
+    General = {
+        OrderOverrides = {
+            RULEUTC_JammingToggle = {
+                bitmapId = 'jamming',
+                helpText = 'toggle_jamming',
+            },
+        },
+        ToggleCaps = {
+            RULEUTC_JammingToggle = true,
+        },
+    },
     Intel = {
         RadarStealthFieldRadius = 24,
         SonarStealthFieldRadius = 24,
+        JamRadius = {
+            Max = 12,
+            Min = 12,
+        },
+        JammerBlips = 4,
     },
 }
