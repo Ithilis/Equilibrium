@@ -56,7 +56,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         if MissileCheck < 10 then -- if we havent switched then start launch procedures
             self:SetTurnRate(50) -- high turn rate cos target is really close!
             else 
-            self:SetTurnRate(8) -- making the missile go up a bit before activating tracking/long range mode
+            self:SetTurnRate(12) -- making the missile go up a bit before activating tracking/long range mode
         end
         
         WaitSeconds(0.8)    
@@ -68,7 +68,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         if dist > self.Distance then
         	self:SetTurnRate(75)
         	WaitSeconds(3)
-        	self:SetTurnRate(50)
+        	self:SetTurnRate(60)
         	self.Distance = self:GetDistanceToTarget()
         end
         if dist > 50 then        
@@ -76,14 +76,14 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
             self:SetTurnRate(10)
             WaitSeconds(2)
         elseif dist > 30 and dist <= 50 then
-						self:SetTurnRate(12)
+						self:SetTurnRate(20)
 						WaitSeconds(1.5)
-            self:SetTurnRate(12)
+            self:SetTurnRate(20)
         elseif dist > 10 and dist <= 25 then
             WaitSeconds(0.3)
-            self:SetTurnRate(50)
+            self:SetTurnRate(75)
 				elseif dist > 0 and dist <= 10 then           
-            self:SetTurnRate(60)
+            self:SetTurnRate(75)
             KillThread(self.MoveThread)         
         end
     end,        

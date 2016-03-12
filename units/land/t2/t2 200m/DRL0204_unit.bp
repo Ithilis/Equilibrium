@@ -21,7 +21,7 @@ UnitBlueprint {
     Physics = {
         MaxAcceleration = 3,
         MaxBrake = 3,
-        MaxSpeed = 3,
+        MaxSpeed = 2.8,
     },
     Defense = {
         Health = 500,
@@ -47,6 +47,8 @@ UnitBlueprint {
         DamageFriendly = false,
         MaxRadius = 38,
         RateOfFire = 0.2,    --from 0,25 = 5s 
+        TurretPitchRange = 45,
+        TurretYawSpeed = 90,
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMAND',            --acu is hight priority

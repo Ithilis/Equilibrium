@@ -8,7 +8,7 @@ BlueprintId = "xsl0111",
     },
     Display = {
         Abilities = {
-            '<LOC ability_Homing missile',
+            '<LOC ability_Homing missile>',
         },
     }, 
     Economy = {
