@@ -10,6 +10,7 @@ BlueprintId = "uab4203",
     Display = {
         Abilities = {
             '<LOC ability_stealthfield>Stealth Field',
+            '<LOC ability_armouredmode>Armoured Mode',
         },
     },
     Economy = {
