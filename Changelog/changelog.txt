@@ -1,7 +1,6 @@
 v. 35
 -----
 
--- uef stealth generator get jamming ability, 4 blips, disabled from start
 
 Drain reason change:
 
@@ -28,6 +27,9 @@ There were some improvements and rebalances in this version:
 -- dps 60 (55) [60], aoe 1.5 (1), reload time 10s (5s) [10s]
 -- missile hp 2 [(1)], speed acceleration 2  [(3)] max speed 10 (12)
 
+- There were some interesting features added to stationary stealth generators for the two factions which didn't have anything for them:
+-- UEF stealth generator now has a jamming ability, which creates 4 structure blips - disabled by default. Fake T2 PD!
+-- Aeon stealth generator also has a new feature - additional armour in its packed (turned off) state: it receives 10x as much HP and a 5/s regen - upon unpacking you keep the same proportion of HP as when it is packed.
 
 
 - T1 bombers got another balance pass after providing Zock with a mini-mod, which helped get more testing done:
