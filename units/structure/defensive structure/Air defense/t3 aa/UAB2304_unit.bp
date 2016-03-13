@@ -4,25 +4,51 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uab2304",
 
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
+    Categories = {
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'STRUCTURE',
+        'EQSTRUCTRESETAIM', -- special category for equilibrium: this lets us reset the turret position on a structure as if its a unit.
+        'DEFENSE',
+        'TECH3',
+        'ANTIAIR',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYANTIAIR',
+        'SORTDEFENSE',
+        'HEAVY',
     },
+    Display = {
+        Abilities = {
+            '<LOC ability_Pop-up>Pop-up turret',
+            '<LOC ability_aa>Anti-Air',
+            '<LOC ability_aquatic>Aquatic',
+        },
+        AnimationPermOpen = 'UAB2304_Animation_NIL.sca',
+    },
+    
     Economy = {
         BuildCostEnergy = 12000,
         BuildCostMass = 1200,
         BuildTime = 1000,
     },
-    Veteran = {
-        Level1 = 16,
-        Level2 = 32,
-        Level3 = 48,
-        Level4 = 64,
-        Level5 = 80,
+
+    Weapon = {
+        {
+            AlwaysRecheckTarget = true,
+            AimsStraightOnDisable = true,
+            TurretYawSpeed = 180,
+            TrackingRadius = 1.6,
+            WeaponRepackTimeout = 2.5,
+            WeaponUnpackAnimation = '/units/UAB2304/UAB2304_Aopen.sca',
+            WeaponUnpackAnimationRate = 3.0,
+            WeaponUnpacks = true,
+        },
+
     },
+
 }
