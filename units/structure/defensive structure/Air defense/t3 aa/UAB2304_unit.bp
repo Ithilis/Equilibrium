@@ -10,7 +10,6 @@ BlueprintId="uab2304",
         'BUILTBYTIER3COMMANDER',
         'AEON',
         'STRUCTURE',
-        'EQSTRUCTRESETAIM', -- special category for equilibrium: this lets us reset the turret position on a structure as if its a unit.
         'DEFENSE',
         'TECH3',
         'ANTIAIR',
@@ -28,7 +27,7 @@ BlueprintId="uab2304",
             '<LOC ability_aa>Anti-Air',
             '<LOC ability_aquatic>Aquatic',
         },
-        AnimationPermOpen = 'UAB2304_Animation_NIL.sca',
+        AnimationPermOpen = 'UAB2304_Animation_NIL.sca', -- essentially deleting the open animation since it now does this on fire.
     },
     
     Economy = {
@@ -41,10 +40,10 @@ BlueprintId="uab2304",
         {
             AlwaysRecheckTarget = true,
             AimsStraightOnDisable = true,
-            TurretYawSpeed = 180,
+            TurretYawSpeed = 180, -- all these are added to help maintain its performance when unpacking - it works just like uef sam now.
             TrackingRadius = 1.6,
             WeaponRepackTimeout = 2.5,
-            WeaponUnpackAnimation = '/units/UAB2304/UAB2304_Aopen.sca',
+            WeaponUnpackAnimation = '/units/UAB2304/UAB2304_Aopen.sca', -- reusing the original animation
             WeaponUnpackAnimationRate = 3.0,
             WeaponUnpacks = true,
         },
