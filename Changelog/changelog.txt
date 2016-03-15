@@ -1,6 +1,15 @@
 v. 35
 -----
 
+- kennel 1
+-- 300m 3000e 750bt (325m 3250e 812,5bt)
+- kennel 2 
+-- 300m 3000e 1500bt (325m 4875e 1625bt)
+- hive 3
+-- 2750e (4125e)
+---> reson: have same price for upgrade that provide same as build new building. 
+
+
 
 Drain reason change:
 
