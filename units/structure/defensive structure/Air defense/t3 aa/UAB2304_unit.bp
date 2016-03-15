@@ -29,13 +29,11 @@ BlueprintId="uab2304",
         },
         AnimationPermOpen = 'UAB2304_Animation_NIL.sca', -- essentially deleting the open animation since it now does this on fire.
     },
-    
     Economy = {
         BuildCostEnergy = 12000,
         BuildCostMass = 1200,
         BuildTime = 1000,
     },
-
     Weapon = {
         {
             AlwaysRecheckTarget = true,
@@ -49,5 +47,4 @@ BlueprintId="uab2304",
         },
 
     },
-
 }
