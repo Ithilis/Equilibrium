@@ -1,10 +1,12 @@
+--T3 Land factory
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uab0301",    
 
     Defense = {
-        Health = 20000,
-        MaxHealth = 20000,
+        Health = 14000,
+        MaxHealth = 14000,
     },
     Economy = {
         BuildCostEnergy = 36000,

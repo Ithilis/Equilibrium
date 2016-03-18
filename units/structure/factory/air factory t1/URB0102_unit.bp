@@ -4,7 +4,11 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "urb0102", 
 
-Economy = {
+    Defense = {
+        Health = 3375,
+        MaxHealth = 3375,
+    },
+    Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 210,
         BuildRate = 20,

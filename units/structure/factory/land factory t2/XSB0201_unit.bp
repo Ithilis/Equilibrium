@@ -1,8 +1,14 @@
+--T2 Land factory
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsb0201",
 
-Economy = {
+    Defense = {
+        Health = 7250,
+        MaxHealth = 7250,
+    },
+    Economy = {
         BuildCostEnergy = 6000,
         BuildCostMass = 1200,
         BuildRate = 50,

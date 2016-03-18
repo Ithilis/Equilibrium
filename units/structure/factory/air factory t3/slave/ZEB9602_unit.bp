@@ -4,6 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "zeb9602", 
 
+    Defense = {
+        Health = 7500,
+        MaxHealth = 7500,
+    },
     Economy = {
         BuildCostEnergy = 38000,    --from 45 000
         BuildCostMass = 1320,

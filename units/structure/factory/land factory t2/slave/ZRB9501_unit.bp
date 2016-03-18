@@ -1,8 +1,14 @@
+--T2 Slave Land factory
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "zrb9501",
 
-Economy = {
+    Defense = {
+        Health = 3375,
+        MaxHealth = 3375,
+    },
+    Economy = {
         BuildCostEnergy = 3000,
         BuildCostMass = 600,
         BuildRate = 50,

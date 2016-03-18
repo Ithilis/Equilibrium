@@ -1,6 +1,71 @@
 v. 35
 -----
 
+factory hp change:
+
+- T1 Air/Land
+--Cybran 3375hp [3500hp]
+--Aeon 3500hp [3700hp]
+--sera 3625hp [3700hp/3900hp air]
+--uef 3750hp [4100hp]
+
+- T1 Naval
+--Cybran 4750hp [4200hp]
+--Aeon 5000hp [4400hp]
+--sera 5250hp [4600hp]
+--uef 5500hp [4800hp]
+________________________________
+- T2 Air/Land HQ (t1x2)
+--Cybran 6750hp [7800hp]
+--Aeon 7000hp [8200hp]
+--sera 7250hp [8200hp]
+--uef 7500hp [9000hp]
+
+- T2 Naval HQ (t1x2)
+--Aeon 10000hp [1600hp]
+--sera 10500hp [1700hp]
+--uef 11000hp [1800hp]
+--Cybran 15000hp [1500hp]	-->because dont have shield
+
+- T2 Air/Land Support (t1)
+--Cybran 3375hp [3900hp]
+--Aeon 3500hp [4100hp]
+--sera 3625hp [4100hp/4300 air]
+--uef 3750hp [4500hp]
+
+- T2 Naval Support (t2x0,75)
+--Aeon 7500hp [8000hp]
+--sera 7875hp [8500hp]
+--uef 8250hp [9000hp]
+--Cybran 11250hp [7500hp]
+________________________________
+- T3 Air/Land HQ (t2x2)
+--Cybran 13500hp [19000hp]
+--Aeon 14000hp [20000hp]
+--sera 14500hp [21000hp]
+--uef 15000hp [2200hp]
+
+- T3 Naval HQ (t2x2)
+--Aeon 20000hp (35000hp) [37500hp]
+--sera 21000hp (35000hp) [38000hp]
+--uef 22000hp (35000hp) [40000hp]
+--Cybran 30000hp (35000hp) [34000hp]
+
+- T3 Air/Land Support (t2)
+--Cybran 6750hp [9500hp]
+--Aeon 7000hp [10000hp]
+--sera 7250hp [11000hp]
+--uef 7500hp [10500hp]
+
+- T3 Naval Support (t3x0,75)
+--Aeon 15000hp [18750hp]
+--sera 15750hp [19000hp]
+--uef 16500hp [20000hp]
+--Cybran 22500hp [17000hp]
+
+
+
+
 - kennel 1
 -- 300m 3000e 750bt (325m 3250e 812,5bt)
 - kennel 2 

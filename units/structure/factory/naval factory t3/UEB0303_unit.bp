@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "ueb0303", 
 
     Defense = {
-        Health = 35000,
-        MaxHealth = 35000,
+        Health = 22000,
+        MaxHealth = 22000,
     },
     Economy = {
         BuildCostEnergy = 66000,
