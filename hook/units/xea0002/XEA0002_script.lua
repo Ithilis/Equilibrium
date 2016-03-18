@@ -20,57 +20,7 @@ XEA0002 = Class(TAirUnit) {
         OrbitalDeathLaserWeapon = Class(TOrbitalDeathLaserBeamWeapon){},
     },
     
-    OnCreate = function(self, builder, layer)
-        self:ForkThread(self.LandBlipThread)
-        self:ForkThread(self.AirBlipThread)
-    end,
-    
-    LandBlipThread = function(self)
-        local position = self:GetPosition()
 
-        while not self:IsDead() do
-            --Spawn land blips
-            self.landChildUnit = CreateUnitHPR('XSC9010', self:GetArmy(), position[1], position[2], position[3], 0, 0, 0)
-            self.landChildUnit.parentCrystal = self
-            
-            IssuePatrol({self.landChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-            IssuePatrol({self.landChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-            IssuePatrol({self.landChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-            IssuePatrol({self.landChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-
-            WaitSeconds(Random(7,13))
-
-            self.landChildUnit:Destroy()
-            self.landChildUnit = nil
-
-            #WaitSeconds(Random(2,7))
-        end
-    end,
-
-    AirBlipThread = function(self)
-        local position = self:GetPosition()
-
-        while not self:IsDead() do
-            --Spawn air blips
-            self.airChildUnit = CreateUnitHPR('XSC9011', self:GetArmy(), position[1], position[2], position[3], 0, 0, 0)
-            self.airChildUnit.parentCrystal = self
-
-            IssuePatrol({self.airChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-            IssuePatrol({self.airChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-            IssuePatrol({self.airChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-            IssuePatrol({self.airChildUnit}, {position[1] + Random(-10, 10), position[2], position[3] + Random(-10, 10)})
-
-            WaitSeconds(Random(7,13))
-
-            self.airChildUnit:Destroy()
-            self.airChildUnit = nil
-
-            #WaitSeconds(Random(2,7))
-        end
-    end,
-    
-    
-    
     
     OnKilled = function(self, instigator, type, overkillRatio)
         if self.IsDying then 
