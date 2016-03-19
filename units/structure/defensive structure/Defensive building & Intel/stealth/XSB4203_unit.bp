@@ -12,6 +12,15 @@ BlueprintId = "xsb4203",
             '<LOC ability_stealthfield>Stealth Field',
             '<LOC ability_cloak>Cloaking',
         },
+        Tarmacs = {
+            {
+                DeathLifetime = 30,
+                FadeOut = 5,
+                Length = 0.1,
+                RemoveWhenDead = true,
+                Width = 0.1,
+            },
+        },        
     },
     Economy = {
         BuildCostEnergy = 6000,

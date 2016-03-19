@@ -104,7 +104,7 @@ There were some improvements and rebalances in this version:
 - There were some interesting features added to stationary stealth generators for the two factions which didn't have anything for them:
 -- UEF stealth generator now has a jamming ability, which creates 4 structure blips - disabled by default. Fake T2 PD!
 -- Aeon stealth generator also has a new feature - additional armour in its packed (turned off) state: it receives 10x as much HP and a 5/s regen - upon unpacking you keep the same proportion of HP as when it is packed.
-
+-- Sera stealth generatorremove tarmac under building
 
 - T1 bombers got another balance pass after providing Zock with a mini-mod, which helped get more testing done:
 -- tweaked maneuverability a little bit
