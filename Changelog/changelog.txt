@@ -1,11 +1,6 @@
 v. 35
 -----
 
-- T1 mobile AA price optimalization +50% cost +25%dmg +50hp  -> reason is make it more as t1 units by price
---A/u/s 45m (30m) 225e (150e) 225bt (150bt) 
----250hp (200hp) 24dps(20)
-
-
 factory hp change:
 
 - T1 Air/Land
