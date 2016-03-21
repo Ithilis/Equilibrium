@@ -44,8 +44,6 @@ UEB4203 = Class(TRadarJammerUnit) {
         if self.stealth == true then
             self.StealthDrain = 125
         end
-        WARN('jamming in calcdrain', self.JamDrain)
-        WARN('stealth in calcdrain', self.StealthDrain)
         self:SetMaintenanceConsumptionActive()
         self:SetConsumptionPerSecondEnergy(self.StealthDrain + self.JamDrain)
         
@@ -68,7 +66,6 @@ UEB4203 = Class(TRadarJammerUnit) {
             self:DisableUnitIntel('ToggleBit2', 'Jammer')
             self.jamming = false
             self:CalcDrain()
-            WARN('jamming', self.jamming)
         elseif bit == 3 then --Intel toggle
             self:StopUnitAmbientSound( 'ActiveLoop' )
             self:SetMaintenanceConsumptionInactive()
@@ -94,7 +91,6 @@ UEB4203 = Class(TRadarJammerUnit) {
             self:DisableUnitIntel('ToggleBit5', 'SonarStealthField')
             self.stealth = false
             self:CalcDrain()
-            WARN('stealth', self.stealth)
         elseif bit == 6 then --Generic pause toggle
             self:SetPaused(true)
         elseif bit == 7 then --Special toggle
@@ -117,7 +113,6 @@ UEB4203 = Class(TRadarJammerUnit) {
             self:EnableUnitIntel('ToggleBit2', 'Jammer')
             self.jamming = true
             self:CalcDrain()
-            WARN('jamming', self.jamming)
         elseif bit == 3 then --Intel toggle
             self:PlayUnitAmbientSound( 'ActiveLoop' )
             self:SetMaintenanceConsumptionActive()
@@ -143,7 +138,6 @@ UEB4203 = Class(TRadarJammerUnit) {
             self:EnableUnitIntel('ToggleBit5', 'SonarStealthField')
             self.stealth = true
             self:CalcDrain()
-            WARN('stealth', self.stealth)
         elseif bit == 6 then --Generic pause toggle
             self:SetPaused(false)
         elseif bit == 7 then --Special toggle
