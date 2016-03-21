@@ -4,3 +4,5 @@
 - We maintain a complete, interactive changelog here: http://equilibrium.x10host.com/changelog/ 
 - We put a lot of time and effort to bring you this mod, and we hope you enjoy it as much as everyone else who has played it so far.
 - If you have any feedback, we will be happy to listen to you. However please back up your opinions with replay evidence first.
+
+- This mod is intended to be played without other sim mods! We can't guarantee compatibility or any balance if you turn 50 different mods on!
