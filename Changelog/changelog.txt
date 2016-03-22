@@ -1,6 +1,11 @@
 v. 35
 -----
 
+- aeon t2 static flak add pop-up animation (target bones when packed is not work corectly)
+
+- sera t2 static field generator - remove tarmac under building
+
+
 factory hp change:
 
 - T1 Air/Land
