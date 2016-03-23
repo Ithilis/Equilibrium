@@ -1,93 +1,6 @@
 v. 35
 -----
 
-- aeon t2 static flak add pop-up animation (target bones when packed is not work corectly)
-
-- sera t2 static field generator - remove tarmac under building
-
-
-factory hp change:
-
-- T1 Air/Land
---Cybran 3375hp [3500hp]
---Aeon 3500hp [3700hp]
---sera 3625hp [3700hp/3900hp air]
---uef 3750hp [4100hp]
-
-- T1 Naval
---Cybran 4750hp [4200hp]
---Aeon 5000hp [4400hp]
---sera 5250hp [4600hp]
---uef 5500hp [4800hp]
-________________________________
-- T2 Air/Land HQ (t1x2)
---Cybran 6750hp [7800hp]
---Aeon 7000hp [8200hp]
---sera 7250hp [8200hp]
---uef 7500hp [9000hp]
-
-- T2 Naval HQ (t1x2)
---Aeon 10000hp [1600hp]
---sera 10500hp [1700hp]
---uef 11000hp [1800hp]
---Cybran 15000hp [1500hp]	-->because dont have shield
-
-- T2 Air/Land Support (t1)
---Cybran 3375hp [3900hp]
---Aeon 3500hp [4100hp]
---sera 3625hp [4100hp/4300 air]
---uef 3750hp [4500hp]
-
-- T2 Naval Support (t2x0,75)
---Aeon 7500hp [8000hp]
---sera 7875hp [8500hp]
---uef 8250hp [9000hp]
---Cybran 11250hp [7500hp]
-________________________________
-- T3 Air/Land HQ (t2x2)
---Cybran 13500hp [19000hp]
---Aeon 14000hp [20000hp]
---sera 14500hp [21000hp]
---uef 15000hp [2200hp]
-
-- T3 Naval HQ (t2x2)
---Aeon 20000hp (35000hp) [37500hp]
---sera 21000hp (35000hp) [38000hp]
---uef 22000hp (35000hp) [40000hp]
---Cybran 30000hp (35000hp) [34000hp]
-
-- T3 Air/Land Support (t2)
---Cybran 6750hp [9500hp]
---Aeon 7000hp [10000hp]
---sera 7250hp [11000hp]
---uef 7500hp [10500hp]
-
-- T3 Naval Support (t3x0,75)
---Aeon 15000hp [18750hp]
---sera 15750hp [19000hp]
---uef 16500hp [20000hp]
---Cybran 22500hp [17000hp]
-
-
-
-
-- kennel 1
--- 300m 3000e 750bt (325m 3250e 812,5bt)
-- kennel 2 
--- 300m 3000e 1500bt (325m 4875e 1625bt)
-- hive 3
--- 2750e (4125e)
----> reson: have same price for upgrade that provide same as build new building. 
-
-
-
-Drain reason change:
-
-- T1 mex 30m (20) 300e (250e) 
-- T2 mex 6000e (5900e)
-- T3 mex 40 000e (38 000e)
-_________
-
 There were some improvements and rebalances in this version:
 
 
@@ -106,16 +19,16 @@ There were some improvements and rebalances in this version:
 -- dps 60 (55) [60], aoe 1.5 (1), reload time 10s (5s) [10s]
 -- missile hp 2 [(1)], speed acceleration 2  [(3)] max speed 10 (12)
 
-- There were some interesting features added to stationary stealth generators for the two factions which didn't have anything for them:
+- There were some interesting features added to stationary stealth generators, making all four factions have something unique:
 -- UEF stealth generator now has a jamming ability, which creates 4 structure blips - disabled by default. Fake T2 PD!
 -- Aeon stealth generator also has a new feature - additional armour in its packed (turned off) state: it receives 10x as much HP and a 5/s regen - upon unpacking you keep the same proportion of HP as when it is packed.
--- Sera stealth generatorremove tarmac under building
+-- Sera stealth generator has had selenstyle personal cloak on its building for a while now, and now it has invisible tarmac to match.
 
 - T1 bombers got another balance pass after providing Zock with a mini-mod, which helped get more testing done:
 -- tweaked maneuverability a little bit
 -- cybran - 3aoe (3,5) [3] + removed useless code
 -- sera 4aoe (4,5) [4]
--- improved uef and cybran bombers a little - they should now drop a bit better
+-- improved uef and cybran bombers a little  they should now drop a bit better, although this should be obsolete with the new (finally) bomber fixes with patch 3652.
 
 
 
@@ -145,7 +58,7 @@ There were some improvements and rebalances in this version:
 
 
 
--Torpedo bombers are a bit nicer to use - they now turn faster but have the same performance.
+-Torpedo bombers are a bit nicer to use  they now turn faster (still painfully slow though) but have the same performance.
 
 
 
@@ -168,14 +81,97 @@ There were some improvements and rebalances in this version:
 
 
 
+Factories got their long awaited hp nerfs so that its a little easier to snipe hqs, and so you need to think about their placement a little more. (also you can always use shields!)
 
+- T1 Air/Land
+--Cybran 3375hp [3500hp]
+--Aeon 3500hp [3700hp]
+--sera 3625hp [3700hp/3900hp air]
+--uef 3750hp [4100hp]
+
+- T1 Naval
+--Cybran 4750hp [4200hp]
+--Aeon 5000hp [4400hp]
+--sera 5250hp [4600hp]
+--uef 5500hp [4800hp]
+________________________________
+- T2 Air/Land HQ (t1x2)
+--Cybran 6750hp [7800hp]
+--Aeon 7000hp [8200hp]
+--sera 7250hp [8200hp]
+--uef 7500hp [9000hp]
+
+- T2 Naval HQ (t1x2)
+--Aeon 10000hp [16000hp]
+--sera 10500hp [17000hp]
+--uef 11000hp [18000hp]
+--Cybran 15000hp [15000hp]	-->because cybrans dont have naval shields, so you cant defend hq vs snipes.
+
+- T2 Air/Land Support (t1)
+--Cybran 3375hp [3900hp]
+--Aeon 3500hp [4100hp]
+--sera 3625hp [4100hp/4300 air]
+--uef 3750hp [4500hp]
+
+- T2 Naval Support (t2x0,75)
+--Aeon 7500hp [8000hp]
+--sera 7875hp [8500hp]
+--uef 8250hp [9000hp]
+--Cybran 11250hp [7500hp]
+________________________________
+- T3 Air/Land HQ (t2x2)
+--Cybran 13500hp [19000hp]
+--Aeon 14000hp [20000hp]
+--sera 14500hp [21000hp]
+--uef 15000hp [22000hp]
+
+- T3 Naval HQ (t2x2)
+--Aeon 20000hp (35000hp) [37500hp]
+--sera 21000hp (35000hp) [38000hp]
+--uef 22000hp (35000hp) [40000hp]
+--Cybran 30000hp (35000hp) [34000hp]
+
+- T3 Air/Land Support (t2)
+--Cybran 6750hp [9500hp]
+--Aeon 7000hp [10000hp]
+--sera 7250hp [11000hp]
+--uef 7500hp [10500hp]
+
+- T3 Naval Support (t3x0,75)
+--Aeon 15000hp [18750hp]
+--sera 15750hp [19000hp]
+--uef 16500hp [20000hp]
+--Cybran 22500hp [17000hp]
+
+Small tweaks to mex prices:
+
+- T1 mex 30m (20) 300e (250e) 
+- T2 mex 6000e (5900e)
+- T3 mex 40 000e (38 000e)
+
+Kennels got their prices adjusted as well:
+- kennel 1
+-- 300m 3000e 750bt (325m 3250e 812,5bt)
+- kennel 2 
+-- 300m 3000e 1500bt (325m 4875e 1625bt)
+
+Same goes for the level 3 hive:
+- hive 3
+-- 2750e (4125e)
+---> reason: they now have the same price so you can upgrade or build a new building (pros and cons for each choice)
+
+
+
+
+
+_________
 General mod structure, organization and versioning improved a little bit
 
 - removed some useless code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon part from "unitview.lua" now the mod should be smaller in size.
 - Mecries had some useless code which was removed.
 
 
-
+_________
 
 There were some fixes of both the normal game and the previous version of the mod:
 
@@ -190,7 +186,7 @@ There were some fixes of both the normal game and the previous version of the mo
 - GC tractor claws were experiencing buggy behavior so they were adjusted to be more consistent & reasonable - now you get the improved version from the base game without it being silly.
 -- reload time 10s [0,1s]
 
-- reverted the upgradable building stealth fix - it stopped working and serves no purpose now.
+- reverted the upgradable building stealth fix  it stopped working at some point in the past and serves no purpose now.
 
 
 
