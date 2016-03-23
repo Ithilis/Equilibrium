@@ -3,7 +3,11 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uab2204",
-    
+    --[[AI = { -- this fixes the aeon flak targetting issue - even gpg never had targeting bones set up for this!! 
+        TargetBones = { -- but thing is it also has balance implications which EQ version 35 is not ready to have, leaving this here for later use.
+            'B03',
+        },
+    },]]--
     
     Buffs = {
         Regen = {
