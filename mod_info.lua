@@ -14,3 +14,8 @@ requiresNames = {}
 conflicts = {}
 before = {}
 after = {}
+_faf_modname='equilibrium'
+mountpoints = {
+    "." = "/mods/equilibrium",
+    ["."] = "/mods/equilibrium",
+}
