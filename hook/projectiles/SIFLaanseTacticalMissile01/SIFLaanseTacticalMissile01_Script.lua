@@ -18,8 +18,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         self.MoveThread = self:ForkThread(self.MovementThread)
     end,
 
-    MovementThread = function(self)        
-        self.WaitTime = 0.1
+    MovementThread = function(self)
         self.Distance = self:GetDistanceToTarget()
         local MissileCheck = self.Distance
         
@@ -27,9 +26,9 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
         local DamageMult = 2 -- how much more damage our long range missile deals.
         
         if MissileCheck < 40 then -- check if we want to use the short range missile or not.    
-            Target = self:GetTrackingTarget()       -- if the target is a building then we use the "non-homing" missile, actually its homing but buildings cant move so it doesnt matter - and this helps ensure an impact at low ranges.
+            self.Target = self:GetTrackingTarget()       -- if the target is a building then we use the "non-homing" missile, actually its homing but buildings cant move so it doesnt matter - and this helps ensure an impact at low ranges.
             
-            if EntityCategoryContains(categories.STRUCTURE, Target) == true then 
+            if EntityCategoryContains(categories.STRUCTURE, self.Target) == true then 
                 self.DamageData.DamageAmount = self.DamageData.DamageAmount * DamageMult
             end
             
@@ -43,7 +42,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
             WaitSeconds( 0.1 )
                 -- get own values and prepare to create new projectile
             local vx, vy, vz = self:GetVelocity()
-            local ChildProjectileBP = '/Mods/Equilibrium/projectiles/SIFLaanseTacticalMissile02EQ/SIFLaanseTacticalMissile02EQ_proj.bp'   -- this is the tml one i think - needs changing to its own custom one! as soon as i get that to work :(
+            local ChildProjectileBP = '/Mods/Equilibrium_Balance_mod/projectiles/SIFLaanseTacticalMissile02EQ/SIFLaanseTacticalMissile02EQ_proj.bp'   -- this is the tml one i think - needs changing to its own custom one! as soon as i get that to work :(
             
             self.DamageData.DamageAmount = (self.DamageData.DamageAmount * DamageMult) --increase the damage since we are going into long range mode
             
