@@ -1,8 +1,8 @@
-name = "Equilibrium Balance Mod"
-uid = "RELEASE1-V35R-4785-9856-EQBALANCEMOD"
-version = 35
+name = "Equilibrium Testing"
+uid = "DEVELOP1-V36D-8367-1375-EQBALANCEMOD"
+version = 36
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod."
-description = "Fixes all the common issues with the game, and improves the balance to a much higher level."
+description = "This is the testing version of equilibrium! Use at your own risk!"
 icon = "/mods/Equilibrium_balance_mod/Equilibrium_balance_mod.png"
 author = "Ithilis"
 selectable = true
@@ -16,6 +16,5 @@ before = {}
 after = {}
 _faf_modname='equilibrium'
 mountpoints = {
-    "." = "/mods/equilibrium",
     ["."] = "/mods/equilibrium",
 }
