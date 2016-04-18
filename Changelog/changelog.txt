@@ -4,7 +4,7 @@ v. 35
 there were some errors in the online changelog which have now been fixed:
 - valiant base game speed is 5 not 6
 - harms in equilibrium has 12500 hp not 1250
-
+- selen in equilibrium has 75 hp not 85
 
 v. 35
 -----
