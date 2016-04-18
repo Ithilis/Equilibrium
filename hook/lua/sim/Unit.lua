@@ -47,8 +47,11 @@ Unit = Class(oldUnit) {
         for k, damageDealt in unitKilled.Instigators do
             -- k should be a unit's entity ID
             if k and not k.Dead and k.Sync.VeteranLevel ~= 5 then
+                -- Make sure that if the unit dies and  did not recieve full damage, its total hp is used. this stops unfinished buildings from giving full vet; same with ctrlk.
+                local TotalDamage = math.max(unitKilled.totalDamageTaken , unitKilled:GetMaxHealth())
+                
                 -- Find the proportion of yourself that each instigator killed
-                local massKilled = math.floor(mass * (damageDealt / unitKilled.totalDamageTaken))
+                local massKilled = math.floor(mass * (damageDealt / TotalDamage))
                 k:OnKilledUnit(unitKilled, massKilled)
             end
         end
