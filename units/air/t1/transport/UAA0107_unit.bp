@@ -49,6 +49,7 @@ BlueprintId = "uaa0107",
         BuildCostMass = 120,        --120m
         BuildTime = 800,
         BuildRate = 3,
+        MaxBuildDistance = 2.5,     -- half build distance as engineer 
     },
     General = {
         CommandCaps = {

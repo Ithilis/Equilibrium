@@ -1,3 +1,13 @@
+v.36
+-----
+- aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
+
+- hoplite aoe 1.5 (2)
+
+
+
+
+
 v. 35
 -----
 
