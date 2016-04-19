@@ -9,7 +9,11 @@ v.36
 -- speed 10 (11)
 -- removed useless code about buff that is already overwrite by veterancy rework
 
-
+- hoplite
+-- fixing mistake in speed, add speed nerf also on acceleration and max brake
+-- fixing mistake in changelog abotu HP
+-- reload time 6s (5s) and adjust damage for 270 per salvo
+-- range 36 (38) [37]
 
 
 

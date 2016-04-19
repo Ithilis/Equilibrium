@@ -3,24 +3,15 @@
 UnitBlueprint {
     Merge = true,
     BlueprintId = "drl0204",
-
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },    
+  
     Economy = {
         BuildCostEnergy = 1000,
         BuildCostMass = 200,
         BuildTime = 1000,
     },
     Physics = {
-        MaxAcceleration = 3,
-        MaxBrake = 3,
+        MaxAcceleration = 2.8,
+        MaxBrake = 2.8,
         MaxSpeed = 2.8,
     },
     Defense = {
@@ -42,11 +33,11 @@ UnitBlueprint {
     SizeZ = 1.2,
     Weapon = {
         {
-        Damage = 75,        --225dmg per salve
+        Damage = 90,        --270dmg per salve
         DamageRadius = 2,
         DamageFriendly = false,
-        MaxRadius = 38,
-        RateOfFire = 0.2,    --from 0,25 = 5s 
+        MaxRadius = 36,     -- from 37r
+        RateOfFire = 0.16666667,    --from 0,25 = 6s 
         TurretPitchRange = 45,
         TurretYawSpeed = 90,
         TargetPriorities = {
