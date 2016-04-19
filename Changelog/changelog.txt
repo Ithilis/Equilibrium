@@ -2,7 +2,15 @@ v.36
 -----
 - aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
 
-- hoplite aoe 1.5 (2)
+- aeon bomber, EMP stun T1 7.5aoe (from 10)
+
+- T1 bombers, nerf
+-- 105m (90m) [80m] 2625e ([2250e]) 700bt (600bt) [500bt]
+-- speed 10 (11)
+-- removed useless code about buff that is already overwrite by veterancy rework
+
+
+
 
 
 
