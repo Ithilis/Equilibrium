@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsa0203",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Defense = {
         Health = 1200,
         MaxHealth = 1200,
@@ -34,13 +25,6 @@ BlueprintId = "xsa0203",
     },
     Physics = {
         FuelUseTime = 300,
-    },
-    Veteran = {
-        Level1 = 9,
-        Level2 = 18,
-        Level3 = 27,
-        Level4 = 36,
-        Level5 = 45,
     },
     Weapon = {
         {

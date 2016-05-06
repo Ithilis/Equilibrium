@@ -4,22 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0203",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 7,
-        Level2 = 14,
-        Level3 = 21,
-        Level4 = 28,
-        Level5 = 35,
-    },
     Defense = {
         Health = 850,            --from 832hp
         MaxHealth = 850,
