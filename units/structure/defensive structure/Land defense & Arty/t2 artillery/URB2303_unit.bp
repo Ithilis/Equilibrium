@@ -103,9 +103,11 @@ BlueprintId = "urb2303",
             
             Damage = 2250,                    --from 1750
             DamageRadius = 4,
+            DamageFriendly = false,
             FiringRandomness = 1.75,        --from 2,5
             MaxRadius = 120,                --from 128
-            MinRadius = 10,                    --from 5    
+            MinRadius = 10,                    --from 5
+            MuzzleVelocityReduceDistance = 128,
             RateOfFire = 0.0666,            --from 0,05 = 15s
 
             EnergyDrainPerSecond = 300,        --from 115

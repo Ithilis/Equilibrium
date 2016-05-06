@@ -33,9 +33,11 @@ BlueprintId = "ueb2303",
         {
             Damage = 3500,
             DamageRadius = 3.5,
+            DamageFriendly = false,
             FiringRandomness = 1.5,
             MaxRadius = 130,                --from 128
             MinRadius = 15,                    --from 5
+            MuzzleVelocityReduceDistance = 128,
             
             EnergyDrainPerSecond = 250,
             EnergyRequired = 2500,
