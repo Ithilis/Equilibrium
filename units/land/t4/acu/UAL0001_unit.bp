@@ -128,6 +128,12 @@ BlueprintId = "ual0001",
             TurretYawSpeed = 100,
         },
         {
+            MaxRadius = 23,
+            RateOfFire = 0.25,
+            TurretPitchSpeed = 100,
+            TurretYawSpeed = 100,
+        },
+        {
             Buffs = {
                 {
                     Add = {
@@ -135,7 +141,7 @@ BlueprintId = "ual0001",
                     },
                     BuffType = 'STUN',
                     Duration = 2,
-                    Radius = 38,
+                    Radius = 33,
                     TargetAllow = 'MOBILE',
                     TargetDisallow = 'EXPERIMENTAL,COMMAND',
                 },
@@ -148,7 +154,7 @@ BlueprintId = "ual0001",
                 Air = 'Land|Water|Air|Seabed',
             },
             
-            MaxRadius = 38,                    --from 35
+            MaxRadius = 33,                    --from 35
             RateOfFire = 0.25,                --from 5s
             
             EnergyDrainPerSecond = 400,        --from 200

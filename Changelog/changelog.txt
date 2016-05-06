@@ -15,9 +15,20 @@ v.36
 -- reload time 6s (5s) and adjust damage for 270 per salvo
 -- range 36 (38) [37]
 
-- t2 gunships 
--- remove ussles code (veterancy and buffs + some tiny in stinger), 
+- stinger
+-- remove ussles code, that fix bug with not be able to fire.
 
+- aeon acu
+-- add auto overcharge weapon, that fix, auto chrono problem that start by auto overcharge
+-- it fix wrong range
+-- chrono dumper range 33 (38) [35]
+
+- eversong
+-- projectile
+-- missile hp [1] (2)
+--- acceleration 4 [3]
+--- initial speed 10 [3]
+--- max speed 16 [12]
 
 
 
