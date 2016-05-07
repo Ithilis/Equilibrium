@@ -24,6 +24,10 @@ BlueprintId = "ura0203",
         {
             Damage = 20,
             DamageRadius = 3.5,        --from 3, because corsair is weak against army
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             FiringRandomness = 0,
             FiringTolerance = 0.1,
             MaxRadius = 26,        --from 22 because need stop for firing, because rocket

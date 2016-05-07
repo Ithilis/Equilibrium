@@ -30,6 +30,10 @@ BlueprintId = "xsa0203",
         {
             Damage = 20,                --from12 = 80dps
             DamageRadius = 0.5,            --from 0
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 24,                --from 22r
             ProjectilesPerOnFire = 2,    --from 4
             RateOfFire = 1,                --from 1.25 = 1,5s
@@ -37,9 +41,13 @@ BlueprintId = "xsa0203",
         {
             Damage = 20,                --from12
             DamageRadius = 0.5,            --from 0
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 24,                --from 22r
-            ProjectilesPerOnFire = 2,
-            RateOfFire = 1,
+            ProjectilesPerOnFire = 2,    --from 4
+            RateOfFire = 1,                --from 1.25 = 1,5s
         },
         {
             Damage = 250,

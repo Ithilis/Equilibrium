@@ -23,6 +23,10 @@ BlueprintId = "xra0105",
     Weapon = {
         {
             Damage = 22,    --from 16 =55dps
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 20,
             RateOfFire = 2.5,    --from3 = 0,4s
         },

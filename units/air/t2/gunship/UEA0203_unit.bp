@@ -22,6 +22,10 @@ BlueprintId = "uea0203",
     },
     Weapon = {
         {
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
         },
         {
             Damage = 250,
