@@ -30,6 +30,16 @@ v.36
 --- initial speed 10 [3]
 --- max speed 16 [12]
 
+- T1 AA 50m 250e 250bt (except cybran)  
+-- aeon 305hp
+-- sera 310hp
+-- uef 320hp
+
+- T1 bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
+-- cybran 50dmg = 300 (from 60 =360)
+-- sera 225dmg ([250])
+-- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
+-- aeon 120m 800bt 3000e (105m 700bt 2625e)
 
 
 v. 35

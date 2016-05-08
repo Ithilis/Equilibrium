@@ -4,9 +4,8 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0103", 
 
-
     Air = {
-        BreakOffDistance = 20,          --30
+        BreakOffDistance = 25,          --30
         CombatTurnSpeed = 2.0,          --0,75
         PredictAheadForBombDrop = 3.5,    --3
         KTurn = 0.85,                   --0,75
@@ -26,6 +25,10 @@ BlueprintId = "uea0103",
             BombDropThreshold = 7,
             DamageRadius = 3.5,            --from3
             DamageFriendly = false,
+            
+            DoTPulses = 10,
+            DoTTime = 3,         --from 1,5
+            
             FiringRandomness = 0,
             FiringTolerance = 4,
             RateOfFire = 0.1666,        --from 4s
