@@ -7,7 +7,7 @@ BlueprintId="uas0203",
     Defense = {
         Health = 575,   --550
         MaxHealth = 575,
-    }, 
+    },
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,

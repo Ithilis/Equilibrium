@@ -52,7 +52,7 @@ BlueprintId="ues0201",
             MuzzleVelocity = 15,    -- from 5
             ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
             ProjectileLifetime = 7,
-            RateOfFire = 0.5,       --from 0,1
+            RateOfFire = 0.5,       --from 0.1
         },
         {
         },
