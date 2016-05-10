@@ -26,69 +26,25 @@ BlueprintId="xss0201",
     },
     Physics = {
         Elevation = -2.5,        --from -2
-    },    
+    },
     Weapon = {
         {
         },
         {
         },
         {
-        },
-        {
-        },
-        {
-            Audio = {
-                Fire = Sound {
-                    Bank = 'XSS_Weapon',
-                    Cue = 'XSS0201_AnaIt_Torpedo',
-                    LodCutoff = 'Weapon_LodCutoff',
-                },
-            },
-            BallisticArc = 'RULEUBA_None',
-            CollideFriendly = false,
-            Damage = 250,    --100dps
-            DamageType = 'Normal',
-            DisplayName = 'Ana-it Torpedo Launcher',
+            Damage = 50,    --2* 250 = 500 damage -- my file recommends 2*80 damage every 1 second instead
             FireTargetLayerCapsTable = {
-                Water = 'Seabed|Sub',
+                Water = 'Seabed|Sub|Water',
             },
-            FiringRandomness = 1,
-            FiringTolerance = 2,
-            Label = 'Torpedo2',
             MaxRadius = 45,
             MuzzleSalvoDelay = 0.8,
             MuzzleSalvoSize = 2,
-            MuzzleVelocity = 5,
-            ProjectileId = '/projectiles/SANAnaitTorpedo01/SANAnaitTorpedo01_proj.bp',
+            MuzzleVelocity = 15,
             ProjectileLifetime = 7,
-            RackBones = {
-                {
-                    MuzzleBones = {
-                        'Projectile01',
-                    },
-                    RackBone = 'Projectile01',
-                },
-            },
-            RackFireTogether = false,
-            RackRecoilDistance = 0,
-            RackReloadTimeout = 10,
-            RackSalvoChargeTime = 0,
-            RackSalvoReloadTime = 0,
-            RackSalvoSize = 1,
-            RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_AntiNavy',
-            RateOfFire = 0.2,    
-            TargetCheckInterval = 2,
-            TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'MOBILE',
-                'STRUCTURE DEFENSE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-            TargetRestrictDisallow = 'UNTARGETABLE, HOVER',
-            Turreted = false,
-            WeaponCategory = 'Anti Navy',
+            RateOfFire = 1,  
+        },
+        {  
         },
     },
 }

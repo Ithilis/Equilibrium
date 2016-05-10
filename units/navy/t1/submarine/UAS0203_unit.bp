@@ -3,7 +3,7 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
-    
+
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
@@ -34,7 +34,10 @@ BlueprintId="uas0203",
     },
     Weapon = {
         {
-            MaxRadius = 35,    --from 32
+            Damage = 50, --2 torps per salvo; from 75
+            MaxRadius = 30,    --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5,
+            MuzzleSalvoDelay = 0.8,
         },
     },
 }

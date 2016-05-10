@@ -19,12 +19,24 @@ BlueprintId="uas0201",
             MuzzleVelocity = 30,    --from 30
             FiringRandomness = 0.3,    --from 0,25
         },
-        {
+        { -- sub + surface dps ; can be swapped out to be only sub dps if required.
             DisplayName = 'Harmonic Depth Charge',
-            Damage = 400,        --from 350 = 121dps
+            Damage = 100,        --from 350 = 20dps
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 15,
+            FireTargetLayerCapsTable = {
+                Water = 'Seabed|Sub|Water',
+            },
+            RateOfFire = 0.2,
+            
         },
-        {
-            Damage = 170,            --from 150 = 85dps on torpedo
+        { -- sub + surface dps
+            Damage = 100,            --from 150 = 40dps on torpedo
+            MaxRadius = 45,
+            MuzzleSalvoSize = 2,
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
+            RateOfFire = 0.2,
         },
         {
         },
