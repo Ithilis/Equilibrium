@@ -4,15 +4,7 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0201",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
+
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
@@ -21,13 +13,6 @@ BlueprintId="uas0201",
     Intel = {
         WaterVisionRadius = 30,    --from 45
     },
-    Veteran = {
-        Level1 = 68,
-        Level2 = 136,
-        Level3 = 204,
-        Level4 = 272,
-        Level5 = 340,
-    },
     Weapon = {
         {
             Damage = 1000,            --from 1060 = 200dps
@@ -35,12 +20,24 @@ BlueprintId="uas0201",
             MuzzleVelocity = 30,    --from 30
             FiringRandomness = 0.3,    --from 0,25
         },
-        {
+        { -- sub + surface dps ; can be swapped out to be only sub dps if required.
             DisplayName = 'Harmonic Depth Charge',
-            Damage = 400,        --from 350 = 121dps
+            Damage = 100,        --from 350 = 20dps
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 15,
+            FireTargetLayerCapsTable = {
+                Water = 'Seabed|Sub|Water',
+            },
+            RateOfFire = 0.2,
+            
         },
-        {
-            Damage = 170,            --from 150 = 85dps on torpedo
+        { -- sub + surface dps
+            Damage = 100,            --from 150 = 40dps on torpedo
+            MaxRadius = 45,
+            MuzzleSalvoSize = 2,
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
+            RateOfFire = 0.2,
         },
         {
         },

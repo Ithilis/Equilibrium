@@ -4,15 +4,7 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
     
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 4,
-            Level3 = 6,
-            Level4 = 8,
-            Level5 = 10,
-        },
-    },
+
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
@@ -41,16 +33,12 @@ BlueprintId="uas0203",
         MaxSpeed = 7,
         MaxSpeedReverse = 7,        
     },
-    Veteran = {
-        Level1 = 11,
-        Level2 = 22,
-        Level3 = 33,
-        Level4 = 44,
-        Level5 = 55,
-    },
     Weapon = {
         {
-            MaxRadius = 35,    --from 32
+            Damage = 50, --2 torps per salvo; from 75
+            MaxRadius = 30,    --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5,
+            MuzzleSalvoDelay = 0.8,
         },
     },
 }
