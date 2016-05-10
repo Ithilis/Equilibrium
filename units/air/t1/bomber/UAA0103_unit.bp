@@ -13,9 +13,9 @@ BlueprintId = "uaa0103",
         TurnSpeed = 2.0,                --0,75
     },
     Economy = {
-        BuildCostEnergy = 3000,
-        BuildCostMass = 120,
-        BuildTime = 800,
+        BuildCostEnergy = 2625,
+        BuildCostMass = 105,
+        BuildTime = 700,
     },
     Physics = {
         FuelUseTime = 240,

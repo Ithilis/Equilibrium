@@ -187,7 +187,7 @@ Unit_Description_0119="Adds an anti-air SAM weapon system."
 Unit_Description_0120="Increases SACU's resource generation to 10 mass per second and 1000 energy per second."
 Unit_Description_0121="Massively increases SACU build speed."
 Unit_Description_0122="Massively increases the rate at which the SACU repairs its armour."
-Unit_Description_0123="Personal Stealth field hiding the units around from radar. Countered by omni sensors. Costs energy to run." --ithilis
+Unit_Description_0123="Stealth field generator hiding the units around from radar. Countered by omni sensors. Costs energy to run." --ithilis
 
 ----Land
 Unit_Description_0124="Fast, lightly armoured reconnaissance vehicle. Equipped with a personal cloak generator. Can obstruct mass spots while cloaked if the enemy has no radar."

@@ -7,7 +7,7 @@
 
 local AdjBuffFuncs = import('/lua/sim/AdjacencyBuffFunctions.lua')
 
-local adj = {           -- SIZE4     SIZE8   SIZE12    SIZE16   SIZE20
+local adj = {                -- SIZE4     SIZE8   SIZE12    SIZE16   SIZE20
     T1PowerGenerator={
         EnergyActive=       {-0.0625, -0.03125, -0.0208, -0.01563, -0.0025},
         EnergyMaintenance=  {-0.0625, -0.03125, -0.0208, -0.01563, -0.0125},
