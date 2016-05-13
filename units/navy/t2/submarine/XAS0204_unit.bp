@@ -53,6 +53,7 @@ BlueprintId="xas0204",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TrackingRadius = 1.15,
         },
         {
             DepthCharge = { -- increases its effectiveness i think
