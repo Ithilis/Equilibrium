@@ -4,6 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xas0204",
 
+    Defense = {
+        Health = 1200, -- from 1800, it needs lower hp cos of its absurd torp defense - great vs subs; kinda bad vs ships
+        MaxHealth = 1200,
+    },
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
@@ -31,5 +35,48 @@ BlueprintId="xas0204",
         MaxBrake = 6,
         MaxSpeed = 6,
         MaxSpeedReverse = 6,
+    },
+    Weapon = {
+        {
+            Damage = 90, -- 4*90 = 360
+            DamageType = 'Normal',
+            DisplayName = 'Chrono Torpedo',
+            FiringTolerance = 2,
+            Label = 'Torpedo01',
+            MaxRadius = 45,
+            MuzzleSalvoDelay = 0.4,
+            MuzzleSalvoSize = 4,
+            MuzzleVelocity = 5,
+            ProjectileLifetime = 7,
+            RackSalvoSize = 1,
+            RateOfFire = 0.25,
+            TargetCheckInterval = 0.2, -- from 2, (same as sera destro) why was it 2 .__.
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TrackingRadius = 1.15,
+        },
+        {
+            DepthCharge = { -- increases its effectiveness i think
+                Radius = 5,
+            },
+            DisplayName = 'Quasar Anti-Torpedo',
+            FiringTolerance = 2,
+            LeadTarget = false,
+            MaxRadius = 25, --from 32
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 5,
+            ProjectileId = '/projectiles/CIMAntiTorpedo01/CIMAntiTorpedo01_proj.bp', --giving it torpedo flares instead of 1-1 torp defense.
+            ProjectileLifetime = 4,
+            RackSalvoSize = 1,
+            RateOfFire = 0.5, -- from 0.13
+            TargetCheckInterval = 0.1,
+            TrackingRadius = 1.15,
+        },
     },
 }
