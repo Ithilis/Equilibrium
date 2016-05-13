@@ -1,4 +1,4 @@
---Torpedo launcher T2
+--Cyb Torpedo launcher T2
 
 UnitBlueprint {
 Merge = true,
@@ -27,6 +27,8 @@ BlueprintId = "urb2205",
     },
     Defense = {
         ArmorType = 'Normal',    --from structure
+        Health = 7250, --from 5800
+        MaxHealth = 7250,
     },
     Display = {
         Abilities = {
@@ -50,5 +52,11 @@ BlueprintId = "urb2205",
     Physics = {
         MotionType = 'RULEUMT_Water',
         MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
+    },
+    Weapon = {
+        {
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
+        },
     },
 }

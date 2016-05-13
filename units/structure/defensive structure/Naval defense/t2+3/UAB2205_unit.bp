@@ -1,4 +1,4 @@
---Torpedo launcher T2
+--Aeon Torpedo launcher T2
 
 UnitBlueprint {
 Merge = true,
@@ -27,6 +27,8 @@ BlueprintId = "uab2205",
     },
     Defense = {
         ArmorType = 'Normal',    --from structure
+        Health = 7625, --from 6100
+        MaxHealth = 7625,
     },
     Display = {
         Abilities = {
@@ -55,6 +57,8 @@ BlueprintId = "uab2205",
         {
             Damage = 150,
             DisplayName = 'Chrono Torpedo',
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
             MaxRadius = 60,
             ProjectilesPerOnFire = 1,
             RateOfFire = 0.25,
