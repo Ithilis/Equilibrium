@@ -44,6 +44,7 @@ BlueprintId="xss0201",
             MuzzleVelocity = 15,
             ProjectileLifetime = 7,
             RateOfFire = 1,  
+            TargetCheckInterval = 0.2, -- from 2, stops it from fucking up when you give it a move command and it thinks about what its purpose is instead of shooting
         },
         {  
         },
