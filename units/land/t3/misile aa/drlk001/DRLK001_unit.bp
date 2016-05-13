@@ -1,6 +1,7 @@
 UnitBlueprint {
     AI = {
         TargetBones = {
+            'Turret01',
             'DRLK001',
         },
     },
@@ -215,6 +216,7 @@ UnitBlueprint {
     },
     Weapon = {
         {
+            AimsStraightOnDisable = false,
             AlwaysRecheckTarget = true,
             Audio = {
                 Fire = Sound {
@@ -228,6 +230,8 @@ UnitBlueprint {
             CollideFriendly = false,
             Damage = 100,
             DamageRadius = 1.5,
+
+            DamageFriendly = false,
             DamageType = 'Normal',
             DisplayName = 'Nanodart Launcher',
             FireTargetLayerCapsTable = {
@@ -299,7 +303,7 @@ UnitBlueprint {
             RackSlavedToTurret = false,
             RangeCategory = 'UWRC_AntiAir',
             RateOfFire = 1.667,
-            TargetCheckInterval = 0.3,
+            TargetCheckInterval = 0.1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'AIR MOBILE HIGHPRIAIR',
@@ -324,6 +328,77 @@ UnitBlueprint {
             TurretYawRange = 180,
             TurretYawSpeed = 180,
             Turreted = true,
+            WeaponCategory = 'Anti Air',
+        },
+        {
+            AimsStraightOnDisable = true,
+            AlwaysRecheckTarget = true,
+            BallisticArc = 'RULEUBA_None',
+            CannotAttackGround = true,
+            BeamCollisionDelay = 0.2,
+            BeamLifetime = 0,
+            CollideFriendly = false,
+            ContinuousBeam = true,
+            Damage = 0,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Targeting Laser',
+            FireTargetLayerCapsTable = {
+                Air = 'Air',
+                Land = 'Air',
+                Water = 'Air',
+            },
+            FiringRandomness = 0,
+            FiringTolerance = 2,
+            Label = 'Lazor',
+            MaxRadius = 52,
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            PreferPrimaryWeaponTarget = true,
+            ProjectileLifetimeUsesMultiplier = 1.15,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Lazor',
+                    },
+                    RackBone = 'Lazor',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 0,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RateOfFire = 10,
+            ReTargetOnMiss = true,
+            TargetCheckInterval = 0.1,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 1.4,
+            TurretBoneMuzzle = 'Lazor',
+            TurretBonePitch = 'Lazor',
+            TurretBoneYaw = 'Lazor',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 180,
+            TurretPitchSpeed = 180,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 180,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
             WeaponCategory = 'Anti Air',
         },
         {
