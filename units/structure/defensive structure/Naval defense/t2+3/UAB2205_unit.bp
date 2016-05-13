@@ -1,18 +1,9 @@
---Torpedo launcher T2
+--Aeon Torpedo launcher T2
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uab2205", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
@@ -36,6 +27,8 @@ BlueprintId = "uab2205",
     },
     Defense = {
         ArmorType = 'Normal',    --from structure
+        Health = 7625, --from 6100
+        MaxHealth = 7625,
     },
     Display = {
         Abilities = {
@@ -60,17 +53,12 @@ BlueprintId = "uab2205",
         MotionType = 'RULEUMT_Water',
         MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
     },
-    Veteran = {
-        Level1 = 20,
-        Level2 = 40,
-        Level3 = 60,
-        Level4 = 80,
-        Level5 = 100,
-    },
     Weapon = {
         {
             Damage = 150,
             DisplayName = 'Chrono Torpedo',
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
             MaxRadius = 60,
             ProjectilesPerOnFire = 1,
             RateOfFire = 0.25,

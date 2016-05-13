@@ -1,19 +1,10 @@
---Torpedo launcher T2
+--Sera Torpedo launcher T2
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsb2205", 
 
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
@@ -38,6 +29,8 @@ BlueprintId = "xsb2205",
     },
     Defense = {
         ArmorType = 'Normal',    --from structure
+        Health = 6000, --from 4800
+        MaxHealth = 6000,
     },
     Display = {
         Abilities = {
@@ -62,11 +55,11 @@ BlueprintId = "xsb2205",
         MotionType = 'RULEUMT_Water',
         MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
     },
-    Veteran = {
-        Level1 = 20,
-        Level2 = 40,
-        Level3 = 60,
-        Level4 = 80,
-        Level5 = 100,
+        Weapon = {
+        {
+        },
+        { -- this thing actualy has torp defense! wow!
+            RateOfFire = 1, --from 0.5
+        },-- might be nice to make this the strongest torp, just in case sera namvy loses.
     },
 }
