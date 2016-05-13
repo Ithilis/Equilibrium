@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "xsb2109", 
 
     Defense = {
-        Health = 2000,
-        MaxHealth = 2000,
+        Health = 2500, --previous eq value: 2000
+        MaxHealth = 2500,
     },
     Economy = {
         BuildCostEnergy = 2500,    --from 3600
@@ -21,6 +21,8 @@ BlueprintId = "xsb2109",
     Weapon = {
         {
             Damage = 80,    --from 100 = 60dps
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
         },
     },
 }
