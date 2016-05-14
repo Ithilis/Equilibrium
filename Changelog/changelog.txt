@@ -8,6 +8,11 @@ v.36
 -- 105m (90m) [80m] 2625e ([2250e]) 700bt (600bt) [500bt]
 -- speed 10 (11)
 -- removed useless code about buff that is already overwrite by veterancy rework
+-- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
+-- cybran 50dmg = 300 (from 60 =360)
+-- sera 225dmg ([250])
+-- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
+-- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
 
 - hoplite
 -- fixing mistake in speed, add speed nerf also on acceleration and max brake
@@ -35,11 +40,10 @@ v.36
 -- sera 310hp
 -- uef 320hp
 
-- T1 bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
--- cybran 50dmg = 300 (from 60 =360)
--- sera 225dmg ([250])
--- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
--- aeon 120m 800bt 3000e (105m 700bt 2625e)
+
+
+- cybran sacu
+-- personal stealth rename to stealth field generator, some tweak in description too
 
 
 v. 35
