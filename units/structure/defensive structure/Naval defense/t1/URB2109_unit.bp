@@ -5,8 +5,13 @@ Merge = true,
 BlueprintId = "urb2109", 
 
     Defense = {
-        Health = 2500, --previous eq value: 2000
+        Health = 2500, 
         MaxHealth = 2500,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
+        },
     },
     Economy = {
         BuildCostEnergy = 2500,    --from 3600
@@ -21,6 +26,7 @@ BlueprintId = "urb2109",
     Weapon = {
         {
             Damage = 16,    --from 25 = 60dps
+            DamageRadius = 0.5,     -- from 0
             DoTPulses = 5,
             DoTTime = 1,
             MuzzleVelocity = 15,

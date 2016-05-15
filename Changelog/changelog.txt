@@ -1,5 +1,78 @@
 v.36
 -----
+
+retarded naval balance:
+
+- t1 attack submarines (not sera) 50 dps [37,5].
+-- damage: 50 [75]
+-- rof: 2s [4s]
+-- torpedo aoe: 0.5 [0]
+-- removed stealth, maintenance, from script and bp, 
+-- target priorities changed (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- MuzzleSalvoDelay: 0.8 [0.7]
+
+cyb:
+-- damage: 5x5 [5x4]
+-- MuzzleSalvoSize: 4 [3]
+-- MuzzleSalvoDelay: 0.5 [0.7]
+-- 550hp [525]
+
+aeon:
+-- 575hp [550]
+
+
+- t2 subHunters
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+
+- Vespa
+-- removed stealth, maintenance, from script and bp
+-- 1200hp [1800]
+-- torp defense: changed to flares; rof = 2s [7,7s]
+- Baracuda
+-- 750hp [1430]
+-- speed 5,5 (6) [6,5]
+-- torp defense: flares; rof = 2s [7,7s]
+-- muzzle salvo size 6 [7]
+-- merged code, instead of whole code
+- cooper
+-- hp: 1500 [1750]
+-- torpedo aoe 0,5 [0]
+
+- T2 destroyers:
+-- aeon/uef/cybran given depth charges
+-- c/u/s removed added torpedo against sub (that was add in past) 
+-- muzzle velocity 15 [5] 
+
+- uef:[30dps], rof 2s [10s]
+- aeon:60dps [180], rof 5s [4s]
+- cyb: 70dps [100] 
+-- torp def rof: 20s [3,8s]
+
+- sera: 
+-- torp defense rof: 1s [3,8s]
+-- torpedo aoe 0,5 [0]
+-- removed stealth, maintenance, from script and bp,
+-- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
+
+- t1 torp defences
+-- damage radius 0,5 [0]
+-- torpedo replace with depth charges
+-- changed display to depth charge (from torpedoes)
+-- hp: 2500 (2000) [1600-1700]
+
+- t2 torp defences
+-- torpedo replace with depth charges
+-- changed display to depth charges (from torpedoes)
+-- damage radius 1 (0)
+-- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
+-- sera torp defense rof: 1s [2s]
+
+- t3 torp defence
+-- damage radius 1 (0)
+
+
+_____________
+
 - sera ACU regeneration field
 -- 18000e (9000e)[4500]
 -- regen to acu 10hp/s (15)[0]
@@ -27,55 +100,52 @@ v.36
 - cybran T3 gunship stealth energy maintaince  50 (25)
 
 
+- aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
-- aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
-
-- aeon bomber, EMP stun T1 7.5aoe (from 10)
-
-- T1 bombers, nerf
--- 105m (90m) [80m] 2625e ([2250e]) 700bt (600bt) [500bt]
+- T1 bombers, these got a nerf so make them more convenient to play against
 -- speed 10 (11)
 -- removed useless code about buff that is already overwrite by veterancy rework
 -- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
 -- cybran 50dmg = 300 (from 60 =360)
--- sera 225dmg ([250])
+-- sera 3.5aoe [4]
 -- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
+--- aeon bomber, EMP stun T1 7.5aoe (from 10)
+
+- T1 AA got a rebalance to make them more expensive and stronger: 50m 250e 250bt (except cybran)  
+-- aeon 305hp
+-- sera 310hp
+-- uef 320hp
 
 - hoplite
--- fixing mistake in speed, add speed nerf also on acceleration and max brake
+-- fixing mistake in speed, added speed nerf also on acceleration and max brake
 -- fixing mistake in changelog abotu HP
--- reload time 6s (5s) and adjust damage for 270 per salvo
+-- reload time 6s (5s) and damage adjusted to 270 per salvo
 -- range 36 (38) [37]
 
+
 - stinger
--- fix bug with not be able to fire
+-- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
 
 - aeon acu
--- add auto overcharge weapon, that fix, auto chrono problem that start by auto overcharge
--- it fix wrong range
--- chrono dumper range 33 (38) [35]
+-- added auto overcharge weapon, that fixes, the chrono going off when you autoOC
+-- also fixes its long range issue
+-- chrono dampener range 33 (38) [35]
 
-- eversong
+- evensong
 -- projectile
 -- missile hp [1] (2)
 --- acceleration 4 [3]
 --- initial speed 10 [3]
 --- max speed 16 [12]
 
-- T1 AA 50m 250e 250bt (except cybran)  
--- aeon 305hp
--- sera 310hp
--- uef 320hp
-
-
-
 - cybran sacu
 -- personal stealth rename to stealth field generator, some tweak in description too
 
 
-v. 35
------
+
+
+
 
 there were some errors in the online changelog which have now been fixed:
 - valiant base game speed is 5 not 6
