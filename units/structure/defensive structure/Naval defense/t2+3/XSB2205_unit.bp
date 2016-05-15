@@ -4,7 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsb2205", 
 
-
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
@@ -35,7 +34,7 @@ BlueprintId = "xsb2205",
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
-            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes 
             '<LOC ability_personalstealth>Personal Stealth',
         },
     },
@@ -57,6 +56,7 @@ BlueprintId = "xsb2205",
     },
         Weapon = {
         {
+            DamageRadius = 1,     -- from 0
         },
         { -- this thing actualy has torp defense! wow!
             RateOfFire = 1, --from 0.5

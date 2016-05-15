@@ -1,11 +1,34 @@
 v.36
 -----
+- t1 submarine
+-- remove stealth, energy maintaince, script
+-- torpedo 0,5aoe dmg
+-- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd
+
+- t2 submarine
+-- aeon remove stealth, script 
+-- cybran merge code, instead of whole code (it add toggle back, check if its all as should be
+-- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd
+
+- t1 torp defence
+-- damage radius 0,5 ([0])
+-- change display to depth charge (from tropeodes)
+
+- t2 torp defence
+-- change display to depth chanrges (from torpeodes)
+-- damage radius 1 (0)
+
+- t3 torp defence
+-- damage radius 1 (0)
+
+
+
+
 - aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
 
 - aeon bomber, EMP stun T1 7.5aoe (from 10)
 
 - T1 bombers, nerf
--- 105m (90m) [80m] 2625e ([2250e]) 700bt (600bt) [500bt]
 -- speed 10 (11)
 -- removed useless code about buff that is already overwrite by veterancy rework
 -- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
@@ -13,6 +36,11 @@ v.36
 -- sera 225dmg ([250])
 -- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
+
+- T1 AA 50m 250e 250bt (except cybran)  
+-- aeon 305hp
+-- sera 310hp
+-- uef 320hp
 
 - hoplite
 -- fixing mistake in speed, add speed nerf also on acceleration and max brake
@@ -34,13 +62,6 @@ v.36
 --- acceleration 4 [3]
 --- initial speed 10 [3]
 --- max speed 16 [12]
-
-- T1 AA 50m 250e 250bt (except cybran)  
--- aeon 305hp
--- sera 310hp
--- uef 320hp
-
-
 
 - cybran sacu
 -- personal stealth rename to stealth field generator, some tweak in description too
