@@ -4,26 +4,15 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
 
-    Display = {
-        Abilities = {
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
-        },
-    },
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
         BuildTime = 1400,
-        MaintenanceConsumptionPerSecondEnergy = 10,
     },
     Intel = {
         SonarRadius = 60,
-        SonarStealth = true,
         VisionRadius = 15,        --from 32
         WaterVisionRadius = 15,    --from 32
-        SonarStealth = true,
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
@@ -35,9 +24,22 @@ BlueprintId="uas0203",
     Weapon = {
         {
             Damage = 50, --2 torps per salvo; from 75
+            DamageRadius = 0.5,     -- from 0
             MaxRadius = 30,    --from 32 ; use this to fine tune vs kiting destroyers.
             RateOfFire = 0.5,
             MuzzleSalvoDelay = 0.8,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE',
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },
 }

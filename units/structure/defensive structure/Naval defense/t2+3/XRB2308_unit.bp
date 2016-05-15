@@ -56,4 +56,9 @@ BlueprintId = "xrb2308",
         MotionType = 'RULEUMT_SurfacingSub',
         MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
     },
+    Weapon = {
+        {
+            DamageRadius = 1,     -- from 0
+        },
+    },
 }
