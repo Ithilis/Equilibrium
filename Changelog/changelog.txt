@@ -94,6 +94,7 @@ aeon:
 -- damage radius 1 (0)
 
 
+<<<<<<< 13a3ba91320cd16eb803a3eadb945761ed47418c
 _____________
 
 - sera ACU regeneration field
@@ -119,6 +120,9 @@ _____________
 - disable deciver stealth in transport
 
 - cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
+=======
+- aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
+>>>>>>> t2 sub tg priority fix
 
 - cybran T3 gunship stealth energy maintaince  50 (25)
 
