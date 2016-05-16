@@ -18,8 +18,22 @@ BlueprintId="xes0102",
     Weapon = {
         {
             Damage = 90,    --4*90=360; 90dps 
+            DamageRadius = 0.5,     -- from 0
             MaxRadius = 50,
             RateOfFire = 0.25,    --from 0,3=4s
+            
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE',
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             DisplayName = 'Smart Charge AntiTorpedo',
