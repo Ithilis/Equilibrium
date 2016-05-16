@@ -8,7 +8,11 @@ v.36
 - t2 submarine
 -- aeon remove stealth, script 
 -- cybran merge code, instead of whole code (it add toggle back, check if its all as should be
--- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd
+-- target priority 
+- cooper
+-- torpedo aoe 0,5 (0)
+-- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+
 
 - t1 torp defence
 -- damage radius 0,5 ([0])
