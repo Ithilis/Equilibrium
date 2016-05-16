@@ -26,8 +26,6 @@ v.36
 -- damage radius 1 (0)
 
 
-
-
 - aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
 
 - aeon bomber, EMP stun T1 7.5aoe (from 10)
