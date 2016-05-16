@@ -1,5 +1,6 @@
 v.36
 -----
+<<<<<<< 2044f1a85190a89d1fe9e99939d18d4a296a2111
 
 retarded naval balance:
 
@@ -63,6 +64,28 @@ aeon:
 - t2 torp defences
 -- torpedo replace with depth charges
 -- changed display to depth charges (from torpedoes)
+=======
+- t1 submarine
+-- remove stealth, energy maintaince, script
+-- torpedo 0,5aoe dmg
+-- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd
+
+- t2 submarine
+-- aeon remove stealth, script 
+-- cybran merge code, instead of whole code (it add toggle back, check if its all as should be
+-- target priority 
+- cooper
+-- torpedo aoe 0,5 (0)
+-- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+
+
+- t1 torp defence
+-- damage radius 0,5 ([0])
+-- change display to depth charge (from tropeodes)
+
+- t2 torp defence
+-- change display to depth chanrges (from torpeodes)
+>>>>>>> cooper
 -- damage radius 1 (0)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
 -- sera torp defense rof: 1s [2s]
