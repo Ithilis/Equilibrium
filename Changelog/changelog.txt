@@ -13,6 +13,9 @@ v.36
 -- torpedo aoe 0,5 (0)
 -- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 
+- sera destroyer
+-- remove stealth, maintaince, from script, and bp, 
+
 
 - t1 torp defence
 -- damage radius 0,5 ([0])
@@ -28,7 +31,7 @@ v.36
 
 - aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
 
-- aeon bomber, EMP stun T1 7.5aoe (from 10)
+
 
 - T1 bombers, nerf
 -- speed 10 (11)
@@ -38,6 +41,7 @@ v.36
 -- sera 225dmg ([250])
 -- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
+--- aeon bomber, EMP stun T1 7.5aoe (from 10)
 
 - T1 AA 50m 250e 250bt (except cybran)  
 -- aeon 305hp
