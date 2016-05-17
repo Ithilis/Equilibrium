@@ -4,24 +4,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0201",
 
-    Display = {
-        Abilities = {
-            '<LOC ability_radar>Radar',
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
-            '<LOC ability_torpedodef>Torpedo Defense',
-        },
-    },    
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
         BuildTime = 9000,        --from 10 000bt
-        MaintenanceConsumptionPerSecondEnergy = 35,
     },
     Intel = {
-        SonarStealth = true,
         WaterVisionRadius = 30,    --from 45
     },
     Physics = {
