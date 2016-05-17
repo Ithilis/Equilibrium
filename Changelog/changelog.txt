@@ -43,30 +43,64 @@ v.36
 
 
 
-- t1 submarine
--- remove stealth, energy maintaince, script
--- torpedo 0,5aoe dmg
--- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd
 
-- t2 submarine
--- aeon remove stealth, script 
--- cybran merge code, instead of whole code (it add toggle back, check if its all as should be
--- target priority 
+
+retarded naval balance:
+this is a pretty large project which aims to make subs interesting and useful.
+basically it creates a triangle of counters and makes it all work with clever use of torpedo defense.
+
+- t1 attack submarines (not sera)- 350m, 50dps, 525-600hp
+-- speed changed to 6.5 (7 for aeon)
+-- range: 30
+-- removed stealth, maintenance, from script and bp, 
+-- torpedo 0,5aoe dmg
+-- target priorities changed (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+
+- t2 submarines - 1050m, 45 range
+-- speed changed to 6
+-Aeon
+-- removed stealth, maintenance, from script and bp
+-- 1200hp
+-- 90dps
+-- torp defense: changed to flares; rof = 0.5 <- pretty absurd but it works
+-cybran
+-- maintenance consumption is free (maybe not great change)
+-- 750hp
+-- 131.5 dps (7 *75 damage every 8 seconds)
+--merged code, instead of whole code (it adds toggle back, check if its all as should be)
+-- target priorities changed
+-- torp defense: flares; rof = 0.5 <- pretty absurd but it works
 - cooper
+-- 1500hp
+-- 90dps 
+-- 50 range
 -- torpedo aoe 0,5 (0)
 -- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 
+-T2 destroyers:
+-- all given depth charges: 
+-- range: 45
+-- uef/ aeon:60dps (aeon: same dps on surface; but can be swapped out if needed.)
+-- cyb: 70dps
+-- nerfs to torpedo defense rate of fire
+-- removed useless code for crazy weapons vs subs and stuff.
+
 - sera destroyer
--- remove stealth, maintaince, from script, and bp, 
+-- removed stealth, maintenance, from script and bp,
+-- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
+-- torp defense rof: 1
+-- torpedo damage back to normal game: 80 for 160dps
 
 
-- t1 torp defence
+- t1 torp defences
 -- damage radius 0,5 ([0])
--- change display to depth charge (from tropeodes)
+-- changed display to depth charge (from torpeodes)
 
-- t2 torp defence
--- change display to depth chanrges (from torpeodes)
+- t2 torp defences
+-- changed display to depth chanrges (from torpeodes)
 -- damage radius 1 (0)
+-- +25% hp : u/a/c/s : 8000/7625/7250/6000
+-- sera torp defense rof: 1
 
 - t3 torp defence
 -- damage radius 1 (0)
@@ -77,11 +111,12 @@ v.36
 
 
 
-- aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
+
+- aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
 
 
-- T1 bombers, nerf
+- T1 bombers, these got a nerf so make them more convenient to play against
 -- speed 10 (11)
 -- removed useless code about buff that is already overwrite by veterancy rework
 -- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
@@ -91,26 +126,27 @@ v.36
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
 --- aeon bomber, EMP stun T1 7.5aoe (from 10)
 
-- T1 AA 50m 250e 250bt (except cybran)  
+- T1 AA got a rebalance to make them more expensive and stronger: 50m 250e 250bt (except cybran)  
 -- aeon 305hp
 -- sera 310hp
 -- uef 320hp
 
 - hoplite
--- fixing mistake in speed, add speed nerf also on acceleration and max brake
--- fixing mistake in changelog abotu HP
--- reload time 6s (5s) and adjust damage for 270 per salvo
+-- fixing mistake in speed, added speed nerf also on acceleration and max brake
+-- fixing mistake in changelog about HP
+-- reload time 6s (5s) and damage adjusted to 270 per salvo
 -- range 36 (38) [37]
 
+
 - stinger
--- fix bug with not be able to fire
+-- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
 
 - aeon acu
--- add auto overcharge weapon, that fix, auto chrono problem that start by auto overcharge
--- it fix wrong range
--- chrono dumper range 33 (38) [35]
+-- added auto overcharge weapon, that fixes, the chrono going off when you autoOC
+-- also fixes its long range issue
+-- chrono dampener range 33 (38) [35]
 
-- eversong
+- evensong
 -- projectile
 -- missile hp [1] (2)
 --- acceleration 4 [3]
@@ -121,8 +157,9 @@ v.36
 -- personal stealth rename to stealth field generator, some tweak in description too
 
 
-v. 35
------
+
+
+
 
 there were some errors in the online changelog which have now been fixed:
 - valiant base game speed is 5 not 6
