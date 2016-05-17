@@ -1,6 +1,5 @@
 v.36
 -----
-<<<<<<< 2044f1a85190a89d1fe9e99939d18d4a296a2111
 
 retarded naval balance:
 
@@ -64,28 +63,6 @@ aeon:
 - t2 torp defences
 -- torpedo replace with depth charges
 -- changed display to depth charges (from torpedoes)
-=======
-- t1 submarine
--- remove stealth, energy maintaince, script
--- torpedo 0,5aoe dmg
--- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd
-
-- t2 submarine
--- aeon remove stealth, script 
--- cybran merge code, instead of whole code (it add toggle back, check if its all as should be
--- target priority 
-- cooper
--- torpedo aoe 0,5 (0)
--- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
-
-
-- t1 torp defence
--- damage radius 0,5 ([0])
--- change display to depth charge (from tropeodes)
-
-- t2 torp defence
--- change display to depth chanrges (from torpeodes)
->>>>>>> cooper
 -- damage radius 1 (0)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
 -- sera torp defense rof: 1s [2s]
@@ -94,7 +71,6 @@ aeon:
 -- damage radius 1 (0)
 
 
-<<<<<<< 13a3ba91320cd16eb803a3eadb945761ed47418c
 _____________
 
 - sera ACU regeneration field
@@ -120,9 +96,6 @@ _____________
 - disable deciver stealth in transport
 
 - cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
-=======
-- aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
->>>>>>> t2 sub tg priority fix
 
 - cybran T3 gunship stealth energy maintaince  50 (25)
 
