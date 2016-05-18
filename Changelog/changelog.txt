@@ -49,58 +49,71 @@ retarded naval balance:
 this is a pretty large project which aims to make subs interesting and useful.
 basically it creates a triangle of counters and makes it all work with clever use of torpedo defense.
 
-- t1 attack submarines (not sera)- 350m, 50dps, 525-600hp
--- speed changed to 6.5 (7 for aeon)
--- range: 30
+- t1 attack submarines (not sera) 50 dps.
+-- range: 30 [32]
+-- damage: 50 [75]
+-- rof: 0.5 [0.25]
+-- torpedo aoe: 0.5 [0]
 -- removed stealth, maintenance, from script and bp, 
--- torpedo 0,5aoe dmg
 -- target priorities changed (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- MuzzleSalvoDelay: 0.8 [0.7]
 
-- t2 submarines - 1050m, 45 range
--- speed changed to 6
+cyb:
+-- damage: 5x5 []
+-- MuzzleSalvoSize: 4 [3]
+-- MuzzleSalvoDelay: 0.5 [0.7]
+
+
+- t2 submarines
+
 -Aeon
 -- removed stealth, maintenance, from script and bp
--- 1200hp
--- 90dps
--- torp defense: changed to flares; rof = 0.5 <- pretty absurd but it works
+-- 1200hp [1800]
+-- torp defense: changed to flares; rof = 0.5 [0.13]<- pretty absurd but it works
+
 -cybran
 -- maintenance consumption is free (maybe not great change)
--- 750hp
+-- 750hp [1450]
 -- 131.5 dps (7 *75 damage every 8 seconds)
---merged code, instead of whole code (it adds toggle back, check if its all as should be)
+-- merged code, instead of whole code (it adds toggle back, check if its all as should be)
 -- target priorities changed
--- torp defense: flares; rof = 0.5 <- pretty absurd but it works
+-- torp defense: flares; rof = 0.5 [0.05]<- pretty absurd but it works
+
 - cooper
--- 1500hp
--- 90dps 
--- 50 range
+-- hp: 1500 [1750]
 -- torpedo aoe 0,5 (0)
 -- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 
 -T2 destroyers:
 -- all given depth charges: 
--- range: 45
--- uef/ aeon:60dps (aeon: same dps on surface; but can be swapped out if needed.)
--- cyb: 70dps
--- nerfs to torpedo defense rate of fire
--- removed useless code for crazy weapons vs subs and stuff.
+
+-- uef/aeon:60dps (aeon: same dps on surface; but can be swapped out if needed.)
+-- uef rof on torps: 0.5 [0.1]
+-- aeon rof on torps: 0.2 [0.3] and [0.25]
+-- uef/aeon:removed dual sub weapon
+
+-- cyb: 70dps [100]
+-- torp def rof: 0.05 [0.26]
+-- removed dual sub weapon
 
 - sera destroyer
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
--- torp defense rof: 1
--- torpedo damage back to normal game: 80 for 160dps
+-- removed dual sub weapon
+-- torpedo dps [160] with [80] damage/torp
+-- torp defense rof: 1 [0.26]
 
 
 - t1 torp defences
--- damage radius 0,5 ([0])
--- changed display to depth charge (from torpeodes)
+-- damage radius 0,5 [0]
+-- changed display to depth charge (from torpedoes)
+-- hp: 2500 (2000)
 
 - t2 torp defences
--- changed display to depth chanrges (from torpeodes)
+-- changed display to depth chanrges (from torpedoes)
 -- damage radius 1 (0)
--- +25% hp : u/a/c/s : 8000/7625/7250/6000
--- sera torp defense rof: 1
+-- +25% hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
+-- sera torp defense rof: 1 [0.5]
 
 - t3 torp defence
 -- damage radius 1 (0)
