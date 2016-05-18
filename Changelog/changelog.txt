@@ -1,7 +1,6 @@
 v.36
 -----
 
-
 retarded naval balance:
 
 - t1 attack submarines (not sera) 50 dps [37,5].
@@ -25,12 +24,12 @@ cyb:
 - Vespa
 -- removed stealth, maintenance, from script and bp
 -- 1200hp [1800]
--- torp defense: changed to flares; rof = 0.5 [0.13]
+-- torp defense: changed to flares; rof = 2s [7,7s]
 - Baracuda
 -- 750hp [1430]
 -- 131.5 dps [112,5dps]
 -- merged code, instead of whole code
--- torp defense: flares; rof = 0.5 [0.05
+-- torp defense: flares; rof = 2s [7,7s]
 - cooper
 -- hp: 1500 [1750]
 -- torpedo aoe 0,5 [0]
@@ -41,7 +40,7 @@ cyb:
 
 - uef:[60dps], rof 2s [10s]
 - aeon:60dps [180], rof 5s [4s]
-- cyb: 70dps [100], 
+- cyb: 70dps [100] 
 -- torp def rof: 20s [3,8s]
 
 - sera: 
@@ -60,7 +59,7 @@ cyb:
 -- changed display to depth charges (from torpedoes)
 -- damage radius 1 (0)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
--- sera torp defense rof: 1 [0.5]
+-- sera torp defense rof: 1s [2s]
 
 - t3 torp defence
 -- damage radius 1 (0)
@@ -74,10 +73,10 @@ _____________
 -- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
 -- add muzzle velocity reduce distance 128 
 
-- cleaning code by remove hook/lua/defaultunits.lua 
--- its part of main game now
+- adjust code hook/lua/defaultunits.lua 
+-- its part of main game now and was colide with veterancy to AA units
 
-- update adjustancy code, while it was change in main game and in different system
+- update adjustancy code, while it was change in main game and for different system
 
 
 - aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
