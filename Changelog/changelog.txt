@@ -1,52 +1,11 @@
 v.36
 -----
 
-
-- removed all ussles veterancy+buff parth from code
-
-- selen -> take back code that automatic turn weapn off when invisible / will not be able fire from transport
-
-- wall cleaning code + adjust reclaim time to half
-
-- mobile shields/deceiver coming too close on attack move fixed
-
-- sera ACU regeneration field
--- 18000e (9000e)[4500]
--- regen to acu 10hp/s (15)[0]
-
-- aeon ACU omni sensor
--- visual radius 60 ([50])
-
-- Gunships are not able to fire on air units with ground fire weapon anymore
-
-- T2 arty
--- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
--- add muzzle velocity reduce distance 128 
-
-- update adjustancy code, while it was change in main game and for different system
-
-- change of AA toggle weapon on cybran units to be more robust and safe
--- added new weapon for this role, used elsewhere as well (mob shields for example)
--- cyb t1maa now has a cool little laser when in aa mode.
-
-- disable deciver stealth in transport
-
-- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
-
-- cybran T3 gunship stealth energy maintaince  50 (25)
-
-
-- aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
-
-
-
-
-
 retarded naval balance:
 
-- t1 attack submarines (not sera) 50 dps [37,5].
+- t1 attack submarines 50 dps [37.5]
 -- damage: 50 [75]
--- rof: 2s [4s]
+-- reloadtime: 2s [4s]
 -- torpedo aoe: 0.5 [0]
 -- removed stealth, maintenance, from script and bp, 
 -- target priorities changed (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
@@ -61,65 +20,137 @@ cyb:
 aeon:
 -- 575hp [550]
 
+sera:
+--torp defense: EffectiveRadius 35 [26]
+--torp defense: MaxRadius 35 [32]
+--torp defense: reloadtime 2s [10s]
+--torp defense: TargetCheckInterval 0.1 [0.5]
+
 
 - t2 subHunters
+-- torpedo aoe: 0.5 [0]
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 
 - Vespa
 -- removed stealth, maintenance, from script and bp
 -- 1200hp [1800]
--- torp defense: changed to flares; rof = 2s [7,7s]
+-- torp defense: changed to flares; reloadtime = 2s [7.7s]
+-- torp defense: ProjectileLifetime 6 [4]
+
 - Baracuda
 -- 750hp [1430]
--- speed 5,5 (6) [6,5]
--- torp defense: flares; rof = 2s [7,7s]
+-- speed 5.5 (6) [6.5]
+-- torp defense: flares; reloadtime = 2s [7.7s]
 -- muzzle salvo size 6 [7]
--- merged code, instead of whole code
+-- using hooked code, instead of hard shadowing
+
 - cooper
 -- hp: 1500 [1750]
--- torpedo aoe 0,5 [0]
+-- torpedo aoe 0.5 [0]
+
+
 
 - T2 destroyers:
+-- depth charges aoe: 0.5 [0]
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- aeon/uef/cybran given depth charges
--- c/u/s removed added torpedo against sub (that was add in past) 
+-- c/u/s removed added torpedo against sub (that was added in the past) 
 -- muzzle velocity 15 [5] 
 
 - uef:[30dps], rof 2s [10s]
-- aeon:60dps [180], rof 5s [4s]
+- aeon:60dps [180], reloadtime 5s [4s]
 - cyb: 70dps [100] 
--- torp def rof: 20s [3,8s]
+-- torp def reloadtime: 20s [3.8s]
 
 - sera: 
--- torp defense rof: 1s [3,8s]
--- torpedo aoe 0,5 [0]
+-- torp defense reloadtime: 1s [3.8s]
+-- torpedo aoe 0.5 [0]
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
+
+- t3 submarines
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- torpedo aoe: 0.5 [0]
+-- removed sonar stealth + removed script (except cybran)
+
+sera
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- torp defense: reloadtime: 2s [10s]
+
+- T4 Tempest/Atlantis
+-- removed stealth + script
+
+
 - t1 torp defences
--- damage radius 0,5 [0]
--- torpedo replace with depth charges
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- damage radius 0.5 [0]
+-- torpedoes replaced with depth charges
 -- changed display to depth charge (from torpedoes)
 -- hp: 2500 (2000) [1600-1700]
 
+
+
 - t2 torp defences
--- torpedo replace with depth charges
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- torpedoes replaced with depth charges
 -- changed display to depth charges (from torpedoes)
--- damage radius 1 (0)
+-- damage radius 0.5 [0]
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
--- sera torp defense rof: 1s [2s]
+-- sera torp defense reloadtime: 1s [2s]
+
+
 
 - t3 torp defence
--- damage radius 1 (0)
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- damage radius 0.5 [0]
+-- now sits on the seabed instead of just under the water surface
 
+- t3 surface ships
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- damage radius 0.5 [0]
+-- torpedoes replaced with depth charges
+
+- t2 torp bombers
+-- removed omni
 
 _____________
 
 
+- removed all ussles veterancy+buff parth from code
+
+- selen -> take back code that automatic turn weapn off when invisible / will not be able fire from transport
+
+- wall cleaning code + adjust reclaim time to half
+
+- mobile shields/deceiver coming too close on attack move fixed
+
+
+- sera ACU regeneration field
+-- 18000e (9000e)[4500]
+-- regen to acu 10hp/s (15)[0]
+
+- Gunships are not able to fire on air units with ground fire weapon anymore
+
+- T2 arty
+-- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
+-- add muzzle velocity reduce distance 128 
+
+- adjust code hook/lua/defaultunits.lua 
+-- its part of main game now and was colide with veterancy to AA units
+
+- update adjustancy code, while it was change in main game and for different system
+
+- change of AA toggle weapon on cybran units to be more robust and safe
+
+- disable deciver stealth in transport
 
 - cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
+
 - cybran T3 gunship stealth energy maintaince  50 (25)
 
 
+- aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
 - T1 bombers, these got a nerf so make them more convenient to play against
 -- speed 10 (11)
@@ -138,7 +169,7 @@ _____________
 
 - hoplite
 -- fixing mistake in speed, added speed nerf also on acceleration and max brake
--- fixing mistake in changelog about HP
+-- fixing mistake in changelog abotu HP
 -- reload time 6s (5s) and damage adjusted to 270 per salvo
 -- range 36 (38) [37]
 
