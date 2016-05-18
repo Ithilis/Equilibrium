@@ -33,8 +33,8 @@ BlueprintId="ues0201",
         {
             Damage = 30,        --from 10 = 42aa dps
         },
-        { -- extra shit vs subs cos uef navy is glorious.
-        Damage = 60, -- 2* 75 = 150
+        {   -- extra shit vs subs cos uef navy is glorious.
+            Damage = 60, -- 2* 75 = 150
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },

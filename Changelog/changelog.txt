@@ -1,9 +1,17 @@
 v.36
 -----
 
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 retarded naval balance:
 
 - t1 attack submarines (not sera) 50 dps [37,5].
+=======
+
+retarded naval balance:
+
+- t1 attack submarines (not sera) 50 dps [37,5].
+-- range: 30 (35r)[32]
+>>>>>>> changelog
 -- damage: 50 [75]
 -- rof: 2s [4s]
 -- torpedo aoe: 0.5 [0]
@@ -20,6 +28,7 @@ cyb:
 aeon:
 -- 575hp [550]
 
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 
 - t2 subHunters
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
@@ -34,23 +43,48 @@ aeon:
 -- torp defense: flares; rof = 2s [7,7s]
 -- muzzle salvo size 6 [7]
 -- merged code, instead of whole code
+=======
+- t2 subHunters
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+
+- Vespa
+-- removed stealth, maintenance, from script and bp
+-- 1200hp [1800]
+-- torp defense: changed to flares; rof = 0.5 [0.13]
+- Baracuda
+-- 750hp [1430]
+-- 131.5 dps [112,5dps]
+-- merged code, instead of whole code
+-- torp defense: flares; rof = 0.5 [0.05
+>>>>>>> changelog
 - cooper
 -- hp: 1500 [1750]
 -- torpedo aoe 0,5 [0]
 
 - T2 destroyers:
 -- aeon/uef/cybran given depth charges
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 -- c/u/s removed added torpedo against sub (that was add in past) 
 -- muzzle velocity 15 [5] 
 
 - uef:[30dps], rof 2s [10s]
 - aeon:60dps [180], rof 5s [4s]
 - cyb: 70dps [100] 
+=======
+-- muzzle velocity 15 [5] 
+
+- uef:[60dps], rof 2s [10s]
+- aeon:60dps [180], rof 5s [4s]
+- cyb: 70dps [100], 
+>>>>>>> changelog
 -- torp def rof: 20s [3,8s]
 
 - sera: 
 -- torp defense rof: 1s [3,8s]
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 -- torpedo aoe 0,5 [0]
+=======
+>>>>>>> changelog
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
@@ -65,13 +99,18 @@ aeon:
 -- changed display to depth charges (from torpedoes)
 -- damage radius 1 (0)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 -- sera torp defense rof: 1s [2s]
+=======
+-- sera torp defense rof: 1 [0.5]
+>>>>>>> changelog
 
 - t3 torp defence
 -- damage radius 1 (0)
 
 
 _____________
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 
 - sera ACU regeneration field
 -- 18000e (9000e)[4500]
@@ -92,14 +131,30 @@ _____________
 - update adjustancy code, while it was change in main game and for different system
 
 - change of AA toggle weapon on cybran units to be more robust and safe
+=======
+
+- Gunships are not able to fire on air units with ground fire weapon anymore
+
+- T2 arty
+-- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
+-- add muzzle velocity reduce distance 128 
+
+- cleaning code by remove hook/lua/defaultunits.lua 
+-- its part of main game now
+
+- update adjustancy code, while it was change in main game and in different system
+>>>>>>> changelog
 
 - disable deciver stealth in transport
 
+<<<<<<< a693a16a679026a1e077b9e74110f6bf922c729c
 - cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
 
 - cybran T3 gunship stealth energy maintaince  50 (25)
 
 
+=======
+>>>>>>> changelog
 - aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
 - T1 bombers, these got a nerf so make them more convenient to play against

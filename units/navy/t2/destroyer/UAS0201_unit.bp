@@ -20,7 +20,7 @@ BlueprintId="uas0201",
             MuzzleVelocity = 30,    --from 30
             FiringRandomness = 0.3,    --from 0,25
         },
-        { -- sub + surface dps ; can be swapped out to be only sub dps if required.
+        {   -- sub + surface dps
             DisplayName = 'Harmonic Depth Charge',
             Damage = 100,        --from 350 = 20dps
             MuzzleSalvoSize = 1,
@@ -31,7 +31,7 @@ BlueprintId="uas0201",
             RateOfFire = 0.2,
             
         },
-        { -- sub + surface dps
+        {   -- sub + surface dps
             Damage = 100,            --from 150 = 40dps on torpedo
             MaxRadius = 45,
             MuzzleSalvoSize = 2,
