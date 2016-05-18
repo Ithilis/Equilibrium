@@ -44,90 +44,84 @@ v.36
 
 
 
-
 retarded naval balance:
-this is a pretty large project which aims to make subs interesting and useful.
-basically it creates a triangle of counters and makes it all work with clever use of torpedo defense.
 
-- t1 attack submarines (not sera) 50 dps.
--- range: 30 [32]
+- t1 attack submarines (not sera) 50 dps [37,5].
+-- range: 30 (35r)[32]
 -- damage: 50 [75]
--- rof: 0.5 [0.25]
+-- rof: 2s [4s]
 -- torpedo aoe: 0.5 [0]
 -- removed stealth, maintenance, from script and bp, 
 -- target priorities changed (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- MuzzleSalvoDelay: 0.8 [0.7]
 
 cyb:
--- damage: 5x5 []
+-- damage: 5x5 [5x4]
 -- MuzzleSalvoSize: 4 [3]
 -- MuzzleSalvoDelay: 0.5 [0.7]
 
 
-- t2 submarines
+- t2 subHunters
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 
--Aeon
+- Vespa
 -- removed stealth, maintenance, from script and bp
 -- 1200hp [1800]
--- torp defense: changed to flares; rof = 0.5 [0.13]<- pretty absurd but it works
-
--cybran
--- maintenance consumption is free (maybe not great change)
--- 750hp [1450]
--- 131.5 dps (7 *75 damage every 8 seconds)
--- merged code, instead of whole code (it adds toggle back, check if its all as should be)
--- target priorities changed
--- torp defense: flares; rof = 0.5 [0.05]<- pretty absurd but it works
-
+-- torp defense: changed to flares; rof = 0.5 [0.13]
+- Baracuda
+-- 750hp [1430]
+-- 131.5 dps [112,5dps]
+-- merged code, instead of whole code
+-- torp defense: flares; rof = 0.5 [0.05
 - cooper
 -- hp: 1500 [1750]
--- torpedo aoe 0,5 (0)
--- target priority (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- torpedo aoe 0,5 [0]
 
--T2 destroyers:
--- all given depth charges: 
+- T2 destroyers:
+-- aeon/uef/cybran given depth charges
+-- muzzle velocity 15 [5] 
 
--- uef/aeon:60dps (aeon: same dps on surface; but can be swapped out if needed.)
--- uef rof on torps: 0.5 [0.1]
--- aeon rof on torps: 0.2 [0.3] and [0.25]
--- uef/aeon:removed dual sub weapon
+- uef:[60dps], rof 2s [10s]
+- aeon:60dps [180], rof 5s [4s]
+- cyb: 70dps [100], 
+-- torp def rof: 20s [3,8s]
 
--- cyb: 70dps [100]
--- torp def rof: 0.05 [0.26]
--- removed dual sub weapon
-
-- sera destroyer
+- sera: 
+-- torp defense rof: 1s [3,8s]
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
--- removed dual sub weapon
--- torpedo dps [160] with [80] damage/torp
--- torp defense rof: 1 [0.26]
-
 
 - t1 torp defences
 -- damage radius 0,5 [0]
+-- torpedo replace with depth charges
 -- changed display to depth charge (from torpedoes)
--- hp: 2500 (2000)
+-- hp: 2500 (2000) [1600-1700]
 
 - t2 torp defences
--- changed display to depth chanrges (from torpedoes)
+-- torpedo replace with depth charges
+-- changed display to depth charges (from torpedoes)
 -- damage radius 1 (0)
--- +25% hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
+-- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
 -- sera torp defense rof: 1 [0.5]
 
 - t3 torp defence
 -- damage radius 1 (0)
 
 
+_____________
 
+- Gunships are not able to fire on air units with ground fire weapon anymore
 
+- T2 arty
+-- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
+-- add muzzle velocity reduce distance 128 
 
 
 
 
 - aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
-
+- updated adjacency code, so its up to date with the latest game patch
 
 - T1 bombers, these got a nerf so make them more convenient to play against
 -- speed 10 (11)

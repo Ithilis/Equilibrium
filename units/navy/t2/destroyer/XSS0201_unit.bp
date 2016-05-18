@@ -21,7 +21,7 @@ BlueprintId="xss0201",
         {
         },
         {
-            Damage = 80,    --2* 250 = 500 damage -- my file recommends 2*80 damage every 1 second instead
+            Damage = 80,    --unchanged
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },
@@ -34,7 +34,7 @@ BlueprintId="xss0201",
             TargetCheckInterval = 0.2, -- from 2, stops it from fucking up when you give it a move command and it thinks about what its purpose is instead of shooting
         },
         {  
-            RateOfFire = 1,  --from 0.26; buffing torp defense
+            RateOfFire = 1,  --from 0.26
         },
     },
 }
