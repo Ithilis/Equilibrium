@@ -117,6 +117,7 @@ _____________
 -- add muzzle velocity reduce distance 128 
 
 
+- change of AA toggle weapon on cybran units to be more robust and safe
 
 - aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
