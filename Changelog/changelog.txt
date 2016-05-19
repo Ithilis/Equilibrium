@@ -149,6 +149,7 @@ _____________
 - update adjustancy code, while it was change in main game and for different system
 
 - change of AA toggle weapon on cybran units to be more robust and safe
+<<<<<<< 5c69fd871645976ec8ccd5ce9cbb30016d71b88d
 =======
 
 - Gunships are not able to fire on air units with ground fire weapon anymore
@@ -174,6 +175,8 @@ _____________
 - update adjustancy code, while it was change in main game and for different system
 >>>>>>> changelog
 
+=======
+>>>>>>> changelog aa toggle
 
 =======
 >>>>>>> changelog
