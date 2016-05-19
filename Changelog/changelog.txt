@@ -1,5 +1,28 @@
 v.36
 -----
+- sera ACU regeneration field
+-- 18000e (9000e)[4500]
+-- regen to acu 10hp/s (15)[0]
+
+- aeon ACU omni sensor
+-- visual radius 60 ([50])
+
+
+- Gunships are not able to fire on air units with ground fire weapon anymore
+
+- T2 arty
+-- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
+-- add muzzle velocity reduce distance 128 
+
+- adjust code hook/lua/defaultunits.lua 
+-- its part of main game now and was colide with veterancy to AA units
+
+- update adjustancy code, while it was change in main game and for different system
+
+- change of AA toggle weapon on cybran units to be more robust and safe
+
+
+
 - aeon transport change capture distance from (default) 5 to 2.5 -> to be visible by mex while capturing
 
 - aeon bomber, EMP stun T1 7.5aoe (from 10)

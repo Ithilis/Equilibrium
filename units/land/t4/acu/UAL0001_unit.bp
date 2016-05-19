@@ -54,7 +54,7 @@ BlueprintId = "ual0001",
             BuildTime = 400,
             
             NewOmniRadius = 100,
-            NewVisionRadius = 50,
+            NewVisionRadius = 60,       --50
         },
         ResourceAllocation = {
             ProductionPerSecondEnergy = 1200,    --from2700
