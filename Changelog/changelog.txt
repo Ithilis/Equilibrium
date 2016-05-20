@@ -7,7 +7,6 @@ v.36
 - aeon ACU omni sensor
 -- visual radius 60 ([50])
 
-
 - Gunships are not able to fire on air units with ground fire weapon anymore
 
 - T2 arty
@@ -20,6 +19,12 @@ v.36
 - update adjustancy code, while it was change in main game and for different system
 
 - change of AA toggle weapon on cybran units to be more robust and safe
+
+- disable deciver stealth in transport
+
+- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
+
+- cybran T3 gunship stealth energy maintaince  50 (25)
 
 
 
@@ -44,7 +49,7 @@ v.36
 -- range 36 (38) [37]
 
 - stinger
--- remove ussles code, that fix bug with not be able to fire.
+-- fix bug with not be able to fire
 
 - aeon acu
 -- add auto overcharge weapon, that fix, auto chrono problem that start by auto overcharge
