@@ -4,6 +4,15 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0201",
 
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_submersible>Submersible',
+            '<LOC ability_torpedodef>Torpedo Defense',
+        },
+    }, 
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
@@ -21,7 +30,7 @@ BlueprintId="xss0201",
         {
         },
         {
-            Damage = 80,    --unchanged
+            Damage = 80,    --80
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },
@@ -31,7 +40,7 @@ BlueprintId="xss0201",
             MuzzleVelocity = 15,
             ProjectileLifetime = 7,
             RateOfFire = 1,  
-            TargetCheckInterval = 0.2, -- from 2, stops it from fucking up when you give it a move command and it thinks about what its purpose is instead of shooting
+            TargetCheckInterval = 0.2, -- from 2, stops it from cause problems when you give it a move command and it thinks about what its purpose is instead of shooting
         },
         {  
             RateOfFire = 1,  --from 0.26

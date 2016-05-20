@@ -3,7 +3,11 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId="urs0203",
-    
+  
+    Defense = {
+        Health = 550,   --525
+        MaxHealth = 550,
+    },  
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
@@ -25,7 +29,7 @@ BlueprintId="urs0203",
         {
             Damage = 5, -- 4 torpedoes with 5 pulses each
             DamageRadius = 0.5,     -- from 0
-            MaxRadius = 30,    --from 32 ; use this to fine tune vs kiting destroyers.
+            MaxRadius = 35,    --from 32
             RateOfFire = 0.5,
             MuzzleSalvoDelay = 0.5, -- 1 second long salvo
             MuzzleSalvoSize = 4,

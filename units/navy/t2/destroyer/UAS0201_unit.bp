@@ -4,7 +4,14 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0201",
 
-
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_torpedodef>Torpedo Defense',
+        },
+    }, 
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,

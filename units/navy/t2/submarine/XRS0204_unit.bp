@@ -23,21 +23,21 @@ BlueprintId="xrs0204",
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
-        MaxAcceleration = 6,
-        MaxBrake = 6,
-        MaxSpeed = 6,
-        MaxSpeedReverse = 6,
+        MaxAcceleration = 5.5,    --from 6,5
+        MaxBrake = 5.5,
+        MaxSpeed = 5.5,
+        MaxSpeedReverse = 5.5,
     },
     Weapon = {
         {
-            Damage = 15, -- 75*7 = 525 per salvo. crazy.
+            Damage = 15, -- 75*7 = 525 per salvo
             DamageRadius = 0.5,     -- from 0
             DoTPulses = 5,
             DoTTime = 0.5,
             Label = 'Torpedo01',
             MaxRadius = 45,
             MuzzleSalvoDelay = 0.4,
-            MuzzleSalvoSize = 7,
+            MuzzleSalvoSize = 6,    --from 7
             MuzzleVelocity = 5,
             RateOfFire = 0.25,
             TargetPriorities = {
