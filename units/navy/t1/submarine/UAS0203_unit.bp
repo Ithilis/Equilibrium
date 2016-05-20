@@ -3,7 +3,11 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
-    
+ 
+    Defense = {
+        Health = 575,   --550
+        MaxHealth = 575,
+    }, 
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
@@ -25,7 +29,7 @@ BlueprintId="uas0203",
         {
             Damage = 50, --2 torps per salvo; from 75
             DamageRadius = 0.5,     -- from 0
-            MaxRadius = 30,    --from 32 ; use this to fine tune vs kiting destroyers.
+            MaxRadius = 35,    --from 32
             RateOfFire = 0.5,
             MuzzleSalvoDelay = 0.8,
             TargetPriorities = {
