@@ -47,7 +47,6 @@ v.36
 retarded naval balance:
 
 - t1 attack submarines (not sera) 50 dps [37,5].
--- range: 30 (35r)[32]
 -- damage: 50 [75]
 -- rof: 2s [4s]
 -- torpedo aoe: 0.5 [0]
@@ -59,6 +58,10 @@ cyb:
 -- damage: 5x5 [5x4]
 -- MuzzleSalvoSize: 4 [3]
 -- MuzzleSalvoDelay: 0.5 [0.7]
+-- 550hp [525]
+
+aeon:
+-- 575hp [550]
 
 
 - t2 subHunters
@@ -70,18 +73,20 @@ cyb:
 -- torp defense: changed to flares; rof = 2s [7,7s]
 - Baracuda
 -- 750hp [1430]
--- 131.5 dps [112,5dps]
--- merged code, instead of whole code
+-- speed 5,5 (6) [6,5]
 -- torp defense: flares; rof = 2s [7,7s]
+-- muzzle salvo size 6 [7]
+-- merged code, instead of whole code
 - cooper
 -- hp: 1500 [1750]
 -- torpedo aoe 0,5 [0]
 
 - T2 destroyers:
 -- aeon/uef/cybran given depth charges
+-- c/u/s removed added torpedo against sub (that was add in past) 
 -- muzzle velocity 15 [5] 
 
-- uef:[60dps], rof 2s [10s]
+- uef:[30dps], rof 2s [10s]
 - aeon:60dps [180], rof 5s [4s]
 - cyb: 70dps [100] 
 -- torp def rof: 20s [3,8s]

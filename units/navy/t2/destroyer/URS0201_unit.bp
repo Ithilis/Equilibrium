@@ -4,6 +4,16 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="urs0201",
 
+    Display = {
+        Abilities = {
+            '<LOC ability_amphibious>Amphibious',
+            '<LOC ability_aa>Anti-Air',
+            '<LOC ability_depthcharge>Depth Charges',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_torpedodef>Torpedo Defense',
+        },
+    },
     Economy = {
         BuildCostEnergy = 15000,
         BuildCostMass = 2250,
@@ -20,8 +30,6 @@ BlueprintId="urs0201",
         {
         },
         {
-            BallisticArc = 'RULEUBA_None',
-            CollideFriendly = false,
             Damage = 35, -- 35*5*2 = 350 ; effective dps vs subs = 300*2 / 8 = 75
             DoTPulses = 5,
             DoTTime = 0.5,
