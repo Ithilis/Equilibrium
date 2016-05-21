@@ -19,7 +19,7 @@ BlueprintId="urs0203",
         WaterVisionRadius = 15,    --from 32
     },
     Physics = {
-        Elevation = -2.5,        --from -1,5
+        Elevation = -2.5,        --from -1.5
         MaxAcceleration = 6.5,    --from 6
         MaxBrake = 6.5,
         MaxSpeed = 6.5,
@@ -27,16 +27,16 @@ BlueprintId="urs0203",
     },
     Weapon = {
         {
-            Damage = 5, -- 4 torpedoes with 5 pulses each
-            DamageRadius = 0.5,     -- from 0
-            MaxRadius = 35,    --from 32
-            RateOfFire = 0.5,
-            MuzzleSalvoDelay = 0.5, -- 1 second long salvo
+            Damage = 5, -- 4 torpedoes with 5 pulses each ; 5*5*4 = 100 damage/salvo
+            DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
+            MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5, --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
+            MuzzleSalvoDelay = 0.5, -- 1.5 second long salvo since muzzle salvo size = 4
             MuzzleSalvoSize = 4,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
-                'T2SUBMARINE',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
                 'T3SUBMARINE',
                 'T1SUBMARINE',
                 'DESTROYER',
@@ -47,7 +47,7 @@ BlueprintId="urs0203",
             },
         },
         {
-            MaxRadius = 24,    --from 32
+            MaxRadius = 24,    --from 32 because it was longer than frigates
         },
     },
 }

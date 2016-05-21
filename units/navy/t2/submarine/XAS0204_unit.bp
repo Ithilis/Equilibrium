@@ -28,7 +28,7 @@ BlueprintId="xas0204",
     Weapon = {
         {
             Damage = 90, -- 4*90 = 360
-            DamageRadius = 0.5,     -- from 0
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DamageType = 'Normal',
             DisplayName = 'Chrono Torpedo',
             FiringTolerance = 2,
@@ -44,7 +44,7 @@ BlueprintId="xas0204",
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
-                'T2SUBMARINE',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
                 'T3SUBMARINE',
                 'T1SUBMARINE',
                 'DESTROYER',
@@ -61,7 +61,7 @@ BlueprintId="xas0204",
             DisplayName = 'Quasar Anti-Torpedo',
             FiringTolerance = 2,
             LeadTarget = false,
-            MaxRadius = 25, --from 32
+            MaxRadius = 25, --from 32 ; to stop it from shielding everything with its torp def
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 5,

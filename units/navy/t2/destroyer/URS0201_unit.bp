@@ -31,6 +31,7 @@ BlueprintId="urs0201",
         },
         {
             Damage = 35, -- 35*5*2 = 350 ; effective dps vs subs = 300*2 / 8 = 75
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 5,
             DoTTime = 0.5,
             FireTargetLayerCapsTable = {
@@ -45,7 +46,7 @@ BlueprintId="urs0201",
             RateOfFire = 0.2,
         },
         {
-            RateOfFire = 0.05,
+            RateOfFire = 0.05, --from 0.26 ; this uses flares not normal anti torps!
         },
     },
 }

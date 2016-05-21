@@ -26,7 +26,7 @@ BlueprintId = "urb2109",
     Weapon = {
         {
             Damage = 16,    --from 25 = 60dps
-            DamageRadius = 0.5,     -- from 0
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 5,
             DoTTime = 1,
             MuzzleVelocity = 15,

@@ -58,7 +58,7 @@ BlueprintId = "xrb2308",
     },
     Weapon = {
         {
-            DamageRadius = 1,     -- from 0
+            DamageRadius = 1,          -- from 0 ; this is to stop you from submarine stacking
         },
     },
 }
