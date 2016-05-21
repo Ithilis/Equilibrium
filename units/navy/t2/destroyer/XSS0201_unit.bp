@@ -31,6 +31,7 @@ BlueprintId="xss0201",
         },
         {
             Damage = 80,    --80
+            DamageRadius = 0.5,     -- from 0
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },
