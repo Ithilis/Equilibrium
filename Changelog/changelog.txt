@@ -93,6 +93,7 @@ aeon:
 
 - sera: 
 -- torp defense rof: 1s [3,8s]
+-- torpedo aoe 0,5 [0]
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
@@ -133,7 +134,7 @@ _____________
 -- removed useless code about buff that is already overwrite by veterancy rework
 -- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
 -- cybran 50dmg = 300 (from 60 =360)
--- sera 225dmg ([250])
+-- sera 3.5aoe [4]
 -- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
 --- aeon bomber, EMP stun T1 7.5aoe (from 10)
