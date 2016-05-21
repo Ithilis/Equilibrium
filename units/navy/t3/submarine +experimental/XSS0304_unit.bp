@@ -4,33 +4,25 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0304",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
     Display = {
         Abilities = {
+            '<LOC ability_aa>Anti-Air',
+            '<LOC ability_personalstealth>Personal Stealth',    --when not move/fire
             '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',            
             '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_depthcharge>Depth Charges',   -- from torpedo
             '<LOC ability_torpedodef>Torpedo Defense',
         },
     },
     Economy = {
-        BuildCostEnergy = 30000,
-        BuildCostMass = 3000,
-        BuildTime = 21600,
-        MaintenanceConsumptionPerSecondEnergy = 50,
+        BuildCostEnergy = 15000,
+        BuildCostMass = 2000,
+        BuildTime = 10800,
     },
     Intel = {
-        SonarStealth = true,
         SonarRadius = 60,
+        SonarStealth = true,    --add, when not move/fire
+        RadarStealth = true,    --add, when not move/fire
         VisionRadius = 35,    --from 32
         WaterVisionRadius = 35,    --from 45
     },
@@ -40,20 +32,18 @@ BlueprintId="xss0304",
         MaxBrake = 5,
         MaxSpeed = 5,
     },
-    Veteran = {
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
-    },
     Weapon = {
         {
-            MaxRadius = 55,        --from 65
+            Damage = 150,       -- from 335     =150dps
+            DamageRadius = 1,     -- from 0
+            MaxRadius = 50,        --from 65
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp',        -- from torpedo
         },
         {
+            RateOfFire = 0.3,  --from 6,6s
         },
         {
+            RateOfFire = 0.3,
         },
         {
         },

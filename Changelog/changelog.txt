@@ -54,6 +54,15 @@ aeon:
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
+- T3 submarine
+Sera
+- 2000m 15000e 10800bt (3000m,30000e 21600bt)
+- 2000hp (4000), stealth when not move/fire (from perma toggle stealth) 
+- 150depth chanrge dps (335torp), 50r (55) [65] 1aoe [0]
+- torp def 3,3s rof [6,6s]
+- add depth charges + anti-air in display
+
+
 - t1 torp defences
 -- damage radius 0,5 [0]
 -- torpedo replace with depth charges
