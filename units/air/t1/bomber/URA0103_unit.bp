@@ -14,7 +14,7 @@ BlueprintId = "ura0103",
     },
     Economy = {
         BuildCostEnergy = 2250,
-        BuildCostMass = 80,
+        BuildCostMass = 90,
         BuildTime = 600,
     },
     Physics = {
