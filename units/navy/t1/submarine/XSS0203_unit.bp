@@ -26,7 +26,7 @@ BlueprintId="xss0203",
             Damage = 50,
             DamageRadius = 0.5,     -- from 0
             MaxRadius = 35,     --from 32
-            RateOfFire = 0.5,
+            RateOfFire = 0.5,   --0,25
             MuzzleSalvoDelay = 0.8,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
