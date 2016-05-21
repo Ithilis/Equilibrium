@@ -22,8 +22,8 @@ BlueprintId = "xsa0103",
     },
     Weapon = {
         {
-            Damage = 225,       --from 250
-            DamageRadius = 4,
+            Damage = 250,       --from 250
+            DamageRadius = 3.5,   -- 4
             DamageFriendly = false,
             RateOfFire = 0.1666,     --from 0.25 = 6sec
             TargetPriorities = {
