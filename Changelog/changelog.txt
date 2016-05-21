@@ -73,6 +73,13 @@ aeon:
 
 _____________
 
+- sera ACU regeneration field
+-- 18000e (9000e)[4500]
+-- regen to acu 10hp/s (15)[0]
+
+- aeon ACU omni sensor
+-- visual radius 60 ([50])
+
 - Gunships are not able to fire on air units with ground fire weapon anymore
 
 - T2 arty
@@ -85,6 +92,13 @@ _____________
 - update adjustancy code, while it was change in main game and for different system
 
 - change of AA toggle weapon on cybran units to be more robust and safe
+
+- disable deciver stealth in transport
+
+- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
+
+- cybran T3 gunship stealth energy maintaince  50 (25)
+
 
 - aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
 
