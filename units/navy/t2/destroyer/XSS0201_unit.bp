@@ -31,7 +31,7 @@ BlueprintId="xss0201",
         },
         {
             Damage = 80,    --80
-            DamageRadius = 0.5,     -- from 0
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },

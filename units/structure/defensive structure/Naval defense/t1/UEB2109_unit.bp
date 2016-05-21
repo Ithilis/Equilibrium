@@ -26,7 +26,7 @@ BlueprintId = "ueb2109",
     Weapon = {
         {
             Damage = 120,    --from 150 = 60dps
-            DamageRadius = 0.5,     -- from 0
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 50,
             MuzzleVelocity = 15,
             ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters

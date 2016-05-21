@@ -21,7 +21,7 @@ BlueprintId="uas0201",
         WaterVisionRadius = 30,    --from 45
     },
     Weapon = {
-        {
+        { --main gun
             Damage = 1000,            --from 1060 = 200dps
             DamageRadius = 2.5,        --from 1
             MuzzleVelocity = 30,    --from 30
@@ -30,6 +30,7 @@ BlueprintId="uas0201",
         {   -- sub + surface dps
             DisplayName = 'Harmonic Depth Charge',
             Damage = 100,        --from 350 = 20dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 15,
             FireTargetLayerCapsTable = {
@@ -40,6 +41,7 @@ BlueprintId="uas0201",
         },
         {   -- sub + surface dps
             Damage = 100,            --from 150 = 40dps on torpedo
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 45,
             MuzzleSalvoSize = 2,
             MuzzleVelocity = 15,

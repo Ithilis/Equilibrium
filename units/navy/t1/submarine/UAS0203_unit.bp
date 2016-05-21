@@ -1,4 +1,4 @@
---t1 aeon submarine Sylph
+--T1 aeon submarine Sylph
 
 UnitBlueprint {
 Merge = true,
@@ -29,13 +29,13 @@ BlueprintId="uas0203",
         {
             Damage = 50, --2 torps per salvo; from 75
             DamageRadius = 0.5,     -- from 0
-            MaxRadius = 35,    --from 32
-            RateOfFire = 0.5,
+            MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5, --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
             MuzzleSalvoDelay = 0.8,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
-                'T2SUBMARINE',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
                 'T3SUBMARINE',
                 'T1SUBMARINE',
                 'DESTROYER',

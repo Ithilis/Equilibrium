@@ -29,24 +29,25 @@ BlueprintId="ues0201",
         MaxSteerForce = 5.5,
     },
     Weapon = {
-        {
+        { --ground gun
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
 
         },
-        {
+        { --other ground gun. one is front one is back, dunno which
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
         },
         {
             Damage = 30,        --from 10 = 42aa dps
         },
-        {
+        { --depth charges
             Damage = 30, -- 75 = same 30dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },
-            MaxRadius = 45,
+            MaxRadius = 45, --can kite t1 subs
             MuzzleSalvoDelay = 0.8,
             MuzzleSalvoSize = 2,
             MuzzleVelocity = 15,    -- from 5
