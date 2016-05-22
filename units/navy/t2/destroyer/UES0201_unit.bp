@@ -34,7 +34,7 @@ BlueprintId="ues0201",
             MuzzleVelocity = 35,    --from 30
 
         },
-        { --other ground gun. one is front one is back, dunno which
+        { --ground gun
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
         },
@@ -53,9 +53,27 @@ BlueprintId="ues0201",
             MuzzleVelocity = 15,    -- from 5
             ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
             ProjectileLifetime = 7,
-            RateOfFire = 0.5,       --from 0,1
+            RateOfFire = 0.5,       --from 0.1
         },
         {
         },
     },
 }
+
+
+--"Oh freddled gruntbuggly,
+--Thy micturations are to me,
+--As plurdled gabbleblotchits,
+--On a lurgid bee,
+--That mordiously hath blurted out,
+--Its earted jurtles,
+--Into a rancid festering confectious organ squealer. [drowned out by moaning and screaming]
+--Now the jurpling slayjid agrocrustles,
+--Are slurping hagrilly up the axlegrurts,
+--And living glupules frart and slipulate,
+--Like jowling meated liverslime,
+--Groop, I implore thee, my foonting turling dromes,
+--And hooptiously drangle me,
+--With crinkly bindlewurdles,
+--Or else I shall rend thee in the gobberwarts with my blurglecruncheon,
+--See if I don't."
