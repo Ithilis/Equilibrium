@@ -77,9 +77,6 @@ _____________
 -- 18000e (9000e)[4500]
 -- regen to acu 10hp/s (15)[0]
 
-- T3 upgrade for all
--- regeneration 30 [35] 
-
 - Gunships are not able to fire on air units with ground fire weapon anymore
 
 - T2 arty
