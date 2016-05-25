@@ -33,6 +33,7 @@ BlueprintId = "ual0001",
         T3Engineering = {
             NewBuildRate = 120,            --from 126
             NewHealth = 4000,              --from 6000
+            NewRegenRate = 10,             --from 15; =30regen from 35
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
@@ -54,7 +55,7 @@ BlueprintId = "ual0001",
             BuildTime = 400,
             
             NewOmniRadius = 100,
-            NewVisionRadius = 60,       --50
+            NewVisionRadius = 50,       --50
         },
         ResourceAllocation = {
             ProductionPerSecondEnergy = 1200,    --from2700
