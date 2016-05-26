@@ -1,7 +1,14 @@
 --Deciever - mobile stealth generator
+local DummyWeapon = import('/mods/Equilibrium/lua/EQweapons.lua').DummyLaser -- custom invisible weapon ; when copying this copy EQweapons and EQbeams! update urls in there as well!
+
 
 local oldURL0306 = URL0306
 URL0306 = Class(oldURL0306) {
+    Weapons = {
+        TargetFinder = Class(DummyWeapon) {} -- needed for the dummy weapon added to stop some distance away
+    },
+    
+    
         
     RetardedTurnOffStealth = function(self)
         WARN('turning off stealth')

@@ -4,6 +4,9 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0307",
 
+    AI = { -- this is important - it stops it at the correct range on attack move
+        GuardScanRadius = 30, --make this a bit more than the weapon range, it needs time to stop
+    }, --30 stops it just outside of acu range
     Economy = {
         BuildCostEnergy = 1125,    --75e per sec
         BuildCostMass = 105,    --7m per sec
@@ -17,34 +20,59 @@ BlueprintId = "uel0307",
         RegenRate = 5,        --from 0 because cant get veterancy
     },
     Weapon = {
-        {
-            AboveWaterTargetsOnly = true,      
+        { -- special dummy weapon to make the shield stop a certain distance away.
+            AimsStraightOnDisable = true,
+            AlwaysRecheckTarget = false,
+            AutoInitiateAttackCommand = false,
             BallisticArc = 'RULEUBA_None',
+            CannotAttackGround = false,
+            BeamCollisionDelay = 0.2,
+            BeamLifetime = 0,
             CollideFriendly = false,
-            CountedProjectile = false,
-            Damage = 0,                                --its only for same behaviour 
-            DamageRadius = 0,
+            ContinuousBeam = true,
+            Damage = 0,
+            DamageFriendly = false,
             DamageType = 'Normal',
-            DisplayName = 'Serpentine Missile',
+            DisplayName = 'Target Tracker',
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
-            Label = 'MissileRack',
-            MaxRadius = 28,
+            FiringRandomness = 0,
+            FiringTolerance = 180,
+            Label = 'TargetFinder',
+            LeadTarget = false,
+            MaxRadius = 28, -- this is the range the unit will try to stop at ; this is for the attack command. change GuardScanRadius for attack move range.
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            PreferPrimaryWeaponTarget = false,
+            ProjectileLifetimeUsesMultiplier = 1.15,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'AttachPoint', -- when moving to new unit, update these to something that exists on the unit
+                    },
+                    RackBone = 'AttachPoint',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 0,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
             RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_IndirectFire',
-            RateOfFire = 0,
-            RenderFireClock = true,
-            SlavedToBody = true,
-            TargetCheckInterval = 2,
+            RateOfFire = 10,
+            ReTargetOnMiss = false,
+            TargetCheckInterval = 0.1,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
             TargetRestrictDisallow = 'UNTARGETABLE',
-            TrackingRadius = 1.15,
-            TurretDualManipulators = false,
+            TrackingRadius = 1.4,
             Turreted = false,
+            SlavedToBody = false,
             WeaponCategory = 'Missile',
-            WeaponRepackTimeout = 0,
-            WeaponUnpacks = false,
         },
     },
 }
