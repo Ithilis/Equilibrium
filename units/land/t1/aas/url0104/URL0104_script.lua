@@ -11,13 +11,15 @@
 local CLandUnit = import('/lua/cybranunits.lua').CLandUnit
 local CybranWeaponsFile = import('/lua/cybranweapons.lua')
 local CAANanoDartWeapon = CybranWeaponsFile.CAANanoDartWeapon
-local TargetingLaser = import('/lua/sim/DefaultWeapons.lua').DefaultBeamWeapon
+--local TargetingLaser = import('/mods/Equilibrium/lua/EQweapons.lua').DummyLaser --custom dummy weapon; completely invisible
+local TargetingLaser = import('/lua/kirvesweapons.lua').TargetingLaser --cool looking targeting laser
+
 
 URL0104 = Class(CLandUnit) {
     Weapons = {
 		AAGun = Class(CAANanoDartWeapon) {},    
 		Lazor = Class(TargetingLaser) {
-            FxMuzzleFlash = {},
+            FxMuzzleFlash = {}, --turn off any default muzzle flash from defaultweapon, ect.
             
             -- Unit in range. Cease ground fire and turn on AA
             OnWeaponFired = function(self)
