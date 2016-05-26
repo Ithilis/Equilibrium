@@ -1,5 +1,8 @@
 v.36
 -----
+
+- mobile shields/deceiver coming too close on attack move fixed
+
 - sera ACU regeneration field
 -- 18000e (9000e)[4500]
 -- regen to acu 10hp/s (15)[0]
@@ -19,6 +22,8 @@ v.36
 - update adjustancy code, while it was change in main game and for different system
 
 - change of AA toggle weapon on cybran units to be more robust and safe
+-- added new weapon for this role, used elsewhere as well (mob shields for example)
+-- cyb t1maa now has a cool little laser when in aa mode.
 
 - disable deciver stealth in transport
 
