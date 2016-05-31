@@ -4,13 +4,10 @@ UnitBlueprint {
     BlueprintId = "ueb5101",
     
     Defense = {
-        Health = 2000,      --4000hp
+        Health = 2000,      --from 4000
         MaxHealth = 2000,
     },
-    General = {
-        UnitWeight = 0.01,    --from1
-    },
-    Wreckage = {
-        ReclaimTimeMultiplier = 50,  --from1-> its same as build time
+    Economy = {
+        BuildTime = 5, --from 10 - making walls faster to build and reclaim; com reclaims 2 times as fast as he builds them.
     },
 }
