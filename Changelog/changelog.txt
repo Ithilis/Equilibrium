@@ -1,6 +1,12 @@
 v.36
 -----
 
+- walls improved:
+-- buildtime: 5[10]
+-- reclaim multiplier [1](50)
+-- unit cap [0.1] [actually 0.1 but thought it was 0.01] -- so all in all unchanged, but code cleaned.
+-- walls now take 2 times as long to build as reclaim for acu.
+
 - mobile shields/deceiver coming too close on attack move fixed
 
 - sera ACU regeneration field
