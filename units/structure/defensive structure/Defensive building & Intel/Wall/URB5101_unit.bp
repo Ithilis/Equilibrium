@@ -4,13 +4,10 @@ UnitBlueprint {
     BlueprintId = "urb5101",
     
     Defense = {
-        Health = 2000,      --4000hp
+        Health = 2000,      --from 4000
         MaxHealth = 2000,
     },
-    General = {
-        UnitWeight = 0.01,     --from1
-    },
     Wreckage = {
-        ReclaimTimeMultiplier = 50,  --from1-> its same as build time
+        ReclaimTimeMultiplier = 25,  --from1-> its same time as build time
     },
 }

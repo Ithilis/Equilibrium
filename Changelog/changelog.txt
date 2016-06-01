@@ -1,5 +1,6 @@
 v.36
 -----
+- wall cleaning code + adjust reclaim time to half
 
 - mobile shields/deceiver coming too close on attack move fixed
 
