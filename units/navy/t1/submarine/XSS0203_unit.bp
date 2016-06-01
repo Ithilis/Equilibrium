@@ -17,14 +17,14 @@ BlueprintId="xss0203",
     Physics = {
         Elevation = -2.5,        --from -1,5
         MaxAcceleration = 6.5,    --from 6
-        MaxBrake = 6.5,
+        MaxBrake = 6.5,    --from 6
         MaxSpeed = 6.5,
         MaxSpeedReverse = 6.5,        
     },
     Weapon = {
         {
             Damage = 50, --50 dps from 37.5
-            DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
+            DamageRadius = 0.5,     --from 0 ; this is to stop you from submarine stacking
             MaxRadius = 35,     --from 32 ; use this to fine tune vs kiting destroyers.
             RateOfFire = 0.5,   --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
             MuzzleSalvoDelay = 0.8,
@@ -41,12 +41,14 @@ BlueprintId="xss0203",
                 'ALLUNITS',
             },
         },
-        { -- torpedo defense; not so good 1v1 subs, but when stacking it gets better
+        { --torpedo defense; not so good 1v1 subs, but when stacking it gets better
             Damage = 2,
-            EffectiveRadius = 26,
-            MaxRadius = 32,
+            EffectiveRadius = 35,
+            MaxRadius = 35, --from 32 ;  this is torp defense so this just makes them a little better in large numbers
             ProjectileLifetime = 7,
-            RateOfFire = 0.1,
+            RateOfFire = 0.5,   --from 0.1 ; this alone makes it one of the best t1 subs; its weaker vs ships though because it relies on torp defense. 
+                                --so its more like a subhunter-sub hybrid in that way
+            TargetCheckInterval = 0.1, --from 0.5, makes it very responsive at short ranges, so you cant park on top of sub and rape it.
         },
         {
             MaxRadius = 24,    --from 32 because it was longer than frigates
