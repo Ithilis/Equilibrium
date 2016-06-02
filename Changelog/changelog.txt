@@ -1,5 +1,7 @@
 v.36
 -----
+- selen -> take back code that automatic turn weapn off when invisible / will not be able fire from transport
+
 - wall cleaning code + adjust reclaim time to half
 
 - mobile shields/deceiver coming too close on attack move fixed

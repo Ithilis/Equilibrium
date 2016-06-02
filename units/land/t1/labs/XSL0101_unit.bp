@@ -13,18 +13,10 @@ BlueprintId = "xsl0101",
         Health = 75,
         MaxHealth = 75,
     },
-    Display = {
-        Abilities = {
-            '<LOC ability_Ghetto>Ghetto',
-        },
-    },    
     Physics = {
         MaxAcceleration = 4.5,
         MaxBrake = 4.5,
         MaxSpeed = 4.5,
-    },
-    Transport = {
-        CanFireFromTransport = true,
     },
     Weapon = {
         {
@@ -40,7 +32,6 @@ BlueprintId = "xsl0101",
                 'SPECIALHIGHPRI',
                 'RADAR',
                 'MOBILE ENGINNER',
-                'COMMAND',                --ACU hight priority for ghetto sniping
                 'TECH1 MOBILE',
                 'TECH2 MOBILE',
                 'TECH3 MOBILE',
