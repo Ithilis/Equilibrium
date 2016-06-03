@@ -57,6 +57,18 @@ BlueprintId = "xsb2205",
     Weapon = {
         {
             DamageRadius = 1,          -- from 0 ; this is to stop you from submarine stacking
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --this thing actually has torp defense! wow!
             RateOfFire = 1, --from 0.5

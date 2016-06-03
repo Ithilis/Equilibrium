@@ -63,6 +63,18 @@ BlueprintId = "uab2205",
             MaxRadius = 60,
             ProjectilesPerOnFire = 1,
             RateOfFire = 0.25,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },
 }
