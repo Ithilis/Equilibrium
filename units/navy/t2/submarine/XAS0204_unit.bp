@@ -66,11 +66,11 @@ BlueprintId="xas0204",
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 5,
             ProjectileId = '/projectiles/CIMAntiTorpedo01/CIMAntiTorpedo01_proj.bp', --giving it torpedo flares instead of 1-1 torp defense.
-            ProjectileLifetime = 4,
+            ProjectileLifetime = 6,
             RackSalvoSize = 1,
-            RateOfFire = 0.5, -- from 0.13
+            RateOfFire = 0.4, -- from 0.13 ; not as good as cyb one.
             TargetCheckInterval = 0.1,
-            TrackingRadius = 1.15,
+            TrackingRadius = 1.5,
         },
     },
 }
