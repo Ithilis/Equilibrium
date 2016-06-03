@@ -4,19 +4,9 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0304",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
     Display = {
         Abilities = {
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',            
+            '<LOC ability_sonar>Sonar',          
             '<LOC ability_submersible>Submersible',
             '<LOC ability_torpedo>Torpedoes',
             '<LOC ability_torpedodef>Torpedo Defense',
@@ -26,10 +16,8 @@ BlueprintId="xss0304",
         BuildCostEnergy = 30000,
         BuildCostMass = 3000,
         BuildTime = 21600,
-        MaintenanceConsumptionPerSecondEnergy = 50,
     },
     Intel = {
-        SonarStealth = true,
         SonarRadius = 60,
         VisionRadius = 35,    --from 32
         WaterVisionRadius = 35,    --from 45
@@ -40,22 +28,29 @@ BlueprintId="xss0304",
         MaxBrake = 5,
         MaxSpeed = 5,
     },
-    Veteran = {
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
-    },
     Weapon = {
-        {
+        { --torpedoes
             MaxRadius = 55,        --from 65
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        { --torp defense 1
+            RateOfFire = 0.5,
         },
-        {
+        { --torp defense 2
+            RateOfFire = 0.5,
         },
-        {
+        { --AA gun
         },
     },
 }
