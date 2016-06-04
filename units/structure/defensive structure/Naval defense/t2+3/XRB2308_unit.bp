@@ -2,8 +2,13 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "xrb2308", 
+BlueprintId = "xrb2308",
 
+    AI = {
+        TargetBones = {
+            'xrb2308',
+        },
+    },
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
@@ -23,12 +28,14 @@ BlueprintId = "xrb2308",
         'OVERLAYANTINAVY',
         'SORTDEFENSE',
     },
+    CollisionOffsetY = 0, --to make the collision box in the right spot
     Defense = {
         ArmorType = 'Normal',    --from structure
         Health = 12500,        --from 11000
         MaxHealth = 12500,
     },
     Display = {
+        AnimationPermOpen = '/mods/Equilibrium/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
         Abilities = {
             '<LOC ability_sonar>Sonar',
             '<LOC ability_torpedo>Torpedoes',
@@ -53,12 +60,34 @@ BlueprintId = "xrb2308",
         WaterVisionRadius = 50,        --from 45
     },
     Physics = {
-        MotionType = 'RULEUMT_SurfacingSub',
-        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
+        Elevation = 0,        --to make it sit lower underwater = cant groundfire
+        BuildOnLayerCaps = {
+            LAYER_Air = false,    
+            LAYER_Land = false,
+            LAYER_Orbit = false,
+            LAYER_Seabed = true, --making it sit on the seabed instead of just below the water surface.
+            LAYER_Sub = false,
+            LAYER_Water = false,
+        },
     },
     Weapon = {
         {
             DamageRadius = 1,          -- from 0 ; this is to stop you from submarine stacking
+            FireTargetLayerCapsTable = { --so it can shoot from the seabed
+                Seabed = 'Seabed|Sub|Water',
+            },
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },
 }
