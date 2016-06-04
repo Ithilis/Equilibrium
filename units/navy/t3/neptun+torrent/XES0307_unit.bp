@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xes0307",
 
-    Buffs = {
-        Regen = {
-            Level1 = 16,
-            Level2 = 22,
-            Level3 = 28,
-            Level4 = 34,
-            Level5 = 40,
-        },
-    },
     Economy = {
         BuildCostEnergy = 90000,    --from 80 000e
         BuildCostMass = 8000,
@@ -21,17 +12,36 @@ BlueprintId="xes0307",
     Intel = {
         WaterVisionRadius = 25,        --from 50
     },
-    Veteran = {
-        Level1 = 240,
-        Level2 = 480,
-        Level3 = 720,
-        Level4 = 960,
-        Level5 = 1200,
-    },
     Physics = {
         MaxAcceleration = 4,    --from 4,25
         MaxBrake = 4,
         MaxSpeed = 4,
         MaxSpeedReverse = 4,
+    },
+    Weapon = {
+        { --main laser
+        },
+        { --main laser
+        },
+        { --torps
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --tmd
+        },
+        { --torp defense
+        },
     },
 }

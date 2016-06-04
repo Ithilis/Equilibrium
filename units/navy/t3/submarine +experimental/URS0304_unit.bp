@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="urs0304",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
     Defense = {
         Health = 5000,        --from3500
         MaxHealth = 5000,
@@ -48,23 +39,32 @@ BlueprintId="urs0304",
         MaxSpeed = 4.5,
         MaxSpeedReverse = 4.5,
     },
-    Veteran = {
-        Level1 = 160,
-        Level2 = 320,
-        Level3 = 480,
-        Level4 = 640,
-        Level5 = 800,
-    },
     Weapon = {
-        {
+        { --tml
             DamageRadius = 3,        --from4
         },
-        {
-            Damage = 70,            --from 45 = 350dps
+        { --torpedoes
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
-            MaxRadius = 65,            --from80
+            Damage = 15,            --from 45 ; 7*15*5 = 525 damage
+            DoTPulses = 7,
+            DoTTime = 0.7,
+            MaxRadius = 65,            --from80 ; decrease this to tune units effectiveness
+            MuzzleSalvoDelay = 0.4, -- this affects both torpedo tubes.
+            MuzzleSalvoSize = 5, -- there are also 2 torpedo tubes
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        { --nuke
             Buffs = {
                 {
                     Add = {
@@ -95,7 +95,6 @@ BlueprintId="urs0304",
             NukeInnerRingRadius = 25,    --from 30
             NukeOuterRingDamage = 5000,
             NukeOuterRingRadius = 50,    --from 40
-
         },
     },
 }

@@ -28,6 +28,7 @@ BlueprintId="ues0401",
         TransportClass = 10,
     },
     Physics = {
+        Elevation = -15, --from -5 ; this is to make it sit lower underwater - will work only if water is deep enough. only goes there on dive command.
         MaxAcceleration = 3.5,
         MaxBrake = 3.3,
         MaxSpeed = 3.5,        --from 2,8
@@ -37,32 +38,32 @@ BlueprintId="ues0401",
         RequirementMult = 0.5,
     },
     Weapon = {
-        {
-            Damage = 200,        --4 projectiles = 400dps
+        { --torps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            Damage = 100,        --4 projectiles = 400dps
             MaxRadius = 75,        --from 80
-            RateOfFire = 0.5,
+            RateOfFire = 1,
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,            
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,        
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,        
