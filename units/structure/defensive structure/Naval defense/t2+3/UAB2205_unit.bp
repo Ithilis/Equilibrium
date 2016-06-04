@@ -56,7 +56,7 @@ BlueprintId = "uab2205",
     Weapon = {
         {
             Damage = 150,
-            DamageRadius = 1,          -- from 0 ; this is to stop you from submarine stacking
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DisplayName = 'Chrono Torpedo',
             MuzzleVelocity = 15,
             ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters

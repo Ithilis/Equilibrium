@@ -56,7 +56,7 @@ BlueprintId = "xsb2205",
     },
         Weapon = {
         {
-            DamageRadius = 1,          -- from 0 ; this is to stop you from submarine stacking
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',

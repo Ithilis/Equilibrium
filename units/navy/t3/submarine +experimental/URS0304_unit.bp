@@ -61,6 +61,7 @@ BlueprintId="urs0304",
         },
         {
             Damage = 70,            --from 45 = 350dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 65,            --from80
         },
         {

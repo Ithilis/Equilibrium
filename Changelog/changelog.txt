@@ -31,6 +31,7 @@ sera:
 
 
 - t2 subHunters
+-- torpedo aoe: 0.5 [0]
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 
 - Vespa
@@ -53,6 +54,7 @@ sera:
 
 
 - T2 destroyers:
+-- depth charges aoe: 0.5 [0]
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- aeon/uef/cybran given depth charges
 -- c/u/s removed added torpedo against sub (that was add in past) 
@@ -71,10 +73,11 @@ sera:
 
 
 - t3 submarines
+-- torpedo aoe: 0.5 [0]
+-- removed sonar stealth + removed script (except cybran)
 
 sera
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
--- removed sonar stealth + removed script
 -- torp defense: reloadtime: 2s [10s]
 
 
@@ -91,7 +94,7 @@ sera
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- torpedo replace with depth charges
 -- changed display to depth charges (from torpedoes)
--- damage radius 1 (0)
+-- damage radius 0.5 [0]
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
 -- sera torp defense reloadtime: 1s [2s]
 
@@ -99,7 +102,7 @@ sera
 
 - t3 torp defence
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
--- damage radius 1 (0)
+-- damage radius 0.5 [0]
 -- now sits on the seabed instead of just under the water surface
 
 
