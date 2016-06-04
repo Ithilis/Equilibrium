@@ -3,7 +3,7 @@ v.36
 
 retarded naval balance:
 
-- t1 attack submarines (not sera) 50 dps [37.5].
+- t1 attack submarines 50 dps [37.5]
 -- damage: 50 [75]
 -- reloadtime: 2s [4s]
 -- torpedo aoe: 0.5 [0]
@@ -25,9 +25,6 @@ sera:
 --torp defense: MaxRadius 35 [32]
 --torp defense: reloadtime 2s [10s]
 --torp defense: TargetCheckInterval 0.1 [0.5]
---added notes
-
-
 
 
 - t2 subHunters
@@ -79,6 +76,9 @@ sera:
 sera
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- torp defense: reloadtime: 2s [10s]
+
+- T4 Tempest/Atlantis
+-- removed stealth + script
 
 
 - t1 torp defences
