@@ -54,7 +54,7 @@ sera:
 -- depth charges aoe: 0.5 [0]
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- aeon/uef/cybran given depth charges
--- c/u/s removed added torpedo against sub (that was add in past) 
+-- c/u/s removed added torpedo against sub (that was added in the past) 
 -- muzzle velocity 15 [5] 
 
 - uef:[30dps], rof 2s [10s]
@@ -70,6 +70,7 @@ sera:
 
 
 - t3 submarines
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- torpedo aoe: 0.5 [0]
 -- removed sonar stealth + removed script (except cybran)
 
@@ -84,7 +85,7 @@ sera
 - t1 torp defences
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- damage radius 0.5 [0]
--- torpedo replace with depth charges
+-- torpedoes replaced with depth charges
 -- changed display to depth charge (from torpedoes)
 -- hp: 2500 (2000) [1600-1700]
 
@@ -92,7 +93,7 @@ sera
 
 - t2 torp defences
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
--- torpedo replace with depth charges
+-- torpedoes replaced with depth charges
 -- changed display to depth charges (from torpedoes)
 -- damage radius 0.5 [0]
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
@@ -105,7 +106,10 @@ sera
 -- damage radius 0.5 [0]
 -- now sits on the seabed instead of just under the water surface
 
-
+- t3 surface ships
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- damage radius 0.5 [0]
+-- torpedoes replaced with depth charges
 
 _____________
 
