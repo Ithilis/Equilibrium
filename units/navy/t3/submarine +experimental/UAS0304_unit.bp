@@ -8,30 +8,12 @@ BlueprintId="uas0304",
         Health = 4500,        --from3750
         MaxHealth = 4500,
     },
-    Display = {
-        Abilities = {
-            '<LOC ability_sonarstealth>Sonar Stealth',
-        },
-    },
     Economy = {
         BuildCostEnergy = 105000,
         BuildCostMass = 7000,
         BuildTime = 36000,
-        MaintenanceConsumptionPerSecondEnergy = 100,
-    },
-    General = {
-        OrderOverrides = {
-            RULEUTC_StealthToggle = {
-                bitmapId = 'stealth-personal',
-                helpText = 'toggle_stealth_personal',
-            },
-        },
-        ToggleCaps = {
-            RULEUTC_StealthToggle = true,
-        },
     },
     Intel = {
-        SonarStealth = true,
         SonarRadius = 60,
         VisionRadius = 35,
         WaterVisionRadius = 35,    --from 45
