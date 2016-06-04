@@ -44,6 +44,18 @@ BlueprintId="urs0201",
             ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
             ProjectileLifetime = 7,
             RateOfFire = 0.2,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             RateOfFire = 0.05, --from 0.26 ; this uses flares not normal anti torps!
