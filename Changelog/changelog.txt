@@ -3,9 +3,9 @@ v.36
 
 retarded naval balance:
 
-- t1 attack submarines (not sera) 50 dps [37,5].
+- t1 attack submarines (not sera) 50 dps [37.5].
 -- damage: 50 [75]
--- rof: 2s [4s]
+-- reloadtime: 2s [4s]
 -- torpedo aoe: 0.5 [0]
 -- removed stealth, maintenance, from script and bp, 
 -- target priorities changed (shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
@@ -20,6 +20,15 @@ cyb:
 aeon:
 -- 575hp [550]
 
+sera:
+--torp defense: EffectiveRadius 35 [26]
+--torp defense: MaxRadius 35 [32]
+--torp defense: reloadtime 2s [10s]
+--torp defense: TargetCheckInterval 0.1 [0.5]
+--added notes
+
+
+
 
 - t2 subHunters
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
@@ -27,49 +36,73 @@ aeon:
 - Vespa
 -- removed stealth, maintenance, from script and bp
 -- 1200hp [1800]
--- torp defense: changed to flares; rof = 2s [7,7s]
+-- torp defense: changed to flares; reloadtime = 2s [7.7s]
+-- torp defense: ProjectileLifetime 6 [4]
+
 - Baracuda
 -- 750hp [1430]
--- speed 5,5 (6) [6,5]
--- torp defense: flares; rof = 2s [7,7s]
+-- speed 5.5 (6) [6.5]
+-- torp defense: flares; reloadtime = 2s [7.7s]
 -- muzzle salvo size 6 [7]
--- merged code, instead of whole code
+-- using hooked code, instead of hard shadowing
+
 - cooper
 -- hp: 1500 [1750]
--- torpedo aoe 0,5 [0]
+-- torpedo aoe 0.5 [0]
+
+
 
 - T2 destroyers:
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- aeon/uef/cybran given depth charges
 -- c/u/s removed added torpedo against sub (that was add in past) 
 -- muzzle velocity 15 [5] 
 
 - uef:[30dps], rof 2s [10s]
-- aeon:60dps [180], rof 5s [4s]
+- aeon:60dps [180], reloadtime 5s [4s]
 - cyb: 70dps [100] 
--- torp def rof: 20s [3,8s]
+-- torp def reloadtime: 20s [3.8s]
 
 - sera: 
--- torp defense rof: 1s [3,8s]
--- torpedo aoe 0,5 [0]
+-- torp defense reloadtime: 1s [3.8s]
+-- torpedo aoe 0.5 [0]
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
+
+
 - t1 torp defences
--- damage radius 0,5 [0]
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- damage radius 0.5 [0]
 -- torpedo replace with depth charges
 -- changed display to depth charge (from torpedoes)
 -- hp: 2500 (2000) [1600-1700]
 
+
+
 - t2 torp defences
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- torpedo replace with depth charges
 -- changed display to depth charges (from torpedoes)
 -- damage radius 1 (0)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
--- sera torp defense rof: 1s [2s]
+-- sera torp defense reloadtime: 1s [2s]
+
+
 
 - t3 torp defence
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
 -- damage radius 1 (0)
+-- now sits on the seabed instead of just under the water surface
 
+
+
+- t3 submarines
+
+sera
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- removed sonar stealth
+-- torp defense: reloadtime: 2s [10s]
 
 _____________
 
