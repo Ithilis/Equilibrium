@@ -30,14 +30,14 @@ BlueprintId="xrs0204",
     },
     Weapon = {
         {
-            Damage = 15, -- 75*7 = 525 per salvo
-            DamageRadius = 0.5,     -- from 0
+            Damage = 15, --75*6 = 450 per salvo ; 112.5dps
+            DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 5,
             DoTTime = 0.5,
             Label = 'Torpedo01',
             MaxRadius = 45,
             MuzzleSalvoDelay = 0.4,
-            MuzzleSalvoSize = 6,    --from 7
+            MuzzleSalvoSize = 6,    --unchanged
             MuzzleVelocity = 5,
             RateOfFire = 0.25,
             TargetPriorities = {

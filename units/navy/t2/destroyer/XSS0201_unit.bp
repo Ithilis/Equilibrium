@@ -42,6 +42,18 @@ BlueprintId="xss0201",
             ProjectileLifetime = 7,
             RateOfFire = 1,  
             TargetCheckInterval = 0.2, -- from 2, stops it from cause problems when you give it a move command and it thinks about what its purpose is instead of shooting
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {  
             RateOfFire = 1,  --from 0.26
