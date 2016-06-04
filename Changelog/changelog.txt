@@ -70,6 +70,13 @@ sera:
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
 
+- t3 submarines
+
+sera
+-- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
+-- removed sonar stealth + removed script
+-- torp defense: reloadtime: 2s [10s]
+
 
 - t1 torp defences
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
@@ -96,13 +103,6 @@ sera:
 -- now sits on the seabed instead of just under the water surface
 
 
-
-- t3 submarines
-
-sera
--- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
--- removed sonar stealth
--- torp defense: reloadtime: 2s [10s]
 
 _____________
 
