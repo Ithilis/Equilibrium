@@ -23,7 +23,6 @@ BlueprintId="uas0401",
         BuildCostMass = 24000,
         BuildRate = 360,    --from240 
         BuildTime = 54000,
-        MaintenanceConsumptionPerSecondEnergy = 150,
         BuildableCategory = {
             'BUILTBYTIER3FACTORY AEON MOBILE CONSTRUCTION',
             'BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION',
@@ -38,6 +37,7 @@ BlueprintId="uas0401",
         WaterVisionRadius = 55,        --from 100
     },
     Physics = {
+        Elevation = -15, --from -5 ; this is to make it sit lower underwater - will work only if water is deep enough. only goes there on dive command.
         MaxAcceleration = 2.8,
         MaxBrake = 2.8,    
         MaxSpeed = 2.8,                    --from 2,5
@@ -46,16 +46,29 @@ BlueprintId="uas0401",
         RequirementMult = 0.5,
     },
     Weapon = {
-        {
+        { --main cannon
             RateOfFire = 0.08,    --from 0,1 = 12,5s = 600dps
             DamageRadius = 7,    --from 5
             Damage = 7500,
         },
-        {
+        { --torps
             MaxRadius = 75,        --from 80r
             Damage = 275,        --from 350 = 330dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        { --torp defense
         },
     },
 }
