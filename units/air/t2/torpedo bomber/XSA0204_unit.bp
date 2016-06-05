@@ -10,14 +10,6 @@ BlueprintId = "xsa0204",
         MaxAirspeed = 16,      --from15
         Turnspeed = 1,          --from 0.48
     },
-    Display = {
-        Abilities = {
-            '<LOC ability_omni>Omni Sensor',
-        },
-    },
-    Intel = {
-        OmniRadius = 20,
-    },
     Transport = {
         AirClass = true,
         TransportClass = 1,
