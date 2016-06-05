@@ -12,8 +12,6 @@ BlueprintId = "xsb2205",
         'BUILTBYTIER2COMMANDER',
         'BUILTBYTIER3COMMANDER',
         'SERAPHIM',
-        'MOBILE',            --from structure
-        'NEEDMOBILEBUILD',    --add
         'DEFENSE',
         'TECH2',
         'ANTINAVY',
@@ -27,7 +25,6 @@ BlueprintId = "xsb2205",
         'SORTDEFENSE',
     },
     Defense = {
-        ArmorType = 'Normal',    --from structure
         Health = 6000, --from 4800
         MaxHealth = 6000,
     },
@@ -51,8 +48,8 @@ BlueprintId = "xsb2205",
         WaterVisionRadius = 45,
     },
     Physics = {
-        MotionType = 'RULEUMT_Water',
-        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
+        MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
+        MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
     },
     Weapon = {
         {

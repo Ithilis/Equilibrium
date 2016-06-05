@@ -15,8 +15,6 @@ BlueprintId = "xrb2308",
         'BUILTBYTIER3ENGINEER',
         'BUILTBYTIER3COMMANDER',
         'CYBRAN',
-        'MOBILE',            --from structure
-        'NEEDMOBILEBUILD',    --add
         'DEFENSE',
         'TECH3',
         'ANTINAVY',
@@ -30,7 +28,6 @@ BlueprintId = "xrb2308",
     },
     CollisionOffsetY = 0, --to make the collision box in the right spot
     Defense = {
-        ArmorType = 'Normal',    --from structure
         Health = 12500,        --from 11000
         MaxHealth = 12500,
     },
@@ -69,6 +66,8 @@ BlueprintId = "xrb2308",
             LAYER_Sub = false,
             LAYER_Water = false,
         },
+        MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
+        MotionType = 'RULEUMT_Amphibious', --making it restealth  - both of these are required for it to work.
     },
     Weapon = {
         {

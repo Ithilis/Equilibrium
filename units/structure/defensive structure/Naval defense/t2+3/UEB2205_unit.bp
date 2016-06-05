@@ -12,8 +12,6 @@ BlueprintId = "ueb2205",
         'BUILTBYTIER2COMMANDER',
         'BUILTBYTIER3COMMANDER',
         'UEF',
-        'MOBILE',            --from structure
-        'NEEDMOBILEBUILD',    --add
         'DEFENSE',
         'TECH2',
         'ANTINAVY',
@@ -26,7 +24,6 @@ BlueprintId = "ueb2205",
         'SORTDEFENSE',
     },
     Defense = {
-        ArmorType = 'Normal',    --from structure
         Health = 8000, --from 6400
         MaxHealth = 8000,
     },
@@ -50,8 +47,8 @@ BlueprintId = "ueb2205",
         WaterVisionRadius = 45,
     },
     Physics = {
-        MotionType = 'RULEUMT_Water',
-        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
+        MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
+        MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
     },
     Weapon = {
         {
