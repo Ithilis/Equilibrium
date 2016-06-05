@@ -72,6 +72,6 @@ BlueprintId = "xsb2205",
         },
         { --this thing actually has torp defense! wow!
             RateOfFire = 1, --from 0.5
-        },--might be nice to make this the strongest torp, just in case sera namvy loses.
+        },--might be nice to make this the strongest torp, just in case sera navy loses.
     },
 }

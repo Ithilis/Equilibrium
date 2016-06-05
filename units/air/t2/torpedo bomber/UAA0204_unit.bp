@@ -10,6 +10,7 @@ BlueprintId = "uaa0204",
         MaxAirspeed = 16,      --from15
         Turnspeed = 1,          --from 0.48
     },
+    Transport = {
         AirClass = true,
         TransportClass = 1,
     },

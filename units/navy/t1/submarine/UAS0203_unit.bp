@@ -3,7 +3,7 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
-
+ 
     Defense = {
         Health = 575,   --550
         MaxHealth = 575,
