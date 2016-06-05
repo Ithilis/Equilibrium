@@ -9,9 +9,9 @@ BlueprintId="xas0306",
         MaxHealth = 20000,
     },
     Economy = {
-        BuildCostEnergy = 105000,    --from 80 000e
-        BuildCostMass = 8000,
-        BuildTime = 36000,            --from 16000bt
+        BuildCostEnergy = 78750,       --from 80 000e
+        BuildCostMass = 7875,           -- from 8000m
+        BuildTime = 31500,              --from 16000bt
     },
     Intel = {
         WaterVisionRadius = 25,        --from 50

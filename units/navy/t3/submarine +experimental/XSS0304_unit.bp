@@ -5,9 +5,9 @@ Merge = true,
 BlueprintId="xss0304",
 
     Economy = {
-        BuildCostEnergy = 30000,
-        BuildCostMass = 3000,
-        BuildTime = 21600,
+        BuildCostEnergy = 31500,    -- from 30 000
+        BuildCostMass = 3150,       --from 3000
+        BuildTime = 12600,          -- from 14400 ->70s to build, drain 45m/450e
     },
     Intel = {
         SonarRadius = 60,
