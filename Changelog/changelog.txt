@@ -111,6 +111,9 @@ sera
 -- damage radius 0.5 [0]
 -- torpedoes replaced with depth charges
 
+- t2 torp bombers
+-- removed omni
+
 _____________
 
 - sera ACU regeneration field

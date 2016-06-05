@@ -19,14 +19,6 @@ BlueprintId = "uea0204",
             Level5 = 12,
         },
     },
-    Display = {
-        Abilities = {
-            '<LOC ability_omni>Omni Sensor',
-        },
-    },
-    Intel = {
-        OmniRadius = 20,
-    },
     Veteran = {
         Level1 = 7,
         Level2 = 14,
