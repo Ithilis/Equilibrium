@@ -2,15 +2,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0301", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    },
     Defense = {
         Health = 20000,
         MaxHealth = 20000,
@@ -177,13 +168,6 @@ BlueprintId = "url0301",
         RadarStealth = false,
         SonarStealth = false,
     },    
-    Veteran = {
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
-    },
     Weapon = {
         {
             Buffs = {

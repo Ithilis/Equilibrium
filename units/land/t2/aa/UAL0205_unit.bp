@@ -11,22 +11,6 @@ BlueprintId = "ual0205",
         Health = 900,        --from 1000
         MaxHealth = 900,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 6,
-        Level2 = 12,
-        Level3 = 18,
-        Level4 = 24,
-        Level5 = 32,
-    },
     Weapon = {
         {
         Damage = 60,    --120dps

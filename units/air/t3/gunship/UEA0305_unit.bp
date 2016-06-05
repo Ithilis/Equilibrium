@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0305",
 
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
@@ -63,13 +54,6 @@ BlueprintId = "uea0305",
     },
     Physics = {
         FuelUseTime = 300,            --from800
-    },
-    Veteran = {
-        Level1 = 30,
-        Level2 = 45,
-        Level3 = 60,
-        Level4 = 75,
-        Level5 = 90,
     },
     Weapon = {
         {

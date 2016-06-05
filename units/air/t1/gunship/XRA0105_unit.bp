@@ -1,3 +1,5 @@
+-- Cybran T1 gunship
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xra0105", 
@@ -12,13 +14,6 @@ BlueprintId = "xra0105",
     },
     Physics = {
         FuelUseTime = 240,
-    },
-    Veteran = {
-        Level1 = 5,
-        Level2 = 10,
-        Level3 = 15,
-        Level4 = 20,
-        Level5 = 25,
     },
     Weapon = {
         {

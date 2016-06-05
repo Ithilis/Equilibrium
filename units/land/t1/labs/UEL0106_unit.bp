@@ -23,22 +23,6 @@ BlueprintId = "uel0106",
         MaxBrake = 4.2,
         MaxSpeed = 4.2,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
-    },
-    Veteran = {
-        Level1 = 1,
-        Level2 = 2,
-        Level3 = 3,
-        Level4 = 4,
-        Level5 = 5,
-    },
     Weapon = {
         {
         Damage = 8.5,            --25.5dps

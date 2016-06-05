@@ -9,27 +9,11 @@ BlueprintId = "uab2204",
         },
     },]]--
     
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 8,
-        Level2 = 16,
-        Level3 = 24,
-        Level4 = 36,
-        Level5 = 48,
-    },
     Defense = {
         Health = 2400,
         MaxHealth = 2400,
     },
-        Display = {
+    Display = {
         Abilities = {
             '<LOC ability_Pop-up>Pop-up turret',
             '<LOC ability_aa>Anti-Air',

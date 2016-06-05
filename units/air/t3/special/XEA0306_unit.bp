@@ -4,16 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xea0306", 
 
-
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Defense = {
         RegenRate = 5,
     },
@@ -36,13 +26,6 @@ BlueprintId = "xea0306",
     Physics = {
         FuelRechargeRate = 70,
         FuelUseTime = 420,
-    },
-    Veteran = {
-        Level1 = 30,
-        Level2 = 60,
-        Level3 = 90,
-        Level4 = 120,
-        Level5 = 150,
     },
     Weapon = {
         {

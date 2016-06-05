@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "dal0310", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Categories = {
         'PRODUCTDL',
         'SELECTABLE',

@@ -49,20 +49,4 @@ BlueprintId = "xel0209",
         MaxBrake = 2.8,
         MaxSpeed = 2.8,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 8.5,
-        Level2 = 17,
-        Level3 = 25.5,
-        Level4 = 34,
-        Level5 = 42.5,
-    },
 }

@@ -19,22 +19,6 @@ BlueprintId = "ual0201",
         MaxSpeedReverse = 2,         --from 2,9
         MaxSteerForce = 2.8, 
     },
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
-    },
-    Veteran = {
-        Level1 = 2,
-        Level2 = 4,
-        Level3 = 6,
-        Level4 = 8,
-        Level5 = 10,
-    },
     AI = {
         TargetBones = {
             'Turret',

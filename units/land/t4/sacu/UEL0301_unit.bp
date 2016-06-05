@@ -2,15 +2,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0301", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    },
     Defense = {
         Health = 16000,    
         MaxHealth = 16000,
@@ -168,13 +159,6 @@ BlueprintId = "uel0301",
             SortCategory = 'SORTOTHER',
             UnitName = '<LOC uel0301_RAS_name>SACU (RAS preset)',
         },
-    },
-    Veteran = {
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
     },
     Weapon = {
         {

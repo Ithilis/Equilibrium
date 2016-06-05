@@ -4,16 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0401",
 
-
-    Buffs = {
-        Regen = {
-            Level1 = 16,
-            Level2 = 22,
-            Level3 = 28,
-            Level4 = 34,
-            Level5 = 40,
-        },
-    },
     Defense = {
         Health = 125000,
         MaxHealth = 125000,
@@ -55,12 +45,7 @@ BlueprintId="uas0401",
         MaxSpeed = 2.8,                    --from 2,5
     },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 300,
-        Level2 = 600,
-        Level3 = 900,
-        Level4 = 1200,
-        Level5 = 1500,
+        RequirementMult = 0.5,
     },
     Weapon = {
         {

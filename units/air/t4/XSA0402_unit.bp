@@ -8,15 +8,6 @@ BlueprintId = "xsa0402",
         MaxAirspeed = 17,    --from 20
         MinAirspeed = 16,    --from 18
     },
-    Buffs = {
-        Regen = {
-            Level1 = 15,
-            Level2 = 30,
-            Level3 = 45,
-            Level4 = 60,
-            Level5 = 75,
-        },
-    },
     Defense = {
         Health = 60000,        --from 52000
         MaxHealth = 60000,
@@ -28,12 +19,7 @@ BlueprintId = "xsa0402",
         BuildTime = 50000,            --from 36000
     },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 120,
-        Level2 = 240,
-        Level3 = 360,
-        Level4 = 480,
-        Level5 = 600,
+        RequirementMult = 0.5,
     },
     Weapon = {
         {

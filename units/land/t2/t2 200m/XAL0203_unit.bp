@@ -33,22 +33,6 @@ BlueprintId = "xal0203",
     Display = {
         UniformScale = 0.03,        --from0.4 what looks vierd (its bigger as obsi then)
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 6,
-        Level2 = 12,
-        Level3 = 18,
-        Level4 = 24,
-        Level5 = 32,
-    },
     Weapon = {
         {
         Damage = 18,                --60dps

@@ -39,15 +39,6 @@ BlueprintId = "xab2307",
         SkirtSizeX = 8,    --from 10x10
         SkirtSizeZ = 8,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Defense = {
         Health = 13000,
         MaxHealth = 13000,
@@ -56,13 +47,6 @@ BlueprintId = "xab2307",
         BuildCostEnergy = 1080000,
         BuildCostMass = 72000,
         BuildTime = 45000,
-    },
-    Veteran = {
-        Level1 = 144,
-        Level2 = 288,
-        Level3 = 432,
-        Level4 = 576,
-        Level5 = 720,
     },
     Weapon = {
         {

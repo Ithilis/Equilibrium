@@ -9,7 +9,6 @@ BlueprintId = "uaa0302",
         MinAirspeed = 20,    --from25
     },
     Defense = {
-
         Health = 1050,
         MaxHealth = 1050,
         RegenRate = 5,        --from0

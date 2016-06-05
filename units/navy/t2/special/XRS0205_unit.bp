@@ -4,7 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xrs0205",
 
-
     Defense = {
         Health = 1900,        --from 1500
         MaxHealth = 1900,

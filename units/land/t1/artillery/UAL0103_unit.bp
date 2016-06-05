@@ -9,24 +9,8 @@ BlueprintId = "ual0103",
         BuildCostMass = 35,     --36m 
         BuildTime = 175,        --180bt
     },
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
-    },
     Display = {
         UniformScale = 0.09,        --◘from 0,7
-    },
-    Veteran = {
-        Level1 = 1,
-        Level2 = 2,
-        Level3 = 3,
-        Level4 = 4,
-        Level5 = 5,
     },
     Weapon = {
         {

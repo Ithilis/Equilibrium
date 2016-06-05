@@ -1,8 +1,8 @@
-    --S Sniper
+--S Sniper
     
-    UnitBlueprint {
-    Merge = true,
-    BlueprintId = "xsl0305",
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsl0305",
     
     Economy = {
         BuildCostEnergy = 6800,
@@ -20,22 +20,6 @@
     },
     Intel = {
         Cloak = true,
-    },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
-    Veteran = {
-        Level1 = 20.5,
-        Level2 = 41,
-        Level3 = 61.5,
-        Level4 = 82,
-        Level5 = 102.5,
     },
     Physics = {
         MaxAcceleration = 2.8,            --from 3, on snipe  its speed multiplier with 0.75 

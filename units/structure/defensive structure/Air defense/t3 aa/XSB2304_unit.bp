@@ -4,25 +4,9 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xsb2304",
 
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Economy = {
         BuildCostEnergy = 12000,
         BuildCostMass = 1200,
         BuildTime = 1000,
-    },
-    Veteran = {
-        Level1 = 16,
-        Level2 = 32,
-        Level3 = 48,
-        Level4 = 64,
-        Level5 = 80,
     },
 }

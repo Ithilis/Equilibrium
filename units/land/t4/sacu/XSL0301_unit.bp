@@ -2,16 +2,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0301", 
 
-
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    },
     Defense = {
         Health = 14500,
         MaxHealth = 14500,
@@ -170,13 +160,6 @@ BlueprintId = "xsl0301",
             UnitName = '<LOC xsl0301_Rambo_name>SACU (Rambo preset)',
         },
     },    
-    Veteran = {
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
-    },
     Weapon = {
         {
             Damage = 250,            --from 400

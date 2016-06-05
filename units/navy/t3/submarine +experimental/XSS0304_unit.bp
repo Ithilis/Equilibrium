@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0304",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
@@ -39,13 +30,6 @@ BlueprintId="xss0304",
         MaxAcceleration = 5,    --from6
         MaxBrake = 5,
         MaxSpeed = 5,
-    },
-    Veteran = {
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
     },
     Weapon = {
         {

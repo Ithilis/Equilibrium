@@ -5,16 +5,7 @@ Merge = true,
 BlueprintId = "xsa0104", 
 
     Air = {
-        MaxAirspeed = 16,        --from15 for not be catch by interceptor
-    },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
+        MaxAirspeed = 16,        --from15 for not be catch by interceptor that easy
     },
     Defense = {
         RegenRate = 5,

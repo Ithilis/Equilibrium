@@ -4,6 +4,12 @@ UnitBlueprint {
     Merge = true,
     BlueprintId = "del0204",
     
+    AI = {
+        TargetBones = {
+            'Body',        
+            'DEL0204',
+        },
+    },    
     Economy = {
         BuildCostEnergy = 1400,
         BuildCostMass = 280,
@@ -18,30 +24,8 @@ UnitBlueprint {
         MaxBrake = 2.5,
         MaxSpeed = 2.5,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 8.5,
-        Level2 = 17,
-        Level3 = 25.5,
-        Level4 = 34,
-        Level5 = 42.5,
-    },
     Intel = {
         VisionRadius = 20,            --from26
-    },
-    AI = {
-        TargetBones = {
-            'Body',        
-            'DEL0204',
-        },
     },
     CollisionOffsetX = -0.03,
     SizeX = 0.9,

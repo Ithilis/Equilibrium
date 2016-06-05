@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "urb2109", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
-    },
     Defense = {
         Health = 2000,
         MaxHealth = 2000,
@@ -26,13 +17,6 @@ BlueprintId = "urb2109",
         SonarRadius = 45,    --from 35
         VisionRadius = 45,    --from 12
         WaterVisionRadius = 30,    --from 45
-    },
-    Veteran = {
-        Level1 = 5,
-        Level2 = 10,
-        Level3 = 15,
-        Level4 = 20,
-        Level5 = 25,
     },
     Weapon = {
         {

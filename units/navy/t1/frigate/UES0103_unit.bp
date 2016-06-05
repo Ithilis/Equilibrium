@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="ues0103",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Defense = {
         Health = 2200,
         MaxHealth = 2200,
@@ -33,13 +24,6 @@ BlueprintId="ues0103",
         SonarRadius = 80,        --from 82
         VisionRadius = 30,        --from 32
         WaterVisionRadius = 35,    --from 16
-    },
-    Veteran = {
-        Level1 = 8,
-        Level2 = 16,
-        Level3 = 24,
-        Level4 = 32,
-        Level5 = 40,
     },
     Weapon = {
         {

@@ -30,26 +30,10 @@ BlueprintId = "xsl0303",
         MaxBrake = 2.6,
         MaxSpeed = 2.6,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Intel = {
         VisionRadius = 22,
         WaterVisionRadius = 5,    --from 25
     },
-    Veteran = {
-            Level1 = 25,
-            Level2 = 50,
-            Level3 = 75,
-            Level4 = 100,
-            Level5 = 125,
-    },    
     Weapon = {
         {
             Damage = 42,        --168 dps

@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0102",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Defense = {
         Health = 1000,    --from 750
         MaxHealth = 1000,
@@ -28,28 +19,17 @@ BlueprintId="uas0102",
         BuildCostMass = 150,    --from 120
         BuildTime = 600,
     },
-
     Intel = {
         VisionRadius = 50,    --from 32
     },
-
     LifeBarHeight = 0.075,
     LifeBarOffset = 0.55,
     LifeBarSize = 0.5,
-    
     Physics = {
         MaxAcceleration = 7,    --from 8
         MaxBrake = 7,
         MaxSpeed = 7,
         MaxSpeedReverse = 7,
-    },
-
-    Veteran = {
-        Level1 = 5,
-        Level2 = 10,
-        Level3 = 15,
-        Level4 = 20,
-        Level5 = 25,
     },
     Weapon = {
         {

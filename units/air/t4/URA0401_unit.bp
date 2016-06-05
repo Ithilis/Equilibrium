@@ -14,22 +14,8 @@ BlueprintId = "ura0401",
         BuildCostMass = 30000,
         BuildTime = 37500,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 15,
-            Level2 = 30,
-            Level3 = 45,
-            Level4 = 60,
-            Level5 = 75,
-        },
-    },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 90,
-        Level2 = 180,
-        Level3 = 270,
-        Level4 = 360,
-        Level5 = 450,
+        RequirementMult = 0.5,
     },
     Weapon = {
         {

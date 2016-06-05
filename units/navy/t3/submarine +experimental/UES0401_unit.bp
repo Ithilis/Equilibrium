@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="ues0401",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
     Defense = {
         RegenRate = 15,    --from 0
     },
@@ -56,12 +47,7 @@ BlueprintId="ues0401",
         MaxSpeedReverse = 3.3,
     },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 240,
-        Level2 = 480,
-        Level3 = 720,
-        Level4 = 960,
-        Level5 = 1200,
+        RequirementMult = 0.5,
     },
     Weapon = {
         {

@@ -21,13 +21,6 @@ UnitBlueprint {
     Intel = {
         VisionRadius = 28,
     },
-    Veteran = {
-        Level1 = 6,
-        Level2 = 12,
-        Level3 = 18,
-        Level4 = 24,
-        Level5 = 32,
-    },
     SizeX = 0.6,
     SizeY = 0.9,
     SizeZ = 1.2,

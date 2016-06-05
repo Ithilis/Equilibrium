@@ -1,69 +1,53 @@
-    --Brick
+--Brick
     
-    UnitBlueprint {
-    Merge = true,
-    BlueprintId = "xrl0305",
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrl0305",
         
-		AI = {
-        TargetBones = {
-            'Turret',
-            'Right_Leg01_B01',
-            'Right_Leg02_B01',
-            'Left_Leg01_B01',
-            'Left_Leg02_B01',        
-            'Projectile03',
-            'AttachPoint',
-            },
-        },    
-        Economy = {
-            BuildCostEnergy = 10000,
-            BuildCostMass = 1000,
-            BuildTime = 5000,
+	AI = {
+    TargetBones = {
+        'Turret',
+        'Right_Leg01_B01',
+        'Right_Leg02_B01',
+        'Left_Leg01_B01',
+        'Left_Leg02_B01',        
+        'Projectile03',
+        'AttachPoint',
         },
-        Defense = {
-            Health = 5900,                
-            MaxHealth = 5900,
+    },    
+    Economy = {
+        BuildCostEnergy = 10000,
+        BuildCostMass = 1000,
+        BuildTime = 5000,
+    },
+    Defense = {
+        Health = 5900,                
+        MaxHealth = 5900,
+    },
+    Intel = {
+        WaterVisionRadius = 5,    --from 26
+    },
+    Weapon = {
+        {
+			Damage = 120,            --300dps
+			MaxRadius = 33,
+			RateOfFire = 2.5,
+        
+			TurretPitch = 10,
+			TurretPitchRange = 90,
         },
-        Buffs = {
-            Regen = {
-                Level1 = 6,
-                Level2 = 9,
-                Level3 = 12,
-                Level4 = 15,
-                Level5 = 18,
-            },
+        {
+			Damage = 40,
+			MaxRadius = 20,        --from 32
+			ProjectilesPerOnFire = 1,
+			RateOfFire = 0.1,
         },
-        Intel = {
-            WaterVisionRadius = 5,    --from 26
-        },
-        Veteran = {
-            Level1 = 30,
-            Level2 = 60,
-            Level3 = 90,
-            Level4 = 120,
-            Level5 = 150,
-        },    
-        Weapon = {
-            {
-				Damage = 120,            --300dps
-				MaxRadius = 33,
-				RateOfFire = 2.5,
-            
-				TurretPitch = 10,
-				TurretPitchRange = 90,
-            },
-            {
-				Damage = 40,
-				MaxRadius = 20,        --from 32
-				ProjectilesPerOnFire = 1,
-				RateOfFire = 0.1,
-            },
-			{
-				RangeCategory = 'UWRC_AntiNavy',
-			},
-        },
+		{
+			RangeCategory = 'UWRC_AntiNavy',
+		},
+    },
 		
-        SizeX = 1.4,
-        SizeY = 1.9,
-        SizeZ = 1.4,
-    }
+    SizeX = 1.4,
+    SizeY = 1.9,
+    SizeZ = 1.4,
+}

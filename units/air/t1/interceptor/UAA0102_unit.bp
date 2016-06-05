@@ -7,15 +7,6 @@ BlueprintId = "uaa0102",
     Air = {
         MaxAirspeed = 16,    --from 15
     },
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
-    },
     Economy = {
         BuildCostEnergy = 1500,
         BuildCostMass = 60,

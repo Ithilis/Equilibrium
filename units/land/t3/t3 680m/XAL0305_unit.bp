@@ -29,22 +29,6 @@ BlueprintId = "xal0305",
     Intel = {
         RadarStealth = true,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
-    Veteran = {
-        Level1 = 20.5,
-        Level2 = 41,
-        Level3 = 61.5,
-        Level4 = 82,
-        Level5 = 102.5,
-    },
     Weapon = {
         {
         Damage = 600,            --from 950, its 100dps, still more as artilery, 
