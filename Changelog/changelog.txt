@@ -46,7 +46,7 @@ sera:
 
 - cooper
 -- hp: 1500 [1750]
--- torpedo aoe 0.5 [0]
+-- torpedo defense reload time 2.5s (4s)[2,5]
 
 
 - T2 destroyers:
@@ -65,13 +65,16 @@ sera:
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
+- T2 cruiser
+-- aeon
+--- ground fire range 60 (80) [60]
 
 - t3 submarines
 -- removed sonar stealth + removed script (except cybran)
 
 sera
 -- 3150m, 31500e 12600bt (3000m, 30000e, 21600bt) [3000m, 24000e, 14400bt]
--- torp defense: reloadtime: 2s [10s]
+-- torp defense: reloadtime: 2s [6,7s]
 
 - T4 Tempest/Atlantis
 -- removed stealth + script

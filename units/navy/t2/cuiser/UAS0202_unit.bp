@@ -19,7 +19,7 @@ BlueprintId="uas0202",
         {
             Damage = 200,                --from 140=100dps
             FiringRandomness = 0.15,    --from 0,5
-            MaxRadius = 80,                --from 60
+            MaxRadius = 60,                --from 60
 
         },
         {

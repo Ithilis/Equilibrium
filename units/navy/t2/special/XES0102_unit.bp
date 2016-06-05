@@ -38,7 +38,7 @@ BlueprintId="xes0102",
         },
         {
             DisplayName = 'Smart Charge AntiTorpedo',
-            RateOfFire = 0.4,    --from unchanged, absurd torp defense again, this time for a reason <3
+            RateOfFire = 0.4,    --from unchanged
         },
     },
 }

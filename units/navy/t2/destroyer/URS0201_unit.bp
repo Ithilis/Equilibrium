@@ -30,7 +30,7 @@ BlueprintId="urs0201",
         {
         },
         {
-            Damage = 35, -- 35*5*2 = 350 ; effective dps vs subs = 300*2 / 8 = 75
+            Damage = 35, -- 35*5*2 = 350 damage per salvo => 70 dps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 5,
             DoTTime = 0.5,
