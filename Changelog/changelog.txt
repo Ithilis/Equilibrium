@@ -98,7 +98,6 @@ sera
 -- torpedoes replaced with depth charges
 
 
-
 - t2 torp bombers
 -- removed omni
 
@@ -186,12 +185,14 @@ _____________
 
 - cybran sacu
 -- personal stealth rename to stealth field generator, some tweak in description too
--- auto oc weapon added
 
 - aeon acu
 -- added auto overcharge weapon, that fixes, the chrono going off when you autoOC
 -- also fixes its long range issue
 -- chrono dampener range 33 (38) [35]
+
+- cybran/UEF/sera ACU + sera sacu
+-- auto oc weapon added
 
 
 

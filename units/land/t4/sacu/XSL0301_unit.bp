@@ -182,6 +182,19 @@ BlueprintId = "xsl0301",
             RateOfFire = 0.1,            --from 0,2
         },
         {
+        --auto overcharge
+            Damage = 6000,                --from 12000
+            DamageRadius = 3.5,
+
+            EnergyDrainPerSecond = 5000,
+            EnergyRequired = 5000,
+
+            MaxRadius = 28,                --from25
+            MuzzleVelocity = 25,        --from22 -> as projectile
+            RateOfFire = 0.1,            --from 0,2
+        },
+        
+        {
             Damage = 2500,                --from 1000
             DamageFriendly = true,
             DamageRadius = 10,

@@ -121,6 +121,12 @@ BlueprintId = "uel0001",
         TurretPitchSpeed = 100,    --from 90
         TurretYawSpeed = 100,
         },
+        {   --auto Overcharge
+            MaxRadius = 23,  --from 22 
+            RateOfFire = 0.25,            --from 0,3= 4s
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
+        },
         {
             MinRadius = 15,
             DamageRadius = 3,
