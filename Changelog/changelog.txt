@@ -102,6 +102,11 @@ sera
 - t2 torp bombers
 -- removed omni
 
+- cybran acu
+-- torpedo damage 125 [250]
+-- salvo size 8 [4]
+-- muzzle salvo delay 0.4 [0.8]
+
 _____________
 
 - megalith flak
@@ -119,7 +124,7 @@ _____________
 
 - wall cleaning code + adjust reclaim time to half
 
-- mobile shields/deceiver coming too close on attack move fixed
+- fixed mobile shields/deceivers coming too close on attack move
 
 
 - sera ACU regeneration field
@@ -129,17 +134,17 @@ _____________
 - Gunships are not able to fire on air units with ground fire weapon anymore
 
 - T2 arty
--- friendly fire disable (cause probelm when is on cliff and with shooting on ground destroy themself)
--- add muzzle velocity reduce distance 128 
+-- friendly fire disabled (caused problems while being near cliffs and hitting the ground)
+-- added muzzle velocity reduce distance 128 
 
-- adjust code hook/lua/defaultunits.lua 
--- its part of main game now and was colide with veterancy to AA units
+- adjusted code hook/lua/defaultunits.lua 
+-- this fixed a bug which broke veterancy for aa units
 
-- update adjustancy code, while it was change in main game and for different system
+- updated adjacency code to a better format, to keep up with the game code
 
-- change of AA toggle weapon on cybran units to be more robust and safe
+- changed the AA toggle weapons on cybran units to be more robust and safe
 
-- disable deciver stealth in transport
+- disabled deciver stealth in transport
 
 - cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
 
@@ -158,6 +163,9 @@ _____________
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
 --- aeon bomber, EMP stun T1 7.5aoe (from 10)
 
+- stinger
+-- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
+
 - T1 AA got a rebalance to make them more expensive and stronger: 50m 250e 250bt (except cybran)  
 -- aeon 305hp
 -- sera 310hp
@@ -169,15 +177,6 @@ _____________
 -- reload time 6s (5s) and damage adjusted to 270 per salvo
 -- range 36 (38) [37]
 
-
-- stinger
--- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
-
-- aeon acu
--- added auto overcharge weapon, that fixes, the chrono going off when you autoOC
--- also fixes its long range issue
--- chrono dampener range 33 (38) [35]
-
 - evensong
 -- projectile
 -- missile hp [1] (2)
@@ -187,8 +186,12 @@ _____________
 
 - cybran sacu
 -- personal stealth rename to stealth field generator, some tweak in description too
+-- auto oc weapon added
 
-
+- aeon acu
+-- added auto overcharge weapon, that fixes, the chrono going off when you autoOC
+-- also fixes its long range issue
+-- chrono dampener range 33 (38) [35]
 
 
 
