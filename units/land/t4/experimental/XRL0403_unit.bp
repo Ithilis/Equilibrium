@@ -57,11 +57,43 @@ BlueprintId = "xrl0403",
                 'ALLUNITS',
             },
         },
-        {
+        {   --torp launcher
+            
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
         },
-        {
+        {  
+        --AA flak -> its same as t2 mobile flak
+            Damage = 63,            --100,8dps
+            DamageRadius = 3,        --from 2
+            MuzzleVelocity = 55,    --from 20
+            MaxRadius = 38,            --from 40
+            RateOfFire = 1.6,
+            FiringRandomness = 4,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
         },

@@ -65,9 +65,7 @@ sera:
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
-- T2 cruiser
--- aeon
---- ground fire range 60 (80) [60]
+
 
 - t3 submarines
 -- removed sonar stealth + removed script (except cybran)
@@ -86,13 +84,11 @@ sera
 -- hp: 2500 (2000) [1600-1700]
 
 
-
 - t2 torp defences
 -- torpedoes replaced with depth charges
 -- changed display to depth charges (from torpedoes)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
 -- sera torp defense reloadtime: 1s [2s]
-
 
 
 - t3 torp defence
@@ -101,14 +97,21 @@ sera
 - t3 surface ships
 -- torpedoes replaced with depth charges
 
--- neptune 7875m 78750e 31500bt (8000m, 80 000e, 36000bt)[7000m, 60000e, 25200bt]
--- torrent 7875m 78750e 31500bt (8000m, 105 000e, 36000bt) [8000m, 80000e, 16000bt]
+
 
 - t2 torp bombers
 -- removed omni
 
 _____________
 
+- megalith flak
+-- 100dps [30] 55muzzle [20] -> its same as t2 mobile flak
+
+- T2 aeon cruiser
+-- ground fire range 60 (80) [60]
+
+-- neptune 7875m 78750e 31500bt (8000m, 80 000e, 36000bt)[7000m, 60000e, 25200bt]
+-- torrent 7875m 78750e 31500bt (8000m, 105 000e, 36000bt) [8000m, 80000e, 16000bt]
 
 - removed all ussles veterancy+buff parth from code
 
