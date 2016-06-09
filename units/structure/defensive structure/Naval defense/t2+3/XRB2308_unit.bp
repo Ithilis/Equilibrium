@@ -77,6 +77,7 @@ BlueprintId = "xrb2308",
             FireTargetLayerCapsTable = { --so it can shoot from the seabed
                 Sub = 'Seabed|Sub|Water',
             },
+            FiringTolerance = 60,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
@@ -89,6 +90,7 @@ BlueprintId = "xrb2308",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretPitch = 0,
         },
     },
 }
