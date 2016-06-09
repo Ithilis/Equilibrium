@@ -12,11 +12,13 @@ BlueprintId = "uab2205",
         'BUILTBYTIER2COMMANDER',
         'BUILTBYTIER3COMMANDER',
         'AEON',
+        'STRUCTURE',
         'DEFENSE',
         'TECH2',
         'ANTINAVY',
         'DRAGBUILD',
         'SIZE4',
+        'NEEDMOBILEBUILD', --added to be able to build units that have a motiontype (just like exps)
         'VISIBLETORECON',
         'RECLAIMABLE',
         'OVERLAYANTINAVY',
@@ -49,6 +51,10 @@ BlueprintId = "uab2205",
     Physics = {
         MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
         MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
+        SkirtOffsetX = -1,
+        SkirtOffsetZ = -1, --these offsets correct its position in the build preview (caused by it now being like a unit)
+        SkirtSizeX = 3,
+        SkirtSizeZ = 3,
     },
     Weapon = {
         {

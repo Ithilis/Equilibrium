@@ -9,17 +9,31 @@ BlueprintId = "xrb2308",
             'xrb2308',
         },
     },
+    Audio = {
+        Deploy = Sound {
+            Bank = 'XRB',
+            Cue = 'XRB2308_Activate',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        DoneBeingBuilt = Sound {
+            Bank = 'Explosions',
+            Cue = 'Expl_Water_Lrg_01',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+    },
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
         'BUILTBYTIER3ENGINEER',
         'BUILTBYTIER3COMMANDER',
         'CYBRAN',
+        'STRUCTURE',
         'DEFENSE',
         'TECH3',
         'ANTINAVY',
         'DRAGBUILD',
         'SIZE4',
+        --'NEEDMOBILEBUILD', --added to be able to build units that have a motiontype (just like exps)
         'VISIBLETORECON',
         'RECLAIMABLE',
         'OVERLAYSONAR',
@@ -32,7 +46,8 @@ BlueprintId = "xrb2308",
         MaxHealth = 12500,
     },
     Display = {
-        AnimationPermOpen = '/mods/Equilibrium/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
+        AnimationPermOpen = '/mods/Equilibrium/animations/XRB2308_NIL.sca',
+        AnimationDeploy = '/mods/Equilibrium/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
         Abilities = {
             '<LOC ability_sonar>Sonar',
             '<LOC ability_torpedo>Torpedoes',
@@ -44,11 +59,6 @@ BlueprintId = "xrb2308",
         BuildCostMass = 3000,
         BuildTime = 3750,
     },
-    Footprint = {
-        MinWaterDepth = 2,
-        SizeX = 2,
-        SizeZ = 2,
-    },
     Intel = {
         RadarStealth = true,
         SonarRadius = 60,
@@ -57,23 +67,15 @@ BlueprintId = "xrb2308",
         WaterVisionRadius = 50,        --from 45
     },
     Physics = {
-        Elevation = 0,        --to make it sit lower underwater = cant groundfire
-        BuildOnLayerCaps = {
-            LAYER_Air = false,    
-            LAYER_Land = false,
-            LAYER_Orbit = false,
-            LAYER_Seabed = true, --making it sit on the seabed instead of just below the water surface.
-            LAYER_Sub = false,
-            LAYER_Water = false,
-        },
-        MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
-        MotionType = 'RULEUMT_Amphibious', --making it restealth  - both of these are required for it to work.
+        Elevation = 0,        --to make it sit as close to the seabed as possible or so deep it doesnt matter ; note - kinda broken when being spawned in ; works when built.
+        --MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
+        --MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
     },
     Weapon = {
         {
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             FireTargetLayerCapsTable = { --so it can shoot from the seabed
-                Seabed = 'Seabed|Sub|Water',
+                Sub = 'Seabed|Sub|Water',
             },
             TargetPriorities = {
                 'SPECIALHIGHPRI',
