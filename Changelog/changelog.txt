@@ -93,6 +93,7 @@ sera
 
 - t3 torp defence
 -- now sits on the seabed instead of just under the water surface
+-- add surfacing animation
 
 - t3 surface ships
 -- torpedoes replaced with depth charges
@@ -110,9 +111,6 @@ _____________
 
 - megalith flak
 -- 100dps [30] 55muzzle [20] -> its same as t2 mobile flak
-
-- T2 aeon cruiser
--- ground fire range 60 (80) [60]
 
 -- neptune 7875m 78750e 31500bt (8000m, 80 000e, 36000bt)[7000m, 60000e, 25200bt]
 -- torrent 7875m 78750e 31500bt (8000m, 105 000e, 36000bt) [8000m, 80000e, 16000bt]
