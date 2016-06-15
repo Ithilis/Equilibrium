@@ -139,6 +139,7 @@ sera
 
 _____________
 
+Removing explosion on storages: 
 (this make game worse, but more loved, and love is that what in life realy matter <3)
 
 - mass storage, dont explode, 750hp (1500) [1600]
