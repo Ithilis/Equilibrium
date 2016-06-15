@@ -29,6 +29,7 @@ sera:
 --torp defense: TargetCheckInterval 0.1 [0.5]
 
 
+
 - t2 subHunters
 
 - Vespa
@@ -47,6 +48,7 @@ sera:
 - cooper
 -- hp: 1500 [1750]
 -- torpedo defense reload time 2.5s (4s)[2,5]
+
 
 
 - T2 destroyers:
@@ -78,10 +80,12 @@ sera
 -- removed stealth + script
 
 
+
 - t1 torp defences
 -- torpedoes replaced with depth charges
 -- changed display to depth charge (from torpedoes)
 -- hp: 2500 (2000) [1600-1700]
+
 
 
 - t2 torp defences
@@ -91,21 +95,47 @@ sera
 -- sera torp defense reloadtime: 1s [2s]
 
 
+
 - t3 torp defence
 -- now sits on the seabed instead of just under the water surface
 -- add surfacing animation
+
+
 
 - t3 surface ships
 -- torpedoes replaced with depth charges
 
 
+
 - t2 torp bombers
 -- removed omni
+
+
 
 - cybran acu
 -- torpedo damage 125 [250]
 -- salvo size 8 [4]
 -- muzzle salvo delay 0.4 [0.8]
+
+
+
+- amphibious units Brick / othuum / swagner
+-- given depth charges
+
+- brick:
+-- damage: 25 (40)
+-- reload time: 5s [10s]
+-- torp defense range: 0-25 [15-32]
+-- range indicators fixed (broken)
+
+- othuum:
+-- damage: 75 (150)
+-- reload time: 5s [10s]
+
+- swagner:
+-- damage: 25 (75)
+-- reload time: 5s [15s]
+
 
 _____________
 
