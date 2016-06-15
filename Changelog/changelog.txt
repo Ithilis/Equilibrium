@@ -143,6 +143,9 @@ Removing explosion on storages:
 (this make game worse, but more loved, and love is that what in life realy matter <3)
 
 - mass storage, dont explode, 750hp (1500) [1600]
+-- after death will lose porcion of mass that store 
+-- whole code is from: https://github.com/FAForever/fa/pull/581/files
+
 - T1 mass exktractor 500hp ([600hp]) 
 - T1 Pgen 500hp ([600hp]), 250dmg (300) [250]  
 - Hydrocarbone power plant 1500hp ([1600]) 
