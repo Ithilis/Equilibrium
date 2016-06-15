@@ -139,6 +139,8 @@ sera
 
 _____________
 
+- securing EQ code from potentiach change by official balance terrorists
+
 Removing explosion on storages: 
 (this make game worse, but more loved, and love is that what in life realy matter <3)
 

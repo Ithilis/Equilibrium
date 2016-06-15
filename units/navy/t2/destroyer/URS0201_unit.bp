@@ -27,7 +27,8 @@ BlueprintId="urs0201",
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
         },
-        {
+        {   --AA 
+            Damage = 10,    --from 10
         },
         {
             Damage = 35, -- 35*5*2 = 350 damage per salvo => 70 dps
