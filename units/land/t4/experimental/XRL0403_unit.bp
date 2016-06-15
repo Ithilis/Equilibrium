@@ -29,7 +29,7 @@ BlueprintId = "xrl0403",
         RequirementMult = 0.5,
     },
     Weapon = {
-        {
+        { -- main gun 1
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -43,7 +43,7 @@ BlueprintId = "xrl0403",
                 'ALLUNITS',
             },
         },
-        {
+        { -- main gun 2
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -58,7 +58,7 @@ BlueprintId = "xrl0403",
             },
         },
         {   --torp launcher
-            
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
@@ -72,10 +72,10 @@ BlueprintId = "xrl0403",
                 'ALLUNITS',
             },
         },
-        {
+        { --torp defense
+            RateOfFire = 0.16,
         },
-        {  
-        --AA flak -> its same as t2 mobile flak
+        { --AA flak -> its same as t2 mobile flak
             Damage = 63,            --100,8dps
             DamageRadius = 3,        --from 2
             MuzzleVelocity = 55,    --from 20
@@ -95,9 +95,9 @@ BlueprintId = "xrl0403",
                 'ALLUNITS',
             },
         },
-        {
+        { --special campaign hack peg launcher
         },
-        {
+        { --death explosion
             WeaponCategory = 'Death',
         },
     },
