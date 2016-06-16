@@ -56,7 +56,7 @@ sera:
 -- c/u/s removed added torpedo against sub (that was added in the past) 
 -- muzzle velocity 15 [5] 
 
-- uef:[30dps], rof 2s [10s]
+- uef:[30dps], reloadtime 2s [10s]
 - aeon:60dps [180], reloadtime 5s [4s]
 - cyb: 70dps [100] 
 -- torp def reloadtime: 20s [3.8s]
@@ -78,6 +78,10 @@ sera
 
 - T4 Tempest/Atlantis
 -- removed stealth + script
+-- implemented special seabed detection code so they dont clip through the floor as much anymore.
+-- increased the depth they sink to: Elevation 15 [5]
+-- atlantis: damage: 100 (200)
+-- atlantis: reload time: 1s (2s)
 
 
 
