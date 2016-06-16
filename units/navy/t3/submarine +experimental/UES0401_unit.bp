@@ -39,10 +39,22 @@ BlueprintId="ues0401",
     },
     Weapon = {
         { --torps
-            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             Damage = 100,        --4 projectiles = 400dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 75,        --from 80
             RateOfFire = 1,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             Damage = 280,        --sams unchanged
