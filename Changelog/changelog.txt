@@ -139,6 +139,9 @@ sera
 
 _____________
 
+- seraphim acu regen aura
+-- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
+
 - securing EQ code from potentiach change by official balance terrorists
 
 Removing explosion on storages: 
