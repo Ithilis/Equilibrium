@@ -63,6 +63,12 @@ BlueprintId = "url0001",
             BuildCostMass = 5000,
             BuildTime = 2500,            --from 1400bt
         },
+        StealthGenerator = {
+            BuildCostEnergy = 5250,
+            BuildCostMass = 350,
+            BuildTime = 350,
+            MaintenanceConsumptionPerSecondEnergy = 50,
+        },
         Teleporter = {
             BuildCostEnergy = 1500000,
             BuildCostMass = 15000,

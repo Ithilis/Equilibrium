@@ -7,6 +7,9 @@ BlueprintId = "xsa0402",
     Air = {
         MaxAirspeed = 17,    --from 20
         MinAirspeed = 16,    --from 18
+        
+        StartTurnDistance = 15, --15
+        TurnSpeed = 0.65,       --0,65
     },
     Defense = {
         Health = 60000,        --from 52000

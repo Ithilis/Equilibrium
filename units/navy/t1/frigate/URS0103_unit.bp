@@ -20,11 +20,12 @@ BlueprintId="urs0103",
         WaterVisionRadius = 35,    --from 16
     },
     Weapon = {
-        {
+        {   --direct fire
             Damage = 42,     -- from45 = 60dps
             MaxRadius = 30,    --from 28
         },
-        {
+        {   --AA
+            MuzzleVelocity = 60,
         },
     },
 }
