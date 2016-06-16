@@ -31,10 +31,11 @@ local settings = {
         "- However here are some things which you might want to take into account while playing:",
         "",
         "1. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
-        "2. Mass storages are cheaper, provide less mass, and explode on death! Consider safety and use adjacency.",
-        "3. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
-        "4. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
-        "5. Veterancy doesn't instant-heal units anymore. Units share experience from kill.",
+        "2. Subs warfare: T1 attack submarines > destroyers > T2 sub hunters > T1 attack submarines",       
+        "3. Mass storages are cheaper, provide less adjustancy, and when they are destroyed the mass stored in them will be lost.",
+        "4. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
+        "5. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
+        "6. Veterancy doesn't instant-heal units anymore. Units share experience from kill.",
     }
 }
 
