@@ -143,6 +143,10 @@ sera
 
 _____________
 
+- torrent ship: 
+-- add tml silo with manual launch
+-- 80 build rate, 6000dmg, 5aoe, 50-200r, 2missile max
+
 - seraphim acu regen aura
 -- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
 

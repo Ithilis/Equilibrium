@@ -4,14 +4,59 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xas0306",
 
+    Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'AEON',
+        'MOBILE',
+        'NAVAL',
+        'TECH3',
+        'DIRECTFIRE',
+        'ANTIMISSILE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'BATTLESHIP',
+        'SHOWATTACKRETICLE',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+        'OVERLAYINDIRECTFIRE',
+        'OVERLAYDEFENSE',
+        'TACTICALMISSILEPLATFORM',  --add
+        'SILO',                     --add
+    },
     Defense = {
         Health = 20000,        --from 15000
         MaxHealth = 20000,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_manuallaunch>Manual Launch',      --can fire tml
+        },
     },
     Economy = {
         BuildCostEnergy = 78750,       --from 80 000e
         BuildCostMass = 7875,           -- from 8000m
         BuildTime = 31500,              --from 16000bt
+        BuildRate = 80,     --add to be able build tml
+    },
+    General = {
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_CallTransport = false,
+            RULEUCC_Capture = false,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Nuke = false,
+            RULEUCC_Patrol = true,
+            RULEUCC_Reclaim = false,
+            RULEUCC_Repair = false,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_SiloBuildTactical = true,
+            RULEUCC_Stop = true,
+            RULEUCC_Tactical = true,
+            RULEUCC_Transport = false,
+        },
     },
     Intel = {
         WaterVisionRadius = 25,        --from 50
@@ -32,6 +77,80 @@ BlueprintId="xas0306",
         {
         },
         {
+        },
+        {   -- manual launch tml
+            AboveWaterTargetsOnly = true,
+            Audio = {
+                Fire = Sound {
+                    Bank = 'UALWeapon',
+                    Cue = 'UAB2108_Missile_Serpent2',
+                    LodCutoff = 'Weapon_LodCutoff',
+                },
+            },
+            BallisticArc = 'RULEUBA_None',
+            CollideFriendly = false,
+            CountedProjectile = true,
+            Damage = 6000,
+            DamageFriendly = false,
+            DamageRadius = 5,
+            DamageType = 'Normal',
+            DisplayName = 'Serpentine Missile',
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',
+                Sub = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            FiringTolerance = 5,
+            ForceSingleFire = true,
+            InitialProjectileStorage = 0,
+            Label = 'CruiseMissile',
+            ManualFire = true,
+            MaxProjectileStorage = 2,
+            MaxRadius = 200,
+            MinRadius = 50,
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 5,
+            ProjectileId = '/projectiles/AIFMissileTactical01/AIFMissileTactical01_proj.bp',
+            ProjectileLifetime = 30,
+            RackBones = {
+                {
+                    HideMuzzle = true,
+                    MuzzleBones = {
+                        'Turret_Front_Muzzle',
+                    },
+                    RackBone = 'Turret_Front',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_IndirectFire',
+            RateOfFire = 3,
+            TargetCheckInterval = 0.16,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 0,
+            TurretPitchSpeed = 0,
+            TurretYaw = 0,
+            TurretYawRange = 0,
+            TurretYawSpeed = 0,
+            Turreted = false,
+            WeaponCategory = 'Missile',
+            WeaponRepackTimeout = 3,
+            WeaponUnpacks = true,
         },
     },
 }
