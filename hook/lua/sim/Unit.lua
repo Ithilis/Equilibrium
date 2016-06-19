@@ -27,6 +27,7 @@ Unit = Class(oldUnit) {
     
     OnKilled = function(self, instigator, type, overkillRatio)
         self.Dead = true
+        self:HandleStorage()        --Ithilis add only this 
         if instigator and self.totalDamageTaken ~= 0 then
             self:VeterancyDispersal()
         end
@@ -237,53 +238,6 @@ Unit = Class(oldUnit) {
 -- code is from there  https://github.com/FAForever/fa/pull/581/files
 -----
 
-    --On killed: this function plays when the unit takes a mortal hit. Plays death effects and spawns wreckage, dependant on overkill
-    OnKilled = function(self, instigator, type, overkillRatio)
-        local layer = self:GetCurrentLayer()
-        self.Dead = true
-
-        --Units killed while being invisible because they're teleporting should show when they're killed
-        if self.TeleportFx_IsInvisible then
-            self:ShowBone(0, true)
-            self:ShowEnhancementBones()
-        end
-
-        local bp = self:GetBlueprint()
-        if layer == 'Water' and bp.Physics.MotionType == 'RULEUMT_Hover' then
-            self:PlayUnitSound('HoverKilledOnWater')
-        elseif layer == 'Land' and bp.Physics.MotionType == 'RULEUMT_AmphibiousFloating' then
-            --Handle ships that can walk on land
-            self:PlayUnitSound('AmphibiousFloatingKilledOnLand')
-        else
-            self:PlayUnitSound('Killed')
-        end
-
-        if self.PlayDeathAnimation and self:GetFractionComplete() > 0.5 then
-            self:ForkThread(self.PlayAnimationThread, 'AnimationDeath')
-            self.DisallowCollisions = true
-        end
-        
-        self:HandleStorage()        --Ithilis add only this 
-        self:DoUnitCallbacks( 'OnKilled' )
-
-        if self.UnitBeingTeleported and not self.UnitBeingTeleported.Dead then
-            self.UnitBeingTeleported:Destroy()
-            self.UnitBeingTeleported = nil
-        end
-
-        --Notify instigator of kill
-        if instigator and IsUnit(instigator) then
-            instigator:OnKilledUnit(self)
-        end
-        if self.DeathWeaponEnabled ~= false then
-            self:DoDeathWeapon()
-        end
-        self:DisableShield()
-        self:DisableUnitIntel('Killed')
-        self:ForkThread(self.DeathThread, overkillRatio , instigator)
-
-        ArmyBrains[self:GetArmy()]:AddUnitStat(self:GetUnitId(), "lost", 1)
-    end,
     
     HandleStorage = function(self, to_army)
         if EntityCategoryContains(categories.MOBILE, self) then
