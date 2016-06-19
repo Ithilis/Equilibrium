@@ -143,21 +143,22 @@ sera
 
 _____________
 
-- torrent ship: 
+- torrent missile ship: 
 -- add tml silo with manual launch
 -- 80 build rate, 6000dmg, 5aoe, 50-200r, 2missile max
 
-- seraphim acu regen aura
--- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
+-sera t2 Ilshavoh
+--loosen restrictions on its guns so it can shoot closer to itself.
+--TurretPitchRange: 90 [60]
 
-- securing EQ code from potentiach change by official balance terrorists
+- protecting EQ code from potential changes by official balance terrorists
 
 Removing explosion on storages: 
 (this make game worse, but more loved, and love is that what in life realy matter <3)
 
-- mass storage, dont explode, 750hp (1500) [1600]
--- after death will lose porcion of mass that store 
--- whole code is from: https://github.com/FAForever/fa/pull/581/files
+- mass storage, no longer explodes, 750hp (1500) [1600]
+-- the mass they store within them is lost on death. 
+-- this code is from (made by crotalus): https://github.com/FAForever/fa/pull/581/files
 
 - T1 mass exktractor 500hp ([600hp]) 
 - T1 Pgen 500hp ([600hp]), 250dmg (300) [250]  
@@ -249,6 +250,8 @@ Removing explosion on storages:
 - cybran/UEF/sera ACU + sera sacu
 -- auto oc weapon added
 
+- seraphim acu regen aura
+-- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
 
 
 
