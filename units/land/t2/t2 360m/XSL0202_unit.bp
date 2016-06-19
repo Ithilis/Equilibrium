@@ -10,6 +10,7 @@ BlueprintId = "xsl0202",
         BuildTime = 1800,
     },
     Weapon = {
-        TurretYawSpeed = 180,    --from 70 = on prenerf value
+        TurretPitchRange = 90,  --from 60, to help it shoot at units very close to it.
+        TurretYawSpeed = 180,   --from 70 = on prenerf value
     },
 }
