@@ -29,7 +29,6 @@ sera:
 --torp defense: TargetCheckInterval 0.1 [0.5]
 
 
-
 - t2 subHunters
 
 - Vespa
@@ -50,7 +49,6 @@ sera:
 -- torpedo defense reload time 2.5s (4s)[2,5]
 
 
-
 - T2 destroyers:
 -- aeon/uef/cybran given depth charges
 -- c/u/s removed added torpedo against sub (that was added in the past) 
@@ -68,7 +66,6 @@ sera:
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
 
-
 - t3 submarines
 -- removed sonar stealth + removed script (except cybran)
 
@@ -84,21 +81,16 @@ sera
 -- atlantis: reload time: 1s (2s)
 
 
-
 - t1 torp defences
 -- torpedoes replaced with depth charges
 -- changed display to depth charge (from torpedoes)
 -- hp: 2500 (2000) [1600-1700]
-
-
 
 - t2 torp defences
 -- torpedoes replaced with depth charges
 -- changed display to depth charges (from torpedoes)
 -- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
 -- sera torp defense reloadtime: 1s [2s]
-
-
 
 - t3 torp defence
 -- now sits on the seabed instead of just under the water surface
@@ -110,17 +102,14 @@ sera
 -- torpedoes replaced with depth charges
 
 
-
 - t2 torp bombers
 -- removed omni
-
 
 
 - cybran acu
 -- torpedo damage 125 [250]
 -- salvo size 8 [4]
 -- muzzle salvo delay 0.4 [0.8]
-
 
 
 - amphibious units Brick / othuum / swagner
@@ -151,6 +140,9 @@ _____________
 --loosen restrictions on its guns so it can shoot closer to itself.
 --TurretPitchRange: 90 [60]
 
+- seraphim acu regen aura
+-- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
+
 - protecting EQ code from potential changes by official balance terrorists
 
 Removing explosion on storages: 
@@ -166,7 +158,6 @@ Removing explosion on storages:
 - T2 Mex 2000hp ([3000]) 
 - T3 mex 6000hp (9000) [8400]
 
-
 - megalith flak
 -- 100dps [30] 55muzzle [20] -> its same as t2 mobile flak
 
@@ -180,7 +171,6 @@ Removing explosion on storages:
 - wall cleaning code + adjust reclaim time to half
 
 - fixed mobile shields/deceivers coming too close on attack move
-
 
 - sera ACU regeneration field
 -- 18000e (9000e)[4500]
@@ -201,16 +191,14 @@ Removing explosion on storages:
 
 - disabled deciver stealth in transport
 
-- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth, and one destroy t2 mex by one pass when have storage near
+- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth is huge advantage 
 
 - cybran T3 gunship stealth energy maintaince  50 (25)
 
-
-- aeon transport change capture distance from (default) 5 to 2.5 -> so that its visible when capturing a mex
+- aeon transport change capture distance from (default) 5 to 2.5 -> so transport is visible while capturing a mex
 
 - T1 bombers, these got a nerf so make them more convenient to play against
 -- speed 10 (11)
--- removed useless code about buff that is already overwrite by veterancy rework
 -- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
 -- cybran 50dmg = 300 (from 60 =360)
 -- sera 3.5aoe [4]
@@ -221,7 +209,7 @@ Removing explosion on storages:
 - stinger
 -- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
 
-- T1 AA got a rebalance to make them more expensive and stronger: 50m 250e 250bt (except cybran)  
+- T1 AA got a rebalance to make them more expensive and stronger: 50m 250e 250bt (35m 175e 175bt)(except cybran)  
 -- aeon 305hp
 -- sera 310hp
 -- uef 320hp
@@ -233,22 +221,20 @@ Removing explosion on storages:
 -- range 36 (38) [37]
 
 - evensong
--- projectile
 -- missile hp [1] (2)
---- acceleration 4 [3]
---- initial speed 10 [3]
---- max speed 16 [12]
+-- acceleration 4 [3]
+-- initial speed 10 [3]
+-- max speed 16 [12]
 
 - cybran sacu
 -- personal stealth rename to stealth field generator, some tweak in description too
 
-- aeon acu
--- added auto overcharge weapon, that fixes, the chrono going off when you autoOC
--- also fixes its long range issue
--- chrono dampener range 33 (38) [35]
-
-- cybran/UEF/sera ACU + sera sacu
+- aeon/cybran/UEF/sera ACU + sera sacu
 -- auto oc weapon added
+
+- aeon acu
+-- fixes bug where dont show correct range cyrcle
+-- chrono dampener range 33 (38) [35]
 
 - seraphim acu regen aura
 -- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
@@ -264,7 +250,6 @@ v. 35
 -----
 
 There were some improvements and rebalances in this version:
-
 
 
 - Mobile missile launchers got a balance pass:
@@ -293,14 +278,12 @@ There were some improvements and rebalances in this version:
 -- improved uef and cybran bombers a little  they should now drop a bit better, although this should be obsolete with the new (finally) bomber fixes with patch 3652.
 
 
-
 -Scathis was buffed a bit to be more useable as a mobile artillery piece:
 -- movement speed: 3 (2)
 -- muzzle velocity: 120 (160) - now its shells get to their targets faster (interestingly).
 -- turn radius: 5 (2) to stop it from looking silly while turning at high speeds
 -- acceleration: 1 (1.5) puts some weight behind its movemement, making it look like some experimental and not a lab.
 -- able to fire from deep underwater
-
 
 
 - Air staging drastically improved:
@@ -319,14 +302,11 @@ There were some improvements and rebalances in this version:
 --Aeon/Sera have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
 
 
-
 -Torpedo bombers are a bit nicer to use  they now turn faster (still painfully slow though) but have the same performance.
-
 
 
 -Cybran shields got an hp buff to the shield buildings, increasing faction diversity
 --ED4 shield code cleaned up (because its directly buildable at t3), and mod made smaller - no gameplay changes
-
 
 
 - game enders got a price rebalance to make them a bit more expensive and diverse - dont forget that eco is different in equilibrium so the prices for these should be different also.
@@ -339,8 +319,6 @@ There were some improvements and rebalances in this version:
 -- speed 8 [6]
 -- added 30aoe omni, 150aoe radar (100)
 -- aoe 2.5 [1]
-
-
 
 
 Factories got their long awaited hp nerfs so that its a little easier to snipe hqs, and so you need to think about their placement a little more. (also you can always use shields!)
@@ -422,16 +400,11 @@ Same goes for the level 3 hive:
 -- 2750e (4125e)
 ---> reason: they now have the same price so you can upgrade or build a new building (pros and cons for each choice)
 
-
-
-
-
 _________
 General mod structure, organization and versioning improved a little bit
 
 - removed some useless code, from cybran shield icon: all "gamecommon", "icon" - and everything inside, only icon part from "unitview.lua" now the mod should be smaller in size.
 - Mecries had some useless code which was removed.
-
 
 _________
 
@@ -449,14 +422,6 @@ There were some fixes of both the normal game and the previous version of the mo
 -- reload time 10s [0,1s]
 
 - reverted the upgradable building stealth fix  it stopped working at some point in the past and serves no purpose now.
-
-
-
-
-
-
-
-
 
 
 _____________________
@@ -1189,73 +1154,3 @@ __________________________________________
 - T4 Fateboy main cannon (100r) 525dps (from 750)
 -- close cannon (45r) 750dps (from 450)
 -- shield reload time 120s (from 160)
-
-____________________________
-below is not integrate and is only my note what need to fix somewhere...
-___________________________
-- sacu preset ikonky
-
-
-Chrono aby nestunovalo vlastnych
-
-
-- sera acu advance gun prida +3 range, ale ked ho zrusi range sa nezrusi spet. èo je zle a treba to nejak fixnut. 
-
-- anti nuka, nestava ked stalujes s niecim... 
-
-- transporty kedze enviem fixnut stealth.. tak mozno mu dat jamming. alebo nieco take.. jast idea
-
-- uprav cenu upgradov na sacu a aby boli zaokruhlene cisla
-
-
-
-
-stealt building
--- change units behavior so dont stay visible on radar after reveal
--- visual intel 5 (from 20) for not be effective as intel
-
-musis vyhodit tarmak inak je vidiet ze tam je nejaka budova, rsp bola.. 
-
-
-- sacu cena za upgrady upratat, aby to malo normalne cisla. a nepolozilo to eko
-
-- t2 torpedo bomber chyba omny radius..
-- aeon chronodumper, dont stunn ally units (fixed) - undone  nefunguje to ani u icedreamera 
-
-
-
-- stealth na transportoch. 
-- wraky aby neignorovali stit. 
-
-
-- cruiser AA issue,   je taka ze cruiser je sialene silny proti airu,  velmi vela dps ktory nuti air strielat po cruiseri inak death.   
-co by mohlo pomoct, je dat dole dps a pridat equivalent hpciek. takze by tam ten air mohol lietat dlhsie
-
-- chrono stunuje ally  - zle som prepisal kod, pozri sa na to viac, musis i pridat aeonske weaoni a nieco tam spravit... 
-
-- aeon t1 AA boat dat mu torp defens ktory i funguje
-
-janus miss issue,  dat mu t1 arty projektil ktory vychne vo vzduchu, a padne dole, aby tolko nemisoval a vypadal super
-
-
-- cyrbansky teleport ako jediny nema animaciu na mieste portovania..   imho by tam mala byt, bezohladu na to ze je telemazer featura a ju to kazdi... to je dalsi sposob kontroli a skilu ktory to dokaze odhalit. najskor ju len niekto pre to vyhodil. 
-
-
-- vyries repair. aby nestal mass ale len enegriu. 
-
-RAS a adv RAS  ras 2500m a polovicna ucinnost,   tj vyhoda sa posunie skor. 
-cybran stealth spravit advance stealth kedy bude mat aoe efekt ako ma decivet a pridavat nejak 3000hp acucku
-cloac potom spravit lacnejsi, a menej hp aby to sedelo. 
-- air faktorka roll time ice dreamer zevraj spravil cas stavania enginerou rovnaky na kazdu faktorku. skopiruj a skontroluj
-
-mercina pridat effekt ako ma miasma, 
-merrcina pridat velmi kratky stun na jednotky, nefunguje to. neviem preèo
-
-
-- sera advance gun  pridava +3range a ked sa odstrani range nezmyzne, treba to nejak fixnut. 
-
-- fuel -> aby ked sa minie palivo a 30s bol bez prikazu, aby sa siel automaticky natankovat. 
-
-- skus spravit carrier, aby po pouzití funkcie carrier jednotky mali viac hp, ktory casom klesá az bonus vyprcha. 
-
-- chrono dumper zmenit popis aby bolo jasne ze pridava hp a regen a ze nie je pravda ze je to hight energy consumption
