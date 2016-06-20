@@ -308,16 +308,16 @@
 			</ul>
 			2.Mass storages: 
 			<ul>
-			<li>Price change: <strike>200m 1500e 250bt 500 storage</strike> → 150m 1500e 187,5bt  1000 storage
-			<li>Added <a href="http://recordit.co/FF4E5M4Okn"> death explosion<a/>  for 750 damage with 5 aoe
-			<li>Health: <strike>1600</strike> → 1500
+			<li>Price change: <strike>200m 1500e 250bt 500 storage capacity</strike> → 150m 1500e 187,5bt  1000 storage capacity
+			<li>Health: <strike>1600</strike> → 750
 			<li>Adjacency bonus next to T1/2/3 mexes: <strike>50%</strike> → 25% efficiency when fully surrounded
+            <li>The mass they store within them is lost on death 
 			</ul>
 			3.Mass extractors:
 			<ul>
-			<li>T1: <strike>36m 360e 60bt +2m-2e</strike> → 30m 300e 50bt +2m-1e
-			<li>T2: <strike>900m 5400e 1171bt +6m-12e</strike> → 800m 6000e 1250bt +6m-10e
-			<li>T3: <strike>4600m 31625e 3944bt +18m-46e 8400hp</strike> → 4000m 40000e 5000bt +16m-50e 9000hp
+			<li>T1: <strike>36m 360e 60bt +2m-2e 600hp</strike> → 30m 300e 50bt +2m-1e 500hp
+			<li>T2: <strike>900m 5400e 1171bt +6m-12e 3000hp</strike> → 800m 6000e 1250bt +6m-10e 2000hp
+			<li>T3: <strike>4600m 31625e 3944bt +18m-46e 8400hp</strike> → 4000m 40000e 5000bt +16m-50e 6000hp
 			</ul>
 			4.Mass fabricators:
 			<ul>
@@ -330,7 +330,8 @@
 			</ul>
 			6.Power generators:
 			<ul>
-			<li>T1 pgen: <strike>250</strike> 300 death explosion for <strike>2</strike> 2.5aoe 
+			<li>T1 pgen: <strike>600hp 2aoe death explosion</strike> → 500hp, 2.5aoe death explosion
+            <li>Hydrocarbon power plant <strike>1600hp</strike> → 1500hp
 			<li>T2 pgen: <strike>2198bt, 2120hp</strike> →  1875bt, 2000hp
 			<li>T3 pgen: <strike>3240m, 9640hp, 8000dmg</strike> → 3200m, 8000hp  7500dmg explosion
 			</ul>
@@ -345,11 +346,11 @@
 			<h4>Purpose:</h4>
 			<ol>
 			<li>Make energy storages more important, and to separate the good players from the excellent ones.
-			<li>Make turtling and ecoing more risky, reward aggressive gameplay, bring a fairer choice between using factory or storage adjacency, nerf the T3 mex so when it’s next to 4 storages it dies to one TML and leaves 100% of its wreck value. Adjacency bonus decreased so you don't have to put storages next to mexes, but still can.  HP and price decreased to make the storage better for storage purposes, not just eco.
+			<li>Reward aggressive gameplay more, bring a fairer choice between using factory or storage adjacency, nerf the mex so it dies to one TML and leaves 100% of its wreck value. Adjacency bonus decreased so you should think about use adjustancy of mex with factory instead.  HP and price decreased to make the storage better for storage purposes, not just eco.
 			<li>Mex Changes:
 			<ul>
 			<li>T2 mexes cost less mass to get players faster onto T2 eco, where the game becomes more interesting.
-			<li>T3 mexes that are cheaper, but less effective especially with combination with less effective storages, this is a nerf to T3 eco, to smoothen the transition between T2/3 mexes. More hp to compensate for other changes and to help protect your mexes.
+			<li>T3 mexes that are cheaper, but less effective especially with combination with less effective storages, this is a nerf to T3 eco, to smoothen the transition between T2/3 mexes.
 			</ul>
 			<li>To make mass fabricators a more viable option: Their efficiency is the same, but they live longer, and need less power to support them. With storages they have similar efficiency to T3 mexes without storages.
 			<li>Fixed the way that you don't need energy storage for economic reasons. The adjacency bonus means that for 3200m in you get 2500e with a T3 pgen, or 2500e and 60 000e storage with 16 storages around a T3 Pgen. Or 600m in storage between 2x T2 Pgen is also +250e bonus.
@@ -405,7 +406,7 @@
 			<li>Heavy Shield: <strike>4500m 1Me 3500bt, 44sHP/s</strike> → 3600m 480Ke 2400bt, 60sHP/s
 			<li>Chrono dampener: <strike>1750m 5250e 1225bt 200e/shot</strike> → 1500m 60 000e 1500bt drain 400e/shot
 				<ul>
-				<li><strike>35r, 3,5s stun, 5s reload time</strike> → 38r, 2s stun, 4s reload time
+				<li><strike>35r, 3,5s stun, 5s reload time</strike> → 33r, 2s stun, 4s reload time
 				<li>20hp/s regeneration added
 				<li>fires automatically also at air/naval targets
 				<li>works from transports
@@ -443,10 +444,11 @@
 			
 			13.Sera upgrades:
 			<ul>
-			<li>Regen field price: 600m 9000e 600bt 
+			<li>Regen field price: <strike>600m 4500e 600bt</strike> 600m 18000e 600bt 
 				<ul>
 				<li>fixed bug where regen rate gets reduced to its maximum for units that have more regen
-				<li><strike>+1000hp 0hp/s</strike> → +1500hp +15hp/s regeneration for acu
+                <li>fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
+				<li><strike>+1000hp 0hp/s</strike> → +1500hp +10hp/s regeneration for acu
 				<li><strike>0%</strike> → +6,25% new max hp for units in <strike>22</strike> → 23r
 				<li>Min/Max regen: 10/20hp/s
 				</ul>
@@ -533,11 +535,12 @@
 			</ul>
             
             
-			1.Labs: Changed target priority to ACU -> mobile radar -> T1/2/3... + display "ghetto" on unit
+			1.Labs: Changed target priority to ACU -> mobile radar -> T1/2/3... + display "ghetto" on unit (except sera)
 			<ul>
 			<li>Selen: <strike>20m 35hp, 13dps, 16r 4sp</strike> → 30m 450e 75hp 22dps 18r 4,5 speed 
 				<ul>
-				<li>has <a href="http://recordit.co/4iTzhEeLzc"> better maneuverability<a/>(turret pitch/yaw range increase) 
+				<li>has better maneuverability(turret pitch/yaw range increase) 
+                <li>will automatically turn gun off when get invisible state
 				</ul>
 			
 			<li>Hunter: <strike>65hp, 21dps,14r, 4sp 35m, 350e, 175bt</strike> → 100hp, 24dps,13r 4,3 speed 30m 300e 150bt 
@@ -554,8 +557,13 @@
 			<p>
 			</ul>
             
-			2.Mobile AA: <strike>28</strike> → 30m ; AA DPS: <strike>15/16</strike> → 20/21 ;  Movement Speed: <strike>3</strike> → 3.5 ; Muzzle Velocity: <strike>45</strike> → 60
+			2.Mobile AA: <strike>28m 140e 140bt; 15/16dps; 3 speed; 45 muzzle velocity; 200hp</strike> → 50m 250e 250bt; 20/21dps; 3.5 speed; 60 Muzzle Velocity
 			<ul>
+            <ul>
+				<li>Thistle 305hp
+				<li>Ia-istle 310hp
+				<li>Archer 320hp
+				</ul>
 			<li>Sky Slammer: <strike>28m, 130hp, 16/20dps, 0,75fr, 2,9sp 15muzzle 18/32r</strike> → 40m, 200hp, 18gf/26aa dps, <a href="http://recordit.co/Rp9QoLamCx"> homing missile<a/>, 23/35r, 2.7sp 35muzzle
 				<ul>
 				<li>Weapon toggle removed - it now auto toggles so you don't have to fight the UI.
@@ -601,7 +609,7 @@
 				<li>Flare: Capture for possible capture mex instead of destroying. So you can use labs for things other than just raiding for the first 5 minutes. 
 				<li>Mech marine: strongest lab, but without any abilities.
 				</ul>
-			<li>To be able to chase bombers better, and be worth building in the first place, now it can also hit interceptors. 
+			<li>To be able to chase bombers better, survive single bomb and be worth building in the first place, now it can also hit interceptors. 
 				<ul>
 				<li>The Cybran MAA is also usable like a weaker aurora, with the same range. Homing projectile, because look awesome and whiteout it miss most of shot on long range. Have more AA range because other AA are faster.
 				<li>To make it easier to use since you don't need to remember which units are toggled, they auto toggle now.
@@ -637,7 +645,10 @@
 			<li>Receive a <a href="http://recordit.co/fuJnY4InBJ"> dummy weapon<a/> so they move with the army when given an attack move
 			<li>5hp/s natural regeneration
             <p>
-			<li>Deceiver: <strike>80m 25e upkeep cost</strike> → 84m 50e upkeep cost 
+			<li>Deceiver: <strike>80m 25e/s</strike> → 84m 50e/s
+                <ul>
+                <li>stealth field not work in transport anymore
+                </ul> 
 			
 			<li>Parashield: <strike>120m 110e drain</strike> → 105m 100e drain 3500shield 
 			
@@ -669,7 +680,7 @@
                 <ul>
                 <li>Evensong: <strike>750hp</strike> → 650hp
                     <ul>
-                    <li>Missile: <strike>1aoe, 1hp, max speed 12, acceleration 3</strike> → 1.5aoe, 2hp, max speed 10, acceleration 10
+                    <li>Missile: <strike>1aoe, initial speed 3, max speed 12, acceleration 3</strike> → 1.5aoe, initial speed 10, max speed 16, acceleration 4
                     </ul>
                 </ul>
                 <ul>
@@ -754,7 +765,8 @@
                 <li>Changed primary target priority to ACU
                 </ul>
 			
-			<li>Ilshavoh: Turn rate: <strike>70°</strike> → 180°
+			<li>Ilshavoh: Turn rate: <strike>70°</strike> → 180°; TurretPitchRange <strike>60°</strike> → 90
+
 			
 			<li>Fire beetle: <strike>300m 0 regen 5sp 3500dmg 4,5aoe 4.5r, 22 visual</strike> → 360m 5hp/s regen 4sp 3000dmg 5.5aoe 5r cloak 15 visual(-75e/s) requires 2 transport clamps
                 <ul>
@@ -765,7 +777,7 @@
 			<h4>Purpose:</h4>
             
             <ol>
-			<li>To have consistent and predictable drain values.
+			<li>To have consistent and predictable drain values. Deceiver remove this ability to nerf cybran OPnes, while mobile shield also didn't work in transport. 
 			<li>AA flak: To make gunships a more useful option, the hover ability is now more expensive. Faction with t2 shield have less hp on flak. Target priority changed to reduce annoying behavior, less range, and more <a href="http://recordit.co/VfcGiVdhbU"> muzzle velocity<a/>  to make them be more reliable.
 			<li>MML: Tweak it a bit for make deeper faction diversity
                 <ul>
@@ -779,7 +791,7 @@
                     </ul> 
                 </div> 
                 <button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show/hide</button>
-                <li>Aeon: Big reload time, is huge disadvantage against tmd, 2hp neglect it but for not make it stronger as cybran less speed on missile. More aoe is for have bigger impact. 
+                <li>Aeon: Big reload time, is huge disadvantage against tmd, projectile are faster what will help and with more aoe also can do some damage to army. 
                 <li>UEF: Camera on UEF T1 artillery is a nice feature, so now its on the MML as well, so you can use it to tell what you are shooting at - complementing the turtle-war specialised faction. 
                     <ul>
                     <li> <a href="http://recordit.co/S6emCMbGwT"> How it works<a/>
@@ -792,7 +804,8 @@
 			<li>Rhino turret turn rate increased to make them more consistent when being microed.
 			<li>Riptide is made useable on land, has more build time so its harder to spam, what make them less effective against navy.
 			<li>Obsidians with their changed target priority are now less vulnerable to OC, because you can now spread them and still focus the ACU.
-			<li>Fire beetles are more effective against land armies and worse for sniping ACUs, their cloak can be combined with deceivers for a potentially deadly weapon. Use with cloaked moles to confuse the enemy!
+			<li>Ilshavoh loosen restrictions on its guns so it can shoot closer to itself.
+            <li>Fire beetles are more effective against land armies and worse for sniping ACUs, their cloak can be combined with deceivers for a potentially deadly weapon. Use with cloaked moles to confuse the enemy!
 			</ol>
 			
 		
@@ -972,6 +985,7 @@
             
 			Megalith: <strike>18 750bt 110 000hp 180br 0,5hp/s regen underwater vision 32</strike> → 63 330bt 95 000hp 40br 15hp/s regen underwater vision 45
 			<ul>
+            <li>Flak <strike> 30dps, 20 muzzle velocity </strike> → 100dps, 55 muzzle velocity
 			<li>Megalith egg build times adjusted to the Megalith’s new build rate and units are built 2x faster than in a regular T3 factory.
 			</ul>
             
@@ -987,6 +1001,7 @@
                 <li>It can now mover faster, but is slow to accelearate, like a train.
                 <li>It is now able to support navies by firing from underwater - this is only usefull on mostly water maps since on land you can have it shielded, and it is vulnerable to torpedo bombers.
 				</ul>
+            <li>Megalith adjust flak for same number as have t2 mobile flak.     
 			</ol>
 		
 		</div>
@@ -1156,6 +1171,8 @@
                 </ul>
             <li> Air Staging facilities now repair for free.
 			</ul>
+            
+            <li> Gunships are not able to fire on air units with ground fire weapon anymore
 			
 			
 			<h4>Purpose:</h4>
@@ -1179,19 +1196,22 @@
             
             
             <li>Scouts: <strike>40m 420e 145bt</strike> → 30m 750e 200bt
+            
             <li>Interceptors: <strike>50m 2250e 500bt 15sp</strike> → 60m 1500e 400bt 16speed
-            <li>Bombers: <strike>80m 2250e 500bt</strike> → 105m 2625e 700bt  
+            
+            <li>Bombers: <strike>80m 2250e 500bt</strike> → 90m 2250e 600bt  
                 <ul>
                 <li> <strike>4s reload time, </strike> → 6s reload time 
                 <li>Maneuverabilty improved, target priority changed to engineers (from T1 air units)
                 <li>Friendly fire <strike>active </strike> → disabled
                 <p>
-                <li>Zeus: <strike>6x50dmg</strike> → 6x60dmg
-                <li>Scorcher: <strike>3aoe</strike> → 3,5aoe
+                <li>Sinnve: <strike>4aoe</strike> → 3.5aoe
+                <li>Scorcher: <strike>3aoe, fire time 1.5</strike> → 3,5aoe; fire time 3
                 <li>Shimmer: <strike>200dmg 4aoe</strike> →  400dmg 2,5aoe
                     <ul>
+                    <li><strike>80m 2250e 500bt</strike> → 105m 2625e 700bt 
                     <li>Target priorities changed to: engineers -> T2 land AA -> T2 mobile land
-                    <li>Stun: <strike>T1/T2 1,5s 4aoe</strike> → STUN: T1- 3s 7.5aoe, T2- 2s 5aoe, T3- 1s 2.5aoe (not able stun t3 navy)
+                    <li>Stun: <strike>T1/T2 1,5s 4aoe</strike> → STUN: T1: 3s 7.5aoe, T2: 2s 5aoe, T3: 1s 2.5aoe (not able stun t3 navy)
                 </ul>
                 </ul>
                 
@@ -1202,7 +1222,7 @@
                 </ul>
             <li>T1 transports: <strike>120m 4800e 800bt 0regen</strike> → 120m 3000e 800bt 5hp/s regeneration
                 <ul>
-                <li>Aeon T1 transport: Added capture ability with 3br
+                <li>Aeon T1 transport: Added capture ability with 3br and 2.5range
                 </ul>
 
 			</ol>
@@ -1346,7 +1366,7 @@
                 
                 <li>Wailer: <strike>1260m 42000e 6300bt</strike> → 1000m 25000e 6000bt 
                 <ul>
-                <li><strike>5900hp 233GF/18AA dps 25/38r jamming</strike> → 4250hp 225GF/30AA dps 25/45r stealth
+                <li><strike>5900hp 233GF/18AA dps 25/38r jamming 25e/s</strike> → 4250hp 225GF/30AA dps 25/45r stealth 50e/s
                 </ul>
                 
                 <li>Broadsword: <strike>1260m 42000e 6300bt</strike> → 1000m 25000e 6000bt
@@ -1373,6 +1393,9 @@
                 <li>Sera: <strike>3250dmg 5aoe</strike> → 3150dmg 5,5aoe
                 <li>UEF: <strike>3000dmg 6aoe 45AA dps 44r</strike> → 3000dmg 6aoe 48AA dps 45r
                 <li>Cybran: <strike>2750dmg 7aoe 14AA dps 44r</strike> → 2850dmg 6,5aoe 50AA dps 45r
+                    <ul>
+                    <li>Cybran: <strike>3700hp 60e/s</strike> → 3000hp 100e/s
+                    </u>
                 </ul>
                 
                 </ul>
@@ -1397,6 +1420,9 @@
                 </ul>
             <li>Continental: Less energy consumption and less AA dps  - better than making it stupidly expensive. Its shield bubble is also slightly bigger so it can be combined with T3 gunships and cover them.
             <li>Strats were a bit of a cheese unit so they have less speed and hp so they can be countered with T1/2 air, they got some damage tweaks to make them more consistent, more reload time so they doesn’t destroy mexes too well while hover bombing.
+                <ul>
+                <li>Cybran strat was nerfed with less survivability and more energy maintenance while stealth is huge advantage and now destroy T2 mex by single pass as others.
+                </ul>
             </ol>
         
         </div>
@@ -1583,6 +1609,7 @@
                 <li>Command Class: <strike>3600m</strike> → 4050m
                 <li>Iavish: <strike>4400m</strike> → 4500m
                 </ul>
+            
             T3 Submarines: Water vision/visual intel <strike>16/35</strike> → 35/35, sonar stealth(50/100e/s) elevation: <strike>-1,5</strike> → -3.5,
                 <ul>
                 <li>Yathso: <strike>65r 6speed, elevation -1.5</strike> → 55r 5speed, elevation -3.5
@@ -1594,14 +1621,16 @@
                     </ul>
                 </ul>
                 
-            
             T3 Special: <strike>50</strike> → 25 water vision
                 <ul>
-                <li>Neptune: <strike>7000m 80 000e 4,25sp</strike> → 8000m 90 000e 4speed
-                <li>Torrent: <strike>80 000e 16000bt 15 000hp</strike> → 105 000e 36000bt 20 000hp 3sp
-                    <li><strike>2x 200dps 2aoe</strike> → 2x 250dps 3aoe
+                <li>Neptune: <strike>7000m 60 000e 25200bt 4,25sp</strike> → 7875m 78750e 31500bt  4speed
+                <li>Torrent: <strike>8000m 80 000e 16000bt 15 000hp</strike> → 7875m 78750e 31500bt 20 000hp
+                    <ul>
+                    <li>missile <strike>2x 200dps 2aoe</strike> → 2x 250dps 3aoe
+                    <li>Add manual launch TML: max 2missile, 50-200r, 6000dmg, 5aoe, 80build rate
                     </ul>
-            
+                </ul>
+                
             Battleships: <strike>8000/9000m 54 000e 28 800bt 2/3aoe 50 water vision</strike> → 9000m 90 000e 36 000bt 2.5aoe 25 water vision
             <p>
             Galaxy <strike>128</strike> → 140r main cannon <strike>4</strike> → 1s reload time
@@ -1646,7 +1675,7 @@
             <li>These unique ships got a water vision adjustment as part of the rework for submarines.
                 <ul>
                 <li>Neptune now takes the same time to build as battleships so it doesn't wreck T2 navy as hard or at least not until a bit later.
-                <li>Torrent has more hp to bring its stats more in line with T3 navy, more dps to be at least as good as the same mass in T2 cruisers (UEF) Also more build time to make it more like a T3 unit.
+                <li>Torrent has more hp to bring its stats more in line with T3 navy, more dps to be at least as good as the same mass in T2 cruisers (UEF) Also more build time to make it more like a T3 unit. Add 2 manual launch tml to get advantage over t2 cruiser bombardment.
                 </ul>
             <li>Galaxy has more range so it’s less crap
 			<li>UEF has less hp, to increase consistency and to make it less strong. 
@@ -1725,6 +1754,10 @@
             <p>
             
             T2 Static Artillery reworked, so it's now stronger and more expensive:
+            <ul>
+            <li><strike>friendly fire allowed</strike> → friendly fire disable
+            <li><strike>muzzle velocity reduce distance non</strike> → added muzzle velocity reduce distance 128
+            </ul>
                 <ul>
                 <li>Cybran:  2500m 25000e 3125bt 300/3000e for shot; 4750hp, 1,75fr, 150dps, 15s reload time, 10-120range, STUN:10aoe T1-4s T2-3s T3-2s Naval: T1-3s T2-2s T3-1s
                 <li>UEF: 2750m 27500e 3437,5bt 250/2500e for shot; 5250hp, 1,5fr, 175dps, 15-130r
@@ -1756,7 +1789,7 @@
             <li>T1pd: Its too strong against non-artilery army comparing with T2 pd.
 			<li>T2pd: Adjusted and standardised the prices and build times so they work with all the land changes.
 			<li>T3pd: Nerfed to maintain balance with the nerfed T3 units. 
-			<li>T2 Static Artillery: This unit was nearly useless due to its firing randomness and cost, it was only worth building them against fatboys and in some cases Cybran T2 navy. In this mod they are reworked to be a T2 version of T3 artillery. Very expensive, but can be serious threat for the enemy base, or an incoming army. A game ender on 5x5 1v1 maps and a major investment in teamgames. Faction diversity was also increased, where different factions have different artillery. 
+			<li>T2 Static Artillery: This unit was nearly useless due to its firing randomness and cost, it was only worth building them against fatboys and in some cases Cybran T2 navy. In this mod they are reworked to be a T2 version of T3 artillery. Very expensive, but can be serious threat for the enemy base, or an incoming army. A game ender on 5x5 1v1 maps and a major investment in teamgames. Faction diversity was also increased, where different factions have different artillery. Also added muzzle velocity distance and disable friendly fire to prevent situation where artillery on cliff can destroy them self. 
 			<li>TML: aoe increased for two reasons, the first is when attacking mexes with storage. The behavior is very inconsistent and can lead to not all storages destroyed, and in some cases even the mex survives! This is solved by increasing the aoe of the TML. The second reason is to make it a bit easier to snipe moving units with it, which makes the unit more interesting to use, and makes replays more fun as well! The amount of missiles TMLs can store has been decreased since you never need all 20 missiles, but they waste your mass if you forgot to turn autobuild off.
             <li>TMD: Unlike the normal game fix, this one keeps the same reload time for TMD. Also it came out far earlier and worked. So theres no reason to change it to base game, since its closer to pre-patch values.
 			<li>The Aeon TMD has been (finally) fixed! Now it will catch missiles flying over it. It also got a reload time and duration change so it's not as easy to abuse 2 tmls to KO it. Because of this its had its mass cost adjusted.
@@ -1808,8 +1841,7 @@
             Wall
                 <ul>
                 <li> <strike>4000hp</strike> → 2000hp
-                <li> unit weight <strike>1</strike> → 0.01 -> Now walls take up far less unit cap.
-                <li> Reclaim Time Multiplier<strike>1</strike> → 50 -> Means that it takes the same time to reclaim as build.
+                <li> Reclaim Time Multiplier<strike>1</strike> → 25 -> Means that it takes the same time to reclaim as build.
                 </ul>
             <p>
             

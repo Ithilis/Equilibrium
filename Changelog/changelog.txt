@@ -132,10 +132,6 @@ sera
 
 _____________
 
-- torrent missile ship: 
--- add tml silo with manual launch
--- 80 build rate, 6000dmg, 5aoe, 50-200r, 2missile max
-
 -sera t2 Ilshavoh
 --loosen restrictions on its guns so it can shoot closer to itself.
 --TurretPitchRange: 90 [60]
@@ -154,7 +150,7 @@ Removing explosion on storages:
 
 - T1 mass exktractor 500hp ([600hp]) 
 - T1 Pgen 500hp ([600hp]), 250dmg (300) [250]  
-- Hydrocarbone power plant 1500hp ([1600]) 
+- Hydrocarbon power plant 1500hp ([1600]) 
 - T2 Mex 2000hp ([3000]) 
 - T3 mex 6000hp (9000) [8400]
 
@@ -163,6 +159,8 @@ Removing explosion on storages:
 
 -- neptune 7875m 78750e 31500bt (8000m, 80 000e, 36000bt)[7000m, 60000e, 25200bt]
 -- torrent 7875m 78750e 31500bt (8000m, 105 000e, 36000bt) [8000m, 80000e, 16000bt]
+-- add tml silo with manual launch
+-- 80 build rate, 6000dmg, 5aoe, 50-200r, 2missile max
 
 - removed all ussles veterancy+buff parth from code
 
@@ -171,10 +169,6 @@ Removing explosion on storages:
 - wall cleaning code + adjust reclaim time to half
 
 - fixed mobile shields/deceivers coming too close on attack move
-
-- sera ACU regeneration field
--- 18000e (9000e)[4500]
--- regen to acu 10hp/s (15)[0]
 
 - Gunships are not able to fire on air units with ground fire weapon anymore
 
@@ -189,7 +183,7 @@ Removing explosion on storages:
 
 - changed the AA toggle weapons on cybran units to be more robust and safe
 
-- disabled deciver stealth in transport
+- disabled deceiver stealth in transport
 
 - cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth is huge advantage 
 
@@ -200,7 +194,7 @@ Removing explosion on storages:
 - T1 bombers, these got a nerf so make them more convenient to play against
 -- speed 10 (11)
 -- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
--- cybran 50dmg = 300 (from 60 =360)
+-- cybran [50dmg = 300] (from 60 =360)
 -- sera 3.5aoe [4]
 -- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
 -- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
@@ -217,7 +211,7 @@ Removing explosion on storages:
 - hoplite
 -- fixing mistake in speed, added speed nerf also on acceleration and max brake
 -- fixing mistake in changelog abotu HP
--- reload time 6s (5s) and damage adjusted to 270 per salvo
+-- reload time 6s (5s) [4s] and damage adjusted to 270 per salvo
 -- range 36 (38) [37]
 
 - evensong
@@ -236,9 +230,10 @@ Removing explosion on storages:
 -- fixes bug where dont show correct range cyrcle
 -- chrono dampener range 33 (38) [35]
 
-- seraphim acu regen aura
+- sera ACU regeneration field
+-- 18000e (9000e)[4500]
+-- regen to acu 10hp/s (15)[0]
 -- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
-
 
 
 there were some errors in the online changelog which have now been fixed:
