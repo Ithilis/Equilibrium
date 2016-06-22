@@ -280,11 +280,12 @@ XSL0001 = Class(oldXSL0001) {
             oc:ChangeMaxRadius(bp.NewMaxRadius or 26)
         elseif enh == 'BlastAttackRemove' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
+            local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
             wep:AddDamageRadiusMod(-self:GetBlueprint().Enhancements['BlastAttack'].NewDamageRadius) -- unlimited AOE bug fix by brute51 [117]
             wep:AddDamageMod(-self:GetBlueprint().Enhancements['BlastAttack'].AdditionalDamage)
-            wep:ChangeMaxRadius(bpDisrupt or 22)
+            wep:ChangeMaxRadius(bpDisrupt or 23)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 22) 
+            oc:ChangeMaxRadius(bpDisrupt or 23) 
         --Heat Sink Augmentation
         elseif enh == 'RateOfFire' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
@@ -297,9 +298,9 @@ XSL0001 = Class(oldXSL0001) {
             local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
             wep:ChangeRateOfFire(bpDisrupt or 1)
             bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius            
-            wep:ChangeMaxRadius(bpDisrupt or 22)
+            wep:ChangeMaxRadius(bpDisrupt or 23)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 22)                        
+            oc:ChangeMaxRadius(bpDisrupt or 23)                        
         end
     end,
 }
