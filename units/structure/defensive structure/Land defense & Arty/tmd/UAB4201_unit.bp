@@ -13,6 +13,11 @@ BlueprintId = "uab4201",
         {
             RateOfFire = 0.66,          -- fromo 0,32
             ProjectileLifetime = 2,     -- from4
+            Flare = {
+                Category = 'MISSILE',
+                Radius = 15,
+                Stack = true, --added special flag to trigger multi-sphere collision
+            },
         },
     },
 }
