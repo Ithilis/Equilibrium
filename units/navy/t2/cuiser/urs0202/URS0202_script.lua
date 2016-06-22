@@ -13,7 +13,8 @@ local CybranWeaponsFile = import('/lua/cybranweapons.lua')
 local CDFProtonCannonWeapon = CybranWeaponsFile.CDFProtonCannonWeapon
 local CAANanoDartWeapon = CybranWeaponsFile.CAANanoDartWeapon
 local CAMZapperWeapon02 = CybranWeaponsFile.CAMZapperWeapon02
-local TargetingLaser = import('/mods/Equilibrium/lua/EQweapons.lua').DummyLaser --custom dummy weapon; completely invisible
+--local TargetingLaser = import('/mods/Equilibrium/lua/EQweapons.lua').DummyLaser --custom dummy weapon; completely invisible
+local TargetingLaser = import('/lua/kirvesweapons.lua').TargetingLaser --cool looking targeting laser
 
 URS0202 = Class(CSeaUnit) {
     Weapons = {
@@ -23,6 +24,11 @@ URS0202 = Class(CSeaUnit) {
         Zapper = Class(CAMZapperWeapon02) {},
 		Lazor = Class(TargetingLaser) { -- we use this to toggle the aa weapons.
             FxMuzzleFlash = {},
+            
+            OnCreate = function(self)
+               TargetingLaser.OnCreate(self)
+               self.BeamType.FxBeam = {'/mods/Equilibrium/effects/emitters/dummybeam01.bp',}
+            end,
             
             -- Unit in range. Cease ground fire and turn on AA
             OnWeaponFired = function(self)
