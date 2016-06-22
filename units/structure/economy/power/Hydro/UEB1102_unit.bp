@@ -8,4 +8,4 @@ BlueprintId = "ueb1102",
         Health = 1500,      --1600hp
         MaxHealth = 1500,   --1600hp
     },
-},
+}
