@@ -6,7 +6,9 @@ BlueprintId = "xrb2308",
 
     AI = {
         TargetBones = {
-            'xrb2308',
+            'B01',
+            'B02',
+            'B03',
         },
     },
     Audio = {
@@ -42,8 +44,8 @@ BlueprintId = "xrb2308",
     },
     CollisionOffsetY = 0, --to make the collision box in the right spot
     Defense = {
-        Health = 12500,        --from 11000
-        MaxHealth = 12500,
+        Health = 8000,        --from 11000
+        MaxHealth = 8000,
     },
     Display = {
         AnimationPermOpen = '/mods/Equilibrium/animations/XRB2308_NIL.sca',
@@ -67,17 +69,20 @@ BlueprintId = "xrb2308",
         WaterVisionRadius = 50,        --from 45
     },
     Physics = {
-        Elevation = 0,        --to make it sit as close to the seabed as possible or so deep it doesnt matter ; note - kinda broken when being spawned in ; works when built.
+        Elevation = 0,        --to make it sit as close to the seabed as possible or so deep it doesnt matter
         --MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
         --MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
     },
     Weapon = {
         {
-            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            Damage = 25, --from 50 ; half damage per torp but same dps
+            DamageRadius = 0.5,          --from 0 ; this is to stop you from submarine stacking
             FireTargetLayerCapsTable = { --so it can shoot from the seabed
                 Sub = 'Seabed|Sub|Water',
             },
-            FiringTolerance = 60,
+            MuzzleSalvoDelay = 0.3, --from 0.6
+            MuzzleSalvoSize = 12, --from 12
+            FiringTolerance = 60, --to make it fire upwards
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
@@ -90,7 +95,7 @@ BlueprintId = "xrb2308",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-            TurretPitch = 0,
+            TurretPitch = 0, --to make it fire upwards
         },
     },
 }
