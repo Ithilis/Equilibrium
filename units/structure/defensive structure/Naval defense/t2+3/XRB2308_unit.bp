@@ -44,8 +44,8 @@ BlueprintId = "xrb2308",
     },
     CollisionOffsetY = 0, --to make the collision box in the right spot
     Defense = {
-        Health = 8000,        --from 11000
-        MaxHealth = 8000,
+        Health = 10000,        --from 11000
+        MaxHealth = 10000,
     },
     Display = {
         AnimationPermOpen = '/mods/Equilibrium/animations/XRB2308_NIL.sca',
@@ -75,14 +75,16 @@ BlueprintId = "xrb2308",
     },
     Weapon = {
         {
-            Damage = 25, --from 50 ; half damage per torp but same dps
+            Damage = 25, --from 50 ; half damage per torp but double torpedos
             DamageRadius = 0.5,          --from 0 ; this is to stop you from submarine stacking
+            DamageFriendly = false,     --add, because for unknown reason torpedo with aoe explosion destroy other torpedo
             FireTargetLayerCapsTable = { --so it can shoot from the seabed
                 Sub = 'Seabed|Sub|Water',
             },
             MuzzleSalvoDelay = 0.3, --from 0.6
-            MuzzleSalvoSize = 12, --from 12
+            MuzzleSalvoSize = 12, --from 6 
             FiringTolerance = 60, --to make it fire upwards
+            TargetCheckInterval = 0.5, --from 0,25
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
