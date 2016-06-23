@@ -25,6 +25,7 @@ BlueprintId="urs0103",
             MaxRadius = 30,    --from 28
         },
         {   --AA
+            Damage = 3,  --from 4 = 12dps
             MuzzleVelocity = 60,
         },
     },

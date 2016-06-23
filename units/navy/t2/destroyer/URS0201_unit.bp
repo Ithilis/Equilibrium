@@ -23,14 +23,15 @@ BlueprintId="urs0201",
         WaterVisionRadius = 30,    --from 45
     },
     Weapon = {
-        {
+        {   --direct fire
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
         },
         {   --AA 
-            Damage = 10,    --from 10
+            Damage = 10,    --from 10 = 40dps
+            RateOfFire = 1, --from 0,7s
         },
-        {
+        {   --depth charges
             Damage = 35, -- 35*5*2 = 350 damage per salvo => 70 dps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 5,
