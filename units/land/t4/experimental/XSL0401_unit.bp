@@ -18,8 +18,8 @@ BlueprintId = "xsl0401",
         BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
     },
     Weapon = {
-        {   
-            MuzzleVelocity = 10,        --from 8 - its big bublle
+        {   --big bubble
+            MuzzleVelocity = 10,        --from 8
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -34,7 +34,7 @@ BlueprintId = "xsl0401",
                 'ALLUNITS',
             },
         },
-        {
+        {   --gatling cannon
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -48,7 +48,7 @@ BlueprintId = "xsl0401",
                 'ALLUNITS',
             },
         },
-        {
+        {   --Sinn Unthe cannon
             Damage = 1200,            --from1200
             DamageRadius = 3,        --from6
             TargetPriorities = {
@@ -66,10 +66,29 @@ BlueprintId = "xsl0401",
             },
         },
         {
+            -- AA
+            Damage = 25,            --from 25   
+            DamageRadius = 1.5,     --from 1,5
+            FiringRandomness = 0,   --from 3,5
+            MaxRadius = 40,         --from 45 -> to be visible blue circle 
+            MuzzleSalvoSize = 1,    --from 3
+            MuzzleSalvoDelay = 0.1, --from 0,4 
+            MuzzleVelocity = 80,    --from 20
+            RateOfFire = 3,         --from 3          
         },
         {
+            -- AA
+            Damage = 25,            --from 25   
+            DamageRadius = 1.5,     --from 1,5
+            FiringRandomness = 0,   --from 3,5
+            MaxRadius = 40,         --from 45 -> to be visible blue circle 
+            MuzzleSalvoSize = 1,    --from 3
+            MuzzleSalvoDelay = 0.1, --from 0,4 
+            MuzzleVelocity = 80,    --from 20
+            RateOfFire = 3,         --from 3
         },
         {
+            --death explosion
         },
     },
 }

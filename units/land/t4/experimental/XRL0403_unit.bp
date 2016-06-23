@@ -75,11 +75,11 @@ BlueprintId = "xrl0403",
         { --torp defense
             RateOfFire = 0.16,
         },
-        { --AA flak -> its same as t2 mobile flak
-            Damage = 63,            --100,8dps
-            DamageRadius = 3,        --from 2
+        { --AA flak 
+            Damage = 50,            --80dps
+            DamageRadius = 2,        --from 2
             MuzzleVelocity = 55,    --from 20
-            MaxRadius = 38,            --from 40
+            MaxRadius = 40,            --from 40
             RateOfFire = 1.6,
             FiringRandomness = 4,
             TargetPriorities = {
