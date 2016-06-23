@@ -49,7 +49,8 @@ XRB2308 = Class(CStructureUnit) {
     end,
     
     SinkDepthThread = function(self)
-        self:SeabedWatcher()-- Waits for wreck to hit bottom or end of animation
+        --self:SeabedWatcher()-- Waits for wreck to hit bottom or end of animation
+        WaitSeconds(5.2) --use this to set the depth - basic maths required (:
         
         if not self:IsDead() and self.sinkProjectile then
             self.sinkProjectile:Destroy()
