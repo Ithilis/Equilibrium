@@ -19,7 +19,7 @@ BlueprintId="xss0202",
         {
         },
         {
-                        -- flak
+            -- flak
             Damage = 100,   -- from 120
             DamageRadius = 3,   -- from 4
             MuzzleVelocity = 30,    -- from 20

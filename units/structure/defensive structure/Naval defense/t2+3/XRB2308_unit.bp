@@ -35,7 +35,6 @@ BlueprintId = "xrb2308",
         'ANTINAVY',
         'DRAGBUILD',
         'SIZE4',
-        --'NEEDMOBILEBUILD', --added to be able to build units that have a motiontype (just like exps)
         'VISIBLETORECON',
         'RECLAIMABLE',
         'OVERLAYSONAR',
@@ -70,8 +69,6 @@ BlueprintId = "xrb2308",
     },
     Physics = {
         Elevation = 0,        --to make it sit as close to the seabed as possible or so deep it doesnt matter
-        --MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
-        --MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
     },
     Weapon = {
         {

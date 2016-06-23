@@ -13,7 +13,6 @@ local CybranWeaponsFile = import('/lua/cybranweapons.lua')
 local CDFProtonCannonWeapon = CybranWeaponsFile.CDFProtonCannonWeapon
 local CAANanoDartWeapon = CybranWeaponsFile.CAANanoDartWeapon
 local CAMZapperWeapon02 = CybranWeaponsFile.CAMZapperWeapon02
---local TargetingLaser = import('/mods/Equilibrium/lua/EQweapons.lua').DummyLaser --custom dummy weapon; completely invisible
 local TargetingLaser = import('/lua/kirvesweapons.lua').TargetingLaser --cool looking targeting laser
 
 URS0202 = Class(CSeaUnit) {

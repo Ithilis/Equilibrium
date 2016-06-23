@@ -80,8 +80,8 @@ UnitBlueprint {
         AirThreatLevel = 14,
         ArmorType = 'Normal',
         EconomyThreatLevel = 0,
-        Health = 3000,
-        MaxHealth = 3000,
+        Health = 4500,      --from 3000hp; this is 6 t2 torb bomber or 2 t3 torp bomber
+        MaxHealth = 4500,
         RegenRate = 0,
         SubThreatLevel = 0,
         SurfaceThreatLevel = 45,
@@ -270,85 +270,7 @@ UnitBlueprint {
         Level5 = 300,
     },
     Weapon = {
-    {
-            AlwaysRecheckTarget = true,
-            Audio = {
-                Fire = Sound {
-                    Bank = 'URSWeapon',
-                    Cue = 'URS0202_Nano_Dart',
-                    LodCutoff = 'Weapon_LodCutoff',
-                },
-            },
-            BallisticArc = 'RULEUBA_None',
-            CannotAttackGround = true,
-            CollideFriendly = false,
-            Damage = 115,
-            DamageType = 'Normal',
-            DisplayName = 'Nanodart Launcher',
-            FireTargetLayerCapsTable = {
-                Water = 'Air',
-            },
-            FiringTolerance = 10,
-            Label = 'AAGun',
-            MaxRadius = 75,
-            MuzzleSalvoDelay = 0,
-            MuzzleSalvoSize = 6,
-            MuzzleVelocity = 20,
-            PreferPrimaryWeaponTarget = false,
-            ProjectileId = '/projectiles/CAANanoDart03/CAANanoDart03_proj.bp',
-            ProjectileLifetime = 5.5,
-            ProjectilesPerOnFire = 6,
-            RackBones = {
-                {
-                    MuzzleBones = {
-                        'Right_Launcher_Muzzle01',
-                        'Right_Launcher_Muzzle02',
-                        'Right_Launcher_Muzzle03',
-                        'Left_Launcher_Muzzle01',
-                        'Left_Launcher_Muzzle02',
-                        'Left_Launcher_Muzzle03',
-                    },
-                    RackBone = 'launcher_barrel',
-                },
-            },
-            RackFireTogether = false,
-            RackRecoilDistance = 0,
-            RackReloadTimeout = 10,
-            RackSalvoChargeTime = 0,
-            RackSalvoReloadTime = 0,
-            RackSalvoSize = 1,
-            RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_AntiAir',
-            RateOfFire = 0.8,
-            TargetCheckInterval = 0.1,
-            TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'AIR MOBILE HIGHPRIAIR',
-                'AIR MOBILE TECH3 BOMBER',
-                'AIR MOBILE BOMBER',
-                'AIR MOBILE GROUNDATTACK',
-                'AIR MOBILE TRANSPORTATION',
-                'AIR MOBILE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-            TargetRestrictDisallow = 'UNTARGETABLE',
-            ToggleWeapon = 'GroundGun',
-            TrackingRadius = 1,  -- toggled by the laser anyway
-            TurretBoneMuzzle = 'Right_Launcher_Muzzle01',
-            TurretBonePitch = 'launcher_barrel',
-            TurretBoneYaw = 'launcher_turret',
-            TurretDualManipulators = false,
-            TurretPitch = 35,
-            TurretPitchRange = 80,
-            TurretPitchSpeed = 180,
-            TurretYaw = 0,
-            TurretYawRange = 180,
-            TurretYawSpeed = 180,
-            Turreted = true,
-            WeaponCategory = 'Anti Air',
-        },
-        {
+        {   --direct fire
             AboveWaterTargetsOnly = true,
             Audio = {
                 BarrelLoop = Sound {
@@ -369,7 +291,7 @@ UnitBlueprint {
             },
             BallisticArc = 'RULEUBA_LowArc',
             CollideFriendly = false,
-            Damage = 92,
+            Damage = 50,    --from 92 =  100dps now
             DamageRadius = 1,
             DamageType = 'Normal',
             DisplayName = 'Proton Cannon',
@@ -427,7 +349,85 @@ UnitBlueprint {
             Turreted = true,
             WeaponCategory = 'Direct Fire Naval',
         },
-        {
+        {   --aa missile
+            AlwaysRecheckTarget = true,
+            Audio = {
+                Fire = Sound {
+                    Bank = 'URSWeapon',
+                    Cue = 'URS0202_Nano_Dart',
+                    LodCutoff = 'Weapon_LodCutoff',
+                },
+            },
+            BallisticArc = 'RULEUBA_None',
+            CannotAttackGround = true,
+            CollideFriendly = false,
+            Damage = 50,    --from 115; = 300dps now
+            DamageType = 'Normal',
+            DisplayName = 'Nanodart Launcher',
+            FireTargetLayerCapsTable = {
+                Water = 'Air',
+            },
+            FiringTolerance = 10,
+            Label = 'AAGun',
+            MaxRadius = 75,
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 6,
+            MuzzleVelocity = 20,
+            PreferPrimaryWeaponTarget = false,
+            ProjectileId = '/projectiles/CAANanoDart03/CAANanoDart03_proj.bp',
+            ProjectileLifetime = 5.5,
+            ProjectilesPerOnFire = 6,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Right_Launcher_Muzzle01',
+                        'Right_Launcher_Muzzle02',
+                        'Right_Launcher_Muzzle03',
+                        'Left_Launcher_Muzzle01',
+                        'Left_Launcher_Muzzle02',
+                        'Left_Launcher_Muzzle03',
+                    },
+                    RackBone = 'launcher_barrel',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = 0,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_AntiAir',
+            RateOfFire = 1,       --from 0,8
+            TargetCheckInterval = 0.1,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            ToggleWeapon = 'GroundGun',
+            TrackingRadius = 1,  -- toggled by the laser anyway
+            TurretBoneMuzzle = 'Right_Launcher_Muzzle01',
+            TurretBonePitch = 'launcher_barrel',
+            TurretBoneYaw = 'launcher_turret',
+            TurretDualManipulators = false,
+            TurretPitch = 35,
+            TurretPitchRange = 80,
+            TurretPitchSpeed = 180,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 180,
+            Turreted = true,
+            WeaponCategory = 'Anti Air',
+        },        
+        {   --TMD
             Audio = {
                 Fire = Sound {
                     Bank = 'URSWeapon',
@@ -487,7 +487,7 @@ UnitBlueprint {
             Turreted = true,
             WeaponCategory = 'Defense',
         },
-        {
+        {   --DF from toggled AA missile
             AboveWaterTargetsOnly = true,
             AlwaysRecheckTarget = true,
             Audio = {
@@ -499,7 +499,7 @@ UnitBlueprint {
             },
             BallisticArc = 'RULEUBA_None',
             CollideFriendly = false,
-            Damage = 60,
+            Damage = 35,    --from 60; = 105dps now
             DamageType = 'Normal',
             DisplayName = 'Nanodart Launcher',
             FireTargetLayerCapsTable = {
@@ -514,7 +514,7 @@ UnitBlueprint {
             MuzzleSalvoSize = 6,
             MuzzleVelocity = 30,
             PreferPrimaryWeaponTarget = true,
-            ProjectileId = '/projectiles/CAANanoDart02/CAANanoDart02_proj.bp',
+            ProjectileId = '/projectiles/CAANanoDart01/CAANanoDart01_proj.bp',  --change projectile for same as T1 mAA
             ProjectileLifetime = 5.5,
             ProjectilesPerOnFire = 6,
             RackBones = {
@@ -542,12 +542,7 @@ UnitBlueprint {
             TargetCheckInterval = 0.1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
-                'AIR MOBILE HIGHPRIAIR',
-                'AIR MOBILE TECH3 BOMBER',
-                'AIR MOBILE BOMBER',
-                'AIR MOBILE GROUNDATTACK',
-                'AIR MOBILE TRANSPORTATION',
-                'AIR MOBILE',
+                'NAVAL MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
