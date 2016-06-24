@@ -393,7 +393,7 @@
 			</ul>
             
 			<p>8.Teleport: <strike>4200bt</strike> → 5000bt
-			<p>9.TML: <strike>1500m</strike> → 1200m 6000e 1200bt
+			<p>9.TML: <strike>1500m</strike> → 1200m 60000e 1200bt
 			<ul>
 			<li>Minimum range: <strike>5</strike> → 15
 			<li>Missile hp:<strike>3</strike> →  2hp
@@ -568,6 +568,9 @@
 				<ul>
 				<li>Weapon toggle removed - it now auto toggles so you don't have to fight the UI.
                 <li>AA is able fire from transport
+                    <ul>
+                    <li>When in transport have 25r
+                    </ul>
 				</ul>
 			</ul>
 			
@@ -613,7 +616,7 @@
 				<ul>
 				<li>The Cybran MAA is also usable like a weaker aurora, with the same range. Homing projectile, because look awesome and whiteout it miss most of shot on long range. Have more AA range because other AA are faster.
 				<li>To make it easier to use since you don't need to remember which units are toggled, they auto toggle now.
-                <li>Its small feature, same as repair on mantis, its nearly useless but maybe sometime can be creative use.  
+                <li>Its small feature, same as repair on mantis, its nearly useless but maybe sometime can be creative use. In transport have same range as interceptor, to don't out range them, while transport have same speed.  
 				</ul>
 			<li>T1 Mobile artillery: mostly unchanged, but it needed some adjustments to fit in with the balance and got some quality-of-life changes.
 				<ul>
@@ -985,7 +988,7 @@
             
 			Megalith: <strike>18 750bt 110 000hp 180br 0,5hp/s regen underwater vision 32</strike> → 63 330bt 95 000hp 40br 15hp/s regen underwater vision 45
 			<ul>
-            <li>Flak <strike> 30dps, 20 muzzle velocity </strike> → 100dps, 55 muzzle velocity
+            <li>Flak <strike> 30dps, 20 muzzle velocity </strike> → 80dps, 55 muzzle velocity
 			<li>Megalith egg build times adjusted to the Megalith’s new build rate and units are built 2x faster than in a regular T3 factory.
 			</ul>
             
@@ -1259,12 +1262,18 @@
             T2 gunships: <strike>240m 4800e 1600bt</strike> → 245m 5250e 1400bt
                 <ul>
                 <li>Spectre: <strike>848hp 65dps 12sp</strike> → 175m 3750e 1000bt 750hp 50dps 13sp
+                    <ul>
+                    <li>uniform scale <strike>0.25</strike> → 0.2  (only visual = smaller model)
+                    </ul>
                 <li>Renegade: <strike>832hp 3aoe 22r</strike> → 850hp 3.5aoe 26r
                 <li>Stinger: <strike>880hp</strike> → 900hp
                 <li>Vulthoo: <strike>864hp 60dps 0aoe 22r</strike> → 315m 6750e 1800bt 1200hp 80dps 0.5aoe 24r
+                    <ul>
+                    <li>uniform scale <strike>0.06</strike> → 0.4  (only visual = bigger model)
+                    </ul>
                 </ul>
                 
-            Torpedo bombers:<strike>240m 4800e 1600bt</strike> → 245m 5250e 1400bt
+            Torpedo bombers: <strike>240m 4800e 1600bt</strike> → 245m 5250e 1400bt
             <ul>
             <li><strike>15sp, no omni</strike> → 16speed, 20omni range
             <li><strike>34 Break Off Distance</strike> → 55 Break Off Distance
@@ -1302,8 +1311,10 @@
                 <ul>
                 <li><strike>0hp/s regen, 15speed 25/0 crash dmg</strike> →  5hp/s regen, 16speed 100dmg 2aoe crash dmg
                 <ul>
-                <li>Aeon: <strike>4x7,2AA dps</strike> → 2x3x36AA dps 20r + 2x3x36aa dps 25r
+                <li>Aeon <strike>28,8AA dps</strike> → 72AA dps
                 <li>Cybran EMP weapon: <strike>T1/T2-2s</strike> → T1-3s T2-2s T3-0,5s
+                <li>Seraphim <strike>6,6 ground dps</strike> → 20ground dps 
+                <li>UEF <strike>48AA dps</strike> → 32AA dps
                 </ul>
                 </ul>
             
@@ -1505,7 +1516,7 @@
             
             Frigates: <strike>16 water vision</strike> → 35 water vision
                 <ul>
-                <li>Trident Class: <strike>250m 2500e 1250bt 1900hp 64gf/16aa dps</strike> → 250m 2500e 1000bt 1800hp 55GF/13AA dps
+                <li>Trident Class: <strike>250m 2500e 1250bt 1900hp 64gf/16aa dps</strike> → 250m 2500e 1000bt 1800hp 55GF/12AA dps
                 <li>Hau-esel: <strike>270m 2700e 1350bt 2000hp 55/13dps</strike> → 260m 1040bt 2000hp 55gf/13aa dps
                 <li>Thunderhead Class: <strike>280m 2800e 1400bt 2120hp 50/10dps</strike> → 270m 1080bt 2200hp 50gf/10aa dps
                 <li>Beacon Class: <strike>290m 2900e 1450bt 1800hp 6sp 48dps 31r</strike> → 280m 1120bt 2000hp 5,8speed 60dps 35r
@@ -1551,20 +1562,32 @@
                 <li>Bulwark: <strike>1300m 0regen, 120shield aoe</strike> → 1350m 5hp/s reg 80 shield aoe
                 <li>Cooper: <strike>900m 100dps torp def /2,5s 45 water vision</strike> → 1050m 90dps torp def /3s 50 water vision fix hitboxes
                 </ul>
+         
             T2 Submarines: <strike>1100m 6,5speed 20 water vision stealth only on Cybran, 32visual intel</strike> → 1050m sonar stealth (-25e/s) 6speed 20 water vision, visual intel 20
                 <ul>
                 <li>Sonar stealth consumes energy only when is submerged
                 </ul>
+         
             Cruisers: <strike>2000m 18000e 8000bt</strike> → 1950m 13000e 7800bt
                 <ul>
                 <li>Infinity Class: <strike>80GF dps 60r 0,5fr</strike> → 100GF dps 80r 0,15fr
-                <li>Siren Class: remove toggle for its AA weapon
+                <li>Siren Class: <strike>3000hp</strike> → 4500hp 
+                    <ul>
+                    <li><strike>180 dps direct fire; 530dps AA; 180dps toggle direct fire</strike> → 100dps direct fire; 300AA; 105dps direct fire                    
+                    <li>remove toggle for its AA weapon → now its automatic
+                    <li>toggled AA projectile now track target, same as track air units 
+                    <li>change target priorities on toggled df gun from air to naval
+                    </ul>
                 <li>Ithalua flak weapon: <strike>20muuzle, 120damage, 4aoe</strike> → 30muzzle, 100dmg, 3aoe
                 </ul>
-            Destroyers: <strike>10 000bt 45wv </strike> → 9000bt 30 water vision
+           
+           Destroyers: <strike>10 000bt 45wv </strike> → 9000bt 30 water vision
                 <ul>
                 <li>Exodus Class: <strike>1060/5s 1aoe 75torp dmg 106depth charge</strike> → 1000dmg/5s 2,5aoe 85torpedo dmg 121depth charge dps
                 <li>Salem main cannons: <strike>30 muzzle 1aoe</strike> → 35 muzzle velocity 1,5 aoe + 100 torpedo dps only against submerged
+                    <ul>
+                    <li>AA reload time<strike> 0.7s (57dps)</strike> → 1s (40dps)    
+                    </ul>
                 <li>Valiant main cannons: <strike>30 muzzle 1 aoe 5speed</strike> → 35 muzzle velocity 1,5aoe 5,5speed + 30 torpedo dps only against submerged
                 <li>Uashavoh: <strike>no sonar stealth</strike> → sonar stealth (35e/s) + 100 torpedo dps only against submerged
                     <ul>
@@ -1584,6 +1607,9 @@
                 <ul>
                 <li>Infinity Class: Tiny buff to its tiny ground weapon to help balance it with other cruisers that have missiles and also direct fire weapons.
                 <li>Siren Class: Toggle on its AA removed to reduce use of a very annoying and poorly implemented function where players can’t tell if its switched to focus air or land. Now it can switch freely by itself.
+                    <ul>
+                    <li>Siren get more hp to survive longer against torpedo bombers, cybran don't have naval shield what make then worst against air. With more hp, and equivalent less dps will survive longer and on this time will other navy also do some AA dmg. Also is better in naval warfare while survive longer and have about 70% effectiveness of destroyer but 0 submarine defence. 
+                    </ul>
                 <li>The seraphim cruiser got a quality of life change to its flak weapon - more muzzle velocity, less dps to make it more consistent and nice to use.
                 </ul>
             <li>Destroyers got their water vision reduced as part of the method of making submarines better, with more aoe and muzzle velocity to be able to hit small land units, which were nearly immune to destroyers; added torpedo dmg only against submarines, to increase the difference between catching submarines at close range, while microed submarines can win.

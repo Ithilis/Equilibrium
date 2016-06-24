@@ -19,9 +19,15 @@ BlueprintId = "uea0104",
         FuelUseTime = 420,
     },
     Weapon = {
-        {
+        {   --ground fire
         },
-        {
+        {   --ground fire
+        },
+        {   --AA
+            Damage = 8,    --from 12dps = 32AAdps
+        },
+        {   --AA
+            Damage = 8,
         },
         {
             AboveWaterTargetsOnly = true,
