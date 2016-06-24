@@ -67,25 +67,9 @@ BlueprintId = "xsl0401",
         },
         {
             -- AA
-            Damage = 25,            --from 25   
-            DamageRadius = 1.5,     --from 1,5
-            FiringRandomness = 0,   --from 3,5
-            MaxRadius = 40,         --from 45 -> to be visible blue circle 
-            MuzzleSalvoSize = 1,    --from 3
-            MuzzleSalvoDelay = 0.1, --from 0,4 
-            MuzzleVelocity = 80,    --from 20
-            RateOfFire = 3,         --from 3          
         },
         {
             -- AA
-            Damage = 25,            --from 25   
-            DamageRadius = 1.5,     --from 1,5
-            FiringRandomness = 0,   --from 3,5
-            MaxRadius = 40,         --from 45 -> to be visible blue circle 
-            MuzzleSalvoSize = 1,    --from 3
-            MuzzleSalvoDelay = 0.1, --from 0,4 
-            MuzzleVelocity = 80,    --from 20
-            RateOfFire = 3,         --from 3
         },
         {
             --death explosion
