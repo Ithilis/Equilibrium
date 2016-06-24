@@ -220,7 +220,7 @@ UnitBlueprint {
             FiringRandomness = 1.5,
             FiringTolerance = 2,
             Label = 'AAGun',
-            MaxRadius = 35,                    --from 32, because dont have speed
+            MaxRadius = 35,                    --from 32, because dont have speed ; its also set in script. if you change this, dont forget to update it there as well.
             MuzzleSalvoDelay = 0,
             MuzzleSalvoSize = 1,
             MuzzleVelocity = 35,    --from 15

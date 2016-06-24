@@ -47,6 +47,18 @@ URL0104 = Class(CLandUnit) {
         GroundGun = Class(CAANanoDartWeapon) {},
     },
     
+    OnAttachedToTransport = function(self, transport, bone)
+        local weapon = self:GetWeaponByLabel('AAGun') --since it can fire from trans we want it to not outrange inties.
+        weapon:ChangeMaxRadius(25) --this is the range we will have in air mode.
+        CLandUnit.OnAttachedToTransport(self)
+    end,
+
+    OnDetachedFromTransport = function(self, transport, bone)
+        local weapon = self:GetWeaponByLabel('AAGun')
+        weapon:ChangeMaxRadius(35) --this is a bit hacky since its hardcoded but ah well. dont forget to change here after change in bp.
+        CLandUnit.OnDetachedFromTransport(self)
+    end,
+    
 }
 TypeClass = URL0104
 
