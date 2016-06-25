@@ -37,9 +37,9 @@ BlueprintId = "uab2205",
         },
     },
     Economy = {
-        BuildCostEnergy = 10000,
-        BuildCostMass = 1000,
-        BuildTime = 1250,
+        BuildCostEnergy = 10000,    --from 9000e
+        BuildCostMass = 1000,       --from 1080m
+        BuildTime = 1250,           --from 1467bt
     },
     Intel = {
         RadarStealth = true,
