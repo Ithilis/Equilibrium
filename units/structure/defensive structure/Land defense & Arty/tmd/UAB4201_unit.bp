@@ -10,14 +10,32 @@ BlueprintId = "uab4201",
         BuildTime = 375,
     },
     Weapon = {
-        {
-            RateOfFire = 0.66,          -- fromo 0,32
-            ProjectileLifetime = 2,     -- from4
+        {   --tmd
+            ProjectileLifetime = 3,     -- from4
             Flare = {
                 Category = 'MISSILE',
                 Radius = 15,
                 Stack = true, --added special flag to trigger multi-sphere collision
             },
+            MuzzleVelocity = 15,
+            ProjectileLifetime = 3,
+            TargetCheckInterval = 0.1,
+            TrackingRadius = 1.2,
+            TurretBoneMuzzle = 'Barrel',
+            TurretBonePitch = 'Barrel',
+            TurretBoneYaw = 'Barrel',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 5,
+            TurretPitchSpeed = 180,
+            TurretYaw = 0,
+            TurretYawRange = 5,
+            TurretYawSpeed = 180,
+            Turreted = true,
+        },
+        {   --fake weapon for range indicator
+            EffectiveRadius = 15,           
+            MaxRadius = 15,
         },
     },
 }
