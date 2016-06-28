@@ -10,10 +10,12 @@ BlueprintId = "uaa0204",
         MaxAirspeed = 16,      --from15
         Turnspeed = 1,          --from 0.48
     },
-    Transport = {
-        AirClass = true,
-        TransportClass = 1,
-    },
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',
+            '<LOC ability_sonar>Sonar',
+        },
+    },    
     Economy = {
         BuildCostEnergy = 5250,
         BuildCostMass = 245,
@@ -21,6 +23,10 @@ BlueprintId = "uaa0204",
     },
     Physics = {
         FuelUseTime = 300,    --from 600
+    },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
     },
     Weapon = {
         {

@@ -8,10 +8,7 @@ URL0306 = Class(oldURL0306) {
         TargetFinder = Class(DummyWeapon) {} -- needed for the dummy weapon added to stop some distance away
     },
     
-    
-        
     RetardedTurnOffStealth = function(self)
-        WARN('turning off stealth')
         self:DisableIntel('RadarStealthField') -- for some absurd reason toggling scriptbit for stealth doesnt work here, but does work OnStopBeingBuilt. crazy. so i just did it manually.
         self:DisableIntel('RadarStealth') -- the added benefit of not showing the disabled strategic icon as well. so thats cool i guess.
         self:SetMaintenanceConsumptionInactive()
@@ -19,13 +16,11 @@ URL0306 = Class(oldURL0306) {
     end,
     
     RetardedTurnOnStealth = function(self)
-        WARN('turning on stealth')
         self:EnableIntel('RadarStealthField')
         self:EnableIntel('RadarStealth') 
         self:SetMaintenanceConsumptionActive()
         if self.IntelEffects then
 			self.IntelEffectsBag = {}
-            WARN('creating stealth effects')
 			self.CreateTerrainTypeEffects( self, self.IntelEffects, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
 		end
         -- because fuck you thats why
@@ -35,7 +30,6 @@ URL0306 = Class(oldURL0306) {
     
     OnAttachedToTransport = function(self, transport, bone)
         self:MarkWeaponsOnTransport(true)
-        WARN('attatching')
         self:RetardedTurnOffStealth() -- stealth off
         if self:ShieldIsOn() then
             self:DisableShield()
@@ -46,7 +40,6 @@ URL0306 = Class(oldURL0306) {
 
     OnDetachedFromTransport = function(self, transport, bone)
         self:MarkWeaponsOnTransport(false)
-        WARN('detatching')
         self:RetardedTurnOnStealth() -- stealth on
         self:EnableShield()
         self:EnableDefaultToggleCaps()

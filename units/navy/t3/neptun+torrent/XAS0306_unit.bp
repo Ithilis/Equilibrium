@@ -32,6 +32,9 @@ BlueprintId="xas0306",
     Display = {
         Abilities = {
             '<LOC ability_manuallaunch>Manual Launch',      --can fire tml
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_torpedodef>Torpedo Defense',
         },
     },
     Economy = {
@@ -70,13 +73,13 @@ BlueprintId="xas0306",
             Damage = 1000,        --from 800
             DamageRadius = 3,    --from 2
         },
-        {
+        {   --torp defense
         },
-        {
+        {   --torp defense
         },
-        {
+        {   --torp defense
         },
-        {
+        {   --torp defense
         },
         {   -- manual launch tml
             AboveWaterTargetsOnly = true,

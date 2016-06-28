@@ -11,6 +11,7 @@ BlueprintId="uas0102",
     Display = {
         Abilities = {
             '<LOC ability_aa>Anti-Air',
+            '<LOC ability_torpedodef>Torpedo Defense',
         },
         UniformScale = 0.09,    --from 0,06
     },

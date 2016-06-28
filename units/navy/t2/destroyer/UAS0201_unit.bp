@@ -9,7 +9,6 @@ BlueprintId="uas0201",
             '<LOC ability_depthcharge>Depth Charges',
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
-            '<LOC ability_torpedodef>Torpedo Defense',
         },
     }, 
     Economy = {
@@ -20,6 +19,7 @@ BlueprintId="uas0201",
     Intel = {
         WaterVisionRadius = 30,    --from 45
     },
+    StrategicIconName = 'icon_ship2_antinavy',  --valiant icon because have weaker torpedos
     Weapon = {
         { --main gun
             Damage = 1000,            --from 1060 = 200dps

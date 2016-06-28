@@ -11,6 +11,7 @@ BlueprintId = "ueb2109",
     Display = {
         Abilities = {
             '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
+            '<LOC ability_sonar>Sonar',
         },
     },
     Economy = {

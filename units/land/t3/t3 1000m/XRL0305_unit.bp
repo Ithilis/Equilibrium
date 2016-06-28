@@ -24,6 +24,13 @@ BlueprintId = "xrl0305",
         Health = 5900,                
         MaxHealth = 5900,
     },
+    Display = {
+        Abilities = {
+            '<LOC ability_amphibious>Amphibious',
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
+            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defense
+        },
+    },    
     Intel = {
         WaterVisionRadius = 5,    --from 26
     },

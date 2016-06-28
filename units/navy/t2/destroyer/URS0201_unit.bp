@@ -22,6 +22,7 @@ BlueprintId="urs0201",
     Intel = {
         WaterVisionRadius = 30,    --from 45
     },
+    StrategicIconName = 'icon_ship2_antinavy',  --valiant icon because have weaker torpedos
     Weapon = {
         {   --direct fire
             DamageRadius = 1.5,        --from 1
