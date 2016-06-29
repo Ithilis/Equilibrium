@@ -14,6 +14,7 @@ BlueprintId = "xrl0302",
         Abilities = {
             '<LOC ability_cloak>Cloaking',
             '<LOC ability_suicideweapon>Suicide Weapon',
+            '<LOC ability_deathaoe>Volatile',
         },
     },
     General = {
@@ -44,7 +45,17 @@ BlueprintId = "xrl0302",
             Damage = 3000,                    --from 3500
             DamageRadius = 5.5,               --changed from 4.5
             MaxRadius = 5,                    --from4.5
-			RangeCategory = 'UWRC_IndirectFire',	--from none
+			RangeCategory = 'UWRC_IndirectFire',	--from none, for have visualisation of range
+        },
+        {
+            Damage = 1500,      --add death explosion when is destroyed
+            DamageFriendly = true,
+            DamageRadius = 5.5,
+            DamageType = 'FireBeetleExplosion',
+            DisplayName = 'Death Weapon',
+            DummyWeapon = true,
+            Label = 'DeathWeapon',
+            WeaponCategory = 'Death',
         },
     },
     Wreckage = {
@@ -52,7 +63,7 @@ BlueprintId = "xrl0302",
         MassMult = 0.1,        --from 0,9 because wreak still occur
         WreckageLayers = {
             Air = false,
-            Land = false,        --dont leave wreck
+            Land = false,        --dont leave wreck, but it didnt work for magical reason
             Seabed = false,
             Sub = false,
             Water = false,
