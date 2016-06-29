@@ -127,6 +127,7 @@ BlueprintId = "ual0001",
             TurretYawSpeed = 100,
         },
         {
+            AboveWaterFireOnly = false, --to disable chrono underwater remove this line and _nothing_ else. it firing from seabed layer is correct and prevents cancer.
             Buffs = {
                 {
                     Add = {
