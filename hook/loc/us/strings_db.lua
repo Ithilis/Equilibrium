@@ -61,7 +61,7 @@ Unit_Description_0028="Mobile Anti-Air effective against low-end enemy air units
 Unit_Description_0029="Lightly armoured Main Battle Tank armed with a single cannon."
 Unit_Description_0030="Heavy Assault Tank designed to take large armies and fortified bases head-on."
 Unit_Description_0031="Fast-moving Hovering Amphibious Tank. Good for raiding. Has a reduced speed on water." --Ithilis
-Unit_Description_0032="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Out-ranges T2 Point defense."
+Unit_Description_0032="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Missiles equipped with a camera system that reveals the target area. Out-ranges T2 Point defense." --Ithilis
 Unit_Description_0033="Mobile Anti-Air with a low-speed Area-Of-Effect munition, excellent against enemy gunships."
 Unit_Description_0034="Mobile Shield Generator which provides limited protection to units beneath the shield. Shields transfer residual damage to intersecting bubbles."
 Unit_Description_0035="Extremely fast Heavy Raiding Bot. Equipped with quickly regenerating personal shield allowing it to recover easily from smaller engagements. "
@@ -77,7 +77,7 @@ Unit_Description_0039="Quick, manoeuvrable Anti-Air Fighter."
 Unit_Description_0040="Lightly armoured Bomber armed with Damage-Over-Time napalm munitions."
 Unit_Description_0041="Air Transport which can carry 6 T1 units, 2 T2 units (Plus 2 T1), or a single T3 unit (Plus 2 T1). Cannot transport the ACU."
 Unit_Description_0042="Gunship equipped with a single transportation clamp. Can carry a single T1 or T2 unit."
-Unit_Description_0043="Torpedo Bomber capable of attacking ships, submarines and other submerged units." --ithilis
+Unit_Description_0043="Torpedo Bomber capable of attacking ships and submarines. Armed with Depth Charges which ignore enemy Torpedo defense." --Ithilis
 Unit_Description_0044="Extremely fast Spy Plane with large visual radius, good radar, and a small omni sensor."
 Unit_Description_0045="Lightly armed Air Transport equipped with anti-air and direct fire weapons. Can carry 14 T1 units, 6 T2 units (Plus 2 T1), or 3 T3 units (Plus 2 T1)."
 Unit_Description_0046="High-end air fighter. Designed to engage air units of any type."
@@ -88,23 +88,23 @@ Unit_Description_0417="Fast Assault Fighter armed with anti-air cannons and powe
 
 ----Navy
 Unit_Description_0049="Naval support unit. Equipped with direct fire and anti-air weapons, radar, sonar and a radar jammer."
-Unit_Description_0050="Basic Attack Submarine. Can surface to enable a weak direct fire cannon for additional power. Equipped with sonar stealth, which does not drain energy while surfaced." --ithilis
+Unit_Description_0050="Attack Submarine. Effective against surface ships in large numbers. Can surface to enable a weak direct fire cannon for additional power." --ithilis
 Unit_Description_0051="Anti-Aircraft naval vessel. Armed with an anti-air missile system, tactical missile launcher and weak direct fire cannon. Equipped with tactical missile defense and a full sensor suite."
-Unit_Description_0052="Primary surface combatant with powerful direct fire cannons, weak torpedoes, basic anti-air weapons, torpedo defense, and a full sensor suite."
+Unit_Description_0052="Primary surface combatant with powerful direct fire cannons, weak depth charges, basic anti-air weapons, torpedo defenses, and a full sensor suite." --ithilis
 Unit_Description_0053="Extremely long-range Surface Bombardment Ship. Armed with direct fire cannons and weak anti-air. Equipped with tactical missile defense and a full sensor suite." --ithilis
 Unit_Description_0054="Strategic Missile Submarine. Armed with long-range tactical missiles and can build and launch full-strength strategic nuclear weapons. Can fire while submerged."
 Unit_Description_0055="Experimental Submersible Aircraft Carrier. Armed with powerful torpedoes and, while surfaced, anti-air SAMs. Equipped with air staging, factory, and a full sensor suite."
-Unit_Description_0310="Lightly armoured dedicated submersible killing boat armed with a torpedo tube and fantastic torpedo defense. Vulnerable to direct fire."
+Unit_Description_0310="Lightly armoured dedicated submersible killing boat armed with a torpedo tube and fantastic torpedo defenses. Vulnerable to direct fire."
 Unit_Description_0311="Naval Shield Generator. Provides protection for all nearby vessels. Shields transfer residual damage to intersecting bubbles."
 Unit_Description_0312="Direct Fire Anti-Navy Assault Ship armed with lasers, poor anti-air and torpedoes, tactical missile and torpedo defenses, and a full sensor suite." --ithilis
 
 ----Offensive Buildings
 Unit_Description_0057="Low-end defensive tower that attacks land- and sea-based units. Does not engage aircraft or submerged units."
 Unit_Description_0058="Basic anti-air turret."
-Unit_Description_0059="Basic anti-naval defense system."
+Unit_Description_0059="Basic anti-naval defense system. Unaffected by enemy torpedo defenses." --ithilis
 Unit_Description_0061="Armoured surface defense turret."
 Unit_Description_0062="Anti-Air flak turret. Designed to engage mid-level aircraft with aera-of-effect projectiles."
-Unit_Description_0064="Armoured torpedo turret."
+Unit_Description_0064="Armoured torpedo turret. Unaffected by enemy torpedo defenses. Equipped with a personal stealth generator." --ithilis
 Unit_Description_0066="Anti-Air turret armed with Area-Of-Effect SAMs, effective against fast aircraft."
 Unit_Description_0069="Stationary Artillery designed to engage slow-moving units and fixed structures. Rate-Of-Fire increased when adjacent to energy production buildings."
 Unit_Description_0070="Tactical Missile Launcher. Toggleable missile construction for 6 mass per second and 120 energy per second. Defaults to automatic."
@@ -137,7 +137,7 @@ Unit_Description_0089="Generates 100 energy per second. Must be constructed on h
 Unit_Description_0090="Provides 5000 energy storage. Construct next to power generators for adjacency bonus. Required to enable ACU Overcharge ability."
 Unit_Description_0091="Extracts 2 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
 Unit_Description_0092="Creates 1 mass per second using 100 energy per second. Construct next to other energy consuming structures for adjacency bonus." --ithilis
-Unit_Description_0093="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus. After death explode for 750 damage on 5 aoe" --ithilis
+Unit_Description_0093="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus." --Ithilis
 Unit_Description_0094="Generates 500 Energy per second. Construct next to other structures for adjacency bonus."
 Unit_Description_0095="Extracts 6 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
 Unit_Description_0096="Generates 2500 energy per second. Construct next to other energy consuming structures for adjacency bonus."
@@ -193,25 +193,25 @@ Unit_Description_0123="Stealth field generator hiding the units around from rada
 Unit_Description_0124="Fast, lightly armoured reconnaissance vehicle. Equipped with a personal cloak generator. Can obstruct mass spots while cloaked if the enemy has no radar."
 Unit_Description_0125="Lightly armoured fast-moving raiding unit. After death explode with EMP blast that stun T1 and T2 units for 1.5s on 5aoe. Can fire from Air Transports." --ithilis
 Unit_Description_0126="Light Assault Robot. Equipped with a weak engineering module which can assist or repair other projects." --ithilis
-Unit_Description_0127="Frontloaded Mobile Artillery unit. Weaker damage than that of other factions, but armed with an EMP shell capable of stunning units for 3/2/1s. " --ithilis
-Unit_Description_0128="Mobile Anti-Air effective against low-end enemy air units. This unit also has direct fire weaponry with a long range." --Ithilis
+Unit_Description_0127="Frontloaded Mobile Artillery unit. Weaker damage than that of other factions, but armed with EMP shells capable of stunning units for 3/2/1s. " --ithilis
+Unit_Description_0128="Mobile Anti-Air effective against low-end enemy air units. Also able to fire on ground units, and provide air support from within transports at a reduced range." --Ithilis
 Unit_Description_0129="Heavy Assault Tank designed to take large armies and fortified bases head-on."
-Unit_Description_0130="The Swagner is a most glorious tank armed with direct fire weaponry and a weak torpedo launcher. Water does not stop the swag, and neither does anything else." --Ithilis
+Unit_Description_0130="The Swagner is a most glorious tank armed with direct fire weaponry and depth charges. Water does not stop the swag, and neither does anything else." --Ithilis
 Unit_Description_0131="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Armed with missiles which split against tactical missile defense systems. Out-ranges T2 Point defense."
 Unit_Description_0132="Mobile Anti-Air with a low-speed Area-Of-Effect munition, excellent against enemy gunships."
-Unit_Description_0133="Mobile Stealth Field Generator. The Cybrans have this instead of a Mobile Shield Generator. The field is active even inside an Air Transport, hiding the whole group."
+Unit_Description_0133="Mobile Stealth Field Generator. The Cybrans have this instead of a Mobile Shield Generator. The field is not active even inside Air Transports, revealing the whole group." --Ithilis
 Unit_Description_0134="Extremely fast Heavy Raiding Bot which explodes with a small EMP blast. Equipped with a tactical missile deflection field."
 Unit_Description_0135="Slow-moving Heavy Artillery. Must be stationary to fire."
 Unit_Description_0136="Experimental Amphibious Spiderbot armed with Microwave Laser, blasters, weak anti-air and torpedoes. Equipped with sonar and a stealth field generator."
-Unit_Description_0137="Experimental Mobile Rapid-fire Artillery for bombarding bases and support army. Provides EMP for 2.5/2/1.5s on 10aoe. Must be stationary to fire." --Ithilis
-Unit_Description_0317="A truly Beetleful unit. Deals 3000 damage on moderate area. Equipped with personal cloak, use it for ambushes with stealth field generators." --Ithilis
-Unit_Description_0318="Extremely heavy Amphibious Assault Robot equipped with direct fire blasters, weak torpedoes and anti-torpedo flares. Designed to engage enemy Experimental units, heavy units, and defense structures."
+Unit_Description_0137="Experimental Mobile Rapid-fire Artillery for bombarding bases and support army. Armed with EMP shells capable of stunning units for 2.5/2/1.5s on 10aoe. Must be stationary to fire." --Ithilis
+Unit_Description_0317="A truly Beetleful unit. Deals 3000 damage on a moderate area. A premature death deals 1500 damage. Equipped with personal cloak, use it for ambushes with stealth field generators." --Ithilis
+Unit_Description_0318="Extremely heavy Amphibious Assault Robot equipped with a direct fire blaster, depth charges and anti-torpedo flares. Designed to engage enemy Experimental units, heavy units, and defense structures." --Ithilis
 Unit_Description_0319="Experimental Amphibious Megabot armed with Proton Cannons, torpedoes and weak anti-air. Equipped with anti-torpedo flares and an egg-based engineering system."
 Unit_Description_0444="Lightly armoured support robot armed with long-range rocket launcher."
 
 ----Crab Egg Units
 Unit_Description_0447="Tech 3 amphibious construction, repair, capture and reclamation unit."
-Unit_Description_0448="Extremely heavy Amphibious Assault Robot equipped with direct fire blasters, weak torpedoes and anti-torpedo flares. Designed to engage enemy Experimental units, heavy units, and defense structures."
+Unit_Description_0448="Extremely heavy Amphibious Assault Robot equipped with a direct fire blaster, depth charges and anti-torpedo flares. Designed to engage enemy Experimental units, heavy units, and defense structures." --Ithilis
 Unit_Description_0449="Mobile Anti-Air with a low-speed Area-Of-Effect munition, excellent against enemy gunships."
 Unit_Description_0450="Slow-moving Heavy Artillery. Must be stationary to fire."
 
@@ -221,40 +221,40 @@ Unit_Description_0139="Quick, manoeuvrable Anti-Air Fighter."
 Unit_Description_0140="Lightly armoured Bomber armed with cluster bomblets."
 Unit_Description_0141="Air Transport which can carry 6 T1 units, 2 T2 units (Plus 2 T1), or a single T3 unit (Plus 2 T1). Cannot transport the ACU."
 Unit_Description_0142="Gunship armed with Area-Of-Effect direct fire rocket packs."
-Unit_Description_0143="Torpedo Bomber capable of attacking ships and submarines."
+Unit_Description_0143="Torpedo Bomber capable of attacking ships and submarines. Armed with Depth Charges which ignore enemy Torpedo defense." --Ithilis
 Unit_Description_0144="Extremely fast Stealth Spy Plane with large visual radius, good radar, and a small omni sensor."
 Unit_Description_0145="Lightly armed Air Transport equipped with anti-air and a weak EMP Enabled direct fire weapon. Can carry 10 T1 units, 4 T2 units (Plus 2 T1), or 2 T3 units (Plus 2 T1)."
 Unit_Description_0146="High-end air fighter. Designed to engage air units of any type. Equipped with a personal stealth generator. Costs energy to run."
-Unit_Description_0147="Strategic Bomber designed to surgically destroy key targets. Armed with light anti-air weaponry. Equipped with a personal stealth generator. Costs energy to run."
-Unit_Description_0148="Experimental Gunship armed with devastating Area-Of-Effect direct fire weaponry and weak anti-air." --Ithilis
+Unit_Description_0147="Strategic Bomber designed to surgically destroy key targets. Armed with light anti-air weaponry. Weaker than its counterparts but equipped with a personal stealth generator which costs energy to run." --Ithilis
+Unit_Description_0148="Experimental Gunship armed with devastating Area-Of-Effect direct fire weaponry and moderate anti-air." --Ithilis
 Unit_Description_0320="Light Gunship armed with a standard blaster."
 Unit_Description_0321="Heavily armoured Gunship armed with weak anti-air weapons. Equipped with radar stealth." --Ithilis
 Unit_Description_0418="Fast Assault Fighter armed with anti-air cannons and powerful long-range missiles."
 
 ----Navy
 Unit_Description_0149="Naval support unit. Equipped with direct fire and anti-air weapons, radar, and sonar."
-Unit_Description_0150="Basic Attack Submarine. Can surface to enable a weak direct fire cannon for additional power. Equipped with sonar stealth, which does not drain energy while surfaced." --ithilis
-Unit_Description_0151="Anti-Aircraft Naval vessel. Armed with anti-air weaponry and direct fire cannons. Equipped with tactical missile defense, air staging facilities and a full sensor suite."
-Unit_Description_0152="Amphibious primary surface combatant with powerful direct fire cannons, torpedoes, basic anti-air weapons, torpedo defense, and a full sensor suite. Can sprout legs and walk on land."
+Unit_Description_0150="Attack Submarine. Effective against surface ships in large numbers. Can surface to enable a weak direct fire laser for additional power." --ithilis
+Unit_Description_0151="Multirole Naval vessel. Armed with direct fire cannons, and can engage both ground and air targets with seeking missiles. Equipped with tactical missile defense, air staging facilities and a full sensor suite." --ithilis
+Unit_Description_0152="Amphibious primary surface combatant with powerful direct fire cannons, depth charges, basic anti-air weapons, torpedo defenses, and a full sensor suite. Can sprout legs and walk on land." --ithilis
 Unit_Description_0153="Long-range Surface Bombardment Ship. Armed with direct fire cannons and weak anti-air and torpedoes. Equipped with tactical missile defense and a full sensor suite."
-Unit_Description_0154="Aircraft carrier. Can store, transport and repair aircraft. Armed with light AA auto-cannons and an anti-missile turret."
-Unit_Description_0155="Strategic Missile Submarine. Armed with long-range tactical missiles, powerful torpedoes, and can build and launch strategic EMP weapons that stun for 40/40/30s on 50aoe. Equipped with a personal stealth generator. Can fire while submerged." --Ithilis
-Unit_Description_0322="Dedicated submersible killer armed with a torpedo tube and fantastic torpedo defense. Equipped with a personal stealth generator."
-Unit_Description_0323="Stealth Field and sensor boat defended only by fantastic anti-torpedo flares. Extremely useful in any sized navy."
+Unit_Description_0154="Aircraft carrier. Can store, transport and repair aircraft. Armed with heavy AA auto-cannons and an anti-missile turret." --ithilis
+Unit_Description_0155="Strategic Missile Submarine. Armed with long-range tactical missiles, powerful torpedoes, and can build and launch strategic EMP weapons that stuns enemy units for 40/40/30s on 50aoe. Equipped with a personal stealth generator. Can fire while submerged." --Ithilis
+Unit_Description_0322="Dedicated submersible killer armed with a torpedo tube and fantastic torpedo defenses. Vulnerable to surface ships. Equipped with a personal stealth generator." --ithilis
+Unit_Description_0323="Stealth Field and sensor boat defended only by anti-torpedo flares. Provides stealth from radar and sonar, and effective torpedo defenses." --ithilis
 
 ----Offensive Buildings
 Unit_Description_0176="Low-end defensive tower that attacks land- and sea-based units. Does not engage aircraft or submerged units."
 Unit_Description_0177="Basic anti-air turret."
-Unit_Description_0178="Basic torpedo turret."
+Unit_Description_0178="Basic torpedo turret. Unaffected by enemy torpedo defenses." --ithilis
 Unit_Description_0180="Armoured surface defense turret."
 Unit_Description_0181="Anti-Air flak turret. Designed to engage mid-level aircraft with aera-of-effect projectiles."
-Unit_Description_0183="Armoured torpedo turret."
+Unit_Description_0183="Armoured torpedo turret. Unaffected by enemy torpedo defenses. Equipped with a personal stealth generator." --ithilis
 Unit_Description_0185="Anti-Air turret armed with Area-Of-Effect SAMs, effective against fast aircraft."
 Unit_Description_0187="Stationary Artillery designed to engage slow-moving units and fixed structures. Provide EMP for 4/3/2s on 10aoe. Rate-Of-Fire increased when adjacent to energy production buildings." --Ithilis
 Unit_Description_0188="Tactical Missile Launcher. Must be ordered to construct missiles. Missiles break into smaller missiles when hit by countermeasures."
 Unit_Description_0190="Stationary Heavy Artillery with excellent range and damage, but poor accuracy. Rate-Of-Fire increased when adjacent to energy production buildings."
 Unit_Description_0191="Strategic Missile Launcher. Must be ordered to construct and launch missiles manually. These missiles are expensive."
-Unit_Description_0325="Submerged torpedo launcher. Capable of destroying the largest of enemy vessels."
+Unit_Description_0325="Submerged torpedo launcher. Capable of destroying the largest of enemy vessels. Vulnerable to Submarine Hunters."
 
 ----Defensive Buildings
 Unit_Description_0179="Restricts the movement of enemy units and offers substantial protection from low direct fire attacks."
@@ -279,7 +279,7 @@ Unit_Description_0205="Generates 20 energy per second. Construct next to other e
 Unit_Description_0206="Generates 100 energy per second. Must be constructed on hydrocarbon deposits. Construct structures next to Hydrocarbon Power Plant for adjacency bonus."
 Unit_Description_0207="Extracts 2 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
 Unit_Description_0208="Creates 1 mass per second using 100 energy per second. Construct next to other energy consuming structures for adjacency bonus." --ithilis
-Unit_Description_0209="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus. After death explodes for 750 damage on 5 aoe" --ithilis
+Unit_Description_0209="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus." --Ithilis
 Unit_Description_0210="Provides 5000 energy storage. Construct next to power generators for adjacency bonus. Required to enable ACU Overcharge ability."
 Unit_Description_0211="Generates 500 Energy per second. Construct next to other structures for adjacency bonus."
 Unit_Description_0212="Extracts 6 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
@@ -311,11 +311,11 @@ Unit_Description_0192="Allows you to construct Support Command Units, either in 
 
 ----Armoured Command Unit
 Unit_Description_0305="Houses Commander. Combination of Barracks and Command Center. Contains all the blueprints necessary to build a basic army from scratch."
-Unit_Description_0156="Grants Tech 2 schematic access and increases the ACU's build speed for 40, 1000 health, and health regeneration." --Ithilis
-Unit_Description_0157="Creates a EMP Field around the ACU on 38 range. Provide small regeneration bonus. EMP field also works while in transport. Average energy consumption." --Ithilis
+Unit_Description_0156="Grants Tech 2 schematic access and increases the ACU's build speed to 40, adds 1000 maximum health, and health regeneration." --Ithilis
+Unit_Description_0157="Creates periodic EMP pulses around the ACU. Provides small regeneration bonus. Works while the ACU is underwater or in a transport. Consumes energy while firing." --Ithilis
 Unit_Description_0158="Massively increases main cannon range."
 Unit_Description_0159="Grants the ACU a long range omni Sensor and increased optical range."
-Unit_Description_0160="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed for 120, maximum health, and health regeneration." --Ithilis
+Unit_Description_0160="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed to 120, adds additional maximum health and health regeneration." --Ithilis
 Unit_Description_0161="Doubles main cannon Rate-Of-Fire."
 Unit_Description_0162="Increases ACU's resource generation to 18 mass per second and 1200 energy per second." --Ithilis
 Unit_Description_0163="Increases ACU's resource generation to 36 mass per second and 2100 energy per second." --Ithilis
@@ -341,12 +341,12 @@ Unit_Description_0225="Poorly armoured amphibious Main Battle Tank. Makes up for
 Unit_Description_0226="Mobile Artillery unit. Designed to engage enemy units at long range and inflict massive damage to buildings."
 Unit_Description_0227="Mobile Anti-Air effective against low-end enemy Air units."
 Unit_Description_0228="Shielded Heavy Tank Designed to solve all its problems by killing them. A real tank for real men." -- Ithilis
-Unit_Description_0229="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Out-ranges T2 Point defense."
+Unit_Description_0229="Lightly armoured Mobile Missile Launcher armed with fast missiles designed to attack buildings at long range. Out-ranges T2 Point defense." -- Ithilis
 Unit_Description_0230="Amphibious Mobile Anti-Air with a low-speed Area-Of-Effect munition, excellent against enemy gunships."
 Unit_Description_0231="Amphibious Mobile Shield Generator which provides limited protection to units beneath the shield. Shields transfer residual damage to intersecting bubbles."
 Unit_Description_0232="Fast, Shielded Heavy Assault robot. Can repair units and structures and reclaim wreckage and natural resources."
 Unit_Description_0233="Slow-moving Heavy Artillery. Can fire while moving."
-Unit_Description_0234="Experimental Sacred Assault robot. Amphibious, armed with a laser and magnetic grapple claws which instantly kill enemy units, and equipped with an omni sensor."
+Unit_Description_0234="Experimental Sacred Assault robot. Amphibious, armed with a laser and magnetic grapple claws which instantly kill enemy units. Equipped with an omni sensor."  --Ithilis
 Unit_Description_0327="Fast-moving Hovering Amphibious Tank. Good for raiding. Has a reduced speed on water." --Ithilis
 Unit_Description_0328="Sniper Robot with paper-thin armour designed to apply extreme damage at long range. Inaccurate while in motion. Has personal stealth"  --Ithilis
 Unit_Description_0442="Extremely Long range support tank armed with weaponry which is largely ineffective against armour, but annihilates shields."
@@ -362,7 +362,7 @@ Unit_Description_0241="Extremely fast Spy Plane with large visual radius, good r
 Unit_Description_0242="Lightly armed Air Transport equipped with anti-air and direct fire weapons. Can carry 12 T1 units, 6 T2 units, 2 T3 units (Plus 4 T1), or 1 T3 unit (Plus 4 T2)."
 Unit_Description_0243="High-end air fighter. Designed to engage air units of any type."
 Unit_Description_0244="Strategic Bomber designed to surgically destroy key targets."
-Unit_Description_0245="Experimental Floating Fortress. Armed with unbelievably powerful central beam, incredible anti-air weaponry and depth charges. Equipped with air staging, factory, and a full sensor suite."
+Unit_Description_0245="Experimental Floating Fortress. Armed with a powerful central beam, long range anti-air weaponry and depth charges. Equipped with air staging, factory, and a full sensor suite." --Ithilis
 Unit_Description_0329="Quick, manoeuvrable Anti-Air Fighter with more armour and firepower than the Interceptor."
 Unit_Description_0330="Versatile Assault Gunship. Armed with direct fire cannon and extremely powerful anti-air rockets."
 Unit_Description_0331="High-power Torpedo Bomber designed to engage heavily armoured naval units."
@@ -370,24 +370,24 @@ Unit_Description_0419="Suicide Bomber with short operational range and practical
 
 ----Navy
 Unit_Description_0246="Naval support unit. Equipped with direct fire weapons with superior range, radar, sonar and torpedo defenses." --Ithilis
-Unit_Description_0247="Basic Attack Submarine."
-Unit_Description_0248="Anti-Air support ship, that provides visual intel support." --Ithilis
+Unit_Description_0247="Attack Submarine. Effective against surface ships in large numbers." --Ithilis
+Unit_Description_0248="Anti-Air support ship. Equipped with torpedo defenses." --Ithilis
 Unit_Description_0249="Anti-Aircraft naval vessel. Armed with an anti-air missile system and direct fire cannon. Equipped with tactical missile defense flares and a full sensor suite."
-Unit_Description_0250="Primary surface combatant with powerful direct fire cannons."
+Unit_Description_0250="Primary surface combatant with powerful direct fire cannons. Armed with Depth Charges which ignore enemy Torpedo defenses." --ithilis
 Unit_Description_0251="Long-range direct-fire surface bombardment ship."
 Unit_Description_0252="Aircraft Carrier. Can store, transport and repair aircraft. Armed with surface-to-air missile launchers."
-Unit_Description_0253="Strategic Missile Submarine. Armed with long-range tactical missiles and can build and launch strategic nuclear weapons. Can fire while submerged."
-Unit_Description_0254="Experimental submersible fortress. Armed with long range bombardment cannon and depth charges which ignore torpedo defenses. Equipped with torpedo defense, naval factory, and full sensor suite. Has personal sonar stealth" --Ithilis
-Unit_Description_0332="Dedicated submersible killer armed with a torpedo tube and fantastic torpedo defense. Has personal sonar stealth" --Ithilis
-Unit_Description_0333="Missile bombardment ship. Rapidly fires long range, high damage tactical missiles." --Ithilis
+Unit_Description_0253="Strategic Missile Submarine. Armed with long-range tactical missiles and can build and launch strategic nuclear weapons. Able to fire while submerged." --Ithilis
+Unit_Description_0254="Experimental submersible fortress. Armed with long range bombardment cannon and depth charges which ignore torpedo defenses. Equipped with torpedo defenses, naval factory, and full sensor suite." --Ithilis
+Unit_Description_0332="Dedicated submersible killer armed with a torpedo tube and fantastic torpedo defenses. Vulnerable to surface ships." --Ithilis
+Unit_Description_0333="Missile bombardment ship. Rapidly fires long range, high damage tactical missiles. Equipped with powerful manually fired missiles." --Ithilis
 
 ----Offensive Buildings
 Unit_Description_0255="Low-end defensive tower that attacks land- and sea-based units. Does not engage aircraft or submerged units."
 Unit_Description_0256="Basic anti-air turret."
-Unit_Description_0257="Basic torpedo turret."
+Unit_Description_0257="Basic torpedo turret. Unaffected by enemy torpedo defenses." --ithilis
 Unit_Description_0259="Armoured surface defense turret."
 Unit_Description_0260="Anti-Air flak turret. Designed to engage mid-level aircraft with aera-of-effect projectiles."
-Unit_Description_0262="Armoured torpedo turret."
+Unit_Description_0262="Armoured torpedo turret. Unaffected by enemy torpedo defenses. Equipped with a personal stealth generator." --ithilis
 Unit_Description_0264="Anti-Air turret armed with Area-Of-Effect SAMs, effective against fast aircraft."
 Unit_Description_0267="Stationary Artillery designed to engage slow-moving units and fixed structures. Rate-Of-Fire increased when adjacent to energy production buildings."
 Unit_Description_0268="Tactical Missile Launcher. Toggleable missile construction for 6 mass per second and 120 energy per second. Defaults to automatic."
@@ -419,7 +419,7 @@ Unit_Description_0286="Generates 100 energy per second. Must be constructed on h
 Unit_Description_0287="Provides 5000 energy storage. Construct next to power generators for adjacency bonus. Required to enable ACU Overcharge ability."
 Unit_Description_0288="Extracts 2 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
 Unit_Description_0289="Creates 1 mass per second using 100 energy per second. Construct next to other energy consuming structures for adjacency bonus." --ithilis
-Unit_Description_0290="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus. After death explode for 750 damage on 5 aoe" --ithilis
+Unit_Description_0290="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus." --Ithilis
 Unit_Description_0291="Generates 500 Energy per second. Construct next to other structures for adjacency bonus."
 Unit_Description_0292="Extracts 6 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
 Unit_Description_0293="Generates 2500 energy per second. Construct next to other energy consuming structures for adjacency bonus."
@@ -428,9 +428,9 @@ Unit_Description_0295="Creates 16 mass per second using 2500 energy per second. 
 Unit_Description_0336="Generates an adaptive economy of up to 10000 mass per second and 1000000 energy per second. When killed the reactor core destabilises in a fully-fledged nuclear explosion."
 
 ----Engineers
-Unit_Description_0273="Tech 1 amphibious construction, repair, capture and reclamation unit. Sacrifice engineer for 60% own resource cost" --Ithilis
-Unit_Description_0274="Tech 2 amphibious construction, repair, capture and reclamation unit. Sacrifice engineer for 60% own resource cost" --Ithilis
-Unit_Description_0275="Tech 3 amphibious construction, repair, capture and reclamation unit. Sacrifice engineer for 60% own resource cost" --Ithilis
+Unit_Description_0273="Tech 1 amphibious construction, repair, capture and reclamation unit. Sacrifice engineer for 60% of own resource cost" --Ithilis
+Unit_Description_0274="Tech 2 amphibious construction, repair, capture and reclamation unit. Sacrifice engineer for 60% of own resource cost" --Ithilis
+Unit_Description_0275="Tech 3 amphibious construction, repair, capture and reclamation unit. Sacrifice engineer for 60% of own resource cost" --Ithilis
 
 ----Factories
 Unit_Description_0276="Constructs Tech 1 Land units. HQ upgrade is required to advance to T2. Once you have one HQ in play a much cheaper support upgrade unlocks allowing you to quickly bring the rest of the factories to T2."
@@ -472,15 +472,15 @@ Unit_Description_0439="Adds Teleportation capability. Requires considerable ener
 Unit_Description_0440="Expands the SACU's weaponry with an Overcharge function." --Ithilis
 
 ----Land
-Unit_Description_0337="Light, fast mobile reconnaissance unit. When stationary, deploys cloaking and stealth fields. Does not fire automatically while invisible. Can fire from transport" --Ithilis
+Unit_Description_0337="Light, fast mobile reconnaissance unit. When stationary, deploys cloaking and stealth fields. Does not fire automatically while invisible." --Ithilis
 Unit_Description_0338="Lightly armoured tank armed with a single cannon."
 Unit_Description_0339="Amphibious mobile artillery launcher. Designed to engage enemy units at long range and inflict massive damage to buildings."
 Unit_Description_0340="Mobile anti-air effective against low-end enemy air units."
 Unit_Description_0341="Heavy Assault Robot designed to take large armies and fortified bases head-on."
 Unit_Description_0342="Hover tank. Good for raiding. Has a reduced speed on water." --Ithilis
-Unit_Description_0343="Lightly armoured Mobile Missile Launcher designed to attack buildings at long range. Out-ranges T2 Point defense."
-Unit_Description_0344="Mobile anti-air flak launcher."
-Unit_Description_0345="Heavy Siege Tank armed with direct fire weaponry and weak torpedoes. Direct fire weapons are divided between long and short range cannons." --Ithilis
+Unit_Description_0343="Lightly armoured Mobile Missile Launcher armed with an intelligent missile system which automatically selects between long range unguided missiles and short range guided missiles. Out-ranges T2 Point defense." --Ithilis
+Unit_Description_0344="Amphibious mobile anti-air flak launcher." --Ithilis
+Unit_Description_0345="Heavy Siege Tank armed with direct fire weaponry and depth charges. Direct fire weapons are divided between long and short range cannons." --Ithilis
 Unit_Description_0346="Lightly armored, fast sniper bot. Armed with an extremely powerful energy rifle. Inaccurate while in motion. Equipped with personal cloak." --Ithilis
 Unit_Description_0347="Slow-moving Heavy Artillery. Must be stationary to fire."
 Unit_Description_0348="High-end mobile shield generator."
@@ -493,7 +493,7 @@ Unit_Description_0352="Lightly armoured Bomber armed with powerful bombs that af
 Unit_Description_0353="Air Transport which can carry 8 T1 units, 4 T2 units, or a single T3 unit (Plus 2 T2). Cannot transport the ACU."
 Unit_Description_0354="Fast Assault Fighter armed with anti-air cannons and powerful bombs."
 Unit_Description_0355="Heavy gunship armed with simple direct fire cannons which have a little aoe." --Ithilis
-Unit_Description_0356="Torpedo Bomber capable of attacking ships and submarines."
+Unit_Description_0356="Torpedo Bomber capable of attacking ships and submarines. Armed with Depth Charges which ignore enemy Torpedo defense." --Ithilis
 Unit_Description_0357="Lightly armed Air Transport equipped with anti-air and direct fire weapons. Can carry 16 T1 units, 8 T2 units, or 4 T3 units."
 Unit_Description_0358="Fast recon aircraft with large visual radius, good radar, and a short-range omni sensor. Personal stealth and cloak enabled while it is stationary." --Ithilis
 Unit_Description_0359="High-end air fighter. Designed to engage air units of any type."
@@ -502,20 +502,20 @@ Unit_Description_0361="Massive bomber capable of devastating entire bases. Armed
 
 ----Navy
 Unit_Description_0362="Low-end naval support unit."
-Unit_Description_0363="Basic Attack Submarine. Can surface to use an extra direct-fire weapon."
+Unit_Description_0363="Attack Submarine. Effective against surface ships in large numbers. Can surface to use an extra direct-fire weapon. Equipped with torpedo defense that is powerful in large numbers."
 Unit_Description_0364="Anti-Aircraft naval vessel. Armed with an anti-air weaponry and a tactical missile launcher. Equipped with tactical missile defense and a full sensor suite."
 Unit_Description_0365="Primary Submersible surface combatant with powerful direct fire lasers, torpedoes, basic anti-air weapons, torpedo defense, and a full sensor suite."
 Unit_Description_0366="Surface Bombardment Ship. Armed with direct fire cannons and weak anti-air. Equipped with tactical missile defense and a full sensor suite. Can build and launch full-strength strategic nuclear weapons."
-Unit_Description_0367="Heavy Assault Submarine armed with extremely powerful torpedoes and effective torpedo defenses. Can surface to engage with strong anti-air cannons."
+Unit_Description_0367="Heavy Assault Submarine Hunter armed with extremely powerful torpedoes and effective torpedo defenses. Can surface to engage with strong anti-air cannons." --Ithilis
 Unit_Description_0368="Aircraft Carrier. Can store, transport and repair aircraft. Armed with two pairs of AA auto-cannons."
 
 ----Offensive Buildings
 Unit_Description_0369="Low-end defensive tower that attacks land- and sea-based units. Does not engage aircraft or submerged units."
 Unit_Description_0370="Basic anti-air turret."
-Unit_Description_0371="Basic torpedo turret."
+Unit_Description_0371="Basic torpedo turret. Unaffected by enemy torpedo defenses." --Ithilis
 Unit_Description_0373="Armoured surface defense turret."
 Unit_Description_0374="Anti-Air flak turret. Designed to engage mid-level aircraft with aera-of-effect projectiles."
-Unit_Description_0377="Armoured Torpedo turret equipped with Torpedo defenses."
+Unit_Description_0377="Armoured Torpedo turret equipped with moderate torpedo defenses. Unaffected by enemy torpedo defenses. Equipped with a personal stealth generator." --Ithilis
 Unit_Description_0378="Anti-Air turret armed with Area-Of-Effect blaster, effective against fast aircraft."
 Unit_Description_0381="Stationary Artillery designed to engage slow-moving units and fixed structures. Rate-Of-Fire increased when adjacent to energy production buildings."
 Unit_Description_0382="Tactical Missile Launcher. Toggleable missile construction for 6 mass per second and 120 energy per second. Defaults to automatic."
@@ -540,17 +540,17 @@ Unit_Description_0415="Stealth Field Generator which hides units and structures 
 Unit_Description_0416="Long range Radar system with shorter range omni Sensor. Radar cannot detect submerged or stealthed units, and confused by radar jamming. Omni counters stealth, cloaking or jamming and acts as sonar."
 
 ----Economy Buildings
-Unit_Description_0400="Generates 20 energy per second. Construct next to other energy consuming structures for adjacency bonus."
+Unit_Description_0400="Generates 20 energy per second. Construct next to energy consuming structures for adjacency bonus."
 Unit_Description_0401="Generates 100 energy per second. Must be constructed on hydrocarbon deposits. Construct structures next to Hydrocarbon Power Plant for adjacency bonus."
 Unit_Description_0402="Provides 5000 energy storage. Construct next to power generators for adjacency bonus. Required to enable ACU Overcharge ability."
 Unit_Description_0403="Extracts 2 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
-Unit_Description_0404="Creates 1 mass per second using 100 energy per second. Construct next to other energy consuming structures for adjacency bonus." --ithilis
-Unit_Description_0405="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus. After death explodes dealing 750 damage on 5 aoe" --ithilis
+Unit_Description_0404="Creates 1 mass per second using 100 energy per second. Construct next to mass consuming structures for adjacency bonus." --ithilis
+Unit_Description_0405="Provides 1000 mass storage. Construct next to extractors or fabricators for adjacency bonus." --Ithilis
 Unit_Description_0406="Generates 500 Energy per second. Construct next to other structures for adjacency bonus."
 Unit_Description_0407="Extracts 6 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus. Can be upgraded."
-Unit_Description_0408="Generates 2500 energy per second. Construct next to other energy consuming structures for adjacency bonus."
-Unit_Description_0409="Generates 16 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus." --ithilis
-Unit_Description_0410="Creates 16 mass per second using 2500 energy per second. Construct next to other energy consuming structures for adjacency bonus." --ithilis
+Unit_Description_0408="Generates 2500 energy per second. Construct next to energy consuming structures for adjacency bonus."
+Unit_Description_0409="Extracts 16 mass per second. Must be constructed on mass deposits. Construct structures next to mass extractor for adjacency bonus." --ithilis
+Unit_Description_0410="Creates 16 mass per second using 2500 energy per second. Construct next to mass consuming structures for adjacency bonus." --ithilis
 
 ----Engineers
 Unit_Description_0387="Tech 1 amphibious construction, Repair, Capture and Reclamation unit."
