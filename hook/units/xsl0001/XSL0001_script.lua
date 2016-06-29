@@ -61,6 +61,10 @@ XSL0001 = Class(oldXSL0001) {
                             Add = bp.ACUAddHealth or 0,
                             Mult = 1,
                         },
+                        Regen = {
+                            Add = bp.NewRegenRate or 0,
+                            Mult = 1,
+                        },
                     },
                 }
             end

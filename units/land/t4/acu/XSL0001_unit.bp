@@ -78,7 +78,7 @@ UnitBlueprint {
         },
         RegenAura = {
             ACUAddHealth = 1500,            --from 1000
-            NewRegenRate = 10,                --from 0
+            NewRegenRate = 15,                --from 0
             BuildCostEnergy = 18000,            --from 4500
             BuildCostMass = 600,            --from 600
             BuildTime = 600,
@@ -90,7 +90,7 @@ UnitBlueprint {
         },
         AdvancedRegenAura = {
             ACUAddHealth = 3500,             --from 2500
-            NewRegenRate = 30,                --from 0
+            NewRegenRate = 25,                --from 0
             BuildCostEnergy = 42000,        --from 31250    drain 300e/s
             BuildCostMass = 1400,            -- drain 10m/s
             BuildTime = 1400,                --from 1250
