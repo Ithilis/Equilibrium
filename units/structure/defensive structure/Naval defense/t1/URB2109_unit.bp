@@ -4,6 +4,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "urb2109", 
 
+    AI = {
+        TargetBones = {
+            'Abovetgt', -- ahahahaha some official balance guys missed this one out <3
+            'URB2109', -- that ^ bone not listed meant it could not be targeted.
+        },
+    },
     Defense = {
         Health = 2500, 
         MaxHealth = 2500,
