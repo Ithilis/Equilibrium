@@ -4,6 +4,7 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0401",
 
+    CollisionOffsetY = -1.6, --from -0.375 ; lowering collision box a little bit
     Defense = {
         Health = 125000,
         MaxHealth = 125000,
@@ -17,6 +18,7 @@ BlueprintId="uas0401",
             '<LOC ability_torpedo>Torpedoes',
             '<LOC ability_torpedodef>Torpedo Defense',
         },
+        UniformScale = 0.08,
     },
     Economy = {
         BuildCostEnergy = 350000,

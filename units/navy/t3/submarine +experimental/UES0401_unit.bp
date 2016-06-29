@@ -4,6 +4,7 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="ues0401",
 
+    CollisionOffsetY = -0.775, --from -0.375 ; lowering collision box a little bit
     Defense = {
         RegenRate = 15,    --from 0
     },
