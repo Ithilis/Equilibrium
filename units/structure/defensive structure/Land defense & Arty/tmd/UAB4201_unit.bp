@@ -11,7 +11,7 @@ BlueprintId = "uab4201",
     },
     Weapon = {
         {   --tmd
-            ProjectileLifetime = 3,     -- from4
+            CannotAttackGround = false,
             Flare = {
                 Category = 'MISSILE',
                 Radius = 15,
@@ -20,7 +20,6 @@ BlueprintId = "uab4201",
             MuzzleVelocity = 15,
             ProjectileLifetime = 3,
             TargetCheckInterval = 0.1,
-            TrackingRadius = 1.2,
             TurretBoneMuzzle = 'Barrel',
             TurretBonePitch = 'Barrel',
             TurretBoneYaw = 'Barrel',

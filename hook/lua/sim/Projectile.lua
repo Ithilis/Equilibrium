@@ -25,7 +25,6 @@ Projectile = Class(OldProjectile) {
             Owner = self,
             Radius = tbl.Radius or 5,
         }
-        WARN('creating flare')
         if tbl.Stack == true then
             self.MyUpperFlare = FlareUpper {
                 Owner = self,
