@@ -30,11 +30,11 @@ BlueprintId = "uab4201",
             TurretYaw = 0,
             TurretYawRange = 5,
             TurretYawSpeed = 180,
-            Turreted = true,
+            Turreted = false, --it being true creates strange bugs when it can't fire. leaving this for later.
         },
         {   --fake weapon for range indicator
-            EffectiveRadius = 15,           
-            MaxRadius = 15,
+            EffectiveRadius = 12.5,           
+            MaxRadius = 12.5,
         },
     },
 }
