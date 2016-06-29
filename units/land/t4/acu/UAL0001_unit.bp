@@ -128,6 +128,7 @@ BlueprintId = "ual0001",
         },
         {
             AboveWaterFireOnly = false, --to disable chrono underwater remove this line and _nothing_ else. it firing from seabed layer is correct and prevents cancer.
+            AboveWaterTargetsOnly = false, -- to enable use against swagners. yes theyre so swag they need their own line
             Buffs = {
                 {
                     Add = {
@@ -142,10 +143,10 @@ BlueprintId = "ual0001",
             },
         
             FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Air|Seabed',
-                Seabed = 'Land|Water|Air|Seabed',
-                Water = 'Land|Water|Air|Seabed',
-                Air = 'Land|Water|Air|Seabed',
+                Land = 'Land|Water|Sub|Air|Seabed',
+                Seabed = 'Land|Water|Sub|Air|Seabed',
+                Water = 'Land|Water|Sub|Air|Seabed',
+                Air = 'Land|Water|Sub|Air|Seabed',
             },
             
             MaxRadius = 33,                    --from 35
