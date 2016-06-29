@@ -12,6 +12,12 @@ BlueprintId = "xaa0306",
         Health = 3750,
         MaxHealth = 3750,
     },
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',  --from torpedos
+            '<LOC ability_sonar>Sonar',
+        },
+    },
     Economy = {
         BuildCostEnergy = 48750,   --55000e
         BuildCostMass = 1625,       --1650m
@@ -24,6 +30,7 @@ BlueprintId = "xaa0306",
     Weapon = {
         {
             Damage = 500,        --4000dps per pass
+            DamageRadius = 0.5,
             MaxRadius = 32,
             MinRadius = 4,
             ProjectilesPerOnFire = 4,

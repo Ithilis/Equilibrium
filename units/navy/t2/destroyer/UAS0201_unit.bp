@@ -19,7 +19,7 @@ BlueprintId="uas0201",
     Intel = {
         WaterVisionRadius = 30,    --from 45
     },
-    StrategicIconName = 'icon_ship2_antinavy',  --valiant icon because have weaker torpedos
+    StrategicIconName = 'icon_ship2_directfire',  --valiant icon because have weaker torpedos
     Weapon = {
         { --main gun
             Damage = 1000,            --from 1060 = 200dps

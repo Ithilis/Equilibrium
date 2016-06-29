@@ -64,6 +64,12 @@ BlueprintId="xas0306",
     Intel = {
         WaterVisionRadius = 25,        --from 50
     },
+    Physics = {
+        MaxAcceleration = 4.5,    --from3
+        MaxBrake = 4.5,           --from3
+        MaxSpeed = 4.5,           --from3
+        MaxSpeedReverse = 4.5,    --from3
+    },
     Weapon = {
         {
             Damage = 1000,        --from 800

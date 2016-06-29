@@ -28,6 +28,7 @@ BlueprintId="ues0201",
         MaxSpeedReverse = 5.5,
         MaxSteerForce = 5.5,
     },
+    StrategicIconName = 'icon_ship2_directfire',  --icon only as secure code from potencial future change
     Weapon = {
         { --ground gun
             DamageRadius = 1.5,        --from 1

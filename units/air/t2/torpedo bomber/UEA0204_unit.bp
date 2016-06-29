@@ -30,6 +30,7 @@ BlueprintId = "uea0204",
     },    
     Weapon = {
         {
+            DamageRadius = 0.5,
         },
         {
             Damage = 250,
