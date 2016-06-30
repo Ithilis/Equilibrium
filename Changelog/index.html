@@ -34,8 +34,8 @@
 			There are many changes in this mod, but don't worry, you need to remember only a few of them! The rest are designed to bring improvements while not compromising your gameplay.
 			<ul>
 			<li> Mercies deal damage over time! Moving targets receive only a fraction of the damage.
-			<li> Mass storages are cheaper, provide less mass, and explode on death! Consider safety and use adjacency.
-			<li> Energy storages, provide much more adjacency bonus, use them for fix your energy problem.
+			<li> Submarine warfare: Subs now counter suface ships; Sub Hunters counter subs and destroyers counter sub hunters!
+            <li> Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.
 			<li> RAS energy income has been nerfed, don't reclaim your pgens afterwards!
 			<li> T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.
 			<li> Veterancy doesn't instant-heal units anymore, don't rely on that when attacking with experimentals or your ACU.
@@ -409,7 +409,7 @@
 				<li><strike>35r, 3,5s stun, 5s reload time</strike> → 33r, 2s stun, 4s reload time
 				<li>20HP/s regeneration added
 				<li>fires automatically also at air/naval targets
-				<li>works from transports
+				<li>works from transports, work from seabed 
 				</ul>
 			</ul>
 			
@@ -448,7 +448,7 @@
 				<ul>
 				<li>fixed bug where regen rate gets reduced to its maximum for units that have more regen
                 <li>fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
-				<li><strike>+1000HP 0HP/s</strike> → +1500HP +10HP/s regeneration for acu
+				<li><strike>+1000HP 0HP/s</strike> → +1500HP +15HP/s regeneration for acu
 				<li><strike>0%</strike> → +6,25% new max HP for units in <strike>22</strike> → 23r
 				<li>Min/Max regen: 10/20HP/s
 				</ul>
@@ -773,6 +773,7 @@
 			<li>Fire beetle: <strike>300m 0 regen 5sp 3500dmg 4,5aoe 4.5r, 22 visual</strike> → 360m 5HP/s regen 4sp 3000dmg 5.5aoe 5r cloak 15 visual(-75e/s) requires 2 transport clamps
                 <ul>
                 <li>Add yellow radius that show area of explosion
+                <li>Add 1500dmg on 5.5aoe when is destroyed
                 </ul>
 			</ul>
  			
@@ -1530,7 +1531,8 @@
                 <li>Beacon Class: <strike>290m 2900e 1450bt 1800HP 6sp 48dps 31r torp-defens 10s reload time</strike> → 280m 1120bt 2000HP 5,8speed 60dps 35r torp-defense 5s reload time
                 </ul>
                 
-            Shard: <strike>120m 1200e 800bt 750HP 8speed, visual 32</strike> → 150m 1500e 600bt 1000HP 7speed, visual intel 35
+            Shard: <strike>120m 1200e 800bt 750HP 8speed, visual 32</strike> → 150m 1500e 600bt 1000HP 7speed, visual intel 35;
+            <li> Added torpedo defence: 35r 2.5s reload time
             <p>    
             Submarines: <strike>360m 2880e 1440bt 6speed 32water-vision 32vision-radius</strike> → 350m 2800e 1400bt 6,5speed 35r 15water-vision 15vision-radius 
                 <ul>
@@ -1551,7 +1553,7 @@
 			<li>Frigates are now a powerful intel unit. Other ships rely on them for intel rather than just HP sinks.
                 <ul>
                 <li>AA nerfed on the Trident Class. The Cybrans have a very solid cruiser and T2 submarines they dont need op frigates anymore.
-                <li>The Shard now has more HP, so it doesn't get killed in one pass by torpedo bombers. It also has some torpedo defense to help against submarines.
+                <li>The Shard now has more HP, so it doesn't get killed in one pass by torpedo bombers. It also has torpedo defense to help against submarines.
                 <li>The Beacon has more range than others but less speed, micro will make it more effective than other frigates.
                 </ul>
             <li>T1 Attack submarines get their originally intended role. Their job is to sink ships. And they got some serious buffs to enable that.
@@ -1586,7 +1588,7 @@
                     <li>Adjust hitbox
                     </ul>
                 <li>Barracuda: <strike>1430HP 6.5speed</strike> → 750HP 5.5speed
-                <li>Vespa: <strike>1800HP</strike> → 1200HP
+                <li>Vespa: <strike>1800HP 4torpedo</strike> → 1200HP 6torpedo (same dps)
                 <li>Barracuda/Vespa torpedo defense: <strike>Flares/single</strike> → Flares ; reload time: 2s
                 </ul>
          
@@ -1679,9 +1681,9 @@
                 <li>Neptune: <strike>7000m 60 000e 25200bt</strike> → 7875m 78750e 31500bt
                     <ul>
                     <li>Laser <strike>1aoe</strike> → 1.5aoe
-                    <li>Strategic icon<strike>surface anti-navy</strike> → surface intel ship (frigate)
+                    <li><strike>torpedo</strike> → depth-charges
                     </ul>
-                <li>Torrent: <strike>8000m 80 000e 16000bt 15 000HP</strike> → 7875m 78750e 31500bt 20 000HP
+                <li>Torrent: <strike>8000m 80 000e 16000bt 15 000HP 3sp</strike> → 7875m 78750e 31500bt 20 000HP 4.5sp
                     <ul>
                     <li>missile <strike>2x 200dps 2aoe</strike> → 2x 250dps 3aoe
                     <li>Added manual launch TML: max 2missiles, 50-200r, 6000dmg, 5aoe, 80build-rate
@@ -1692,7 +1694,7 @@
             <p>
             Galaxy <strike>128</strike> → 140r main cannon <strike>4</strike> → 1s reload time
                 <ul>
-                <li>Torpedoes: <strike>20</strike> → 50dps
+                <li><strike>torpedoes 20dps</strike> → depth-charges 50dps
                 <li>AA: <strike>2x30dps 0,8s reload time</strike> → 2x60dps 1,5s reload time
                 </ul>
             
@@ -1711,10 +1713,16 @@
             T4 Submarines:
                 <ul>
                 <li>Atlantis: <strike>80r 0reg  252sonar, water-vision 100, storage 150units 2.8sp</strike> → 75r 15HP/s reg  250sonar 55water-vision 50air-storag 3.5sp
-                <li>Tempest: <strike>0regen 14400bt 100water-vision 2.5sp 60 000HP</strike> → 15HP/s reg 54 000bt 55water-vision 28sp 125000HP
+                    <ul>
+                    <li><strike>reload time 2s; damage 200</strike> → reload time 1s; damage 100
+                    <li>Elevation <strike>5</strike> → 15, and also added proper hit-boxes and animation
+                    </ul>
+                <li>Tempest: <strike>0regen 14400bt 100water-vision 2.5sp 60 000HP</strike> → 15HP/s reg 54 000bt 55water-vision 2.8sp 125000HP
                     <ul>
                     <li>Main cannon: <strike>8000dmg 5aoe 10reload time</strike> → 7500dmg 7aoe 12,5s reload time - 600dps
                     <li>Depth charges: <strike>80r 420dps</strike> → 75r 330dps
+                    <li>Uniform scale <strike>0.1</strike> → 0.08 (80% model size)
+                    <li>Elevation <strike>5</strike> → 15, and also added proper hit-boxes and animation
                     </ul>
                 </ul>
             
@@ -1732,11 +1740,11 @@
             <li>Direct fire ships got a water vision adjustment to let support ship have stronger role on this field.
                 <ul>
                 <li>Neptune: Price increased to compensate for its power agaisnt T2 navy.
-                <li>Torrent has more HP to bring its stats in line with T3 navy. Increased dps to be at least as good as the same mass in UEF cruisers. More build time to make it more like a T3 unit. It now also has a manual TML launcher that helps give it an edge over T2 Cruiser Bombardment.
+                <li>Torrent has more HP to bring its stats in line with T3 navy. Increased dps to be more close as the same mass in UEF/Sera cruisers. More build time to make it more like a T3 unit. It now also has a manual TML launcher that helps give it an edge over T2 Cruiser Bombardment.
                 </ul>
             <li>Galaxy has more range so it’s less crap.
 			<li>Summit dps and muzzle velocity reduced to make it more balanced against navy.
-			<li>Atlantis is faster so it’s not a sea snail. Regen added because every T4 has natural regen. Both the Atlantis and Tempest got special seabed detection code so they don't clip through the floor as much anymore.
+			<li>Atlantis is faster so it’s not a sea snail. Regen added because every T4 has natural regen. Both the Atlantis and Tempest got special seabed detection code so they don't clip through the floor as much anymore. Are much harder to be ground-fired.
 			<li>Tempest build time increased by a lot (4x), fixed so it's a real experimental - it still loses against equal mass in battleships or subs but now it has a reason to be built, aside from a stupidly fast build time. 
             </ol>
         
@@ -1767,8 +1775,12 @@
                 </ul>
             Torpedo Launchers:
                 <ul>
-                <li>T1: <strike>450m 450bt 1600HP 75dps-Torpedo water vision 45</strike> → 250m 250bt 2500HP 60dps-Depth-charge 30 water-vision
-                <li>T2: <strike>1080m 9000e 1467bt; 45water-vision, stealthed only until scouted</strike> → 1000m 10000e 1250bt; 45 water-vision real stealth (disappears from radar)
+                <li>T1: <strike>450m 450bt; 1600HP; 75dps-Torpedo; water vision 45; turret yaw/pitch speed 35/25</strike> → 250m 250bt 2500HP 60dps-Depth-charge 30 water-vision; turret yaw/pitch speed 100
+                    <ul>
+                    <li>Cybran → properly setup target bones (ships will not miss it that much)
+                    </ul>
+                
+                <li>T2: <strike>1080m 9000e 1467bt; turret yaw/pitch speed 35/30; 45water-vision; stealthed only until scouted</strike> → 1000m 10000e 1250bt; turret yaw/pitch speed 100; 45 water-vision; real stealth (disappears from radar)
                     <ul>
                     <li>HP UEF/Aeon/Cybran/Sera: <strike>6400/6100/5900/4800; Torpedos</strike> → 8000/7625/7250/6000; Depth-charges
                     </ul>
@@ -1833,10 +1845,13 @@
                 </ul>
             <p>
             
-            Tactical missile defense: <strike>280m 3200e 600bt - for all</strike>
+            Tactical missile defense: <strike>280m 3200e 600bt</strike> → 340m 3400e 425bt
                 <ul>
-                <li>UEF/Cybran/Sera: 340m 3400e 425bt; <strike>31r</strike> → 32r
-                <li>Aeon: 300m 3000e 375bt, rof 1.5s, <strike>3.1s rof, 4s life time, 1 acceleration</strike> → bubble life time 2s, bubble projectile 5 acceleration
+                <li>UEF/Cybran/Sera: <strike>31r</strike> → 32r
+                <li>Aeon: building/cruiser/batleship <strike>turret yaw 0; display range 10; </strike> → turret yaw 0; turreted; display range 15
+                    <ul>
+                    <li>Projectile  <strike>lifetime 3; acceleration 1; UseGravity=false</strike> → lifetime 4; acceleration -1.25; UseGravity=true
+                    </ul>
                 </ul>
             <p>
             
@@ -1851,7 +1866,7 @@
 			<li>TML: AOE increased to kill storage around mexes when targetting them. It is also better at hitting moving units now, to make using this against armies more viable. The amount of missiles TMLs can store has also been decreased, since you never need 20 and forgetting to disable autobuild will waste eco.
             <li>TMD: FAF balance broke it, we're unbreaking it.
                 <ul>
-                <li>The Aeon TMD has been (finally) fixed! It will now catch missiles flying over it. It also got a reload time and duration change so it's not as easy to abuse 2 tmls to KO it. Because of this it's had its mass cost adjusted.
+                <li>The Aeon TMD has been (finally) fixed! It will now catch missiles flying over it. At all work much better what make them best tmd, as a disadvatages have half hp as others and less effective radius that defend behind themself.
                 </ul>
 			</ol>
             
