@@ -27,15 +27,12 @@ BlueprintId="xas0204",
     },
     Weapon = {
         {
-            Damage = 90, -- 4*90 = 360
+            Damage = 60, --from 90; 6*60 = 360
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
-            DamageType = 'Normal',
-            DisplayName = 'Chrono Torpedo',
             FiringTolerance = 2,
-            Label = 'Torpedo01',
             MaxRadius = 45,
             MuzzleSalvoDelay = 0.4,
-            MuzzleSalvoSize = 4,
+            MuzzleSalvoSize = 6,    --from4
             MuzzleVelocity = 5,
             ProjectileLifetime = 7,
             RackSalvoSize = 1,

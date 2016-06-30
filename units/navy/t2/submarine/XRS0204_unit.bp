@@ -16,7 +16,7 @@ BlueprintId="xrs0204",
     },
     Intel = {
         RadarStealth = true,
-        SonarRadius = 45,
+        SonarRadius = 45,   
         SonarStealth = true,
         VisionRadius = 20,        --from 32
         WaterVisionRadius = 20,    --from32
@@ -35,7 +35,7 @@ BlueprintId="xrs0204",
             DoTPulses = 5,
             DoTTime = 0.5,
             Label = 'Torpedo01',
-            MaxRadius = 40, --from45
+            MaxRadius = 45, --from45
             MuzzleSalvoDelay = 0.4,
             MuzzleSalvoSize = 6,    --unchanged
             MuzzleVelocity = 5,
