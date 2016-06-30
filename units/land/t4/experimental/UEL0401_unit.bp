@@ -122,11 +122,25 @@ BlueprintId = "uel0401",
         {
             Damage = 120,    --from 20 =350AA dmg in total
         },
-        {
-            Damage = 150,            --from 75
+        {   --torpedo
+            Damage = 150,              --from 75
+            DamageRadius = 0.5,        -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 60,            --from 40
+            
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE',
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        {   --death weapon
         },
     },
 }

@@ -43,8 +43,8 @@ BlueprintId = "daa0206",
             
         },
         {
-            Damage = 500,
-            DamageRadius = 3,
+            Damage = 500,       --from 25dmg
+            DamageRadius = 3,   --from 3aoe
             DisplayName = 'Air Crash',
  
         },

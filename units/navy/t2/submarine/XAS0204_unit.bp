@@ -20,7 +20,7 @@ BlueprintId="xas0204",
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
-        MaxAcceleration = 6,    --from 6
+        MaxAcceleration = 6,    --from 6.5
         MaxBrake = 6,
         MaxSpeed = 6,
         MaxSpeedReverse = 6,

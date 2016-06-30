@@ -61,10 +61,24 @@ BlueprintId = "url0402",
         },
         {
         },
-        {
+        {   --torpedo
             Damage = 100,        --from 50 = 100dps
+            DamageRadius = 0.5,        -- from 0 ; this is to stop you from submarine stacking
+            
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE',
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        {   --death weapon
         },
     },
 }

@@ -3,9 +3,15 @@ v.36
 
 retarded naval balance:
 
-- torpedo/depth charges
+- all torpedo/depth charge weapons:
 -- target priorities changed(shield -> t2 sub -> t3 sub -> t1 sub-> destroyer -> mobile -> pd)
--- aoe 0.5 [0] 
+-- aoe 0.5 [0]  (except Tempest/Czar)
+
+-Aeon T1 AA boat
+--vision: 35 (50)
+--added torp defense: 2.5s reload time; 35r
+
+- cybran frigate AA 3dmg [4] = 12 dps [16]
 
 - t1 attack submarines 50 dps [37.5]
 -- damage: 50 [75]
@@ -29,188 +35,123 @@ sera:
 --torp defense: TargetCheckInterval 0.1 [0.5]
 
 
-- t2 subHunters
+- t2 sub Hunters
 
 - Vespa
 -- removed stealth, maintenance, from script and bp
 -- 1200hp [1800]
+-- torpedo salvo 6 [4], dmg 60 (90) = same dps
 -- torp defense: changed to flares; reloadtime = 2s [7.7s]
 -- torp defense: ProjectileLifetime 6 [4]
 
-- Baracuda
+- Barracuda
 -- 750hp [1430]
--- speed 5.5 (6) [6.5]
+-- speed 5 (6) [6.5]
+-- sonar 45 (60)
 -- torp defense: flares; reloadtime = 2s [7.7s]
--- muzzle salvo size 6 [7]
 -- using hooked code, instead of hard shadowing
 
 - cooper
 -- hp: 1500 [1750]
 -- torpedo defense reload time 2.5s (4s)[2,5]
 
+- cybran cruiser
+-- 4500hp (3000)
+-- direct fire gun 100dps [184]
+-- AA missile 300dps [530], 1s rof [1,3s]
+--- toggled AA to GF change toggled aa projectile for same as T1 m AA
+--- 105dps [180]
+-- change target priority from air to same as df gun
+
 
 - T2 destroyers:
 -- aeon/uef/cybran given depth charges
--- c/u/s removed added torpedo against sub (that was added in the past) 
--- muzzle velocity 15 [5] 
+-- removed added torpedo against sub (that was added in the past) 
+-- depth charges muzzle velocity 15 [5] 
+-- change strategic icon for valiant icon [antinavy] (except sera)
 
 - uef:[30dps], reloadtime 2s [10s]
 - aeon:60dps [180], reloadtime 5s [4s]
 - cyb: 70dps [100] 
 -- torp def reloadtime: 20s [3.8s]
+-- AA rof 1s [0,7] = 40dps
 
 - sera: 
 -- torp defense reloadtime: 1s [3.8s]
--- beams weapon 1.5aoe ([1])
+-- beam weapons 1.5aoe ([1])
 -- removed stealth, maintenance, from script and bp,
 -- fixed a small bug where it didnt shoot torpedoes straight away - TargetCheckInterval = 0.2 from 2
 
 
-- t3 submarines
+- All t3 submarines
 -- removed sonar stealth + removed script (except cybran)
 
 sera
--- 3150m, 31500e 12600bt (3000m, 30000e, 21600bt) [3000m, 24000e, 14400bt]
+-- 3150m, 31500e, 12600bt (3000m, 30000e, 21600bt) [3000m, 24000e, 14400bt]
 -- torp defense: reloadtime: 2s [6,7s]
+
+
+- neptune 7875m 78750e 31500bt (8000m, 80 000e, 36000bt) [7000m, 60000e, 25200bt]
+-- speed [4,25] (4)
+-- laser 1.5aoe [1aoe]
+-- torpedoes replaced with depth charges
+
+- torrent 7875m 78750e 31500bt (8000m, 105 000e, 36000bt) [8000m, 80000e, 16000bt]
+-- added tml silo with manual launch
+-- 80 build rate, 6000dmg, 5aoe, 50-200r, 2 missiles max
+-- speed 4.5 ([3])
+
+- galaxy
+-- torpedoes replaced with depth charges
 
 - T4 Tempest/Atlantis
 -- removed stealth + script
--- implemented special seabed detection code so they dont clip through the floor as much anymore.
+-- implemented special seabed detection code so they dont clip through the floor as much anymore
+--adjusted hitboxes to make them as low as possible
+--tempest uniform scale 0.08 [0.1]
 -- increased the depth they sink to: Elevation 15 [5]
 -- atlantis: damage: 100 (200)
 -- atlantis: reload time: 1s (2s)
 
+_____________
+Land units:
 
-- t1 torp defences
--- torpedoes replaced with depth charges
--- changed display to depth charge (from torpedoes)
--- hp: 2500 (2000) [1600-1700]
+- aeon/cybran/uef/sera ACU + sera sACU
+-- auto oc weapon added (what was missing)
 
-- t2 torp defences
--- torpedoes replaced with depth charges
--- changed display to depth charges (from torpedoes)
--- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
--- sera torp defense reloadtime: 1s [2s]
+- aeon acu
+-- fixes bug where incorrect range circle was shown
+-- chrono dampener range 33 (38) [35]
+-- able to fire from underwater
 
-- t3 torp defence
--- now sits on the seabed instead of just under the water surface
--- add surfacing animation
-
-
-
-- t3 surface ships
--- torpedoes replaced with depth charges
-
-
-- t2 torp bombers
--- removed omni
-
+- sera ACU regeneration field
+-- 18000e (9000e)[4500]
+-- fixed bug with regen aura that caused weird behavior when near another sera acu with advance regen aura
+-- fixed a bug where removing the advanced gun upgrade caused an error
+-- advanced regen to acu 25hp/s (30)[0]
 
 - cybran acu
 -- torpedo damage 125 [250]
--- salvo size 8 [4]
--- muzzle salvo delay 0.4 [0.8]
+-- torpedo salvo size 8 [4]
+-- torpedo muzzle salvo delay 0.4 [0.8]
 
+- cybran sacu
+-- personal stealth rename to stealth field generator, some tweak in description too
 
-- amphibious units Brick / othuum / swagner
--- given depth charges
-
-- brick:
--- damage: 25 (40)
--- reload time: 5s [10s]
--- torp defense range: 0-25 [15-32]
--- range indicators fixed (broken)
-
-- othuum:
--- damage: 75 (150)
--- reload time: 5s [10s]
-
-- swagner:
--- damage: 25 (75)
--- reload time: 5s [15s]
-
-
-_____________
-
--sera t2 Ilshavoh
---loosen restrictions on its guns so it can shoot closer to itself.
---TurretPitchRange: 90 [60]
-
-- seraphim acu regen aura
--- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
-
-- protecting EQ code from potential changes by official balance terrorists
-
-Removing explosion on storages: 
-(this make game worse, but more loved, and love is that what in life realy matter <3)
-
-- mass storage, no longer explodes, 750hp (1500) [1600]
--- the mass they store within them is lost on death. 
--- this code is from (made by crotalus): https://github.com/FAForever/fa/pull/581/files
-
-- T1 mass exktractor 500hp ([600hp]) 
-- T1 Pgen 500hp ([600hp]), 250dmg (300) [250]  
-- Hydrocarbon power plant 1500hp ([1600]) 
-- T2 Mex 2000hp ([3000]) 
-- T3 mex 6000hp (9000) [8400]
-
-- megalith flak
--- 100dps [30] 55muzzle [20] -> its same as t2 mobile flak
-
--- neptune 7875m 78750e 31500bt (8000m, 80 000e, 36000bt)[7000m, 60000e, 25200bt]
--- torrent 7875m 78750e 31500bt (8000m, 105 000e, 36000bt) [8000m, 80000e, 16000bt]
--- add tml silo with manual launch
--- 80 build rate, 6000dmg, 5aoe, 50-200r, 2missile max
-
-- removed all ussles veterancy+buff parth from code
-
-- selen -> take back code that automatic turn weapn off when invisible / will not be able fire from transport
-
-- wall cleaning code + adjust reclaim time to half
-
-- fixed mobile shields/deceivers coming too close on attack move
-
-- Gunships are not able to fire on air units with ground fire weapon anymore
-
-- T2 arty
--- friendly fire disabled (caused problems while being near cliffs and hitting the ground)
--- added muzzle velocity reduce distance 128 
-
-- adjusted code hook/lua/defaultunits.lua 
--- this fixed a bug which broke veterancy for aa units
-
-- updated adjacency code to a better format, to keep up with the game code
-
-- changed the AA toggle weapons on cybran units to be more robust and safe
-
-- disabled deceiver stealth in transport
-
-- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth is huge advantage 
-
-- cybran T3 gunship stealth energy maintaince  50 (25)
-
-- aeon transport change capture distance from (default) 5 to 2.5 -> so transport is visible while capturing a mex
-
-- T1 bombers, these got a nerf so make them more convenient to play against
--- speed 10 (11)
--- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
--- cybran [50dmg = 300] (from 60 =360)
--- sera 3.5aoe [4]
--- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
--- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
---- aeon bomber, EMP stun T1 7.5aoe (from 10)
-
-- stinger
--- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
+- selen -> reimplement code that disables auto attacking from stealth. Is unable to fire from transport
 
 - T1 AA got a rebalance to make them more expensive and stronger: 50m 250e 250bt (35m 175e 175bt)(except cybran)  
 -- aeon 305hp
 -- sera 310hp
 -- uef 320hp
+--T1 Cybran aa got a special script to decrease its aa range to 25 while inside a transport.
+
+- fixed mobile shields/deceivers coming too close on attack move
+- disabled deceiver stealth in transport
 
 - hoplite
 -- fixing mistake in speed, added speed nerf also on acceleration and max brake
--- fixing mistake in changelog abotu HP
+-- fixing mistake in changelog abot HP
 -- reload time 6s (5s) [4s] and damage adjusted to 270 per salvo
 -- range 36 (38) [37]
 
@@ -220,26 +161,143 @@ Removing explosion on storages:
 -- initial speed 10 [3]
 -- max speed 16 [12]
 
-- cybran sacu
--- personal stealth rename to stealth field generator, some tweak in description too
+- Fire beetle 
+-- add 1500dmg 5.5aoe when destroyed 
+-- add explosion animation also when is destroyed
 
-- aeon/cybran/UEF/sera ACU + sera sacu
--- auto oc weapon added
+- sera t2 Ilshavoh
+--loosen restrictions on its guns so it can shoot closer to itself.
+--TurretPitchRange: 90 [60]
 
-- aeon acu
--- fixes bug where dont show correct range cyrcle
--- chrono dampener range 33 (38) [35]
+- swagner:
+-- Depth charges damage: 25 (75)
+-- reload time: 5s [15s]
 
-- sera ACU regeneration field
--- 18000e (9000e)[4500]
--- regen to acu 10hp/s (15)[0]
--- fix bug with regen aura that cause wierd behavior when is near another sera acu with advance regen aura
+- othuum:
+-- Depth charges damage: 75 (150)
+-- reload time: 5s [10s]
 
+- brick:
+-- Depth charges damage: 25 (40)
+-- reload time: 5s [10s]
+-- torp defense range: 0-25 [15-32]
+-- range indicators fixed (broken)
+
+- megalith AA flak
+-- 80dps [30] 55muzzle [20]
+-- torpedo defense reload time 6.25s [7.7s]
+
+___________
+Air units:
+
+- Gunships are not able to fire on air units with ground fire weapon anymore
+
+- T1 bombers, these got a nerf so make them more convenient to play against
+-- speed 10 (11)
+-- bombers break off distance 25 (20) [30] -> its about 10s to rotate cycle
+
+-- cybran [50dmg = 300] (from 60 =360)
+-- sera 3.5aoe [4]
+-- uef dot time 3 ([1,5])   -> double time for what is taking damage, but damage is same
+-- aeon 105m 2625e 700bt (90m)[80m]([2250e])(600bt)[500bt]
+--- aeon bomber, EMP stun T1 7.5aoe (from 10)
+
+- aeon t1 transport change capture distance from (default) [5] to 2.5 -> so transport is visible while capturing a mex
+
+- aeon t2 gunship 
+-- uniform scale 0.2 (0.15) [0.25] -> pure cosmetic issue
+
+- uef t2 gunship 
+-- removed useless code, fixing the bug when it was unable to fire, which was introduced in some incompatibility with 3652.
+
+- t2 torp bombers
+-- removed omni
+-- minor fixes to the weapons, they now all drop depth charges.
+
+- Uef t2 transport
+-- AA dps 32 [48] + repair mistake on my code with missing weapon
+
+- cybran T3 gunship stealth energy maintenance  50 (25)
+
+- cybran strat 3000hp [3700] stealth 100e (75) [60] -> because stealth is huge advantage 
+
+
+____________
+Building:
+
+- wall cleaned code + halved reclaim time (that was there by mistake)
+
+- Removing explosion on storages: 
+(this makes the game worse, but more loved, and love is that what in life really matters <3)
+
+- mass storage, no longer explodes, 750hp (1500) [1600]
+-- the mass they store within them is lost on death. 
+-- this code is from (made by crotalus): https://github.com/FAForever/fa/pull/581/files
+
+- T1 mass extractor 500hp ([600hp]) 
+- T1 Pgen 500hp ([600hp]), 250dmg (300) [250]  
+- Hydrocarbon power plant 1500hp ([1600]) 
+- T2 Mex 2000hp ([3000]) 
+- T3 mex 6000hp (9000) [8400]
+
+-Aeon TMD (building, cruiser, battleship):
+-- cost 340m 3400e 425bt (300m 3000e 375bt) -> same as other tmd
+--projectile now uses triple flare configuration to divert flares more consistently
+--now angles a little towards projectile (turret yaw: 5 [0]) and turreted
+--displayed range: 15 [10] (actual range still [30])
+--reload-time: [3.1s] (2s)
+--projectile lifetime 3 (2) [4]
+--projectile acceleration: -1.25 [1]
+--projectile UseGravity: true [false]
+
+- t2 arty
+-- friendly fire disabled (caused problems while being near cliffs and hitting the ground)
+-- added muzzle velocity reduce distance 128 
+
+
+- t1 torp defences
+-- torpedoes replaced with depth charges
+-- changed display to depth charge (from torpedoes)
+-- 2500hp (2000) [1600-1700]
+-- turret yaw/pitch speed 100  [35/25]
+-- fixed cybran one not having target bones set up properly
+
+- t2 torp defences
+-- torpedoes replaced with depth charges
+-- changed display to depth charges (from torpedoes)
+-- turret jaw/pitch speed 100  [35/30]
+-- hp : u/a/c/s : 8000/7625/7250/6000 [6400/6100/5900/4800]
+-- sera torp defense reloadtime: 1s [2s]
+
+- t3 torp defence HARM
+-- now sits on the seabed instead of just under the water surface
+-- added surfacing animation, with sounds and effects
+-- 10 000hp (12500) [11000]
+-- torpedo salvo 12 [6], 25dmg [50]
+-- disable friendly fire
+-- change target check interval to 0.5s [0.25s]
+
+____________
+System:
+
+- removed all useless veterancy+buff parts from code
+
+- protecting EQ code from potential changes by official balance terrorists
+
+- updated unit descriptions to match retarded naval balance and others
+
+- adjusted code hook/lua/defaultunits.lua 
+-- this fixed a bug which broke veterancy for aa units
+
+- updated adjacency code to a better format, to keep up with the game code
+
+- changed the AA toggle weapons on cybran units to be more robust and safe
 
 there were some errors in the online changelog which have now been fixed:
-- valiant base game speed is 5 not 6
-- harms in equilibrium has 12500 hp not 1250
-- selen in equilibrium has 75 hp not 85
+
+
+
+
 
 v. 35
 -----

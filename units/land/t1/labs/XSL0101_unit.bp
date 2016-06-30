@@ -23,11 +23,6 @@ BlueprintId = "xsl0101",
         Damage = 10,            --20 dps
         MaxRadius = 13,
         RateOfFire = 2,
-        FireTargetLayerCapsTable = {
-                Air = 'Land|Water|Seabed',
-                Land = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
-            },
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'RADAR',
