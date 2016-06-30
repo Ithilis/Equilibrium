@@ -51,6 +51,8 @@ BlueprintId = "urb2109",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretPitchSpeed = 100,  --from 35
+            TurretYawSpeed = 100,    --from 25
         },
     },
 }

@@ -78,6 +78,8 @@ BlueprintId = "uab2205",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretPitchSpeed = 100,  --from35
+            TurretYawSpeed = 100,    --from30            
         },
     },
 }

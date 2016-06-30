@@ -77,6 +77,8 @@ BlueprintId = "xsb2205",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretPitchSpeed = 100,  --from35
+            TurretYawSpeed = 100,    --from30
         },
         { --this thing actually has torp defense! wow!
             RateOfFire = 1, --from 0.5
