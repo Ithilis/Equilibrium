@@ -26,7 +26,7 @@ URS0202 = Class(CSeaUnit) {
             
             OnCreate = function(self)
                TargetingLaser.OnCreate(self)
-               self.BeamType.FxBeam = {'/mods/Equilibrium/effects/emitters/dummybeam01.bp',}
+               self.BeamType.FxBeam = {'/mods/Equilibrium_Balance_Mod/effects/emitters/dummybeam01.bp',} --this is hardcoded url so it needs to be updated if mod folder is changed
             end,
             
             -- Unit in range. Cease ground fire and turn on AA

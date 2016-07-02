@@ -11,7 +11,7 @@
 local CLandUnit = import('/lua/cybranunits.lua').CLandUnit
 local CybranWeaponsFile = import('/lua/cybranweapons.lua')
 local CAANanoDartWeapon = CybranWeaponsFile.CAANanoDartWeapon
---local TargetingLaser = import('/mods/Equilibrium/lua/EQweapons.lua').DummyLaser --custom dummy weapon; completely invisible
+--local TargetingLaser = import('/mods/Equilibrium_Balance_Mod/lua/EQweapons.lua').DummyLaser --custom dummy weapon; completely invisible
 local TargetingLaser = import('/lua/kirvesweapons.lua').TargetingLaser --cool looking targeting laser
 
 
