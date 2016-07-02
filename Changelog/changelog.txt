@@ -46,7 +46,7 @@ sera:
 
 - Barracuda
 -- 750hp [1430]
--- speed 5 (6) [6.5]
+-- speed 5.5 (6) [6.5]
 -- sonar 45 (60)
 -- torp defense: flares; reloadtime = 2s [7.7s]
 -- using hooked code, instead of hard shadowing
@@ -168,6 +168,14 @@ Land units:
 - sera t2 Ilshavoh
 --loosen restrictions on its guns so it can shoot closer to itself.
 --TurretPitchRange: 90 [60]
+
+- Aeon sniper bot
+-- remove stealth
+-- change reload time to 10s (6) [7] and 1000dmg
+-- 1.5aoe (1) and 70r (65)
+
+- Sera sniper bot
+-- 65r (70)
 
 - swagner:
 -- Depth charges damage: 25 (75)
