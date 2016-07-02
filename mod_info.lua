@@ -1,8 +1,8 @@
-name = "Equilibrium_balance_mod"
-uid = "RELEASE0-V36R-4785-9856-EQBALANCEMOD"
-version = 36
+name = "Equilibrium_testing"
+uid = "DEVELOP!-V37D-4759-3598-EQBALANCEMOD"
+version = 37
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod."
-description = "Fixes all the common issues with the game, and improves the balance to a much higher level."
+description = "This is the develop version of equilibrium. Use at your own risk!"
 icon = "/mods/Equilibrium_balance_mod/Equilibrium_balance_mod.png"
 author = "Ithilis"
 selectable = true
