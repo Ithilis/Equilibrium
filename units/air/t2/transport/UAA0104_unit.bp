@@ -5,16 +5,7 @@ Merge = true,
 BlueprintId = "uaa0104", 
 
     Air = {
-        MaxAirspeed = 16,        --from15 for not be catch by interceptor
-    },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
+        MaxAirspeed = 16,        --from15 for not be catch by interceptor that easy
     },
     Defense = {
         RegenRate = 5,
@@ -27,22 +18,15 @@ BlueprintId = "uaa0104",
     Physics = {
         FuelUseTime = 420,
     },
-    Veteran = {
-        Level1 = 3,
-        Level2 = 6,
-        Level3 = 9,
-        Level4 = 12,
-        Level5 = 15,
-    },
     Weapon = {
         {
-            Damage = 15,    --from6 = 72AA dps
+            Damage = 15,    --from6 = 72AA dps total
         },
         {
             Damage = 15,    --from6
         },
         {
-             Damage = 15,    --from6
+            Damage = 15,    --from6
         },
         {
             Damage = 15,    --from6

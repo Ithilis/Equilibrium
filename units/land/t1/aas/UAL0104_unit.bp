@@ -4,31 +4,19 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0104",
 
-    Economy = {
-        BuildCostEnergy = 150,
-        BuildCostMass = 30,
-        BuildTime = 150,
+    Defense = {
+        Health = 305,
+        MaxHealth = 305,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
+    Economy = {
+        BuildCostEnergy = 250,
+        BuildCostMass = 50,
+        BuildTime = 250,
     },
     Physics = {
         MaxAcceleration = 3.5,
         MaxBrake = 3.5,
         MaxSpeed = 3.5,
-    },
-    Veteran = {
-        Level1 = 1,
-        Level2 = 2,
-        Level3 = 3,
-        Level4 = 4,
-        Level5 = 5,
     },
     Weapon = {
         {

@@ -9,6 +9,8 @@ BlueprintId = "ura0302",
         MinAirspeed = 20,    --from25
     },
     Defense = {
+        Health = 700,        --untouched
+        MaxHealth = 700,
         RegenRate = 5,        --from0
     },
     Transport = {

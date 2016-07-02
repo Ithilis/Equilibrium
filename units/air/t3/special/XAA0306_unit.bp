@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xaa0306", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Transport = {
         AirClass = true,
         TransportClass = 2,
@@ -20,6 +11,12 @@ BlueprintId = "xaa0306",
     Defense = {
         Health = 3750,
         MaxHealth = 3750,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',  --from torpedos
+            '<LOC ability_sonar>Sonar',
+        },
     },
     Economy = {
         BuildCostEnergy = 48750,   --55000e
@@ -30,16 +27,10 @@ BlueprintId = "xaa0306",
         FuelRechargeRate = 15,
         FuelUseTime = 720,
     },
-    Veteran = {
-        Level1 = 49,
-        Level2 = 98,
-        Level3 = 147,
-        Level4 = 196,
-        Level5 = 245,
-    },
     Weapon = {
         {
             Damage = 500,        --4000dps per pass
+            DamageRadius = 0.5,
             MaxRadius = 32,
             MinRadius = 4,
             ProjectilesPerOnFire = 4,

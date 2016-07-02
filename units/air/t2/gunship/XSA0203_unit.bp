@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsa0203",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Defense = {
         Health = 1200,
         MaxHealth = 1200,
@@ -35,17 +26,14 @@ BlueprintId = "xsa0203",
     Physics = {
         FuelUseTime = 300,
     },
-    Veteran = {
-        Level1 = 9,
-        Level2 = 18,
-        Level3 = 27,
-        Level4 = 36,
-        Level5 = 45,
-    },
     Weapon = {
         {
             Damage = 20,                --from12 = 80dps
             DamageRadius = 0.5,            --from 0
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 24,                --from 22r
             ProjectilesPerOnFire = 2,    --from 4
             RateOfFire = 1,                --from 1.25 = 1,5s
@@ -53,9 +41,13 @@ BlueprintId = "xsa0203",
         {
             Damage = 20,                --from12
             DamageRadius = 0.5,            --from 0
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 24,                --from 22r
-            ProjectilesPerOnFire = 2,
-            RateOfFire = 1,
+            ProjectilesPerOnFire = 2,    --from 4
+            RateOfFire = 1,                --from 1.25 = 1,5s
         },
         {
             Damage = 250,

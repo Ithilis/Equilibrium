@@ -4,6 +4,9 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0307", 
 
+    AI = { -- this is important - it stops it at the correct range on attack move
+        GuardScanRadius = 40, --make this a bit more than the weapon range, it needs time to stop
+    }, --30 would stop it just outside of acu range; t3 mob shild deals with longer range t3 units so its safe from percies and such as well.
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
@@ -41,25 +44,35 @@ BlueprintId = "xsl0307",
         },
     },
     Weapon = {
-        {
-            AboveWaterTargetsOnly = true,      
-            BallisticArc = 'RULEUBA_None',
-            CollideFriendly = false,
-            CountedProjectile = false,
-            Damage = 0,                                
-            DamageRadius = 0,
+        { -- special dummy weapon to make the shield stop a certain distance away; requires weapon entry in script as well
+            AutoInitiateAttackCommand = false,
+            CannotAttackGround = false,
+            Damage = 0,
+            DamageFriendly = false,
             DamageType = 'Normal',
-            DisplayName = 'Serpentine Missile',
-            Label = 'MissileRack',
-            MaxRadius = 38,                            --its only for same behaviour 
-            RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_IndirectFire',
-            RateOfFire = 0,
-            RenderFireClock = true,
-            SlavedToBody = true,
+            DisplayName = 'Target Tracker',
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            MaxRadius = 33, -- this is the range the unit will try to stop at ; this is for the attack command. change GuardScanRadius for attack move range.
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Turret', -- when moving to new unit, update these to something that exists on the unit
+                    },
+                    RackBone = 'Turret',
+                },
+            },
+            RateOfFire = 1,
+            ReTargetOnMiss = false,
+            TargetCheckInterval = 0.1,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
             TargetRestrictDisallow = 'UNTARGETABLE',
-            TurretDualManipulators = false,
             Turreted = false,
+            SlavedToBody = false,
             WeaponCategory = 'Missile',
         },
     },

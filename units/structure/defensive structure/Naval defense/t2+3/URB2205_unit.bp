@@ -1,19 +1,9 @@
---Torpedo launcher T2
+--Cyb Torpedo launcher T2
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "urb2205", 
 
-
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
@@ -22,26 +12,27 @@ BlueprintId = "urb2205",
         'BUILTBYTIER2COMMANDER',
         'BUILTBYTIER3COMMANDER',
         'CYBRAN',
-        'MOBILE',            --from structure
-        'NEEDMOBILEBUILD',    --add
+        'STRUCTURE',
         'DEFENSE',
         'TECH2',
         'ANTINAVY',
         'DRAGBUILD',
         'SIZE4',
+        'NEEDMOBILEBUILD', --added to be able to build units that have a motiontype (just like exps)
         'VISIBLETORECON',
         'RECLAIMABLE',
-        'OVERLAYSONAR',
         'OVERLAYANTINAVY',
+        'OVERLAYSONAR',
         'SORTDEFENSE',
     },
     Defense = {
-        ArmorType = 'Normal',    --from structure
+        Health = 7250, --from 5800
+        MaxHealth = 7250,
     },
     Display = {
         Abilities = {
             '<LOC ability_sonar>Sonar',
-            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes 
             '<LOC ability_personalstealth>Personal Stealth',
         },
     },
@@ -49,6 +40,11 @@ BlueprintId = "urb2205",
         BuildCostEnergy = 10000,
         BuildCostMass = 1000,
         BuildTime = 1250,
+    },
+    Footprint = {
+        MinWaterDepth = 1.5,
+        SizeX = 2,
+        SizeZ = 2,
     },
     Intel = {
         RadarStealth = true,
@@ -58,14 +54,32 @@ BlueprintId = "urb2205",
         WaterVisionRadius = 45,
     },
     Physics = {
-        MotionType = 'RULEUMT_Water',
-        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
+        MaxSpeed = 0.1,        --making it restealth after being scouted. it still can't move so its not an issue.
+        MotionType = 'RULEUMT_Water', --making it restealth  - both of these are required for it to work.
+        SkirtOffsetX = -1,
+        SkirtOffsetZ = -1, --these offsets correct its position in the build preview (caused by it now being like a unit)
+        SkirtSizeX = 3,
+        SkirtSizeZ = 3,
     },
-    Veteran = {
-        Level1 = 20,
-        Level2 = 40,
-        Level3 = 60,
-        Level4 = 80,
-        Level5 = 100,
+    Weapon = {
+        {
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TurretPitchSpeed = 100,  --from35
+            TurretYawSpeed = 100,    --from30
+        },
     },
 }

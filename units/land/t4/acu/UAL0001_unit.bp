@@ -2,15 +2,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0001", 
  
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    }, 
     Economy = {
         BuildCostEnergy = 50000,        --from 5000000     repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
         BuildCostMass = 2000,            --from 18 000    repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
@@ -33,6 +24,7 @@ BlueprintId = "ual0001",
         T3Engineering = {
             NewBuildRate = 120,            --from 126
             NewHealth = 4000,              --from 6000
+            NewRegenRate = 15,             --15; =35regen
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
@@ -54,7 +46,7 @@ BlueprintId = "ual0001",
             BuildTime = 400,
             
             NewOmniRadius = 100,
-            NewVisionRadius = 50,
+            NewVisionRadius = 50,       --50
         },
         ResourceAllocation = {
             ProductionPerSecondEnergy = 1200,    --from2700
@@ -128,6 +120,15 @@ BlueprintId = "ual0001",
             TurretYawSpeed = 100,
         },
         {
+        --auto overcharge
+            MaxRadius = 23,
+            RateOfFire = 0.25,
+            TurretPitchSpeed = 100,
+            TurretYawSpeed = 100,
+        },
+        {
+            AboveWaterFireOnly = false, --to disable chrono underwater remove this line and _nothing_ else. it firing from seabed layer is correct and prevents cancer.
+            AboveWaterTargetsOnly = false, -- to enable use against swagners. yes theyre so swag they need their own line
             Buffs = {
                 {
                     Add = {
@@ -135,20 +136,20 @@ BlueprintId = "ual0001",
                     },
                     BuffType = 'STUN',
                     Duration = 2,
-                    Radius = 38,
+                    Radius = 33,
                     TargetAllow = 'MOBILE',
                     TargetDisallow = 'EXPERIMENTAL,COMMAND',
                 },
             },
         
             FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Air|Seabed',
-                Seabed = 'Land|Water|Air|Seabed',
-                Water = 'Land|Water|Air|Seabed',
-                Air = 'Land|Water|Air|Seabed',
+                Land = 'Land|Water|Sub|Air|Seabed',
+                Seabed = 'Land|Water|Sub|Air|Seabed',
+                Water = 'Land|Water|Sub|Air|Seabed',
+                Air = 'Land|Water|Sub|Air|Seabed',
             },
             
-            MaxRadius = 38,                    --from 35
+            MaxRadius = 33,                    --from 35
             RateOfFire = 0.25,                --from 5s
             
             EnergyDrainPerSecond = 400,        --from 200

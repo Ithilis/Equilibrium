@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsb2303", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Defense = {
         Health = 5000,
         MaxHealth = 5000,
@@ -22,20 +13,15 @@ BlueprintId = "xsb2303",
         BuildCostMass = 2750,
         BuildTime = 3437.5,
     },
-    Veteran = {
-        Level1 = 55,
-        Level2 = 110,
-        Level3 = 165,
-        Level4 = 220,
-        Level5 = 275,
-    },
     Weapon = {
         {
             Damage = 3500,
             DamageRadius = 3,
+            DamageFriendly = false,
             FiringRandomness = 1.25,
             MaxRadius = 130,                --from 128
-            MinRadius = 15,                    --from 5    
+            MinRadius = 15,                    --from 5
+            MuzzleVelocityReduceDistance = 128,
 
             EnergyDrainPerSecond = 250,
             EnergyRequired = 2500,

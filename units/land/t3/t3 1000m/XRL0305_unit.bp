@@ -1,69 +1,76 @@
-    --Brick
+--Brick
     
-    UnitBlueprint {
-    Merge = true,
-    BlueprintId = "xrl0305",
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrl0305",
         
-		AI = {
-        TargetBones = {
-            'Turret',
-            'Right_Leg01_B01',
-            'Right_Leg02_B01',
-            'Left_Leg01_B01',
-            'Left_Leg02_B01',        
-            'Projectile03',
-            'AttachPoint',
+	AI = {
+    TargetBones = {
+        'Turret',
+        'Right_Leg01_B01',
+        'Right_Leg02_B01',
+        'Left_Leg01_B01',
+        'Left_Leg02_B01',        
+        'Projectile03',
+        'AttachPoint',
+        },
+    },    
+    Economy = {
+        BuildCostEnergy = 10000,
+        BuildCostMass = 1000,
+        BuildTime = 5000,
+    },
+    Defense = {
+        Health = 5900,                
+        MaxHealth = 5900,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_amphibious>Amphibious',
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
+            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defense
+        },
+    },    
+    Intel = {
+        WaterVisionRadius = 5,    --from 26
+    },
+    Weapon = {
+        { --main gun
+			Damage = 120,            --300dps
+			MaxRadius = 33,
+			RateOfFire = 2.5,
+        
+			TurretPitch = 10,
+			TurretPitchRange = 90,
+        },
+        { --torpedoes
+			Damage = 25,                --2*25 = 50 ; 10dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+			MaxRadius = 20,        --from 32
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
+			ProjectilesPerOnFire = 1,
+			RateOfFire = 0.2,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
             },
-        },    
-        Economy = {
-            BuildCostEnergy = 10000,
-            BuildCostMass = 1000,
-            BuildTime = 5000,
         },
-        Defense = {
-            Health = 5900,                
-            MaxHealth = 5900,
-        },
-        Buffs = {
-            Regen = {
-                Level1 = 6,
-                Level2 = 9,
-                Level3 = 12,
-                Level4 = 15,
-                Level5 = 18,
-            },
-        },
-        Intel = {
-            WaterVisionRadius = 5,    --from 26
-        },
-        Veteran = {
-            Level1 = 30,
-            Level2 = 60,
-            Level3 = 90,
-            Level4 = 120,
-            Level5 = 150,
-        },    
-        Weapon = {
-            {
-				Damage = 120,            --300dps
-				MaxRadius = 33,
-				RateOfFire = 2.5,
-            
-				TurretPitch = 10,
-				TurretPitchRange = 90,
-            },
-            {
-				Damage = 40,
-				MaxRadius = 20,        --from 32
-				ProjectilesPerOnFire = 1,
-				RateOfFire = 0.1,
-            },
-			{
-				RangeCategory = 'UWRC_AntiNavy',
-			},
-        },
+		{ --torp defense
+            MinRadius = 0, --from 15
+            MaxRadius = 25, --from 32
+		},
+    },
 		
-        SizeX = 1.4,
-        SizeY = 1.9,
-        SizeZ = 1.4,
-    }
+    SizeX = 1.4,
+    SizeY = 1.9,
+    SizeZ = 1.4,
+}

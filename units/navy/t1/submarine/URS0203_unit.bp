@@ -3,57 +3,51 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId="urs0203",
-    
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 4,
-            Level3 = 6,
-            Level4 = 8,
-            Level5 = 10,
-        },
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
-        },
+
+    Defense = {
+        Health = 550,   --525
+        MaxHealth = 550,
     },
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
         BuildTime = 1400,
-        MaintenanceConsumptionPerSecondEnergy = 10,
     },
     Intel = {
         SonarRadius = 60,
-        SonarStealth = true,
         VisionRadius = 15,        --from 32
         WaterVisionRadius = 15,    --from 32
-        SonarStealth = true,
     },
     Physics = {
-        Elevation = -2.5,        --from -1,5
+        Elevation = -2.5,        --from -1.5
         MaxAcceleration = 6.5,    --from 6
         MaxBrake = 6.5,
         MaxSpeed = 6.5,
-        MaxSpeedReverse = 6.5,        
-    },
-    Veteran = {
-        Level1 = 11,
-        Level2 = 22,
-        Level3 = 33,
-        Level4 = 44,
-        Level5 = 55,
+        MaxSpeedReverse = 6.5,
     },
     Weapon = {
         {
-            MaxRadius = 35,    --from 32
+            Damage = 5, -- 4 torpedoes with 5 pulses each ; 5*5*4 = 100 damage/salvo
+            DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
+            MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5, --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
+            MuzzleSalvoDelay = 0.5, -- 1.5 second long salvo since muzzle salvo size = 4
+            MuzzleSalvoSize = 4,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
-            MaxRadius = 24,    --from 32
+            MaxRadius = 24,    --from 32 because it was longer than frigates
         },
     },
 }

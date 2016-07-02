@@ -7,22 +7,6 @@ BlueprintId = "url0205",
         BuildCostMass = 200,
         BuildTime = 1000,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 6,
-        Level2 = 12,
-        Level3 = 18,
-        Level4 = 24,
-        Level5 = 32,
-    },
     Weapon = {
         {
         Damage = 63,            --100,8dps

@@ -4,26 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ueb2108", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Economy = {
         BuildCostEnergy = 8000,     --4000e
         BuildCostMass = 800,
         BuildTime = 1000,           --800bt
-    },
-    Veteran = {
-        Level1 = 16,
-        Level2 = 32,
-        Level3 = 48,
-        Level4 = 64,
-        Level5 = 80,
     },
     Weapon = {
         {

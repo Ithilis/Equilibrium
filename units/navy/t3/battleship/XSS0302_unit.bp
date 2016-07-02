@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0302",
 
-    Buffs = {
-        Regen = {
-            Level1 = 16,
-            Level2 = 22,
-            Level3 = 28,
-            Level4 = 34,
-            Level5 = 40,
-        },
-    },
     Economy = {
         BuildCostEnergy = 90000,
         BuildCostMass = 9000,
@@ -20,13 +11,6 @@ BlueprintId="xss0302",
     },
     Intel = {
         WaterVisionRadius = 25,
-    },
-    Veteran = {
-        Level1 = 270,
-        Level2 = 540,
-        Level3 = 810,
-        Level4 = 1080,
-        Level5 = 1350,
     },
     Weapon = {
         {

@@ -2,6 +2,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0208",
 
+    Defense = {
+        Health = 290,
+        MaxHealth = 290,
+    },
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',

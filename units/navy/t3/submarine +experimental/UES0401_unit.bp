@@ -4,35 +4,15 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="ues0401",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
-    },
+    CollisionOffsetY = -0.775, --from -0.375 ; lowering collision box a little bit
     Defense = {
         RegenRate = 15,    --from 0
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_aa>Anti-Air',
-            '<LOC ability_carrier>Carrier',
-            '<LOC ability_factory>Factory',
-            '<LOC ability_radar>Radar',
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_torpedo>Torpedoes',
-        },
     },
     Economy = {
         BuildCostEnergy = 150000,
         BuildCostMass = 12000,
         BuildRate = 240,
         BuildTime = 36000,
-        MaintenanceConsumptionPerSecondEnergy = 150,
         BuildableCategory = {
             'BUILTBYTIER3FACTORY UEF MOBILE AIR',
         },
@@ -40,7 +20,6 @@ BlueprintId="ues0401",
     Intel = {
         RadarRadius = 250,
         SonarRadius = 250,            --from 252
-        SonarStealth = true,
         VisionRadius = 100,
         WaterVisionRadius = 55,        --from 100
     },
@@ -50,45 +29,54 @@ BlueprintId="ues0401",
         TransportClass = 10,
     },
     Physics = {
+        Elevation = -15, --from -5 ; this is to make it sit lower underwater - will work only if water is deep enough. only goes there on dive command.
         MaxAcceleration = 3.5,
         MaxBrake = 3.3,
         MaxSpeed = 3.5,        --from 2,8
         MaxSpeedReverse = 3.3,
     },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 240,
-        Level2 = 480,
-        Level3 = 720,
-        Level4 = 960,
-        Level5 = 1200,
+        RequirementMult = 0.5,
     },
     Weapon = {
-        {
-            Damage = 200,        --4 projectiles = 400dps
+        { --torps
+            Damage = 100,        --4 projectiles = 400dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 75,        --from 80
-            RateOfFire = 0.5,
+            RateOfFire = 1,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,            
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,        
         },
         {
-            Damage = 280,        --sams is unchanged
+            Damage = 280,        --sams unchanged
             DamageRadius = 1.5,
             MaxRadius = 100,
             RateOfFire = 1,        

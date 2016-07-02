@@ -8,15 +8,6 @@ BlueprintId = "uaa0304",
         MaxAirspeed = 16,    --from 17
         MinAirspeed = 14,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Economy = {
         BuildCostEnergy = 100000,
         BuildCostMass = 2000,
@@ -25,13 +16,6 @@ BlueprintId = "uaa0304",
     Physics = {
         FuelRechargeRate = 15,
         FuelUseTime = 360,
-    },
-    Veteran = {
-        Level1 = 30,
-        Level2 = 60,
-        Level3 = 90,
-        Level4 = 120,
-        Level5 = 150,
     },
     Weapon = {
         {

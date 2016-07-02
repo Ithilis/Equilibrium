@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xrl0403",
 
-    Buffs = {
-        Regen = {
-            Level1 = 15,
-            Level2 = 30,
-            Level3 = 45,
-            Level4 = 60,
-            Level5 = 75,
-        },
-    },
     Defense = {
         Health = 95000,                --from 110 000
         MaxHealth = 95000,
@@ -36,14 +27,9 @@ BlueprintId = "xrl0403",
     },
     Veteran = {
         RequirementMult = 0.5,
-        Level1 = 115,
-        Level2 = 230,
-        Level3 = 345,
-        Level4 = 460,
-        Level5 = 575,
     },
     Weapon = {
-        {
+        { -- main gun 1
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -57,7 +43,7 @@ BlueprintId = "xrl0403",
                 'ALLUNITS',
             },
         },
-        {
+        { -- main gun 2
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -71,15 +57,47 @@ BlueprintId = "xrl0403",
                 'ALLUNITS',
             },
         },
-        {
+        {   --torp launcher
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        { --torp defense
+            RateOfFire = 0.16,
         },
-        {
+        { --AA flak 
+            Damage = 50,            --80dps
+            DamageRadius = 2,        --from 2
+            MuzzleVelocity = 55,    --from 20
+            MaxRadius = 40,            --from 40
+            RateOfFire = 1.6,
+            FiringRandomness = 4,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE TRANSPORTATION',
+                'AIR MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        { --special campaign hack peg launcher
         },
-        {
+        { --death explosion
             WeaponCategory = 'Death',
         },
     },

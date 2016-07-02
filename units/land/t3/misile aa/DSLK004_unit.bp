@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "dslk004", 
     
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Defense = {
         Health = 2000,
         MaxHealth = 2000,
@@ -26,13 +17,6 @@ BlueprintId = "dslk004",
         MaxAcceleration = 2.6,
         MaxBrake = 2.6,
         MaxSpeed = 2.6,
-    },
-    Veteran = {
-        Level1 = 28,
-        Level2 = 56,
-        Level3 = 84,
-        Level4 = 112,
-        Level5 = 140,
     },
     Weapon = {
         {

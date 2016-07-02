@@ -7,15 +7,6 @@ BlueprintId = "uaa0310",
     Air = {
         MaxAirspeed = 5,        --from 8
     },
-    Buffs = {
-        Regen = {
-            Level1 = 15,
-            Level2 = 30,
-            Level3 = 45,
-            Level4 = 60,
-            Level5 = 75,
-        },
-    },
     BuildIconSortPriority = 110,
     Categories = {
         'PRODUCTSC1',
@@ -81,12 +72,7 @@ BlueprintId = "uaa0310",
         StorageSlots = 50,        --from 150
     },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 135,
-        Level2 = 270,
-        Level3 = 405,
-        Level4 = 540,
-        Level5 = 675,
+        RequirementMult = 0.5,
     },
     Weapon = {
         {

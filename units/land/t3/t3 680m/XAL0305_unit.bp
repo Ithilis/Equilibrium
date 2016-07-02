@@ -4,54 +4,22 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xal0305",
     
+    Defense = {
+        Health = 450,
+        MaxHealth = 450,
+    },
     Economy = {
             BuildCostEnergy = 6800,
             BuildCostMass = 680,
             BuildTime = 3400,
-            MaintenanceConsumptionPerSecondEnergy = 50,
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_personalstealth>Personal Stealth',
-        },
-    },
-    General = {
-        OrderOverrides = {
-            RULEUTC_StealthToggle = {
-                bitmapId = 'stealth-personal',
-                helpText = 'toggle_stealth_personal',
-            },
-        },
-        ToggleCaps = {
-            RULEUTC_StealthToggle = true,
-        },
-    },
-    Intel = {
-        RadarStealth = true,
-    },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
-    Veteran = {
-        Level1 = 20.5,
-        Level2 = 41,
-        Level3 = 61.5,
-        Level4 = 82,
-        Level5 = 102.5,
     },
     Weapon = {
         {
-        Damage = 600,            --from 950, its 100dps, still more as artilery, 
-        DamageRadius = 1,
-        FiringRandomnessWhileMoving = 0.5,    --from 0,75
-        RateOfFire = 0.1666,    --from 7s to 6s, for be more effective against army
-        MaxRadius = 65,
+            Damage = 1000,            --from 950, its 100dps, still more as artilery, 
+            DamageRadius = 1.5,
+            FiringRandomnessWhileMoving = 0.5,    --from 0,75
+            RateOfFire = 0.1,    --from 7s to 10s
+            MaxRadius = 70,
         },
     },
 }

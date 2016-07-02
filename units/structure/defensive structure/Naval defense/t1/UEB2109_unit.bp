@@ -4,18 +4,15 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ueb2109", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
-    },
     Defense = {
-        Health = 2000,
-        MaxHealth = 2000,
+        Health = 2500, 
+        MaxHealth = 2500,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
+            '<LOC ability_sonar>Sonar',
+        },
     },
     Economy = {
         BuildCostEnergy = 2500,    --from 3600
@@ -27,18 +24,28 @@ BlueprintId = "ueb2109",
         VisionRadius = 45,    --from 12
         WaterVisionRadius = 30,    --from 45
     },
-    Veteran = {
-        Level1 = 5,
-        Level2 = 10,
-        Level3 = 15,
-        Level4 = 20,
-        Level5 = 25,
-    },
     Weapon = {
         {
             Damage = 120,    --from 150 = 60dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 50,
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
             RateOfFire = 0.25,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TurretPitchSpeed = 100,  --from 35
+            TurretYawSpeed = 100,    --from 25
         },
     },
 }

@@ -1,8 +1,8 @@
-    --S Sniper
+--S Sniper
     
-    UnitBlueprint {
-    Merge = true,
-    BlueprintId = "xsl0305",
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xsl0305",
     
     Economy = {
         BuildCostEnergy = 6800,
@@ -21,22 +21,6 @@
     Intel = {
         Cloak = true,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
-    Veteran = {
-        Level1 = 20.5,
-        Level2 = 41,
-        Level3 = 61.5,
-        Level4 = 82,
-        Level5 = 102.5,
-    },
     Physics = {
         MaxAcceleration = 2.8,            --from 3, on snipe  its speed multiplier with 0.75 
         MaxSpeed = 2.8,
@@ -47,18 +31,18 @@
     SizeZ = 0.8,
     Weapon = {
         {
-        Damage = 1350,                    --from 2000, its 90dps
-        DamageRadius = 1,
-        FiringRandomnessWhileMoving = 0.6,    --from 0,8
-        RateOfFire = 0.0666,            --15sec from 14,3sec
-        MaxRadius = 70,
+            Damage = 1350,                    --from 2000, its 90dps
+            DamageRadius = 1,
+            FiringRandomnessWhileMoving = 0.6,    --from 0,8
+            RateOfFire = 0.0666,            --15sec from 14,3sec
+            MaxRadius = 65,
         },
         {
-        Damage = 600,                    --120dps
-        DamageRadius = 1.5,
-        FiringRandomnessWhileMoving = 0.4,    --from 0,6
-        MaxRadius = 38,
-        RateOfFire = 0.2,
+            Damage = 600,                    --120dps
+            DamageRadius = 1.5,
+            FiringRandomnessWhileMoving = 0.4,    --from 0,6
+            MaxRadius = 38,
+            RateOfFire = 0.2,
         },
     },
 }

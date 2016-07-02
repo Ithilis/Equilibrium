@@ -1,3 +1,5 @@
+-- Cybran T1 gunship
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xra0105", 
@@ -13,16 +15,13 @@ BlueprintId = "xra0105",
     Physics = {
         FuelUseTime = 240,
     },
-    Veteran = {
-        Level1 = 5,
-        Level2 = 10,
-        Level3 = 15,
-        Level4 = 20,
-        Level5 = 25,
-    },
     Weapon = {
         {
             Damage = 22,    --from 16 =55dps
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 20,
             RateOfFire = 2.5,    --from3 = 0,4s
         },

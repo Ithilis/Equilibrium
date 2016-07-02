@@ -3,60 +3,55 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId="xss0203",
-    
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 4,
-            Level3 = 6,
-            Level4 = 8,
-            Level5 = 10,
-        },
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
-            '<LOC ability_torpedodef>Torpedo Defense',
-        },
-    },
+
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
         BuildTime = 1400,
-        MaintenanceConsumptionPerSecondEnergy = 10,
     },
     Intel = {
         SonarRadius = 60,
-        SonarStealth = true,
         VisionRadius = 15,        --from 32
         WaterVisionRadius = 15,    --from 32
-        SonarStealth = true,
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
         MaxAcceleration = 6.5,    --from 6
-        MaxBrake = 6.5,
+        MaxBrake = 6.5,    --from 6
         MaxSpeed = 6.5,
         MaxSpeedReverse = 6.5,        
     },
-    Veteran = {
-        Level1 = 11,
-        Level2 = 22,
-        Level3 = 33,
-        Level4 = 44,
-        Level5 = 55,
-    },
     Weapon = {
         {
-            MaxRadius = 35,    --from 32
+            Damage = 50, --50 dps from 37.5
+            DamageRadius = 0.5,     --from 0 ; this is to stop you from submarine stacking
+            MaxRadius = 35,     --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5,   --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
+            MuzzleSalvoDelay = 0.8,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        { --torpedo defense; not so good 1v1 subs, but when stacking it gets better
+            Damage = 2,
+            EffectiveRadius = 35,
+            MaxRadius = 35, --from 32 ;  this is torp defense so this just makes them a little better in large numbers
+            ProjectileLifetime = 7,
+            RateOfFire = 0.5,   --from 0.1 ; this alone makes it one of the best t1 subs; its weaker vs ships though because it relies on torp defense. 
+                                --so its more like a subhunter-sub hybrid in that way
+            TargetCheckInterval = 0.1, --from 0.5, makes it very responsive at short ranges, so you cant park on top of sub and rape it.
         },
         {
-        },
-        {
-            MaxRadius = 24,    --from 32
+            MaxRadius = 24,    --from 32 because it was longer than frigates
         },
     },
 }

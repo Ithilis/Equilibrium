@@ -5,13 +5,6 @@ Merge = true,
 BlueprintId = "url0106",
     
     Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
         Stun = {
             Add = {
                 OnDeath = true,
@@ -48,13 +41,6 @@ BlueprintId = "url0106",
     SizeX = 0.7,
     SizeY = 0.6,
     SizeZ = 0.7,
-    Veteran = {
-        Level1 = 1,
-        Level2 = 2,
-        Level3 = 3,
-        Level4 = 4,
-        Level5 = 5,
-    },
     Weapon = {
         {
             Damage = 8,    --24dps

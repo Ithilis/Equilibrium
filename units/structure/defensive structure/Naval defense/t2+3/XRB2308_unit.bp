@@ -2,15 +2,25 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "xrb2308", 
+BlueprintId = "xrb2308",
 
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
+    AI = {
+        TargetBones = {
+            'B01',
+            'B02',
+            'B03',
+        },
+    },
+    Audio = {
+        Deploy = Sound {
+            Bank = 'XRB',
+            Cue = 'XRB2308_Activate',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        DoneBeingBuilt = Sound {
+            Bank = 'Explosions',
+            Cue = 'Expl_Water_Lrg_01',
+            LodCutoff = 'UnitMove_LodCutoff',
         },
     },
     Categories = {
@@ -19,8 +29,7 @@ BlueprintId = "xrb2308",
         'BUILTBYTIER3ENGINEER',
         'BUILTBYTIER3COMMANDER',
         'CYBRAN',
-        'MOBILE',            --from structure
-        'NEEDMOBILEBUILD',    --add
+        'STRUCTURE',
         'DEFENSE',
         'TECH3',
         'ANTINAVY',
@@ -32,12 +41,14 @@ BlueprintId = "xrb2308",
         'OVERLAYANTINAVY',
         'SORTDEFENSE',
     },
+    CollisionOffsetY = 0, --to make the collision box in the right spot
     Defense = {
-        ArmorType = 'Normal',    --from structure
-        Health = 12500,        --from 11000
-        MaxHealth = 12500,
+        Health = 10000,        --from 11000
+        MaxHealth = 10000,
     },
     Display = {
+        AnimationPermOpen = '/mods/Equilibrium/animations/XRB2308_NIL.sca',
+        AnimationDeploy = '/mods/Equilibrium/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
         Abilities = {
             '<LOC ability_sonar>Sonar',
             '<LOC ability_torpedo>Torpedoes',
@@ -49,11 +60,6 @@ BlueprintId = "xrb2308",
         BuildCostMass = 3000,
         BuildTime = 3750,
     },
-    Footprint = {
-        MinWaterDepth = 2,
-        SizeX = 2,
-        SizeZ = 2,
-    },
     Intel = {
         RadarStealth = true,
         SonarRadius = 60,
@@ -62,14 +68,33 @@ BlueprintId = "xrb2308",
         WaterVisionRadius = 50,        --from 45
     },
     Physics = {
-        MotionType = 'RULEUMT_SurfacingSub',
-        MaxSpeed = 0.1,        --this is only for not stay visible on radar, it cant move
+        Elevation = 0,        --to make it sit as close to the seabed as possible or so deep it doesnt matter
     },
-    Veteran = {
-        Level1 = 60,
-        Level2 = 120,
-        Level3 = 180,
-        Level4 = 240,
-        Level5 = 300,
+    Weapon = {
+        {
+            Damage = 25, --from 50 ; half damage per torp but double torpedos
+            DamageRadius = 0.5,          --from 0 ; this is to stop you from submarine stacking
+            DamageFriendly = false,     --add, because for unknown reason torpedo with aoe explosion destroy other torpedo
+            FireTargetLayerCapsTable = { --so it can shoot from the seabed
+                Sub = 'Seabed|Sub|Water',
+            },
+            MuzzleSalvoDelay = 0.3, --from 0.6
+            MuzzleSalvoSize = 12, --from 6 
+            FiringTolerance = 60, --to make it fire upwards
+            TargetCheckInterval = 0.5, --from 0,25
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TurretPitch = 0, --to make it fire upwards
+        },
     },
 }

@@ -1,16 +1,7 @@
 UnitBlueprint {
-    Merge = true,
-    BlueprintId = "uel0001",
+Merge = true,
+BlueprintId = "uel0001",
 
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    },     
     Economy = {
         BuildCostEnergy = 50000,        --from 5000000     repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
         BuildCostMass = 2000,            --from 18 000    repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
@@ -33,6 +24,7 @@ UnitBlueprint {
         T3Engineering = {
             NewBuildRate = 120,        --from 126
             NewHealth = 4000,           -- from 6000
+            NewRegenRate = 15,             --15; =35regen
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
@@ -128,6 +120,12 @@ UnitBlueprint {
         RateOfFire = 0.25,            --from 0,3= 4s
         TurretPitchSpeed = 100,    --from 90
         TurretYawSpeed = 100,
+        },
+        {   --auto Overcharge
+            MaxRadius = 23,  --from 22 
+            RateOfFire = 0.25,            --from 0,3= 4s
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
         {
             MinRadius = 15,

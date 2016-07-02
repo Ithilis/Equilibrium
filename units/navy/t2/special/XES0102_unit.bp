@@ -4,39 +4,41 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xes0102",
 
-    Buffs = {
-        Regen = {
-            Level1 = 8,
-            Level2 = 12,
-            Level3 = 16,
-            Level4 = 20,
-            Level5 = 24,
-        },
+    Defense = {
+        Health = 1500, -- from 1750, it needs lower hp cos of its absurd torp defense - great vs subs; kinda bad vs ships
+        MaxHealth = 1500,
     },
     Economy = {
         BuildCostEnergy = 7000,    --from 7200e
         BuildCostMass = 1050,
         BuildTime = 4200,
     },
-    SizeX = 0.8,    --0,6
-    SizeY = 1.2,    --0,65
+    SizeX = 0.8,    --0.6
+    SizeY = 1.2,    --0.65
     SizeZ = 3.2,    --2
-    Veteran = {
-        Level1 = 27,
-        Level2 = 54,
-        Level3 = 81,
-        Level4 = 108,
-        Level5 = 135,
-    },
     Weapon = {
         {
-            Damage = 90,    --90dps 
+            Damage = 90,    --4*90=360; 90dps 
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 50,
-            RateOfFire = 0.25,    --from 0,3=4s
+            RateOfFire = 0.25,    --from 0.3=4s
+            
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             DisplayName = 'Smart Charge AntiTorpedo',
-            RateOfFire = 0.333,    --from 0,4=3s
+            RateOfFire = 0.4,    --from unchanged
         },
     },
 }

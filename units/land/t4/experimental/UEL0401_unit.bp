@@ -5,22 +5,8 @@ Merge = true,
 BlueprintId = "uel0401",
 
 
-    Buffs = {
-        Regen = {
-            Level1 = 15,
-            Level2 = 30,
-            Level3 = 45,
-            Level4 = 60,
-            Level5 = 75,
-        },
-    },
     Veteran = {
-    RequirementMult = 0.5,
-        Level1 = 85,
-        Level2 = 170,
-        Level3 = 255,
-        Level4 = 340,
-        Level5 = 425,
+        RequirementMult = 0.5,
     },
     Defense = {
         Health = 20000,
@@ -136,11 +122,25 @@ BlueprintId = "uel0401",
         {
             Damage = 120,    --from 20 =350AA dmg in total
         },
-        {
-            Damage = 150,            --from 75
+        {   --torpedo
+            Damage = 150,              --from 75
+            DamageRadius = 0.5,        -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 60,            --from 40
+            
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE',
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        {   --death weapon
         },
     },
 }

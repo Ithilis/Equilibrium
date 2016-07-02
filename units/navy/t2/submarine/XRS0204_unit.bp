@@ -1,0 +1,64 @@
+--T2 submarine Baracuda 
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="xrs0204",
+
+    Defense = {
+        Health = 750,
+        MaxHealth = 750,
+    },
+    Economy = {
+        BuildCostEnergy = 7000,
+        BuildCostMass = 1050,
+        BuildTime = 4200,
+        MaintenanceConsumptionPerSecondEnergy = 25, --from 30
+    },
+    Intel = {
+        RadarStealth = true, --special code to unstealth when firing
+        SonarRadius = 60,   
+        SonarStealth = true,
+        VisionRadius = 20,        --from 32
+        WaterVisionRadius = 20,    --from32
+    },
+    Physics = {
+        Elevation = -2.5,        --from -1,5
+        MaxAcceleration = 5.5,    --from 6,5
+        MaxBrake = 5.5,
+        MaxSpeed = 5.5,
+        MaxSpeedReverse = 5.5,
+    },
+    Weapon = {
+        {
+            Damage = 15, --75*6 = 450 per salvo ; 112.5dps
+            DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
+            DoTPulses = 5,
+            DoTTime = 0.5,
+            Label = 'Torpedo01',
+            MaxRadius = 45,
+            MuzzleSalvoDelay = 0.4,
+            MuzzleSalvoSize = 6,    --unchanged
+            MuzzleVelocity = 5,
+            RateOfFire = 0.25,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE',
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+            Label = 'AntiTorpedo01',
+            MaxRadius = 25,
+            MuzzleVelocity = 5,
+            RateOfFire = 0.5,
+            TargetCheckInterval = 0.2,
+        },
+    },
+}

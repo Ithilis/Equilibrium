@@ -2,15 +2,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0001", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    }, 
    Defense = {
         RegenRate = 15,                    --from 17
     },
@@ -36,6 +27,7 @@ BlueprintId = "url0001",
         T3Engineering = {
             NewBuildRate = 120,            --from 126
             NewHealth = 4000,              --from 7000hp
+            NewRegenRate = 15,             --15; =35regen
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
@@ -71,6 +63,12 @@ BlueprintId = "url0001",
             BuildCostMass = 5000,
             BuildTime = 2500,            --from 1400bt
         },
+        StealthGenerator = {
+            BuildCostEnergy = 5250,
+            BuildCostMass = 350,
+            BuildTime = 350,
+            MaintenanceConsumptionPerSecondEnergy = 50,
+        },
         Teleporter = {
             BuildCostEnergy = 1500000,
             BuildCostMass = 15000,
@@ -81,37 +79,47 @@ BlueprintId = "url0001",
         RequirementMult = 0.5,
     },
     Weapon = {
-        {
-        MaxRadius = 23,  --from 22
-        TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'MOBILE TECH1 BOT',
-                'MOBILE TECH1 TANK',
-                'MOBILE TECH1',
-                'MOBILE TECH2',
-                'MOBILE TECH3',
-                'STRUCTURE DEFENSE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-        TurretPitchSpeed = 100,    --from 90
-        TurretYawSpeed = 100,
+        { --main gun
+            MaxRadius = 23,  --from 22
+            TargetPriorities = {
+                    'SPECIALHIGHPRI',
+                    'MOBILE TECH1 BOT',
+                    'MOBILE TECH1 TANK',
+                    'MOBILE TECH1',
+                    'MOBILE TECH2',
+                    'MOBILE TECH3',
+                    'STRUCTURE DEFENSE',
+                    'SPECIALLOWPRI',
+                    'ALLUNITS',
+                },
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
-        {
-        DamageType = 'Overcharge',
-        MaxRadius = 23,  --from 22 
-        RateOfFire = 0.25,            --from 0,3= 4s
-        TurretPitchSpeed = 100,    --from 90
-        TurretYawSpeed = 100,
+        { --overcharge
+            MaxRadius = 23,  --from 22 
+            RateOfFire = 0.25,            --from 0,3= 4s
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
-        {
+        { -- auto overcharge
+            DamageType = 'Overcharge',
+            MaxRadius = 23,  --from 22 
+            RateOfFire = 0.25,            --from 0,3= 4s
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
-        {
-        MaxRadius = 23,  --from 22
+        { --death nuke
         },
-        {
+        { --Laser
+            MaxRadius = 23,  --from 22
         },
-        {
+        { --torpedoes
+            Damage = 125, --from 4*250 = 1000
+            MuzzleSalvoDelay = 0.4,
+            MuzzleSalvoSize = 8,
+            MuzzleVelocity = 10,
+        },
+        { --teleport in explosion thing
         },
     },    
 }

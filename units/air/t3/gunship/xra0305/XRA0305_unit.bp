@@ -195,7 +195,7 @@ UnitBlueprint {
         BuildCostEnergy = 25000,
         BuildCostMass = 1000,
         BuildTime = 6000,
-        MaintenanceConsumptionPerSecondEnergy = 25,
+        MaintenanceConsumptionPerSecondEnergy = 50,
     },
     Footprint = {
         MaxSlope = 0.25,
@@ -307,9 +307,9 @@ UnitBlueprint {
             Damage = 225,                    --160
             DamageType = 'Normal',
             DisplayName = 'Disintegrator Pulse Laser',
-            FireTargetLayerCapsTable = {
-                Air = 'Air|Land|Water|Seabed',
-                Land = 'Air|Land|Water|Seabed',
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
             },
             FiringTolerance = 2,            --from0,5
             Label = 'Disintegrator01',

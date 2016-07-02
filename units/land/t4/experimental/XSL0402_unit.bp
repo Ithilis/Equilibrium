@@ -6,15 +6,13 @@ BlueprintId = "xsl0402",
 
     Intel = {
         VisionRadius = 45,
-        
         },
         
     LifeBarHeight = 0.01,
     LifeBarOffset = 0.01,
     LifeBarSize = 0.01,
-    
     Lifetime = 45,    --from 30
-     Weapon = {
+    Weapon = {
         {
             CollideFriendly = false,
             ContinuousBeam = false,

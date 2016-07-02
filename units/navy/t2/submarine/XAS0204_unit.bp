@@ -4,48 +4,70 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xas0204",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
-            '<LOC ability_torpedodef>Torpedo Defense',
-        },
+    Defense = {
+        Health = 1200, -- from 1800, it needs lower hp cos of its absurd torp defense - great vs subs; kinda bad vs ships
+        MaxHealth = 1200,
     },
     Economy = {
         BuildCostEnergy = 7000,
         BuildCostMass = 1050,
         BuildTime = 4200,
-        MaintenanceConsumptionPerSecondEnergy = 25,
     },
     Intel = {
-        SonarStealth = true,
         SonarRadius = 60,
         VisionRadius = 20,    --from 32
         WaterVisionRadius = 20,    --from 45
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
-        MaxAcceleration = 6,    --from 6
+        MaxAcceleration = 6,    --from 6.5
         MaxBrake = 6,
         MaxSpeed = 6,
         MaxSpeedReverse = 6,
     },
-    Veteran = {
-        Level1 = 32,
-        Level2 = 64,
-        Level3 = 96,
-        Level4 = 128,
-        Level5 = 160,
+    Weapon = {
+        {
+            Damage = 60, --from 90; 6*60 = 360
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            FiringTolerance = 2,
+            MaxRadius = 45,
+            MuzzleSalvoDelay = 0.4,
+            MuzzleSalvoSize = 6,    --from4
+            MuzzleVelocity = 5,
+            ProjectileLifetime = 7,
+            RackSalvoSize = 1,
+            RateOfFire = 0.25,
+            TargetCheckInterval = 0.2, -- from 2, (same as sera destro) why was it 2 .__.
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+        {
+            DepthCharge = { -- increases its effectiveness i think
+                Radius = 5,
+            },
+            DisplayName = 'Quasar Anti-Torpedo',
+            FiringTolerance = 2,
+            LeadTarget = false,
+            MaxRadius = 25, --from 32 ; to stop it from shielding everything with its torp def
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 5,
+            ProjectileId = '/projectiles/CIMAntiTorpedo01/CIMAntiTorpedo01_proj.bp', --giving it torpedo flares instead of 1-1 torp defense.
+            ProjectileLifetime = 6,
+            RackSalvoSize = 1,
+            RateOfFire = 0.4, -- from 0.13 ; not as good as cyb one.
+            TargetCheckInterval = 0.1,
+            TrackingRadius = 1.5,
+        },
     },
 }

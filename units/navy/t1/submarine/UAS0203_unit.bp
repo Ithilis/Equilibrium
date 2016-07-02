@@ -1,38 +1,22 @@
---t1 aeon submarine Sylph
+--T1 aeon submarine Sylph
 
 UnitBlueprint {
 Merge = true,
 BlueprintId="uas0203",
-    
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 4,
-            Level3 = 6,
-            Level4 = 8,
-            Level5 = 10,
-        },
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_sonar>Sonar',
-            '<LOC ability_sonarstealth>Sonar Stealth',
-            '<LOC ability_submersible>Submersible',
-            '<LOC ability_torpedo>Torpedoes',
-        },
+ 
+    Defense = {
+        Health = 575,   --550
+        MaxHealth = 575,
     },
     Economy = {
         BuildCostEnergy = 3500,
         BuildCostMass = 350,
         BuildTime = 1400,
-        MaintenanceConsumptionPerSecondEnergy = 10,
     },
     Intel = {
         SonarRadius = 60,
-        SonarStealth = true,
         VisionRadius = 15,        --from 32
         WaterVisionRadius = 15,    --from 32
-        SonarStealth = true,
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
@@ -41,16 +25,25 @@ BlueprintId="uas0203",
         MaxSpeed = 7,
         MaxSpeedReverse = 7,        
     },
-    Veteran = {
-        Level1 = 11,
-        Level2 = 22,
-        Level3 = 33,
-        Level4 = 44,
-        Level5 = 55,
-    },
     Weapon = {
         {
-            MaxRadius = 35,    --from 32
+            Damage = 50, --2 torps per salvo; from 75
+            DamageRadius = 0.5,     -- from 0
+            MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
+            RateOfFire = 0.5, --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
+            MuzzleSalvoDelay = 0.8,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },
 }

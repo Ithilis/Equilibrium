@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "urb2303", 
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Defense = {
         Health = 4750,                --from 3150
         MaxHealth = 4750,
@@ -21,13 +12,6 @@ BlueprintId = "urb2303",
         BuildCostEnergy = 25000,    --from 12000
         BuildCostMass = 2500,        --from 1680
         BuildTime = 3125,            --from 1467
-    },
-    Veteran = {
-        Level1 = 50,
-        Level2 = 100,
-        Level3 = 150,
-        Level4 = 200,
-        Level5 = 250,
     },
     Weapon = {
         {
@@ -103,9 +87,11 @@ BlueprintId = "urb2303",
             
             Damage = 2250,                    --from 1750
             DamageRadius = 4,
+            DamageFriendly = false,
             FiringRandomness = 1.75,        --from 2,5
             MaxRadius = 120,                --from 128
-            MinRadius = 10,                    --from 5    
+            MinRadius = 10,                    --from 5
+            MuzzleVelocityReduceDistance = 128,
             RateOfFire = 0.0666,            --from 0,05 = 15s
 
             EnergyDrainPerSecond = 300,        --from 115

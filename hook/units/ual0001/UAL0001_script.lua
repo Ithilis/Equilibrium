@@ -183,9 +183,9 @@ UAL0001 = Class(oldUAL0001) {
         --Crysalis Beam
         elseif enh == 'CrysalisBeam' then
             local wep = self:GetWeaponByLabel('RightDisruptor')
-            wep:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            wep:ChangeMaxRadius(bp.NewMaxRadius or 33)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            oc:ChangeMaxRadius(bp.NewMaxRadius or 33)
         elseif enh == 'CrysalisBeamRemove' then
             local wep = self:GetWeaponByLabel('RightDisruptor')
             local bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius

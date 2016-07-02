@@ -7,25 +7,9 @@ BlueprintId = "xaa0305",
     Air = {
         MaxAirspeed = 10,    --from 8
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
     Transport = {
         AirClass = true,
         TransportClass = 2,
-    },
-    Veteran = {
-        Level1 = 30,
-        Level2 = 45,
-        Level3 = 60,
-        Level4 = 75,
-        Level5 = 90,
     },
     Defense = {
         Health = 4500,        --from6000
@@ -43,6 +27,10 @@ BlueprintId = "xaa0305",
     Weapon = {
         {
             Damage = 25,        --from24
+            FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
+                Air = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 25,
             ProjectilesPerOnFire = 4,
             RateOfFire = 1.25,

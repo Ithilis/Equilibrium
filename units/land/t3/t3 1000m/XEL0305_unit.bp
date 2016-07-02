@@ -13,24 +13,8 @@
             Health = 6000,                
             MaxHealth = 6000,
         },
-        Buffs = {
-            Regen = {
-                Level1 = 6,
-                Level2 = 9,
-                Level3 = 12,
-                Level4 = 15,
-                Level5 = 18,
-            },
-        },
         Intel = {
             WaterVisionRadius = 5,    --from 26
-        },
-        Veteran = {
-            Level1 = 30,
-            Level2 = 60,
-            Level3 = 90,
-            Level4 = 120,
-            Level5 = 150,
         },
         Weapon = {
             {

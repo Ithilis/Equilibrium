@@ -2,15 +2,6 @@ UnitBlueprint {
     Merge = true,
     BlueprintId = "xsl0001",
 
-    Buffs = {
-        Regen = {
-            Level1 = 5,
-            Level2 = 10,
-            Level3 = 15,
-            Level4 = 20,
-            Level5 = 25,
-        },
-    },     
     Economy = {
         BuildCostEnergy = 50000,        --from 5000000     repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
         BuildCostMass = 2000,            --from 18 000    repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
@@ -49,6 +40,7 @@ UnitBlueprint {
         T3Engineering = {
             NewBuildRate = 120,            --from 126
             NewHealth = 4000,              --from 7000
+            NewRegenRate = 15,             --15; =35regen
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
@@ -87,7 +79,7 @@ UnitBlueprint {
         RegenAura = {
             ACUAddHealth = 1500,            --from 1000
             NewRegenRate = 15,                --from 0
-            BuildCostEnergy = 9000,            --from 4500
+            BuildCostEnergy = 18000,            --from 4500
             BuildCostMass = 600,            --from 600
             BuildTime = 600,
             Radius = 23,                     -- 22
@@ -98,7 +90,7 @@ UnitBlueprint {
         },
         AdvancedRegenAura = {
             ACUAddHealth = 3500,             --from 2500
-            NewRegenRate = 30,                --from 0
+            NewRegenRate = 25,                --from 0
             BuildCostEnergy = 42000,        --from 31250    drain 300e/s
             BuildCostMass = 1400,            -- drain 10m/s
             BuildTime = 1400,                --from 1250
@@ -119,29 +111,34 @@ UnitBlueprint {
     },
     Weapon = {
         {
-        MaxRadius = 23,  --from 22
-        TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'MOBILE TECH1 BOT',
-                'MOBILE TECH1 TANK',
-                'MOBILE TECH1',
-                'MOBILE TECH2',
-                'MOBILE TECH3',
-                'STRUCTURE DEFENSE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-        TurretPitchSpeed = 100,    --from 90
-        TurretYawSpeed = 100,
+            MaxRadius = 23,  --from 22
+            TargetPriorities = {
+                    'SPECIALHIGHPRI',
+                    'MOBILE TECH1 BOT',
+                    'MOBILE TECH1 TANK',
+                    'MOBILE TECH1',
+                    'MOBILE TECH2',
+                    'MOBILE TECH3',
+                    'STRUCTURE DEFENSE',
+                    'SPECIALLOWPRI',
+                    'ALLUNITS',
+                },
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
         {
-        DamageType = 'Overcharge',
-        MaxRadius = 23,  --from 22 
-        RateOfFire = 0.25,            --from 0,3= 4s
-        TurretPitchSpeed = 100,    --from 90
-        TurretYawSpeed = 100,
+            DamageType = 'Overcharge',
+            MaxRadius = 23,  --from 22 
+            RateOfFire = 0.25,            --from 0,3= 4s
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
         {
+        -- auto overcharge
+            MaxRadius = 23,  --from 22 
+            RateOfFire = 0.25,            --from 0,3= 4s
+            TurretPitchSpeed = 100,    --from 90
+            TurretYawSpeed = 100,
         },
         {
             MinRadius = 15,

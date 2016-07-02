@@ -7,22 +7,6 @@ BlueprintId = "uea0303",
     Air = {
         MaxAirspeed = 20,         --from25
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
-    },
-    Veteran = {
-        Level1 = 15,
-        Level2 = 30,
-        Level3 = 45,
-        Level4 = 60,
-        Level5 = 75,
-    },
     Transport = {
         AirClass = true,
         TransportClass = 1,

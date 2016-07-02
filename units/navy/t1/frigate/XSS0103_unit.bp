@@ -4,15 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0103",
 
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
      Economy = {
         BuildCostEnergy = 2600,
         BuildCostMass = 260,

@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "url0203",
     
     Economy = {
-        BuildCostEnergy = 2800,        --2x more Energy
+        BuildCostEnergy = 2800,
         BuildCostMass = 280,
         BuildTime = 1400,
     },
@@ -13,43 +13,48 @@ BlueprintId = "url0203",
         Health = 1500,
         MaxHealth = 1500,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
+    Display = {
+        Abilities = {
+            '<LOC ability_amphibious>Amphibious',
+            '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
         },
-    },
+    }, 
     Intel = {
         VisionRadius = 15,
         WaterVisionRadius = 5,    --from 20
     },
-    Veteran = {
-        Level1 = 8.5,
-        Level2 = 17,
-        Level3 = 25.5,
-        Level4 = 34,
-        Level5 = 42.5,
-    },
     Weapon = {
-            {
+        { --rockets (land weapon)
             Damage = 200,        --60dps
             MaxRadius = 23,
             MuzzleVelocity = 30,
             RateOfFire = 0.3030303030,
-            },
-            {
+        },
+        { --electron bolter (land weapon)
             Damage = 30,        --30dps, 30*2 = 60 damage
             MaxRadius = 18,
             RateOfFire = 0.5,
-            },
-            {
-            Damage = 75,        --10dps
+        },
+        { --torpedoes
+            Damage = 25,        --2*25 = 50 ; 10dps
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 20,
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
             ProjectilesPerOnFire = 2,
-            RateOfFire = 0.0666,
+            RateOfFire = 0.2,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
             },
+        },
     },
 }

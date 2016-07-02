@@ -24,22 +24,6 @@ BlueprintId = "uel0203",
         TurnRate = 310,
         WaterSpeedMultiplier = 0.85,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
-    Veteran = {
-        Level1 = 11,
-        Level2 = 22,
-        Level3 = 33,
-        Level4 = 44,
-        Level5 = 55,
-    },
     Weapon = {
         Damage = 18,        --120dps
         {

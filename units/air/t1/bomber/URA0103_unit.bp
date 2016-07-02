@@ -4,26 +4,13 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0103", 
 
-
     Air = {
-        MaxAirspeed = 11,        --from 10
-        MinAirspeed = 11,
-        
-        BreakOffDistance = 20,          --30
+        BreakOffDistance = 25,          --30
         CombatTurnSpeed = 2.0,          --0,75
         PredictAheadForBombDrop = 3.5,    --3
         KTurn = 0.85,                   --0,75
         StartTurnDistance = 6,          --5
         TurnSpeed = 2.0,                --0,75
-    },
-    Buffs = {
-        Regen = {
-            Level1 = 2,
-            Level2 = 3,
-            Level3 = 4,
-            Level4 = 5,
-            Level5 = 6,
-        },
     },
     Economy = {
         BuildCostEnergy = 2250,
@@ -35,7 +22,7 @@ BlueprintId = "ura0103",
     },
     Weapon = {
         {
-            Damage = 60,
+            Damage = 50,
             BombDropThreshold = 7,          --from 3
             DamageRadius = 3,            --from3
             DamageFriendly = false,

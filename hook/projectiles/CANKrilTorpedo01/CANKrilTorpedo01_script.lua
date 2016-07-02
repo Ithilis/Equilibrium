@@ -1,0 +1,39 @@
+#****************************************************************************
+#**
+#**  File     :  /data/projectiles/CANKrilTorpedo01/CANKrilTorpedo01_script.lua
+#**  Author(s):  Gordon Duclos, Matt Vainio
+#**
+#**  Summary  :  Kril Torpedo Projectile script, XRB2308
+#**
+#**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
+#****************************************************************************
+local CKrilTorpedo = import('/lua/cybranprojectiles.lua').CKrilTorpedo
+
+CANKrilTorpedo01 = Class(CKrilTorpedo) {
+
+    FxEnterWater= { '/effects/emitters/water_splash_ripples_ring_01_emit.bp',
+                    '/effects/emitters/water_splash_plume_01_emit.bp',},                    
+	TrailDelay = 2,                    
+
+    OnCreate = function(self)
+        CKrilTorpedo.OnCreate(self, true)
+        self:SetCollisionShape('None', 0, 0, 0, 0) --removed this since it was causing collision issues with explosions/projectile aoe
+        self.ColThread = self:ForkThread(self.SetCollisionThread)
+    end,	
+    
+    SetCollisionThread = function(self)
+        WaitSeconds(0.8)
+        self:SetCollisionShape('Sphere', 0, 0, 0, 1) --gets set with a delay so its affected by torp defense which requires it.
+        KillThread(self.ColThread)     
+    end,
+    
+    
+    OnEnterWater = function(self)
+        CKrilTorpedo.OnEnterWater(self)
+        local army = self:GetArmy()
+        for i in self.FxEnterWater do #splash
+            CreateEmitterAtEntity(self,army,self.FxEnterWater[i])
+        end
+    end,
+}
+TypeClass = CANKrilTorpedo01

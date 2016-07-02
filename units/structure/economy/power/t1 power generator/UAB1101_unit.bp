@@ -4,6 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uab1101", 
 
+    Defense = {
+        Health = 500,      --600hp
+        MaxHealth = 500,   --600hp
+    },
     Economy = {
         BuildCostEnergy = 750,
         BuildCostMass = 75,
@@ -11,8 +15,8 @@ BlueprintId = "uab1101",
     },
     Weapon = {
         {
-            Damage = 300,        --from 250
-            DamageRadius = 2.5,
+            Damage = 250,        --from 250
+            DamageRadius = 2.5,  --from 2
             DisplayName = 'Death Weapon',
         },
     },

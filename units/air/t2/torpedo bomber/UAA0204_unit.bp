@@ -10,34 +10,12 @@ BlueprintId = "uaa0204",
         MaxAirspeed = 16,      --from15
         Turnspeed = 1,          --from 0.48
     },
-    Buffs = {
-        Regen = {
-            Level1 = 4,
-            Level2 = 6,
-            Level3 = 8,
-            Level4 = 10,
-            Level5 = 12,
-        },
-    },
     Display = {
         Abilities = {
-            '<LOC ability_omni>Omni Sensor',
+            '<LOC ability_depthcharge>Depth Charges',
+            '<LOC ability_sonar>Sonar',
         },
-    },
-    Intel = {
-        OmniRadius = 20,
-    },
-    Veteran = {
-        Level1 = 7,
-        Level2 = 14,
-        Level3 = 21,
-        Level4 = 28,
-        Level5 = 35,
-    },
-    Transport = {
-        AirClass = true,
-        TransportClass = 1,
-    },
+    },    
     Economy = {
         BuildCostEnergy = 5250,
         BuildCostMass = 245,
@@ -46,8 +24,13 @@ BlueprintId = "uaa0204",
     Physics = {
         FuelUseTime = 300,    --from 600
     },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
+    },
     Weapon = {
         {
+            DamageRadius = 0.5,
         },
         {
             Damage = 250,

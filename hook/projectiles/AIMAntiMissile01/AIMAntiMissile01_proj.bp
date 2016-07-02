@@ -36,13 +36,13 @@ ProjectileBlueprint {
         HelpText = 0,
     },
     Physics = {
-        Acceleration = 5,       --from1
+        Acceleration = -1.25, --from 1
         DestroyOnWater = true,
-        LifeTime = 2,           -- from4
-        MaxSpeed = 5,
-        TrackTarget = true,
+        LifeTime = 3, --from 4
+        MaxSpeed = 15, --from 5
+        TrackTarget = false, --from true
         TurnRate = 0,
-        UseGravity = false,
+        UseGravity = true, --from false
         VelocityAlign = true,
     },
     SizeX = 0.5,

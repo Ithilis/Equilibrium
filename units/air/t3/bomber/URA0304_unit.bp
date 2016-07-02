@@ -8,31 +8,19 @@ BlueprintId = "ura0304",
         MaxAirspeed = 16,    --from 17
         MinAirspeed = 14,
     },
-    Buffs = {
-        Regen = {
-            Level1 = 6,
-            Level2 = 9,
-            Level3 = 12,
-            Level4 = 15,
-            Level5 = 18,
-        },
+    Defense = {
+        Health = 3000,      --3700
+        MaxHealth = 3000,
     },
     Economy = {
         BuildCostEnergy = 100000,
         BuildCostMass = 2000,
         BuildTime = 9600,
-        MaintenanceConsumptionPerSecondEnergy = 75,        --from60
+        MaintenanceConsumptionPerSecondEnergy = 100,        --from60
     },
     Physics = {
         FuelRechargeRate = 15,
         FuelUseTime = 360,
-    },
-    Veteran = {
-        Level1 = 30,
-        Level2 = 60,
-        Level3 = 90,
-        Level4 = 120,
-        Level5 = 150,
     },
     Weapon = {
         {

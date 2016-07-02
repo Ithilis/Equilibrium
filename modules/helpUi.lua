@@ -22,7 +22,7 @@ local settings = {
     panel_posX = 2,
     panel_posY = 150,
     panel_height = 270,
-    panel_width = 610,
+    panel_width = 625,
 
     -- text in helpPanel
     headLine = "Survival manual",
@@ -31,10 +31,11 @@ local settings = {
         "- However here are some things which you might want to take into account while playing:",
         "",
         "1. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
-        "2. Mass storages are cheaper, provide less mass, and explode on death! Consider safety and use adjacency.",
-        "3. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
-        "4. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
-        "5. Veterancy doesn't instant-heal units anymore. Units share experience from kill.",
+        "2. Submarine combat: Subs counter suface ships; Sub Hunters counter subs; Destroyers counter sub hunters!",
+        "3. Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.",
+        "4. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
+        "5. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
+        "6. Veterancy doesn't instant-heal units anymore. Units share experience from kill.",
     }
 }
 
