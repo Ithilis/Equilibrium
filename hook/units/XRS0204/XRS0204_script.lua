@@ -58,7 +58,7 @@ XRS0204 = Class(CSubUnit) {
             
 			self:EnableUnitIntel('RadarStealth')
             self:EnableUnitIntel('SonarStealth')
-            self:SetMaintenanceConsumptionInactive()
+            self:SetMaintenanceConsumptionActive()
             self.Stealthed = true
         end,
     },
@@ -68,7 +68,7 @@ XRS0204 = Class(CSubUnit) {
             if self.Stealthed then
                 self:DisableUnitIntel('RadarStealth')
                 self:DisableUnitIntel('SonarStealth')
-                self:SetMaintenanceConsumptionActive()
+                self:SetMaintenanceConsumptionInactive()
                 self.Stealthed = false
 			end
         end,
