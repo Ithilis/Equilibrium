@@ -1,43 +1,38 @@
+#****************************************************************************
+#**
+#**  File     :  /data/units/XRS0204/XRS0204_script.lua
+#**  Author(s):  Jessica St. Croix
+#**
+#**  Summary  :  Cybran Sub Killer Script
+#**
+#**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
+#****************************************************************************
+
 local CSubUnit = import('/lua/cybranunits.lua').CSubUnit
-local CybranWeapons = import('/lua/cybranweapons.lua')
+local WeaponsFile = import('/lua/cybranweapons.lua')
+local CANNaniteTorpedoWeapon = WeaponsFile.CANNaniteTorpedoWeapon
+local CIFSmartCharge = WeaponsFile.CIFSmartCharge
 
-local CIFMissileLoaWeapon = CybranWeapons.CIFMissileLoaWeapon
-local CIFMissileStrategicWeapon = CybranWeapons.CIFMissileStrategicWeapon
-local CANTorpedoLauncherWeapon = CybranWeapons.CANTorpedoLauncherWeapon
-
-URS0304 = Class(CSubUnit) {
+XRS0204 = Class(CSubUnit) {
     DeathThreadDestructionWaitTime = 0,
+
     Weapons = {
-        NukeMissile = Class(CIFMissileStrategicWeapon){},
-        CruiseMissile = Class(CIFMissileLoaWeapon){},
-        Torpedo01 = Class(CANTorpedoLauncherWeapon){
+        Torpedo01 = Class(CANNaniteTorpedoWeapon) {
 			OnWeaponFired = function(self, target)
-				CANTorpedoLauncherWeapon.OnWeaponFired(self, target)
+				CANNaniteTorpedoWeapon.OnWeaponFired(self, target)
 				ChangeState( self.unit, self.unit.VisibleState )
 			end,
 			
 			OnLostTarget = function(self)
-				CANTorpedoLauncherWeapon.OnLostTarget(self)
+				CANNaniteTorpedoWeapon.OnLostTarget(self)
 				if self.unit:IsIdleState() then
 				    ChangeState( self.unit, self.unit.InvisState )
 				end
 			end,
         },
-        Torpedo02= Class(CANTorpedoLauncherWeapon){
-			OnWeaponFired = function(self, target)
-				CANTorpedoLauncherWeapon.OnWeaponFired(self, target)
-				ChangeState( self.unit, self.unit.VisibleState )
-			end,
-			
-			OnLostTarget = function(self)
-				CANTorpedoLauncherWeapon.OnLostTarget(self)
-				if self.unit:IsIdleState() then
-				    ChangeState( self.unit, self.unit.InvisState )
-				end
-			end,
-        },
+        AntiTorpedo01 = Class(CIFSmartCharge) {},
+        AntiTorpedo02 = Class(CIFSmartCharge) {},
     },
-    
     OnCreate = function(self)
         CSubUnit.OnCreate(self)
         self:SetMaintenanceConsumptionActive()
@@ -53,6 +48,7 @@ URS0304 = Class(CSubUnit) {
         self.Stealthed = false
         ChangeState( self, self.InvisState ) -- If spawned in we want the unit to be invis, normally the unit will immediately start moving
     end,
+    
     
     InvisState = State() {
         Main = function(self)
@@ -77,6 +73,7 @@ URS0304 = Class(CSubUnit) {
 			end
         end,
     },
+
 }
 
-TypeClass = URS0304
+TypeClass = XRS0204
