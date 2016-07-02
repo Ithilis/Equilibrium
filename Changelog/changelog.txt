@@ -47,7 +47,6 @@ sera:
 - Barracuda
 -- 750hp [1430]
 -- speed 5.5 (6) [6.5]
--- sonar 45 (60)
 -- torp defense: flares; reloadtime = 2s [7.7s]
 -- using hooked code, instead of hard shadowing
 
