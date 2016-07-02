@@ -1,5 +1,5 @@
-name = "Equilibrium Testing"
-uid = "DEVELOP1-V36D-8367-1375-EQBALANCEMOD"
+name = "Equilibrium_balance_mod"
+uid = "RELEASE0-V36R-4785-9856-EQBALANCEMOD"
 version = 36
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod."
 description = "This is the testing version of equilibrium! Use at your own risk!"
