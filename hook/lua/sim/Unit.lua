@@ -27,6 +27,7 @@ Unit = Class(oldUnit) {
     
     OnKilled = function(self, instigator, type, overkillRatio)
         self.Dead = true
+        self:HandleStorage()        --Ithilis add only this 
         if instigator and self.totalDamageTaken ~= 0 then
             self:VeterancyDispersal()
         end
@@ -185,7 +186,7 @@ Unit = Class(oldUnit) {
 
 
 ---------------    
-----RECLAIM----
+----RECLAIM------
 ---------------
 
     CreateWreckageProp = function( self, overkillRatio )
@@ -232,5 +233,31 @@ Unit = Class(oldUnit) {
         return prop
     end,    
     
+-----
+--Mass storages lose portion of mass when die  
+-- code is from there  https://github.com/FAForever/fa/pull/581/files
+-----
+
+    
+    HandleStorage = function(self, to_army)
+        if EntityCategoryContains(categories.MOBILE, self) then
+            return -- Exclude ACU / SCU / sparky
+        end
+
+        local bp = self:GetBlueprint()
+        local brain = GetArmyBrain(self:GetArmy())
+        for _, t in {'Mass', 'Energy'} do
+            if bp.Economy['Storage' .. t] then
+                local type = string.upper(t)
+                local amount = bp.Economy['Storage' .. t] * brain:GetEconomyStoredRatio(type)
+
+                brain:TakeResource(type, amount)
+                if to_army then
+                    local to = GetArmyBrain(to_army)
+                    to:GiveResource(type, amount)
+                end
+            end
+        end
+    end,
 
 }

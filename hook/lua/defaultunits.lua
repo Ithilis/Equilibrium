@@ -1,12 +1,19 @@
+
+
+
+
+
 -- ok so what is being changed here is only the OnKilled function inside airunit, to give veterancy according to the new vet system.
 -- what is extra strange is that this file is being hooked. but if we delete these other classes then it gives and error and doesnt work.
 -- so we have them here as well. whatever
 
 
 
+
+
 --------------------------------------------------------------
 --  AIR UNITS
---------------------------------------------------------------
+---------------------------------------------------------------
 AirUnit = Class(MobileUnit) {
 
     -- Contrails
@@ -151,7 +158,8 @@ AirUnit = Class(MobileUnit) {
     end,
 }
 
---- Mixin transports (air, sea, space, whatever). Sellotape onto concrete transport base classes as desired.
+--- Mixin transports (air, sea, space, whatever). Sellotape onto concrete transport base classes as
+-- desired.
 
 local slotsData = {}
 BaseTransport = Class() {
