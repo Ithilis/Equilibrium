@@ -57,7 +57,7 @@ function TransferUnitsOwnership(units, ToArmyIndex)
         end
 
         -- changing owner
-        unit:RefreshIntel()
+        --unit:RefreshIntel() -- this caused an error since this function doesnt exist (or sth) so commented it out.
         unit = ChangeUnitArmy(unit,ToArmyIndex)
         if not unit then
             continue
