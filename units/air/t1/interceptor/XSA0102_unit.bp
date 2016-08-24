@@ -17,6 +17,11 @@ BlueprintId = "xsa0102",
     },
     Weapon = {
         {
+            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
+                Air = 'Air',
+                Land = 'Air',
+                Water = 'Air',
+            },
         },
         {
             Damage = 50,        --crash dmg
