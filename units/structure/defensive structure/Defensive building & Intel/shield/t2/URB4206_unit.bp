@@ -34,10 +34,10 @@ BlueprintId = "urb4206",
         },
     },
     Economy = {
-        BuildCostEnergy = 43000,
-        BuildCostMass = 2400,
-        BuildRate = 25,
-        BuildTime = 2500,
+        BuildCostEnergy = 43000, --30000 on its own
+        BuildCostMass = 2400, --1400 on its own
+        BuildRate = 12.5,
+        BuildTime = 2900, --1400 on its own
         MaintenanceConsumptionPerSecondEnergy = 350,
         DifferentialUpgradeCostCalculation = true, 
     },
