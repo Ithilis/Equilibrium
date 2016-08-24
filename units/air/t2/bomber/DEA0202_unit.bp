@@ -23,10 +23,20 @@ BlueprintId = "dea0202",
     Weapon = {
         {
             Damage = 150,              -- from 2x75
+            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
+                Air = 'Air',
+                Land = 'Air',
+                Water = 'Air',
+            },
             RateOfFire = 0.5,          -- from 1
         },
         {
             Damage = 150,
+            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
+                Air = 'Air',
+                Land = 'Air',
+                Water = 'Air',
+            },
             RateOfFire = 0.5,
         },
         {
