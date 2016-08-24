@@ -22,6 +22,11 @@ BlueprintId = "xsa0303",
     Weapon = {
         {
             Damage = 455,             --303 dps
+            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
+                Air = 'Air',
+                Land = 'Air',
+                Water = 'Air',
+            },
             RateOfFire = 0.666,        --from 1s to 1.5s
             TargetPriorities = {
                 'SPECIALHIGHPRI',
