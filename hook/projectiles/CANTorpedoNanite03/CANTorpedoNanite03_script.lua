@@ -17,7 +17,7 @@ CANTorpedoNanite03 = Class(CTorpedoShipProjectile) {
     TrailDelay = 0,
     OnCreate = function(self, inWater)
         CTorpedoShipProjectile.OnCreate(self, inWater)
-        self:SetCollisionShape('Sphere', 0, 0, 0, 1) --ensuring it gets set here properly
+        self:SetCollisionShape('Sphere', 0, 0, 0, 0) --ensuring it gets set here properly
         self:ForkThread( self.MovementThread )
     end,   
     
