@@ -18,6 +18,7 @@ local FlareLower = import('/lua/defaultantiprojectile.lua').FlareLower
 local OldProjectile = Projectile
 Projectile = Class(OldProjectile) {
 
+
     AddFlare = function(self, tbl)
         if not tbl then return end
         if not tbl.Radius then return end
@@ -25,19 +26,21 @@ Projectile = Class(OldProjectile) {
             Owner = self,
             Radius = tbl.Radius or 5,
         }
-        if tbl.Stack == true then
-            self.MyUpperFlare = FlareUpper {
+        if tbl.Stack == true then -- Secondary flare hitboxes, one above, one below (Aeon TMD)
+            self.MyUpperFlare = Flare {
                 Owner = self,
-                Radius = tbl.Radius or 5,
+                Radius = tbl.Radius,
+                OffsetMult = tbl.OffsetMult,
             }
-            self.MyLowerFlare = FlareLower {
+            self.MyLowerFlare = Flare {
                 Owner = self,
-                Radius = tbl.Radius or 5,
+                Radius = tbl.Radius,
+                OffsetMult = -tbl.OffsetMult,
             }
             self.Trash:Add(self.MyUpperFlare)
             self.Trash:Add(self.MyLowerFlare)
         end
-        
+
         self.Trash:Add(self.MyFlare)
     end,
 }

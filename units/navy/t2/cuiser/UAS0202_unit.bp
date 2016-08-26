@@ -32,6 +32,8 @@ BlueprintId="uas0202",
                 Category = 'MISSILE',
                 Radius = 15,
                 Stack = true, --added special flag to trigger multi-sphere collision
+                OffsetMult = 1.33,
+                IgnoreCategory = 'STRATEGIC',
             },
             MuzzleVelocity = 15,
             ProjectileLifetime = 3,
