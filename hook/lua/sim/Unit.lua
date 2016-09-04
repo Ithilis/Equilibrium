@@ -4,7 +4,77 @@ local typeTable = import('/lua/sim/BuffDefinitions.lua').TypeTable
 local oldUnit = Unit
 Unit = Class(oldUnit) {
 
+    ----------------------------------------------------------------------------------------------
+    -- CONSTRUCTING - BUILDING - REPAIR
+    ----------------------------------------------------------------------------------------------
 
+    --global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
+    OnStopSacrifice = function(self, target_unit) --we will refund the unused mass by placing it in a wreck
+        local bp = self:GetBlueprint().Economy
+        local donatemass = bp.BuildCostMass*bp.SacrificeMassMult
+        local donateenergy = bp.BuildCostEnergy*bp.SacrificeEnergyMult
+        
+        --uncomment the warnings to help understand the maths behind the sacrifice system and how we compute the wreck value
+        
+        --WARN(donatemass .. ' mass should be donated')
+        --WARN(donateenergy .. ' energy should be donated')
+        
+        local tgbp = target_unit:GetBlueprint().Economy
+        
+        local OwnMER = donatemass/donateenergy
+        local TargetMER = tgbp.BuildCostMass/tgbp.BuildCostEnergy
+        
+        --WARN(OwnMER .. ' own mass/energy ratio')
+        --WARN(TargetMER .. ' target mass/energy ratio')
+        
+        local MDM = TargetMER/OwnMER
+        
+        --WARN(MDM .. ' mass donation multiplier; ' .. math.min(donatemass*MDM, donatemass) .. ' mass actually donated')
+        --WARN(donatemass - donatemass*MDM .. 'mass should be refunded')
+        
+        local refundamount = math.max((donatemass - donatemass*MDM), 0) --in case the MDM is above 1, we should not make mass out of thin air.
+        
+        if refundamount >= 1 then 
+        self:CreateSacrificeWreckageProp(refundamount)
+        end
+        
+        EffectUtilities.PlaySacrificeEffects(self,target_unit)
+        self:SetDeathWeaponEnabled(false)
+        self:Destroy() -- commenting this doesn't even stop it from disappearing, must be engine things
+    end,
+    
+    
+    CreateSacrificeWreckageProp = function( self, refundamount )
+        local bp = self:GetBlueprint()
+
+        local wreck = bp.Wreckage.Blueprint
+
+        if not wreck then
+            return nil
+        end
+
+        local mass = refundamount
+        local energy = 0
+        local time = (bp.Wreckage.ReclaimTimeMultiplier or 1)
+        local pos = self:GetPosition()
+        local layer = self:GetCurrentLayer()
+        
+        local prop = Wreckage.CreateWreckage(bp, pos, self:GetOrientation(), mass, energy, time)
+        
+        -- if (layer == 'Water') or (layer == "Sub") then
+            -- WARN('trying to sink')
+        -- end
+        --FIXME: make the wreck sink, or do something about it appearing on the sea surface and then not doinganything
+
+        -- Attempt to copy our animation pose to the prop. Only works if
+        -- the mesh and skeletons are the same, but will not produce an error if not.
+        if (layer ~= 'Air' and self.PlayDeathAnimation) then
+            TryCopyPose(self, prop, true)
+        end
+        
+        return prop
+    end,
+    
 ---------------
 ----VETERANCY------
 ---------------
@@ -266,7 +336,7 @@ Unit = Class(oldUnit) {
 --Mass storages lose portion of mass when die  
 -- code is from there  https://github.com/FAForever/fa/pull/581/files
 -----
-    
+
     HandleStorage = function(self, to_army)
         if EntityCategoryContains(categories.MOBILE, self) then
             return -- Exclude ACU / SCU / sparky
