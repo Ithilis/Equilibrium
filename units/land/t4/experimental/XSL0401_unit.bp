@@ -65,11 +65,31 @@ BlueprintId = "xsl0401",
                 'ALLUNITS',
             },
         },
-        {
-            -- AA
+        {    -- AA
+            Damage = 25,
+            DamageRadius = 3.5,
+            FiringRandomness = 1.5,
+            FiringTolerance = 2,
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 60,
+            PrefersPrimaryWeaponTarget = false,
+            RackSalvoSize = 1,
+            RateOfFire = 3,
+            UseFiringSolutionInsteadOfAimBone = true,
         },
-        {
-            -- AA
+        {   -- AA
+            Damage = 25,
+            DamageRadius = 3.5,
+            FiringRandomness = 1.5,
+            FiringTolerance = 2,
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+            MuzzleVelocity = 60,
+            PrefersPrimaryWeaponTarget = false,
+            RackSalvoSize = 1,
+            RateOfFire = 3,
+            UseFiringSolutionInsteadOfAimBone = true,
         },
         {
             --death explosion
