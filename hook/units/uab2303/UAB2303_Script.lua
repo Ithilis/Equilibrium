@@ -1,36 +1,37 @@
 #****************************************************************************
 #**
-#**  File     :  /cdimage/units/UAB2304/UAB2304_script.lua
-#**  Author(s):  John Comes, David Tomandl
+#**  File     :  /cdimage/units/UAB2303/UAB2303_script.lua
+#**  Author(s):  John Comes, David Tomandl, Jessica St. Croix
 #**
-#**  Summary  :  Aeon Advanced Anti-Air System Script
+#**  Summary  :  Aeon Light Artillery Installation Script
 #**
 #**  Copyright © 2005 Gas Powered Games, Inc.  All rights reserved.
 #****************************************************************************
 
 local AStructureUnit = import('/lua/aeonunits.lua').AStructureUnit
-local AAAZealotMissileWeapon = import('/lua/aeonweapons.lua').AAAZealotMissileWeapon
+local AIFArtilleryMiasmaShellWeapon = import('/lua/aeonweapons.lua').AIFArtilleryMiasmaShellWeapon
 
-UAB2304 = Class(AStructureUnit) {
+UAB2303 = Class(AStructureUnit) {
+
     Weapons = {
-        AntiAirMissiles = Class(AAAZealotMissileWeapon) {
+        MainGun = Class(AIFArtilleryMiasmaShellWeapon) {
              -- here we are reseting some code all the way in weapon.lua 
              -- the reset pose time for the turret so that it returns to its original position after X and not 999999 seconds
              -- we need both SetupTurret and OnStopTracking to do this reliably.
             SetupTurret = function(self)
-                AAAZealotMissileWeapon.SetupTurret(self)
-                self.AimControl:SetResetPoseTime(1) --we simply run this at the end of the function to override it
+                AIFArtilleryMiasmaShellWeapon.SetupTurret(self)
+                self.AimControl:SetResetPoseTime(2) --we simply run this at the end of the function to override it
             end,
             
             OnStopTracking = function(self, label)
                 self:PlayWeaponSound('BarrelStop')
                 self:StopWeaponAmbientSound('BarrelLoop')
                 if EntityCategoryContains(categories.STRUCTURE, self.unit) then
-                    self.AimControl:SetResetPoseTime(1)
+                    self.AimControl:SetResetPoseTime(2)
                 end
             end,
         },
     },
 }
 
-TypeClass = UAB2304
+TypeClass = UAB2303

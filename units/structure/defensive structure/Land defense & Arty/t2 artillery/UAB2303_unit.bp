@@ -1,4 +1,4 @@
---T2 Atrillery installation
+--T2 Artillery installation
 
 UnitBlueprint {
 Merge = true,
@@ -7,6 +7,12 @@ BlueprintId = "uab2303",
     Defense = {
         Health = 5000,
         MaxHealth = 5000,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_Pop-up>Pop-up turret',
+        },
+        AnimationPermOpen = 'UAB2304_Animation_NIL.sca', -- essentially deleting the open animation since it now does this on fire.
     },
     Economy = {
         BuildCostEnergy = 30000,
@@ -28,6 +34,10 @@ BlueprintId = "uab2303",
             
             TurretPitchSpeed = 15,    --from 6
             TurretYawSpeed = 15,    --from 6
+            WeaponRepackTimeout = 10,
+            WeaponUnpackAnimation = '/units/UAB2303/UAB2303_Aopen.sca', -- reusing the original animation
+            WeaponUnpackAnimationRate = 1.0,
+            WeaponUnpacks = true,
         },
     },    
 }

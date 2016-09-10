@@ -4,9 +4,23 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uab2301", 
 
+    Display = {
+        Abilities = {
+            '<LOC ability_Pop-up>Pop-up turret',
+        },
+        AnimationPermOpen = 'UAB2204_Animation_NIL.sca', -- essentially deleting the open animation since it now does this on fire.
+    },
     Economy = {
         BuildCostEnergy = 5200,
         BuildCostMass = 520,
         BuildTime = 650,
+    },
+    Weapon = {
+        {
+            WeaponRepackTimeout = 4.5,
+            WeaponUnpackAnimation = '/units/UAB2301/UAB2301_Aopen.sca', -- reusing the original animation
+            WeaponUnpackAnimationRate = 2.0,
+            WeaponUnpacks = true,
+        },
     },
 }

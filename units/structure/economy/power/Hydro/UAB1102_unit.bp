@@ -4,8 +4,20 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uab1102", 
 
+    Display = {
+        Abilities = {
+            '<LOC ability_Pop-up>Pop-up turret',
+        },
+        AnimationPermOpen = '/Units/UAB1102/UAB1102_ANIL.sca',
+        AnimationOpen = '/Units/UAB1102/UAB1102_Aopen.sca',
+    },
     Defense = {
         Health = 1500,      --1600hp
         MaxHealth = 1500,   --1600hp
+    },
+    General = {
+        ToggleCaps = {
+            RULEUTC_ProductionToggle = true, --adding the production toggle
+        },
     },
 }
