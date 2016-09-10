@@ -240,7 +240,7 @@
 			<li>In equilibrium we basically took all the unit stats and cleaned them up, so now its much easier to predict how much eco you need to support X factories.
 			<li>Slave factories are built faster, and are cheaper, so you need fewer engineers in game, and support more aggressive gameplay
 			<li>This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
-			<li>Engymod didnt take things quite far enough so we finished the job for them, and this change nerf engineers slightly as a result.
+			<li>Engymod didnt take things quite far enough so we finished the job for them, and this change nerfs engineers slightly as a result.
 			<li>Make experimentals slower to build, (and remove situations when a megalith is built in the same time as 3 bricks) Air is built faster than land because it's more expensive and needs to be built faster so they are still useable and convenient to build, without needing huge hordes of engies. 
 			<li>Factory HP values were changed so its easier to snipe them, encouraging better placement and shielding. Also its easy to remember: Each HQ has double the HP of its predecessor, and support factories have 50% of their HQ. (Naval factories get 75%)
 			</ol>
@@ -285,6 +285,7 @@
 			</ul>
 			4.Sacrifice system:
 			<ul>
+			<li>Engineers and sACUS now leave wasted mass due to differing cost ratios as a wreck instead of it disappearing into thin air.
 			<li>T1/T2 Aeon engineers: <strike>60</strike> → 80% mass value <strike>60</strike> → 320% energy value
 			<li>T3 engineers: 80% mass value 160% energy value
 			<li>sACUs: <strike>90</strike> → 80% mass value and <strike>90</strike> → 80% energy value 
@@ -294,7 +295,7 @@
 			<li>Making buildpower easier to estimate. And removing the imbalance where Aeon/Seraphim T3 engineers get more build power for the same mass cost. (it was supposed to “compensate” for lack of hives)
 			<li>Cybran engineering stations are 10% less efficient than engineers = fewer engineers in game, and more use of hives. Kennels are 30% less efficient than engineers, but can fly. Br on buildings was adjusted to drain more predictable numbers. Drone is cheaper because 250m is too much, given how easy it is to destroy drones.
 			<li>sACU build rates decreased to help separate combat presets from eco and field engineer ones, so you can have more choice with the different sACUs. Also helps prevent them reclaiming their own wrecks instantly after/during combat.
-			<li>To make the sacrifice system useful: since engineers cost 5x more energy than mass, and most buildings cost 15x more energy than mass, which means that engineers waste more mass than usual since the mass/e ratio is different. For T3 engineers it’s a smaller increase, because they cost 10x more energy than mass, for sACUs it’s the same, because they cost 30x more energy than mass. 
+			<li>To make the sacrifice system useful: since engineers cost 5x more energy than mass, and most buildings cost 15x more energy than mass, which means that engineers waste more mass than usual since the mass/e ratio is different. Now that is no longer the case. For T3 engineers it’s a smaller increase, because they cost 10x more energy than mass, for sACUs it’s the same, because they cost 30x more energy than mass. 
 			</ol>
 		
 		</div>
@@ -346,7 +347,7 @@
 			<h4>Purpose:</h4>
 			<ol>
 			<li>Make energy storages more important, and to separate the good players from the excellent ones.
-			<li>Make turtling and ecoing more risky, reward aggressive gameplay, bring a fairer choice between using factory or storage adjacency, nerf the T3 mex so when it’s next to 4 storages it dies to one TML and leaves 100% of its wreck value. Adjacency bonus decreased so you don't have to put storages next to mexes, but still can.  HP and price decreased to make the storage better for storage purposes, not just eco.
+			<li>Make turtling and ecoing more risky, reward aggressive gameplay, bring a fairer choice between using factory or storage adjacency, nerf the T3 mex so when it’s next to 4 storages it dies to one TML and leaves 100% of its wreck value. Adjacency bonus decreased so you don't have to put storages next to mexes, but still can. HP and price decreased to make the storage better for storage purposes, not just eco.
 			<li>Mex Changes:
 			<ul>
 			<li>T2 mexes cost less mass to get players faster onto T2 eco, where the game becomes more interesting.
@@ -355,7 +356,7 @@
 			<li>To make mass fabricators a more viable option: Their efficiency is the same, but they live longer, and need less power to support them. With storages they have similar efficiency to T3 mexes without storages.
 			<li>Fixed the way that you don't need energy storage for economic reasons. The adjacency bonus means that for 3200m in you get 2500e with a T3 pgen, or 2500e and 60 000e storage with 16 storages around a T3 Pgen. Or 600m in storage between 2x T2 Pgen is also +250e bonus.
 			<li>To have more consistent numbers, less HP so it gets destroyed with 16 T2 fabs next to it, less explosion damage to prevent chain reactions with multiple T3 Pgens
-			<li>Make power generators more important (power snipes), and simply make it less OP. This also helps stop strat rushes and having no choice over whether to get this upgrade when ecoing.
+			<li>Make power generators more important (power snipes), and simply make it less OP. This also helps delay strat rushes and having no choice over whether to get this upgrade when ecoing.
 			</ol>
 			
 		</div>
@@ -959,14 +960,15 @@
 			
             Ythotha: <strike>25 000m 18 750bt 67 000HP</strike> → 28 000m 46666bt 60 000HP
 			<ul>
-			<li>The bubble cannon: muzzle velocity <strike>8</strike> → 10
-			<li>3rd gun: <strike>1200dmg 6aoe</strike> → 1200dmg 3aoe
-			<li>Ion storm: friendly fire disabled! <strike>friendly fire 1000dps 20r 0,1aoe, 30s life time</strike> → 400dps 28r 0.5aoe, 45s life time
+			<li>The face-cannon: muzzle velocity <strike>8</strike> → 10
+			<li>Large secondary cannon: <strike>1200dmg 6aoe</strike> → 1200dmg 3aoe
+			<li>Ion storm: friendly fire disabled! <strike>friendly fire 1000dps 20r 0.1aoe, 30s life time</strike> → 400dps 28r 0.5aoe, 45s life time
+			<li>AA Weapons: <strike>1.5aoe, 20muzzle-velocity</strike> → 3.5aoe, 20muzzle-velocity
             </ul>
 			
             Galactic Colossus: <strike>27 500m 20 625bt 99 999HP</strike> → 28000m 46 660bt 85 000HP
 			<ul>
-			<li>Magnet claws now work better and more consistently, they can fire once every 10 seconds, or an equivalent of 600dps per claw when facing bricks/percies (6000HP units).
+			<li>Magnet claws now work better and more consistently, they can fire once every 10 seconds, or an equivalent of 600dps per claw when facing bricks/percies (6000HP units). (before they had completely random dps which could be abused to up to 6000dps equivalent and no wrecks)
 			</ul>
 			
             Fatboy: <strike>21 000bt 32500HP -500e/s 180br</strike> → 46 660bt 35 000HP -250e/s 200br
@@ -981,6 +983,7 @@
 			Scathis: <strike>85 000m 1 500 000e, 31 500bt</strike> → 30 000m, 375 000e, 50 000bt 
 			<ul>
 			<li>  <strike>17500HP 1,5sp 1578dps 7aoe 330r 1,9s reload time</strike> → 25 000HP 3sp 500dps 5aoe 200r 2s reload time EMP 10aoe
+			<li>  Can now deploy and fire from underwater.
             </ul>
             
 			Megalith: <strike>18 750bt 110 000HP 180br 0,5HP/s regen underwater vision 32</strike> → 63 330bt 95 000HP 40br 15HP/s regen underwater vision 45
@@ -993,8 +996,8 @@
 			<h4>Purpose:</h4>
 			<ol>
 			<li>T3 units are weaker in this mod (-25%dps -35%HP), so experimentals are changed to maintain balance.
-			<li>Price increased because Ion storm is now extremely useful for supporting your army.
-			<li>DPS moved  from long range to short, because T3 units have less HP, and dps, short range is less annoying and gives more time for opponents to deal with the fatboy.
+			<li>The Ythotha got more consistent AA weapons, a slightly harder to dodge face-cannon, and price increase due to its much stronger Ion storm which no longer damages allied units.
+			<li>The Fatboy had its DPS moved  from long range to short, because T3 units have less HP, and DPS, the short range is less annoying and gives more time for opponents to deal with the fatboy.
 			<li>Scathis was a very cheap game ender on small maps, and useless on larger ones. 
 				<ul>
 				<li>Reworked as a mobile artillery piece, with more versatility but far less destructive power.
@@ -1002,7 +1005,7 @@
                 <li>It can now mover faster, but is slow to accelearate, like a train.
                 <li>It is now able to support navies by firing from underwater - this is only usefull on mostly water maps since on land you can have it shielded, and it is vulnerable to torpedo bombers.
 				</ul>
-            <li>Megalith adjust flak for same number as have t2 mobile flak.     
+            <li>Megalith flak weapon adjusted to be the same as its mobile flak counterpart.   
 			</ol>
 		
 		</div>
@@ -1091,13 +1094,13 @@
 			
 			<li>Aeon:
             <ul>
-			<li>Sacrifice removed: because it was a useless upgrade, and it’s much better to have nano in it’s place so you have a military upgrade on each slot. Now sacrifice is part of the rapid fabricator.
+			<li>Sacrifice removed: it was a useless upgrade, and it’s much better to have nano in it’s place so you have a military upgrade on each slot. Now sacrifice is part of the rapid fabricator upgrade.
 			</ul>
 			
 			<li>UEF:
             <ul>
 			<li>Jamming is cheaper, because it’s not used often and it buffs pure support sACUs. 
-			<li>Gun: nerfed because it was OP.
+			<li>Gun: nerfed because it was OP. (SACUs are intended as support units, not the most effective combat choice)
 			<li>Bubble shields are cheaper and  have better regeneration to increase the use of pure support sACUs.
 			</ul>
 			
@@ -1105,7 +1108,7 @@
             <ul>
 			<li>Lots of HP and lack of dps: to increase faction diversity, and for AA/EMP that will be stronger without any extra upgrades.
 			<li>Stealth: changed to a stealth field, to encourage use as a support sACU.
-			<li>EMP: Stun changed to be less op against T3 units.
+			<li>EMP: Stun changed to be less OP against T3 units.
 			<li>Nano: regeneration decreased because T3 units have less dps.
 			<li>Cloak: buffed so it's used more often.
 			</ul>
@@ -1237,9 +1240,7 @@
             <li>Buffed bombers, to make them easier to use, since they make the game more interesting and to keep them in line since MAA is buffed in this mod. There is now much less reason to hoverbomb since they bombers have a much improved turning circle.
                 <ul>
                 <li>Removed friendly fire to avoid situations where multiple bombers kill themselves with their own bombs.
-                </ul>
-                <ul>
-                <li>Aeon: Increasing faction diversity, the Aeon bomber is better for single targets, and higher tech units; the emp can also support your army, but it’s less useful for armies, unlike Sera with its large aoe.
+                <li>Aeon: Increasing faction diversity, the Aeon bomber is better for single targets, and higher tech units; the emp can also support your army, but it’s less useful for armies on its own, unlike Sera with its large aoe.
                 </ul>
             <li>First jester is not an issue, so it can be of a similar mass efficiency to T2 gunships, also the buff helps maintain its effectiveness since T1/2 MAA has been buffed here.
             <li>Transports are underused and make the gameplay more dynamic and interesting, so I tried to encourage transport usage. Speed increased since interceptors have more speed, and they can drop into more dangerous territory now.
@@ -1323,19 +1324,19 @@
             <ol>
 			<li>Increased the faction diversity with gunships:
                 <ul>
-                <li>Spectres are faster because Aeon doesn't have a T2 bomber,
+                <li>Spectres are faster because Aeon doesn't have a T2 bomber
                 <li>Renegades have  more range because they can't move while firing effectively
                 <li>Vulthoos are stronger because Seraphim doesn't have T3 gunships 
                 </ul>
 			<li>Torpedo Bombers are slightly better with a bit more speed and turn rate. They were given depth charges to make the more consistent, also cleaning up buggy code in the process.
 			<li>T2 air needed to be better against T3 air, so T2fighter/bombers cost less, have less ground damage and health, but AA dps is unchanged. Also the Notha firing tolerance changed so it doesn't miss as much. 
                 <ul>
-                <li>Target priorities to make using them less frustrating
+                <li>Target priorities changed to make using them less frustrating
                 <li>Corsair AA was buffed to be more similar to other T2 bombers (still much worse)
                 <li>Swift winds receive more HP to maintain their advantage as the best T2 AA fighter.
                 </ul>
 			<li>Mercies have been reworked to be better against sniping buildings, and worse for ACU snipes - an ACU moving away will receive only ~30% of the full damage. Crash damage was increased so that the mercy is only 99% useless if it gets shot down and because it makes more sense for a flying bomb to deal some damage on falling.
-			<li>Transports got some regeneration to make them reusable without needing to pay attention to repair them, more speed because interceptors are also faster.
+			<li>Transports got some regeneration to make them reusable without needing to pay attention to repair them (they can't go into air staging facilities), more speed because interceptors are also faster.
             </ol>
         
         </div>
@@ -1436,7 +1437,7 @@
             <li>Continental: Less energy consumption and less AA dps  - better than making it stupidly expensive. Its shield bubble is also slightly bigger so it can be combined with T3 gunships and cover them.
             <li>Strats were a bit of a cheese unit so they have less speed and HP so they can be countered with T1/2 air, they got some damage tweaks to make them more consistent, more reload time so they doesn’t destroy mexes too well while hover bombing.
                 <ul>
-                <li>Cybran strat was nerfed with less survivability and more energy maintenance while stealth is huge advantage and now destroy T2 mex by single pass as others.
+                <li>Cybran strat was nerfed with less survivability and more energy maintenance while stealth is huge advantage and now destroys T2 mex on a single pass like the others.
                 </ul>
             </ol>
         
@@ -1547,7 +1548,7 @@
                     <li>Torpedo reload time <strike>4s</strike> →  2s
                     </ul>
                 <li>Deck cannon range: <strike>32r</strike> → 24r
-                <li>Aeon T1 submarine speed: <strike>6</strike> → 7
+                <li>Aeon T1 submarine: <strike>6speed, 550HP</strike> → 7speed, 575HP
                 <li>Cybran T1 submarine: <strike>525HP</strike> → 550HP
                 <li>Sera T1 submarine torpedo defense: <strike>32r 10s reload-time</strike> → 35r 2s reload-time
                 </ul>
@@ -1854,10 +1855,7 @@
             Tactical missile defense: <strike>280m 3200e 600bt</strike> → 340m 3400e 425bt
                 <ul>
                 <li>UEF/Cybran/Sera: <strike>31r</strike> → 32r
-                <li>Aeon: building/cruiser/batleship <strike>turret yaw 0; display range 10; </strike> → turret yaw 0; turreted; display range 15
-                    <ul>
-                    <li>Projectile  <strike>lifetime 3; acceleration 1; UseGravity=false</strike> → lifetime 4; acceleration -1.25; UseGravity=true
-                    </ul>
+                <li>Aeon: building/cruiser/battleship: Now deflects missiles in areas above and below the projectile so you can't shoot over them.
                 </ul>
             <p>
             
@@ -1931,6 +1929,7 @@
                 <li>Aeon:<strike>480m 5760e 701bt 12,66br 150e/s 138reg</strike> → 500m 7500e 625bt 25br 130regen
                 <li>UEF:<strike>600m 6000e 845bt 19,95br 200e/s 120reg</strike> → 600m 9000e 750bt 25br 120regen
                 <li>Sera:<strike>700m 7000e 958bt 12,98br 250e/s 153reg</strike> → 700m 10500e 875bt 25br 150regen
+                <li>All shields now absorb crash damage from falling aircraft, up to 20% of their maximum HP
                 </ul>
             Cybran: 
                 <ul>
@@ -1941,7 +1940,7 @@
 
             T3 shields:
                 <ul>
-                <li>ED4: <strike>1200m(2460) 24000e 1467bt 11,81br 500HP 130reg 34aoe</strike> → 1400m(2400) 2800e(43000) 1750bt 25br 800HP 120reg 350e/s 35aoe 
+                <li>ED4: <strike>1200m(2460) 24000e 1467bt 11,81br 500HP 130reg 34aoe</strike> → 1400m(2400) 28000e(43000) 1750bt 25br 800HP 120reg 350e/s 35aoe 
                 <ul>
                 <li>Buildable as a T3 shield.
                 </ul>
@@ -2000,8 +1999,8 @@
             <h4>Purpose:</h4>
             
             <ol>
-            <li>Walls: We all know how good they are. Now they have half of their previous HP and are slower to reclaim.
-            <li>Shields remain mostly the same, with just a couple of small changes here and there to keep with the new unit balance. A notable change is that the Cybran shield ED4 can now be built at T3, then upgraded once to the ED5 if needed.
+            <li>Walls: We all know how good they are. Now they have half of their previous HP and are slower to reclaim. (To clear walls you can now use a single pass from a strat, or 2 T2 fighter bombers)
+            <li>Shields remain mostly the same, however they now absorb air crash damage, and deflect the smaller wrecks entirely. Another notable change is that the Cybran shield ED4 can now be built at T3, then upgraded once to the ED5 if needed.
             <li>Stealth: Seraphim personal cloak was added so that this building is fully invisible, except for a visual effect. This makes it easier to use offensively since the generator itself is harder to find. To prevent it from being used as a stealth intel system, its visual radius was reduced. It add more faction diversity to game.
             <li>T1/2 Radar: resource adjusted to fit equilibrium's building pattern where units of the same type and tech drain same resources while being built.
             <li>T3 Radar: On the most popular maps its enough to place one somewhere in your back base and its enough to see the whole map. We just made it require a little more strategic placement and use of (gasp) multiple radars on larger maps.
