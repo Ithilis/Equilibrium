@@ -21,8 +21,8 @@ UAB1102 = Class(AEnergyCreationUnit) {
         
         self.AnimManip = CreateAnimator(self) --create the animator
         self.Trash:Add(self.AnimManip)
-        
         self.Animation = self:GetBlueprint().Display.AnimationOpen
+        
         self.HydroEffectsBag = {}
         
         --choosing effects appropriate to our layer
@@ -44,13 +44,14 @@ UAB1102 = Class(AEnergyCreationUnit) {
     
     OpenState = State {
         Main = function(self)
-            self:CreateEffects()
             --opening the hydro
             if not self.Open then
                 self.Open = true
                 self.AnimManip:PlayAnim(self.Animation):SetRate(1)
                 WaitFor(self.AnimManip)
             end
+            
+            self:CreateEffects()
         end,
 
         OnProductionPaused = function(self)
@@ -76,9 +77,8 @@ UAB1102 = Class(AEnergyCreationUnit) {
         end,
     },
     
-    
     CreateEffects = function(self)
-    --we move this from OnStopBeingBuilt so we can turn these on/off many times, for glorious viewing experiences
+        --we move this from OnStopBeingBuilt so we can turn these on/off many times, for glorious viewing experiences
         if self.HydroEffectsBag then
             for k, v in self.HydroEffectsBag do
                 v:Destroy()
