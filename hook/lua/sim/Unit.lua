@@ -421,9 +421,24 @@ Unit = Class(oldUnit) {
         end
     end,
     
-}
 
 
 
 
+-----
+-- Water Guard: Underwater units take less damage from above water splash damage 
+-- By Balthazar
+-----
     
+    OnDamage = function(self, instigator, amount, vector, damageType, ...)
+        if damageType == 'NormalAboveWater' and (self:GetCurrentLayer() == 'Sub' or self:GetCurrentLayer() == 'Seabed') then
+            local bp = self:GetBlueprint()
+            local myheight = bp.Physics.MeshExtentsY or bp.SizeY or 0
+            local damagetotal = amount / math.max(math.abs(vector[2]) - myheight, 1)
+            oldUnit.OnDamage(self, instigator, damagetotal, vector, damageType, unpack(arg))
+        else
+            oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
+        end
+    end, 
+
+}
