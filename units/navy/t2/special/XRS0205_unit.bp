@@ -1,4 +1,4 @@
---T2 Merimiad stealth boat
+--T2 Mermaid stealth boat
 
 UnitBlueprint {
 Merge = true,
@@ -16,6 +16,6 @@ BlueprintId="xrs0205",
         MaintenanceConsumptionPerSecondEnergy = 100,
     },
     Intel = {
-        SonarRadius = 60,
+        SonarRadius = 32,   --from 62
     },
 }

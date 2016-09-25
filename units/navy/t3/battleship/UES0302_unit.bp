@@ -14,6 +14,9 @@ BlueprintId="ues0302",
         BuildTime = 36000,
     },
     Intel = {
+        RadarRadius = 50,   --from 50
+        SonarRadius = 50,   --from 20
+        VisionRadius = 50,  --from 50
         WaterVisionRadius = 25,
     },
     Weapon = {

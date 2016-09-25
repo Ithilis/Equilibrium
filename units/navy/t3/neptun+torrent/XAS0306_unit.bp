@@ -62,6 +62,9 @@ BlueprintId="xas0306",
         },
     },
     Intel = {
+        RadarRadius = 50,  --from 110
+        SonarRadius = 50,   --from 20
+        VisionRadius = 50,  --from 70
         WaterVisionRadius = 25,        --from 50
     },
     Physics = {

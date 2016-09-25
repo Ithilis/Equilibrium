@@ -19,7 +19,7 @@ BlueprintId="ues0401",
     },
     Intel = {
         RadarRadius = 250,
-        SonarRadius = 250,            --from 252
+        SonarRadius = 252,            --from 252
         VisionRadius = 100,
         WaterVisionRadius = 55,        --from 100
     },

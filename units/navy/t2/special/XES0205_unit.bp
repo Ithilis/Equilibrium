@@ -16,8 +16,5 @@ BlueprintId="xes0205",
         BuildCostMass = 1350,        --from 1300
         BuildTime = 5400,            --from 5200
     },
-    Intel = {
-        SonarRadius = 60,
-    },
 }
 
