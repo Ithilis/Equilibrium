@@ -31,8 +31,13 @@ BlueprintId = "uel0301",
             BuildCostMass = 1200,
             BuildTime = 3000,
 
-            NewDamageRadius = 2,    --from 2,5
+            NewDamageRadius = 2,    --from 2,5, check HighExplosiveOrdnanceRemove when you change this
             NewMaxRadius = 33,        --from 35
+        },
+        HighExplosiveOrdnanceRemove = { --this had incorrect vlaues in it making bugs.
+
+            NewDamageRadius = -2, --make sure this is the same but negative of the UPGRADE ABOVE - HighExplosiveOrdnance
+            NewMaxRadius = 23, --make sure this is the same as the WEAPON blueprint
         },
         Pod = {
             BuildCostEnergy = 20000,
@@ -53,6 +58,7 @@ BlueprintId = "uel0301",
             BuildCostEnergy = 210000,
             BuildCostMass = 4200,
             BuildTime = 10500,
+            NewDeathDamage = 5000,
 
             ProductionPerSecondEnergy = 1000,
             ProductionPerSecondMass = 10,
@@ -163,6 +169,11 @@ BlueprintId = "uel0301",
     Weapon = {
         {
             Damage = 200,                        --from 300
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
+                Water = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
+            },
             MaxRadius = 23,        --from 25
             RateOfFire = 1,
         },

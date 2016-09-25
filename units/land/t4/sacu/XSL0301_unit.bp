@@ -164,18 +164,25 @@ BlueprintId = "xsl0301",
         {
             Damage = 250,            --from 400
             DamageRadius = 0,        --from 0
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
+                Water = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
+            },
             MaxRadius = 23,            --from 25
-
             RateOfFire = 1,
         },
         {
             Damage = 6000,                --from 12000
             DamageRadius = 3.5,
             DamageType = 'Overcharge',
-
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
+                Water = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
+            },
             EnergyDrainPerSecond = 5000,
             EnergyRequired = 5000,
-
             ManualFire = true,
             MaxRadius = 28,                --from25
             MuzzleVelocity = 25,        --from22 -> as projectile
@@ -185,10 +192,13 @@ BlueprintId = "xsl0301",
         --auto overcharge
             Damage = 6000,                --from 12000
             DamageRadius = 3.5,
-
             EnergyDrainPerSecond = 5000,
             EnergyRequired = 5000,
-
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
+                Water = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
+            },
             MaxRadius = 28,                --from25
             MuzzleVelocity = 25,        --from22 -> as projectile
             RateOfFire = 0.1,            --from 0,2

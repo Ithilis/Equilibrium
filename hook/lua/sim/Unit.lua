@@ -4,9 +4,9 @@ local typeTable = import('/lua/sim/BuffDefinitions.lua').TypeTable
 local oldUnit = Unit
 Unit = Class(oldUnit) {
 
-    ----------------------------------------------------------------------------------------------
-    -- CONSTRUCTING - BUILDING - REPAIR
-    ----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-- CONSTRUCTING - BUILDING - REPAIR
+----------------------------------------------------------------------------------------------
 
     --global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
     OnStopSacrifice = function(self, target_unit) --we will refund the unused mass by placing it in a wreck
@@ -255,9 +255,38 @@ Unit = Class(oldUnit) {
         self:ForkThread(self.CloakEffectControlThread) -- blackops
     end,
 
-    -----------------------------------------------------------
-    -- Cloak visual effects, made by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod
-    -----------------------------------------------------------
+-------------------------------------------------------------------------------------------
+-- DAMAGE
+-------------------------------------------------------------------------------------------
+    DoDeathWeapon = function(self)
+        if self:IsBeingBuilt() then return end
+        local bp = self:GetBlueprint()
+        for k, v in bp.Weapon do
+            if(v.Label == 'DeathWeapon') then
+            if self.NewDeathDamage then
+                --added a modifier to our deathweapon damage, if it was put into the unit script somewhere
+                -- it needs to be dropped into the unit table since our weapon tables seem to be cleared on death,
+                -- and this code fired based on the blueprint values, so we intercept them here
+                --WARN('exploding with damage: ' .. self.NewDeathDamage)
+                v.Damage = self.NewDeathDamage
+            end
+            
+            
+                if v.FireOnDeath == true then
+                    self:SetWeaponEnabledByLabel('DeathWeapon', true)
+                    self:GetWeaponByLabel('DeathWeapon'):Fire()
+                else
+                    self:ForkThread(self.DeathWeaponDamageThread, v.DamageRadius, v.Damage, v.DamageType, v.DamageFriendly)
+                end
+                break
+            end
+        end
+    end,
+    
+    
+-----------------------------------------------------------
+-- Cloak visual effects, made by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod
+-----------------------------------------------------------
     
     -- Overrode this so that there will be no doubt if the cloak effect is active or not
     -- This is an engine function
@@ -358,9 +387,9 @@ Unit = Class(oldUnit) {
         end
     end,
 
-    -----------------------------------------------------------
-    -- Cloak visual effects, made by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod
-    -----------------------------------------------------------
+-----------------------------------------------------------
+-- Cloak visual effects, made by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod
+-----------------------------------------------------------
     
     -- This thread runs constantly in the background for all units. It ensures that the cloak effect and cloak field are always in the correct state
     CloakEffectControlThread = function(self)

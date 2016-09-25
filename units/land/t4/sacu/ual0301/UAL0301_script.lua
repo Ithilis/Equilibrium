@@ -12,14 +12,14 @@ local CommandUnit = import('/lua/defaultunits.lua').CommandUnit
 
 local AWeapons = import('/lua/aeonweapons.lua')
 local ADFReactonCannon = AWeapons.ADFReactonCannon
-local DeathNukeWeapon = import('/lua/sim/defaultweapons.lua').DeathNukeWeapon
+local SCUDeathWeapon = import('/lua/sim/defaultweapons.lua').SCUDeathWeapon
 local EffectUtil = import('/lua/EffectUtilities.lua')
 local Buff = import('/lua/sim/Buff.lua')
 
 UAL0301 = Class(CommandUnit) {
     Weapons = {
         RightReactonCannon = Class(ADFReactonCannon) {},
-        DeathWeapon = Class(DeathNukeWeapon) {},
+        DeathWeapon = Class(SCUDeathWeapon) {},
     },
 
     __init = function(self)
@@ -80,10 +80,14 @@ UAL0301 = Class(CommandUnit) {
             if not bp then return end
             self:SetProductionPerSecondEnergy(bp.ProductionPerSecondEnergy + bpEcon.ProductionPerSecondEnergy or 0)
             self:SetProductionPerSecondMass(bp.ProductionPerSecondMass + bpEcon.ProductionPerSecondMass or 0)
+            self.NewDeathDamage = bp.NewDeathDamage --insert our new death damage value into our unit table
+            --this will be picked up by DoDeathWeapon in unit.lua and replace the blueprint value.
         elseif enh == 'ResourceAllocationRemove' then
             local bpEcon = self:GetBlueprint().Economy
             self:SetProductionPerSecondEnergy(bpEcon.ProductionPerSecondEnergy or 0)
             self:SetProductionPerSecondMass(bpEcon.ProductionPerSecondMass or 0)
+            self.NewDeathDamage = (bp.NewDeathDamage or 2500)
+            --we dont use self:GetBlueprint().Weapon[2].Damage because thats set to 5000 for some reason
         --Engineering Focus Module
         elseif enh =='EngineeringFocusingModule' then
             if not Buffs['AeonSCUBuildRate'] then
@@ -102,9 +106,9 @@ UAL0301 = Class(CommandUnit) {
                 }
             end
             Buff.ApplyBuff(self, 'AeonSCUBuildRate')
-            self:AddCommandCap('RULEUCC_Sacrifice')            -- add by ithilis
+            self:AddCommandCap('RULEUCC_Sacrifice')            -- added by ithilis
         elseif enh == 'EngineeringFocusingModuleRemove' then
-            self:RemoveCommandCap('RULEUCC_Sacrifice')        -- add by ithilis
+            self:RemoveCommandCap('RULEUCC_Sacrifice')        -- added by ithilis
             if Buff.HasBuff( self, 'AeonSCUBuildRate' ) then
                 Buff.RemoveBuff( self, 'AeonSCUBuildRate' )
             end
@@ -131,7 +135,8 @@ UAL0301 = Class(CommandUnit) {
             if Buff.HasBuff( self, 'AeonSCURegenRate' ) then
                 Buff.RemoveBuff( self, 'AeonSCURegenRate' )
             end
-        --sarci system move on engineering upgrade
+            
+        --sarcifice system moved to engineering upgrade
         
         --StabilitySupressant
         elseif enh =='StabilitySuppressant' then

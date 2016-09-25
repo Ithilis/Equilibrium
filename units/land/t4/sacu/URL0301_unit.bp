@@ -50,6 +50,7 @@ BlueprintId = "url0301",
             BuildCostEnergy = 210000,
             BuildCostMass = 4200,
             BuildTime = 10500,
+            NewDeathDamage = 5000,
             
             ProductionPerSecondEnergy = 1000,
             ProductionPerSecondMass = 10,
@@ -195,6 +196,11 @@ BlueprintId = "url0301",
                 },
             },
             Damage = 175,
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
+                Water = 'Land|Water|Seabed',
+                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
+            },
             MaxRadius = 23,            --from 25
             MuzzleVelocity = 25,    --from 18
             RateOfFire = 1,

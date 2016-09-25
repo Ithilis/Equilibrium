@@ -167,10 +167,14 @@ URL0301 = Class(CCommandUnit) {
             local bpEcon = self:GetBlueprint().Economy
             self:SetProductionPerSecondEnergy(bp.ProductionPerSecondEnergy + bpEcon.ProductionPerSecondEnergy or 0)
             self:SetProductionPerSecondMass(bp.ProductionPerSecondMass + bpEcon.ProductionPerSecondMass or 0)
+            self.NewDeathDamage = bp.NewDeathDamage --insert our new death damage value into our unit table
+            --this will be picked up by DoDeathWeapon in unit.lua and replace the blueprint value.
         elseif enh == 'ResourceAllocationRemove' then
             local bpEcon = self:GetBlueprint().Economy
             self:SetProductionPerSecondEnergy(bpEcon.ProductionPerSecondEnergy or 0)
             self:SetProductionPerSecondMass(bpEcon.ProductionPerSecondMass or 0)
+            self.NewDeathDamage = (bp.NewDeathDamage or 2500)
+            --we dont use self:GetBlueprint().Weapon[2].Damage because thats set to 5000 for some reason
         elseif enh =='Switchback' then
             if not Buffs['CybranSCUBuildRate'] then
                 BuffBlueprint {
