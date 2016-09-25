@@ -16,6 +16,7 @@ BlueprintId="xrs0205",
         MaintenanceConsumptionPerSecondEnergy = 100,
     },
     Intel = {
+        RadarRadius = 32,   --from 60
         SonarRadius = 32,   --from 62
     },
 }

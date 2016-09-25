@@ -45,6 +45,7 @@ BlueprintId="xss0302",
             FiringRandomness = 1,
         },
         {
+            MinRadius = 130,    --from 128, this is for not have additional circle 
         },
     },
 }
