@@ -28,6 +28,18 @@ BlueprintId = "xsb4203",
         BuildTime = 500,
         MaintenanceConsumptionPerSecondEnergy = 150,    --from 125
     },
+    General = {
+        OrderOverrides = {
+            RULEUTC_IntelToggle = { --making it look like its a stealth toggle
+                bitmapId = 'stealth-field',
+                helpText = 'toggle_stealth_field',
+            },
+        },
+        ToggleCaps = {
+            RULEUTC_IntelToggle = true, --this also toggles our cloak so thats why we use it
+            RULEUTC_StealthToggle = false, --disable without needing to not merge the file
+        },
+    },
     Intel = {
         Cloak = true,                    --personal cloak
         RadarStealthFieldRadius = 24,
