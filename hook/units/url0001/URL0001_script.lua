@@ -19,12 +19,35 @@ URL0001 = Class(oldURL0001) {
             end
             self.CloakEnh = false
             self.StealthEnh = true
-            self:EnableUnitIntel('RadarStealth')
-            self:EnableUnitIntel('SonarStealth')
+            self:EnableUnitIntel('Enhancement', 'RadarStealth')
+            self:EnableUnitIntel('Enhancement', 'SonarStealth')
+            if not Buffs['CybranACUStealthBonus'] then
+            local bp = self:GetBlueprint().Enhancements[enh]
+               BuffBlueprint {
+                    Name = 'CybranACUStealthBonus',
+                    DisplayName = 'CybranACUStealthBonus',
+                    BuffType = 'ACUSTEALTHBONUS',
+                    Stacks = 'ALWAYS',
+                    Duration = -1,
+                    Affects = {
+                        Regen = {
+                            Add = bp.NewRegenRate,
+                            Mult = 1.0,
+                        },
+                    },
+                } 
+            end
+            if Buff.HasBuff( self, 'CybranACUStealthBonus' ) then
+                Buff.RemoveBuff( self, 'CybranACUStealthBonus' )
+            end  
+            Buff.ApplyBuff(self, 'CybranACUStealthBonus')
         elseif enh == 'StealthGeneratorRemove' then
             self:RemoveToggleCap('RULEUTC_CloakToggle')
-            self:DisableUnitIntel('RadarStealth')
-            self:DisableUnitIntel('SonarStealth')
+            self:DisableUnitIntel('Enhancement', 'RadarStealth')
+            self:DisableUnitIntel('Enhancement', 'SonarStealth')
+            if Buff.HasBuff( self, 'CybranACUStealthBonus' ) then
+                Buff.RemoveBuff( self, 'CybranACUStealthBonus' )
+            end
             self.StealthEnh = false
             self.CloakEnh = false
             self.StealthFieldEffects = false
@@ -44,7 +67,10 @@ URL0001 = Class(oldURL0001) {
             if not bp then return end
             self.StealthEnh = false
             self.CloakEnh = true 
-            self:EnableUnitIntel('Cloak')
+            self:EnableUnitIntel('Enhancement', 'Cloak')
+            if Buff.HasBuff( self, 'CybranACUStealthBonus' ) then
+                Buff.RemoveBuff( self, 'CybranACUStealthBonus' )
+            end              
             if not Buffs['CybranACUCloakBonus'] then
                BuffBlueprint {
                     Name = 'CybranACUCloakBonus',
@@ -57,19 +83,29 @@ URL0001 = Class(oldURL0001) {
                             Add = bp.NewHealth,
                             Mult = 1.0,
                         },
+                        Regen = {
+                            Add = bp.NewRegenRate,
+                            Mult = 1.0,
+                        },
                     },
                 } 
             end
             if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
-            end  
+            end
             Buff.ApplyBuff(self, 'CybranACUCloakBonus')                        
         elseif enh == 'CloakingGeneratorRemove' then
             self:RemoveToggleCap('RULEUTC_CloakToggle')
-            self:DisableUnitIntel('Cloak')
-            self.CloakEnh = false 
+            self:DisableUnitIntel('Enhancement', 'Cloak')
+            self:DisableUnitIntel('Enhancement', 'RadarStealth')
+            self:DisableUnitIntel('Enhancement', 'SonarStealth')
+            self.CloakEnh = false
+            self.StealthEnh = false
             if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
+            end
+            if Buff.HasBuff( self, 'CybranACUStealthBonus' ) then
+                Buff.RemoveBuff( self, 'CybranACUStealthBonus' )
             end              
         --T2 Engineering
         elseif enh =='AdvancedEngineering' then
@@ -165,39 +201,20 @@ URL0001 = Class(oldURL0001) {
             microwave:ChangeMaxRadius(bp.NewMaxRadius or 44)
             local oc = self:GetWeaponByLabel('OverCharge')
             oc:ChangeMaxRadius(bp.NewMaxRadius or 44)
-            
-            if not Buffs['CybranGunHP'] then
-                BuffBlueprint {
-                    Name = 'CybranGunHP',
-                    DisplayName = 'CybranGunHP',
-                    BuffType = 'CybranGunHP',
-                    Stacks = 'REPLACE',
-                    Duration = -1,
-                    Affects = {
-                        MaxHealth = {
-                            Add = bp.NewHealth,
-                            Mult = 1.0,
-                        },
-                    },
-                }
-            end
-            Buff.ApplyBuff(self, 'CybranGunHP')
-            
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:ChangeMaxRadius(bp.NewMaxRadius or 44)
         elseif enh == 'CoolingUpgradeRemove' then
             local wep = self:GetWeaponByLabel('RightRipper')
             local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
             wep:ChangeRateOfFire(bpDisrupt or 1)
-            bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius            
-            wep:ChangeMaxRadius(bpDisrupt or 22)
+            bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius
+            wep:ChangeMaxRadius(bpDisrupt or 23)
             local microwave = self:GetWeaponByLabel('MLG')
-            microwave:ChangeMaxRadius(bpDisrupt or 22)
+            microwave:ChangeMaxRadius(bpDisrupt or 23)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 22)
-            
-            if Buff.HasBuff( self, 'CybranGunHP' ) then
-                Buff.RemoveBuff( self, 'CybranGunHP' )
-            end
-            
+            oc:ChangeMaxRadius(bpDisrupt or 23)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:ChangeMaxRadius(bpDisrupt or 23)
         elseif enh == 'MicrowaveLaserGenerator' then
             self:SetWeaponEnabledByLabel('MLG', true)
         elseif enh == 'MicrowaveLaserGeneratorRemove' then

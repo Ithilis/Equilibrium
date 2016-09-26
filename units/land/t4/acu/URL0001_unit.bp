@@ -2,7 +2,7 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0001", 
 
-   Defense = {
+    Defense = {
         RegenRate = 15,                    --from 17
     },
     Display = {
@@ -11,8 +11,8 @@ BlueprintId = "url0001",
         },
     },
     Economy = {
-        BuildCostEnergy = 50000,        --from 5000000     repair by t1 enginer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engienr for 200s
-        BuildCostMass = 2000,            --from 18 000    repair by T3 enginer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engi for 40s
+        BuildCostEnergy = 50000,        --from 5000000     repair by t1 engineer(5br) for -1m/-25e/s = it repair 100% of acu for 2000s by 10 T1 engies for 200s
+        BuildCostMass = 2000,            --from 18 000    repair by T3 engineer (25br) for -5m/125e/s = 100% by 400s by 10 T3 engies for 40s
         BuildRate = 10,
         BuildTime = 10000,                 --from 60000000
         StorageEnergy = 4000,            --from 4000
@@ -45,10 +45,10 @@ BlueprintId = "url0001",
 
             MaintenanceConsumptionPerSecondEnergy = 2500,
             NewHealth = 13000,            --from 15000
+            NewRegenRate = 20,          --from 0
         },
         CoolingUpgrade = {
             NewMaxRadius = 28,            --from30
-            NewHealth = 500,            --from 0
         },
         MicrowaveLaserGenerator = {
             BuildCostEnergy = 560000,
@@ -73,6 +73,7 @@ BlueprintId = "url0001",
             BuildCostMass = 350,
             BuildTime = 350,
             MaintenanceConsumptionPerSecondEnergy = 50,
+            NewRegenRate = 10,          --from 0
         },
         Teleporter = {
             BuildCostEnergy = 1500000,
@@ -102,14 +103,14 @@ BlueprintId = "url0001",
         },
         { --overcharge
             MaxRadius = 23,  --from 22 
-            RateOfFire = 0.25,            --from 0,3= 4s
+            RateOfFire = 0.25,            --from 0.3= 4s
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
         { -- auto overcharge
             DamageType = 'Overcharge',
             MaxRadius = 23,  --from 22 
-            RateOfFire = 0.25,            --from 0,3= 4s
+            RateOfFire = 0.25,            --from 0.3= 4s
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },

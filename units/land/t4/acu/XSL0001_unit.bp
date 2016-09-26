@@ -55,10 +55,10 @@ UnitBlueprint {
             BuildCostEnergy = 300000,    --from 300K
             BuildCostMass = 3000,        --from 3500 = 15m/s
             BuildTime = 2000,            --= 200s
-            NewMaxRadius = 26,            --add
+            NewMaxRadius = 3,            --EQ - we add this
         },
         RateOfFire = {
-            NewMaxRadius = 28,            --from30
+            NewMaxRadius = 5,            --now added to old range and not overriden
         },
         ResourceAllocation = {
             ProductionPerSecondEnergy = 1500,    --from3000

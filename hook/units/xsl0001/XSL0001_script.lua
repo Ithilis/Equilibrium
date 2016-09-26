@@ -38,21 +38,22 @@ XSL0001 = Class(oldXSL0001) {
                 }
 
                 if enh == 'AdvancedRegenAura' then
-                    buff_bp.Affects.MaxHealth =
-                    {
-                            Add = 0,
-                            Mult = bp.MaxHealthFactor or 1.0,
-                            DoNoFill = true,
-                }
-            end
+                    buff_bp.Affects.MaxHealth = {
+                        Add = 0,
+                        Mult = bp.MaxHealthFactor or 1.0,
+                        DoNoFill = true,
+                    }
+                end
 
                 BuffBlueprint(buff_bp)
             end
 
-            if not Buffs[buff .. 'SelfBuff'] then   -- AURA SELF BUFF
+            buff2 = buff .. 'SelfBuff'
+
+            if not Buffs[buff2] then   -- AURA SELF BUFF
                 BuffBlueprint {
-                    Name = buff .. 'SelfBuff',
-                    DisplayName = buff .. 'SelfBuff',
+                    Name = buff2,
+                    DisplayName = buff2,
                     BuffType = 'COMMANDERAURAFORSELF',
                     Stacks = 'REPLACE',
                     Duration = -1,
@@ -69,8 +70,8 @@ XSL0001 = Class(oldXSL0001) {
                 }
             end
 
-            Buff.ApplyBuff(self, buff .. 'SelfBuff')
-            table.insert( self.ShieldEffectsBag, CreateAttachedEmitter( self, 'XSL0001', self:GetArmy(), '/effects/emitters/seraphim_regenerative_aura_01_emit.bp' ) )
+            Buff.ApplyBuff(self, buff2)
+            table.insert(self.ShieldEffectsBag, CreateAttachedEmitter(self, 'XSL0001', self:GetArmy(), '/effects/emitters/seraphim_regenerative_aura_01_emit.bp' ) )
             if self.RegenThreadHandle then
                 KillThread(self.RegenThreadHandle)
                 self.RegenThreadHandle = nil
@@ -92,7 +93,7 @@ XSL0001 = Class(oldXSL0001) {
                     Buff.RemoveBuff(self, b .. 'SelfBuff')
                 end
             end
-        --Resource Allocation
+        -- Resource Allocation
         elseif enh == 'ResourceAllocation' then
             local bp = self:GetBlueprint().Enhancements[enh]
             local bpEcon = self:GetBlueprint().Economy
@@ -279,32 +280,41 @@ XSL0001 = Class(oldXSL0001) {
             local wep = self:GetWeaponByLabel('ChronotronCannon')
             wep:AddDamageRadiusMod(bp.NewDamageRadius or 5)
             wep:AddDamageMod(bp.AdditionalDamage)
-            wep:ChangeMaxRadius(bp.NewMaxRadius or 26)
+            wep:AddMaxRadiusMod(bp.NewMaxRadius or 3)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bp.NewMaxRadius or 26)
+            oc:AddMaxRadiusMod(bp.NewMaxRadius or 3)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:AddMaxRadiusMod(bp.NewMaxRadius or 3)
         elseif enh == 'BlastAttackRemove' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
             local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
             wep:AddDamageRadiusMod(-self:GetBlueprint().Enhancements['BlastAttack'].NewDamageRadius) -- unlimited AOE bug fix by brute51 [117]
             wep:AddDamageMod(-self:GetBlueprint().Enhancements['BlastAttack'].AdditionalDamage)
-            wep:ChangeMaxRadius(bpDisrupt or 23)
+            bpDisrupt = -(self:GetBlueprint().Enhancements['BlastAttack'].NewMaxRadius)
+            wep:AddMaxRadiusMod(bpDisrupt or -3) --we add and subtract our radius since we have 2 upgrades that change it.
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 23) 
+            oc:AddMaxRadiusMod(bpDisrupt or -3)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:AddMaxRadiusMod(bpDisrupt or -3)
         --Heat Sink Augmentation
         elseif enh == 'RateOfFire' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
             wep:ChangeRateOfFire(bp.NewRateOfFire or 2)
-            wep:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            wep:AddMaxRadiusMod(bp.NewMaxRadius or 5)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bp.NewMaxRadius or 44)            
+            oc:AddMaxRadiusMod(bp.NewMaxRadius or 5)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:AddMaxRadiusMod(bp.NewMaxRadius or 5)
         elseif enh == 'RateOfFireRemove' then
             local wep = self:GetWeaponByLabel('ChronotronCannon')
             local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
             wep:ChangeRateOfFire(bpDisrupt or 1)
-            bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius            
-            wep:ChangeMaxRadius(bpDisrupt or 23)
+            bpDisrupt = -(self:GetBlueprint().Enhancements['RateOfFire'].NewMaxRadius)
+            wep:AddMaxRadiusMod(bpDisrupt or -5)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 23)                        
+            oc:AddMaxRadiusMod(bpDisrupt or -5)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:AddMaxRadiusMod(bpDisrupt or -5)
         end
     end,
 }
