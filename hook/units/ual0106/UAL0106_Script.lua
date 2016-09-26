@@ -17,6 +17,11 @@ UAL0106 = Class(AWalkingLandUnit) {
         ArmLaserTurret = Class(ADFSonicPulsarWeapon) {}
     },
     
+    OnCreate = function(self)
+        AWalkingLandUnit.OnCreate(self)
+        self.DefaultROF = self:GetBlueprint().Weapon[1].RateOfFire
+    end,
+    
     OnKilled = function(self, instigator, type, overkillRatio)
         AWalkingLandUnit.OnKilled(self, instigator, type, overkillRatio)
         local pos = self:GetPosition()
@@ -31,7 +36,20 @@ UAL0106 = Class(AWalkingLandUnit) {
         }
         local vizEntity = VizMarker(spec)
       end,
-
+    
+    OnAttachedToTransport = function(self, transport, bone)
+        local wep = self:GetWeaponByLabel('ArmLaserTurret')
+        wep:ChangeRateOfFire((self.DefaultROF*0.75)) --we do this to make labs have less dps when in transports, since ghetto snipes are pretty damn good
+        --we tried increasing firing randomness but it was totally useless against tanks so we had to nerf fire rate instead. shame.
+        AWalkingLandUnit.OnAttachedToTransport(self, transport, bone)
+    end,
+    
+    OnDetachedFromTransport = function(self, transport, bone)
+        local wep = self:GetWeaponByLabel('ArmLaserTurret')
+        wep:ChangeRateOfFire(self.DefaultROF)
+        AWalkingLandUnit.OnDetachedFromTransport(self, transport, bone)
+    end,
+    
 }
 
 TypeClass = UAL0106

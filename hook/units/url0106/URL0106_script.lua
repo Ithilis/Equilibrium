@@ -35,8 +35,10 @@ URL0106 = Class(CWalkingLandUnit) {
         EMP = Class(EMPDeathWeapon) {},
     },
     
-    
-    
+    OnCreate = function(self)
+        CWalkingLandUnit.OnCreate(self)
+        self.DefaultROF = self:GetBlueprint().Weapon[1].RateOfFire
+    end,
     
     OnKilled = function(self, instigator, type, overkillRatio)
         local emp = self:GetWeaponByLabel('EMP')
@@ -56,6 +58,20 @@ URL0106 = Class(CWalkingLandUnit) {
             emp:OnFire()
         end
         CWalkingLandUnit.OnKilled(self, instigator, type, overkillRatio)
+    end,
+    
+    OnAttachedToTransport = function(self, transport, bone)
+        local wep = self:GetWeaponByLabel('MainGun')
+        wep:ChangeRateOfFire((self.DefaultROF*0.75)) --we do this to make labs have less dps when in transports, since ghetto snipes are pretty damn good
+        --we tried increasing firing randomness but it was totally useless against tanks so we had to nerf fire rate instead. shame.
+        CWalkingLandUnit.OnAttachedToTransport(self, transport, bone)
+    end,
+    
+    OnDetachedFromTransport = function(self, transport, bone)
+        local wep = self:GetWeaponByLabel('MainGun')
+        self.DefaultROF = self:GetBlueprint().Weapon[1].RateOfFire
+        wep:ChangeRateOfFire(self.DefaultROF)
+        CWalkingLandUnit.OnDetachedFromTransport(self, transport, bone)
     end,
     
 }
