@@ -169,11 +169,6 @@ BlueprintId = "uel0301",
     Weapon = {
         {
             Damage = 200,                        --from 300
-            FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
-                Water = 'Land|Water|Seabed',
-                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
-            },
             MaxRadius = 23,        --from 25
             RateOfFire = 1,
         },

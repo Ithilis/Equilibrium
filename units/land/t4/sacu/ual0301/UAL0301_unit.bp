@@ -746,9 +746,8 @@ UnitBlueprint {
             DamageType = 'Normal',
             DisplayName = 'Reacton Cannon',
             FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',                --Removed Seabed layer caps (IceDreamer) <-ahaha
+                Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
-                Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
             },
             FiringTolerance = 2,
             Label = 'RightReactonCannon',
