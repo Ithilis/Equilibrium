@@ -16,9 +16,10 @@ ShieldCollider = Class(Projectile) {
     OnCreate = function(self)
         Projectile.OnCreate(self)
 
-        self:SetVizToFocusPlayer('Never') --set to always to see a nice box
+        self:SetVizToFocusPlayer('Never') --set to always to see a nice box for testing
         self:SetVizToAllies('Never')
         self:SetVizToNeutrals('Never')
+        self:SetVizToEnemies('Never')
         self:SetStayUpright(false)
         self:SetCollision(true)
     end,
