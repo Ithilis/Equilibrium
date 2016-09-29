@@ -25,4 +25,10 @@ BlueprintId="ues0304",
         MaxSpeed = 4.5,
         MaxSpeedReverse = 4.5,
     },
+    Weapon = {
+        {
+            CameraLifetime = 10,         --added
+            CameraVisionRadius = 7.5,    --added
+        },
+    },
 }

@@ -65,7 +65,6 @@ UES0202 = Class(TSeaUnit) {
                     else
                         self.CurrentRack = self.CurrentRack + 1
                     end
-                    TIFCruiseMissileLauncher.CreateProjectileAtMuzzle(self, muzzle)
                     
                     local proj = TIFCruiseMissileLauncher.CreateProjectileAtMuzzle(self, muzzle)
                     local data = {
