@@ -8,18 +8,7 @@ XRL0302 = Class(CWalkingLandUnit) {
 
 
     Weapons = {        
-        Suicide = Class(CMobileKamikazeBombWeapon) {
-
-            OnFire = function(self)
-                self.FxFire = EffectTemplate.CMobileKamikazeBombExplosion
-                local army = self.unit:GetArmy()
-                for k, v in self.FxFire do
-                    CreateEmitterAtBone(self.unit,-2,army,v):ScaleEmitter(1.2)
-                end
-                WARN('firing weapon')
-                CMobileKamikazeBombWeapon.OnFire(self)
-            end,
-        },
+        Suicide = Class(CMobileKamikazeBombWeapon) {},
     },
     
     OnKilled = function(self, instigator, type, overkillRatio)
@@ -30,7 +19,6 @@ XRL0302 = Class(CWalkingLandUnit) {
             CreateEmitterAtBone(self,-2,army,v)
         end
         
-        WARN('creating death effects')
         CWalkingLandUnit.OnKilled(self, instigator, type, overkillRatio)
     end,
     
