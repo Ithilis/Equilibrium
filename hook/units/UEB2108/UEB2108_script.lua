@@ -16,8 +16,6 @@ UEB2108 = Class(TStructureUnit) {
         CruiseMissile = Class(TIFCruiseMissileLauncher) {
             FxMuzzleFlash = EffectTemplate.TIFCruiseMissileLaunchBuilding,
             
-            
-            
             CreateProjectileAtMuzzle = function(self, muzzle)   --added by Ithilis
                     local proj = TIFCruiseMissileLauncher.CreateProjectileAtMuzzle(self, muzzle)
                     local data = {

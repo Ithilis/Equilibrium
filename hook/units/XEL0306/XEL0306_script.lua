@@ -46,19 +46,17 @@ XEL0306 = Class(TLandUnit) {
                 end
             end,
             
-            
             CreateProjectileAtMuzzle = function(self, muzzle)   --Added by Ithilis
-                    local proj = TIFCruiseMissileUnpackingLauncher.CreateProjectileAtMuzzle(self, muzzle)
-                    local data = {
-                        Radius = self:GetBlueprint().CameraVisionRadius or 6,
-                        Lifetime = self:GetBlueprint().CameraLifetime or 6,
-                        Army = self.unit:GetArmy(),
-                    }
-                    if proj and not proj:BeenDestroyed() then
-                        proj:PassData(data)
-                    end
-                end,
-                
+                local proj = TIFCruiseMissileUnpackingLauncher.CreateProjectileAtMuzzle(self, muzzle)
+                local data = {
+                    Radius = self:GetBlueprint().CameraVisionRadius or 6,
+                    Lifetime = self:GetBlueprint().CameraLifetime or 6,
+                    Army = self.unit:GetArmy(),
+                }
+                if proj and not proj:BeenDestroyed() then
+                    proj:PassData(data)
+                end
+            end,
         },
     },
 }
