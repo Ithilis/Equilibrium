@@ -127,11 +127,15 @@ BlueprintId = "uel0001",
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
-        {
+        { --acu tml
+            CameraLifetime = 10,        --vision blip
+            CameraVisionRadius = 10,
             MinRadius = 15,
             DamageRadius = 3,
         },
-        {
+        { --acu nuke tml
+            CameraLifetime = 20,        --vision blip
+            CameraVisionRadius = 10,
             Label = 'TacNukeMissile',
             MaxRadius = 256,
             MinRadius = 25,        --from 5
