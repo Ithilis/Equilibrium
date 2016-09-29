@@ -11,8 +11,8 @@ BlueprintId = "uel0111",
     },
     Weapon = {
         {
-            CameraLifetime = 5,         --added
-            CameraVisionRadius = 10,    --added
+            CameraLifetime = 10,         --added
+            CameraVisionRadius = 7.5,    --added
         },
     },
 }

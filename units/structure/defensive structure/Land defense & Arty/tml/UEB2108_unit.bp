@@ -11,6 +11,9 @@ BlueprintId = "ueb2108",
     },
     Weapon = {
         {
+            CameraLifetime = 10,        --added
+            CameraVisionRadius = 10,    --added
+            
             DamageRadius = 3,    --from 2
             MaxProjectileStorage = 12,
         },

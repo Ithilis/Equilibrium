@@ -15,4 +15,16 @@ BlueprintId="ues0202",
         VisionRadius = 65,
         WaterVisionRadius = 60,
     },
+    Weapon = {
+        {   --mml
+            CameraLifetime = 10,         --added
+            CameraVisionRadius = 7.5,    --added
+        },
+        {   --direct fire
+        },
+        {   --AA
+        },
+        {   --tmd
+        },
+    },
 }
