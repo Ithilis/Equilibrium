@@ -7,6 +7,7 @@ BlueprintId = "zrb9602",
     Defense = {
         Health = 6750,
         MaxHealth = 6750,
+        RegenRate = 0,
     },
     Economy = {
         BuildCostEnergy = 38000,    --from 45 000

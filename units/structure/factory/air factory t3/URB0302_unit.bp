@@ -7,6 +7,7 @@ BlueprintId = "urb0302",
     Defense = {
         Health = 13500,
         MaxHealth = 13500,
+        RegenRate = 0,
     },
     Economy = {
         BuildCostEnergy = 120000,    --from 180 000    potom niekedy to zase hod spet, ked na to bude spolocnost viac pripravena

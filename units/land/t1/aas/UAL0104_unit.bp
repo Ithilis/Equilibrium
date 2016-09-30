@@ -21,6 +21,7 @@ BlueprintId = "ual0104",
     Weapon = {
         {
             Damage = 7,        --from 5 = 21dps
+            MaxRadius = 32,     
             MuzzleVelocity = 60,    --from 45
         },
     },
