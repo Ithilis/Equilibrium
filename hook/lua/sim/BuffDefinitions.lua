@@ -349,4 +349,34 @@ TypeTable = {
     
     xab1401 = 1,
     
+    
+    -- ENGINEERS - they can reclaim and so can kill enemies, so need one too. Also sparkies.
+    
+    ual0105 = 2,
+    uel0105 = 2,
+    url0105 = 2,
+    xsl0105 = 2,
+    
+    ual0208 = 2,
+    uel0208 = 2,
+    url0208 = 2,
+    xsl0208 = 2,
+    
+    xel0209 = 2, --sparky
+    
+    ual0309 = 2,
+    uel0309 = 2,
+    url0309 = 2,
+    xsl0309 = 2,
+    
+    xeb0104 = 2, --engineering stations
+    xeb0204 = 2,
+    
+    xrb0104 = 2, --engineering stations cyb
+    xrb0204 = 2,
+    xrb0304 = 2,
+    
+    uea0001 = 2, --uef engineering drones
+    uea0003 = 2,
+    xea3204 = 2,
 }

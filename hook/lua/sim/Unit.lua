@@ -144,6 +144,10 @@ Unit = Class(oldUnit) {
         local bp = self:GetBlueprint()
 
         -- Total up the mass the unit has killed overall, and store it
+        if not self.Sync.totalMassKilled then --Equilibrium add this so we know whats going on if this throws an error.
+        WARN('Equilibrium: no totalMassKilled on unit trying to get veterancy! is it missing from the unit table?')
+        end
+        
         self.Sync.totalMassKilled = math.floor(self.Sync.totalMassKilled + massKilled)
         
         -- Calculate veterancy level. By default killing your own mass grants a level
