@@ -7,6 +7,7 @@ BlueprintId = "urb1104",
     Defense = {
         Health = 500,
         MaxHealth = 500,
+        RegenRate = 0,
     },
     Economy = {
         BuildCostEnergy = 4000,

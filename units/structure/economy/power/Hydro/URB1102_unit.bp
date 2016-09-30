@@ -7,5 +7,6 @@ BlueprintId = "urb1102",
     Defense = {
         Health = 1500,      --1600hp
         MaxHealth = 1500,   --1600hp
+        RegenRate = 0,
     },
 }

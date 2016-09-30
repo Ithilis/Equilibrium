@@ -6,6 +6,7 @@ UnitBlueprint {
     Defense = {
         Health = 2000,      --from 4000
         MaxHealth = 2000,
+        RegenRate = 0,
     },
     Wreckage = {
         ReclaimTimeMultiplier = 25,  --from1-> its same time as build time
