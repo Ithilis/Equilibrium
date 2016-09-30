@@ -47,6 +47,18 @@ BlueprintId = "dea0202",
             DoTTime = 2.5,
             InitialDamage = 37.5,             -- 300burst dmg
             MaxRadius = 60,
+            MuzzleSalvoDelay = 0.3,
+            MuzzleSalvoSize = 8,
+            RackBones = { --prevent rack bones from being changed by official balance
+                {
+                    MuzzleBones = {
+                        'Left_Wing_Bomb',
+                        'Right_Wing_Bomb',
+                    },
+                    RackBone = 'Left_Wing_Bomb',
+                },
+            },
+            RackFireTogether = true,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'LAND MOBILE TECH3 ANTIAIR',
