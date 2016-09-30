@@ -1,3 +1,5 @@
+-- T2 flak
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uel0205",
@@ -11,15 +13,20 @@ BlueprintId = "uel0205",
         Health = 900,        --from 1000
         MaxHealth = 900,
     },
+    Physics = {
+        MaxAcceleration = 2.8,
+        MaxBrake = 2.8,
+        MaxSpeed = 2.8,
+    },
     Weapon = {
         {
-        Damage = 25,        --100dps
-        DamageRadius = 3,        --from 4
-        MuzzleVelocity = 55,    --from 20
-        MaxRadius = 38,            --from 40
-        RateOfFire = 2,
-        FiringRandomness = 4,   --from 2,5
-        TargetPriorities = {
+            Damage = 25,        --100dps
+            DamageRadius = 3,        --from 4
+            MuzzleVelocity = 55,    --from 20
+            MaxRadius = 38,            --from 40
+            RateOfFire = 2,
+            FiringRandomness = 4,   --from 2,5
+            TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'EXPERIMENTAL',
                 'AIR MOBILE HIGHPRIAIR',

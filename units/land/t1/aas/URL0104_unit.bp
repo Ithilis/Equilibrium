@@ -1,0 +1,49 @@
+--Sky slammer
+
+UnitBlueprint {
+Merge = true,
+BlueprintId="url0104",
+
+    Defense = {
+        Health = 200,
+        MaxHealth = 200,
+    },
+    Economy = {
+        BuildCostEnergy = 200,
+        BuildCostMass = 40,
+        BuildTime = 200,
+    },
+    Intel = {
+        VisionRadius = 20, -- 18
+    },
+    Physics = {
+        MaxAcceleration = 2.7,    --from 2,9
+        MaxBrake = 2.7,            --from 2,9
+        MaxSpeed = 2.7,            --from 2,9
+    },
+    Transport = {
+        CanFireFromTransport = true, --from false
+    },
+    Weapon = {
+        {    --target painter
+            MaxRadius = 35, --from 32
+        },   
+        {    --AA
+            Damage = 13,                    --26dps
+            FireTargetLayerCapsTable = {
+                Air = 'Air',
+                Land = 'Air',
+                Water = 'Air',
+            },
+            MaxRadius = 35,                    --from 32, because dont have speed ; its also set in script. if you change this, dont forget to update it there as well.
+            MuzzleVelocity = 35,    --from 15
+            
+        },
+        {   --GF
+            Damage = 9,    --from 20dps
+            FiringRandomness = 0.45, --this code is ussles while we have homming missile
+            MaxRadius = 23, --from 18
+        },
+    },
+
+}

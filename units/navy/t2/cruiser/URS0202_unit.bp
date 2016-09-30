@@ -1,0 +1,62 @@
+--Siren
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "URS0202", 
+
+    AI = {
+        GuardScanRadius = 300,
+        },
+    },
+    Defense = {
+        Health = 4500,      --from 3000hp; this is 6 t2 torb bomber or 2 t3 torp bomber
+        MaxHealth = 4500,
+    },
+    Economy = {
+        BuildCostEnergy = 13000,    --from 18000
+        BuildCostMass = 1950,
+        BuildTime = 7800,
+    },
+    Weapon = {
+        {   --target painter beam
+            MaxRadius = 75, --from 75 
+        },
+        {   --GF
+            Damage = 50,    --from 92 =  100dps now
+            DamageRadius = 1,
+            MaxRadius = 80,
+            MuzzleVelocity = 30,
+            RateOfFire = 1,
+        },
+        {   --AA
+            Damage = 115,
+            MaxRadius = 75, --from 75
+            MuzzleSalvoSize = 6,
+            MuzzleVelocity = 20,
+            RateOfFire =  1,       --from 0,8
+            TargetCheckInterval = 0.1,  --from 0.3
+            TrackingRadius = 1,  -- toggled by the laser anyway
+        },
+        {   --tmd
+        },
+        {   --DF from toggled AA missile
+            Damage = 35,    --from 60; = 105dps now
+            FiringRandomness = 0.3, --from 0.9
+            MaxRadius = 80,
+            MuzzleSalvoDelay = 0.3, --from 0.2
+            MuzzleSalvoSize = 6,    --from 3
+            MuzzleVelocity = 30,
+            ProjectilesPerOnFire = 6,   --added
+            RackReloadTimeout = 10, --from 0 (dont know why)
+            RateOfFire = 0.5,       --from1
+            TargetCheckInterval = 0.1,  --from 0.3
+            TargetPriorities = {    --Zock broke target priority, where copypast it from AA weapon while this is GF
+                'SPECIALHIGHPRI',
+                'NAVAL MOBILE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TrackingRadius = 1,   --from 1,4
+        },
+    },
+}

@@ -4,7 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0106",
 
-    
     Defense = {
         Health = 125,
         MaxHealth = 125,

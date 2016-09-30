@@ -1,3 +1,5 @@
+-- T2 flak
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0205",
@@ -7,15 +9,21 @@ BlueprintId = "xsl0205",
         BuildCostMass = 220,
         BuildTime = 1100,
     },
+    Physics = {
+        MaxAcceleration = 3,
+        MaxBrake = 3,
+        MaxSpeed = 3,
+        WaterSpeedMultiplier = 1.13,    --same speed as yenze/blaze on water
+    },
     Weapon = {
         {
-        Damage = 60,    --120dps
-        DamageRadius = 2.5,        --from 4
-        MuzzleVelocity = 60,    --from 20
-        MaxRadius = 38,            --from 40
-        RateOfFire = 2,
-        FiringRandomness = 4,   --from 2,5
-        TargetPriorities = {
+            Damage = 60,    --120dps
+            DamageRadius = 2.5,        --from 4
+            MuzzleVelocity = 60,    --from 20
+            MaxRadius = 38,            --from 40
+            RateOfFire = 2,
+            FiringRandomness = 4,   --from 2,5
+            TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'EXPERIMENTAL',
                 'AIR MOBILE HIGHPRIAIR',

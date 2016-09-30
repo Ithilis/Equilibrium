@@ -1,0 +1,45 @@
+--Bouncer T3 MAA
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "DRLK001", 
+
+    Defense = {
+        Health = 1800,      --from 1900
+        MaxHealth = 1800,   --from 1900
+    },
+    Economy = {
+        BuildCostEnergy = 10500,    --from 10000
+        BuildCostMass = 840,        --from 800
+        BuildTime = 4200,           --from 4000
+    },
+    Physics = {
+        MaxAcceleration = 2.6,  --from 2.9
+        MaxBrake = 2.6,
+        MaxSpeed = 2.6,
+    },
+    Weapon = {
+        {   --target painter
+            MaxRadius = 52,
+        },
+        {   --AA
+            Damage = 100,
+            DamageRadius = 1.5,
+            MaxRadius = 52,
+            MuzzleSalvoSize = 2,
+            MuzzleVelocity = 15,
+            ProjectilesPerOnFire = 2,
+            RateOfFire = 1.667,
+            TargetCheckInterval = 0.1,      --from 0.3
+            TrackingRadius = 1.4,           --from 1, it was 1,4 in past before zock, dont know why they change it
+        },
+        {   --GF
+            Damage = 30,    --100dps
+            FiringRandomness = 0,        --from 1
+            MaxRadius = 38,                --from 25
+            MuzzleVelocity = 10,
+            MuzzleVelocityReduceDistance = 30,
+            RateOfFire = 1.667,
+        },
+    },
+}

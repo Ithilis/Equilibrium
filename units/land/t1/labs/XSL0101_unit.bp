@@ -8,6 +8,7 @@ BlueprintId = "xsl0101",
         BuildCostEnergy = 375,    --75e/s
         BuildCostMass = 25,
         BuildTime = 125,
+        MaintenanceConsumptionPerSecondEnergy = 0, --from 5
     },
     Defense = {
         Health = 75,

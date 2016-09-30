@@ -1,21 +1,18 @@
------------------------------------
--- Author(s):  Mikko Tyster
--- Summary  :  Cybran T3 Mobile AA
--- Copyright Â© 2008 Blade Braver!
------------------------------------
+-----------------------------------------------------------------
+-- File     :  /cdimage/units/URL0104/URL0104_script.lua
+-- Author(s):  John Comes, David Tomandl
+-- Summary  :  Cybran Anti-Air Tank Script
+-- Copyright © 2005 Gas Powered Games, Inc.  All rights reserved.
+-----------------------------------------------------------------
 
-local CWalkingLandUnit = import('/lua/cybranunits.lua').CWalkingLandUnit
+local CLandUnit = import('/lua/cybranunits.lua').CLandUnit
 local CybranWeaponsFile = import('/lua/cybranweapons.lua')
 local CAANanoDartWeapon = CybranWeaponsFile.CAANanoDartWeapon
-local TargetingLaser = import('/lua/kirvesweapons.lua').TargetingLaser
-local Effects = import('/lua/effecttemplates.lua')
+local TargetingLaser = import('/lua/kirvesweapons.lua').TargetingLaserInvisible
 
-DRLK001 = Class(CWalkingLandUnit) {
+URL0104 = Class(CLandUnit) {
     Weapons = {
-		AAGun = Class(CAANanoDartWeapon) {},    
-		Lazor = Class(TargetingLaser) {
-            FxMuzzleFlash = {'/effects/emitters/particle_cannon_muzzle_02_emit.bp'},
-            
+        TargetPainter = Class(TargetingLaser) {
             -- Unit in range. Cease ground fire and turn on AA
             OnWeaponFired = function(self)
                 if not self.AA then
@@ -26,7 +23,7 @@ DRLK001 = Class(CWalkingLandUnit) {
                 end
                 TargetingLaser.OnWeaponFired(self)
             end,
-            
+
             IdleState = State(TargetingLaser.IdleState) {
                 -- Start with the AA gun off to reduce twitching of ground fire
                 Main = function(self)
@@ -37,10 +34,23 @@ DRLK001 = Class(CWalkingLandUnit) {
                     TargetingLaser.IdleState.Main(self)
                 end,
             },
-            
         },
-		GroundGun = Class(CAANanoDartWeapon) {},
+        AAGun = Class(CAANanoDartWeapon) {},
+        GroundGun = Class(CAANanoDartWeapon) {},
     },
+    
+    OnAttachedToTransport = function(self, transport, bone)
+        local weapon = self:GetWeaponByLabel('AAGun') --since it can fire from trans we want it to not outrange inties.
+        weapon:ChangeMaxRadius(25) --this is the range we will have in air mode.
+        CLandUnit.OnAttachedToTransport(self)
+    end,
+
+    OnDetachedFromTransport = function(self, transport, bone)
+        local weapon = self:GetWeaponByLabel('AAGun')
+        weapon:ChangeMaxRadius(35) --this is a bit hacky since its hardcoded but ah well. dont forget to change here after change in bp.
+        CLandUnit.OnDetachedFromTransport(self)
+    end,
+    
 }
 
-TypeClass = DRLK001
+TypeClass = URL0104

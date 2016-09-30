@@ -11,6 +11,7 @@ BlueprintId = "uaa0103",
         KTurn = 0.85,                   --0,75
         StartTurnDistance = 6,          --5
         TurnSpeed = 2.0,                --0,75
+        RandomBreakOffDistanceMult = 1.2,   --from 1
     },
     Economy = {
         BuildCostEnergy = 2625,
