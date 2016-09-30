@@ -17,7 +17,6 @@ UEL0111 = Class(TLandUnit) {
         {
             FxMuzzleFlash = {'/effects/emitters/terran_mobile_missile_launch_01_emit.bp'},
             
-            
             CreateProjectileAtMuzzle = function(self, muzzle)
                     local proj = TIFCruiseMissileUnpackingLauncher.CreateProjectileAtMuzzle(self, muzzle)
                     local data = {
