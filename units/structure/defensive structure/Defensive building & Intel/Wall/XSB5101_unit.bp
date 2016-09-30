@@ -7,6 +7,11 @@ UnitBlueprint {
         Health = 2000,      --from 4000
         MaxHealth = 2000,
     },
+    Economy = {
+        BuildCostEnergy = 10,
+        BuildCostMass = 2,
+        BuildTime = 10,
+    },
     Wreckage = {
         ReclaimTimeMultiplier = 25,  --from1-> its same time as build time
     },

@@ -55,6 +55,7 @@ BlueprintId = "uel0001",
             BuildCostEnergy = 48000,
             BuildCostMass = 1200,
             BuildTime = 1200,
+            
             NewHealth = 2000,        --add
             NewRegenRate = 60,
         },
@@ -134,8 +135,8 @@ BlueprintId = "uel0001",
             DamageRadius = 3,
         },
         { --acu nuke tml
-            CameraLifetime = 20,        --vision blip
-            CameraVisionRadius = 10,
+            CameraLifetime = 10,        --vision blip
+            CameraVisionRadius = 20,
             Label = 'TacNukeMissile',
             MaxRadius = 256,
             MinRadius = 25,        --from 5
