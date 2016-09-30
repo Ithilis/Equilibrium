@@ -41,6 +41,9 @@ BlueprintId = "url0106",
     SizeX = 0.7,
     SizeY = 0.6,
     SizeZ = 0.7,
+    Veteran = {
+        RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
+    },
     Weapon = {
         {
             Damage = 8,    --24dps
