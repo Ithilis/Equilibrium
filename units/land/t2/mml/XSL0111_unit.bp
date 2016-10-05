@@ -30,7 +30,7 @@ BlueprintId = "xsl0111",
             DamageRadius = 0.5,
             Label = 'MissileRack',
             MaxRadius = 60,
-            MinRadius = 5, --from 5
+            MinRadius = 5, --from 4
             RateOfFire = 0.15,
             TargetPriorities = {
                 'SPECIALHIGHPRI',

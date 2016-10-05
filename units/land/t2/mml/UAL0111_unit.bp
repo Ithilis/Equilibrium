@@ -18,6 +18,7 @@ BlueprintId = "ual0111",
             Damage = 600,
             RateOfFire = 0.1,
             DamageRadius = 1.5,     --1
+            MinRadius = 5,  --from 3
         },
     },
 }

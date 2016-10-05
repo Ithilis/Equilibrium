@@ -13,6 +13,7 @@ BlueprintId = "uel0111",
         {
             CameraLifetime = 10,         --added
             CameraVisionRadius = 7.5,    --added
+            MinRadius = 5,  --from 5
         },
     },
 }

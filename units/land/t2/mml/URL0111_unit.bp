@@ -9,4 +9,9 @@ BlueprintId = "url0111",
         BuildCostMass = 196,
         BuildTime = 1400,
     },
+    Weapon = {
+        {                      
+            MinRadius = 5,  --from 4
+        },
+    },
 }
