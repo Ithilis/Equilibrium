@@ -1,4 +1,5 @@
---mobile heavy artillery
+--mobile T3 artillery
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0304", 
@@ -14,6 +15,7 @@ BlueprintId = "ual0304",
             DamageRadius = 3,
             DoTPulses = 15,
             DoTTime = 5,
+            MinRadius = 10,      --from 0
         },
     },
 }

@@ -1,3 +1,5 @@
+--mobile T3 artillery
+
 UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0304", 
@@ -6,5 +8,10 @@ BlueprintId = "xsl0304",
         BuildCostEnergy = 12000,
         BuildCostMass = 840,
         BuildTime = 6000,
+    },
+    Weapon = {
+        {
+            MinRadius = 10,      --from 0
+        },
     },
 }

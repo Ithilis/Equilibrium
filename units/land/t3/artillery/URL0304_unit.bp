@@ -1,4 +1,4 @@
--- Trebuchet
+--mobile T3 artillery
 
 UnitBlueprint {
 Merge = true,
@@ -14,6 +14,7 @@ BlueprintId = "url0304",
             Damage = 420,                --70dps
             DamageRadius = 5,            --from 7
             FiringRandomness = 1.75,     --from 2
+            MinRadius = 10,      --from 0
             RateOfFire = 0.166,            --from 0.15
         },
     },
