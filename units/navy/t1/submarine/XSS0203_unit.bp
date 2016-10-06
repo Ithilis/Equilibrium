@@ -4,10 +4,14 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0203",
 
+    Defense = {
+        Health = 600,   --450
+        MaxHealth = 600,
+    },
     Economy = {
-        BuildCostEnergy = 3500,
-        BuildCostMass = 350,
-        BuildTime = 1400,
+        BuildCostEnergy = 5000,
+        BuildCostMass = 500,
+        BuildTime = 2000,
     },
     Intel = {
         SonarRadius = 60,
@@ -23,7 +27,7 @@ BlueprintId="xss0203",
     },
     Weapon = {
         {
-            Damage = 50, --50 dps from 37.5
+            Damage = 75, --from 37.5
             DamageRadius = 0.5,     --from 0 ; this is to stop you from submarine stacking
             MaxRadius = 35,     --from 32 ; use this to fine tune vs kiting destroyers.
             RateOfFire = 0.5,   --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
