@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId="xss0203",
 
     Defense = {
-        Health = 600,   --450
-        MaxHealth = 600,
+        Health = 550,   --450
+        MaxHealth = 550,
     },
     Economy = {
         BuildCostEnergy = 5000,

@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId="uas0203",
  
     Defense = {
-        Health = 725,   --550
-        MaxHealth = 725,
+        Health = 675,   --550
+        MaxHealth = 675,
     },
     Economy = {
         BuildCostEnergy = 5000,

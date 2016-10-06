@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId="urs0203",
 
     Defense = {
-        Health = 700,   --525
-        MaxHealth = 700,
+        Health = 650,   --525
+        MaxHealth = 650,
     },
     Economy = {
         BuildCostEnergy = 5000,
@@ -27,12 +27,12 @@ BlueprintId="urs0203",
     },
     Weapon = {
         {
-            Damage = 8, -- 4 torpedoes with 5 pulses each ; 8*5*4 = 160 damage/salvo
+            Damage = 16, -- 2 torpedoes with 5 pulses each ; 16*5*2 = 160 damage/salvo
             DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
             RateOfFire = 0.5, --from 0.25 ; use this to fine tune effectiveness vs torp defense/sub hunters
-            MuzzleSalvoDelay = 0.5, -- 1.5 second long salvo since muzzle salvo size = 4
-            MuzzleSalvoSize = 4,
+            MuzzleSalvoDelay = 0.5, -- 1.5
+            MuzzleSalvoSize = 2,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',

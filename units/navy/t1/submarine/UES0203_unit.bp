@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId="ues0203",
 
     Defense = {
-        Health = 750,   --600
-        MaxHealth = 750,
+        Health = 700,   --600
+        MaxHealth = 700,
     },
     Economy = {
         BuildCostEnergy = 5000,
@@ -20,10 +20,10 @@ BlueprintId="ues0203",
     },
     Physics = {
         Elevation = -2.5,        --from -1,5
-        MaxAcceleration = 6.5,    --from 6
-        MaxBrake = 6.5,
-        MaxSpeed = 6.5,
-        MaxSpeedReverse = 6.5,        
+        MaxAcceleration = 6,    --from 6
+        MaxBrake = 6,
+        MaxSpeed = 6,
+        MaxSpeedReverse = 6,        
     },
     Weapon = {
         {
@@ -46,7 +46,7 @@ BlueprintId="ues0203",
             },
         },
         {
-            Damage = 35,    --from 25
+            Damage = 25,    --from 25
             MaxRadius = 30,    --from 32; its higher deck cannon range with bigger damage and can be used also against ships to increase dmg when really needed
         },
     },
