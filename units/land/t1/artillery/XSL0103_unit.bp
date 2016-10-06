@@ -9,4 +9,9 @@ BlueprintId = "xsl0103",
         BuildCostMass = 50,         --54m
         BuildTime = 250,            --180bt
     },
+    Weapon = {
+        {
+            MinRadius = 5,  --from 8
+        },
+    },
 }
