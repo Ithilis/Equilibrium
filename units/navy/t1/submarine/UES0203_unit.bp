@@ -8,6 +8,9 @@ BlueprintId="ues0203",
         Health = 700,   --600
         MaxHealth = 700,
     },
+    Display = {
+        UniformScale = 0.07,    --from 0,05 -> because units cost more and looks tiny
+    },
     Economy = {
         BuildCostEnergy = 5000,
         BuildCostMass = 500,
