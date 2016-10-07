@@ -2,7 +2,7 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "URS0202", 
+BlueprintId = "urs0202", 
 
     AI = {
         GuardScanRadius = 300,
@@ -32,7 +32,7 @@ BlueprintId = "URS0202",
             MaxRadius = 75, --from 75
             MuzzleSalvoSize = 6,
             MuzzleVelocity = 20,
-            RateOfFire =  1,       --from 0,8
+            RateOfFire = 1,       --from 0,8
             TargetCheckInterval = 0.1,  --from 0.3
             TrackingRadius = 1,  -- toggled by the laser anyway
         },
