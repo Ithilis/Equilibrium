@@ -10,8 +10,8 @@ BlueprintId = "xsl0203",
         BuildTime = 1000,
     },
     Defense = {
-        Health = 1300,
-        MaxHealth = 1300,
+        Health = 1250,
+        MaxHealth = 1250,
     },
     Physics = {
         MaxAcceleration = 4,

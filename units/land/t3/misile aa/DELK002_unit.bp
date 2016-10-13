@@ -19,5 +19,14 @@ BlueprintId = "delk002",
             FiringRandomness = 0.1,        --from 0.2
             RateOfFire = 1,
         },
+        {
+            Damage = 0,                  --its only for same behaviour ad ground fire units
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            MaxRadius = 28,
+            RateOfFire = 0,
+        },        
     },
 }

@@ -13,12 +13,20 @@ BlueprintId = "dalk003",
         BuildCostMass = 760,
         BuildTime = 3800,
     },
-
     Weapon = {
         {
             Damage = 1200,        --200dps
             MaxRadius = 54,
             RateOfFire = 0.1667,
         },
+        {
+            Damage = 0,                  --its only for same behaviour ad ground fire units
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            MaxRadius = 28,
+            RateOfFire = 0,
+        },       
     },
 }

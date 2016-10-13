@@ -2,7 +2,7 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId = "DRLK001", 
+BlueprintId = "drlk001", 
 
     Defense = {
         Health = 1800,      --from 1900

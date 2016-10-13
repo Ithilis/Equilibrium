@@ -37,29 +37,13 @@ BlueprintId = "xsl0205",
             },
         },
         {
-            AboveWaterTargetsOnly = true,      
-            BallisticArc = 'RULEUBA_None',
-            CollideFriendly = false,
-            CountedProjectile = false,
-            Damage = 0,                                --its only for same behaviour
-            DamageRadius = 0,
-            DamageType = 'Normal',
-            DisplayName = 'Serpentine Missile',
+            Damage = 0,                                --its only for same behaviour 
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
-            Label = 'MissileRack',
             MaxRadius = 28,
-            RackSlavedToTurret = false,
-            RangeCategory = 'UWRC_AntiAir',
             RateOfFire = 0,
-            RenderFireClock = true,
-            SlavedToBody = true,
-            TargetCheckInterval = 2,
-            TargetRestrictDisallow = 'UNTARGETABLE',
-            WeaponCategory = 'Missile',
-
         },
     },
 }
