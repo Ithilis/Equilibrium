@@ -23,5 +23,13 @@ BlueprintId = "xsl0104",
             Damage = 5,        --from 4 = 20dps
             MuzzleVelocity = 60,    --from 45
         },
+        {   --Dummy weapon, for react on ground atack comand
+            Damage = 0,       
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+            },
+            MaxRadius = 23,
+            RateOfFire = 0,
+        },
     },
 }
