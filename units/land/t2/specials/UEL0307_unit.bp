@@ -21,12 +21,17 @@ BlueprintId = "uel0307",
     },
     Weapon = {
         { -- special dummy weapon to make the shield stop a certain distance away; requires weapon entry in script as well
+            AutoInitiateAttackCommand = false,
+            CannotAttackGround = false,
             Damage = 0,
+            DamageFriendly = false,
+            DamageType = 'Normal',
+            DisplayName = 'Target Tracker',
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Seabed',
                 Water = 'Land|Water|Seabed',
             },
-            MaxRadius = 33, -- this is the range the unit will try to stop at ; this is for the attack command. change GuardScanRadius for attack move range.
+            MaxRadius = 28, -- this is the range the unit will try to stop at ; this is for the attack command. change GuardScanRadius for attack move range.
             RackBones = {
                 {
                     MuzzleBones = {
@@ -35,7 +40,16 @@ BlueprintId = "uel0307",
                     RackBone = 'Turret',
                 },
             },
-            RateOfFire = 0,
+            RateOfFire = 1,
+            ReTargetOnMiss = false,
+            TargetCheckInterval = 0.1,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            Turreted = false,
+            SlavedToBody = false,
+            WeaponCategory = 'Missile',
         },
     },
 }
