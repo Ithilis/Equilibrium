@@ -144,7 +144,7 @@ Unit = Class(oldUnit) {
         local bp = self:GetBlueprint()
 
         -- Total up the mass the unit has killed overall, and store it
-        if not self.Sync.totalMassKilled then --Equilibrium add this so we know whats going on if this throws an error.
+        if not self.Sync.totalMassKilled then --Equilibrium adds this so we know whats going on if this throws an error.
         WARN('Equilibrium: no totalMassKilled on unit trying to get veterancy! is it missing from the unit table?')
         end
         
@@ -184,7 +184,7 @@ Unit = Class(oldUnit) {
         local buffName = false
         local subSection = false
         if buffType == 'VETERANCYREGEN' then
-            subSection = typeTable[self:GetUnitId()] -- Will be 1 through 6
+            subSection = typeTable[self:GetUnitId()] or 7-- Will be 1 through 6
             buffName = techLevel .. subSection .. buffType .. vetLevel
         else
             buffName = techLevel .. buffType .. vetLevel
@@ -206,8 +206,11 @@ Unit = Class(oldUnit) {
                 val = multsTable[buffType][techLevel][subSection] * vetLevel
             elseif subSection == 5 then -- Experimental or sACU
                 val = multsTable[buffType][techLevel][vetLevel]
-            else -- ACU
+            elseif subSection == 6 then -- ACU
                 val = multsTable[buffType][techLevel] * vetLevel
+            else -- non combat unit or modded unit
+                WARN('we are applying a buff for a non-combat or modded unit! ')
+                val = multsTable[buffType][techLevel][1][vetLevel] --we make it use default combat units if its not specified otherwise.
             end
         end
 
@@ -244,17 +247,16 @@ Unit = Class(oldUnit) {
     OnStopBeingBuilt = function(self, builder, layer)        
         -- Set up Veterancy tracking here. Avoids needing to check completion later.
         -- Do all this here so we only have to do for things which get completed        
-        -- Don't need to track damage for things which cannot attack!
-        if typeTable[self:GetUnitId()] then
-            local bp = self:GetBlueprint()
-            self.Sync.totalMassKilled = 0
-            self.Sync.VeteranLevel = 0
+        -- To maintain mod compatibility, we have to track veterancy for all units by default.
+        local bp = self:GetBlueprint()
+        self.Sync.totalMassKilled = 0
+        self.Sync.VeteranLevel = 0
+        
+        -- Allow units to require more or less mass to level up. Decimal multipliers mean
+        -- faster leveling, >1 mean slower. Doing this here means doing it once instead of every kill.
+        local defaultMult = 1.5
+        self.Sync.myValue = math.floor(bp.Economy.BuildCostMass * (bp.Veteran.RequirementMult or defaultMult))
             
-            -- Allow units to require more or less mass to level up. Decimal multipliers mean
-            -- faster leveling, >1 mean slower. Doing this here means doing it once instead of every kill.
-            local defaultMult = 1.5
-            self.Sync.myValue = math.floor(bp.Economy.BuildCostMass * (bp.Veteran.RequirementMult or defaultMult))
-        end
         oldUnit.OnStopBeingBuilt(self, builder, layer)
         self:ForkThread(self.CloakEffectControlThread) -- blackops
     end,
