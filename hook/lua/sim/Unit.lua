@@ -467,9 +467,15 @@ Unit = Class(oldUnit) {
         if damageType == 'NormalAboveWater' and (self:GetCurrentLayer() == 'Sub' or self:GetCurrentLayer() == 'Seabed') then
             local bp = self:GetBlueprint()
             local myheight = bp.Physics.MeshExtentsY or bp.SizeY or 0
-            local damagetotal = amount / math.max(math.abs(vector[2]) - myheight, 1)
-            oldUnit.OnDamage(self, instigator, damagetotal, vector, damageType, unpack(arg))
+            local depth = math.abs(vector[2]) - myheight
+            --WARN(depth) -- use this to tune the cutoff depth for damage
+            if depth > 1 then return --units deep underwater take 0 damage
+            else
+                oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
+                --the unpack here is to maintain compatibility incase some new arg is added
+            end
         else
+            -- units with their head poking above or only thin layer of water take full damage
             oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
         end
     end, 
