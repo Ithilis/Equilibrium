@@ -1,3 +1,136 @@
+v.37
+_______________
+
+LAND
+
+
+- Updated acu upgrade code
+-- Now auto-oc range is changed correctly
+-- Sera gun upgrades properly stack the gun range increases
+-- Cybran acu gun bonus hp 0 (500) [0]
+-- Cybran acu stealth regen bonus 10 [0]
+-- Cybran acu cloak regen bonus 20 [0]
+-- fixed bug where UEF billy nuke is not exploding
+-- Teleport
+--- Re-added the teleport effect for cybran
+--- Improved the effects for all the teleport animations a little
+--- fixed a bug where the sound did not go away after cancelling tele or teleporting.
+
+- UEF tactical missile camera vision:
+-- T1 artillery 5aoe 10s (8aoe, 8s) [5aoe 5s]
+-- T2 mml 7.5aoe 10s (10aoe 5s)
+-- T3 mml 10aoe 10s (added)
+-- TML 10aoe 10s (added)
+-- ACU TML 10aoe 10s (added)
+-- ACU Nuke 20aoe 10s (added)
+
+- Lab veterancy multiplier 2.5 (1.5) -> now need +- same mount as tanks
+- Reduced ROF of LABs on transports to 75% of normal
+- selen energy consumption when toggled 0 [5]
+
+-- T1 AA add dummy weapon to react on ground attack
+
+- T1 sera artillery got same 5 minimal range [8]
+
+- Yenzyne 1250hp [1300]
+
+- T2 flak speed 
+-- aeon/seraphim speed 3 [2.6/2.5]
+--- aeon/seraphim add water speed multiplier to 1.13 -> 3.4 speed on water => same as blaze/yenzee
+-- UEF/Cybran 2.8 [3/2.8]
+
+- T2 mml all got same 5 minimal range [5/4/4/3]
+
+- T3 mobile artillery got 10 minimal range [0]
+
+- Ythotha AA weapon: 
+-- aoe: 3.5 [1.5]
+-- Muzzle: 60 [20]
+-- fixed not leading target and just shooting in completely wrong direction
+
+--Added increased death explosion damage to SACUs with ras upgrade 5000dmg (2500) 
+
+AIR
+
+
+- T1 bombers RandomBreakOffDistanceMult 1.2 [1]
+
+- Ahwassa bomb range: 60 (80) [90]
+- Ahwassa min/max speed: 15/16 (16/17)
+
+- air units are no longer able to shoot at other landed air units (inties, f/b, asf)
+- new feature added: shields now absorb crash damage from dead air units, and bounce them off.
+- fixed collision boxes for the torpedos of the cybran and uef torpedo bombers
+
+NAVAL
+
+
+- T1 submarine 500m 5000e 2000bt (350m 2800e 1400bt) 
+-- uniform slave 0.07 [0.05]
+--- Aeon 675hp (575) 75dps (50) [37,5]
+--- Cybran 650hp (550)  80dps (50) [37,5] 2 torpedo (4) [2]
+--- UEF 700hp (600) 75dps (50) [37,5] // ground fire gun 30r (24) //6sp (6.5) [6]
+--- Seraphim 550hp (450hp) 75dps (50)
+
+- naval intel optimalization to neglect situation where sonar/radar is lower as visual intel
+-- frigates sonar 82 (80) [82]
+-- destroyer's radar 30 [35] sonar 32 [37] vision 30 [32]
+-- Bulwark remove sonar that was by mistake (60sonar) [0 sonar]
+-- Mermaid sonar 32 (60) [62] radar 32 [60]
+-- battleships sonar 50 [20]
+--- sera battleship nuke minimum range 130 [128] -> to not have additional circle
+-- carrier sonar 85 [40]
+-- Torrent/Neptune radar 50 [110] sonar 50 [20] vision 50 [70] -> same as on battleships
+-- Atlantis sonar 252 (250) [252]
+
+- added “torpedo flare” as display on t2 subs, brick, cybran destroyer, mermaid
+
+- UEF tactical missile camera vision:
+-- UEF Cruiser 7.5aoe 10s (added)
+-- UEF T3 Submarine 7.5aoe 10s (added)
+
+--Integrated WaterGuard which reduces damage to submerged units (made by Balthazar) - any unit below a depth of 1 takes no damage.
+
+- added 0.5 aoe to neptune depth charges which were missed out
+
+BUILDING
+
+
+- Aeon hydro now has a toggle production button (turn of power in return for looking at an animation, totally worth it)
+- Aeon T2 Flak, T2 PD, T2 static Artillery now unpack to fire and repack after losing targets
+- optimized aeon unpacking animation code for defensive buildings
+
+- Personal cloak on Seraphim stealth generator now toggles with the stealth field.
+
+- aeon tmd no longer deflects nukes.
+
+- fixed bug where cybran shields drained 24999 mass on upgrade:
+-- ED2: BuildTime: 750 (250)
+-- ED3: BuildTime: 1500 (750) Buildrate: 20 (25)
+-- ED4: BuildTime: 2900 (2500) Buildrate: 12.5 (25)
+-- ED5: BuildTime: 3900 (2000) 
+
+SYSTEM
+
+
+- Siren/Bouncer/Sky slammer remove unit folder and keep hooked version of bp/script on sky slammer. While our toggle system start be in official game
+
+- fixed mistake in code on illshavoh missing bracket in weapon line
+
+-Removed the errors at startup in the log (harmless) by unhooking the adjacency bonus file so it now hard shadows
+
+- Minimize code on support units that is responsible that units are affected on attack command even when don't have weapon (T1/2/3AA, shields, stealth)
+
+- removed regeneration from cybran building (prepared for next patch)
+
+--Integrated cloak visual effect (OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod)
+
+- sacrifice system improved - any mass that was going to be wasted is now dumped on the ground in the form of a wreck
+
+- fixed bug with capturing not working (due to bad code with mass storages)
+- removed AIbrain file from code, it seems that it's useless
+
+
 v.36
 -----
 

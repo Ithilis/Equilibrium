@@ -18,5 +18,6 @@ BlueprintId="xrs0205",
     Intel = {
         RadarRadius = 32,   --from 60
         SonarRadius = 32,   --from 62
+        VisionRadius = 32,  --32
     },
 }

@@ -35,25 +35,27 @@
             
 			<p> Here are the rules the new veterancy system:
 			<ul>
-            <li>Units no longer gain veterency levels from a flat number of kills. 
-			<li>Units now receive veterancy points that are equal to the destroyed unit's mass cost. Units are promoted to next veterancy level when they have 150% of their own mass cost in veterancy points
-            <li>ACUs and Experimentals are an exception to this rule; due to their high cost, they require only 50% of their mass value in veterency points to gain a star of veterency. 
-			<li>ACUs will still not be able to be built (without mods), but for the purpose of veterency, their mass cost is 2000. 1000m is required for each level of veterency. This corresponds to around 20 T1 Tanks.
-			<li>Destroying a unit with veterancy gives 20% more veterancy points per veterancy level of the destroyed unit. For example, killing a tank with 1 veterency level gives 120% of its mass cost in veterency to the attacking unit(s); killing a tank with 5 veterency levels awards 200% of its mass cost.
-			<li>Multiple units killing the same target will split the veterency points between all units involved, in proportion to the damage dealt by each unit. A unit that deals 75% of the damage of a kill will be awarded 75% of that unit's mass in veterency points. <a href="http://recordit.co/t3kGOiPqcq">What that looks like.<a/>
-			<p>
-			<li>Promoted units receive new max health and gain higher regeneration, but  <a href="http://recordit.co/Y61oe1SANB"> no longer get any insta-heal<a/>. 
-			<ul><li>T1/T2/SACU units gain 20% more max HP. <br/>
-			<li>T3/ACU units gain 15% more max HP. <br/>
-			<li>Experimentals gain 10% more max HP. </ul>
-			<p>
-			<li>Regen values for units have been normalized and split into two categories. Main Combat Units recieve less regen at lower levels, but their regen amounts scale up harder at higher veterency levels. Raider and Support units recieve a flat amount of regen each level.
-			<p>
-			</ul>
-			<p>
-			<p>
-			Main Combat Units - Buildings, Mainline Tanks, Artillery, Mobile AA, Interceptors, Fighter-Bombers, ASFs, and Gunships
-			<ul>
+                <li>Units no longer gain veterency levels from a flat number of kills. 
+                <li>Units now receive veterancy points that are equal to the destroyed unit's mass cost. Units are promoted to next veterancy level when they have 150% of their own mass cost in veterancy points
+                <li>ACUs and Experimentals are an exception to this rule; due to their high cost, they require only 50% of their mass value in veterency points to gain a star of veterency. 
+                <li>ACUs will still not be able to be built (without mods), but for the purpose of veterency, their mass cost is 2000. 1000m is required for each level of veterency. This corresponds to around 20 T1 Tanks.
+                <li>Destroying a unit with veterancy gives 20% more veterancy points per veterancy level of the destroyed unit. For example, killing a tank with 1 veterency level gives 120% of its mass cost in veterency to the attacking unit(s); killing a tank with 5 veterency levels awards 200% of its mass cost.
+                <li>Multiple units killing the same target will split the veterency points between all units involved, in proportion to the damage dealt by each unit. A unit that deals 75% of the damage of a kill will be awarded 75% of that unit's mass in veterency points. <a href="http://recordit.co/t3kGOiPqcq">What that looks like.<a/>
+                <li>Units get XP when do damage, so also reclaiming units will get XP when target unit will die.  
+                <p>
+                <li>Promoted units receive new max health and gain higher regeneration, but  <a href="http://recordit.co/Y61oe1SANB"> no longer get any insta-heal<a/>. 
+                    <ul><li>T1/T2/SACU units gain 20% more max HP. <br/>
+                    <li>T3/ACU units gain 15% more max HP. <br/>
+                    <li>Experimentals gain 10% more max HP. </ul>
+                    <p>
+                    <li>Regen values for units have been normalized and split into two categories. Main Combat Units recieve less regen at lower levels, but their regen amounts scale up harder at higher veterency levels. Raider and Support units recieve a flat amount of regen each level.
+                    <p>
+                    </ul>
+                <p>
+                <p>
+                Main Combat Units - Buildings, Mainline Tanks, Artillery, Mobile AA, Interceptors, Fighter-Bombers, ASFs, and Gunships
+                <ul>
+                
 			<li> T1: +0.5+1+1.5+2+2.5 => 0.5/1.5/3/5/7.5
 			<li> T2: +1+2+3+4+5 => 1/3/6/10/15
 			<li> T3: +1.5+3+4.5+6+7.5 => 1.5/4.5/9/15/22.5
@@ -262,7 +264,7 @@
 			<li>SACU build rate: <strike>56</strike> → 25 ; Engineering Upgrade: <strike>98</strike> → 100br
 			</ul>
 			<h4>Sacrifice system</h4>
-            Making the sacrifice system useful. Since engineers cost 5x more energy than mass, and most buildings cost 15x more energy than mass, engineers waste more mass than usual since the mass/energy ratio is different. Sacrifice ratios have been adjusted to waste a much smaller amount of resources.
+            Making the sacrifice system useful. Since engineers cost 5x more energy than mass, and most buildings cost 15x more energy than mass, engineers waste more mass than usual since the mass/energy ratio is different.
             <p> Additionally, if an engineer assists a project with a lower mass:energy ratio than the engineer, instead of being wasted the leftover mass is left on the ground as a wreck.
 			<ul>
 			<li>T1/T2 Aeon engineers: <strike>60</strike> → 80% mass value <strike>60</strike> → 320% energy value
@@ -394,7 +396,6 @@
                 </ul>
             
 			<h4>RAS/ARAS</h4>
-            
 			Drains 20m/500e, making it much easier to get without ruining eco or pausing.
             
                 <ul>
@@ -407,20 +408,22 @@
             
 			<h4>Teleport</h4>
             
-			More consistent drain values when upgrading
+			More consistent drain values when upgrading. A little improvement for all teleport animation. Fixed a bug where the sound did not go away after cancelling tele or teleporting.
             
                 <ul>
                 <li>Price:  <strike>4200bt</strike> → 5000bt
+                <li>Cybran: Re-added teleport effect
                 </ul>
             
 			<h4>TML</h4>
             
-			Making it harder to kill an enemy ACUs at close ranges with ACU TML, and preventing it from being able to destroy TMD in some cases.
+			Making it harder to kill an enemy ACUs at close ranges with ACU TML, and preventing it from being able to destroy TMD in some cases. UEF missile get camera vision as faction trait to support they position as turtle-war specialist
             
                 <ul>
                 <li>Price: <strike>1500m</strike> → 1200m 60000e 1200bt
                 <li>Minimum range: <strike>5</strike> → 15
                 <li>Missile HP:<strike>3</strike> →  2HP
+                <li>UEF Add camera vision on missile 10aoe 10s 
                 </ul>
 			
 			<h4>Aeon upgrades</h4>
@@ -441,7 +444,7 @@
 			<h4>UEF upgrades</h4>
             Nano needed a small buff since it was quite bad. The HP helps with survivability and veterancy for the ACU, a true offensive upgrade.
             <p>Compared to Aeon the UEF shield costs less mass but more energy.
-            <p>The Billy is now a more consistent weapon, where it's easier to defend against, but more dangerous against T3 land units.
+            <p>The Billy is now a more consistent weapon, where it's easier to defend against, but more dangerous against T3 land units. Also get camera vision to watch such nice explosion from first seat!
             
                 <ul>
                 <li>Drone: 150m 2250e 300bt
@@ -457,22 +460,20 @@
                     <li>Billy missile HP: <strike>4</strike> → 3
                     <li>Minimum range: <strike>5</strike> → 25
                     <li>Damage: <strike>12000 15aoe + 250dmg on 25aoe</strike> → 9000dmg on 15aoe + 1000dmg on 25aoe
+                    <li>Add camera vision on missile 20aoe 10s 
                     </ul>
                 </ul>
 			
 			<h4>Cybran upgrades</h4>
             Laser: For more fluent numbers
             <p>Torpedo:Its hard to counter the Cybran ACU with torpedo upgrade early on, so its nerfed a little. Its firing pattern was adjusted as part of the submarine rework.
-            <p>Stealth: making it cheaper so it can be used more often, because it’s an interesting part of the game. Since the Cybran ACU has low hp, it gets some regen on its stealth upgrade so its got a strong combination like gun+T2 for the other factions.
-            <p>Cloak: making it cheaper so it can be used more often, because it’s an interesting part of the game. The regen is added to make it a bit more defensive.
+            <p>Stealth: Since the Cybran ACU has low hp, it gets some regen on its stealth upgrade so its got a strong combination like gun+T2 for the other factions.
+            <p>Cloak: Making it cheaper so it can be used more often, because it’s an interesting part of the game. The regen is added to make it a bit more defensive.
             
                 <ul>
                 <li>Laser: 4200m 560 000e
                 <li>Torpedo: <strike>37500e</strike> → 45000e adjusted firing pattern
-                <li>Stealth: <strike>6000m 750 000e, 4200bt, -3000e/s</strike> → 5000m 625 000e 2500bt -2500e/s drain
-                    <ul>
-                    <li>Regeneration: <strike>0</strike> → 10hp/s
-                    </ul>
+                <li>Stealth: Regeneration <strike>0</strike> → 10hp/s
                 <li>Cloak: <strike>6000m 750 000e, 4200bt, -3000e/s</strike> → 5000m 625 000e 2500bt -2500e/s drain
                     <ul>
                     <li>Regeneration: <strike>0</strike> → 20hp/s
@@ -546,12 +547,16 @@
                
                 <ul>
                 <li>Changed target priority to ACU -> mobile radar -> T1/2/3... + display "ghetto" on unit (except Seraphim)
+                <li>Veterancy multiplier 2.5 so it vet for +- same speed as t1 tanks
+                <li>Reduced ROF of LABs on transports to 75% of normal
+                
+                <p>
                 <li>Selen: <strike>20m 80e 80bt; 35HP, 13dps, 16r 4sp</strike> → 25m 375e 75HP; 20dps, 13r, 4.5sp 
                     <ul>
                     <li>Better maneuverability(turret pitch/yaw range increase) 
                     <li>Will automatically hold fire when in invisible state
                     </ul>
-                <li>Hunter: <strike>65HP, 21dps,14r, 4sp 35m, 350e, 175bt</strike> → 100HP, 24dps,13r 4,3 speed 30m 300e 150bt 
+                <li>Hunter: <strike>65HP, 21dps,14r, 4sp 35m, 140e, 175bt</strike> → 100HP, 24dps,13r 4,3 speed 30m 300e 150bt 
                     <ul>
                     <li>On death creates an <a href="http://recordit.co/JSW4HFRGov"> EMP blast<a/> with 6 aoe, that stuns T1/T2 units for 1.5s.
                     </ul>
@@ -564,12 +569,17 @@
             
 			<h4>Mobile AA</h4>
 			This unit was in sore need of a buff, almost never being used, so it got one both in HP and DPS. Its speed was increased to chase bombers better, and to be worth building in the first place, now it can also hit interceptors.
+            
+            <p>AA units have only AA weapon and when are mixed in army then don't react on ground attack order. We fix this problem so now they don't stay on place. 
+            
             <p>The Cybran MAA is also usable like a weaker aurora, with the same range. The ground projectile now tracks its target, to make it more consistent. It’s slower than other mobile AA so it has more range to compensate.
+                
                 <ul>
                 The ghetto function is a fun feature, like mantis repair. It's nearly useless but maybe it can have a creative use sometimes. Their range is reduced in transports so they don't outrange interceptors, and can't kite them.
                 <p>
                 <li>Price: <strike>28m 140e 140bt; 15/16dps; 3 speed; 45 muzzle velocity; 200HP</strike> → 50m 250e 250bt; 20/21dps; 3.5 speed; 60 Muzzle Velocity
-				<li>Thistle 305HP
+				<li>Add dummy weapon to react on ground attack
+                <li>Thistle 305HP
 				<li>Ia-istle 310HP
 				<li>Archer 320HP
                 <li>Sky Slammer: <strike>28m, 130HP, 16/20dps, 0,75fr, 2,9sp 15muzzle 18/32r</strike> → 40m, 200HP, 18gf/26aa dps, <a href="http://recordit.co/Rp9QoLamCx"> homing missile<a/>, 23/35r, 2.7sp 35muzzle
@@ -585,7 +595,7 @@
             T1 Mobile artillery: mostly unchanged, but it needed some adjustments to fit in with the balance and got some quality-of-life changes.
             <p>Medusa: Stun added against T3 units, dps added to make it less annoying to use vs pd, so price is also increased.
             <p>Fervor: Compensating for the aurora losing range, their main advantage on T1, the fervor was made better for use against land units (and acu). 
-            <p>Lobo: vision time increased for constant visibility while firing. and give this feature more potential. AOE increased to help it compete with other artillery.
+            <p>Lobo: vision time increase to give this feature more potential. AOE increased to help it compete with other artillery.
                 <ul>
                 <li>Price: Aeon/UEF <strike>36m 180e 180bt</strike> → 35m 175e 175bt
                 <li>Medusa: <strike>36m 180e 180bt, 140HP, 38dps</strike> → 40m 200e 200bt, 150HP, 50dps (250dmg/5s), EMP:
@@ -594,9 +604,9 @@
                     <li>T2 2s 1,5aoe
                     <li>T3 1s 1aoe (unable to stun T3 naval)
                     </ul>
-                <li>Zthuee: <strike>54m 180e 180bt</strike> → 50m 250e 250bt
+                <li>Zthuee: <strike>54m 180e 180bt</strike> → 50m 250e 250bt, minimal range <strike>8</strike> → 5 (same as other t1 artillery)
                 <li>Fervor: Reload Time: <strike>2</strike> → 1s ; AOE: <strike>0,5</strike> → 1 Damage: <strike>200</strike> → 100 ; Turret pitch range: <strike>45</strike> → 75 ; Uniform scale: <strike>0,07</strike> → 0,09
-                <li>Lobo: AOE: <strike>1</strike> → 1,2 ; Vision on projectile: <strike>5aoe ; 5s</strike> → 8aoe and 8s 
+                <li>Lobo: AOE: <strike>1</strike> → 1.2 ; Vision on projectile: <strike>5s</strike> → 10s
                 </ul>
 			
 			<h4>Tanks</h4>
@@ -646,21 +656,23 @@
             
             AA flak: To make gunships a more useful option, the hover ability is now more expensive. Faction with t2 shield have less HP on flak. Target priority changed to reduce annoying behavior, less range, and more <a href="http://recordit.co/VfcGiVdhbU"> muzzle velocity<a/>  to make them be more reliable.
                 <ul>
-                <li>General AA changes: <strike>2.5 firing randomness, 40r</strike> → 4fr, 38r, changed target priority to gunships before anti-air units
-                <li>Added false land weapon, to react -move- on attack command. 
-                </ul>
+                    <li>General AA changes: <strike>2.5 firing randomness, 40r</strike> → 4fr, 38r, changed target priority to gunships before anti-air units
+                    <li>Added false land weapon, to react -move- on attack command. 
+                    </ul>
+               
                 <p>
-                
                 UEF/Cybran:
                     <ul>
-                    <li>Price: <strike>160m 4aoe 20muzzle</strike> → 200m  100dps 3aoe 55 muzzle velocity
-                    <li>UEF<strike>1000HP</strike> → 900HP
+                    <li>Price: <strike>160m 144dps 4aoe 20muzzle</strike> → 200m  100dps 3aoe 55 muzzle velocity
+                    <li>speed <strike>3/2.8sp</strike> → 2.8speed
+                    <li>UEF <strike>1000HP</strike> → 900HP
                     </ul>
-                <p>
                 
+                <p>
                 Aeon/Seraphim:
                     <ul>
                     <li>Price: <strike>160m 4aoe 20muzzle</strike> → 220m 120dps 2.5aoe 60 muzzle velocity
+                    <li>speed <strike>2.6/2.5sp</strike> → 3speed/ 3.4speed on water
                     <li>Aeon<strike>1000HP</strike> → 900HP
                     </ul>
                     
@@ -682,6 +694,7 @@
             <li>UEF: Camera on UEF T1 artillery is a nice feature, so now the UEF has it equipped on its <a href="http://recordit.co/S6emCMbGwT"> missile weapons<a/>, so you can use it to tell what you are shooting at - complementing the turtle-war specialised faction.
                 <ul>
                 <li>Price: <strike>1500e, 1500bt</strike> → 1400e/2100e(aeon/Seraphim), 1400bt
+                <li>Minimal range <strike>5/4/4/3</strike> → 5
                 <p>
                 <li>Evensong: <strike>750HP</strike> → 650HP
                     <ul>
@@ -697,7 +710,7 @@
                     </ul>
                 </ul>
                 <ul>
-                <li>Flapjack: Its missiles are now equiped with cameras: 10aoe 5 seconds duration
+                <li>Flapjack: Its missiles are now equipped with cameras: 7.5aoe 5 seconds duration
                 </ul>
 			
 			<h4>200 Mass Category</h4>
@@ -719,7 +732,7 @@
                     <li>Speed on water gets a 0.85 multiplier
                     </ul>
                 
-                <li>Yenzee: <strike>220m 1320e 50dps 4.3speed</strike> → 200m 2000e 60dps 4speed
+                <li>Yenzyne: <strike>220m 1320e 1300hp 50dps 4.3speed</strike> → 200m 2000e 1250hp 60dps 4speed
                     <ul>
                     <li>Speed on water multiplier: 0.85
                     </ul>
@@ -806,7 +819,7 @@
                 <li>Buildable from naval factories, to make them a more convenient option.
                 <li>Price adjusted to fit the 520m price category.
                 </ul>
-                <li>Spearheads fit 440m the category, and have more aoe make them slightly better against units.
+                <li>Spearheads fit 440m the category, and have more aoe make them slightly better against units. Also have camera on projectile so can see on what are you shooting for. 
                 <ul>
                 <li>Athanah: <strike>540m 4800e 300e drain, 400HP</strike> → 518m 9250e 300e drain, 2000HP buildable from naval factories
                     <ul>
@@ -814,7 +827,7 @@
                     </ul>
                     
                 <li>Absolver: <strike>420m 4800e 75r</strike> → 518m 9250e 80r buildable from naval factories
-                <li>Spearhead: <strike>400m 3000e 1700HP 0,5aoe</strike> → 441m 7875e 1500HP 1aoe
+                <li>Spearhead: <strike>400m 3000e</strike> → 441m 7875e <strike>1700HP 0.5aoe</strike> →  1500HP 1aoe; Add missile camera vision 10 aoe 10s
                 </ul>
 			
 			<h4>520 Mass Category</h4>
@@ -885,6 +898,7 @@
             
                 <ul>
                 <li><strike>800m 8000e 4800bt</strike> → 840m 12000e 6000bt
+                <li>Minimal range <strike>0</strike> → 10
                 </ul>
                 
                 <ul>
@@ -936,6 +950,7 @@
                 <li>Price:  <strike>25 000m 18 750bt 67 000HP</strike> → 28 000m 46666bt 60 000HP
                 <li>The bubble cannon: muzzle velocity <strike>8</strike> → 10
                 <li>3rd gun: <strike>1200dmg 6aoe</strike> → 1200dmg 3aoe
+                <li>AA: <strike>1.5aoe</strike> → 3.5aoe <strike>20muzzle</strike> → 60muzzle; fixed bug with targeting
                 <li>Ion storm: friendly fire disabled! <strike>friendly fire 1000dps 20r 0,1aoe, 30s life time</strike> → 400dps 28r 0.5aoe, 45s life time
                 </ul>
 			
@@ -986,9 +1001,7 @@
 			<h3><img src="http://wiki.faforever.com/images/6/6a/Cybran_SCU.png">SACUs</h3>
             
             Previously OP, the SACUs have received a much needed rebalance in this mod. Here extra care was taken to ensure that all the presets can be used in various situations, and even SACUs without presets. In general SACUs have a more supporting role and work well when mixed in with T3 units.
-            
-            
-            
+
 			<p>
 			<i>Note: Quantum gateways drain 40m/2000e when producing most SACUs</i>
             <p>
@@ -996,7 +1009,7 @@
             <h4>General</h4>
 			Price and range reduced to make SACUs weaker without any upgrades, but worth building like presets, opening a new role for SACUs.
 			<p>With reduced buildpower and more time to be reclaimed SACU there is less chance that SACU spam will reclaim anything that dies immediately after the battle.
-			<p>The death explosions make SACU spam more risky since it could start a chain reaction, also it’s possible to use as a kamikaze weapon. Damage type changed to prevent teleportation snipes of important buildings by dieing next to them.
+			<p>The death explosions make SACU spam more risky since it could start a chain reaction, also it’s possible to use as a kamikaze weapon, especially with RAS upgrade that increase damage. Damage type changed to prevent teleportation snipes of important buildings by dieing next to them.
             
                 <ul>Basic SACUs cost: 1800m 90 000e 4500bt, 25br, 23r, 5HP/s natural regeneration
                     <ul>
@@ -1005,10 +1018,10 @@
                     </ul>
                 <p>The SACU wreck is reclaimable 2x slower than other units.
                 <p>Death explosion: 2500dmg on 10aoe, changed to acu nuke type - doesn’t damage buildings
-                <ul>
-                <li>Rapid fabricator: adds <strike>96</strike> → 100br; Cost: <strike>800m</strike> → 600m 30 000e 1500bt
-                <li>RAS: 4200m 210 000e 10 500bt
-                <li>Teleport: 15 000m 1 500 000e 18750br (drains 20m/2000e/s)
+                    <ul>
+                    <li>Rapid fabricator: adds <strike>96</strike> → 100br; Cost: <strike>800m</strike> → 600m 30 000e 1500bt
+                    <li>RAS: 4200m 210 000e 10 500bt; increase death explosion <strike>2500dmg</strike> → 5000dmg
+                    <li>Teleport: 15 000m 1 500 000e 18750br (drains 20m/2000e/s)
                     </ul>
                 </ul>
 			
@@ -1118,23 +1131,25 @@
             <li>Crash damage is now more predictable - higher tech units deal more crash damage
             <li>Air staging facility: buildable as T1 building, <strike>175m, 2100e, 534bt</strike> →  150m, 1500e, 150bt
             
-            <li> Air staging facilities now can accommodate more planes of higher tech levels at once:
+            <li>Air staging facilities now can accommodate more planes of higher tech levels at once:
                 <ul>
-                <li> For UEF/Cybran staging facilities:
-                <li> ASF: <strike>1</strike> →  4
-                <li> Torpedo Bombers: <strike>2</strike> →  4
-                <li> Aeon T3 Torpedo Bomber: <strike>1</strike> →  2
-                <li> T3 Spy planes: <strike>2</strike> →  4
-                <li> T2 Fighters: <strike>2</strike> →  4
-                <li> T2 Gunships: <strike>2</strike> →  4
-                <li> T3 Gunships: <strike>1</strike> →  2
-                <li> Mercies (still) can't refuel
-                <li> Aeon/Seraphim have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
+                <li>For UEF/Cybran staging facilities:
+                <li>ASF: <strike>1</strike> →  4
+                <li>Torpedo Bombers: <strike>2</strike> →  4
+                <li>Aeon T3 Torpedo Bomber: <strike>1</strike> →  2
+                <li>T3 Spy planes: <strike>2</strike> →  4
+                <li>T2 Fighters: <strike>2</strike> →  4
+                <li>T2 Gunships: <strike>2</strike> →  4
+                <li>T3 Gunships: <strike>1</strike> →  2
+                <li>Mercies (still) can't refuel
+                <li>Aeon/Seraphim have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
                 </ul>
-            <li> Air Staging facilities now repair for free.
+            <li>Air Staging facilities now repair for free.
 			</ul>
             
-            <li> Gunships are not able to fire on air units with ground fire weapon anymore
+            <li>Gunships are not able to fire on air units with ground fire weapon anymore
+            <li>Air units are no longer able to shoot at other landed air units (inties, f/b, asf)
+
 			
 			
 			<h4>Purpose:</h4>
@@ -1176,20 +1191,22 @@
             
             Buffed bombers, to make them easier to use, since they make the game more interesting and to keep them in line since MAA is buffed in this mod. There is now much less reason to hoverbomb since they bombers have a much improved turning circle.
                 <ul>
-                <p>Aeon: Increasing faction diversity, the Aeon bomber is better for single targets, and higher tech units; the emp can also support your army, but it’s less useful for armies, unlike Seraphim with its large aoe.
-                <li>Price:  <strike>80m 2250e 500bt</strike> → 90m 2250e 600bt  
-                <li> <strike>4s reload time, </strike> → 6s reload time 
-                <li>Maneuverabilty improved, target priority changed to engineers (from T1 air units)
-                <li>Removed friendly fire to avoid situations where multiple bombers kill themselves with their own bombs.
-                <p>
-                <li>Sinnve: <strike>4aoe</strike> → 3.5aoe
-                <li>Scorcher: <strike>3aoe, fire time 1.5</strike> → 3.5aoe; fire time 3
-                <li>Shimmer: <strike>200dmg 4aoe</strike> →  400dmg 2.5aoe
-                    <ul>
-                    <li><strike>80m 2250e 500bt</strike> → 105m 2625e 700bt 
-                    <li>Target priorities changed to: engineers -> T2 land AA -> T2 mobile land
-                    <li>Stun: <strike>T1/T2 1,5s 4aoe</strike> → STUN: T1- 3s 7.5aoe, T2- 2s 5aoe, T3- 1s 2.5aoe (not able stun t3 navy)
-                </ul>
+                
+                    <p>Aeon: Increasing faction diversity, the Aeon bomber is better for single targets, and higher tech units; the emp can also support your army, but it’s less useful for armies, unlike Seraphim with its large aoe.
+                    <li>Price:  <strike>80m 2250e 500bt</strike> → 90m 2250e 600bt  
+                    <li> <strike>4s reload time, </strike> → 6s reload time 
+                    <li>Maneuverabilty improved, target priority changed to engineers (from T1 air units)
+                    <li>Removed friendly fire to avoid situations where multiple bombers kill themselves with their own bombs.
+                    
+                    <p>
+                    <li>Sinnve: <strike>4aoe</strike> → 3.5aoe
+                    <li>Scorcher: <strike>3aoe, fire time 1.5</strike> → 3.5aoe; fire time 3
+                    <li>Shimmer: <strike>200dmg 4aoe</strike> →  400dmg 2.5aoe
+                        <ul>
+                        <li><strike>80m 2250e 500bt</strike> → 105m 2625e 700bt 
+                        <li>Target priorities changed to: engineers -> T2 land AA -> T2 mobile land
+                        <li>Stun: <strike>T1/T2 1,5s 4aoe</strike> → STUN: T1- 3s 7.5aoe, T2- 2s 5aoe, T3- 1s 2.5aoe (not able stun t3 navy)
+                    </ul>
                 </ul>
                 
             <h4>Jester</h4>
@@ -1410,11 +1427,11 @@
             
             <h4>Ahwassa</h4>
             
- 			Reduced speed so it's easier to catch up to. Also its range was reduced a little so its not so easy to abuse its hover bombing ability to out-range SAMs. Like other air exps, it got a boost to its AA dps, but we were careful not to make it OP, so it has reduced range because of that.
+ 			Reduced speed so it's easier to catch up to. Also its range was reduced so its not so easy to abuse its hover bombing ability to out-range SAMs. Like other air exps, it got a boost to its AA dps, but we were careful not to make it OP, so it has reduced range because of that.
                 <ul>
                 <li>Price: <strike>48 000m 780 000e 36 000bt</strike> → 40 000m 1 000 000e 50 000bt
-                <li><strike>52000HP 20speed</strike> → 60 000HP 17speed
-                <li>Ground: <strike>20aoe 90r 20s</strike> → 11000dmg 15aoe 80r 15s reload time
+                <li><strike>52000HP 20speed</strike> → 60 000HP 16speed
+                <li>Ground: <strike>20aoe 90r 20s</strike> → 11000dmg 15aoe 60r 15s reload time
                 <li>Anti-Air: <strike>4x450dps 64r</strike> → 4x500AA 45r
                 <li>Crash: 10 000crash dmg 8 aoe 
                 </ul>
@@ -1456,9 +1473,11 @@
             As a whole, surface warfare is largely unchanged, but submarines and other support units should be seen more often.
             
             <ul>
+            <li>Naval intel optimalization to neglect situation where sonar/radar is lower as visual intel
             <li>All T1 attack submarines are now effective against surface ships. Getting mass T1 sub spam can work all the way into the late T3 stage, but expect to be countered.
             <li>T2 Sub Hunters now actually have the role of hunting subs. They have very low HP and very strong torpedo defense for this purpose, and can kite T1 subs
-            <li>Surface ships already have high HP and are now equiped with depth charges, which bypass the sub hunters' torpedo defenses and easily kill them.
+            <li>Surface ships already have high HP and are now equipped with depth charges, which bypass the sub hunters' torpedo defenses and easily kill them.
+            <li>Some naval have torpedo flares but it display as torpedo defence, not any more we add "torpedo flare" on units that have it. 
             <li>To prevent "great submarine micro" where you stack them all in one spot to increase torpedo defense effectiveness, all torpedoes and depth charges have 0.5AOE. Don't stack your submarines. Just don't.
             <li>All torpedo/depth charge weapons have new target priorities which focus subhunters first. This is because they have their torp defense and the least HP and so are optimal targets.
             <li>As always, Seraphim being the faction with no units, they are special and have a T1 submarine which is better against subhunters. Their destroyer now has a reason to be submerged; it acts like an attack submarine.
@@ -1505,26 +1524,28 @@
                 </ul>
             <h4>Submarines</h4>
             
-            T1 Attack submarines get their originally intended role. Their job is to sink ships. And they got some serious buffs to enable that.
+            T1 Attack submarines get their originally intended role. Their job is to sink ships. And they got some serious buffs to enable that.  
                 <ul>
+                <p>T1 submarine are stronger and more expensive units, main reason for this is neglect unit pathfinding problems. 
                 <p>The deck gun range was reduced because it outranged frigates which would have made submarines very strong early game for raiding mexes.
                 <p>The Aeon submarine is faster because it doesn’t have a deck gun, which can be a huge disadvantage.
                 <p>The Seraphim submarine is different as usual. It has less HP but torpedo defense to cover up for it. This defense is very strong in large numbers.
 
-                <li>Price: <strike>360m 2880e 1440bt</strike> → 350m 2800e 1400bt 
-                <li>Intel: <strike>32water-vision 32vision-radius</strike> → 15water-vision 15vision-radius 
-                <li><strike>6speed 32torpedo-range</strike> → 6.5speed 35torpedo-range
-                <li>Torpedo DPS: <strike>37.5</strike> → 50
+                <li>Price: <strike>360m 2880e 1440bt</strike> → 500m 5000e 2000bt 
+                <li>Uniform scale <strike>0.05</strike> → 0.07 (visual size)
+                <li>Intel: <strike>32 water-vision</strike> → 15 water-vision  <strike>32 vision</strike> → 15 vision
+                <li>Torpedo range <strike>32r</strike> → 35r
+                <li>Reload time <strike>4s</strike> → 2s 
+                
+                <p>
+                <li>Aeon <strike>6speed</strike> → 7speed <strike>575hp</strike> → 675hp <strike>37,5dps</strike> → 75dps
+                <li>Cybran <strike>6speed</strike> → 6.5speed <strike>550hp</strike> → 650hp <strike>37,5dps</strike> → 80dps, deck cannon <strike>32r</strike> → 24r 
+                <li>UEF <strike>6speed</strike> → 6speed <strike>600hp</strike> → 700hp <strike>37,5dps</strike> → 75dps, deck cannon <strike>32r</strike> → 30r 
+                <li>Seraphim <strike>6speed</strike> → 6.5speed <strike>400hp</strike> → 550hp <strike>37,5dps</strike> → 75dps, deck cannon <strike>32r</strike> → 24r
                     <ul>
-                    <li>Torpedo reload time <strike>4s</strike> →  2s
+                    <li>torpedo defense <strike>32r</strike> → 35r <strike>10s reload-time</strike> → 2s reload-time
                     </ul>
-                <li>Deck cannon range: <strike>32r</strike> → 24r
-                <li>Aeon T1 submarine speed: <strike>6</strike> → 7
-                <li>Cybran T1 submarine: <strike>525HP</strike> → 550HP
-                <li>Seraphim T1 submarine torpedo defense: <strike>32r 10s reload-time</strike> → 35r 2s reload-time
-                </ul>
-			
-			
+ 
         </div>
         
         
@@ -1543,7 +1564,7 @@
                 <p>Mermaid: These boats provide a huge stealth advantage. The price increase should balance that and the crazy anti-torp stacking they have.
                 <p>Bulwark: Price changed to standardise factory drain values. Lower range on its shield so you need more bulwarks to completely cover your navy. (it's one of the main reasons why UEF navy is OP)
                 
-                <li>Mermaid: <strike>600m 6000e 1500HP 0reg</strike> → 750m 7500e 1900HP 5HP/s reg
+                <li>Mermaid: <strike>600m 6000e 1500HP 0reg</strike> → 750m 7500e 1900HP 5HP/s reg <strike>62sonar 60radar</strike> → 32sonar 32radar
                 <li>Bulwark: <strike>1300m 13000e 5200bt 0reg 120shield-aoe</strike> → 1350m 13500e 5400bt 5HP/s reg 80 shield-aoe
                 </ul>
          
@@ -1584,6 +1605,7 @@
                     <li>Set up correct target priorities on its toggled missiles.
                     </ul>
                 <li>Ithalua flak weapon: <strike>20muzzle 120damage 4aoe</strike> → 30muzzle 100dmg 3aoe
+                <li>Governor class: add camera vision on missile 7.5aoe 10s
                 </ul>
            
             <h4>Destroyers</h4>
@@ -1592,7 +1614,7 @@
                 <ul>
                 <p>Exodus: aoe increased to fix the lack of a T2 land bombardment unit without messing up naval balance.
                 
-                <li><strike>10000bt 45water-vision Torpedoes</strike> → 9000bt 20water-vision Depth-charges
+                <li><strike>10000bt</strike> → 9000bt <strike>Torpedoes</strike> → Depth-charges <strike>32vision 45water-vision 35 radar 37sonar</strike> → 30vision 20water-vision 30radar 32sonar 
                 <li>Exodus Class: <strike>1060/5s 1aoe 75torp dmg 106depth-charge</strike> → 1000dmg/5s 2.5aoe 60depth-charge dps
                 <li>Salem Torpedoes: <strike>100dps</strike> → 70dps
                     <ul>
@@ -1622,7 +1644,7 @@
 			Aircraft carriers got a water vision adjustment to work better as support ships.
             
                 <ul>
-                <li> Water Vision: <strike>36</strike> → 25
+                <li>Intel: <strike>40sonar 36water vision</strike> → 25water vision 85sonar
                 <p>
                 <li>Keefer: <strike>4000m</strike> → 4050m
                 <li>Command Class: <strike>3600m</strike> → 4050m
@@ -1641,7 +1663,7 @@
                     <ul>
                     <li>Torpedo defense: <strike>6.7s reload-time</strike> → 2s reload-time
                     </ul>
-                <li>Ace: <strike>9000m 80000e 20000bt 3750HP  4000HP 3.3sp</strike> → 7000m 105000e 36 000bt 4750HP 4.5sp
+                <li>Ace: <strike>9000m 80000e 20000bt 3750HP  4000HP 3.3sp</strike> → 7000m 105000e 36 000bt 4750HP 4.5sp; Add camera vision on missile 7.5aoe 10s
                 <li>Silencer: <strike>9000m 80000e 20000bt 3750HP 3.3sp</strike> → 7000m 105000e 36 000bt 4500HP 4.5sp
                 <li>Plan B: <strike>10000m 80000e 20000bt 3500HP 3.3sp 225torp dmg 80r, tac missile 4 aoe</strike> → 5250m 78750e 27000bt 5000HP 4.5sp 350 torp dps 65r, tactical missile 3aoe, loses its stealth when firing
                     <ul>
@@ -1656,7 +1678,7 @@
                 <p>Neptune: Price increased to compensate for its power agaisnt T2 navy.
                 <p>Torrent has more HP to bring its stats in line with T3 navy. Increased dps to be almost as good as the same mass in UEF/Seraphim cruisers. More build time to make it more like a T3 unit. It now also has a manual TML launcher that helps give it an edge over T2 Cruiser Bombardment.
                 
-                <li>  <strike>50</strike> → 25 water vision
+                <li>Intel: <strike>110radar 20sonar 50water vision</strike> → 50radar 50sonar 25 water vision
                 <li>Neptune: <strike>7000m 60 000e 25200bt</strike> → 7875m 78750e 31500bt
                     <ul>
                     <li>Beam weapon <strike>1aoe</strike> → 1.5aoe
@@ -1670,11 +1692,13 @@
                 </ul>
                 
             <h4>Battleships</h4>
-            
+                       
                 <ul>
                 <p>Galaxy has more range since Cybran lacked a t3 unit that could outrange T2 stationary arty, and so it got a price increase as well.
+                
                 <p>Summit dps and muzzle velocity reduced to make it more balanced against navy.
-                <li><strike>8000/9000m 54 000e 28 800bt 2/3aoe 50 water vision</strike> → 9000m 90 000e 36 000bt 2.5aoe 25 water vision
+                <li><strike>8000/9000m 54 000e 28 800bt 2/3aoe 50 water vision 20sonar</strike> → 9000m 90 000e 36 000bt 2.5aoe 25 water vision 50sonar
+                
                 <p>
                 <li>Galaxy: <strike>128</strike> → 140r main cannon; reload time <strike>4s</strike> → 1s 
                     <ul>
@@ -1692,6 +1716,7 @@
                 <li>Huaathun: <strike>128r</strike> → 130r
                     <ul>
                     <li>AA reload time<strike>1.1s = 29.1dps</strike> → 2s = 50dps, firing randomness: <strike>2.5</strike> → 1; muzzle velocity:<strike>20</strike> → 30
+                    <li>Nuke minimum range <strike>128r</strike> → 130r (to not have additional circle)
                     </ul>
                 </ul>
             
@@ -1773,9 +1798,7 @@
         <div id="landdefense" class="card">
 
 			<h3><img src="http://wiki.faforever.com/images/e/e0/Cybran_T2_PD.png">Land Defensive buildings</h3>
-            
 
-            
             <h4>T1 Point Defense</h4>
             
             It was too strong against T1 tanks when compared to T2 PD.
@@ -1804,7 +1827,10 @@
                 <li>Friendly fire: <strike>allowed</strike> → Disabled.
                 <li>Artillery now adapts its muzzle velocity to maintain a higher firing arc.
                 <p>
-                <li>Cybran:  2500m 25000e 3125bt 300/3000e for shot; 4750HP, 1,75fr, 150dps, 15s reload time, 10-120range, STUN:10aoe T1-4s T2-3s T3-2s Naval: T1-3s T2-2s T3-1s
+                <li>Cybran:  2500m 25000e 3125bt 300/3000e for shot; 4750HP, 1,75fr, 150dps, 15s reload time, 10-120range
+                    <ul>
+                    <li>STUN:10aoe T1-4s T2-3s T3-2s Naval: T1-3s T2-2s T3-1s
+                    </ul>
                 <li>UEF: 2750m 27500e 3437,5bt 250/2500e for shot; 5250HP, 1,5fr, 175dps, 15-130r
                 <li>Seraphim: 2750m 27500e 3437,5bt 250/2500e for shot; 5000HP, 1,25fr, 175dps, 15-130r
                 <li>Aeon: 3000m 30000e 3750bt, 300/3000e for shot; 5000HP, 1fr, 200dps, 15-140r
@@ -1817,7 +1843,7 @@
                 <ul>
                 <li>AOE: <strike>2</strike> → 3
                 <li>Aeon: 700m <strike>3500e, 700bt, 18ammo</strike> → 7000e, 875bt, 10ammo
-                <li>UEF: 800m <strike>4000e, 800bt, 18ammo</strike> → 8000e, 1000bt, 12ammo
+                <li>UEF: 800m <strike>4000e, 800bt, 18ammo</strike> → 8000e, 1000bt, 12ammo; Add camera vision on missile 10aoe 10s
                 <li>Seraphim: <strike>825m, 4500e, 700bt, 20ammo</strike> → 800m, 8000e, 1000bt, 12ammo
                 <li>Cybran: 850m <strike>5100e, 850bt, 10ammo</strike> → 8500e, 1062.5bt, 8ammo
                 </ul>
@@ -1828,9 +1854,9 @@
                 <li>The Aeon TMD has been (finally) fixed! It will now catch missiles flying over it. They are now the best TMD. However, they trade hp and range for this advantage.
                 <li>Price: <strike>280m 3200e 600bt</strike> → 340m 3400e 425bt
                 <li>UEF/Cybran/Seraphim: <strike>31r</strike> → 32r
-                <li>Aeon: building/cruiser/battleship <strike>turret yaw 0; display range 10; </strike> → turret yaw 0; turreted; display range 15
+                <li>Aeon: building/cruiser/battleship fix was integrate from EQ to official balance
                     <ul>
-                    <li>Projectile  <strike>lifetime 3; acceleration 1; UseGravity=false</strike> → lifetime 4; acceleration -1.25; UseGravity=true
+                    <li>Fixed bug where now no longer deflect nukes
                     </ul>
                 </ul>
             
@@ -1903,23 +1929,20 @@
                 </ul>
             <h4>Cybran Shields</h4>
             
-            
-            
+
                 <ul>
                 <li>ED1:<strike>160m 2000e 600bt 15.53bt 500HP 100e/s 45reg</strike> → 200m 3000e 500bt 12.5br 500HP 40regen 75e/s 18aoe
-                <li>ED2:<strike>300m(460) 3000e 466bt 13,34br 200e/s 500HP 88reg 16s recharge 22aoe</strike> → 200m(400) 3000e(6000) 250bt 12.5br 600HP 80reg 150e/s 18s recharge 20aoe
-                <li>ED3:<strike>800m(1260) 12000e 1067bt 12,23br 300e/s 500HP 112reg 28aoe</strike> → 600m(1000)  9000e(15000) 750bt 25br 700HP 100reg 250e/s 25aoe
+                <li>ED2:<strike>300m(460) 3000e 1066bt 13,34br 200e/s 500HP 88reg 16s recharge 22aoe</strike> → 200m(400) 3000e(6000) 750bt 12.5br 600HP 80reg 150e/s 18s recharge 20aoe
+                <li>ED3:<strike>800m(1260) 12000e 2133bt 12,23br 300e/s 500HP 112reg 28aoe</strike> → 600m(1000)  9000e(15000) 1500bt 20br 700HP 100reg 250e/s 25aoe
                 </ul>
 
             <h4>T3 shields</h4>
             
-            
-            
                 <ul>
-                <li>ED4: <strike>1200m(2460) 24000e 1467bt 11,81br 500HP 130reg 34aoe</strike> → 1400m(2400) 2800e(43000) 1750bt 25br 800HP 120reg 350e/s 35aoe 
+                <li>ED4: <strike>1200m(2460) 24000e 3600bt 11,81br 500HP 130reg 34aoe</strike> → 1400m(2400) 2800e(43000) 2900bt 12.5br 800HP 120reg 350e/s 35aoe 
                 <li>Buildable as a T3 shield.
                 </ul>
-                <li>ED5: <strike>1800m(4060) 26666e 1654bt 500HP 140reg</strike> → 1600m(4000) 32000e(75000) 2000bt 1000HP 140reg 500e/s
+                <li>ED5: <strike>1800m(4060) 26666e 5254bt 500HP 140reg</strike> → 1600m(4000) 32000e(75000) 3900bt 1000HP 140reg 500e/s
                 <li>Aeon: <strike>2400m 44000e 4097bt 300e/s 150reg</strike> → 2400m 48000e 3000bt 300HP 150reg 300e/s
                 <li>UEF: <strike>3000m 50000e 4988bt 400e/s 131reg 44aoe</strike> → 3000m 60000e 3750bt 500HP 130reg 400e/s 45aoe
                 <li>Seraphim: <strike>3600m 60000e 5841bt 600HP 168reg 46aoe</strike> → 3600m 72000e 45000bt 700HP 160reg 500e/s 50aoe
