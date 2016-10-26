@@ -4,6 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="urs0302",
 
+    Defense = {
+        Health = 47000,     --from 47000
+        MaxHealth = 47000,
+    },
     Economy = {
         BuildCostEnergy = 90000,
         BuildCostMass = 9000,
@@ -20,13 +24,13 @@ BlueprintId="urs0302",
             Damage = 225,        --from 900 = 450dps
             DamageRadius = 2.5,    --from 2
             RateOfFire = 1,        --from 0.25
-            MaxRadius = 140,    --from 128
+            MaxRadius = 135,    --from 128
         },
         { --main gun 2
             Damage = 225,        --from 900 = 225dps
             DamageRadius = 2.5,    --from 2
             RateOfFire = 1,
-            MaxRadius = 140,    --from 128
+            MaxRadius = 135,    --from 128
         },
         { --aa 1
             Damage = 20,        -- 120dps

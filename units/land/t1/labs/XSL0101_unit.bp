@@ -5,9 +5,9 @@ Merge = true,
 BlueprintId = "xsl0101",
 
     Economy = {
-        BuildCostEnergy = 375,    --75e/s
-        BuildCostMass = 25,
-        BuildTime = 125,
+        BuildCostEnergy = 300,    --75e/s
+        BuildCostMass = 30,
+        BuildTime = 150,
         MaintenanceConsumptionPerSecondEnergy = 0, --from 5
     },
     Defense = {
@@ -15,17 +15,17 @@ BlueprintId = "xsl0101",
         MaxHealth = 75,
     },
     Physics = {
-        MaxAcceleration = 4.5,
-        MaxBrake = 4.5,
-        MaxSpeed = 4.5,
+        MaxAcceleration = 4.3,
+        MaxBrake = 4.3,
+        MaxSpeed = 4.3,
     },
     Veteran = {
         RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
     },
     Weapon = {
         {
-        Damage = 10,            --20 dps
-        MaxRadius = 13,
+        Damage = 9,             --18 dps
+        MaxRadius = 18,         --from 16
         RateOfFire = 2,
         TargetPriorities = {
                 'SPECIALHIGHPRI',
