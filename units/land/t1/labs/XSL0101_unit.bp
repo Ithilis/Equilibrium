@@ -24,9 +24,9 @@ BlueprintId = "xsl0101",
     },
     Weapon = {
         {
-        Damage = 9,             --18 dps
+        Damage = 6,             --18 dps
         MaxRadius = 18,         --from 16
-        RateOfFire = 2,
+        RateOfFire = 3,
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'RADAR',
