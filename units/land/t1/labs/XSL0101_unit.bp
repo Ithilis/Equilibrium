@@ -14,6 +14,9 @@ BlueprintId = "xsl0101",
         Health = 75,
         MaxHealth = 75,
     },
+    Intel = {
+        StealthWaitTime = 1, --time until the selen cloaks after moving
+    },
     Physics = {
         MaxAcceleration = 4.3,
         MaxBrake = 4.3,
