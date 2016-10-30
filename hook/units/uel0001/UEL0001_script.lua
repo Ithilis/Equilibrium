@@ -7,32 +7,8 @@ UEL0001 = Class(oldUEL0001) {
         RightZephyr = Class(TDFZephyrCannonWeapon) {},
         OverCharge = Class(TDFOverchargeWeapon) {},
         AutoOverCharge = Class(TDFOverchargeWeapon) {},
-        TacMissile = Class(TIFCruiseMissileLauncher) {--adding camera to missiles
-            CreateProjectileAtMuzzle = function(self, muzzle)
-                local proj = TIFCruiseMissileLauncher.CreateProjectileAtMuzzle(self, muzzle)
-                local data = {
-                    Radius = self:GetBlueprint().CameraVisionRadius or 6,
-                    Lifetime = self:GetBlueprint().CameraLifetime or 6,
-                    Army = self.unit:GetArmy(),
-                }
-                if proj and not proj:BeenDestroyed() then
-                    proj:PassData(data)
-                end
-            end,
-        },
-        TacNukeMissile = Class(TIFCruiseMissileLauncher) {--adding camera to missiles
-            CreateProjectileAtMuzzle = function(self, muzzle)
-                local proj = TIFCruiseMissileLauncher.CreateProjectileAtMuzzle(self, muzzle)
-                local data = {
-                    Radius = self:GetBlueprint().CameraVisionRadius or 6,
-                    Lifetime = self:GetBlueprint().CameraLifetime or 6,
-                    Army = self.unit:GetArmy(),
-                }
-                if proj and not proj:BeenDestroyed() then
-                    proj:PassData(data)
-                end
-            end,
-        },
+        TacMissile = Class(TIFCruiseMissileLauncher) {},
+        TacNukeMissile = Class(TIFCruiseMissileLauncher) {},
     },
 
     CreateEnhancement = function(self, enh)
