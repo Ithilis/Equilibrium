@@ -193,7 +193,7 @@ AirUnit = Class(MobileUnit) {
         local bone = 0
 
         --Create companion projectile
-        local proj = self:CreateProjectileAtBone('/Mods/Equilibrium_Balance_Mod/projectiles/ShieldCollider/ShieldCollider_proj', bone)
+        local proj = self:CreateProjectileAtBone('/Mods/Equilibrium_Balance_Mod/projectiles/ShieldCollider/ShieldCollider_proj.bp', bone)
         
 
         -- start following our plane, attaching to a given bone and entity on shield collision
