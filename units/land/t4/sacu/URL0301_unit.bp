@@ -39,7 +39,7 @@ BlueprintId = "url0301",
 
             NewDamageRadius = 1,    --add
             NewDamageMod = 75,            
-            NewMaxRadius = 28,        --from35
+            NewMaxRadius = 33,        --from35
         },
         NaniteMissileSystem = {
             BuildCostEnergy = 30000,
@@ -179,7 +179,7 @@ BlueprintId = "url0301",
                     AppliedToTarget = true,
                     BuffType = 'STUN',
                     Duration = 3,
-                    Radius = 3,
+                    Radius = 2,
                     TargetAllow = 'MOBILE',
                     TargetDisallow = 'TECH3,EXPERIMENTAL,SUBCOMMANDER,COMMAND,WALL',
                 },
@@ -190,7 +190,7 @@ BlueprintId = "url0301",
                     AppliedToTarget = true,
                     BuffType = 'STUN',
                     Duration = 2,
-                    Radius = 2,
+                    Radius = 1,
                     TargetAllow = 'MOBILE',
                     TargetDisallow = 'TECH1,TECH2,EXPERIMENTAL,SUBCOMMANDER,COMMAND,WALL',
                 },

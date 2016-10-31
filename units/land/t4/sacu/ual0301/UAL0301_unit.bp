@@ -392,9 +392,9 @@ UnitBlueprint {
             },
         },
         ShieldHeavy = {
-            BuildCostEnergy = 80000,
-            BuildCostMass = 1600,
-            BuildTime = 4000,
+            BuildCostEnergy = 60000,
+            BuildCostMass = 1200,
+            BuildTime = 3000,
             Icon = 'htsg',
             ImpactEffects = 'AeonShieldHit01',
             MaintenanceConsumptionPerSecondEnergy = 500,
