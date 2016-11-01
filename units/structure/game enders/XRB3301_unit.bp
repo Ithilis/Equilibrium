@@ -56,8 +56,8 @@ BlueprintId = "xrb3301",
         CloakFieldRadius = 2000,    --add
         MaxVisionRadius = 2000, --from 200
         MinVisionRadius = 10,
-        RadarStealthFieldRadius = 200,  --add
-        SonarStealthFieldRadius = 200,  --add
+        RadarStealthFieldRadius = 2000,  --add
+        SonarStealthFieldRadius = 2000,  --add
     },
     Physics = {
         SkirtOffsetX = -1.5,        -- from -0.5

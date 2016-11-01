@@ -11,7 +11,7 @@ BlueprintId = "uab3104",
         MaintenanceConsumptionPerSecondEnergy = 2000,
     },
     Intel = {
-        OmniRadius = 200,    --from 200
+        OmniRadius = 150,    --from 200
         RadarRadius = 500,    --from 600
         VisionRadius = 30,
     },

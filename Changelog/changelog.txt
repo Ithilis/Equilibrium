@@ -126,8 +126,6 @@ ________
 BUILDING
 
 
-
-
 - Aeon hydro now has a toggle production button (turn of power in return for looking at an animation, totally worth it)
 - Aeon T2 Flak, T2 PD, T2 static Artillery now unpack to fire and repack after losing targets
 - optimized aeon unpacking animation code for defensive buildings
@@ -144,6 +142,11 @@ BUILDING
 -- ED3: BuildTime: 1500 (750) Buildrate: 20 (25)
 -- ED4: BuildTime: 2900 (2500) Buildrate: 12.5 (25)
 -- ED5: BuildTime: 3900 (2000) 
+
+- Omny array sensor 150r (200)
+
+- Dark Fall introduce (Soothsayer) as cybran game ender
+-- 2000r visual intel 2000r cloak field 2000r stealth field
 ________
 SYSTEM
 
