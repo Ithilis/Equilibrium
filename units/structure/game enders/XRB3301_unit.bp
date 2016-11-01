@@ -59,10 +59,14 @@ BlueprintId = "xrb3301",
         RadarStealthFieldRadius = 2000,  --add
         SonarStealthFieldRadius = 2000,  --add
     },
+    Interface = {
+        HelpText = '<LOC xrb3301_help>Dark Fall cloak system',
+    },
     Physics = {
         SkirtOffsetX = -1.5,        -- from -0.5
         SkirtOffsetZ = -1.5,
         SkirtSizeX = 8,             -- from 6
         SkirtSizeZ = 8,
     },
+    StrategicIconName = 'icon_experimental_generic',
 }
