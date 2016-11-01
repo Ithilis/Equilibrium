@@ -1,0 +1,68 @@
+--Soothsayer -> Dark Fall, Cybran game ender (intel + cloak device)
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrb3301", 
+
+    Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'CYBRAN',
+        'STRUCTURE',
+        'INTELLIGENCE',
+        'COUNTERINTELLIGENCE',   --add
+        'EXPERIMENTAL',          --from TECH3
+        'OPTICS',
+        'DRAGBUILD',
+        'SIZE16',                --from SIZE12
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYMISC',
+        'SORTINTEL',
+    },
+    Defense = {
+        Health = 7500,
+        MaxHealth = 7500,
+    },
+    Description = '<LOC xrb3301_desc>Dark Fall',
+    Display = {
+        Abilities = {
+            '<LOC ability_stealthfield>Stealth Field',
+            '<LOC ability_cloak>Cloak Field',
+            '<LOC ability_intel>Superior Visual Intel',
+        },
+        Tarmacs = {
+            {
+                DeathLifetime = 30,
+                FadeOut = 5,
+                Length = 0.1,
+                RemoveWhenDead = true,
+                Width = 0.1,
+            },
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 3000000,
+        BuildCostMass = 150000,
+        BuildTime = 62500,
+        MaintenanceConsumptionPerSecondEnergy = 10000,
+    },
+    General = {
+        UnitName = '<LOC xrb3301_name>Dark Fall',
+    },
+    Intel = {
+        CloakFieldRadius = 2000,    --add
+        MaxVisionRadius = 2000, --from 200
+        MinVisionRadius = 10,
+        RadarStealthFieldRadius = 200,  --add
+        SonarStealthFieldRadius = 200,  --add
+    },
+    Physics = {
+        SkirtOffsetX = -1.5,        -- from -0.5
+        SkirtOffsetZ = -1.5,
+        SkirtSizeX = 8,             -- from 6
+        SkirtSizeZ = 8,
+    },
+}
