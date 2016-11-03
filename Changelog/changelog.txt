@@ -32,6 +32,7 @@ LAND
 
 
 - selen energy consumption when toggled 0 [5]
+-- When not fire/move its stealthed. If its toggled then will not shoot automatic, only on order and cloak after target die. 
 -- 30m 300e 150bp (25m 375e 125bt)
 -- 18dps (20) 18r (13) 
 -- 4.3speed (4.5)
@@ -64,9 +65,13 @@ LAND
 -- fixed not leading target and just shooting in completely wrong direction
 
 
+- Sacu
 --Added increased death explosion damage to SACUs with ras upgrade 5000dmg (2500) 
-
-
+- Aeon
+-- 2th shield upgrade 1200m 60 000e 3000bt (1600m 80 000e 4000bt)
+- Cybran 
+-- Gun 33r (28r)
+-- EMP T2 3s stun 2aoe, T3 2s stun 1aoe (3aoe/2aoe)
 ________
 AIR
 
@@ -137,6 +142,7 @@ BUILDING
 
 
 - aeon tmd no longer deflects nukes.
+-- removed duplicate script that was already integrate from Equilibrium to main game 
 
 
 - fixed bug where cybran shields drained 24999 mass on upgrade:
@@ -173,8 +179,6 @@ SYSTEM
 
 - fixed bug with capturing not working (due to bad code with mass storages)
 - removed AIbrain file from code, it seems that it's useless
-
-
 v.36
 -----
 
