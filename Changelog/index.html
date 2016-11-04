@@ -28,7 +28,21 @@
 		</div>
 			
 		<h2>General</h2>
-		
+        
+        <div id="summary" class="card">
+			<h3><img src="http://wiki.faforever.com/images/f/ff/Cybran_Wall.png"> Quick Summary</h3>
+			There are many changes in this mod, but don't worry, you need to remember only a few of them! The rest are designed to bring improvements while not compromising your gameplay.
+			<ul>
+			<li> Mercies deal damage over time! Moving targets receive only a fraction of the damage.
+			<li> Submarine warfare: Subs now counter suface ships; Sub Hunters counter subs and destroyers counter sub hunters!
+            <li> Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.
+			<li> RAS energy income has been nerfed, don't reclaim your pgens afterwards!
+			<li> T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.
+			<li> Veterancy doesn't instant-heal units anymore, don't rely on that when attacking with experimentals or your ACU.
+			</ul>
+			
+		</div>
+        
 		<div id="veterancy" class="card">
 			<h3><img src="http://wiki.faforever.com/images/c/cf/Upgrade_Icon.png">Veterancy</h3>
 			This is the first major change of the mod, which overhauls the veterancy system and also allows it to become a larger part of the game rather than being mostly irrelevant for everything except T4 units and ACUs.
@@ -302,6 +316,9 @@
 			<ul>
 			<li><b>T2:</b> <strike>100m 4000e 500bt +1 -150e, 360HP 370dmg</strike> → 200m 4000e 312,5bt +1m -100e, 500HP, 500dmg
 			<li><b>T3:</b> <strike>3000m 65000e 4988bt +14m -3500e 6000HP, death explosion 14aoe</strike> → 2800m 84000e 5000bt +16m -3000e 5000HP death explosion 10aoe
+                <ul>
+                <li>They now provide a <b>20%</b> adjacency bonus to all structures except quantum gateways.
+                </ul>
 			</ul>
 			<h4>Energy storages</h4>
             Changed adjacency values for energy storage so that it's efficient to build it for economic reasons, not just for overcharging.
@@ -512,6 +529,7 @@
 			<li>T2 units have more concentrated dps in one unit, and have units with special roles
 			<li>T3 units have even more concentrated dps and HP in one unit than T2, and have additional units for special roles.
 			<li>T4 experimentals have a new build-time, which is 33% of their mass spent on units built from a T3 factory, before was experimental build-time was equal to ~12%.
+			<p><li>Units that have personal cloak now feature the cloak effect from BlackOps! (Original work by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth)
 			</ul>
         
         
@@ -1096,6 +1114,10 @@
 			<h3><img src="http://wiki.faforever.com/images/f/fc/Cybran_T2_Airstaging.png">General changes</h3>
             
             <ul>
+            <li>Shields now absorb crash damage from falling wrecks, and now wrecks bounce off of shields!
+            <ul>
+            <li>A shield can absorb up to <b>20%</b> of its maximum HP from a unit - so experimentals can still damage the ground after colliding with shields.
+            </ul>
             <li>Fuel capacity lowered to:
                 <ul>
                 <li><b>T1 Scouts:</b> <strike>500s</strike> → 240s
@@ -1465,7 +1487,8 @@
             As a whole, surface warfare is largely unchanged, but submarines and other support units should be seen more often.
             
             <ul>
-            <li>Naval intel optimalization to neglect situation where sonar/radar is lower as visual intel
+            <li>Units deeper than <b>1 unit</b> underwater no longer recieve any damage from surface weapons! You can still groundfire units in shallow water, but in deep water it has no effect! (Original work by Balthazar)
+            <li>Sonar always has greater or equal range than water-vision, which makes sonar redundant anyway.
             <li>All <b>T1 attack submarines</b> are now effective against <b>surface ships</b>. Getting mass T1 sub spam can work all the way into the late T3 stage, but expect to be countered.
             <li><b>T2 Sub Hunters</b> now actually have the role of hunting <b>subs</b>. They have very low HP and very strong torpedo defense for this purpose, and can kite T1 subs
             <li><b>Surface ships</b> already have high HP and are now equipped with depth charges, which bypass the <b>sub hunters'</b> torpedo defenses and easily kill them.
@@ -1790,7 +1813,7 @@
         <div id="landdefense" class="card">
 
 			<h3><img src="http://wiki.faforever.com/images/e/e0/Cybran_T2_PD.png">Land Defensive buildings</h3>
-
+            
             <h4>T1 Point Defense</h4>
             
             It was too strong against T1 tanks when compared to T2 PD.
@@ -1800,8 +1823,8 @@
                 
             <h4>T2/3 Point Defense</h4>
             
-			<p><b>T2 PD:</b> Adjusted and standardized the prices and build times so they work with all the land changes.
-            <p><b>T3 PD:</b> Nerfed to maintain balance with the nerfed T3 units.
+			<p>T2 PD: Adjusted and standardized the prices and build times so they work with all the land changes.
+            <p>T3 PD: Nerfed to maintain balance with the nerfed T3 units.
             
                 <ul>
                 <li><b>Cybran:</b> <strike>480m 3400e 600bt</strike> → 480m 4800e 600bt
