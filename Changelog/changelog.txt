@@ -131,6 +131,7 @@ ________
 BUILDING
 
 
+-T3 mass fabricators apply 20% discounts to everything except quantum gateways now.
 
 
 - Aeon hydro now has a toggle production button (turn of power in return for looking at an animation, totally worth it)
@@ -162,9 +163,6 @@ SYSTEM
 - fixed mistake in code on Illshavoh missing bracket in weapon line
 
 
-- Removed the errors at startup in the log (harmless) by unhooking the adjacency bonus file so it now hard shadows
-
-
 - Minimize code on support units that is responsible that units are affected on attack command even when don't have weapon (T1/2/3AA, shields, stealth)
 
 
@@ -179,6 +177,8 @@ SYSTEM
 
 - fixed bug with capturing not working (due to bad code with mass storages)
 - removed AIbrain file from code, it seems that it's useless
+
+
 v.36
 -----
 
