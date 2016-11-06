@@ -1,4 +1,4 @@
---T2 submarine Baracuda 
+--T2 submarine Barracuda 
 
 UnitBlueprint {
 Merge = true,
@@ -7,6 +7,15 @@ BlueprintId="xrs0204",
     Defense = {
         Health = 750,
         MaxHealth = 750,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_personalstealth>Personal Stealth',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_submersible>Submersible',
+            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defence
+        },
     },
     Economy = {
         BuildCostEnergy = 7000,

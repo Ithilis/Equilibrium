@@ -1,4 +1,4 @@
---T2 submarine Vespa
+--T2 submarine Vesper
 
 UnitBlueprint {
 Merge = true,
@@ -7,6 +7,14 @@ BlueprintId="xas0204",
     Defense = {
         Health = 1200, -- from 1800, it needs lower hp cos of its absurd torp defense - great vs subs; kinda bad vs ships
         MaxHealth = 1200,
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_submersible>Submersible',
+            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defence
+        },
     },
     Economy = {
         BuildCostEnergy = 7000,

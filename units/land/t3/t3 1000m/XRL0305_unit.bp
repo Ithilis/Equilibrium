@@ -28,7 +28,7 @@ BlueprintId = "xrl0305",
         Abilities = {
             '<LOC ability_amphibious>Amphibious',
             '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes
-            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defense
+            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defence
         },
     },    
     Intel = {

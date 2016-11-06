@@ -9,6 +9,14 @@ BlueprintId="xrs0205",
         MaxHealth = 1900,
         RegenRate = 5,        --from 0
     },
+    Display = {
+        Abilities = {
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_stealthfield>Stealth Field',
+            '<LOC ability_torpedodef>Torpedo Flare',    --from torpedo defence
+        },
+    },
     Economy = {
         BuildCostEnergy = 7500,    --from 6000
         BuildCostMass = 750,    --from 600
