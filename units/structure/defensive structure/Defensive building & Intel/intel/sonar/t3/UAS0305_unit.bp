@@ -2,8 +2,7 @@
 
 UnitBlueprint {
 Merge = true,
-BlueprintId="ues0305",
-
+BlueprintId="uas0305",
 
     Buffs = {
         Regen = {
@@ -28,7 +27,7 @@ BlueprintId="ues0305",
         WaterVisionRadius = 100,    --from 24
     },
     Physics = {
-        MaxAcceleration = 2,    --from 4,5
+        MaxAcceleration = 2,        --from 4,5
         MaxBrake = 2,
         MaxSpeed = 2,
     },
@@ -41,9 +40,8 @@ BlueprintId="ues0305",
     },
     Weapon = {
         {
-            Damage = 120,        --from 75=60dps
-            MaxRadius = 60,        --from45
-            RateOfFire = 0.25,
+            MaxRadius = 45,        --from 32
+            RateOfFire = 0.5,    --from 0,15 = 2s
         },
     },
 }
