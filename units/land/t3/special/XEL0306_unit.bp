@@ -19,6 +19,8 @@ BlueprintId = "xel0306",
             
             Damage = 800,                --from 800 = 240dps
             DamageRadius = 1,            --from 0.5
+            
+            MinRadius = 10,  --from 5
          },
     },
 }
