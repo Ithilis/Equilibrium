@@ -9,9 +9,4 @@ BlueprintId = "ueb2101",
         BuildCostMass = 250,
         BuildTime = 250,
     },
-    Weapon = {
-        {
-            RateOfFire = 3.333,        --from 3
-        },
-    },
 }
