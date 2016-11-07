@@ -15,9 +15,10 @@ BlueprintId = "url0202",
     },
     Weapon = {
         {
+        BeamCollisionDelay = 0.1,   --every 0,1s do 9damage for 1s its 90dmg 
+        BeamLifetime = 1,   --beam exist for 1s, same as rof
         Damage = 9,        --90dps
-        RateOfFire = 5,
-        
+        RateOfFire = 1,
         TurretPitchSpeed = 100,    --from 90
         TurretYawSpeed = 100,    --from 90
         },
