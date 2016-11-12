@@ -56,7 +56,14 @@ LAND
 - T2 mml all got same 5 minimal range [5/4/4/3]
 
 
+- T2 Rhino turret pitch/yaw 10 (0) to not fire on sky in hilly terrain
+-- add script that reduce audio on attack
+
+
 - T3 mobile artillery got 10 minimal range [0]
+
+
+- spearhead got 10 minimal range [5]
 
 
 - Ythotha AA weapon: 
@@ -70,8 +77,10 @@ LAND
 - Aeon
 -- 2th shield upgrade 1200m 60 000e 3000bt (1600m 80 000e 4000bt)
 - Cybran 
--- Gun 33r (28r)
--- EMP T2 3s stun 2aoe, T3 2s stun 1aoe (3aoe/2aoe)
+-- Gun 800m 40000e 2000bt (1000m 50000e 2500bt)
+-- sacu present: 
+--- combat: stealth field + gun + emp (gun + stealth)
+--- stealth: stealth field + gun (stealth + gun + emp)
 ________
 AIR
 
@@ -143,7 +152,7 @@ BUILDING
 
 
 - aeon tmd no longer deflects nukes.
--- removed duplicate script that was already integrate from Equilibrium to main game 
+-- removed duplicate script that was already integrated from Equilibrium to main game 
 
 
 - fixed bug where cybran shields drained 24999 mass on upgrade:
@@ -161,6 +170,8 @@ SYSTEM
 
 
 - fixed mistake in code on Illshavoh missing bracket in weapon line
+
+
 
 
 - Minimize code on support units that is responsible that units are affected on attack command even when don't have weapon (T1/2/3AA, shields, stealth)

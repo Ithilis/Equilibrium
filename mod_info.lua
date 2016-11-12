@@ -1,4 +1,4 @@
-name = "Equilibrium_testing"
+name = "Equilibrium_Beta"
 uid = "DEVELOP!-V37D-4759-3598-EQBALANCEMOD"
 version = 37
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod."
