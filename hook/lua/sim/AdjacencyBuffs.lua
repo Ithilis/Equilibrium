@@ -7,7 +7,7 @@
 
 local AdjBuffFuncs = import('/lua/sim/AdjacencyBuffFunctions.lua')
 
-local adj = {                -- SIZE4     SIZE8   SIZE12    SIZE16   SIZE20
+local newadj = {                -- SIZE4     SIZE8   SIZE12    SIZE16   SIZE20
     T3MassFabricator={
         MassActive=         {-0.2, -0.2, -0.2, -0.2, -0.0225}, -- EQ - made it give proper adjacency to small things like tml, cos why not
     },
@@ -21,9 +21,7 @@ local adj = {                -- SIZE4     SIZE8   SIZE12    SIZE16   SIZE20
     },
 }
 
-adj.Hydrocarbon = adj.T2PowerGenerator
-
-for a, buffs in adj do
+for a, buffs in newadj do
     _G[a .. 'AdjacencyBuffs'] = {}
     for t, sizes in buffs do
         for i, add in sizes do
@@ -47,8 +45,10 @@ for a, buffs in adj do
                 OnBuffAffect = AdjBuffFuncs.DefaultBuffAffect,
                 OnBuffRemove = AdjBuffFuncs.DefaultBuffRemove,
                 Affects = {[t]={Add=add}},
+                SupressDup = true,
             }
-
+            --EQ: we add a SupressDup field which is caught by the metamethods
+            --inside BuffBlueprint and removes the duplicate buff warning
             table.insert(_G[a .. 'AdjacencyBuffs'], name)
         end
     end
