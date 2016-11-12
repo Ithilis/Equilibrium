@@ -15,10 +15,12 @@ BlueprintId = "url0202",
     },
     Weapon = {
         {
-        Damage = 9,        --90dps
+        Damage = 9,        --2x9x5 = 90dps
         RateOfFire = 5,
         TurretPitchSpeed = 100,    --from 90
         TurretYawSpeed = 100,    --from 90
+        TurretPitch = 10,   --from 0 to make rhino able to fire above/below its direction
+        TurretYaw = 10, --from 0
         },
     },
 }
