@@ -291,7 +291,6 @@ URL0301 = Class(CCommandUnit) {
 			    self.CreateTerrainTypeEffects( self, self.IntelEffects.Cloak, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
 			end
         elseif self.StealthEnh and self:IsIntelEnabled('RadarStealthField') and self:IsIntelEnabled('SonarStealthField') then
-            WARN('enabling stealth drain')
             self:SetEnergyMaintenanceConsumptionOverride(self:GetBlueprint().Enhancements['StealthGenerator'].MaintenanceConsumptionPerSecondEnergy or 0)
             self:SetMaintenanceConsumptionActive()
             if not self.IntelEffectsBag then
