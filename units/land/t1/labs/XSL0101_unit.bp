@@ -18,33 +18,33 @@ BlueprintId = "xsl0101",
         StealthWaitTime = 1, --time until the selen cloaks after moving
     },
     Physics = {
-        MaxAcceleration = 4.3,
-        MaxBrake = 4.3,
-        MaxSpeed = 4.3,
+        MaxAcceleration = 4.5,
+        MaxBrake = 4.5,
+        MaxSpeed = 4.5,
     },
     Veteran = {
         RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
     },
     Weapon = {
         {
-        Damage = 6,             --18 dps
-        MaxRadius = 18,         --from 16
-        RateOfFire = 3,
-        TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'RADAR',
-                'MOBILE ENGINNER',
-                'TECH1 MOBILE',
-                'TECH2 MOBILE',
-                'TECH3 MOBILE',
-                'STRUCTURE DEFENSE',
-                'SPECIALLOWPRI',
-                'ALLUNITS',
-            },
-        TurretPitchRange = 180,
-        TurretPitchSpeed = 85,
-        TurretYawRange = 180,
-        TurretYawSpeed = 180,
+            Damage = 6,             --18 dps
+            MaxRadius = 18,         --from 16
+            RateOfFire = 3,
+            TargetPriorities = {
+                    'SPECIALHIGHPRI',
+                    'RADAR',
+                    'MOBILE ENGINNER',
+                    'TECH1 MOBILE',
+                    'TECH2 MOBILE',
+                    'TECH3 MOBILE',
+                    'STRUCTURE DEFENSE',
+                    'SPECIALLOWPRI',
+                    'ALLUNITS',
+                },
+            TurretPitchRange = 180,
+            TurretPitchSpeed = 85,
+            TurretYawRange = 180,
+            TurretYawSpeed = 180,
         },
     },
     SizeX = 0.7,

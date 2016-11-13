@@ -15,10 +15,10 @@ url0301_Cloak_desc="Support Armoured Command Unit (Cloak Preset)"
 url0301_Cloak_help="Enhanced during construction with the Personal Cloaking Generator, Stealth field on 16aoe, EMP Burst and Disintegrator Amplifier."
 url0301_Cloak_name="SACU (Cloak Preset)"
 url0301_Combat_desc="Support Armoured Command Unit (Combatant Preset)"
-url0301_Combat_help="Enhanced during construction with the Disintegrator Emplifier and Stealth Field Generator."
+url0301_Combat_help="Enhanced during construction with the Disintegrator Emplifier, EMP Burst and Stealth Field Generator."
 url0301_Combat_name="SACU (Combatant Preset)"
 url0301_Stealth_desc="Support Armoured Command Unit (Stealth Preset)"
-url0301_Stealth_help="Enhanced during construction with the Stealth Field Generator, EMP Burst and Disintegrator Emplifier."
+url0301_Stealth_help="Enhanced during construction with the Stealth Field Generator and Disintegrator Emplifier."
 url0301_Stealth_name="SACU (Stealth Preset)"
 
 ----Seraphim
