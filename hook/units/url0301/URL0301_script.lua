@@ -68,7 +68,7 @@ URL0301 = Class(CCommandUnit) {
         self:SetMaintenanceConsumptionInactive()
         -- Disable enhancement-based Intels until enhancements are built
         self:DisableUnitIntel('Enhancement', 'RadarStealthField') -- changed to field in equilibrium
-        self:DisableUnitIntel('Enhancement', 'RadarStealthField') -- changed to field in equilibrium
+        self:DisableUnitIntel('Enhancement', 'SonarStealthField') -- changed to field in equilibrium
         self:DisableUnitIntel('Enhancement', 'Cloak')
         self.LeftArmUpgrade = 'EngineeringArm'
         self.RightArmUpgrade = 'Disintegrator'
@@ -290,7 +290,8 @@ URL0301 = Class(CCommandUnit) {
 			    self.IntelEffectsBag = {}
 			    self.CreateTerrainTypeEffects( self, self.IntelEffects.Cloak, 'FXIdle',  self:GetCurrentLayer(), nil, self.IntelEffectsBag )
 			end
-        elseif self.StealthEnh and self:IsIntelEnabled('RadarStealth') and self:IsIntelEnabled('SonarStealth') then
+        elseif self.StealthEnh and self:IsIntelEnabled('RadarStealthField') and self:IsIntelEnabled('SonarStealthField') then
+            WARN('enabling stealth drain')
             self:SetEnergyMaintenanceConsumptionOverride(self:GetBlueprint().Enhancements['StealthGenerator'].MaintenanceConsumptionPerSecondEnergy or 0)
             self:SetMaintenanceConsumptionActive()
             if not self.IntelEffectsBag then

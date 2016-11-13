@@ -2,6 +2,9 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0301", 
 
+    Categories = {
+        'OVERLAYCOUNTERINTEL',
+    },
     Defense = {
         Health = 20000,
         MaxHealth = 20000,
@@ -208,7 +211,7 @@ BlueprintId = "url0301",
             MaxRadius = 60,
             MuzzleVelocity = 30,
             ProjectilesPerOnFire = 3,
-            RateOfFire = 0.333,        --from 0,3 = 3sec
+            RateOfFire = 0.333,        --from 0.3 = 3sec
         },
         {
             Damage = 2500,        --from 1000
