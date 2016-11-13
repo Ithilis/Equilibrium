@@ -17,7 +17,7 @@ BlueprintId = "ual0309",
         StorageMass = 0,
         
         SacrificeMassMult = 0.8,    --from 0.6
-        SacrificeEnergyMult = 3.2,    --from 0.6 = 40x more energy as mass, enginer cost 10x more energy as mass
+        SacrificeEnergyMult = 0.8,    --from 0.6
     },
     Categories = {
         'PRODUCTSC1',

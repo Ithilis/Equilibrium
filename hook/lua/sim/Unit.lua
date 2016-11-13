@@ -9,7 +9,8 @@ Unit = Class(oldUnit) {
 ----------------------------------------------------------------------------------------------
 
     --global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
-    OnStopSacrifice = function(self, target_unit) --we will refund the unused mass by placing it in a wreck
+    OnStartSacrifice = function(self, target_unit)
+        EffectUtilities.PlaySacrificingEffects(self,target_unit)
         local bp = self:GetBlueprint().Economy
         local donatemass = bp.BuildCostMass*bp.SacrificeMassMult
         local donateenergy = bp.BuildCostEnergy*bp.SacrificeEnergyMult
@@ -28,16 +29,57 @@ Unit = Class(oldUnit) {
         --WARN(TargetMER .. ' target mass/energy ratio')
         
         local MDM = TargetMER/OwnMER
+        self.ActMassDonation = math.min(donatemass*MDM, donatemass)
         
-        --WARN(MDM .. ' mass donation multiplier; ' .. math.min(donatemass*MDM, donatemass) .. ' mass actually donated')
+        --WARN(MDM .. ' mass donation multiplier; ' .. self.ActMassDonation .. ' mass actually donated')
         --WARN(donatemass - donatemass*MDM .. 'mass should be refunded')
         
-        local refundamount = math.max((donatemass - donatemass*MDM), 0) --in case the MDM is above 1, we should not make mass out of thin air.
+        --this is how much we should be sacrificing
+        self.RefundAmount = math.max((donatemass - donatemass*MDM), 0) --in case the MDM is above 1, we should not make mass out of thin air.
         
-        if refundamount >= 1 then 
-        self:CreateSacrificeWreckageProp(refundamount)
+        
+        
+        --incase our project has less mass needed to finish it that we are about to donate to it.
+        local buildProjRemain = (1 - target_unit:GetFractionComplete())*tgbp.BuildCostMass
+        
+        WARN('unit fraction completion: ' .. target_unit:GetFractionComplete())
+        WARN('mass needed to complete the project: ' .. buildProjRemain)
+        
+        
+        --because we cant just use GetFractionComplete in OnStopSacrifice we have to track sacrifices on the target unit
+        if not target_unit.MassToBeSacrificed then
+            target_unit.MassToBeSacrificed = 0
         end
         
+        WARN('mass about to be donated: ' .. target_unit.MassToBeSacrificed)
+        
+        --we refund the mass if our unit is about to be finished. we dont refund it if its used to repair a complete unit.
+        if self.ActMassDonation > (buildProjRemain - target_unit.MassToBeSacrificed) and target_unit:GetFractionComplete() ~= 1 then
+            self.RefundAmount = donatemass - math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0)
+            --WARN('refund amount: ' .. self.RefundAmount)
+            --WARN('mass donation with refund into account: ' .. math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0))
+        end
+        
+        --similar case as above, we refund if were trying to repair something thats already nearly full hp
+        if target_unit:GetFractionComplete() == 1 then
+            local repairProjRemain = (1 - (target_unit:GetHealth()/target_unit:GetMaxHealth()))*tgbp.BuildCostMass
+            
+            self.RefundAmount = donatemass - math.max((repairProjRemain - target_unit.MassToBeSacrificed), 0)
+            WARN('refund amount: ' .. self.RefundAmount)
+            --WARN('mass donation with refund into account: ' .. math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0))
+        end
+        
+        
+        target_unit.MassToBeSacrificed = target_unit.MassToBeSacrificed + self.ActMassDonation
+    end,
+    
+    OnStopSacrifice = function(self, target_unit) --we will refund the unused mass by placing it in a wreck
+        if self.RefundAmount >= 1 then
+            --the /0.9 is there since our wreck is at 90% hp of the unit and so it only contains 90% of the mass it should.
+            self:CreateSacrificeWreckageProp(self.RefundAmount/0.9)
+        end
+        --after we sacrifce ourselved we remove our mass from the list.
+        target_unit.MassToBeSacrificed = math.max((target_unit.MassToBeSacrificed - self.ActMassDonation), 0)
         EffectUtilities.PlaySacrificeEffects(self,target_unit)
         self:SetDeathWeaponEnabled(false)
         self:Destroy() -- commenting this doesn't even stop it from disappearing, must be engine things
