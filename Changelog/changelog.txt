@@ -1,4 +1,4 @@
-V. 37
+V. 38
 _______________
 
 
@@ -192,6 +192,11 @@ SYSTEM
 - removed AIbrain file from code, it seems that it's useless
 - removed the (harmless) warnings about duplicate adjacency buffs in the game log
 
+
+v.37
+____
+
+Was hot fix fixing capture that wasnt work
 
 v.36
 -----
