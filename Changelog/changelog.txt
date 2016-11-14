@@ -31,11 +31,10 @@ LAND
 - Reduced ROF of LABs on transports to 75% of normal
 
 
-- selen energy consumption when toggled 0 [5]
+- Selen energy consumption when toggled 0 [5]
 -- When not fire/move its stealthed. If its toggled then will not shoot automatic, only on order and cloak after target die. 
 -- 30m 300e 150bp (25m 375e 125bt)
 -- 18dps (20) 18r (13) 
--- 4.3speed (4.5)
 
 
 -- T1 AA add dummy weapon to react on ground attack
@@ -56,14 +55,15 @@ LAND
 - T2 mml all got same 5 minimal range [5/4/4/3]
 
 
-- T2 Rhino turret pitch/yaw 10 (0) to not fire on sky in hilly terrain
--- add script that reduce audio on attack
+- T2 Rhino 1800hp (1900) 2.6sp ([2.7])
+-- turret pitch/yaw 10 (0) so it can shoot up and down as well.
+-- added a script that reduces sounds spam when the rhino is firing
 
 
 - T3 mobile artillery got 10 minimal range [0]
 
 
-- spearhead got 10 minimal range [5]
+- Spearhead got 10 minimal range [5]
 
 
 - Ythotha AA weapon: 
@@ -73,11 +73,14 @@ LAND
 
 
 - Sacu
---Added increased death explosion damage to SACUs with ras upgrade 5000dmg (2500) 
+-- Added increased death explosion damage to SACUs with ras upgrade 5000dmg (2500) 
 - Aeon
 -- 2th shield upgrade 1200m 60 000e 3000bt (1600m 80 000e 4000bt)
 - Cybran 
 -- Gun 800m 40000e 2000bt (1000m 50000e 2500bt)
+-- EMP stun time T1/T2 2s (3s) T3 1s (2s)
+-- Fixed bug where energy drain on stealth was not working correctly
+-- Fixed bug where stealth field radius was not showing correctly
 -- sacu present: 
 --- combat: stealth field + gun + emp (gun + stealth)
 --- stealth: stealth field + gun (stealth + gun + emp)
@@ -132,7 +135,7 @@ NAVAL
 - Galaxy range 135 (140) [128]
 
 
---Integrated WaterGuard which reduces damage to submerged units (made by Balthazar) - any unit below a depth of 1 takes no damage.
+-- Integrated WaterGuard which reduces damage to submerged units (made by Balthazar) - any unit below a depth of 1 takes no damage.
 
 
 - added 0.5 aoe to neptune depth charges which were missed out
@@ -172,8 +175,6 @@ SYSTEM
 - fixed mistake in code on Illshavoh missing bracket in weapon line
 
 
-
-
 - Minimize code on support units that is responsible that units are affected on attack command even when don't have weapon (T1/2/3AA, shields, stealth)
 
 
@@ -184,10 +185,12 @@ SYSTEM
 
 
 - sacrifice system improved - any mass that was going to be wasted is now dumped on the ground in the form of a wreck
+-- Enginer sacrifice energy multiplier 80% (160/320%)
 
 
 - fixed bug with capturing not working (due to bad code with mass storages)
 - removed AIbrain file from code, it seems that it's useless
+- removed the (harmless) warnings about duplicate adjacency buffs in the game log
 
 
 v.36
