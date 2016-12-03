@@ -34,27 +34,14 @@ BlueprintId = "uaa0107",
         'RECLAIMABLE',
         'TRANSPORTFOCUS',
         'CANNOTUSEAIRSTAGING',
-        'CAPTURE',            --add
     },
     Defense = {
         RegenRate = 5,
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_Capture>Capture',
-        },
     },
     Economy = {
         BuildCostEnergy = 3000,     --4800e
         BuildCostMass = 120,        --120m
         BuildTime = 800,
-        BuildRate = 3,
-        MaxBuildDistance = 2.5,     -- half build distance as engineer 
-    },
-    General = {
-        CommandCaps = {
-            RULEUCC_Capture = true,
-        },
     },
     Physics = {
         FuelUseTime = 300,
