@@ -15,6 +15,7 @@ BlueprintId = "url0304",
             DamageRadius = 5,            --from 7
             FiringRandomness = 1.75,     --from 2
             MinRadius = 10,      --from 0
+            MuzzleVelocity = 24,
             RateOfFire = 0.166,            --from 0.15
         },
     },

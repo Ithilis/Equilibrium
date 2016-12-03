@@ -12,6 +12,7 @@ BlueprintId = "xsl0304",
     Weapon = {
         {
             MinRadius = 10,      --from 0
+            MuzzleVelocity = 24,
         },
     },
 }
