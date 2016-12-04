@@ -1,0 +1,9 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "uea0001",
+    Economy = {
+        BuildCostEnergy = 750,
+        BuildCostMass = 75,
+        BuildTime = 150,
+    },
+}
