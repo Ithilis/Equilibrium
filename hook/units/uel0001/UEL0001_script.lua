@@ -10,6 +10,49 @@ UEL0001 = Class(oldUEL0001) {
         TacMissile = Class(TIFCruiseMissileLauncher) {},
         TacNukeMissile = Class(TIFCruiseMissileLauncher) {},
     },
+    
+    RebuildPod = function(self, PodNumber)
+        if PodNumber == 1 then
+            -- Force pod rebuilds to queue up
+            if self.RebuildingPod2 ~= nil then
+                WaitFor(self.RebuildingPod2)
+            end
+            if self.HasLeftPod == true then
+                self.RebuildingPod = CreateEconomyEvent(self, 750, 75, 15, self.SetWorkProgress) --drones cheaper to rebuild than build
+                self:RequestRefreshUI()
+                WaitFor(self.RebuildingPod)
+                self:SetWorkProgress(0.0)
+                self.RebuildingPod = nil
+                local location = self:GetPosition('AttachSpecial02')
+                local pod = CreateUnitHPR('UEA0001', self:GetArmy(), location[1], location[2], location[3], 0, 0, 0)
+                pod:SetParent(self, 'LeftPod')
+                pod:SetCreator(self)
+                pod:UpdateBuildRate(self.TechUpgrade or 1)
+                self.Trash:Add(pod)
+                self.LeftPod = pod
+            end
+        elseif PodNumber == 2 then
+            -- Force pod rebuilds to queue up
+            if self.RebuildingPod ~= nil then
+                WaitFor(self.RebuildingPod)
+            end
+            if self.HasRightPod == true then
+                self.RebuildingPod2 = CreateEconomyEvent(self, 750, 75, 15, self.SetWorkProgress) --drones cheaper to rebuild than build
+                self:RequestRefreshUI()
+                WaitFor(self.RebuildingPod2)
+                self:SetWorkProgress(0.0)
+                self.RebuildingPod2 = nil
+                local location = self:GetPosition('AttachSpecial01')
+                local pod = CreateUnitHPR('UEA0003', self:GetArmy(), location[1], location[2], location[3], 0, 0, 0)
+                pod:SetParent(self, 'RightPod')
+                pod:SetCreator(self)
+                pod:UpdateBuildRate(self.TechUpgrade or 1)
+                self.Trash:Add(pod)
+                self.RightPod = pod
+            end
+        end
+        self:RequestRefreshUI()
+    end,
 
     CreateEnhancement = function(self, enh)
         ACUUnit.CreateEnhancement(self, enh)
@@ -21,14 +64,16 @@ UEL0001 = Class(oldUEL0001) {
             local pod = CreateUnitHPR('UEA0001', self:GetArmy(), location[1], location[2], location[3], 0, 0, 0)
             pod:SetParent(self, 'LeftPod')
             pod:SetCreator(self)
+            pod:UpdateBuildRate(self.TechUpgrade or 1)
             self.Trash:Add(pod)
             self.HasLeftPod = true
             self.LeftPod = pod
-        elseif enh == 'RightPod' then
+        elseif enh == 'RightPod' then --now spawns the CD-2 because its epic to have both, theyre identical anyway since br is set (cd2 is for scus as well)
             local location = self:GetPosition('AttachSpecial01')
-            local pod = CreateUnitHPR('UEA0001', self:GetArmy(), location[1], location[2], location[3], 0, 0, 0)
+            local pod = CreateUnitHPR('UEA0003', self:GetArmy(), location[1], location[2], location[3], 0, 0, 0)
             pod:SetParent(self, 'RightPod')
             pod:SetCreator(self)
+            pod:UpdateBuildRate(self.TechUpgrade or 1)
             self.Trash:Add(pod)
             self.HasRightPod = true
             self.RightPod = pod
@@ -112,6 +157,13 @@ UEL0001 = Class(oldUEL0001) {
             Buff.ApplyBuff(self, 'UEFACUT2BuildRate')
             -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
             self:updateBuildRestrictions()
+            self.TechUpgrade = 2
+            if self.RightPod then
+                self.RightPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
+            if self.LeftPod then
+                self.LeftPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
         elseif enh =='AdvancedEngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
@@ -123,6 +175,13 @@ UEL0001 = Class(oldUEL0001) {
             end
             -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
             self:updateBuildRestrictions()
+            self.TechUpgrade = 1
+            if self.RightPod then
+                self.RightPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
+            if self.LeftPod then
+                self.LeftPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
         elseif enh =='T3Engineering' then
             local cat = ParseEntityCategory(bp.BuildableCategoryAdds)
             self:RemoveBuildRestriction(cat)
@@ -152,6 +211,13 @@ UEL0001 = Class(oldUEL0001) {
             Buff.ApplyBuff(self, 'UEFACUT3BuildRate')
             -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
             self:updateBuildRestrictions()
+            self.TechUpgrade = 3
+            if self.RightPod then
+                self.RightPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
+            if self.LeftPod then
+                self.LeftPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
         elseif enh =='T3EngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
@@ -162,6 +228,13 @@ UEL0001 = Class(oldUEL0001) {
             self:AddBuildRestriction( categories.UEF * ( categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
             -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
             self:updateBuildRestrictions()
+            self.TechUpgrade = 1
+            if self.RightPod then
+                self.RightPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
+            if self.LeftPod then
+                self.LeftPod:UpdateBuildRate(self.TechUpgrade or 1)
+            end
         elseif enh =='DamageStablization' then
             if not Buffs['UEFACUDamageStablization'] then
                 BuffBlueprint {
