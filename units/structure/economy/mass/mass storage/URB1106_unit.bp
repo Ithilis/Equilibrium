@@ -15,4 +15,5 @@ BlueprintId = "urb1106",
         BuildTime = 187.5,
         StorageMass = 1000,
     },
+    StrategicIconName = 'icon_structureeq_mass',
 }
