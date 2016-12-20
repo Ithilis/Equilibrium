@@ -28,7 +28,7 @@ BlueprintId = "uel0001",
             
             BuildCostEnergy = 50000,        --from 50000    drain 200e/s
             BuildCostMass = 2500,            --from 2400    drain 10m/s
-            BuildTime = 10000,                --from 8400
+            BuildTime = 5000,                --from 8400
         },            
         HeavyAntiMatterCannon = {
             NewMaxRadius = 28,        --from 30
