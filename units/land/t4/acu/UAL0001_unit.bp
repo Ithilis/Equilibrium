@@ -122,7 +122,7 @@ BlueprintId = "ual0001",
         {
         --auto overcharge
             MaxRadius = 23,
-            RateOfFire = 0.25,
+            RateOfFire = 0.2,   --from 0.25=4s to 5s. This is because auto OC is more effective as manual fire even when player get full attention to ACU
             TurretPitchSpeed = 100,
             TurretYawSpeed = 100,
         },

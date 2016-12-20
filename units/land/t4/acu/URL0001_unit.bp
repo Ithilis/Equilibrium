@@ -110,7 +110,7 @@ BlueprintId = "url0001",
         { -- auto overcharge
             DamageType = 'Overcharge',
             MaxRadius = 23,  --from 22 
-            RateOfFire = 0.25,            --from 0.3= 4s
+            RateOfFire = 0.2,   --from 0.25=4s to 5s. This is because auto OC is more effective as manual fire even when player get full attention to ACU
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
