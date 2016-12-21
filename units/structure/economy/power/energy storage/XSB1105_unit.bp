@@ -8,5 +8,6 @@ BlueprintId = "xsb1105",
         BuildCostEnergy = 2000,
         BuildCostMass = 200,
         BuildTime = 250,
+        StorageEnergy = 8000,   --from 5000
     },
 }
