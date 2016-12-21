@@ -26,8 +26,8 @@ BlueprintId = "ual0001",
             NewHealth = 4000,              --from 6000
             NewRegenRate = 25,             --35regen in total
             
-            BuildCostEnergy = 50000,        --from 50000    drain 200e/s
-            BuildCostMass = 2500,            --from 2400    drain 10m/s
+            BuildCostEnergy = 50000,        --from 50000    drain 400e/s
+            BuildCostMass = 2500,            --from 2400    drain 20m/s
             BuildTime = 5000,                --from 8400
         },
         CrysalisBeam = {
@@ -96,7 +96,7 @@ BlueprintId = "ual0001",
         RequirementMult = 0.5,
     },
     Weapon = {
-        {
+        { -- main gun
             MaxRadius = 23,  --from 22 
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -112,21 +112,26 @@ BlueprintId = "ual0001",
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
-        {
+        { -- overcharge
+            Damage = 1000, --variable OC takes care of the rest
             DamageType = 'Overcharge',
+            EnergyDrainPerSecond = 20000,
+            EnergyRequired = 2000,
             MaxRadius = 23,  --from 22 
-            RateOfFire = 0.25,            --from 0,3= 4s
+            RateOfFire = 0.2,            --from 0.3= 5s
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
-        {
-        --auto overcharge
+        { --auto overcharge
+            Damage = 1000, --variable OC takes care of the rest
+            EnergyDrainPerSecond = 20000,
+            EnergyRequired = 2000,
             MaxRadius = 23,
-            RateOfFire = 0.2,   --from 0.25=4s to 5s. This is because auto OC is more effective as manual fire even when player get full attention to ACU
+            RateOfFire = 0.2,
             TurretPitchSpeed = 100,
             TurretYawSpeed = 100,
         },
-        {
+        { -- chrono dampener
             AboveWaterFireOnly = false, --to disable chrono underwater remove this line and _nothing_ else. it firing from seabed layer is correct and prevents cancer.
             AboveWaterTargetsOnly = false, -- to enable use against swagners. yes theyre so swag they need their own line
             Buffs = {
@@ -155,9 +160,9 @@ BlueprintId = "ual0001",
             EnergyDrainPerSecond = 400,        --from 200
             EnergyRequired = 400,            --from 200
         },
-        {
+        { -- death nuke
         },
-        {
+        { -- teleport in
         },
     },
 }

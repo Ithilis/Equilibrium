@@ -34,8 +34,8 @@ BlueprintId = "url0001",
             NewHealth = 4000,              --from 7000hp
             NewRegenRate = 25,             --35regen in total
             
-            BuildCostEnergy = 50000,        --from 50000    drain 200e/s
-            BuildCostMass = 2500,            --from 2400    drain 10m/s
+            BuildCostEnergy = 50000,        --from 50000    drain 400e/s
+            BuildCostMass = 2500,            --from 2400    drain 20m/s
             BuildTime = 5000,                --from 8400
         },
         CloakingGenerator = {
@@ -85,7 +85,7 @@ BlueprintId = "url0001",
         RequirementMult = 0.5,
     },
     Weapon = {
-        { --main gun
+        { -- main gun
             MaxRadius = 23,  --from 22
             TargetPriorities = {
                     'SPECIALHIGHPRI',
@@ -102,15 +102,21 @@ BlueprintId = "url0001",
             TurretYawSpeed = 100,
         },
         { --overcharge
+            Damage = 1000, --variable OC takes care of the rest
+            EnergyDrainPerSecond = 20000,
+            EnergyRequired = 2000,
             MaxRadius = 23,  --from 22 
-            RateOfFire = 0.25,            --from 0.3= 4s
+            RateOfFire = 0.2,            --from 0.3= 5s
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
         { -- auto overcharge
+            Damage = 1000, --variable OC takes care of the rest
+            EnergyDrainPerSecond = 20000,
+            EnergyRequired = 2000,
             DamageType = 'Overcharge',
             MaxRadius = 23,  --from 22 
-            RateOfFire = 0.2,   --from 0.25=4s to 5s. This is because auto OC is more effective as manual fire even when player get full attention to ACU
+            RateOfFire = 0.2,   --5s
             TurretPitchSpeed = 100,    --from 90
             TurretYawSpeed = 100,
         },
