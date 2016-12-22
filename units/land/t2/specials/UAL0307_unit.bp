@@ -4,9 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ual0307",
     
-    AI = { -- this is important - it stops it at the correct range on attack move
-        GuardScanRadius = 30, --make this a bit more than the weapon range, it needs time to stop
-    }, --30 stops it just outside of acu range
     Categories = {
         'PRODUCTSC1',
         'SELECTABLE',
@@ -23,6 +20,7 @@ BlueprintId = "ual0307",
         'VISIBLETORECON',
         'RECLAIMABLE',
         'OVERLAYDEFENSE',
+        'DUMMYGSRWEAPON',
     },
     CommandCaps = {
             RULEUCC_Attack = true,
@@ -54,42 +52,16 @@ BlueprintId = "ual0307",
     },
     Physics = {
         Elevation = 0.3, -- from 0.25 ; making it hover a tiny bit higher, helps it not clip into ground and makes it easier to hit for other units
-        SinkLower = true, -- from false ; should be same as StandUpright, but tbh not sure what this does xD
-        StandUpright = true, -- from false ; makes it always vertical - looks cooler that way, more like a hover unit. ; be careful when putting this on other units, test properly
         WobbleFactor = 0.035, -- from 0.015 ; making it wobble a bit more so you can appreciate its hovering <3
         WobbleSpeed = 0.001, -- unchanged, here in case you want to tweak wobbles later
     },
     Weapon = {
-        { -- special dummy weapon to make the shield stop a certain distance away; requires weapon entry in script as well
-            AutoInitiateAttackCommand = false,
-            CannotAttackGround = false,
-            Damage = 0,
-            DamageFriendly = false,
-            DamageType = 'Normal',
-            DisplayName = 'Target Tracker',
+        { -- dummy weapon
             FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
+                Land = 'Land|Water|Seabed|Sub',
+                Water = 'Land|Water|Seabed|Sub',
             },
-            MaxRadius = 28, -- this is the range the unit will try to stop at ; this is for the attack command. change GuardScanRadius for attack move range.
-            RackBones = {
-                {
-                    MuzzleBones = {
-                        'Turret', -- when moving to new unit, update these to something that exists on the unit
-                    },
-                    RackBone = 'Turret',
-                },
-            },
-            RateOfFire = 1,
-            ReTargetOnMiss = false,
-            TargetCheckInterval = 0.1,
-            TargetPriorities = {
-                'ALLUNITS',
-            },
-            TargetRestrictDisallow = 'UNTARGETABLE',
-            Turreted = false,
-            SlavedToBody = false,
-            WeaponCategory = 'Missile',
+            MaxRadius = 28, -- this is the range the unit will try to stop at
         },
     },
 }
