@@ -19,6 +19,13 @@ BlueprintId = "uel0205",
         MaxSpeed = 2.8,
     },
     Weapon = {
+        { -- dummy weapon
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed|Air',
+                Water = 'Land|Water|Seabed|Air',
+            },
+            MaxRadius = 33,
+        },
         {
             Damage = 25,        --100dps
             DamageRadius = 3,        --from 4
@@ -38,15 +45,6 @@ BlueprintId = "uel0205",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-        },
-        {
-            Damage = 0,                                --its only for same behaviour 
-            FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
-            },
-            MaxRadius = 28,
-            RateOfFire = 0,
         },
     },
 }

@@ -14,19 +14,17 @@ BlueprintId = "delk002",
         BuildTime = 3800,
     },    
     Weapon = {
+        { -- dummy weapon
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed|Air',
+                Water = 'Land|Water|Seabed|Air',
+            },
+            MaxRadius = 33,
+        },
         {
             Damage = 100,                --from 100
             FiringRandomness = 0.1,        --from 0.2
             RateOfFire = 1,
-        },
-        {
-            Damage = 0,                  --its only for same behaviour ad ground fire units
-            FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
-            },
-            MaxRadius = 28,
-            RateOfFire = 0,
-        },        
+        },    
     },
 }

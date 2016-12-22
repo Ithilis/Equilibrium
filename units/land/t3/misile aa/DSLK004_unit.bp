@@ -19,15 +19,7 @@ BlueprintId = "dslk004",
         MaxSpeed = 2.6,
     },
     Weapon = {
-        {
-            BeamCollisionDelay = 0.01,    --from 0,01
-            BeamLifetime = 0.4,            --from 0,6
-            
-            Damage = 200,            --300dps for 4sec 
-            RateOfFire = 1,
-            MaxRadius = 48,
-        },
-        {
+        { -- ground weapon
             BeamCollisionDelay = 0.05,
             BeamLifetime = 0.4,
             
@@ -35,6 +27,14 @@ BlueprintId = "dslk004",
             DamageRadius = 1,
             MaxRadius = 28,
             RateOfFire = 0.1666,    --from 4s, 6s
+        },
+        { -- aa weapon
+            BeamCollisionDelay = 0.01,    --from 0,01
+            BeamLifetime = 0.4,            --from 0,6
+            
+            Damage = 200,            --300dps for 4sec 
+            RateOfFire = 1,
+            MaxRadius = 48,
         },
     },
 }

@@ -16,6 +16,13 @@ BlueprintId = "xsl0205",
         WaterSpeedMultiplier = 1.13,    --same speed as yenze/blaze on water
     },
     Weapon = {
+        { -- dummy weapon
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed|Air|Sub',
+                Water = 'Land|Water|Seabed|Air|Sub',
+            },
+            MaxRadius = 33,
+        },
         {
             Damage = 60,    --120dps
             DamageRadius = 2.5,        --from 4
@@ -35,15 +42,6 @@ BlueprintId = "xsl0205",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-        },
-        {
-            Damage = 0,                                --its only for same behaviour 
-            FireTargetLayerCapsTable = {
-                Land = 'Land|Water|Seabed',
-                Water = 'Land|Water|Seabed',
-            },
-            MaxRadius = 28,
-            RateOfFire = 0,
         },
     },
 }
