@@ -26,3 +26,7 @@ mountpoints = {
     ['textures'] = '/textures',
     ['units'] = '/units',
 }
+hooks = {
+    '/hook',
+    '/balance',
+}
