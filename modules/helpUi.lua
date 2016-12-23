@@ -1,4 +1,4 @@
-local modpath = '/mods/equilibrium_balance_mod/'
+local modpath = '/'
 
 local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
 local UIUtil = import('/lua/ui/uiutil.lua')

@@ -47,8 +47,8 @@ BlueprintId = "xrb2308",
         MaxHealth = 10000,
     },
     Display = {
-        AnimationPermOpen = '/mods/Equilibrium_Balance_Mod/animations/XRB2308_NIL.sca',
-        AnimationDeploy = '/mods/Equilibrium_Balance_Mod/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
+        AnimationPermOpen = '/animations/XRB2308_NIL.sca',
+        AnimationDeploy = '/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
         Abilities = {
             '<LOC ability_sonar>Sonar',
             '<LOC ability_torpedo>Torpedoes',

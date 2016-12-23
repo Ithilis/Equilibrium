@@ -42,7 +42,7 @@ SIFLaanseTacticalMissile01EQ = Class(SLaanseTacticalMissile) {
             WaitSeconds( 0.1 )
                 -- get own values and prepare to create new projectile
             local vx, vy, vz = self:GetVelocity()
-            local ChildProjectileBP = '/Mods/Equilibrium_Balance_Mod/projectiles/SIFLaanseTacticalMissile02EQ/SIFLaanseTacticalMissile02EQ_proj.bp' --this is hardcoded, needs to be changed if you update mod name!
+            local ChildProjectileBP = '/projectiles/SIFLaanseTacticalMissile02EQ/SIFLaanseTacticalMissile02EQ_proj.bp' --this is hardcoded, needs to be changed if you update mod name!
             
             self.DamageData.DamageAmount = (self.DamageData.DamageAmount * DamageMult) --increase the damage since we are going into long range mode
             

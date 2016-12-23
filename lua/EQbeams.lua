@@ -14,6 +14,6 @@ EmptyCollisionBeam = Class(CollisionBeam) {
 
 DummyCollisionBeam = Class(EmptyCollisionBeam) {
     FxBeam = {
-		'/mods/Equilibrium_Balance_Mod/effects/emitters/dummybeam01.bp' --this emitter is actually invisible, so this beam is also completely invisible, unless you add stuff to it later on.
+		'/effects/emitters/dummybeam01.bp' --this emitter is actually invisible, so this beam is also completely invisible, unless you add stuff to it later on.
 	}, --when moving this code anywhere remember to update this url, or it will break everything.
 }
