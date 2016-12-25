@@ -27,6 +27,6 @@ mountpoints = {
     ['units'] = '/units',
 }
 hooks = {
-    '/hook',
+    '/equilibriumhook',
     '/balance',
 }
