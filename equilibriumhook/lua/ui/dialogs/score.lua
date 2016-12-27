@@ -129,18 +129,12 @@ function CreateSkirmishScreen(victory, showCampaign, operationVictoryTable)
     LayoutHelpers.RightOf(elapsedTime, elapsedTimeLabel, 5)
 
     -- Create a Feedback button with a link to the specified forum thread
-    if showCampaign then
-        bg.feedbackButton = UIUtil.CreateButtonStd(bg, '/scx_menu/medium-no-br-btn/medium-uef', "<LOC _Feedback>Post Feedback", 14, 2)
-        LayoutHelpers.AtLeftIn(bg.feedbackButton, bg, 5)
-        LayoutHelpers.AtBottomIn(bg.feedbackButton, bg, 20)
-        Tooltip.AddButtonTooltip(bg.feedbackButton, "CampaignScore_Feedback")
-        bg.feedbackButton.OnClick = function(self, modifiers)
-            OpenURL(operationVictoryTable.opData.feedbackURL)
-        end
-
-        if not operationVictoryTable.opData.feedbackURL then
-            bg.feedbackButton:Disable()
-        end
+    bg.feedbackButton = UIUtil.CreateButtonStd(bg, '/scx_menu/medium-no-br-btn/medium-uef', "<LOC _Feedback>Post Feedback", 14, 2)
+    LayoutHelpers.AtLeftIn(bg.feedbackButton, bg, 5)
+    LayoutHelpers.AtBottomIn(bg.feedbackButton, bg, 20)
+    Tooltip.AddButtonTooltip(bg.feedbackButton, "PostScore_EQ_Feedback")
+    bg.feedbackButton.OnClick = function(self, modifiers)
+        OpenURL('http://forums.faforever.com/viewtopic.php?f=67&t=10004')
     end
 
     -- when a new page is selected, create the page and deal with the tab correctly
