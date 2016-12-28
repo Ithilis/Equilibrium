@@ -523,5 +523,17 @@ Unit = Class(oldUnit) {
             oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
         end
     end, 
+    
+    -------------------------------------------------------------------------------------------
+    --LAYER EVENTS
+    -------------------------------------------------------------------------------------------
+    OnLayerChange = function(self, new, old)
+        oldUnit.OnLayerChange(self, new, old)
+		--for units falling out of a dead transport - they are destined to die, so we kill them and leave the wreck.
+		if self.falling and (new == 'Land' or new == 'Water' or new == 'Sub' or new == 'Seabed') and old == 'Air' then
+			self.falling = nil
+            self:Kill()
+		end
+    end,
 
 }
