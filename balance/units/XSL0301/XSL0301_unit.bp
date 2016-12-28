@@ -172,7 +172,7 @@ BlueprintId = "xsl0301",
             MaxRadius = 23,            --from 25
             RateOfFire = 1,
         },
-        {
+        { --overcharge
             Damage = 6000,                --from 12000
             DamageRadius = 3.5,
             DamageType = 'Overcharge',
@@ -181,19 +181,18 @@ BlueprintId = "xsl0301",
                 Water = 'Land|Water|Seabed',
                 Seabed = 'Land|Water|Seabed',           --Readded Seabed layer caps (Exotic_Retard) so scus can shoot with their feet in the water
             },
-            EnergyDrainPerSecond = 5000,
-            EnergyRequired = 5000,
+            EnergyDrainPerSecond = 10000,
+            EnergyRequired = 1000, --from 5000, now its variable oc
             ManualFire = true,
             MaxRadius = 28,                --from25
             MuzzleVelocity = 25,        --from22 -> as projectile
             RateOfFire = 0.1,            --from 0,2
         },
-        {
-        --auto overcharge
+        { --auto overcharge
             Damage = 6000,                --from 12000
             DamageRadius = 3.5,
-            EnergyDrainPerSecond = 5000,
-            EnergyRequired = 5000,
+            EnergyDrainPerSecond = 10000,
+            EnergyRequired = 1000, --from 5000, now its variable oc
             MaxRadius = 28,                --from25
             MuzzleVelocity = 25,        --from22 -> as projectile
             RateOfFire = 0.1,            --from 0,2
