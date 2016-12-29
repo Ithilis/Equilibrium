@@ -74,7 +74,7 @@ function createUi(parent, posX, posY, height, width, clickFunction)
     LayoutHelpers.AtLeftTopIn(elements.mainFrame, parent, posX, posY)
     elements.mainFrame.Height:Set(height)
     elements.mainFrame.Width:Set(width)
-    elements.mainFrame:SetTexture(modpath..'/textures/transparent.png')
+    elements.mainFrame:SetTexture(modpath..'textures/transparent.png')
     elements.mainFrame:Show()
 
     local helpButton = Button(elements.mainFrame, modpath..'textures/helpButton_up.png', modpath..'textures/helpButton_down.png', modpath..'textures/helpButton_over.png', modpath..'textures/helpButton_up.png')
