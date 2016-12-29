@@ -47,6 +47,10 @@ UEL0001 = Class(oldUEL0001) {
                 pod:SetParent(self, 'RightPod')
                 pod:SetCreator(self)
                 pod:UpdateBuildRate(self.TechUpgrade or 1)
+                --add build restrictions since cd-2 is from the sacu
+                pod:AddBuildRestriction( categories.UEF * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
+                -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+                pod:updateBuildRestrictions()
                 self.Trash:Add(pod)
                 self.RightPod = pod
             end
@@ -74,6 +78,10 @@ UEL0001 = Class(oldUEL0001) {
             pod:SetParent(self, 'RightPod')
             pod:SetCreator(self)
             pod:UpdateBuildRate(self.TechUpgrade or 1)
+            --add build restrictions since cd-2 is from the sacu
+            pod:AddBuildRestriction( categories.UEF * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
+            -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
+            pod:updateBuildRestrictions()
             self.Trash:Add(pod)
             self.HasRightPod = true
             self.RightPod = pod

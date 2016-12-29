@@ -13,14 +13,8 @@ UEA0003 = Class(oldUEA0003) {
     UpdateBuildRate = function(self, parenttechlevel)
         -- change the build rate of the pod based on the acus tech level upgrades.
         -- the acu script calls it on tech upgrade on drone build and rebuild
-        if parenttechlevel ==  2 then
-            self:SetBuildRate(10)
-        elseif parenttechlevel ==  3 then
-            self:SetBuildRate(20)
-        else
-            self:SetBuildRate(5)
-        end
-        
+        local buildRates = {5,10,20}
+        self:SetBuildRate(buildRates[parenttechlevel])
         
         self.MakeUpgFx = self:ForkThread(self.CreateUpgradeEffects)
     end,
