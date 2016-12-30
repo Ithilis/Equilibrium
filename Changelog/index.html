@@ -269,10 +269,9 @@
 			</ul>
 			<h4>Sacrifice system</h4>
             Making the sacrifice system useful. Since engineers cost 5x more energy than mass, and most buildings cost 15x more energy than mass, engineers waste more mass than usual since the mass/energy ratio is different.
-            <p> Additionally, if an engineer assists a project with a lower mass:energy ratio than the engineer, instead of being wasted the leftover mass is left on the ground as a wreck.
+            <p> In Equilibrium, if an engineer assists a project with a lower mass:energy ratio than the engineer, instead of being wasted the leftover mass is left on the ground as a wreck.
 			<ul>
-			<li><b>T1/T2 Aeon engineers:</b> <strike>60</strike> → 80% mass value <strike>60</strike> → 320% energy value
-			<li><b>T3 engineers:</b> 80% mass value 160% energy value
+			<li><b>T1/T2/T3 Aeon engineers:</b> <strike>60</strike> → 80% mass & energy value 
 			<li><b>SACUs:</b> <strike>90</strike> → 80% mass value and <strike>90</strike> → 80% energy value 
 			</ul>
 
@@ -299,10 +298,12 @@
             
 			<h4>Mass storage</h4>
 			<ul>
-			<li><b>Price change:</b> <strike>200m 1500e 250bt 500 storage capacity</strike> → 150m 1500e 187,5bt  1000 storage capacity
+			<li><b>Price change:</b> <strike>200m 1500e 250bt </strike> → 150m 1500e 187.5bt
+			<li><b>Storage capacity:</b> <strike>500m</strike> → 1000m
 			<li><b>Health:</b> <strike>1600</strike> → 750
 			<li><b>Adjacency bonus:</b> <strike>50%</strike> → 25% efficiency when fully surrounded
             <li>The mass they store within them is now lost on death.
+            <li>They now have a new strategic icon - its the same as before but without the tech bar at the bottom, so just like the energy storage.
 			</ul>
 			<h4>Mass extractors</h4>
 			<ul>
@@ -323,6 +324,7 @@
             Changed adjacency values for energy storage so that it's efficient to build it for economic reasons, not just for overcharging.
 			<ul>
 			<li><b>Price:</b> <strike>250m 1200e 200bt</strike> → 200m 2000e 250bt
+			<li><b>Storage capacity:</b> <strike>5000e</strike> → 8000e
 			<li><b>Adjacency bonus:</b> <strike>50%</strike> → +100% efficiency when fully surrounded
 			</ul>
 			<h4>Power generators:</h4>
@@ -368,11 +370,16 @@
                 </ul>
             
 			<h4>Overcharge</h4>
-            
-			To make T2/3 units stronger against ACUs
+            Overchange was a somewhat strange mechanic which was really strong against t2/3 units, and was not obvious to newer players that you require an energy storage to use it.
+            <p> In Equilibrium, overcharge now does variable damage, depending on how much energy is drained. To stop it from being too strong against experimentals but still try to keep the overall energy drain as low as possible, reload time has been increased, so you can't destroy experimentals really quickly if you store up the energy. Overall this is a big nerf to late game OC and a buff to early game OC.
             
                 <ul>
-                <li><b>Reload time:</b> <strike>3.3</strike> → 4s
+                <li>The damage increases in steps of 1000 up to 15 000 per shot
+                <li><b>Energy drained per 1000 damage:</b> 2000, up to 30 000 per shot when dealing 15 000 damage.
+                <li>Special code prevents units from being overkilled and wasting your energy. OC always aims to kill whatever it hits in one shot.
+                <li>Buildings take <b>15%</b> damage from OC, so from <b>150</b> up to <b>2250</b> per shot.
+                <li>ACUs take <b>10%</b> damage from OC, so from <b>100</b> up to <b>1500</b> per shot.
+                <li><b>Reload time:</b> <strike>3.3</strike> → 5s
                 </ul>
 			
 			<h4>Cybran base regeneration</h4>
@@ -397,10 +404,10 @@
 			
 			<h4>T3 upgrade</h4>
             
-            Price changed for to give a constant drain of 10m/s 200e/s, less HP for reason that HP gain from veteracy multiply and then cause problem with Seraphim nano that will survive nuke.
+            Price changed for to give a constant drain of 10m/s 200e/s, and less HP since veterancy has been changed, and it would be a serious gain to the total HP of the ACU, especially for Seraphim with double nano, that would survive a nuke.
             
                 <ul>
-                <li><b>Price:</b> <strike>2400m 8400bt +6000/7000HP</strike> → 2500m 10000bt +4000HP
+                <li><b>Price:</b> <strike>2400m 8400bt +6000/7000HP</strike> → 2500m 5000bt +4000HP
                 </ul>
             
 			<h4>RAS/ARAS</h4>
@@ -452,10 +459,16 @@
 			<h4>UEF upgrades</h4>
             Nano needed a small buff since it was quite bad. The HP helps with survivability and veterancy for the ACU, a true offensive upgrade.
             <p>Compared to Aeon the UEF shield costs less mass but more energy.
+            <p>The shoulder drones got some quality-of-life improvements to make them nicer to use - they now upgrade alongside tech upgrades for your acu, increasing their build power. They are also cheaper to rebuild than to build.
             <p>The Billy is now a more consistent weapon, where it's easier to defend against, but more dangerous against T3 land units. Also get camera vision to watch such nice explosion from first seat!
             
                 <ul>
                 <li><b>Drone:</b> 150m 2250e 300bt
+                    <ul>
+                    <li>Now scale buildpower with acu tech level, with special effects added so show that. This buildpower bonus is lost if the acu tech upgrade is removed.
+                    <li><b>Buildpower T1/2/3:</b> 5/10/20
+                    <li><b>Rebuild cost:</b> 75m 750e 15s (set time)
+                    </ul>
                 <li><b>Nano:</b> 48000e 1200bt
                     <ul>
                     <li>adds +2000HP
@@ -666,7 +679,6 @@
             AA flak: To make gunships a more useful option, the hover ability is now more expensive. Faction with t2 shield have less HP on flak. Target priority changed to reduce annoying behavior, less range, and more <a href="http://recordit.co/VfcGiVdhbU"> muzzle velocity<a/>  to make them be more reliable.
                 <ul>
                     <li><b>General AA changes:</b> <strike>2.5 firing randomness, 40r</strike> → 4fr, 38r, changed target priority to gunships before anti-air units
-                    <li>Added false land weapon, to react -move- on attack command. 
                     </ul>
                
                 <p>
@@ -757,6 +769,7 @@
                 <li><b>Sparky:</b> <strike>225m 1040HP 3sp 17.5br</strike> → 280m 1250HP 2.8sp 20br
                     <ul>
                     <li>Added rebuild function (when they assist a building that gets destroyed, it's rebuilt automatically)
+                    <li>Jamming no longer works in transports
                     </ul>
                 
                 <li><b>Wagner:</b> <strike>300m 1980e 1450HP 100dps</strike> → 280m 2800e 1500HP 3.8sp 30+60dps+10torp dmg on 18/23/20r
@@ -794,7 +807,7 @@
                 <li><b>Riptide:</b> <strike>1980e 1320bt 1700HP 90dps</strike> → 3600e 1800bt 2000HP 120dps
                     <ul>
                     <li>Fixed the buggy jittering/side to side movements when ordered to move back
-                    <li>Movements speed reduced to 85% when over water
+                    <li>Movement speed reduced to 85% when over water
                     </ul>
                 
                 <li><b>Obsidian:</b> <strike>1250HP+1500HP 75s recharge 2.6sp 4s reload time -10e</strike> → 1500HP+1125shield (60s recharge time) 2.65sp 3.3s reload time -1e drain
@@ -907,11 +920,13 @@
                 </ul>
 			
 			
-			<h4>840 Mass Category (T3 artillery)</h4>
+			<h4>840 Mass Category (T3 mobile artillery)</h4>
+            Mobile artillery has not been changed significantly, just some small price adjustments to ensure it has the same role and quality of life changes to make it a little less buggy.
             
                 <ul>
                 <li><b>Price:</b> <strike>800m 8000e 4800bt</strike> → 840m 12000e 6000bt
                 <li><b>Minimum range:</b> <strike>0</strike> → 10
+                <li><b>Muzzle Velocity:</b> <strike>22</strike> → 24
                 </ul>
                 
                 <ul>
@@ -1237,11 +1252,10 @@
                 
             <h4>T1 transports</h4>
             
-            Transports are underused and make the gameplay more dynamic and interesting, so I tried to encourage transport usage. Speed increased since interceptors have more speed, and they can drop into more dangerous territory now.
+            Transports are underused and make the gameplay more dynamic and interesting, so I tried to encourage transport usage. Speed increased since interceptors have more speed, and they can drop into more dangerous territory now. Additionally, any units being transported now leave wrecks correctly if the transport is shot down.
                 <ul>
-                <p>Aeon transport got a capture ability for more faction diversity, and add a potentially interesting tool and new tactics, such as abducting enemy engineers and helping out during island drops.
                 <li><b>Price:</b>  <strike>120m 4800e 800bt 0regen</strike> → 120m 3000e 800bt 5HP/s regeneration
-                <li><b>Aeon T1 transport:</b> Added capture ability with 3br and 2.5range
+                <li><b>Maximum speed:</b>  <strike>10</strike> → 12
                 </ul>
         
         </div>
@@ -1290,7 +1304,7 @@
                 <ul>
                 <p>Target priorities to make using them less frustrating
                 <p>Corsair AA was buffed to be more similar to other T2 bombers (still much worse)
-                <p>Swift winds receive more HP to maintain their advantage as the best T2 AA fighter.
+                <p>Swift winds have a higher price and receive more HP to maintain their advantage as the best T2 AA fighter.
                 
                 <li><b>Price:</b>  <strike>420m 8400e 2400bt</strike> → 350m 7500e 2000bt
                 <li>target priority changed: T3 land mobile AA -> T2 land mobile AA
@@ -1308,7 +1322,7 @@
             <h4>Swift winds</h4>
             
                 <ul>
-                <li><b>Price:</b> <strike>200m 6000e 1600bt</strike> → 210m 4500e 1200bt
+                <li><b>Price:</b> <strike>200m 6000e 1600bt</strike> → 245m 5250e 1550bt
                 <li><b>Maximum Health:</b> <strike>800</strike> → 900
                 </ul>
             
@@ -1323,7 +1337,7 @@
             
             <h4>T2 transports</h4>
             
-			Transports got some regeneration to make them reusable without needing to pay attention to repair them, more speed because interceptors are also faster.
+			Transports got some regeneration to make them reusable without needing to pay attention to repair them, more speed because interceptors are also faster. Additionally, any units being transported now leave wrecks correctly if the transport is shot down.
                 <ul>
                 <li><b>Price:</b>  <strike>300m 12000e 2400bt</strike> → 280m 6000e 1600bt
                 <li><strike>0HP/s regen 15speed 25/0 crash dmg</strike> →  5HP/s regen, 16speed 100dmg 2aoe crash dmg
@@ -1449,7 +1463,7 @@
                 <ul>
                 <li><b>Price:</b> <strike>48 000m 780 000e 36 000bt</strike> → 40 000m 1 000 000e 50 000bt
                 <li><strike>52000HP 20speed</strike> → 60 000HP 16speed
-                <li><b>Ground:</b> <strike>20aoe 90r 20s</strike> → 11000dmg 15aoe 60r 15s reload time
+                <li><b>Ground:</b> <strike>20aoe 90r 20s</strike> → 11000dmg 15aoe 50r 15s reload time
                 <li><b>Anti-Air:</b> <strike>4x450dps 64r</strike> → 4x500AA 45r
                 <li><b>Crash:</b> 10 000crash dmg 8 aoe
                 <li>Improved turning behaviour over base game so its once again possible to hover conveniently.
