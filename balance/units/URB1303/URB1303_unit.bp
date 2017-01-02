@@ -13,7 +13,7 @@ BlueprintId = "urb1303",
         BuildCostEnergy = 120000,
         BuildCostMass = 4000,
         BuildTime = 5000,
-        MaintenanceConsumptionPerSecondEnergy = 1500,
+        MaintenanceConsumptionPerSecondEnergy = 2000,
         ProductionPerSecondMass = 16,
     },
     Weapon = {
