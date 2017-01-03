@@ -255,12 +255,21 @@ Unit = Class(oldUnit) {
                 val = multsTable[buffType][techLevel][1][vetLevel] --we make it use default combat units if its not specified otherwise.
             end
         end
+        
+        if type(val) ~= 'number' then --catch any nonsense with buffs, so we at least make it not crash the script.
+            WARN('Equilibrium: trying to assign a veterancy regen value which isnt a number! Likely due to strange unit categories! Assuming defaults!')
+            if buffType == 'VETERANCYREGEN'  then
+                val = 2 * vetLevel
+            else
+                val = 1.2 --just you know, whatever right?
+            end
+        end
 
         -- This creates a buff into the global bufftable
         -- First, we need to create the Affects section
         local affects = {}
         affects[effectType] = {
-            DoNotFill = effectType == 'MaxHealth',
+            DoNoFill = effectType == 'MaxHealth',
             Add = 0,
             Mult = 0,
         }
@@ -281,7 +290,7 @@ Unit = Class(oldUnit) {
     end,
     
     FindTechLevel = function(self)
-        for k, cat in pairs({'TECH1', 'TECH2', 'TECH3', 'EXPERIMENTAL', 'COMMAND', 'SUBCOMMANDER'}) do
+        for k, cat in pairs({'EXPERIMENTAL', 'SUBCOMMANDER', 'COMMAND', 'TECH1', 'TECH2', 'TECH3'}) do
             if EntityCategoryContains(ParseEntityCategory(cat), self) then return cat end
         end
     end,
