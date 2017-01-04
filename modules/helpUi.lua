@@ -33,9 +33,9 @@ local settings = {
         "1. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
         "2. Submarine combat: Subs counter suface ships; Sub Hunters counter subs; Destroyers counter sub hunters!",
         "3. Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.",
-        "4. RAS energy income has been nerfed, don't reclaim your pgens afterwards!",        
+        "4. Overcharge now does variable damage from 1000-15000 and drains 2k-30k energy accordingly.",        
         "5. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
-        "6. Veterancy doesn't instant-heal units anymore. Units share experience from kill.",
+        "6. Veterancy doesn't instant-heal units anymore. Units share experience from kills.",
     }
 }
 

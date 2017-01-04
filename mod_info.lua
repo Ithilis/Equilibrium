@@ -19,12 +19,9 @@ mountpoints = {
     ['balance'] = '/balance',
     ['equilibriumhook'] = '/equilibriumhook',
     ['animations'] = '/animations',
-    ['effects'] = '/effects',
-    ['lua'] = '/lua',
     ['modules'] = '/modules',
     ['projectiles'] = '/projectiles',
     ['textures'] = '/textures',
-    ['units'] = '/units',
 }
 hooks = {
     '/equilibriumhook',
