@@ -12,7 +12,7 @@ BlueprintId = "ueb1303",
         BuildCostEnergy = 120000,
         BuildCostMass = 4000,
         BuildTime = 5000,
-        MaintenanceConsumptionPerSecondEnergy = 2000,
+        MaintenanceConsumptionPerSecondEnergy = 1500,
         ProductionPerSecondMass = 16,
     },
     Weapon = {
