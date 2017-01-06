@@ -134,7 +134,7 @@ function CreateSkirmishScreen(victory, showCampaign, operationVictoryTable)
     LayoutHelpers.AtBottomIn(bg.feedbackButton, bg, 20)
     Tooltip.AddButtonTooltip(bg.feedbackButton, "PostScore_EQ_Feedback")
     bg.feedbackButton.OnClick = function(self, modifiers)
-        OpenURL('http://forums.faforever.com/viewtopic.php?f=67&t=10004')
+        OpenURL('http://forums.faforever.com/viewforum.php?f=79')
     end
 
     -- when a new page is selected, create the page and deal with the tab correctly
