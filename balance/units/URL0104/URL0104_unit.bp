@@ -9,9 +9,9 @@ BlueprintId="url0104",
         MaxHealth = 200,
     },
     Economy = {
-        BuildCostEnergy = 200,
-        BuildCostMass = 40,
-        BuildTime = 200,
+        BuildCostEnergy = 250,
+        BuildCostMass = 50,
+        BuildTime = 250,
     },
     Intel = {
         VisionRadius = 20, -- 18
@@ -25,10 +25,15 @@ BlueprintId="url0104",
         CanFireFromTransport = true, --from false
     },
     Weapon = {
-        {    --target painter
-            MaxRadius = 35, --from 32
+        {    --GF
+            Damage = 9,    -- from 10
+            FiringRandomness = 0.45, --this code is ussles while we have homming missile
+            MaxRadius = 23, --from 18 
         },   
-        {    --AA
+        {    --target painter
+            MaxRadius = 35, --from 32 
+        },
+        {   --AA
             Damage = 13,                    --26dps
             FireTargetLayerCapsTable = {
                 Air = 'Air',
@@ -37,12 +42,6 @@ BlueprintId="url0104",
             },
             MaxRadius = 35,                    --from 32, because dont have speed ; its also set in script. if you change this, dont forget to update it there as well.
             MuzzleVelocity = 35,    --from 15
-            
-        },
-        {   --GF
-            Damage = 9,    --from 20dps
-            FiringRandomness = 0.45, --this code is ussles while we have homming missile
-            MaxRadius = 23, --from 18
         },
     },
 
