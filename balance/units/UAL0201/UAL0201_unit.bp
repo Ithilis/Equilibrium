@@ -5,13 +5,13 @@ Merge = true,
 BlueprintId = "ual0201",
 
     Economy = {
-        BuildCostEnergy = 250,
-        BuildCostMass = 50,
-        BuildTime = 250,
+        BuildCostEnergy = 275,
+        BuildCostMass = 55,
+        BuildTime = 275,
     },
     Defense = {
-        Health = 200,    --from 255/140
-        MaxHealth = 200,
+        Health = 205,    --from 255/140
+        MaxHealth = 205,
     },
     Physics = {
         MaxAcceleration = 2.8,
@@ -32,7 +32,7 @@ BlueprintId = "ual0201",
     Weapon = {
         {
         MaxRadius = 23,            --from 26
-        Damage = 50,            --25dps from 26
+        Damage = 48,            --24dps from 26
         RateOfFire = 0.5,
         },
     },

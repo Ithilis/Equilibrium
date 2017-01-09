@@ -5,23 +5,22 @@ Merge = true,
 BlueprintId = "uel0201",
 
     Economy = {
-        BuildCostEnergy = 250,
-        BuildCostMass = 50,
-        BuildTime = 250,
+        BuildCostEnergy = 300,
+        BuildCostMass = 60,
+        BuildTime = 300,
     },
     Defense = {
         Health = 400,
         MaxHealth = 400,
     },
     Physics = {
-        MaxAcceleration = 3.3,
-        MaxSpeed = 3.3,             --from 3,4
-        MaxSteerForce = 3.3, 
+        MaxAcceleration = 3.4,
+        MaxSpeed = 3.4,             --from 3,4
+        MaxSteerForce = 3.4, 
     },
     Weapon = {
         {
-        Damage = 30,        --from 24 = 20dps
-        RateOfFire = 0.667,   --from 1s = 1,5s
+        Damage = 22,        --from 24 = 22dps
         },
     },
 }
