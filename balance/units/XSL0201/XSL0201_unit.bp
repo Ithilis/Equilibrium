@@ -5,9 +5,9 @@ Merge = true,
 BlueprintId = "xsl0201",
 
     Economy = {
-        BuildCostEnergy = 275,
-        BuildCostMass = 55,
-        BuildTime = 275,
+        BuildCostEnergy = 250,
+        BuildCostMass = 50,
+        BuildTime = 250,
     },
     Defense = {
         Health = 370,
@@ -20,7 +20,8 @@ BlueprintId = "xsl0201",
     },
     Weapon = {
         {
-        Damage = 29,        --from 32 its 22dps
+        Damage = 20,        --from 32 its 22dps
+        RateOfFire = 1.1,   --from 1,3s
         },
     },
 }

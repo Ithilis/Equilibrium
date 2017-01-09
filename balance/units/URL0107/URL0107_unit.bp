@@ -5,26 +5,26 @@ Merge = true,
 BlueprintId = "url0107",
 
     Economy = {
-        BuildCostEnergy = 275,
-        BuildCostMass = 55,
-        BuildTime = 275,
-        BuildRate = 1.5,    --from 1
+        BuildCostEnergy = 250,
+        BuildCostMass = 50,
+        BuildTime = 250,
+        BuildRate = 2,    --from 1
     },
     Defense = {
-        Health = 330,
-        MaxHealth = 330,
+        Health = 300,
+        MaxHealth = 300,
     },
     Physics = {
-        MaxAcceleration = 3.6,
-        MaxSpeed = 3.6,         --from 3.7
-        MaxSpeedReverse = 3.6, 
-        MaxSteerForce = 3.6, 
+        MaxAcceleration = 3.7,
+        MaxSpeed = 3.7,         --from 3.7
+        MaxSpeedReverse = 3.7, 
+        MaxSteerForce = 3.7, 
     },
     StrategicIconName = 'icon_land1_directfire',
     Weapon = {
         {
-        Damage = 10,        --from 8 = 22dps
-        RateOfFire = 2.2,        --from 3
+        Damage = 10,        --from 8 = 25dps
+        RateOfFire = 2.5,        --from 3 =0,4s
         },
     },
 }
