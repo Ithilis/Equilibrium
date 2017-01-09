@@ -17,15 +17,15 @@ BlueprintId = "urs0202",
         BuildTime = 7800,
     },
     Weapon = {
-        {   --target painter beam
-            MaxRadius = 75, --from 75 
-        },
         {   --GF
             Damage = 50,    --from 92 =  100dps now
             DamageRadius = 1,
             MaxRadius = 80,
             MuzzleVelocity = 30,
             RateOfFire = 1,
+        },
+        {   --target painter beam
+            MaxRadius = 75, --from 75 
         },
         {   --AA
             Damage = 115,

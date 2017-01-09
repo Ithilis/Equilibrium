@@ -19,8 +19,16 @@ BlueprintId = "drlk001",
         MaxSpeed = 2.6,
     },
     Weapon = {
-        {   --target painter
-            MaxRadius = 52,
+        {   --GF
+            Damage = 30,    --100dps
+            FiringRandomness = 0,        --from 1
+            MaxRadius = 38,                --from 25
+            MuzzleVelocity = 10,
+            MuzzleVelocityReduceDistance = 30,
+            RateOfFire = 1.667,
+        },
+        {  --target painter
+            MaxRadius = 52, 
         },
         {   --AA
             Damage = 100,
@@ -32,14 +40,6 @@ BlueprintId = "drlk001",
             RateOfFire = 1.667,
             TargetCheckInterval = 0.1,      --from 0.3
             TrackingRadius = 1.4,           --from 1, it was 1,4 in past before zock, dont know why they change it
-        },
-        {   --GF
-            Damage = 30,    --100dps
-            FiringRandomness = 0,        --from 1
-            MaxRadius = 38,                --from 25
-            MuzzleVelocity = 10,
-            MuzzleVelocityReduceDistance = 30,
-            RateOfFire = 1.667,
         },
     },
 }
