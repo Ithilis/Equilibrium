@@ -8,8 +8,8 @@ BlueprintId = "url0401",
         RequirementMult = 0.5,
     },
     Defense = {
-        Health = 25000,
-        MaxHealth = 25000,
+        Health = 30000,
+        MaxHealth = 30000,
         RegenRate = 15,
     },
     Display = {
@@ -40,8 +40,8 @@ BlueprintId = "url0401",
                     },
                     AppliedToTarget = true,
                     BuffType = 'STUN',
-                    Duration = 2.5,
-                    Radius = 10,
+                    Duration = 4.5,
+                    Radius = 12,
                     TargetAllow = 'TECH1',
                     TargetDisallow = 'TECH2,WALL',
                 },
@@ -54,8 +54,8 @@ BlueprintId = "url0401",
                     },
                     AppliedToTarget = true,
                     BuffType = 'STUN',
-                    Duration = 2,
-                    Radius = 10,
+                    Duration = 3.5,
+                    Radius = 12,
                     TargetAllow = 'TECH2',
                     TargetDisallow = 'WALL',
                 },
@@ -68,29 +68,31 @@ BlueprintId = "url0401",
                     },
                     AppliedToTarget = true,
                     BuffType = 'STUN',
-                    Duration = 1.5,
-                    Radius = 10,
+                    Duration = 2.5,
+                    Radius = 12,
                     TargetAllow = 'TECH3',
                     TargetDisallow = 'WALL',
                 },
             },
             CollideFriendly = false,
-            Damage = 1000,                    --from 3000 = 500dps
+            Damage = 1500,                          --from 3000 = 500dps
             DamageFriendly = true,
-            DamageRadius = 5,                --from 7
-            EnergyDrainPerSecond = 1000,    --from 2000
+            DamageRadius = 6,                       --from 7
+            EnergyDrainPerSecond = 1000,            --from 2000
             EnergyRequired = 1000,
-            FiringRandomness = 0.35,            --from 0.3
-            FiringTolerance = 2,            --from 0
+            FiringRandomness = 0.30,                --from 0.3
+            FiringTolerance = 2,                    --from 0
             LeadTarget = true,
-            MaxRadius = 200,                --from 330
-            MinRadius = 35,                    --from 50
-            MuzzleVelocity = 120,            --from 160
-            RateOfFire = 0.5,                --from 0.53
+            MaxRadius = 200,                        --from 330
+            MinRadius = 35,                         --from 50
+            MuzzleVelocity = 120,                   --from 160
+            RateOfFire = 0.33333,                   --from 0.53
             FireTargetLayerCapsTable = {
                 Land = 'Land|Water|Seabed',
                 Seabed = 'Land|Water|Seabed',
             },
+            WeaponRepackTimeout = 2,
+            WeaponUnpackAnimationRate = 5,
         },
     },
 }
