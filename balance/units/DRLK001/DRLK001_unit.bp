@@ -4,6 +4,22 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "drlk001", 
 
+    Categories = {
+        'PRODUCTDL',
+        'SELECTABLE',
+        'BUILTBYTIER3FACTORY',
+        'CYBRAN',
+        'MOBILE',
+        'LAND',
+        'TECH3',
+        'ANTIAIR',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'BOT',
+        'OVERLAYANTIAIR',
+        'OVERLAYDIRECTFIRE',
+        'DUMMYGSRWEAPON', --added to make its GSR longer
+    },
     Defense = {
         Health = 1800,      --from 1900
         MaxHealth = 1800,   --from 1900
