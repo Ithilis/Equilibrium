@@ -4,6 +4,11 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xrl0302",
 
+    AI = {
+        TargetBones = {
+            'torso',
+        },
+    },
     Economy = {
         BuildCostEnergy = 3600,    --100e per sec
         BuildCostMass = 360,    --20m per sec
@@ -37,6 +42,9 @@ BlueprintId = "xrl0302",
         MaxHealth = 300,
         RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
     },
+    SizeX = 0.45,
+    SizeY = 0.5, --make it just a tiny bit bigger so shots dont miss it as much
+    SizeZ = 0.65,
     Transport = {
         TransportClass = 2,
     },
