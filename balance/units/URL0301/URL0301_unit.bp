@@ -63,7 +63,7 @@ BlueprintId = "url0301",
             BuildCostMass = 1800,
             BuildTime = 4500,
 
-            NewRegenRate = 295,        --from 400
+            NewRegenRate = 245,        --from 400
         },
         StealthGenerator = {
             BuildCostEnergy = 10000,
