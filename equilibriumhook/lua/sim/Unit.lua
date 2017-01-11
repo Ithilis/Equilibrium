@@ -120,13 +120,126 @@ Unit = Class(oldUnit) {
 ---------------
 ----VETERANCY------
 ---------------
-
-    OnCreate = function(self)
+    OnCreate = function(self) --this isnt great in terms of compatibility but we call on create to improve its performance.
+    
         self.Instigators = {}
         self.totalDamageTaken = 0
-        self.techLevel = self:FindTechLevel()
-        oldUnit.OnCreate(self)
+        self.techLevel = self:FindTechLevel() --this bit added in eq
+        
+        Entity.OnCreate(self)
+        --Turn off land bones if this unit has them.
+        self:HideLandBones()
+        --Set number of effects per damage depending on its volume
+        local x, y, z = self:GetUnitSizes()
+        local vol = x*y*z
+
+        self:ShowPresetEnhancementBones()
+        local damageamounts = 1
+        if vol >= 20 then
+            damageamounts = 6
+            self.FxDamageScale = 2
+        elseif vol >= 10 then
+            damageamounts = 4
+            self.FxDamageScale = 1.5
+        elseif vol >= 0.5 then
+            damageamounts = 2
+        end
+        self.FxDamage1Amount = self.FxDamage1Amount or damageamounts
+        self.FxDamage2Amount = self.FxDamage2Amount or damageamounts
+        self.FxDamage3Amount = self.FxDamage3Amount or damageamounts
+        self.DamageEffectsBag = {
+            {},
+            {},
+            {},
+        }
+        --Set up effect emitter bags
+        self.MovementEffectsBag = {}
+        self.IdleEffectsBag = {}
+        self.TopSpeedEffectsBag = {}
+        self.BeamExhaustEffectsBag = {}
+        self.TransportBeamEffectsBag = {}
+        self.BuildEffectsBag = TrashBag()
+        self.ReclaimEffectsBag = TrashBag()
+        self.OnBeingBuiltEffectsBag = TrashBag()
+        self.CaptureEffectsBag = TrashBag()
+        self.UpgradeEffectsBag = TrashBag()
+        self.TeleportFxBag = TrashBag()
+
+        --Store targets and attackers for proper Stealth management
+        self.Targets = {}
+        self.WeaponTargets = {}
+        self.WeaponAttackers = {}
+
+        --Set up veterancy
+        self.xp = 0
+        --self.Sync.xp = self.xp
+        self.VeteranLevel = 0
+
+        self.debris_Vector = Vector( 0, 0, 0 )
+
+        --Get unit blueprint for setting variables
+        local bp = self:GetBlueprint()
+        --Define Economic modifications
+        local bpEcon = bp.Economy
+        self:SetConsumptionPerSecondEnergy(bpEcon.MaintenanceConsumptionPerSecondEnergy or 0)
+        self:SetConsumptionPerSecondMass(bpEcon.MaintenanceConsumptionPerSecondMass or 0)
+        self:SetProductionPerSecondEnergy(bpEcon.ProductionPerSecondEnergy or 0)
+        self:SetProductionPerSecondMass(bpEcon.ProductionPerSecondMass or 0)
+        self.Dollah = bpEcon.MassCost
+        if self.EconomyProductionInitiallyActive then
+            self:SetProductionActive(true)
+        end
+
+        self.Buffs = {
+            BuffTable = {},
+            Affects = {},
+        }
+
+        local bpVision = bp.Intel.VisionRadius
+        self:SetIntelRadius('Vision', bpVision or 0)
+
+        self:SetCanTakeDamage(true)
+        self:SetCanBeKilled(true)
+
+        local bpDeathAnim = bp.Display.AnimationDeath
+        if bpDeathAnim and table.getn(bpDeathAnim) > 0 then
+            self.PlayDeathAnimation = true
+        end
+
+        --Used for keeping track of resource consumption
+        self.MaintenanceConsumption = false
+        self.ActiveConsumption = false
+        self.ProductionEnabled = true
+        self.EnergyModifier = 0
+        self.MassModifier = 0
+
+        --Cheating
+        if self:GetAIBrain().CheatEnabled then
+            AIUtils.ApplyCheatBuffs(self)
+        end
+
+        self.Dead = false
+
+        self:InitBuffFields()
+        self:OnCreated()
+
+        --Ensure transport slots are available
+        self.attachmentBone = nil
+
+        -- Set up Adjacency container
+        self.AdjacentUnits = {}
+
+        self.Repairers = {}
+        
+        --this bit also added in eq, its lets us have a dynamic cost and change it on the fly if we need to.
+        self.BuildCostM = bpEcon.BuildCostMass
+        self.BuildCostE = bpEcon.BuildCostEnergy
+        self.BuildT = bpEcon.BuildTime
     end,
+
+
+
+
     
     DoTakeDamage = function(self, instigator, amount, vector, damageType)
         -- Keep track of instigators, but only if it is a unit
@@ -151,8 +264,17 @@ Unit = Class(oldUnit) {
     
     -- Tell any living instigators that they need to gain some veterancy
     VeterancyDispersal = function(unitKilled)
+    
+    -- We use a value stored in a table for support for changing mass cost on the fly, which is needed for upgrades
         local bp = unitKilled:GetBlueprint()
-        local mass = bp.Economy.BuildCostMass
+        local mass = 0
+        
+        if unitKilled.BuildCostM then
+            mass = unitKilled.BuildCostM
+        else -- Super redundancy and bulletproofing - if the value is missing due to mod nonsense overwriting OnCreate we don't break
+            WARN('Equilibrium: did not find unit price in unit table! finding values from blueprint!')
+            mass = bp.Economy.BuildCostMass
+        end
         
         -- Allow units to count for more or less than their real mass if needed.
         mass = mass * (bp.Veteran.ImportanceMult or 1)
