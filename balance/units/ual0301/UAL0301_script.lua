@@ -183,8 +183,8 @@ UAL0301 = Class(CommandUnit) {
         self.BuildCostE = bp.Economy.BuildCostEnergy + e
         self.BuildT = bp.Economy.BuildTime + t
         
-        WARN('enhancement mass/energy/time: ' .. m .. ', ' .. e .. ', ' .. t)
-        WARN('total mass/energy/time: ' .. self.BuildCostM .. ', ' .. self.BuildCostE .. ', ' .. self.BuildT)
+        --WARN('enhancement mass/energy/time: ' .. m .. ', ' .. e .. ', ' .. t)
+        --WARN('total mass/energy/time: ' .. self.BuildCostM .. ', ' .. self.BuildCostE .. ', ' .. self.BuildT)
     end,
 
 
