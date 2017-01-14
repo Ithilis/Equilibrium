@@ -30,12 +30,12 @@ local settings = {
         "- This mod aims to improve balance while keeping the same feel of the game. Just play normally.",
         "- However here are some things which you might want to take into account while playing:",
         "",
-        "1. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
-        "2. Submarine combat: Subs counter suface ships; Sub Hunters counter subs; Destroyers counter sub hunters!",
+        "1. Veterancy doesn't instant-heal units anymore, but get more max hp. Units share experience from kills.",
+        "2. Overcharge now does variable damage from 1000-15000 and drains 2k-30k energy accordingly.",
         "3. Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.",
-        "4. Overcharge now does variable damage from 1000-15000 and drains 2k-30k energy accordingly.",        
-        "5. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
-        "6. Veterancy doesn't instant-heal units anymore. Units share experience from kills.",
+        "4. Submarine combat: Subs counter suface ships; Sub Hunters counter subs; Destroyers counter sub hunters.",       
+        "5. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
+        "6. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
     }
 }
 
