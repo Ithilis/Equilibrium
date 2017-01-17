@@ -5,22 +5,22 @@ Merge = true,
 BlueprintId = "xsl0201",
 
     Economy = {
-        BuildCostEnergy = 275,
-        BuildCostMass = 55,
-        BuildTime = 275,
+        BuildCostEnergy = 250,
+        BuildCostMass = 50,
+        BuildTime = 250,
     },
     Defense = {
-        Health = 370,
-        MaxHealth = 370,
+        Health = 360,
+        MaxHealth = 360,
     },
     Physics = {
         MaxAcceleration = 3.5,    --from 3,6
         MaxBrake = 3.5,
-        MaxSpeed = 3.4,            --from3,5
+        MaxSpeed = 3.4,            --from 3,5
     },
     Weapon = {
         {
-        Damage = 29,        --from 32 its 22dps
+        Damage = 30,        --from 32 its 23dps
         },
     },
 }
