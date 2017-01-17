@@ -29,7 +29,7 @@ BlueprintId = "uel0106",
     Weapon = {
         {
         Damage = 8.5,            --25.5dps
-        MaxRadius = 13,
+        MaxRadius = 15,
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'RADAR',
@@ -44,6 +44,6 @@ BlueprintId = "uel0106",
             },
         },
     },
-    SizeX = 0.7,
-    SizeZ = 0.7,
+    SizeX = 0.8,
+    SizeZ = 0.8,
 }

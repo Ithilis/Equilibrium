@@ -38,16 +38,16 @@ BlueprintId = "url0106",
         MaxBrake = 4.3,
         MaxSpeed = 4.3,
     },
-    SizeX = 0.7,
-    SizeY = 0.6,
-    SizeZ = 0.7,
+    SizeX = 0.8,
+    SizeY = 0.7,
+    SizeZ = 0.8,
     Veteran = {
         RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
     },
     Weapon = {
         {
             Damage = 8,    --24dps
-            MaxRadius = 13,
+            MaxRadius = 15,
             MuzzleVelocity = 25,
             RateOfFire = 1,
             TargetPriorities = {
