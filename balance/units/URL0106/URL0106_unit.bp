@@ -15,7 +15,7 @@ BlueprintId = "url0106",
             Duration = 1.5,
             Radius = 6,
             TargetAllow = 'MOBILE, LAND',
-            TargetDisallow = 'TECH3, COMMAND, EXPERIMENTAL',
+            TargetDisallow = 'TECH3, COMMAND, EXPERIMENTAL, AIR',
         },
     },
     Defense = {
