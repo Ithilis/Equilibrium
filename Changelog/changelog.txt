@@ -1,3 +1,74 @@
+v. 40
+____________
+
+- T2 Cybran Cruiser fix wrong weapon bracket
+-- toggled AA weapon to GF weapon turret YAW range 135 [360]
+
+- T3 Cybran mAA fix problem with wrong weapon bracket
+-- proper guard scan radius
+
+- cybran T1 maa 50m 250e 250bt (40m 200e 200bt)
+-- fix problem with wrong weapon bracket
+
+- mantis 55m 275e 275bt (50m 250e 250bt)
+-- 3,6sp (3,5) 
+-- rof 2,2 (2) = 22dps (20)
+
+- fire beetles proper hitboxes
+
+- Cybran SACu Nano 245hp/s (295)
+
+- scatis  
+-- 30 000hp (25000)
+-- rof 3s (1,5)
+-- 600dps (500)
+-- aoe 6 (7)
+-- firing randomnes 0,3 (0,35)
+-- EMP 3,5s/2,5s/1,5s (2,5/2/1,5)
+--- emp aoe 12 (10)
+-- faster unpack/pack animation
+
+- T3 mas fab 4000m 120000e 5000bt (2800m 84000e 4375btt) 
+-- drain 1500e (2500e)
+
+- mass storages get new icon (to not confuse with t1 mex)
+- energy storages store 8000e [(5000e)]
+
+- variable OC for ACUs implemented
+-- in steps of 1000 damage, draining 2000 energy on each “charge”up to 15000 damage for 30000 energy drain per shot.
+- variable OC for sera SACU implemented 
+-- in steps of 1000 damage, draining 1000 energy on each “charge”up to 6000 damage for 6000 energy drain per shot.
+-- do 10% dmg to ACU (100-1500)
+-- do 15% dmg to Structure (150-2250)
+- ACU OC reload time 5s (4s)
+- ACU Auto OC reload time 5s (4s)
+
+- Swift wind: 245m 5250e 1550bt (210m)
+
+- Aeon T1 transport capture ability removed
+
+- Ahwassa main bomb range: 50 (60)
+
+-Units being transported now fall to the ground and become wrecks
+
+- UEF acu drone upgrades
+-- Rebuild Price: 75m 1125e (150m 2250e)
+-- Buildpower now scales with acu tech level: 5,10,20 for T1,T2,T3
+--Added upgrade animation to show this
+
+- ACU T3 upgrade build time: 5000bt (10000bt)
+
+- T3 Mobile arty muzzle velocity: 24 (22)
+
+- Sparky jamming no longer works on transport
+
+-T3 Mass fabs get reworked to not be so strong in grids
+-Price: 4000m 120000e 5000bt (2800m 84000e 4375bt)
+- code fo riptide and blaze optimized and cleaned
+- Fix AA/Shield/Stealth since it was implemented into the base game
+- folder structure rebuilt to work as a featured mod with minor adjustments
+
+
 V. 38
 _______________
 
