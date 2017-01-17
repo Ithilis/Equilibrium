@@ -11,25 +11,25 @@ BlueprintId = "uel0303",
         MaintenanceConsumptionPerSecondEnergy = 1,
     },
     Defense = {
-        Health = 2000,                --3000hp in total
+        Health = 2000,                --3500hp in total
         MaxHealth = 2000,
         Shield = {
-            ShieldMaxHealth = 1000,
+            ShieldMaxHealth = 1500,
             ShieldRechargeTime = 45,
             ShieldRegenRate = 10,
         },
     },
     Weapon = {
         {
-        Damage = 84,                --210dps
+        Damage = 72,                --180dps
         MaxRadius = 23,
         RateOfFire = 2.5,
         },
     },
     Physics = {
-        MaxAcceleration = 3.5,
-        MaxBrake = 3.5,
-        MaxSpeed = 3.5,
+        MaxAcceleration = 2.7,
+        MaxBrake = 2.7,
+        MaxSpeed = 2.7,
     },
     AI = {
         TargetBones = {

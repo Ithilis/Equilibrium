@@ -10,9 +10,9 @@ BlueprintId = "uel0202",
         BuildTime = 1000,
     },
     Physics = {
-        MaxAcceleration = 2.9,  --from 3
-        MaxSpeed = 2.9,
-        MaxSpeedReverse = 2.9,
+        MaxAcceleration = 2.7,  --from 3
+        MaxSpeed = 2.7,
+        MaxSpeedReverse = 2.7,
     },
     Weapon = {
         {
