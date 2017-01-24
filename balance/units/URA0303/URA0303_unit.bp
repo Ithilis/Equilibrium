@@ -35,13 +35,8 @@ BlueprintId = "ura0303",
         FuelUseTime = 360,
     },
     Weapon = {
-        {
+        { -- AA 1
             Damage = 225,
-            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
-                Air = 'Air',
-                Land = 'Air',
-                Water = 'Air',
-            },
             RateOfFire = 0.666,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -57,7 +52,7 @@ BlueprintId = "ura0303",
             TurretPitchRange = 135,
             TurretYawRange = 135,
         },
-        {
+        { -- AA 2
             Damage = 225,
             RateOfFire = 0.666,
             TargetPriorities = {

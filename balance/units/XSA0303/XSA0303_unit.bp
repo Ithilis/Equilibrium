@@ -20,13 +20,8 @@ BlueprintId = "xsa0303",
         FuelUseTime = 360,
     },
     Weapon = {
-        {
+        { -- AA
             Damage = 455,             --303 dps
-            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
-                Air = 'Air',
-                Land = 'Air',
-                Water = 'Air',
-            },
             RateOfFire = 0.666,        --from 1s to 1.5s
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -42,7 +37,7 @@ BlueprintId = "xsa0303",
             TurretPitchRange = 135,    --from 55
             TurretYawRange = 135,    --from 55
         },
-        {
+        { -- Crash Damage
             Damage = 250,
             DamageRadius = 1.5,
             DisplayName = 'Air Crash',
