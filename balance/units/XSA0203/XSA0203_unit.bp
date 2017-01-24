@@ -27,7 +27,7 @@ BlueprintId = "xsa0203",
         FuelUseTime = 300,
     },
     Weapon = {
-        {
+        { --ground fire weapon
             Damage = 20,                --from12 = 80dps
             DamageRadius = 0.5,            --from 0
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
@@ -37,8 +37,9 @@ BlueprintId = "xsa0203",
             MaxRadius = 24,                --from 22r
             ProjectilesPerOnFire = 2,    --from 4
             RateOfFire = 1,                --from 1.25 = 1,5s
+            TargetRestrictDisallow = 'UNTARGETABLE',
         },
-        {
+        { --ground fire weapon
             Damage = 20,                --from12
             DamageRadius = 0.5,            --from 0
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
@@ -48,6 +49,7 @@ BlueprintId = "xsa0203",
             MaxRadius = 24,                --from 22r
             ProjectilesPerOnFire = 2,    --from 4
             RateOfFire = 1,                --from 1.25 = 1,5s
+            TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
         },
         {
             Damage = 250,

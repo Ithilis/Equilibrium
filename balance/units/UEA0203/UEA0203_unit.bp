@@ -21,13 +21,14 @@ BlueprintId = "uea0203",
         TransportClass = 1,
     },
     Weapon = {
-        {
+        { --ground fire weapon
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
         },
-        {
+        { --Crash Damage
             Damage = 250,
             DamageRadius = 2,
             DisplayName = 'Air Crash',
