@@ -56,7 +56,7 @@ BlueprintId = "uea0305",
         FuelUseTime = 300,            --from800
     },
     Weapon = {
-        {
+        { --Ground fire weapon
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
@@ -64,8 +64,9 @@ BlueprintId = "uea0305",
             FiringRandomness = 0,          --from0,3
             RateOfFire = 2,                --from2,5
             TargetCheckInterval = 0.5,     --from0,27
+            TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
         },
-        {
+        { --AA
             Damage = 25,                   --from32=50dps
             MaxRadius = 50,                --from44
             MuzzleVelocity = 90,           --from45
@@ -83,7 +84,7 @@ BlueprintId = "uea0305",
                 'ALLUNITS',
             },
         },
-        {
+        { --Crash Damage
             Damage = 500,
             DamageRadius = 3,
         },

@@ -350,7 +350,7 @@ UnitBlueprint {
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-            TargetRestrictDisallow = 'HIGHALTAIR, UNTARGETABLE',
+            TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
             TurretBoneDualMuzzle = 'Turret_Down_Muzzle_02',
             TurretBoneDualPitch = 'Turret_Down_Barrel_02',
             TurretBoneMuzzle = 'Turret_Down_Muzzle_01',

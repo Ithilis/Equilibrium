@@ -16,7 +16,7 @@ BlueprintId = "xra0105",
         FuelUseTime = 240,
     },
     Weapon = {
-        {
+        { --ground fire weapon
             Damage = 22,    --from 16 =55dps
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
@@ -24,6 +24,7 @@ BlueprintId = "xra0105",
             },
             MaxRadius = 20,
             RateOfFire = 2.5,    --from3 = 0,4s
+            TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
         },
         {
         },
