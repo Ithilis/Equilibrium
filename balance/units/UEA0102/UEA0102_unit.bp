@@ -16,12 +16,7 @@ BlueprintId = "uea0102",
         FuelUseTime = 240,
     },
     Weapon = {
-        {
-            FireTargetLayerCapsTable = { --make it unable to shoot at landed aircraft
-                Air = 'Air',
-                Land = 'Air',
-                Water = 'Air',
-            },
+        { -- AA
         },
         {
             Damage = 50,        --crash dmg
