@@ -11,8 +11,8 @@ BlueprintId = "url0107",
         BuildRate = 1.5,    --from 1
     },
     Defense = {
-        Health = 330,
-        MaxHealth = 330,
+        Health = 320,
+        MaxHealth = 320,
     },
     Physics = {
         MaxAcceleration = 3.7,
@@ -23,8 +23,8 @@ BlueprintId = "url0107",
     StrategicIconName = 'icon_land1_directfire',
     Weapon = {
         {
-        Damage = 9,        --from 8 = 22.5dps
-        RateOfFire = 2.5,        --from 3
+        Damage = 7,        --from 7 = 23.3dps
+        RateOfFire = 3,        --from 3
         },
     },
 }

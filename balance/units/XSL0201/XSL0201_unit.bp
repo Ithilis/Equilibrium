@@ -14,8 +14,8 @@ BlueprintId = "xsl0201",
         MaxHealth = 360,
     },
     Physics = {
-        MaxAcceleration = 3.5,    --from 3,6
-        MaxBrake = 3.5,
+        MaxAcceleration = 3.4,    --from 3,6
+        MaxBrake = 3.4,
         MaxSpeed = 3.4,            --from 3,5
     },
     Weapon = {
