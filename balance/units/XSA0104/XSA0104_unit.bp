@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "xsa0104", 
 
     Air = {
-        MaxAirspeed = 16,        --from15 for not be catch by interceptor that easy
+        MaxAirspeed = 15,        --from15
     },
     Defense = {
         RegenRate = 5,
