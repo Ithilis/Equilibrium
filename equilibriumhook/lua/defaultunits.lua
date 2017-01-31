@@ -1,19 +1,20 @@
+local AIUtils = import('/lua/ai/aiutilities.lua')
 
 
-
-
-
--- ok so what is being changed here is only the OnKilled function inside airunit, to give veterancy according to the new vet system.
--- what is extra strange is that this file is being hooked. but if we delete these other classes then it gives and error and doesnt work.
--- so we have them here as well. whatever. better be safe than sorry.
-
-
-
-
-
+local AIUtils = import('ai/aiutilities.lua')
+local Utilities = import('/lua/utilities.lua')
+local AIBuildStructures = import('/lua/ai/aibuildstructures.lua')
+local UnitUpgradeTemplates = import('/lua/upgradetemplates.lua').UnitUpgradeTemplates
+local StructureUpgradeTemplates = import('/lua/upgradetemplates.lua').StructureUpgradeTemplates
+local Behaviors = import('/lua/ai/aibehaviors.lua')
+local AIAttackUtils = import('/lua/AI/aiattackutilities.lua')
+local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
+local SPAI = import('/lua/ScenarioPlatoonAI.lua')
 --------------------------------------------------------------
 --  AIR UNITS
 ---------------------------------------------------------------
+--veterancy system added
+--auto refuel toggle button added
 AirUnit = Class(MobileUnit) {
 
     -- Contrails
@@ -29,6 +30,8 @@ AirUnit = Class(MobileUnit) {
     OnCreate = function(self)
         MobileUnit.OnCreate(self)
         self.HasFuel = true
+        self:SetAutoRefuel(true) --on by default
+        --TODO: make this only work for units that have the dock order available.
         self:AddPingPong()
     end,
 
@@ -199,6 +202,103 @@ AirUnit = Class(MobileUnit) {
         -- start following our plane, attaching to a given bone and entity on shield collision
         proj:Start(self, bone, callback)
         self.Trash:Add(proj)
+    end,
+
+    SetAutoRefuel = function(self, auto)
+        --WARN('callbackreached unit, setting autorefuel to:'..repr(auto))
+        self.Sync.AutoRefuel = auto
+        self.AutoRefuel = auto
+        
+        --self.AlreadyOrdered = false --reset the ordered flag if we toggle all the buttons
+        
+        if self.AutoRefuel then
+            if not self.AutoFuelThread then
+                self.AutoFuelThread = self:ForkThread(self.AutoRefuelThread)
+            end
+        else
+            if self.AutoFuelThread then
+                KillThread(self.AutoFuelThread)
+                self.AutoFuelThread = nil
+            end
+        end
+    end,
+
+    AutoRefuelThread = function(self)
+        while self.AutoRefuel == true do
+            --WARN('checking for refuel need 3 ')
+            --WARN(self:GetEntityId())
+            if self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < .6) then
+                --WARN('criteria for fueling met, nice')
+                
+                --ideally we would check the command queue to avoid refitting units that already have the command queued
+                --but that needs to go ui side to even run the command which seems pretty absurd
+                --and doing this with a flag would just mean that we need to reset it on command given?
+                --if not self.AlreadyOrdered then
+                    --WARN('ordering refit')
+                    self:AirUnitRefit()
+                --end
+            else
+                --WARN('resetting ordered status')
+                --self.AlreadyOrdered = false
+                --if we dont meet the criteria for refueling we cant be ordered
+                --this also resets the flag after the unit is fueled
+            end
+            
+            WaitSeconds(15)
+        end
+    end,
+
+    AirUnitRefit = function(self)
+        local aiBrain = self:GetAIBrain()
+        # Find air stage
+        if aiBrain:GetCurrentUnits( categories.AIRSTAGINGPLATFORM ) > 0 then
+            local unitPos = self:GetPosition()
+            local plats = AIUtils.GetOwnUnitsAroundPoint( aiBrain, categories.AIRSTAGINGPLATFORM, unitPos, 400 )
+            if table.getn( plats ) > 0 then
+                --WARN('found platforms')
+                --table.sort(plats, VDist2(unitPos[1], unitPos[3], platPos[1], platPos[3]))
+                table.sort(plats, function(a,b)--sort all our staging platforms by distance
+                    local platPosA = a:GetPosition()
+                    local platPosB = b:GetPosition()
+                            --local tempDist = VDist2( unitPos[1], unitPos[3], platPos[1], platPos[3] )
+                    local distA = VDist2(unitPos[1], unitPos[3], platPosA[1], platPosA[3])
+                    local distB = VDist2(unitPos[1], unitPos[3], platPosB[1], platPosB[3])
+                    
+                    return distA < distB
+                end)
+                
+                local closest = self:FindPlatforms(plats)
+                
+                if closest then
+                    local plat = aiBrain:MakePlatoon( '', '' )
+                    aiBrain:AssignUnitsToPlatoon( plat, {self}, 'Attack', 'None' )
+                    --WARN('issuing commands')
+                    IssueStop( {self} )
+                    IssueClearCommands( {self} )
+                    IssueTransportLoad( {self}, closest )
+                    --self.AlreadyOrdered = true
+                end
+            end
+        end
+    end,
+
+    FindPlatforms = function(self, plats)
+    --find the first platform in our list thats not empty. 
+    --the list is pre-sorted so it will find the closest one as well.
+        for k,v in plats do
+            if not v.Dead then
+                local roomAvailable = false
+                if EntityCategoryContains( categories.CARRIER, v ) then
+                    --roomAvailable = v:TransportHasAvailableStorage( self )
+                else
+                    roomAvailable = v:TransportHasSpaceFor( self )
+                end
+                if roomAvailable then
+                        return v
+                end
+            end
+        end
+        return false
     end,
 }
 
