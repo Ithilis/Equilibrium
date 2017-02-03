@@ -1,4 +1,6 @@
 local AIUtils = import('/lua/ai/aiutilities.lua')
+local GetRandomFloat = import('utilities.lua').GetRandomFloat
+
 --------------------------------------------------------------
 --  AIR UNITS
 ---------------------------------------------------------------
@@ -214,6 +216,11 @@ AirUnit = Class(MobileUnit) {
     end,
 
     AutoRefuelThread = function(self)
+        --when turned on this spreads the wait time around so planes dont look for empty staging platforms in the same tick
+        --this causes them to bunch up instead of landing nicely, and spam transport commands.
+        --this is only an issue when they are spawned in large numbers, or you toggle the button on a lot of planes at a time
+        local waitTime = GetRandomFloat(0, 5)
+        WaitSeconds(waitTime)
         while self.AutoRefuel == true do
             --WARN('checking for refuel need')
             if (self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < .6)) and not self.AlreadyAttached then
