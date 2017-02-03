@@ -1,18 +1,9 @@
 local AIUtils = import('/lua/ai/aiutilities.lua')
-
-
-local AIUtils = import('ai/aiutilities.lua')
-local Utilities = import('/lua/utilities.lua')
-local AIBuildStructures = import('/lua/ai/aibuildstructures.lua')
-local UnitUpgradeTemplates = import('/lua/upgradetemplates.lua').UnitUpgradeTemplates
-local StructureUpgradeTemplates = import('/lua/upgradetemplates.lua').StructureUpgradeTemplates
-local Behaviors = import('/lua/ai/aibehaviors.lua')
-local AIAttackUtils = import('/lua/AI/aiattackutilities.lua')
-local ScenarioUtils = import('/lua/sim/ScenarioUtilities.lua')
-local SPAI = import('/lua/ScenarioPlatoonAI.lua')
 --------------------------------------------------------------
 --  AIR UNITS
 ---------------------------------------------------------------
+--TODO- when the bounce code makes it into faf we need to hook this and not shadow it.
+
 --veterancy system added
 --auto refuel toggle button added
 AirUnit = Class(MobileUnit) {
@@ -198,12 +189,11 @@ AirUnit = Class(MobileUnit) {
         --Create companion projectile
         local proj = self:CreateProjectileAtBone('/projectiles/ShieldCollider/ShieldCollider_proj.bp', bone)
         
-
         -- start following our plane, attaching to a given bone and entity on shield collision
         proj:Start(self, bone, callback)
         self.Trash:Add(proj)
     end,
-
+    
     SetAutoRefuel = function(self, auto)
         --WARN('callbackreached unit, setting autorefuel to:'..repr(auto))
         self.Sync.AutoRefuel = auto
@@ -225,9 +215,8 @@ AirUnit = Class(MobileUnit) {
 
     AutoRefuelThread = function(self)
         while self.AutoRefuel == true do
-            --WARN('checking for refuel need 3 ')
-            --WARN(self:GetEntityId())
-            if self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < .6) then
+            --WARN('checking for refuel need')
+            if (self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < .6)) and not self.AlreadyAttached then
                 --WARN('criteria for fueling met, nice')
                 
                 --ideally we would check the command queue to avoid refitting units that already have the command queued
@@ -237,11 +226,6 @@ AirUnit = Class(MobileUnit) {
                     --WARN('ordering refit')
                     self:AirUnitRefit()
                 --end
-            else
-                --WARN('resetting ordered status')
-                --self.AlreadyOrdered = false
-                --if we dont meet the criteria for refueling we cant be ordered
-                --this also resets the flag after the unit is fueled
             end
             
             WaitSeconds(15)
@@ -255,28 +239,27 @@ AirUnit = Class(MobileUnit) {
             local unitPos = self:GetPosition()
             local plats = AIUtils.GetOwnUnitsAroundPoint( aiBrain, categories.AIRSTAGINGPLATFORM, unitPos, 400 )
             if table.getn( plats ) > 0 then
-                --WARN('found platforms')
-                --table.sort(plats, VDist2(unitPos[1], unitPos[3], platPos[1], platPos[3]))
                 table.sort(plats, function(a,b)--sort all our staging platforms by distance
                     local platPosA = a:GetPosition()
                     local platPosB = b:GetPosition()
-                            --local tempDist = VDist2( unitPos[1], unitPos[3], platPos[1], platPos[3] )
                     local distA = VDist2(unitPos[1], unitPos[3], platPosA[1], platPosA[3])
                     local distB = VDist2(unitPos[1], unitPos[3], platPosB[1], platPosB[3])
-                    
                     return distA < distB
                 end)
                 
                 local closest = self:FindPlatforms(plats)
                 
                 if closest then
-                    local plat = aiBrain:MakePlatoon( '', '' )
-                    aiBrain:AssignUnitsToPlatoon( plat, {self}, 'Attack', 'None' )
-                    --WARN('issuing commands')
                     IssueStop( {self} )
                     IssueClearCommands( {self} )
                     IssueTransportLoad( {self}, closest )
-                    --self.AlreadyOrdered = true
+                else
+                    --if there are no available platforms (all full) then we move near one so when its empty we can fuel
+                    platPos = plats[1]:GetPosition()
+                    local dist = VDist2(unitPos[1], unitPos[3], platPos[1], platPos[3])
+                    if dist > 20 then --dont spam the order if we are close already
+                        IssueMove( {self}, platPos)
+                    end
                 end
             end
         end
@@ -299,6 +282,28 @@ AirUnit = Class(MobileUnit) {
             end
         end
         return false
+    end,
+}
+
+-------------------------------------------------------------
+--  AIR STAGING PLATFORMS UNITS
+-------------------------------------------------------------
+oldAirStagingPlatformUnit = AirStagingPlatformUnit
+
+AirStagingPlatformUnit = Class(oldAirStagingPlatformUnit) {
+    LandBuiltHiddenBones = {'Floatation'},
+
+    OnStopBeingBuilt = function(self,builder,layer)
+        oldAirStagingPlatformUnit.OnStopBeingBuilt(self,builder,layer)
+        self:SetMaintenanceConsumptionActive()
+    end,
+    
+    OnTransportAttach = function(self, attachBone, unit)
+    unit.AlreadyAttached = true --flag our unit to not try to attach if its docked - it can cause an error
+    end,
+
+    OnTransportDetach = function(self, attachBone, unit)
+    unit.AlreadyAttached = false
     end,
 }
 
