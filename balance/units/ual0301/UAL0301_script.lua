@@ -106,9 +106,7 @@ UAL0301 = Class(CommandUnit) {
                 }
             end
             Buff.ApplyBuff(self, 'AeonSCUBuildRate')
-            self:AddCommandCap('RULEUCC_Sacrifice')            -- added by ithilis
         elseif enh == 'EngineeringFocusingModuleRemove' then
-            self:RemoveCommandCap('RULEUCC_Sacrifice')        -- added by ithilis
             if Buff.HasBuff( self, 'AeonSCUBuildRate' ) then
                 Buff.RemoveBuff( self, 'AeonSCUBuildRate' )
             end
