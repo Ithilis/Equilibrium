@@ -1,7 +1,5 @@
-local modpath = "/"
-
-local originalCreateUI = CreateUI
+local oldCreateUI = CreateUI
 function CreateUI(isReplay) 
-    originalCreateUI(isReplay)
+    oldCreateUI(isReplay)
     import('/modules/helpUi.lua').init()
 end
