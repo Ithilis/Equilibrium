@@ -28,7 +28,6 @@ BlueprintId = "uel0309",
         'ENGINEER',
         'REPAIR',
         'RECLAIM',
-        'REBUILDER',    --add
         'CAPTURE',
         'VISIBLETORECON',
         'RECLAIMABLE',
