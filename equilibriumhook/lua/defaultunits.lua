@@ -317,7 +317,8 @@ AirStagingPlatformUnit = Class(oldAirStagingPlatformUnit) {
 --- Mixin transports (air, sea, space, whatever). Sellotape onto concrete transport base classes as
 -- desired.
 
-local slotsData = {}
+
+
 BaseTransport = Class() {
     OnTransportAttach = function(self, attachBone, unit)
         self:PlayUnitSound('Load')
@@ -363,6 +364,7 @@ BaseTransport = Class() {
     DetachCargo = function(self)
         if self.Dead then return end --due to overkill damage this can get called when trans is hit after it dies and cause errors since it doesnt have any cargo
         local units = self:GetCargo()
+        WARN('detaching cargo')
         for k, v in units do
             if EntityCategoryContains(categories.TRANSPORTATION, v) then
                 for k, u in self:GetCargo() do
@@ -374,7 +376,7 @@ BaseTransport = Class() {
         end
     end
 }
-
+--note - this doesnt work on insta crtl k because of .. nonsense. maybe its fixed later.
 --- Base class for air transports.
 AirTransport = Class(AirUnit, BaseTransport) {
 
@@ -393,8 +395,8 @@ AirTransport = Class(AirUnit, BaseTransport) {
     end,
 
     OnKilled = function(self, instigator, type, overkillRatio)
-        AirUnit.OnKilled(self, instigator, type, overkillRatio)
         self:DetachCargo()
+        AirUnit.OnKilled(self, instigator, type, overkillRatio)
     end,
 
     OnStorageChange = function(self, loading)
@@ -405,8 +407,102 @@ AirTransport = Class(AirUnit, BaseTransport) {
     end,
     
     Kill = function(self, ...) --pure black magic thats called when the unit is killed. not on insta ctrl-k mind you
+        WARN('we are here')
         self:DetachCargo()
         AirUnit.Kill(self, unpack(arg))
     end,
 }
 
+-----------------------------------------------------------------
+--  STRUCTURE UNITS
+-----------------------------------------------------------------
+oldStructureUnit = StructureUnit
+
+StructureUnit = Class(oldStructureUnit) {
+
+    OnKilled = function(self, instigator, type, overKillRatio)
+        local engies = EntityCategoryFilterDown(categories.ENGINEER * categories.TECH3, self:GetGuards())
+        if engies[1] then
+            for _, u in engies do
+                u:SetFocusEntity(self)
+                self.Repairers[u:GetEntityId()] = u
+            end
+        end
+
+        oldStructureUnit.OnKilled(self, instigator, type, overKillRatio)
+    end,
+
+    CheckRepairersForRebuild = function(self, wreckage)
+        local units = {}
+        for id, u in self.Repairers do
+            if u:BeenDestroyed() then
+                self.Repairers[id] = nil
+            else
+                local focus = u:GetFocusUnit()
+                if focus == self and ((u:IsUnitState('Repairing') and not u:GetGuardedUnit()) or
+                                      EntityCategoryContains(categories.ENGINEER * categories.TECH3, u)) then
+                    table.insert(units, u)
+                end
+            end
+        end
+
+        if not units[1] then return end
+
+        wreckage:Rebuild(units)
+    end,
+
+    CreateWreckage = function(self, overkillRatio)
+        local wreckage = Unit.CreateWreckage(self, overkillRatio)
+        if wreckage then
+            self:CheckRepairersForRebuild(wreckage)
+        end
+
+        return wreckage
+    end,
+}
+
+oldMassStorageUnit = MassStorageUnit
+
+MassStorageUnit = Class(oldMassStorageUnit) {
+
+    OnKilled = function(self, instigator, type, overKillRatio)
+        local engies = EntityCategoryFilterDown(categories.ENGINEER * categories.TECH3, self:GetGuards())
+        if engies[1] then
+            for _, u in engies do
+                u:SetFocusEntity(self)
+                self.Repairers[u:GetEntityId()] = u
+            end
+        end
+
+        oldMassStorageUnit.OnKilled(self, instigator, type, overKillRatio)
+    end,
+
+    CheckRepairersForRebuild = function(self, wreckage)
+        local units = {}
+        for id, u in self.Repairers do
+            if u:BeenDestroyed() then
+                self.Repairers[id] = nil
+            else
+                local focus = u:GetFocusUnit()
+                if focus == self and ((u:IsUnitState('Repairing') and not u:GetGuardedUnit()) or
+                                      EntityCategoryContains(categories.ENGINEER * categories.TECH3, u)) then
+                    table.insert(units, u)
+                end
+            end
+        end
+
+        if not units[1] then return end
+
+        wreckage:Rebuild(units)
+    end,
+
+    CreateWreckage = function(self, overkillRatio)
+        local wreckage = Unit.CreateWreckage(self, overkillRatio)
+        if wreckage then
+            self:CheckRepairersForRebuild(wreckage)
+        end
+
+        return wreckage
+    end,
+    
+}
