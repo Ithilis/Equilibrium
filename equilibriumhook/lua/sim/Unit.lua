@@ -4,119 +4,6 @@ local typeTable = import('/lua/sim/BuffDefinitions.lua').TypeTable
 local oldUnit = Unit
 Unit = Class(oldUnit) {
 
-----------------------------------------------------------------------------------------------
--- CONSTRUCTING - BUILDING - REPAIR
-----------------------------------------------------------------------------------------------
-
-    --global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
-    OnStartSacrifice = function(self, target_unit)
-        EffectUtilities.PlaySacrificingEffects(self,target_unit)
-        local bp = self:GetBlueprint().Economy
-        local donatemass = bp.BuildCostMass*bp.SacrificeMassMult
-        local donateenergy = bp.BuildCostEnergy*bp.SacrificeEnergyMult
-        
-        --uncomment the warnings to help understand the maths behind the sacrifice system and how we compute the wreck value
-        
-        --WARN(donatemass .. ' mass should be donated')
-        --WARN(donateenergy .. ' energy should be donated')
-        
-        local tgbp = target_unit:GetBlueprint().Economy
-        
-        local OwnMER = donatemass/donateenergy
-        local TargetMER = tgbp.BuildCostMass/tgbp.BuildCostEnergy
-        
-        --WARN(OwnMER .. ' own mass/energy ratio')
-        --WARN(TargetMER .. ' target mass/energy ratio')
-        
-        local MDM = TargetMER/OwnMER
-        self.ActMassDonation = math.min(donatemass*MDM, donatemass)
-        
-        --WARN(MDM .. ' mass donation multiplier; ' .. self.ActMassDonation .. ' mass actually donated')
-        --WARN(donatemass - donatemass*MDM .. 'mass should be refunded')
-        
-        --this is how much we should be sacrificing
-        self.RefundAmount = math.max((donatemass - donatemass*MDM), 0) --in case the MDM is above 1, we should not make mass out of thin air.
-        
-        
-        
-        --incase our project has less mass needed to finish it that we are about to donate to it.
-        local buildProjRemain = (1 - target_unit:GetFractionComplete())*tgbp.BuildCostMass
-        
-        WARN('unit fraction completion: ' .. target_unit:GetFractionComplete())
-        WARN('mass needed to complete the project: ' .. buildProjRemain)
-        
-        
-        --because we cant just use GetFractionComplete in OnStopSacrifice we have to track sacrifices on the target unit
-        if not target_unit.MassToBeSacrificed then
-            target_unit.MassToBeSacrificed = 0
-        end
-        
-        WARN('mass about to be donated: ' .. target_unit.MassToBeSacrificed)
-        
-        --we refund the mass if our unit is about to be finished. we dont refund it if its used to repair a complete unit.
-        if self.ActMassDonation > (buildProjRemain - target_unit.MassToBeSacrificed) and target_unit:GetFractionComplete() ~= 1 then
-            self.RefundAmount = donatemass - math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0)
-            --WARN('refund amount: ' .. self.RefundAmount)
-            --WARN('mass donation with refund into account: ' .. math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0))
-        end
-        
-        --similar case as above, we refund if were trying to repair something thats already nearly full hp
-        if target_unit:GetFractionComplete() == 1 then
-            local repairProjRemain = (1 - (target_unit:GetHealth()/target_unit:GetMaxHealth()))*tgbp.BuildCostMass
-            
-            self.RefundAmount = donatemass - math.max((repairProjRemain - target_unit.MassToBeSacrificed), 0)
-            WARN('refund amount: ' .. self.RefundAmount)
-            --WARN('mass donation with refund into account: ' .. math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0))
-        end
-        
-        
-        target_unit.MassToBeSacrificed = target_unit.MassToBeSacrificed + self.ActMassDonation
-    end,
-    
-    OnStopSacrifice = function(self, target_unit) --we will refund the unused mass by placing it in a wreck
-        if self.RefundAmount >= 1 then
-            --the /0.9 is there since our wreck is at 90% hp of the unit and so it only contains 90% of the mass it should.
-            self:CreateSacrificeWreckageProp(self.RefundAmount/0.9)
-        end
-        --after we sacrifce ourselved we remove our mass from the list.
-        target_unit.MassToBeSacrificed = math.max((target_unit.MassToBeSacrificed - self.ActMassDonation), 0)
-        EffectUtilities.PlaySacrificeEffects(self,target_unit)
-        self:SetDeathWeaponEnabled(false)
-        self:Destroy() -- commenting this doesn't even stop it from disappearing, must be engine things
-    end,
-    
-    
-    CreateSacrificeWreckageProp = function( self, refundamount )
-        local bp = self:GetBlueprint()
-
-        local wreck = bp.Wreckage.Blueprint
-
-        if not wreck then
-            return nil
-        end
-
-        local mass = refundamount
-        local energy = 0
-        local time = (bp.Wreckage.ReclaimTimeMultiplier or 1)
-        local pos = self:GetPosition()
-        local layer = self:GetCurrentLayer()
-        
-        local prop = Wreckage.CreateWreckage(bp, pos, self:GetOrientation(), mass, energy, time)
-        
-        -- if (layer == 'Water') or (layer == "Sub") then
-            -- WARN('trying to sink')
-        -- end
-        --FIXME: make the wreck sink, or do something about it appearing on the sea surface and then not doinganything
-
-        -- Attempt to copy our animation pose to the prop. Only works if
-        -- the mesh and skeletons are the same, but will not produce an error if not.
-        if (layer ~= 'Air' and self.PlayDeathAnimation) then
-            TryCopyPose(self, prop, true)
-        end
-        
-        return prop
-    end,
-    
 ---------------
 ----VETERANCY------
 ---------------
@@ -259,8 +146,8 @@ Unit = Class(oldUnit) {
         oldUnit.OnKilled(self, instigator, type, overkillRatio)
     end,
     
-    -- This section contains functions used by the new veterancy system
-    -------------------------------------------------------------------
+-- This section contains functions used by the new veterancy system
+-------------------------------------------------------------------
     
     -- Tell any living instigators that they need to gain some veterancy
     VeterancyDispersal = function(unitKilled)
@@ -431,7 +318,6 @@ Unit = Class(oldUnit) {
         self.Sync.myValue = math.floor(bp.Economy.BuildCostMass * (bp.Veteran.RequirementMult or defaultMult))
             
         oldUnit.OnStopBeingBuilt(self, builder, layer)
-        self:ForkThread(self.CloakEffectControlThread) -- blackops
     end,
 
 -------------------------------------------------------------------------------------------
@@ -461,37 +347,29 @@ Unit = Class(oldUnit) {
             end
         end
     end,
-    
-    
------------------------------------------------------------
--- Cloak visual effects, made by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod
------------------------------------------------------------
-    
-    -- Overrode this so that there will be no doubt if the cloak effect is active or not
-    -- This is an engine function
-    SetMesh = function(self, meshBp, keepActor)
-        oldUnit.SetMesh(self, meshBp, keepActor)
-        self.CloakEffectEnabled = false;
-    end,
 
-    -- While the CloakEffectControlThread will activate the cloak effect eventually,
-    -- this method tries to provide a faster response time to intel changes
-    OnIntelEnabled = function(self)
-        oldUnit.OnIntelEnabled(self)
-        if not self:IsDead() then
-            self:UpdateCloakEffect()
-        end
-    end,
-
-    -- While the CloakEffectControlThread will deactivate the cloak effect eventually,
-    -- this method tries to provide a faster response time to intel changes
-    OnIntelDisabled = function(self)
-        oldUnit.OnIntelDisabled(self)
-        if not self:IsDead() then
-            self:UpdateCloakEffect()
-        end
-    end,
+-----
+-- Water Guard: Underwater units take less damage from above water splash damage 
+-- By Balthazar
+-----
     
+    OnDamage = function(self, instigator, amount, vector, damageType, ...)
+        if damageType == 'NormalAboveWater' and (self:GetCurrentLayer() == 'Sub' or self:GetCurrentLayer() == 'Seabed') then
+            local bp = self:GetBlueprint()
+            local myheight = bp.Physics.MeshExtentsY or bp.SizeY or 0
+            local depth = math.abs(vector[2]) - myheight
+            --WARN(depth) -- use this to tune the cutoff depth for damage
+            if depth > 1 then return --units deep underwater take 0 damage
+            else
+                oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
+                --the unpack here is to maintain compatibility incase some new arg is added
+            end
+        else
+            -- units with their head poking above or only thin layer of water take full damage
+            oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
+        end
+    end, 
+
 ---------------    
 ----RECLAIM------
 ---------------
@@ -566,98 +444,121 @@ Unit = Class(oldUnit) {
         end
     end,
 
------------------------------------------------------------
--- Cloak visual effects, made by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth, taken from the BlackOps mod
------------------------------------------------------------
-    
-    -- This thread runs constantly in the background for all units. It ensures that the cloak effect and cloak field are always in the correct state
-    CloakEffectControlThread = function(self)
-        if not self:IsDead() then
-            local bp = self:GetBlueprint()
-            if not bp.Intel.CustomCloak then
-                local bpDisplay = bp.Display
-                while not (self == nil or self:GetHealth() <= 0 or self:IsDead()) do
-                    WaitSeconds(0.2)
-                    self:UpdateCloakEffect()
-                    local CloakFieldIsActive = self:IsIntelEnabled('CloakField')
-                    if CloakFieldIsActive then
-                        local position = self:GetPosition(0)
-                        -- Range must be (radius - 2) because it seems GPG did that for the actual field for some reason.
-                        -- Anything beyond (radius - 2) is not cloaked by the cloak field
-                        local range = bp.Intel.CloakFieldRadius - 2
-                        local brain = self:GetAIBrain()
-                        local UnitsInRange = brain:GetUnitsAroundPoint(categories.ALLUNITS, position, range, 'Ally')
-                        for num, unit in UnitsInRange do
-                            unit:MarkUnitAsInCloakField()
-                        end
-                    end
-                end
-            end
+----------------------------------------------------------------------------------------------
+-- CONSTRUCTING - BUILDING - REPAIR
+----------------------------------------------------------------------------------------------
+
+    --global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
+    OnStartSacrifice = function(self, target_unit)
+        EffectUtilities.PlaySacrificingEffects(self,target_unit)
+        local bp = self:GetBlueprint().Economy
+        local donatemass = bp.BuildCostMass*bp.SacrificeMassMult
+        local donateenergy = bp.BuildCostEnergy*bp.SacrificeEnergyMult
+        
+        --uncomment the warnings to help understand the maths behind the sacrifice system and how we compute the wreck value
+        
+        --WARN(donatemass .. ' mass should be donated')
+        --WARN(donateenergy .. ' energy should be donated')
+        
+        local tgbp = target_unit:GetBlueprint().Economy
+        
+        local OwnMER = donatemass/donateenergy
+        local TargetMER = tgbp.BuildCostMass/tgbp.BuildCostEnergy
+        
+        --WARN(OwnMER .. ' own mass/energy ratio')
+        --WARN(TargetMER .. ' target mass/energy ratio')
+        
+        local MDM = TargetMER/OwnMER
+        self.ActMassDonation = math.min(donatemass*MDM, donatemass)
+        
+        --WARN(MDM .. ' mass donation multiplier; ' .. self.ActMassDonation .. ' mass actually donated')
+        --WARN(donatemass - donatemass*MDM .. 'mass should be refunded')
+        
+        --this is how much we should be sacrificing
+        self.RefundAmount = math.max((donatemass - donatemass*MDM), 0) --in case the MDM is above 1, we should not make mass out of thin air.
+        
+        
+        
+        --incase our project has less mass needed to finish it that we are about to donate to it.
+        local buildProjRemain = (1 - target_unit:GetFractionComplete())*tgbp.BuildCostMass
+        
+        --WARN('unit fraction completion: ' .. target_unit:GetFractionComplete())
+        --WARN('mass needed to complete the project: ' .. buildProjRemain)
+        
+        
+        --because we cant just use GetFractionComplete in OnStopSacrifice we have to track sacrifices on the target unit
+        if not target_unit.MassToBeSacrificed then
+            target_unit.MassToBeSacrificed = 0
         end
-    end,
-
-    -- Fork the thread that will deactivate the cloak effect, killing any previous threads that may be running
-    MarkUnitAsInCloakField = function(self)
-        self.InCloakField = true
-        if self.InCloakFieldThread then
-            KillThread(self.InCloakFieldThread)
-            self.InCloakFieldThread = nil
+        
+        --WARN('mass about to be donated: ' .. target_unit.MassToBeSacrificed)
+        
+        --we refund the mass if our unit is about to be finished. we dont refund it if its used to repair a complete unit.
+        if self.ActMassDonation > (buildProjRemain - target_unit.MassToBeSacrificed) and target_unit:GetFractionComplete() ~= 1 then
+            self.RefundAmount = donatemass - math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0)
+            --WARN('refund amount: ' .. self.RefundAmount)
+            --WARN('mass donation with refund into account: ' .. math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0))
         end
-        self.InCloakFieldThread = self:ForkThread(self.InCloakFieldWatchThread)
-    end,
-
-    -- Will deactive the cloak effect if it is not renewed by the cloak field
-    InCloakFieldWatchThread = function(self)
-        WaitSeconds(0.2)
-        self.InCloakField = false
-    end,
-
-    -- This is the core of the entire stealth code. The effect is actually applied here.
-    UpdateCloakEffect = function(self)
-        if not self:IsDead() then
-            local bp = self:GetBlueprint()
-            local bpDisplay = bp.Display
-            if not bp.Intel.CustomCloak then
-                local cloaked = self:IsIntelEnabled('Cloak') or self.InCloakField
-                if (not cloaked and self.CloakEffectEnabled) or self:GetHealth() <= 0 then
-                    self:SetMesh(bpDisplay.MeshBlueprint, true)
-                elseif cloaked and not self.CloakEffectEnabled then
-                    self:SetMesh(bpDisplay.CloakMeshBlueprint , true)
-                    self.CloakEffectEnabled = true
-                end
-            end
+        
+        --similar case as above, we refund if were trying to repair something thats already nearly full hp
+        if target_unit:GetFractionComplete() == 1 then
+            local repairProjRemain = (1 - (target_unit:GetHealth()/target_unit:GetMaxHealth()))*tgbp.BuildCostMass
+            
+            self.RefundAmount = donatemass - math.max((repairProjRemain - target_unit.MassToBeSacrificed), 0)
+            --WARN('refund amount: ' .. self.RefundAmount)
+            --WARN('mass donation with refund into account: ' .. math.max((buildProjRemain - target_unit.MassToBeSacrificed), 0))
         end
+        
+        
+        target_unit.MassToBeSacrificed = target_unit.MassToBeSacrificed + self.ActMassDonation
     end,
     
-
-
-
-
------
--- Water Guard: Underwater units take less damage from above water splash damage 
--- By Balthazar
------
-    
-    OnDamage = function(self, instigator, amount, vector, damageType, ...)
-        if damageType == 'NormalAboveWater' and (self:GetCurrentLayer() == 'Sub' or self:GetCurrentLayer() == 'Seabed') then
-            local bp = self:GetBlueprint()
-            local myheight = bp.Physics.MeshExtentsY or bp.SizeY or 0
-            local depth = math.abs(vector[2]) - myheight
-            --WARN(depth) -- use this to tune the cutoff depth for damage
-            if depth > 1 then return --units deep underwater take 0 damage
-            else
-                oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
-                --the unpack here is to maintain compatibility incase some new arg is added
-            end
-        else
-            -- units with their head poking above or only thin layer of water take full damage
-            oldUnit.OnDamage(self, instigator, amount, vector, damageType, unpack(arg))
+    OnStopSacrifice = function(self, target_unit) --we will refund the unused mass by placing it in a wreck
+        if self.RefundAmount >= 1 then
+            --the /0.9 is there since our wreck is at 90% hp of the unit and so it only contains 90% of the mass it should.
+            self:CreateSacrificeWreckageProp(self.RefundAmount/0.9)
         end
-    end, 
+        --after we sacrifce ourselved we remove our mass from the list.
+        target_unit.MassToBeSacrificed = math.max((target_unit.MassToBeSacrificed - self.ActMassDonation), 0)
+        EffectUtilities.PlaySacrificeEffects(self,target_unit)
+        self:SetDeathWeaponEnabled(false)
+        self:Destroy() -- commenting this doesn't even stop it from disappearing, must be engine things
+    end,
     
-    -------------------------------------------------------------------------------------------
-    --LAYER EVENTS
-    -------------------------------------------------------------------------------------------
+    CreateSacrificeWreckageProp = function( self, refundamount )
+        local bp = self:GetBlueprint()
+
+        local wreck = bp.Wreckage.Blueprint
+
+        if not wreck then
+            return nil
+        end
+
+        local mass = refundamount
+        local energy = 0
+        local time = (bp.Wreckage.ReclaimTimeMultiplier or 1)
+        local pos = self:GetPosition()
+        local layer = self:GetCurrentLayer()
+        
+        local prop = Wreckage.CreateWreckage(bp, pos, self:GetOrientation(), mass, energy, time)
+        
+        -- if (layer == 'Water') or (layer == "Sub") then
+            -- WARN('trying to sink')
+        -- end
+        --FIXME: make the wreck sink, or do something about it appearing on the sea surface and then not doinganything
+
+        -- Attempt to copy our animation pose to the prop. Only works if
+        -- the mesh and skeletons are the same, but will not produce an error if not.
+        if (layer ~= 'Air' and self.PlayDeathAnimation) then
+            TryCopyPose(self, prop, true)
+        end
+        
+        return prop
+    end,
+    
+-------------------------------------------------------------------------------------------
+--LAYER EVENTS
+-------------------------------------------------------------------------------------------
     OnLayerChange = function(self, new, old)
         oldUnit.OnLayerChange(self, new, old)
 		--for units falling out of a dead transport - they are destined to die, so we kill them and leave the wreck.
