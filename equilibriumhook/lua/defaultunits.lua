@@ -257,7 +257,6 @@ BaseTransport = Class(oldBaseTransport) {
     DetachCargo = function(self)
         if self.Dead then return end --due to overkill damage this can get called when trans is hit after it dies and cause errors since it doesnt have any cargo
         local units = self:GetCargo()
-        WARN('detaching cargo')
         for k, v in units do
             if EntityCategoryContains(categories.TRANSPORTATION, v) then
                 for k, u in self:GetCargo() do
@@ -300,7 +299,6 @@ AirTransport = Class(AirUnit, BaseTransport) {
     end,
     
     Kill = function(self, ...) --pure black magic thats called when the unit is killed. not on insta ctrl-k mind you
-        WARN('we are here')
         self:DetachCargo()
         AirUnit.Kill(self, unpack(arg))
     end,
