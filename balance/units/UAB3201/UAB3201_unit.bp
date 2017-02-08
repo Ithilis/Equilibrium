@@ -9,6 +9,6 @@ BlueprintId="uab3201",
         BuildCostMass = 200,        --180m
         BuildRate = 25,             --21,46br
         BuildTime = 625,            --845bt
-        MaintenanceConsumptionPerSecondEnergy = 250,
+        MaintenanceConsumptionPerSecondEnergy = 200,
     },
 }

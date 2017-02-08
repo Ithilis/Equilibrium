@@ -9,6 +9,6 @@ BlueprintId="xsb3201",
         BuildCostMass = 200,
         BuildRate = 25,
         BuildTime = 625,
-        MaintenanceConsumptionPerSecondEnergy = 250,
+        MaintenanceConsumptionPerSecondEnergy = 200,
     },
 }
