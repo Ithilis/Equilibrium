@@ -9,9 +9,9 @@ BlueprintId = "xsb1302",
         MaxHealth = 6000,   --8400hp
     },
     Economy = {
-        BuildCostEnergy = 40000,
-        BuildCostMass = 4000,
-        BuildTime = 5000,
+        BuildCostEnergy = 36000,
+        BuildCostMass = 3600,
+        BuildTime = 4500,
         MaintenanceConsumptionPerSecondEnergy = 50,
         ProductionPerSecondMass = 16,
     },
