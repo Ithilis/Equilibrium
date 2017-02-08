@@ -44,7 +44,7 @@ armordefinition = {
 
         # Armor Definition
         'Normal 1.0',
-        'Overcharge 0.15',
+        'Overcharge 0.2',
         'Deathnuke 0.032',
     },
     {
