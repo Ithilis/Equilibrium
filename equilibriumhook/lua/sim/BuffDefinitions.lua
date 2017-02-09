@@ -31,6 +31,7 @@ MultsTable = {
         EXPERIMENTAL = {5, 15, 30, 50, 75},
         COMMAND = 5,
         SUBCOMMANDER = {2, 6, 12, 20, 30},
+        HIDDEN = 3,
     },
     VETERANCYMAXHEALTH = {
         TECH1 = 1.2,
@@ -312,71 +313,71 @@ TypeTable = {
     urs0304 = 4,
     
  -- VOLATILE BUILDINGS (preventing bug where buildings don't leave wreck after death)
-    uab1105 = 1,
-    ueb1105 = 1,
-    urb1105 = 1,
-    xsb1105 = 1,
+    uab1105 = 7,
+    ueb1105 = 7,
+    urb1105 = 7,
+    xsb1105 = 7,
     
-    uab1106 = 1,
-    ueb1106 = 1,
-    urb1106 = 1,
-    xsb1106 = 1,
+    uab1106 = 7,
+    ueb1106 = 7,
+    urb1106 = 7,
+    xsb1106 = 7,
     
-    uab1101 = 1,
-    ueb1101 = 1,
-    urb1101 = 1,
-    xsb1101 = 1,
+    uab1101 = 7,
+    ueb1101 = 7,
+    urb1101 = 7,
+    xsb1101 = 7,
     
-    uab1201 = 1,
-    ueb1201 = 1,
-    urb1201 = 1,
-    xsb1201 = 1,
+    uab1201 = 7,
+    ueb1201 = 7,
+    urb1201 = 7,
+    xsb1201 = 7,
     
-    uab1301 = 1,
-    ueb1301 = 1,
-    urb1301 = 1,
-    xsb1301 = 1,
+    uab1301 = 7,
+    ueb1301 = 7,
+    urb1301 = 7,
+    xsb1301 = 7,
     
-    uab1104 = 1,
-    ueb1104 = 1,
-    urb1104 = 1,
-    xsb1104 = 1,
+    uab1104 = 7,
+    ueb1104 = 7,
+    urb1104 = 7,
+    xsb1104 = 7,
     
-    uab1303 = 1,
-    ueb1303 = 1,
-    urb1303 = 1,
-    xsb1303 = 1,
+    uab1303 = 7,
+    ueb1303 = 7,
+    urb1303 = 7,
+    xsb1303 = 7,
     
-    xab1401 = 1,
+    xab1401 = 7,
     
     
     -- ENGINEERS - they can reclaim and so can kill enemies, so need one too. Also sparkies.
     
-    ual0105 = 2,
-    uel0105 = 2,
-    url0105 = 2,
-    xsl0105 = 2,
+    ual0105 = 7,
+    uel0105 = 7,
+    url0105 = 7,
+    xsl0105 = 7,
     
-    ual0208 = 2,
-    uel0208 = 2,
-    url0208 = 2,
-    xsl0208 = 2,
+    ual0208 = 7,
+    uel0208 = 7,
+    url0208 = 7,
+    xsl0208 = 7,
     
     xel0209 = 2, --sparky
     
-    ual0309 = 2,
-    uel0309 = 2,
-    url0309 = 2,
-    xsl0309 = 2,
+    ual0309 = 7,
+    uel0309 = 7,
+    url0309 = 7,
+    xsl0309 = 7,
     
-    xeb0104 = 2, --engineering stations
-    xeb0204 = 2,
+    xeb0104 = 7, --engineering stations
+    xeb0204 = 7,
     
-    xrb0104 = 2, --engineering stations cyb
-    xrb0204 = 2,
-    xrb0304 = 2,
+    xrb0104 = 7, --engineering stations cyb
+    xrb0204 = 7,
+    xrb0304 = 7,
     
-    uea0001 = 2, --uef engineering drones
-    uea0003 = 2,
-    xea3204 = 2,
+    uea0001 = 7, --uef engineering drones
+    uea0003 = 7,
+    xea3204 = 7,
 }

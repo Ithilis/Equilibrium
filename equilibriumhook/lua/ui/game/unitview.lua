@@ -128,6 +128,7 @@ function UpdateWindow(info)
         local currentLevel = UnitData[info.entityId].VeteranLevel
         local massKilled = UnitData[info.entityId].totalMassKilled
         local myValue = UnitData[info.entityId].myValue
+        local hideBar = UnitData[info.entityId].hideProgressBar
 
         for level = 1, 5 do
             local l = level
@@ -140,7 +141,7 @@ function UpdateWindow(info)
         end
 
         -- Control the veterancy progress bar
-        if massKilled and myValue then
+        if massKilled and myValue and not hideBar then
             local progress = math.min(massKilled / myValue, 5) - currentLevel
             if progress then
                 if currentLevel < 5 then

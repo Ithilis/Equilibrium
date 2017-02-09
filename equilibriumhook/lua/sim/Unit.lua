@@ -235,7 +235,7 @@ Unit = Class(oldUnit) {
         local buffName = false
         local subSection = false
         if buffType == 'VETERANCYREGEN' then
-            subSection = typeTable[self:GetUnitId()] or 7-- Will be 1 through 6
+            subSection = typeTable[self:GetUnitId()] or 8-- Will be 1 through 7
             buffName = techLevel .. subSection .. buffType .. vetLevel
         else
             buffName = techLevel .. buffType .. vetLevel
@@ -258,6 +258,8 @@ Unit = Class(oldUnit) {
             elseif subSection == 5 then -- Experimental or sACU
                 val = multsTable[buffType][techLevel][vetLevel]
             elseif subSection == 6 then -- ACU
+                val = multsTable[buffType][techLevel] * vetLevel
+            elseif subSection == 7 then -- Placeholder cat for backend purposes only
                 val = multsTable[buffType][techLevel] * vetLevel
             else -- non combat unit or modded unit
                 WARN('we are applying a buff for a non-combat or modded unit! ')
@@ -311,6 +313,13 @@ Unit = Class(oldUnit) {
         local bp = self:GetBlueprint()
         self.Sync.totalMassKilled = 0
         self.Sync.VeteranLevel = 0
+        
+        --some units need to get their bars hidden, since it doesnt make sense for them to get vet.
+        --we check in the typeTable for the hidden vet type which is bscly only there to prevent bugs.
+        --not super mod compatible: units not in the table get their bars auto-hidden, but its only visual so whatever.
+        if not typeTable[self:GetUnitId()] or typeTable[self:GetUnitId()] == 7 then
+        self.Sync.hideProgressBar = true
+        end
         
         -- Allow units to require more or less mass to level up. Decimal multipliers mean
         -- faster leveling, >1 mean slower. Doing this here means doing it once instead of every kill.
