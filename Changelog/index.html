@@ -235,6 +235,7 @@
 
 			<h4>Engineer cost changes</h4>
 			Making buildpower easier to estimate. Nerfed the build rates on Aeon and Seraphim T3 engineers to bring them in line with the other two races, buffed engineering stations, and normalized all engineer costs to correspond to new factory build and drain rates.
+			<p>There were also some tweaks to the cybran build effects. They are for the purpose of reducing lag and, interestingly, revert to a more original representation of the game.
 			<ul>
 			<li><b>T2:</b> <strike>140</strike> → 125m
 				<ul>
@@ -993,6 +994,7 @@
 			
             <h4>Fatboy</h4>
 			Its DPS was moved from long range to short, because T3 units have less HP, and dps, short range is less annoying and gives more time for opponents to deal with the fatboy.
+			<p>It is now able to build units while moving! There is now a separately selectable submodule on the Fatboy which builds the units. The Percival can also be built underwater now.
                 <ul>
                 <li><b>Price:</b>  <strike>21 000bt 32500HP -500e/s 180br</strike> → 46 660bt 35 000HP -250e/s 200br
                 <li><b>Main cannons:</b> (100r): <strike>4x750</strike> → 4x525dps
@@ -1351,7 +1353,7 @@
 			Transports got some regeneration to make them reusable without needing to pay attention to repair them, more speed because interceptors are also faster. Additionally, any units being transported now leave wrecks correctly if the transport is shot down.
                 <ul>
                 <li><b>Price:</b>  <strike>300m 12000e 2400bt</strike> → 280m 6000e 1600bt
-                <li><strike>0HP/s regen 15speed 25/0 crash dmg</strike> →  5HP/s regen, 16speed 100dmg 2aoe crash dmg
+                <li><strike>0HP/s regen 25/0 crash dmg</strike> →  5HP/s regen 100dmg 2aoe crash dmg
                     <ul>
                     <li><b>Aeon:</b> <strike>28.8AA dps</strike> → 72AA dps
                     <li><b>Cybran EMP weapon:</b> <strike>T1/T2-2s</strike> → T1: 3s T2: 2s T3: 0.5s
@@ -1573,7 +1575,7 @@
                 <ul>
                 <p>T1 submarine are stronger and more expensive units, main reason for this is neglect unit pathfinding problems. 
                 <p>The deck gun range was reduced because it outranged frigates which would have made submarines very strong early game for raiding mexes.
-                <p>The Aeon submarine is faster because it doesn’t have a deck gun, which can be a huge disadvantage.
+                <p>The Aeon submarine is faster because it doesn’t have a deck gun, which can be a huge disadvantage. For the same reason it gets increased vision radius when its on the surface, so there is some reason for them to go there.
                 <p>The Seraphim submarine is different as usual. It has less HP but torpedo defense to cover up for it. This defense is very strong in large numbers.
 
                 <li><b>Price:</b> <strike>360m 2880e 1440bt</strike> → 500m 5000e 2000bt 
@@ -1584,6 +1586,9 @@
                 
                 <p>
                 <li><b>Aeon:</b> <strike>6speed</strike> → 7speed <strike>575hp</strike> → 675hp <strike>37.5dps</strike> → 75dps
+                    <ul>
+                    <li>New feature - increased vision radius when surfaced.
+                    </ul>
                 <li><b>Cybran:</b> <strike>6speed</strike> → 6.5speed <strike>550hp</strike> → 650hp <strike>37.5dps</strike> → 80dps; deck cannon <strike>32r</strike> → 24r 
                 <li><b>UEF:</b> <strike>6speed</strike> → 6speed <strike>600hp</strike> → 700hp <strike>37.5dps</strike> → 75dps; deck cannon <strike>32r</strike> → 30r 
                 <li><b>Seraphim:</b> <strike>6speed</strike> → 6.5speed <strike>400hp</strike> → 550hp <strike>37.5dps</strike> → 75dps; deck cannon <strike>32r</strike> → 24r
@@ -2024,10 +2029,14 @@
             
                 <ul>
                 <p>T1/2 Radar: resource adjusted to fit equilibrium's building pattern where units of the same type and tech drain same resources while being built.
+                <p>T2 Radar: It got its consumption reduced a little so its more convenient to build, as its a little underused.
                 <p>T3 Radar: On the most popular maps its enough to place one somewhere in your back base and its enough to see the whole map. We just made it require a little more strategic placement and use of (gasp) multiple radars on larger maps.
                 
                 <li><b>T1 Radar:</b> <strike>80m 720e 80bt 14.08br</strike> → 100m 1000e 100bt 12.5br
                 <li><b>T2 Radar:</b> <strike>180m 3600e 845bt 21.46br</strike> → 200m 4000e 625bt 25br
+                    <ul>
+                    <li><b>Radar energy drain:</b> <strike>250</strike> → 200
+                    </ul>
                 <li><b>T3 Radar:</b> <strike>2400m 30000e 2575bt</strike> → 2400m 48000e 3750bt
                     <ul>
                     <li><b>Radar radius:</b> <strike>600</strike> → 500
