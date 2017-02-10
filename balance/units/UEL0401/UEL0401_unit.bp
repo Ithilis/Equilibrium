@@ -8,6 +8,35 @@ BlueprintId = "uel0401",
     Veteran = {
         RequirementMult = 0.5,
     },
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3COMMANDER',
+        'BUILTBYTIER3ENGINEER',
+        'UEF',
+        'MOBILE',
+        'LAND',
+        'EXPERIMENTAL',
+        'INDIRECTFIRE',
+        'ARTILLERY',
+        'CONSTRUCTION',
+        'AIRSTAGINGPLATFORM',
+        --'FACTORY',
+        'NEEDMOBILEBUILD',
+        'ANTIAIR',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'DRAGBUILD',
+        --'SHOWQUEUE', --remove the queue option
+        'MOBILEFACTORY', --not yet used but you know :D
+        'OVERLAYMISC',
+        'OVERLAYANTIAIR',
+        'OVERLAYDEFENSE',
+        'OVERLAYANTINAVY',
+        'OVERLAYDIRECTFIRE',
+        'OVERLAYMISC',
+        'BUBBLESHIELDSPILLOVERCHECK',
+    },
     Defense = {
         Health = 20000,
         MaxHealth = 20000,
@@ -23,7 +52,13 @@ BlueprintId = "uel0401",
         BuildCostMass = 28000,
         BuildRate = 200,        --from 180
         BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
+        BuildableCategory = nil, --remove the building ability
         MaintenanceConsumptionPerSecondEnergy = 250,    --from 500
+    },
+    General = {
+        CommandCaps = {
+            RULEUCC_Repair = false, --disable build
+        },
     },
     Weapon = {
         {
