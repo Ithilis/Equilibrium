@@ -25,7 +25,7 @@ BlueprintId="uas0401",
         BuildCostMass = 24000,
         BuildRate = 360,    --from240 
         BuildTime = 54000,
-        BuildableCategory = {
+        BuildableCategoryMobile = {
             'BUILTBYTIER3FACTORY AEON MOBILE CONSTRUCTION',
             'BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION',
             'BUILTBYTIER1FACTORY AEON MOBILE CONSTRUCTION',

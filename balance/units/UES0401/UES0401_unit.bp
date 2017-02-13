@@ -13,7 +13,7 @@ BlueprintId="ues0401",
         BuildCostMass = 12000,
         BuildRate = 240,
         BuildTime = 36000,
-        BuildableCategory = {
+        BuildableCategoryMobile = {
             'BUILTBYTIER3FACTORY UEF MOBILE AIR',
         },
     },
