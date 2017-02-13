@@ -20,10 +20,20 @@ ZXB0301 = Class(TMobileFactoryUnit) {
         --make it unkillable
         self:SetCanTakeDamage(false)
         self:SetCanBeKilled(false)
-        
+        --tell it that it can build, and give it the right build rate as well.
+        self.BuildingEnabled = true
+        self:ForkThread( self.BuildrateThread )
         --self:SetCollisionShape('None')
         --define the bone which we will attach our unit being built to
         ChangeState(self, self.IdleState)
+    end,
+    
+    BuildrateThread = function(self)
+        WaitSeconds(0.1)
+        if not self.Parent then WARN('EQ: could not find parent for mobile factory! something is wrong!') return end
+        self:SetBuildRate(self.Parent:GetBuildRate())
+        self.Parent:AddBuildRestriction(categories.ALLUNITS) --in eq we hook the units so here we just disable the parent from building. easy.
+        --we need a small delay from oncreate to set the buildrate since the parent isnt set immediately.
     end,
     
     OnDestroy = function(self)
@@ -41,12 +51,11 @@ ZXB0301 = Class(TMobileFactoryUnit) {
         
             self.UnitBeingBuilt = unitBuilding
             self.FacBone = self.Parent.BuildAttachBone
-            self.Parent:DetachAll(self.FacBone) --the factory bone we want to attach to
+            self.Parent:DetachAll(self.FacBone) --the factory bone we want to attach our unit being built to
             self:DetachAll('Attachpoint') -- our bone which the unit is attached to by engine
             
             if not self.UnitBeingBuilt:IsDead() then
                 unitBuilding:AttachBoneTo( -2, self.Parent, self.FacBone )
-                local unitHeight = unitBuilding:GetBlueprint().SizeY
                 unitBuilding:HideBone(0,true) --we hide our unit bone, its up to our parent to show it.
             end
             
@@ -82,123 +91,33 @@ ZXB0301 = Class(TMobileFactoryUnit) {
             --we then switch to the idle state from here
         end,
     },
-
     
+    --switches building on and off, to be called from the parent unit, also cancels current unit.
+    --currently broken, can cause total crash if you use IssueClearCommands({self}) or something.
+    DisableBuild = function(self)
+        if self.BuildingEnabled then    
+            WARN('changing state to rolloff')
+            if self.UnitBeingBuilt and self.UnitBeingBuilt:GetFractionComplete() ~= 1 then
+                --self.Parent:DetachAll(self.FacBone) --the factory bone we want to attach to
+                WARN('cancelling order')
+                --IssueStop({self})
+                --IssueClearCommands({self})
+            end
+            ChangeState(self, self.RollingOffState)
+            WARN('changing to rolloff state in disablebuild')
+            self.BuildingEnabled = false
+        end
+    end,
     
+    --should be called after disablebuild
+    EnableBuild = function(self)
+        if not self.BuildingEnabled then
+            WARN('changing state to idle')
+            ChangeState(self, self.IdleState)
+            self.BuildingEnabled = true
+        end
+    end,
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    -- IdleState = State {
-        -- OnStartBuild = function(self, unitBuilding, order)
-            -- TMobileFactoryUnit.OnStartBuild(self, unitBuilding, order)
-            -- self.UnitBeingBuilt = unitBuilding
-            -- self.Parent.PrepareToBuildManipulator:SetRate(self.Parent.PrepareToBuildAnimRate)
-            -- ChangeState(self, self.BuildingState)
-        -- end,
-
-        -- Main = function(self)
-            -- self.Parent.PrepareToBuildManipulator:SetRate(-self.Parent.PrepareToBuildAnimRate)
-            -- self.Parent:DetachAll(self.Parent.BuildAttachBone)
-            -- self:SetBusy(false)
-        -- end,
-    -- },
-
-    -- BuildingState = State {
-        -- Main = function(self)
-            -- local unitBuilding = self.UnitBeingBuilt
-            -- self.Parent.PrepareToBuildManipulator:SetRate(self.Parent.PrepareToBuildAnimRate)
-            -- local bone = self.Parent.BuildAttachBone
-            -- self.Parent:DetachAll(bone)
-            -- self:DetachAll('Attachpoint')
-            -- if not self.UnitBeingBuilt:IsDead() then
-                -- unitBuilding:AttachBoneTo( -2, self.Parent, bone )
-                -- local unitHeight = unitBuilding:GetBlueprint().SizeY
-                -- self.Parent.AttachmentSliderManip:SetGoal(0, unitHeight, 0 )
-                -- self.Parent.AttachmentSliderManip:SetSpeed(-1)
-                -- unitBuilding:HideBone(0,true)
-            -- end
-            -- WaitSeconds(3)
-            -- unitBuilding:ShowBone(0,true)
-            -- WaitFor( self.Parent.PrepareToBuildManipulator )
-            -- local unitBuilding = self.UnitBeingBuilt
-            -- self.UnitDoneBeingBuilt = false
-        -- end,
-
-        -- OnStopBuild = function(self, unitBeingBuilt)
-            -- TMobileFactoryUnit.OnStopBuild(self, unitBeingBuilt)
-
-            -- ChangeState(self, self.RollingOffState)
-        -- end,
-    -- },
-
-    -- RollingOffState = State {
-        -- Main = function(self)
-            -- local unitBuilding = self.UnitBeingBuilt
-            -- if not unitBuilding:IsDead() then
-                -- unitBuilding:ShowBone(0,true)
-            -- end
-            -- WaitFor(self.Parent.PrepareToBuildManipulator)
-            -- WaitFor(self.Parent.AttachmentSliderManip)
-            
-            -- self.Parent:CreateRollOffEffects(self.UnitBeingBuilt)
-            -- self.Parent.AttachmentSliderManip:SetSpeed(10)
-            -- self.Parent.AttachmentSliderManip:SetGoal(0, 0, 17)
-            -- WaitFor(self.Parent.AttachmentSliderManip)
-            
-            -- self.Parent.AttachmentSliderManip:SetGoal(0, -3, 17)
-            -- WaitFor(self.Parent.AttachmentSliderManip)
-            
-            -- if not unitBuilding:IsDead() then
-                -- unitBuilding:DetachFrom(true)
-                -- self.Parent:DetachAll(self.Parent.BuildAttachBone)
-                -- local  worldPos = self:CalculateWorldPositionFromRelative({0, 0, -15})
-                -- IssueMoveOffFactory({unitBuilding}, worldPos)
-            -- end
-            
-            -- self:DestroyRollOffEffects()
-            -- ChangeState(self, self.IdleState)
-        -- end,
-    -- },
-
-    -- CreateRollOffEffects = function(self)
-        -- local army = self:GetArmy()
-        -- local unitB = self.UnitBeingBuilt
-        -- for k, v in self.Parent.RollOffBones do
-            -- local fx = AttachBeamEntityToEntity(self.Parent, v, unitB, -1, army, EffectTemplate.TTransportBeam01)
-            -- table.insert( self.Parent.ReleaseEffectsBag, fx)
-            -- self.Parent.Trash:Add(fx)
-            
-            -- fx = AttachBeamEntityToEntity( unitB, -1, self.Parent, v, army, EffectTemplate.TTransportBeam02)
-            -- table.insert( self.Parent.ReleaseEffectsBag, fx)
-            -- self.Parent.Trash:Add(fx)
-            
-            -- fx = CreateEmitterAtBone( self.Parent, v, army, EffectTemplate.TTransportGlow01)
-            -- table.insert( self.Parent.ReleaseEffectsBag, fx)
-            -- self.Parent.Trash:Add(fx)
-        -- end
-    -- end,
-
-    -- DestroyRollOffEffects = function(self)
-        -- for k, v in self.Parent.ReleaseEffectsBag do
-            -- v:Destroy()
-        -- end
-        -- self.Parent.ReleaseEffectsBag = {}
-    -- end,
 }
 
 TypeClass = ZXB0301
