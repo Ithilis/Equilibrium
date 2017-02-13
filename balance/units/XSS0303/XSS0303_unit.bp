@@ -9,6 +9,12 @@ BlueprintId="xss0303",
         BuildCostMass = 4500,
         BuildRate = 180,
         BuildTime = 18000,
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY SERAPHIM MOBILE AIR ANTINAVY',
+            'BUILTBYTIER3FACTORY SERAPHIM MOBILE AIR INTELLIGENCE',
+            'BUILTBYTIER3FACTORY SERAPHIM MOBILE AIR ANTIAIR',
+            'BUILTBYTIER3FACTORY SERAPHIM MOBILE AIR ANTIGROUND',
+        },
     },
     Intel = {
         RadarRadius = 200,

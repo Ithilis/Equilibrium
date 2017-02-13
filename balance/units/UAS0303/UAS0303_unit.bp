@@ -9,6 +9,12 @@ BlueprintId="uas0303",
         BuildCostMass = 4050,
         BuildRate = 180,
         BuildTime = 16200,
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR ANTINAVY',
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR INTELLIGENCE',
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR ANTIAIR',
+            'BUILTBYTIER3FACTORY AEON MOBILE AIR ANTIGROUND',
+        },
     },
     Intel = {
         RadarRadius = 200,

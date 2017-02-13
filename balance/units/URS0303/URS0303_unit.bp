@@ -9,6 +9,12 @@ BlueprintId="urs0303",
         BuildCostMass = 4050,
         BuildRate = 180,
         BuildTime = 16200,
+        BuildableCategoryMobile = {
+            'BUILTBYTIER3FACTORY CYBRAN MOBILE AIR ANTINAVY',
+            'BUILTBYTIER3FACTORY CYBRAN MOBILE AIR INTELLIGENCE',
+            'BUILTBYTIER3FACTORY CYBRAN MOBILE AIR ANTIAIR',
+            'BUILTBYTIER3FACTORY CYBRAN MOBILE AIR ANTIGROUND',
+        },
     },
     Intel = {
         RadarRadius = 200,
