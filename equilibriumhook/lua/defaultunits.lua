@@ -12,10 +12,10 @@ oldAirUnit = AirUnit
 
 AirUnit = Class(oldAirUnit) {
 
-    OnCreate = function(self)
-        oldAirUnit.OnCreate(self)
+    OnStopBeingBuilt = function(self,builder,layer)
         self:SetAutoRefuel(true) --on by default
         --TODO: make this only work for units that have the dock order available.
+        oldAirUnit.OnStopBeingBuilt(self,builder,layer)
     end,
     
     OnImpact = function(self, with, other)
