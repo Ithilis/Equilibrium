@@ -36,12 +36,7 @@ UEL0401 = Class(TMobileFactoryUnit) {
         LeftAAGun = Class(TAALinkedRailgun) {},
         Torpedo = Class(TANTorpedoAngler) {},
     },
-    
-    OnCreate = function(self)
-        TMobileFactoryUnit.OnCreate(self)
-        self:AddBuildRestriction(categories.ALLUNITS) --we need this in eq because we are merging the blueprint.
-    end,
-    
+
     OnStopBeingBuilt = function(self,builder,layer)
         TMobileFactoryUnit.OnStopBeingBuilt(self,builder,layer)
         self.EffectsBag = {}
@@ -60,21 +55,34 @@ UEL0401 = Class(TMobileFactoryUnit) {
         local army = self:GetArmy()
         if not self.HelperFactory then
             --its seems that because of nonsense, spawning the module outside the unit then warping to it helps with pathfinding
-            self.HelperFactory = CreateUnitHPR('ZXB0301', self:GetArmy(), location[1], location[2] + 10, location[3] + 5, 0, 0, 0)
+            self.HelperFactory = CreateUnitHPR('ZXB0301', army, location[1], location[2] + 10, location[3] + 5, 0, 0, 0)
             self.HelperFactory.Parent = self
             self.HelperFactory:SetCreator(self)
             self.Trash:Add(self.HelperFactory)
-            self.HelperFactory:AttachTo(self, self.FactoryAttachBone)
         end
-        self:UpdateFactoryRestrictions(self:GetCurrentLayer())
+        if not self.ProxyAttach then
+            --yeeeahhhh. attaching a helper fac directly to a carrier hides its strategic icon so we use a proxy ...
+            --also for 
+            self.ProxyAttach = CreateUnitHPR('ZXB0302', army, location[1], location[2] + 10, location[3] + 5, 0, 0, 0)
+            self.ProxyAttach.Parent = self
+            self.ProxyAttach:SetCreator(self)
+            self.Trash:Add(self.ProxyAttach)
+        end
+        self:DetachAll(self.FactoryAttachBone)
+        self.ProxyAttach:DetachAll(1)
+        self.HelperFactory:AttachTo(self.ProxyAttach, 1)
+        self.ProxyAttach:AttachTo(self, self.FactoryAttachBone)
+        
+        self:SetFactoryRestrictions()
     end,
     
     
     OnGiven = function(self, newUnit)
         if self.UnitBeingBuilt then
             self.UnitBeingBuilt:Destroy()
-        end
+        end --this is to stop us getting 50% finished units and turning them into 100% finished units, but it doesnt work :(
         TMobileFactoryUnit.OnGiven(self)
+        
     end,
     
     OnFailedToBuild = function(self)
@@ -89,11 +97,21 @@ UEL0401 = Class(TMobileFactoryUnit) {
         self:UpdateFactoryRestrictions(new)
     end,
     
+    SetFactoryRestrictions = function(self)
+        if not self.HelperFactory then return end
+        local restrictions = self:GetBlueprint().Economy.BuildableCategoryMobile
+        self.HelperFactory:AddBuildRestriction(categories.ALLUNITS)
+        for k,category in restrictions do
+            local parsedCat = ParseEntityCategory(category)
+            self.HelperFactory:RemoveBuildRestriction(parsedCat)
+        end
+        self.HelperFactory:RequestRefreshUI()
+    end,
+    
     UpdateFactoryRestrictions = function(self, layer)
         if not self.HelperFactory then return end
         if layer == 'Land' then
-            self.HelperFactory:RestoreBuildRestrictions()
-            self.HelperFactory:RequestRefreshUI()
+            self:SetFactoryRestrictions()
         elseif layer == 'Seabed' then
             self.HelperFactory:AddBuildRestriction(categories.ALLUNITS)
             self.HelperFactory:RemoveBuildRestriction(categories.xel0305)
