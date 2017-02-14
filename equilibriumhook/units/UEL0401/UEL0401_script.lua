@@ -186,6 +186,7 @@ UEL0401 = Class(TMobileFactoryUnit) {
     CreateRollOffEffects = function(self, unit)
         local army = self:GetArmy()
         local unitB = self.UnitBeingBuilt
+        if unitB:IsDead() then WARN('tried to attach effects to a dead unit') return end
         for k, v in self.RollOffBones do
             local fx = AttachBeamEntityToEntity(self, v, unitB, -1, army, EffectTemplate.TTransportBeam01)
             table.insert( self.ReleaseEffectsBag, fx)
