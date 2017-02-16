@@ -38,8 +38,10 @@ ZXB0301 = Class(TMobileFactoryUnit) {
     
     OnDestroy = function(self)
         --incase we delete our factory, since the unit being built isnt attached to it it doesnt always work.
-        if self.UnitBeingBuilt and self.UnitBeingBuilt:GetFractionComplete() ~= 1 then
-            self.UnitBeingBuilt:Destroy()
+        if self.UnitBeingBuilt and not self.UnitBeingBuilt:IsDead() then
+            if self.UnitBeingBuilt:GetFractionComplete() ~= 1 then
+                self.UnitBeingBuilt:Destroy()
+            end
         end
         TMobileFactoryUnit.OnDestroy(self)
     end,
