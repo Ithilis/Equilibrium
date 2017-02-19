@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId="xss0203",
 
     Defense = {
-        Health = 550,   --450
-        MaxHealth = 550,
+        Health = 525,   --450
+        MaxHealth = 525,
     },
     Display = {
         UniformScale = 0.07,    --from 0,05 -> because units cost more and looks tiny
@@ -53,7 +53,7 @@ BlueprintId="xss0203",
             EffectiveRadius = 35,
             MaxRadius = 35, --from 32 ;  this is torp defense so this just makes them a little better in large numbers
             ProjectileLifetime = 7,
-            RateOfFire = 0.5,   --from 0.1 ; this alone makes it one of the best t1 subs; its weaker vs ships though because it relies on torp defense. 
+            RateOfFire = 0.4,   --from 0.1 ; this alone makes it one of the best t1 subs; its weaker vs ships though because it relies on torp defense. 
                                 --so its more like a subhunter-sub hybrid in that way
             TargetCheckInterval = 0.1, --from 0.5, makes it very responsive at short ranges, so you cant park on top of sub and rape it.
         },
