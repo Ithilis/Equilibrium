@@ -46,7 +46,7 @@ URS0303 = Class(AircraftCarrier) {
         local army = self:GetArmy()
         if not self.HelperFactory then
             --its seems that because of nonsense, spawning the module outside the unit then warping to it helps with pathfinding
-            self.HelperFactory = CreateUnitHPR('ZXB0301', army, location[1], location[2] + 10, location[3] + 5, 0, 0, 0)
+            self.HelperFactory = CreateUnitHPR('ZXB0303', army, location[1], location[2] + 10, location[3] + 5, 0, 0, 0)
             self.HelperFactory.Parent = self
             self.HelperFactory:SetCreator(self)
             self.Trash:Add(self.HelperFactory)
