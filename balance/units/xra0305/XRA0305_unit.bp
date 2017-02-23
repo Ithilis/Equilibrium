@@ -20,14 +20,13 @@ UnitBlueprint {
         'TECH3',
         'GROUNDATTACK',
         'VISIBLETORECON',
-        'COUNTERINTELLIGENCE',        --add stealth
+        'COUNTERINTELLIGENCE',        -- add stealth
         'RECLAIMABLE',
         'OVERLAYANTIAIR',
-        'OVERLAYCOUNTERINTEL',
         'OVERLAYDIRECTFIRE',
     },
     Defense = {
-        Health = 4250,        --from 5900
+        Health = 4250,        -- from 5900
         MaxHealth = 4250,
     },
     Display = {
@@ -63,9 +62,9 @@ UnitBlueprint {
         JammerBlips = 0,
     },
     Physics = {
-        FuelUseTime = 300,                --from600
+        FuelUseTime = 300,                -- from600
     },
-    Veteran = { --not really needed
+    Veteran = { -- not really needed
         Level1 = 30,
         Level2 = 45,
         Level3 = 60,
@@ -73,32 +72,32 @@ UnitBlueprint {
         Level5 = 90,
     },
     Weapon = {
-        { --Ground Fire Weapon
-            Damage = 225,                    --160
+        { -- Ground Fire Weapon
+            Damage = 225,                    -- 160
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
             },
-            FiringTolerance = 2,            --from0,5
-            MinRadius = 0,                    --fromm2
-            RateOfFire = 1,                    --1,6
+            FiringTolerance = 2,            --from 0.5
+            MinRadius = 0,                    --from 2
+            RateOfFire = 1,                    --from 1.6
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-            TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
+            TargetRestrictDisallow = 'UNTARGETABLE', -- allow to fire at landed air units
         },
         { -- AA
-            Damage = 10,            --from6
+            Damage = 10,            -- from 6
             FireTargetLayerCapsTable = {
                 Air = 'Air|Land',
                 Land = 'Air|Land',
             },
-            MaxRadius = 45,            --from38
+            MaxRadius = 45,            -- from 38
             MuzzleSalvoDelay = 0.1,
             MuzzleSalvoSize = 2,
-            MuzzleVelocity = 35,    --from13
+            MuzzleVelocity = 35,    -- from 13
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'AIR MOBILE HIGHPRIAIR',
@@ -111,12 +110,12 @@ UnitBlueprint {
                 'ALLUNITS',
             },
         },
-        { --crash damage
+        { -- crash damage
             Damage = 500,
             DamageRadius = 3,
         },
     },
     Wreckage = {
-        HealthMult = 0.9, --not sure this is needed at all
+        HealthMult = 0.9, -- not sure this is needed at all
     },
 }

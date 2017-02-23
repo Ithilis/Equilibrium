@@ -8,11 +8,11 @@
 --**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
 --****************************************************************************
 
-oldCAirUnit = CAirUnit
+oldXRA0305 = XRA0305
 
-XRA0305 = Class(oldCAirUnit) {
+XRA0305 = Class(oldXRA0305) {
     OnStopBeingBuilt = function(self,builder,layer)
-        oldCAirUnit.OnStopBeingBuilt(self,builder,layer)
+        oldXRA0305.OnStopBeingBuilt(self,builder,layer)
         self:SetMaintenanceConsumptionInactive()
         self:SetScriptBit('RULEUTC_StealthToggle', true)
         self:RequestRefreshUI()
