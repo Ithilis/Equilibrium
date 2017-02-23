@@ -1,6 +1,6 @@
 name = "Equilibrium_Develop"
-uid = "DEVELOP1-V42D-N478-N0LK-EQBALANCEMOD"
-version = 42
+uid = "DEVELOP1-V43D-3980-OSCK-EQBALANCEMOD"
+version = 43
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod."
 description = "This mod fixes all balance issues with the game, and improves the gameplay to a higher level."
 icon = "/Equilibrium_balance_mod.png"
