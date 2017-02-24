@@ -1,5 +1,5 @@
 local multsTable = import('/lua/sim/BuffDefinitions.lua').MultsTable
-local typeTable = import('/lua/sim/BuffDefinitions.lua').TypeTable
+local hideTable = import('/lua/sim/BuffDefinitions.lua').HideTable
 
 local oldUnit = Unit
 Unit = Class(oldUnit) {
@@ -11,7 +11,7 @@ Unit = Class(oldUnit) {
     
         self.Instigators = {}
         self.totalDamageTaken = 0
-        self.techLevel = self:FindTechLevel() --this bit added in eq
+        self.EffectiveTechLevel = self:FindTechLevel() --this bit added in eq
         
         Entity.OnCreate(self)
         --Turn off land bones if this unit has them.
@@ -182,19 +182,14 @@ Unit = Class(oldUnit) {
     OnKilledUnit = function(self, unitKilled, massKilled)
         if not massKilled then return end -- Make sure engine calls aren't passed with massKilled == 0
         
-        if unitKilled.Sync.VeteranLevel then
-            massKilled = massKilled * (1 + (0.2 * math.max((unitKilled.Sync.VeteranLevel - self.Sync.VeteranLevel), 0))) -- This lines mean that units with 1 veterancy level will add 20% more xp for every level = 5* unit get +100% = 2x more xp
-        end
-        
         if not IsAlly(self:GetArmy(), unitKilled:GetArmy()) then
             self:CalculateVeterancyLevel(massKilled) -- Bails if we've not gone up
         end
     end,
     
     CalculateVeterancyLevel = function(self, massKilled, defaultMult)
-        local bp = self:GetBlueprint()
-
         -- Total up the mass the unit has killed overall, and store it
+        
         if not self.Sync.totalMassKilled then --Equilibrium adds this so we know whats going on if this throws an error.
         WARN('Equilibrium: no totalMassKilled on unit trying to get veterancy! is it missing from the unit table?')
         end
@@ -216,30 +211,24 @@ Unit = Class(oldUnit) {
     end,
     
     BuffVeterancy = function(self)
-
         -- Create buffs
-        local regenBuff = self:NewCreateVeterancyBuff(self.techLevel, 'VETERANCYREGEN', 'REPLACE', -1, 'Regen', 'Add')
-        local healthBuff = self:NewCreateVeterancyBuff(self.techLevel, 'VETERANCYMAXHEALTH', 'REPLACE', -1, 'MaxHealth', 'Mult')
+        local regenBuff = self:NewCreateVeterancyBuff(self.EffectiveTechLevel, 'VETERANCYREGEN', 'REPLACE', -1, 'Regen', 'Add')
+        local healthBuff = self:NewCreateVeterancyBuff(self.EffectiveTechLevel, 'VETERANCYMAXHEALTH', 'REPLACE', -1, 'MaxHealth', 'Mult')
         
         -- Apply buffs
         Buff.ApplyBuff(self, regenBuff)
         Buff.ApplyBuff(self, healthBuff)
     end,
     
-    NewCreateVeterancyBuff = function(self, techLevel, buffType, stacks, buffDuration, effectType, mathType)
+    NewCreateVeterancyBuff = function(self, EffectiveTechLevel, buffType, stacks, buffDuration, effectType, mathType)
         -- Generate a buffName based on the unit's tech level. This way, once we generate it once,
         -- We can just apply it for any future unit which fits.
         -- Example: TECH1VETERANCYREGEN1
         local vetLevel = self.Sync.VeteranLevel
         
         local buffName = false
-        local subSection = false
-        if buffType == 'VETERANCYREGEN' then
-            subSection = typeTable[self:GetUnitId()] or 8-- Will be 1 through 7
-            buffName = techLevel .. subSection .. buffType .. vetLevel
-        else
-            buffName = techLevel .. buffType .. vetLevel
-        end
+        
+        buffName = EffectiveTechLevel .. buffType .. vetLevel
         
         -- Bail out if it already exists
         if Buffs[buffName] then
@@ -249,22 +238,10 @@ Unit = Class(oldUnit) {
         -- Each buffType should only ever be allowed to add OR mult, not both.
         local val = 1
         if buffType == 'VETERANCYMAXHEALTH' then
-            val = 1 + ((multsTable[buffType][techLevel] - 1) * vetLevel)
+            val = 1 + ((multsTable[buffType][EffectiveTechLevel] - 1) * vetLevel)
         else
-            if subSection == 1 or subSection == 3 then -- Combat or Ship
-                val = multsTable[buffType][techLevel][subSection][vetLevel]
-            elseif subSection == 2 or subSection == 4 then -- Raider or Sub
-                val = multsTable[buffType][techLevel][subSection] * vetLevel
-            elseif subSection == 5 then -- Experimental or sACU
-                val = multsTable[buffType][techLevel][vetLevel]
-            elseif subSection == 6 then -- ACU
-                val = multsTable[buffType][techLevel] * vetLevel
-            elseif subSection == 7 then -- Placeholder cat for backend purposes only
-                val = multsTable[buffType][techLevel] * vetLevel
-            else -- non combat unit or modded unit
-                WARN('we are applying a buff for a non-combat or modded unit! ')
-                val = multsTable[buffType][techLevel][1][vetLevel] --we make it use default combat units if its not specified otherwise.
-            end
+            --WARN('we are applying a buff for a non-combat or modded unit! ')
+            val = multsTable[buffType][EffectiveTechLevel] * vetLevel --we make it use default combat units if its not specified otherwise.
         end
         
         if type(val) ~= 'number' then --catch any nonsense with buffs, so we at least make it not crash the script.
@@ -272,7 +249,7 @@ Unit = Class(oldUnit) {
             if buffType == 'VETERANCYREGEN'  then
                 val = 2 * vetLevel
             else
-                val = 1.2 --just you know, whatever right?
+                val = 1.1 --just you know, whatever right?
             end
         end
 
@@ -301,11 +278,43 @@ Unit = Class(oldUnit) {
     end,
     
     FindTechLevel = function(self)
+        local shiftTechLevels = { --for navy units
+            TECH1 = 'TECH2',
+            TECH2 = 'TECH3',
+            TECH3 = 'SUBCOMMANDER',
+            SUBCOMMANDER = 'EXPERIMENTAL',
+            EXPERIMENTAL = 'EXPERIMENTAL',
+            }
+        local effectiveLevel = 'TECH2' --default
+        
         for k, cat in pairs({'EXPERIMENTAL', 'SUBCOMMANDER', 'COMMAND', 'TECH1', 'TECH2', 'TECH3'}) do
-            if EntityCategoryContains(ParseEntityCategory(cat), self) then return cat end
+            if EntityCategoryContains(ParseEntityCategory(cat), self) then effectiveLevel = cat  break end
         end
+        
+        --naval units need more vet so they jump up a tech level
+        if EntityCategoryContains(ParseEntityCategory('NAVAL'), self) then
+            effectiveLevel = shiftTechLevels[effectiveLevel]
+        end
+        
+        --WARN("calcing tech level as: "..effectiveLevel)
+        return effectiveLevel
     end,
     
+    DetermineBarVisibilty = function(self)
+        --we need to work out based on the units weapons if we show the veterancy bar for it.
+        
+        --manual exceptions table for suicide units and hidden ones
+        if hideTable[self:GetUnitId()] then return true end
+        
+        --any unit with 0 weapons gets it hidden
+        --any unit with 1 weapon thats crash damage/death nuke gets it hidden
+        --for some reason the function doesnt return death weapons usually so it says 0 which makes our job easier
+        local wepNum = self:GetWeaponCount()
+        if wepNum == 0 then return true end
+        
+        return false
+    end,
+
     OnStopBeingBuilt = function(self, builder, layer)        
         -- Set up Veterancy tracking here. Avoids needing to check completion later.
         -- Do all this here so we only have to do for things which get completed        
@@ -315,17 +324,13 @@ Unit = Class(oldUnit) {
         self.Sync.VeteranLevel = 0
         
         --some units need to get their bars hidden, since it doesnt make sense for them to get vet.
-        --we check in the typeTable for the hidden vet type which is bscly only there to prevent bugs.
-        --not super mod compatible: units not in the table get their bars auto-hidden, but its only visual so whatever.
-        if not typeTable[self:GetUnitId()] or typeTable[self:GetUnitId()] == 7 then
-        self.Sync.hideProgressBar = true
-        end
+        self.Sync.hideProgressBar = self:DetermineBarVisibilty()
         
         -- Allow units to require more or less mass to level up. Decimal multipliers mean
         -- faster leveling, >1 mean slower. Doing this here means doing it once instead of every kill.
-        local defaultMult = 1.5
+        local defaultMult = 2.0
         self.Sync.myValue = math.floor(bp.Economy.BuildCostMass * (bp.Veteran.RequirementMult or defaultMult))
-            
+        
         oldUnit.OnStopBeingBuilt(self, builder, layer)
     end,
 
