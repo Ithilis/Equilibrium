@@ -28,9 +28,16 @@ HideTable = {
 -- Units with no weapons get caught elsewhere, this is for exceptions like TMD
 -- tracking in OnStopBeingBuilt
 
---need to add: tmd/smd
+--need to add: smd
 --paragon
---mercies
+    
+    --tmd
+    uab4201 = true,
+    ueb4201 = true,
+    urb4201 = true,
+    xsb4201 = true,
+    
+    daa0206 = true,         --mercy
 
     xsl0402 = true,         -- Ion storm
     xea0002 = true,
