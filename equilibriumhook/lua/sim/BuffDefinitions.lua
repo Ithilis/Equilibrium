@@ -8,13 +8,13 @@ MultsTable = {
         TECH3 = 6,
         SUBCOMMANDER = 9,
         EXPERIMENTAL = 12,
-        COMMAND = 5, -- the acu is important to be like this to preserve gameplay
+        COMMAND = 6, -- the acu is important to be like this to preserve gameplay
     },
     VETERANCYMAXHEALTH = {
-        TECH1 = 1.1,
-        TECH2 = 1.1,
-        TECH3 = 1.1,
-        EXPERIMENTAL = 1.1,
+        TECH1 = 1.15,
+        TECH2 = 1.15,
+        TECH3 = 1.15,
+        EXPERIMENTAL = 1.15,
         COMMAND = 1.15, -- the acu is important to be like this to preserve gameplay
         SUBCOMMANDER = 1.15, --sacu should be different too because its special and not some Lame t3.5 unit
     },
