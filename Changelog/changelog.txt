@@ -1,3 +1,39 @@
+V. 41
+_________
+
+
+- T2 transports speed [15] (16)
+
+- T2 PD drain 75e/s (100e/s)
+-- cybran 3600e (4800) [3400]
+-- sera 3750e (5000) [3648]
+-- aeon 3900e (5200) [3648]
+-- uef 4050e (5400) [3600]
+
+- T2 AA flak drain 75e/s (100e/s)
+-- sera 3600e (4800) [3920]
+-- cybran 3750e (5000) [3920]
+-- uef 3750e (5000) [3920]
+-- aeon 3900e (5200) [3920]
+
+
+- Air is able (again) shoot into landed air units
+
+- gunships are able (bug fix) to shoot into landed air units
+-- hook Cybran T3 gunship code to save space
+
+- Hunter (cybran t1 lab) EMP will not stun air units anymore
+-- EMP radius 7 (6)
+
+- Labs (hunter, flare, mech marine) range 15 (13)
+-- Hitboxes 0,8 (0,7)
+
+- T1 tanks (all of them) 50m 250e 250bt
+-- Aurora 200hp (205) 40dmg (48) per salvo = 22,2dps (24) reload time 1.8s (2)
+-- Striker 3,3sp (3,4) 20dmg (22) per salvo = 20dps (22)
+-- Mantis 330hp (330) 3,7sp (3,6) 7dmg (10) [7] per salvo rof 0,3s (0,5) = 23,3dps (20)
+-- Tham 30dmg (29) per salvo = 23dps (22) max break & max acceleration 3,4 (3,5)
+
 v. 40
 ____________
 
