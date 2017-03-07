@@ -1,4 +1,4 @@
---S Sniper
+--Seraphim T3 Sniper bot
     
 UnitBlueprint {
 Merge = true,
@@ -9,40 +9,34 @@ BlueprintId = "xsl0305",
         BuildCostMass = 680,
         BuildTime = 3400,
         },
-    Display = {
-        Abilities = {
-            '<LOC ability_cloak>Cloaking',
-        },
-    },
     Defense = {
-        Health = 350,
-        MaxHealth = 350,    --from 500, because mighty cloak
-    },
-    Intel = {
-        Cloak = true,
+        Health = 500,
+        MaxHealth = 500,
     },
     Physics = {
-        MaxAcceleration = 2.8,            --from 3, on snipe  its speed multiplier with 0.75 
-        MaxSpeed = 2.8,
-        LandSpeedMultiplier = 1,        
+        MaxAcceleration = 2.1,            --from 3, there is no longer any movement speed difference with sniper mode
+        MaxSpeed = 2.1,
+        LandSpeedMultiplier = 1,
     },
     SizeX = 0.4,
     SizeY = 1.2,
     SizeZ = 0.8,
     Weapon = {
-        {
-            Damage = 1350,                    --from 2000, its 90dps
-            DamageRadius = 1,
-            FiringRandomnessWhileMoving = 0.6,    --from 0,8
-            RateOfFire = 0.0666,            --15sec from 14,3sec
-            MaxRadius = 65,
-        },
-        {
+        { -- short range gun
+            BallisticArc = 'RULEUBA_LowArc', --we dont shoot beams. stops it hitting the ground so much.
             Damage = 600,                    --120dps
             DamageRadius = 1.5,
-            FiringRandomnessWhileMoving = 0.4,    --from 0,6
+            FiringRandomnessWhileMoving = 0.4,    --from 0.6
             MaxRadius = 38,
             RateOfFire = 0.2,
+        },
+        { -- long range gun, on by default
+            BallisticArc = 'RULEUBA_LowArc', --we dont shoot beams. stops it hitting the ground so much.
+            Damage = 1350,                    --from 2000, 90dps
+            DamageRadius = 1,
+            FiringRandomnessWhileMoving = 0.6,    --from 0.8
+            RateOfFire = 0.0666,            --15sec from 14.3sec
+            MaxRadius = 75,
         },
     },
 }
