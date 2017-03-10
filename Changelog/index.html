@@ -49,47 +49,34 @@
                 <ul>
                 <li>Units now receive veterancy points that are equal to the destroyed unit's mass cost. 
                 <li>Units gain a veterancy level when they get 150% of their own mass cost in veterancy points.
-                <li>ACUs & Experimentals require only 50% of their mass value to gain a rank. 
-                <li>Destroying a unit with veterancy gives 20% more veterancy points per veterancy level of the destroyed unit. For example, killing a tank with 5 veterency levels awards 200% of its mass cost.
+                <li>ACUs & Experimentals require only 50% of their mass value to gain a rank.
                 <li>Multiple units killing the same target will split the veterency points between all units involved, in proportion to the damage dealt by each unit. A unit that deals 75% of the damage of a kill will be awarded 75% of that unit's mass in veterency points. <a href="http://recordit.co/t3kGOiPqcq">What that looks like.<a/>
                 <p>
                 <li>Promoted units receive new max health and gain higher regeneration, but  <a href="http://recordit.co/Y61oe1SANB"> no longer get any insta-heal<a/>. 
                     <ul>
-                    <li><b>T1/T2/SACU</b> units gain <b>20%</b> more max HP.
-                    <li><b>T3/ACU</b> units gain <b>15%</b> more max HP.
-                    <li><b>Experimentals</b> gain <b>10%</b> more max HP. 
+                    <li><b>All units</b> gain <b>15%</b> more max HP every vet level.
                     </ul>
                 <p>
-                <li>Regen values for units have been normalized and split into two categories. Main Combat Units recieve less regen at lower levels, but their regen bonuses are larger at higher veterency levels. Raider and Support units recieve a flat amount of regen each level.
+                <li>Regen values for units have been normalized and split into categories by tech level. Naval units get the regen of one tech level above them.
                 </ul>
             
-            <b>Main Combat Units</b> - Buildings, Mainline Tanks, Artillery, Mobile AA, Interceptors, Fighter-Bombers, ASFs, and Gunships
+            <b>Land Units</b>
                 <ul>
-                <li> <b>T1:</b> +0.5+1+1.5+2+2.5 => 0.5/1.5/3/5/7.5
-                <li> <b>T2:</b> +1+2+3+4+5 => 1/3/6/10/15
-                <li> <b>T3:</b> +1.5+3+4.5+6+7.5 => 1.5/4.5/9/15/22.5
-                <li> <b>SACUs:</b> +2+4+6+8+10 => 2/6/12/20/30
-                <li> <b>T4:</b> +6+12+18+24+30 => 6/18/36/60/90
+                <li> <b>T1:</b> +1 => 1/2/3/4/5
+                <li> <b>T2:</b> +3 => 3/6/9/12/15
+                <li> <b>T3:</b> +6 => 6/12/18/24/30
+                <li> <b>SACUs:</b> +9 => 9/18/27/36/45
+                <li> <b>T4:</b> +12 => 12/24/36/48/60
                 <p>
-                <li> <b>ACUs:</b> 5+5+5+5+5 =>(10+) 5/10/15/20/25
+                <li> <b>ACUs:</b> +6 => 6/12/18/24/30
                 </ul>
-			<b>Raider/Support Units</b> - Scouts, LABs, T2 Hover Tanks and Range Bots, T3 Raid Bots and Snipers, Bombers, and Transports
+            
+            <b>Naval Units</b>
                 <ul>
-                <li> <b>T1:</b> +1+1+1+1+1 => 1/2/3/4/5
-                <li> <b>T2:</b> +2+2+2+2+2 => 2/4/6/8/10
-                <li> <b>T3:</b> +3+3+3+3+3 => 3/6/9/12/15
-                </ul>
-			<b>Main Combat Naval Ships</b> - Frigates, Air Attack Ships, Destroyers, Cruisers, Battleships, Battlecruisers, Missile Ships, and Aircraft Carriers
-                <ul>
-                <li> <b>T1:</b> +1+2+3+4+5 => 1/3/6/10/15
-                <li> <b>T2:</b> +2+4+6+8+10 => 2/6/12/20/30
-                <li> <b>T3:</b> +6+12+18+24+30 => 6/18/36/60/90
-                </ul>
-			<b>Raider/Support Naval Ships</b> - Attack Submarines, Submarine Hunters, and Strategic Missile Submarines
-                <ul>
-                <li> <b>T1:</b> +2+2+2+2+2 => 2/4/6/8/10
-                <li> <b>T2:</b> +3+3+3+3+3 => 3/6/9/12/15
-                <li> <b>T3:</b> +6+6+6+6+6 => 6/12/18/24/30
+                <li> <b>T1:</b> +3 => 3/6/9/12/15
+                <li> <b>T2:</b> +6 => 6/12/18/24/30
+                <li> <b>T3:</b> +9 => 9/18/27/36/45
+                <li> <b>T4:</b> +12 => 12/24/36/48/60
                 </ul>
 			
             <h4>Purpose</h4>
@@ -98,9 +85,7 @@
 			<li>Rewarding killing expensive (and therefore high hp and powerfully-armed) units. A T3 scout worth 195m should not award the same veterency as destroying a T3 battleship worth 9000m.
 			<li>To make veterancy a system which is intuitive and predictable for each unit. Units need to destroy 150% of their own mass to vet up.
 			<li>Removing the unintuitive requirement of self destructing lower tech units to prevent the enemy from gaining ridiculous amounts of experience.
-			<li>Filling new max HP faster and making units with veterancy more important overall. T3 and T4 units have less HP gains to increase the viability of using lower tech units against higher tech ones. Experimentals vet up faster but don't gain as much from doing so.
 			<li>Splitting veterancy rewards. Your units should gain xp relatively evenly, rather than have one level 5 Loyalist after an exp battle.
-			<li>A rebalance of regeneration rates. Regen helps different units gain the most from veterancy values. Raiding units which won't live long get regen faster than units which do, but max out at lower overall regen values, helping to highlight their roles and making the game more varied.
 			<li>Naval units and submarines are far more expensive than land units and have far more HP, so they also gain more regeneration.
 			</ul>
 		</div>
@@ -338,10 +323,11 @@
 			<h4>Resource Allocation System</h4>
             RAS is, quite frankly, OP. There is rarely a time where you don't want it, or a time where you would ever build a T3 pgen before getting RAS. RAS has been nerfed to increase the value of pgens, which opens up more strategic choices and new ways to attack your opponent. 
 			<ul>
-			<li><b>Cybran:</b> <strike>12m 3500e</strike> 12m 2100e
-			<li><b>UEF:</b> <strike>14m 3300e</strike> 14m 1800e 
-			<li><b>Seraphim:</b> <strike>16m 3000e</strike> 16m 1500e / <strike>32m 6000e</strike> 32m 2700e
-			<li><b>Aeon:</b> <strike>18m 2700e</strike> 18m 1200e / <strike>36m 5400e</strike> 36m 2100e
+			<li><b>Price for all factions:</b> <strike>5000m 175000e 2800bt</strike> → 5000m 125000e 2500bt
+			<li><b>Cybran:</b> <strike>12m 3500e</strike> → 12m 2100e
+			<li><b>UEF:</b> <strike>14m 3300e</strike> → 14m 1800e 
+			<li><b>Seraphim:</b> <strike>16m 3000e</strike> → 16m 1500e / <strike>32m 6000e</strike> → 32m 2700e
+			<li><b>Aeon:</b> <strike>18m 2700e</strike> → 18m 1200e / <strike>36m 5400e</strike> → 36m 2100e
 			</ul>
 			
 			
@@ -882,12 +868,17 @@
                 </ul>
 			
 			<h4>640 Mass Category (Sniper bots)</h4>
-            Snipers have increased survivability which is counterable.
-            <li>Seraphim is effective for defending under stealth, can be also use for much sneaky tactic deploy them on map under stealth generator that have also personal cloak. 
+            Snipers have been adjusted to the rest of the T3 land units, and tweaked to be a little easier to use.
+            <li>The Seraphim sniper bot has been remade to be more convenient - it is now on sniper mode by default and its short range mode is more pronounced - use it for higher dps on lower ranges.
 
 			
                 <ul>
-                <li><b>Seraphim:</b> <strike>500HP 3sp 116/140dps 5/14,3s reload time 65/75r 0aoe 0.8/0.6fr while moving</strike> → 350HP 2.8sp 120dps(1.5aoe) 0.6 fr while moving or 90dps(1aoe) 38/65r 0.4fr while moving, 5/15s reload time, free Cloak
+                <li><b>Seraphim:</b> <strike>3sp 116/140dps 5/14,3s reload time 65/75r 0aoe 0.8/0.6fr while moving</strike> → 2.1sp 120dps(1.5aoe) 0.6 fr while moving or 90dps(1aoe) 38/75r 0.4fr while moving, 5/15s reload time
+                    <ul>
+                    <li>No longer has any penalty to movement speed, it always moves at a constant speed irrespective of long or short range mode.
+                    <li>Long range mode is on by default and is no longer reset when entering a transport.
+                    <li>The snipers projectiles are less likely to hit the ground instead of their target.
+                    </ul>
                 <li><b>Aeon:</b> <strike>135dps 7s reload time 70r 0aoe 0,75fr while moving</strike> → 450HP 100dps 10s reload time 70r 1.5aoe 0.5fr while moving
                 </ul>
 			
