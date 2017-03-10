@@ -4,23 +4,22 @@
 MultsTable = {
     VETERANCYREGEN = {
         TECH1 = 1,
-        TECH2 = 3,
-        TECH3 = 6,
-        SUBCOMMANDER = 9,
-        EXPERIMENTAL = 12,
-        COMMAND = 6, -- the acu is important to be like this to preserve gameplay
+        TECH2 = 2.5,
+        TECH3 = 5,
+        SUBCOMMANDER = 10,
+        EXPERIMENTAL = 20,
+        COMMAND = 5,
     },
     VETERANCYMAXHEALTH = {
         TECH1 = 1.15,
         TECH2 = 1.15,
         TECH3 = 1.15,
         EXPERIMENTAL = 1.15,
-        COMMAND = 1.15, -- the acu is important to be like this to preserve gameplay
-        SUBCOMMANDER = 1.15, --sacu should be different too because its special and not some Lame t3.5 unit
+        COMMAND = 1.15,
+        SUBCOMMANDER = 1.15, 
     },
 }
 
---for Ithilis: if you put every single unit which needs to be hidden in here, we get slightly faster code :D
 
 -- This substitutes for the fact we don't have a blueprint filler. Yes, I know it's a mess.
 HideTable = {
