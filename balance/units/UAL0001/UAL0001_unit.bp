@@ -65,14 +65,14 @@ BlueprintId = "ual0001",
             BuildTime = 2500,            --from 1400bt
         },
         Shield = {
-            BuildCostEnergy = 90000,            --from 93750
-            BuildCostMass = 1500,                --from 1500
-            BuildTime = 1500,                    --from 1750
+            BuildCostEnergy = 40000,            --from 93750
+            BuildCostMass = 1000,                --from 1500
+            BuildTime = 1000,                    --from 1750
             
-            MaintenanceConsumptionPerSecondEnergy = 250,
-            ShieldMaxHealth = 29000,
-            ShieldRechargeTime = 160,
-            ShieldRegenRate = 40,            --from 37
+            MaintenanceConsumptionPerSecondEnergy = 100,
+            ShieldMaxHealth = 10000,
+            ShieldRechargeTime = 120,
+            ShieldRegenRate = 30,            --from 37
         },
         ShieldHeavy = {
             BuildCostEnergy = 480000,            --from 1 000000e

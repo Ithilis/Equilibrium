@@ -52,12 +52,12 @@ BlueprintId = "uel0001",
             BuildTime = 2500,            --from 1400bt
         },
         DamageStablization = {
-            BuildCostEnergy = 48000,
-            BuildCostMass = 1200,
-            BuildTime = 1200,
+            BuildCostEnergy = 32000,
+            BuildCostMass = 800,
+            BuildTime = 800,
             
-            NewHealth = 2000,        --add
-            NewRegenRate = 60,
+            NewHealth = 0,        --add
+            NewRegenRate = 50,
         },
         Shield = {
             BuildCostEnergy = 126000,    --from 112500

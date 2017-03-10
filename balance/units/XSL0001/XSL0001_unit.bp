@@ -22,20 +22,20 @@ UnitBlueprint {
             BuildTime = 700,                --from 900
         },
         DamageStabilization = {
-            BuildCostEnergy = 90000,
-            BuildCostMass = 2000,
-            BuildTime = 2000,            --from 2800
+            BuildCostEnergy = 60000,
+            BuildCostMass = 1500,
+            BuildTime = 1500,            --from 2800
             
-            NewHealth = 6000,
-            NewRegenRate = 75,
+            NewHealth = 3500,
+            NewRegenRate = 60,
         },
         DamageStabilizationAdvanced = {
             BuildCostEnergy = 450000,
             BuildCostMass = 4500,
             BuildTime = 3000,        --from 4200
 
-            NewHealth = 15000,          --from 20 000
-            NewRegenRate = 125,        --its 75+125 = 200hp/s
+            NewHealth = 15000,         --from 20 000
+            NewRegenRate = 125,        --its 60+125 = 185hp/s
         },
         T3Engineering = {
             NewBuildRate = 120,            --from 126
