@@ -27,14 +27,19 @@ HideTable = {
 -- Units with no weapons get caught elsewhere, this is for exceptions like TMD
 -- tracking in OnStopBeingBuilt
 
---need to add: smd
---paragon
+
     
     --tmd
     uab4201 = true,
     ueb4201 = true,
     urb4201 = true,
     xsb4201 = true,
+    
+    --smd
+    uab4302 = true,
+    ueb4302 = true,
+    urb4302 = true,
+    xsb4302 = true,
     
     daa0206 = true,         --mercy
 
@@ -44,5 +49,6 @@ HideTable = {
     xsc9011 = true,         -- Novax jamming blips (sera jamming crystal units)
     
     xrl0302 = true,         -- fire beetle
+    xab1401 = true,         -- Paragon
     
 }

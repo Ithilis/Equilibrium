@@ -3,7 +3,7 @@
 ----Tooltips
 
 tooltipui0016="Variable Overcharge"
-tooltipui0017="Needs 2000 energy in storage to activate. Right click to toggle auto-fire. Drains 2000 energy for every 1000 damage dealt to regular units."
+tooltipui0017="Needs 2000 energy in storage to activate. Right click to toggle auto-fire. Drains 2000 energy for every 1000 damage dealt to regular units or 20% against structures."
 
 ----SACU Presets
 
@@ -185,8 +185,8 @@ Unit_Description_0106="Increases ACU's resource generation to 12 mass per second
 Unit_Description_0107="Personal Cloaking further hiding the ACU from optical sensors and massively boosts HP. Provides some HP regeneration. Countered by omni sensors. Costs energy to run." --ithilis
 Unit_Description_0108="Personal Stealth hiding the ACU from radar. Provides some HP regeneration. Countered by omni sensors. Costs energy to run." 
 Unit_Description_0109="Adds Teleportation capability. Requires considerable energy to activate."
-Unit_Description_0110="Grants Tech 2 schematic access and increases the ACU's build speed for 40, 1500 health, and health regeneration." --ithilis
-Unit_Description_0111="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed for 120, maximum health, and health regeneration." --ithilis
+Unit_Description_0110="Grants Tech 2 schematic access and increases the ACU's build speed, health and health regeneration." --ithilis
+Unit_Description_0111="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed, maximum health, and health regeneration." --ithilis
 Unit_Description_0112="Doubles the main cannon's Rate-Of-Fire and increases the range of all the ACU's weaponry." --ithilis
 Unit_Description_0113="Enhances the ACU with Microwave Laser weapon with unbelievable firepower."
 Unit_Description_0114="Enhances the ACU with a torpedo weapon and sonar sensor."
@@ -324,11 +324,11 @@ Unit_Description_0192="Allows you to construct Support Command Units, either in 
 
 ----Armoured Command Unit
 Unit_Description_0305="Houses Commander. Combination of Barracks and Command Center. Contains all the blueprints necessary to build a basic army from scratch."
-Unit_Description_0156="Grants Tech 2 schematic access and increases the ACU's build speed to 40, adds 1000 maximum health, and health regeneration." --Ithilis
+Unit_Description_0156="Grants Tech 2 schematic access and increases the ACU's build speed adds maximum health, and health regeneration." --Ithilis
 Unit_Description_0157="Creates periodic EMP pulses around the ACU. Provides small regeneration bonus. Works while the ACU is underwater or in a transport. Consumes energy while firing." --Ithilis
 Unit_Description_0158="Massively increases main cannon range."
 Unit_Description_0159="Grants the ACU a long range omni Sensor and increased optical range."
-Unit_Description_0160="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed to 120, adds additional maximum health and health regeneration." --Ithilis
+Unit_Description_0160="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed, adds additional maximum health and health regeneration." --Ithilis
 Unit_Description_0161="Doubles main cannon Rate-Of-Fire."
 Unit_Description_0162="Increases ACU's resource generation to 18 mass per second and 1200 energy per second." --Ithilis
 Unit_Description_0163="Increases ACU's resource generation to 36 mass per second and 2100 energy per second." --Ithilis
@@ -361,7 +361,7 @@ Unit_Description_0232="Fast, Shielded Heavy Assault robot. Can repair units and 
 Unit_Description_0233="Slow-moving Heavy Artillery. Can fire while moving."
 Unit_Description_0234="Experimental Sacred Assault robot. Amphibious, armed with a laser and magnetic grapple claws which instantly kill enemy units. Equipped with an omni sensor."  --Ithilis
 Unit_Description_0327="Fast-moving Hovering Amphibious Tank. Good for raiding. Has a reduced speed on water." --Ithilis
-Unit_Description_0328="Sniper Robot with paper-thin armour designed to apply extreme damage at long range. Inaccurate while in motion. Has personal stealth"  --Ithilis
+Unit_Description_0328="Sniper Robot with paper-thin armour designed to apply extreme damage at long range. Inaccurate while in motion."  --Ithilis
 Unit_Description_0442="Extremely Long range support tank armed with weaponry which is largely ineffective against armour, but annihilates shields."
 
 ----Air
@@ -383,7 +383,7 @@ Unit_Description_0419="Suicide Bomber with short operational range and practical
 
 ----Navy
 Unit_Description_0246="Naval support unit. Equipped with direct fire weapons with superior range, radar, sonar and torpedo defenses." --Ithilis
-Unit_Description_0247="Attack Submarine. Effective against surface ships in large numbers." --Ithilis
+Unit_Description_0247="Attack Submarine. Effective against surface ships in large numbers. When surface provide big vision radius." --Ithilis
 Unit_Description_0248="Anti-Air support ship. Equipped with torpedo defenses." --Ithilis
 Unit_Description_0249="Anti-Aircraft naval vessel. Armed with an anti-air missile system and direct fire cannon. Equipped with tactical missile defense flares and a full sensor suite."
 Unit_Description_0250="Primary surface combatant with powerful direct fire cannons. Armed with Depth Charges which ignore enemy Torpedo defenses." --ithilis
@@ -465,8 +465,8 @@ Unit_Description_0421="Adds Teleportation capability. Requires considerable ener
 Unit_Description_0422="Massively increases the rate at which the ACU repairs its armour as well as providing a large HP boost."
 Unit_Description_0424="Increases ACU's resource generation to 16 mass per second and 1500 energy per second." --Ithilis
 Unit_Description_0425="Increases ACU's resource generation to 32 mass per second and 2700 energy per second." --Ithilis
-Unit_Description_0426="Grants Tech 2 schematic access and increases the ACU's build speed for 40, 500 health, and health regeneration." --Ithilis
-Unit_Description_0427="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed for 120, maximum health, and health regeneration." --Ithilis
+Unit_Description_0426="Grants Tech 2 schematic access and increases the ACU's build speed health and health regeneration." --Ithilis
+Unit_Description_0427="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed, maximum health, and health regeneration." --Ithilis
 Unit_Description_0428="Increases main cannon damage to 400, range for 26 and grants 2 aoe damage radius." --Ithilis
 Unit_Description_0429="Increase ACU health and regeneration. Emmits a field which supports nearby allies units by increasing their maximum health and regeneration." --Ithilis
 Unit_Description_0430="Increase ACU health and regeneration. Emmits a bigger field which supports nearby allies units by increasing their maximum health and regeneration." --Ithilis
@@ -494,7 +494,7 @@ Unit_Description_0342="Hover tank. Good for raiding. Has a reduced speed on wate
 Unit_Description_0343="Lightly armoured Mobile Missile Launcher armed with an intelligent missile system which automatically selects between long range unguided missiles and short range guided missiles. Out-ranges T2 Point defense." --Ithilis
 Unit_Description_0344="Amphibious mobile anti-air flak launcher." --Ithilis
 Unit_Description_0345="Heavy Siege Tank armed with direct fire weaponry and depth charges. Direct fire weapons are divided between long and short range cannons." --Ithilis
-Unit_Description_0346="Lightly armored, fast sniper bot. Armed with an extremely powerful energy rifle. Inaccurate while in motion. Equipped with personal cloak." --Ithilis
+Unit_Description_0346="Lightly armored, fast sniper bot. Armed with an extremely powerful energy rifle. Inaccurate while in motion." --Ithilis
 Unit_Description_0347="Slow-moving Heavy Artillery. Must be stationary to fire."
 Unit_Description_0348="High-end mobile shield generator."
 Unit_Description_0349="Armed with direct fire cannons, a central Plasma Ball Launcher, and powerful anti-air flak. When destroyed, a shortlived energy being is released, damaging nearby enemy units." --Ithilis
