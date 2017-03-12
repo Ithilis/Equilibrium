@@ -7,7 +7,7 @@ function UpdateWindow(info)
         controls.name:SetText(LOC('<LOC rollover_0000>Unknown Unit'))
         controls.icon:SetTexture('/textures/ui/common/game/unit_view_icons/unidentified.dds')
         controls.stratIcon:SetTexture('/textures/ui/common/game/strategicicons/icon_structure_generic_selected.dds')
-        for index = 1, 7 do
+        for index = 1, table.getn(controls.statGroups) do
             local i = index
             controls.statGroups[i].icon:Hide()
             if controls.statGroups[i].color then
@@ -26,8 +26,8 @@ function UpdateWindow(info)
         controls.abilities:Hide()
     else
         local bp = __blueprints[info.blueprintId]
-        if DiskGetFileInfo('/textures/ui/common/icons/units/'..info.blueprintId..'_icon.dds') then
-            controls.icon:SetTexture('/textures/ui/common/icons/units/'..info.blueprintId..'_icon.dds')
+        if DiskGetFileInfo(UIUtil.UIFile('/icons/units/' .. info.blueprintId .. '_icon.dds', true)) then
+            controls.icon:SetTexture(UIUtil.UIFile('/icons/units/' .. info.blueprintId .. '_icon.dds', true))
         else
             controls.icon:SetTexture('/textures/ui/common/game/unit_view_icons/unidentified.dds')
         end
@@ -61,7 +61,7 @@ function UpdateWindow(info)
             LayoutHelpers.AtTopIn(controls.name, controls.bg, 14)
             controls.name:SetFont(UIUtil.bodyFont, 10)
         end
-        for index = 1, 7 do
+        for index = 1, table.getn(statFuncs) do
             local i = index
             if statFuncs[i](info, bp) then
                 if i == 1 then
@@ -70,10 +70,10 @@ function UpdateWindow(info)
                     controls.statGroups[i].icon:SetTexture(iconType)
                     controls.statGroups[i].value:SetText(value)
                 elseif i == 3 then
-                    local value, iconType, color = statFuncs[i](info, bp)
-                    controls.statGroups[i].value:SetText(value)
-                    controls.statGroups[i].icon:SetTexture(UIUtil.UIFile(Factions.Factions[Factions.FactionIndexMap[string.lower(bp.General.FactionName)]].VeteranIcon))
-                elseif i == 5 then
+					local value, iconType, color = statFuncs[i](info, bp)
+					controls.statGroups[i].value:SetText(value)
+					controls.statGroups[i].icon:SetTexture(UIUtil.UIFile(Factions.Factions[Factions.FactionIndexMap[string.lower(bp.General.FactionName)]].VeteranIcon))
+				elseif i == 5 then
                     local text, iconType = statFuncs[i](info, bp)
                     controls.statGroups[i].value:SetText(text)
                     if iconType == 'strategic' then
@@ -111,6 +111,10 @@ function UpdateWindow(info)
 
         if info.health then
             controls.healthBar:Show()
+            
+            -- Removing a MaxHealth buff causes health > maxhealth until a damage event for some reason
+            info.health = math.min(info.health, info.maxHealth)
+            
             controls.healthBar:SetValue(info.health/info.maxHealth)
             if info.health/info.maxHealth > .75 then
                 controls.healthBar._bar:SetTexture(UIUtil.UIFile('/game/unit-build-over-panel/healthbar_green.dds'))
@@ -154,14 +158,13 @@ function UpdateWindow(info)
                 end
             end
         end
-
         local unitQueue = false
         if info.userUnit then
             unitQueue = info.userUnit:GetCommandQueue()
         end
         if info.focus then
-            if DiskGetFileInfo('/textures/ui/common/icons/units/'..info.focus.blueprintId..'_icon.dds') then
-                controls.actionIcon:SetTexture('/textures/ui/common/icons/units/'..info.focus.blueprintId..'_icon.dds')
+            if DiskGetFileInfo(UIUtil.UIFile('/icons/units/' .. info.focus.blueprintId .. '_icon.dds', true)) then
+                controls.actionIcon:SetTexture(UIUtil.UIFile('/icons/units/' .. info.focus.blueprintId .. '_icon.dds', true))
             else
                 controls.actionIcon:SetTexture('/textures/ui/common/game/unit_view_icons/unidentified.dds')
             end
@@ -253,7 +256,6 @@ function UpdateWindow(info)
     end
     if options.gui_detailed_unitview ~= 0 then
         if info.blueprintId ~= 'unknown' then
-            controls.Buildrate:Hide()
             controls.shieldText:Hide()
 
             if info.userUnit ~= nil then
@@ -286,13 +288,6 @@ function UpdateWindow(info)
                     end
                 end
             end
-
-            if info.userUnit ~= nil and info.userUnit:GetBuildRate() >= 2 then
-                controls.Buildrate:SetText(string.format("%d",math.floor(info.userUnit:GetBuildRate())))
-                controls.Buildrate:Show()
-            else
-                controls.Buildrate:Hide()
-            end
         end
     end
 end
@@ -318,7 +313,7 @@ function CreateUI()
     controls.vetBar:Show()
 
     controls.statGroups = {}
-    for i = 1, 7 do
+    for i = 1, table.getn(statFuncs) do
         controls.statGroups[i] = {}
         controls.statGroups[i].icon = Bitmap(controls.bg)
         controls.statGroups[i].value = UIUtil.CreateText(controls.statGroups[i].icon, '', 12, UIUtil.bodyFont)
@@ -340,7 +335,6 @@ function CreateUI()
 
     if options.gui_detailed_unitview ~= 0 then
         controls.shieldText = UIUtil.CreateText(controls.bg, '', 13, UIUtil.bodyFont)
-        controls.Buildrate = UIUtil.CreateText(controls.bg, '', 12, UIUtil.bodyFont)
     end
     
     controls.bg.OnFrame = function(self, delta)
@@ -365,4 +359,5 @@ function CreateUI()
         LayoutHelpers.AtRightIn(controls.SCUType, controls.icon)
         LayoutHelpers.AtBottomIn(controls.SCUType, controls.icon)
     end
+
 end
