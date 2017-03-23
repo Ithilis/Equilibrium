@@ -44,7 +44,7 @@ xsl0301_NanoCombat_name="SACU (Nano Combatant Preset)"
 ----Armoured Command Unit
 Unit_Description_0004="Mounts a Tactical Missile Launcher onto the back of the ACU. Missiles equipped with a camera system that reveals the target area." --ithilis
 Unit_Description_0005="Grants Tech 2 schematic access and increases the ACU's build speed for 40, 500 health, and health regeneration." --ithilis
-Unit_Description_0006="Increases the speed at which the ACU repairs itself by 60." --ithilis
+Unit_Description_0006="Increases the speed at which the ACU repairs itself by 50." --ithilis
 Unit_Description_0007="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed for 120, maximum health, and health regeneration." --ithilis
 Unit_Description_0008="Doubles the ACU's main weapon damage, and increases its range and that of Overcharge."
 Unit_Description_0009="Tactical Missiles replaced by much more expensive, powerful Tactical Nuclear Missiles. Missiles equipped with a camera system that reveals the target area." --ithilis
