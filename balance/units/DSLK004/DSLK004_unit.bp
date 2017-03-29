@@ -22,15 +22,17 @@ BlueprintId = "dslk004",
         { -- ground weapon
             BeamCollisionDelay = 0.05,
             BeamLifetime = 0.4,
-            
             Damage = 270,            --180dps
             DamageRadius = 1,
+            FireTargetLayerCapsTable = { --stop it fucking up on hovering and naval and units standing in water
+                Land = 'Land|Water|Seabed',
+            },
             MaxRadius = 28,
             RateOfFire = 0.1666,    --from 4s, 6s
         },
         { -- aa weapon
-            BeamCollisionDelay = 0.01,    --from 0,01
-            BeamLifetime = 0.4,            --from 0,6
+            BeamCollisionDelay = 0.01,    --from 0.01
+            BeamLifetime = 0.4,            --from 0.6
             
             Damage = 200,            --300dps for 4sec 
             RateOfFire = 1,
