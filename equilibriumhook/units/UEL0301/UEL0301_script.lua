@@ -150,6 +150,15 @@ UEL0301 = Class(OldUEL0301) {
         --WARN('enhancement mass/energy/time: ' .. m .. ', ' .. e .. ', ' .. t)
         --WARN('total mass/energy/time: ' .. self.BuildCostM .. ', ' .. self.BuildCostE .. ', ' .. self.BuildT)
     end,
+
+    CreateWreckageProp = function( self, overkillRatio )
+    --intercept the wreckage creation code so it changes the wreckage value as well. we just pass a modified overkill multiplier for that.
+        local bp = self:GetBlueprint()
+        
+        local adjustedOKRMass = ((bp.Economy.BuildCostMass - self.BuildCostM) / bp.Economy.BuildCostMass) + (overkillRatio or 1)
+        --WARN('regular reclaim value: '..bp.Economy.BuildCostMass*0.81 .. ' adjusted reclaim value: '..self.BuildCostM*0.81)
+        CommandUnit.CreateWreckageProp(self, adjustedOKRMass)
+    end,
 }
 
 TypeClass = UEL0301
