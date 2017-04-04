@@ -1,7 +1,11 @@
+
 --Cybran ACU
 
 local oldURL0001 = URL0001
 URL0001 = Class(oldURL0001) {
+
+
+
 
     CreateEnhancement = function(self, enh)
         ACUUnit.CreateEnhancement(self, enh)
@@ -51,7 +55,7 @@ URL0001 = Class(oldURL0001) {
             self.StealthEnh = false
             self.CloakEnh = false
             self.StealthFieldEffects = false
-            self.CloakingEffects = false   
+            self.CloakingEffects = false
         elseif enh == 'ResourceAllocation' then
             local bp = self:GetBlueprint().Enhancements[enh]
             local bpEcon = self:GetBlueprint().Economy
@@ -66,7 +70,7 @@ URL0001 = Class(oldURL0001) {
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
             self.StealthEnh = false
-            self.CloakEnh = true 
+            self.CloakEnh = true
             self:EnableUnitIntel('Enhancement', 'Cloak')
             if Buff.HasBuff( self, 'CybranACUStealthBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUStealthBonus' )
@@ -93,7 +97,7 @@ URL0001 = Class(oldURL0001) {
             if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
             end
-            Buff.ApplyBuff(self, 'CybranACUCloakBonus')                        
+            Buff.ApplyBuff(self, 'CybranACUCloakBonus')
         elseif enh == 'CloakingGeneratorRemove' then
             self:RemoveToggleCap('RULEUTC_CloakToggle')
             self:DisableUnitIntel('Enhancement', 'Cloak')
@@ -221,10 +225,10 @@ URL0001 = Class(oldURL0001) {
             self:SetWeaponEnabledByLabel('MLG', false)
         elseif enh == 'NaniteTorpedoTube' then
             self:SetWeaponEnabledByLabel('Torpedo', true)
-            self:EnableUnitIntel('Sonar')
+            self:EnableUnitIntel('Enhancement', 'Sonar')
         elseif enh == 'NaniteTorpedoTubeRemove' then
             self:SetWeaponEnabledByLabel('Torpedo', false)
-            self:DisableUnitIntel('Sonar')
+            self:DisableUnitIntel('Enhancement', 'Sonar')
         end             
     end,
 
