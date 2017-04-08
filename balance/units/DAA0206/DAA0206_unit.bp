@@ -14,7 +14,6 @@ BlueprintId = "daa0206",
     },
     Display = {
         Abilities = {
-            '<LOC ability_stun>EMP Weapon',
             '<LOC ability_suicideweapon>Suicide Weapon',
         },
     },
