@@ -14,6 +14,9 @@ BlueprintId = "uel0111",
             CameraLifetime = 10,         --added
             CameraVisionRadius = 7.5,    --added
             MinRadius = 5,  --from 5
+            MuzzleSalvoDelay = 0, --protection from balance changes
+            MuzzleSalvoSize = 1,
+            RateOfFire = 0.2,
         },
     },
 }
