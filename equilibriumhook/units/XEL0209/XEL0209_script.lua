@@ -1,4 +1,8 @@
 --Sparky - T2 field engineer
+local SmartJamming = import('/lua/SmartJamming.lua').SmartJamming --import our jamming code
+
+
+XEL0209 = SmartJamming( XEL0209 )--inject our jamming code here, so it refreshes properly
 
 local oldXEL0209 = XEL0209
 XEL0209 = Class(oldXEL0209) {
