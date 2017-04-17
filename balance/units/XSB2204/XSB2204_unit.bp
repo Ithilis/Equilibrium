@@ -16,6 +16,7 @@ BlueprintId = "xsb2204",
     Weapon = {
         {
             Damage = 50,
+            FiringRandomness = 2.5,
             ProjectilesPerOnFire = 2,
             RateOfFire = 1.5,
             DamageRadius = 5,
