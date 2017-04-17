@@ -25,7 +25,6 @@ XEL0209 = Class(oldXEL0209) {
 
     OnAttachedToTransport = function(self, transport, bone)
         self:RetardedTurnOffJamming()
-        WARN('turning off stealth')
         oldXEL0209.OnAttachedToTransport(self, transport, bone)
     end,
 
