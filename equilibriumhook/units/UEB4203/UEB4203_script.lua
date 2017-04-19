@@ -9,6 +9,10 @@
 #****************************************************************************
 
 local TRadarJammerUnit = import('/lua/terranunits.lua').TRadarJammerUnit
+local SmartJamming = import('/lua/SmartJamming.lua').SmartJamming --import our jamming code
+
+
+TRadarJammerUnit = SmartJamming( TRadarJammerUnit )--inject our jamming code here, so it refreshes properly
 
 UEB4203 = Class(TRadarJammerUnit) {
     IntelEffects = {

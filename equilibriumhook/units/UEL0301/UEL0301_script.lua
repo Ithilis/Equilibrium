@@ -10,8 +10,10 @@ local CommandUnit = import('/lua/defaultunits.lua').CommandUnit
 local TWeapons = import('/lua/terranweapons.lua')
 local TDFHeavyPlasmaCannonWeapon = TWeapons.TDFHeavyPlasmaCannonWeapon
 local SCUDeathWeapon = import('/lua/sim/defaultweapons.lua').SCUDeathWeapon
+local SmartJamming = import('/lua/SmartJamming.lua').SmartJamming --import our jamming code
 
 OldUEL0301 = UEL0301
+OldUEL0301 = SmartJamming( OldUEL0301 )--inject our jamming code here, so it refreshes properly
 
 UEL0301 = Class(OldUEL0301) {
     CreateEnhancement = function(self, enh)
