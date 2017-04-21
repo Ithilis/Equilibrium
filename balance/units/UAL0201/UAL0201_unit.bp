@@ -33,7 +33,8 @@ BlueprintId = "ual0201",
         {
         MaxRadius = 23,            --from 26
         Damage = 40,            --25dps from 22
-        RateOfFire = 0.55,      -- 1,8s
+        FiringRandomnessWhileMoving = 0.1, --protecting from balance changes
+        RateOfFire = 0.55,      -- 1.8s
         },
     },
 }
