@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "daa0206", 
 
     Air = {
-        MaxAirspeed = 11,    --from 10
+        MaxAirspeed = 12,    --from 10
         MinAirspeed = 8,
     },
     Defense = {
@@ -21,25 +21,24 @@ BlueprintId = "daa0206",
         AirClass = false,
     },
     Economy = {
-        BuildCostEnergy = 6000,
-        BuildCostMass = 280,
-        BuildTime = 1600,
+        BuildCostEnergy = 5250,
+        BuildCostMass = 245,
+        BuildTime = 1400,
     },    
     Physics = {
         FuelRechargeRate = 5,        --from 0
         FuelUseTime = 120,
-        MaxSpeed = 11,                --from 10
+        MaxSpeed = 12,                --from 10
     },
     Weapon = {
         {
-            Damage = 375,            --from2400 =3000dmg after 4s
+            Damage = 300,            --from2400 =3000dmg after 3s
             DamageRadius = 4.5,        --from 3
             FiringTolerance = 6,
             MaxRadius = 25,
             MuzzleVelocity = 10,        --from 18
-            DoTPulses = 8,                --damage 8x every 0,5s        1=1x počas 1 dot timu
-            DoTTime = 8,                --damage while 4 second     1=0,5s
-            
+            DoTPulses = 10,
+            DoTTime = 6,
         },
         {
             Damage = 500,       --from 25dmg

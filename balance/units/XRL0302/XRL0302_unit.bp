@@ -13,7 +13,7 @@ BlueprintId = "xrl0302",
         BuildCostEnergy = 3600,    --100e per sec
         BuildCostMass = 360,    --20m per sec
         BuildTime = 1800,        --18s
-        MaintenanceConsumptionPerSecondEnergy = 75,
+        MaintenanceConsumptionPerSecondEnergy = 50,
     },
     Display = {
         Abilities = {
@@ -38,8 +38,8 @@ BlueprintId = "xrl0302",
         MaxSpeed = 4,
     },
     Defense = {
-        Health = 300,
-        MaxHealth = 300,
+        Health = 500,
+        MaxHealth = 500,
         RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
     },
     SizeX = 0.45,
@@ -57,7 +57,7 @@ BlueprintId = "xrl0302",
         },
         {
             Damage = 1500,      --add death explosion when is destroyed
-            DamageFriendly = true,
+            DamageFriendly = false,     -- its volitail explosion, but to not destroy own army in old yotha style it damage only enemy
             DamageRadius = 5.5,
             DamageType = 'FireBeetleExplosion',
             DisplayName = 'Death Weapon',
