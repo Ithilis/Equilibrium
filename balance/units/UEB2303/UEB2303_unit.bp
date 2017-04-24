@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "ueb2303", 
 
     Defense = {
-        Health = 5250,
-        MaxHealth = 5250,
+        Health = 4750,
+        MaxHealth = 4750,
     },    
     Economy = {
         BuildCostEnergy = 27500,
@@ -18,7 +18,7 @@ BlueprintId = "ueb2303",
             Damage = 3500,
             DamageRadius = 3.5,
             DamageFriendly = false,
-            FiringRandomness = 1.5,
+            FiringRandomness = 1.625,
             MaxRadius = 130,                --from 128
             MinRadius = 15,                    --from 5
             MuzzleVelocityReduceDistance = 128,

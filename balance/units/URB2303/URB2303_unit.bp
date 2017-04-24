@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "urb2303", 
 
     Defense = {
-        Health = 4750,                --from 3150
-        MaxHealth = 4750,
+        Health = 4250,                --from 3150
+        MaxHealth = 4250,
     },    
     Economy = {
         BuildCostEnergy = 25000,    --from 12000
@@ -88,9 +88,9 @@ BlueprintId = "urb2303",
             Damage = 2250,                    --from 1750
             DamageRadius = 4,
             DamageFriendly = false,
-            FiringRandomness = 1.75,        --from 2,5
-            MaxRadius = 120,                --from 128
-            MinRadius = 10,                    --from 5
+            FiringRandomness = 2,        --from 2,5
+            MaxRadius = 130,                --from 128
+            MinRadius = 15,                    --from 5
             MuzzleVelocityReduceDistance = 128,
             RateOfFire = 0.0666,            --from 0,05 = 15s
 

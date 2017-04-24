@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "uab2303", 
 
     Defense = {
-        Health = 5000,
-        MaxHealth = 5000,
+        Health = 4500,
+        MaxHealth = 4500,
     },
     Display = {
         Abilities = {
@@ -24,8 +24,10 @@ BlueprintId = "uab2303",
             Damage = 800,                    --from 575 = 4000dmg=200dps
             DamageRadius = 2.5,
             DamageFriendly = false,
+            DoTPulses = 5,  -- prevent official balance terrorists to break balance
+            DoTTime = 1,    -- prevent official balance terrorists to break balance
             FiringRandomness = 1,
-            MaxRadius = 140,                --from 128
+            MaxRadius = 130,                --from 128
             MinRadius = 15,                    --from 5
             MuzzleVelocityReduceDistance = 128,
             
