@@ -17,9 +17,18 @@ BlueprintId = "xsl0401",
         BuildCostMass = 28000,
         BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
     },
+    Physics = {
+        RotateOnSpot = true, --improve handling on close range
+        RotateOnSpotThreshold = 0.1,
+        TurnRadius = 0,
+        TurnRate = 70, --protection from balance changes
+    },
     Weapon = {
-        {   --big bubble
+        {   --face cannon
+            MaxRadius = 45, --protection from balance changes
+            MinRadius = 1, --better performance on close range
             MuzzleVelocity = 10,        --from 8
+            SlavedToBodyArcRange = 30, --protection from balance disaster, they actually made it worse
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -33,8 +42,14 @@ BlueprintId = "xsl0401",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretPitchRange = 70,
+            TurretYawRange = 90, --protection from balance changes
         },
         {   --gatling cannon
+            FiringTolerance = 5, --better performance at close range when the aimmanip starts messing up
+            HeadingArcCenter = 0,
+            HeadingArcRange = 90,
+            MaxRadius = 45, --protection from balance changes
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -47,10 +62,16 @@ BlueprintId = "xsl0401",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretYaw = 15, --protection from balance changes & improvement to targeting
+            TurretYawRange = 75,
         },
         {   --Sinn Unthe cannon
-            Damage = 1200,            --from1200
-            DamageRadius = 3,        --from6
+            Damage = 1200,            --from 1200
+            DamageRadius = 3,        --from 6
+            FiringTolerance = 5, --better performance at close range when the aimmanip starts messing up
+            HeadingArcCenter = 0,
+            HeadingArcRange = 90,
+            MaxRadius = 45, --protection from balance changes
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER', 
@@ -64,6 +85,8 @@ BlueprintId = "xsl0401",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretYaw = -15, --protection from balance changes & improvement to targeting
+            TurretYawRange = 75,
         },
         {    -- AA
             Damage = 25,
