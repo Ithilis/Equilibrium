@@ -52,9 +52,11 @@ UnitBlueprint {
             BuildTime = 1200,
         },
         BlastAttack = {
+            AdditionalDamage = 400,      --protection from balance changes
             BuildCostEnergy = 300000,    --from 300K
             BuildCostMass = 3000,        --from 3500 = 15m/s
             BuildTime = 2000,            --= 200s
+            NewDamageRadius = 2,         --protection from balance changes
             NewMaxRadius = 3,            --EQ - we add this
         },
         RateOfFire = {
