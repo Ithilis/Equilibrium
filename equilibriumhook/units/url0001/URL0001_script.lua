@@ -207,6 +207,10 @@ URL0001 = Class(oldURL0001) {
             oc:ChangeMaxRadius(bp.NewMaxRadius or 44)
             local aoc = self:GetWeaponByLabel('AutoOverCharge')
             aoc:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            local torp = self:GetWeaponByLabel('Torpedo') --increase torpedo upgrade range too
+            local torpRange = self:GetBlueprint().Weapon[6].MaxRadius
+            WARN(torpRange)
+            torp:ChangeMaxRadius(torpRange + 10)
         elseif enh == 'CoolingUpgradeRemove' then
             local wep = self:GetWeaponByLabel('RightRipper')
             local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
@@ -219,6 +223,10 @@ URL0001 = Class(oldURL0001) {
             oc:ChangeMaxRadius(bpDisrupt or 23)
             local aoc = self:GetWeaponByLabel('AutoOverCharge')
             aoc:ChangeMaxRadius(bpDisrupt or 23)
+            local torp = self:GetWeaponByLabel('Torpedo')
+            local torpRange = self:GetBlueprint().Weapon[6].MaxRadius
+            WARN(torpRange)
+            torp:ChangeMaxRadius(torpRange)
         elseif enh == 'MicrowaveLaserGenerator' then
             self:SetWeaponEnabledByLabel('MLG', true)
         elseif enh == 'MicrowaveLaserGeneratorRemove' then
