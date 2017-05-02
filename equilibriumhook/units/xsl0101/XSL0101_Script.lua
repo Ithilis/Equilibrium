@@ -54,7 +54,7 @@ XSL0101 = Class(SWalkingLandUnit) {
     end,
     
     HideUnit = function(self) --this is its own function so we can call it without any delay if we want.
-        if not self.Dead then
+        if not self.Dead and not self:IsMoving() then --never cloak while dead or moving
             self:EnableUnitIntel('ToggleBit5', 'RadarStealth')
             self:EnableUnitIntel('ToggleBit8', 'Cloak')
             self.CloakThread = nil
