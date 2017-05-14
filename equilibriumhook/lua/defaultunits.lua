@@ -13,7 +13,10 @@ oldAirUnit = AirUnit
 AirUnit = Class(oldAirUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
-        self:SetAutoRefuel(true) --on by default
+        local bp = self:GetBlueprint()
+        if not bp.Air.DisableAutoRefuel then
+            self:SetAutoRefuel(true) --on by default
+        end
         --TODO: make this only work for units that have the dock order available.
         oldAirUnit.OnStopBeingBuilt(self,builder,layer)
     end,
