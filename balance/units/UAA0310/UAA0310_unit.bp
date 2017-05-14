@@ -5,6 +5,7 @@ Merge = true,
 BlueprintId = "uaa0310", 
 
     Air = {
+        DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
         MaxAirspeed = 5,        --from 8
     },
     BuildIconSortPriority = 110,

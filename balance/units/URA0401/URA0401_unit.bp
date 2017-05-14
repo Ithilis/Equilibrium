@@ -4,6 +4,9 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "ura0401", 
 
+    Air = {
+        DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
+    },
     Defense = {
         Health = 80000,            --from 90 000
         MaxHealth = 80000,
@@ -18,25 +21,24 @@ BlueprintId = "ura0401",
         RequirementMult = 0.5,
     },
     Weapon = {
-        {
+        { --Ground Fire 1
         },
-        {
+        { --Ground Fire 2
         },
-        {
+        { --AA 1
             Damage = 250,    --from150 = 400dps
         },
-        {
+        { --AA 2
             Damage = 250,    --from150
         },
-        {
+        { --Electron Bolder Ground Fire 1
         },
-        {
+        { --Electron Bolder Ground Fire 2
         },
-        {
-            AboveWaterTargetsOnly = false,    --from true = hit also submarine
+        { --Crash
+            AboveWaterTargetsOnly = false,    --from true = also hits submarines
             Damage = 7500,                --from 5000
             DamageRadius = 6,            --from 4
-            DisplayName = 'Air Crash',
         },
     },
     Wreckage = {
