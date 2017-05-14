@@ -571,18 +571,6 @@ Unit = Class(oldUnit) {
     end,
     
 -------------------------------------------------------------------------------------------
---LAYER EVENTS
--------------------------------------------------------------------------------------------
-    OnLayerChange = function(self, new, old)
-        oldUnit.OnLayerChange(self, new, old)
-		--for units falling out of a dead transport - they are destined to die, so we kill them and leave the wreck.
-		if self.falling and (new == 'Land' or new == 'Water' or new == 'Sub' or new == 'Seabed') and old == 'Air' then
-			self.falling = nil
-            self:Kill()
-		end
-    end,
-
--------------------------------------------------------------------------------------------
 -- BUFFS
 -------------------------------------------------------------------------------------------
 --there was some fucked up changes to do with stun mechanics so we need to hook these to fix them

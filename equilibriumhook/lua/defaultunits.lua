@@ -4,11 +4,10 @@ local GetRandomFloat = import('utilities.lua').GetRandomFloat
 --------------------------------------------------------------
 --  AIR UNITS
 ---------------------------------------------------------------
---TODO- when the bounce code makes it into faf we need to hook this and not shadow it.
 
 --veterancy system added
 --auto refuel toggle button added
-oldAirUnit = AirUnit
+local oldAirUnit = AirUnit
 
 AirUnit = Class(oldAirUnit) {
 
@@ -19,113 +18,6 @@ AirUnit = Class(oldAirUnit) {
         end
         --TODO: make this only work for units that have the dock order available.
         oldAirUnit.OnStopBeingBuilt(self,builder,layer)
-    end,
-    
-    OnImpact = function(self, with, other)
-        if self.DeathBounce then
-            return
-        end
-        self.DeathBounce = true
-
-        -- Damage the area we have impacted with.
-        local bp = self:GetBlueprint()
-        local i = 1
-        local numWeapons = table.getn(bp.Weapon)
-
-        for i, numWeapons in bp.Weapon do
-            if(bp.Weapon[i].Label == 'DeathImpact') then
-                local Damage = (bp.Weapon[i].Damage - self.ShieldDamageAbsorbed)
-                --WARN(Damage .. ' crash damage dealt to ground') -- since our shield collision subtracts damage, this may be nice to know how much is left
-                if Damage > 0 then
-                    DamageArea(self, self:GetPosition(), bp.Weapon[i].DamageRadius, (bp.Weapon[i].Damage - self.ShieldDamageAbsorbed), bp.Weapon[i].DamageType, bp.Weapon[i].DamageFriendly)
-                end
-                
-                break
-            end
-        end
-
-        if(with == 'Water') then
-            self:PlayUnitSound('AirUnitWaterImpact')
-            EffectUtil.CreateEffects( self, self:GetArmy(), EffectTemplate.DefaultProjectileWaterImpact )
-        end
-        self:ForkThread(self.DeathThread, self.OverKillRatio )
-    end,
-
-    CreateUnitAirDestructionEffects = function( self, scale )
-        local army = self:GetArmy()
-        local scale = explosion.GetAverageBoundingXZRadius(self)
-        explosion.CreateDefaultHitExplosion( self, scale)
-        if(self.ShowUnitDestructionDebris) then
-            explosion.CreateDebrisProjectiles(self, scale, {self:GetUnitSizes()})
-        end
-    end,
-
-    --- Called when the unit is killed, but before it falls out of the sky and blows up.
-    OnKilled = function(self, instigator, type, overkillRatio)
-        local bp = self:GetBlueprint()
-
-        -- A completed, flying plane expects an OnImpact event due to air crash.
-        -- An incomplete unit in the factory still reports as being in layer "Air", so needs this
-        -- stupid check.
-        if self:GetCurrentLayer() == 'Air' and self:GetFractionComplete() == 1  then
-            self.Dead = true
-            self.CreateUnitAirDestructionEffects(self, 1.0)
-            self:DestroyTopSpeedEffects()
-            self:DestroyBeamExhaust()
-            self.OverKillRatio = overkillRatio
-            self:PlayUnitSound('Killed')
-            self:DoUnitCallbacks('OnKilled')
-            self:DisableShield()
-            
-            self.ShieldDamageAbsorbed = 0 --we use this to work out how much damage to subtract from the deathimpact.
-            
-            local this = self --waiting for our projectile to collide with a shield or the ground, and then modifying deathweapon
-            self:EnableShieldCollision(
-                function()
-                    local bp = self:GetBlueprint()
-                    local i = 1
-                    local numWeapons = table.getn(bp.Weapon)
-                    
-                    for i, numWeapons in bp.Weapon do
-                        if(bp.Weapon[i].Label == 'DeathImpact') then
-                            --self.ShieldCollideMaxHealth is passed from the shield when our companion projectile hits it
-                            self.ShieldCollideMaxHealth = self.ShieldCollideMaxHealth or 0
-                            --this 0.2 there is just a multiplier i liked; can be lower or higher; whatever
-                            self.ShieldDamage = math.min(self.ShieldCollideMaxHealth*0.2, (bp.Weapon[i].Damage - self.ShieldDamageAbsorbed))
-                            --should never be below 0
-                            DamageArea(self, self:GetPosition(), bp.Weapon[i].DamageRadius, self.ShieldDamage, bp.Weapon[i].DamageType, bp.Weapon[i].DamageFriendly)
-                            self.ShieldDamageAbsorbed = self.ShieldDamageAbsorbed + self.ShieldDamage
-                            --WARN(self.ShieldDamageAbsorbed .. ' damage absorbed by shield') --very useful for testing shield absorb multipliers
-                            break
-                        end
-                    end
-                    
-                    self.CreateDestructionEffects( self, self.OverKillRatio) -- explosion on the shield, honestly this is cos the air version is shit.
-                end
-            )
-            
-            if instigator and IsUnit(instigator) then
-                instigator:OnKilledUnit(self)
-            end
-            
-            if instigator and self.totalDamageTaken ~= 0 then
-                self:VeterancyDispersal()
-            end
-        else
-            self.DeathBounce = 1
-            MobileUnit.OnKilled(self, instigator, type, overkillRatio)
-        end
-    end,
-
-    EnableShieldCollision = function(self, callback)
-        local bone = 0
-
-        --Create companion projectile
-        local proj = self:CreateProjectileAtBone('/projectiles/ShieldCollider/ShieldCollider_proj.bp', bone)
-        
-        -- start following our plane, attaching to a given bone and entity on shield collision
-        proj:Start(self, bone, callback)
-        self.Trash:Add(proj)
     end,
     
     SetAutoRefuel = function(self, auto)
@@ -173,7 +65,7 @@ AirUnit = Class(oldAirUnit) {
 
     AirUnitRefit = function(self)
         local aiBrain = self:GetAIBrain()
-        # Find air stage
+        -- Find air stage
         if aiBrain:GetCurrentUnits( categories.AIRSTAGINGPLATFORM ) > 0 then
             local unitPos = self:GetPosition()
             local plats = AIUtils.GetOwnUnitsAroundPoint( aiBrain, categories.AIRSTAGINGPLATFORM, unitPos, 400 )
@@ -243,67 +135,6 @@ AirStagingPlatformUnit = Class(oldAirStagingPlatformUnit) {
 
     OnTransportDetach = function(self, attachBone, unit)
     unit.AlreadyAttached = false
-    end,
-}
-
---- Mixin transports (air, sea, space, whatever). Sellotape onto concrete transport base classes as
--- desired.
-
-oldBaseTransport = BaseTransport
-
-BaseTransport = Class(oldBaseTransport) {
-    -- When one of our attached units gets killed, detach it
-    OnAttachedKilled = function(self, attached)
-        attached:DetachFrom()
-    end,
-
-    DetachCargo = function(self)
-        if self.Dead then return end --due to overkill damage this can get called when trans is hit after it dies and cause errors since it doesnt have any cargo
-        local units = self:GetCargo()
-        for k, v in units do
-            if EntityCategoryContains(categories.TRANSPORTATION, v) then
-                for k, u in self:GetCargo() do
-                    u:Kill()
-                end
-            end
-            v:DetachFrom()
-            v.falling = true --set flag to kill units on impact.
-        end
-    end
-}
---note - this doesnt work on insta crtl k because of .. nonsense. maybe its fixed later.
---- Base class for air transports.
-AirTransport = Class(AirUnit, BaseTransport) {
-
-    DestroyNoFallRandomChance = 1, --tbh i have no idea what this does
-    
-    OnTransportAborted = function(self)
-    end,
-
-    OnTransportOrdered = function(self)
-    end,
-
-    OnCreate = function(self)
-        AirUnit.OnCreate(self)
-        self.slots = {}
-        self.transData = {}
-    end,
-
-    OnKilled = function(self, instigator, type, overkillRatio)
-        self:DetachCargo()
-        AirUnit.OnKilled(self, instigator, type, overkillRatio)
-    end,
-
-    OnStorageChange = function(self, loading)
-        AirUnit.OnStorageChange(self, loading)
-        for k, v in self:GetCargo() do
-            v:OnStorageChange(loading)
-        end
-    end,
-    
-    Kill = function(self, ...) --pure black magic thats called when the unit is killed. not on insta ctrl-k mind you
-        self:DetachCargo()
-        AirUnit.Kill(self, unpack(arg))
     end,
 }
 
