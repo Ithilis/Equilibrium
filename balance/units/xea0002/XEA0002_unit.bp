@@ -4,15 +4,16 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xea0002", 
 
-Air = {
+    Air = {
+        DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
         MaxAirspeed = 8,        --from6
     },
-Intel = {
+    Intel = {
         OmniRadius = 30,      --added
         RadarRadius = 150,    --from 70
         VisionRadius = 50,    --from 40
     },
-Weapon = {
+    Weapon = {
         {
             DamageRadius = 2.5,   --from1
         },

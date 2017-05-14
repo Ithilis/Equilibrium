@@ -1,6 +1,10 @@
 UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0001",
+
+    Air = {
+        DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
+    },
     Economy = {
         BuildCostEnergy = 750,
         BuildCostMass = 75,

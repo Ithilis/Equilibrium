@@ -5,6 +5,7 @@ Merge = true,
 BlueprintId = "daa0206", 
 
     Air = {
+        DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
         MaxAirspeed = 12,    --from 10
         MinAirspeed = 8,
     },
