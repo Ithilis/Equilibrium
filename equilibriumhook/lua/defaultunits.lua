@@ -45,7 +45,7 @@ AirUnit = Class(oldAirUnit) {
         --this is only an issue when they are spawned in large numbers, or you toggle the button on a lot of planes at a time
         local waitTime = GetRandomFloat(0, 5)
         WaitSeconds(waitTime)
-        while self.AutoRefuel == true do
+        while self.AutoRefuel == true and not self:IsDead() do
             --WARN('checking for refuel need')
             if (self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < .6)) and not self.AlreadyAttached then
                 --WARN('criteria for fueling met, nice')
