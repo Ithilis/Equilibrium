@@ -157,9 +157,7 @@ UAS0401 = Class(ASeaUnit) {
     BuildingState = State {
         Main = function(self)
             local bone = self.BuildAttachBone
-            self:DetachAll(bone)
             if not self.UnitBeingBuilt.Dead then
-                self.UnitBeingBuilt:AttachBoneTo(-2, self, bone)
                 if EntityCategoryContains(categories.ENGINEER + categories.uas0102 + categories.uas0103, self.UnitBeingBuilt) then
                     self.UnitBeingBuilt:SetParentOffset({0, 0, 1})
                 elseif EntityCategoryContains(categories.TECH2 - categories.ENGINEER, self.UnitBeingBuilt) then
