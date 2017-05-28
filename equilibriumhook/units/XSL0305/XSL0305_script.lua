@@ -25,6 +25,11 @@ XSL0305 = Class(SLandUnit) {
         SLandUnit.OnCreate(self)
         self:SetWeaponEnabledByLabel('MainGun', false)
         self:SetScriptBit('RULEUTC_WeaponToggle', true) --Make sniper mode on by default
+        
+        --we store our weapon ranges here so we dont have to access bp every time we swap. less laggy that way.
+        local bp = self:GetBlueprint().Weapon
+        self.SniperRange = bp[1].MaxRadius
+        self.CloseRange = bp[2].MaxRadius
     end,
 
     OnScriptBitSet = function(self, bit)
@@ -33,11 +38,16 @@ XSL0305 = Class(SLandUnit) {
             self:SetWeaponEnabledByLabel('SniperGun', true)
             self:SetWeaponEnabledByLabel('MainGun', false)
             self:GetWeaponManipulatorByLabel('SniperGun'):SetHeadingPitch( self:GetWeaponManipulatorByLabel('MainGun'):GetHeadingPitch() )
-        end
 		
-		---This is to add a visual que that the sniper is in sniper mode
-        self.ShieldEffectsBag = {}
-		table.insert( self.ShieldEffectsBag, CreateAttachedEmitter( self, 'XSL0305', self:GetArmy(), '/effects/emitters/seraphim_being_built_ambient_01_emit.bp' ) )
+            --here we adjust the range of our dummy weapon to our active one so you cant give an attack order outside the snipers range and have it not go there
+            local wep = self:GetWeaponByLabel('TargetTracker')
+            wep:ChangeMaxRadius(self.SniperRange or 75)
+            
+            ---This is to add a visual que that the sniper is in sniper mode
+            self.ShieldEffectsBag = {}
+            table.insert( self.ShieldEffectsBag, CreateAttachedEmitter( self, 'XSL0305', self:GetArmy(), '/effects/emitters/seraphim_being_built_ambient_01_emit.bp' ) )
+        
+        end
     end,
 
     OnScriptBitClear = function(self, bit)
@@ -46,6 +56,11 @@ XSL0305 = Class(SLandUnit) {
             self:SetWeaponEnabledByLabel('SniperGun', false)
             self:SetWeaponEnabledByLabel('MainGun', true)
             self:GetWeaponManipulatorByLabel('MainGun'):SetHeadingPitch( self:GetWeaponManipulatorByLabel('SniperGun'):GetHeadingPitch() )
+		
+            --here we adjust the range of our dummy weapon to our active one so you cant give an attack order outside the snipers range and have it not go there
+            local wep = self:GetWeaponByLabel('TargetTracker')
+            wep:ChangeMaxRadius(self.CloseRange or 38)
+        
 			--this is to remove the effect generated in sniper mode
 			if self.ShieldEffectsBag then
                 for k, v in self.ShieldEffectsBag do
