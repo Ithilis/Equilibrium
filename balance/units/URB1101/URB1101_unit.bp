@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "urb1101", 
 
     Defense = {
-        Health = 500,      --600hp
-        MaxHealth = 500,   --600hp
+        Health = 600,      --600hp
+        MaxHealth = 600,   --600hp
         RegenRate = 0,
     },
     Economy = {
