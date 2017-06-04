@@ -8,48 +8,9 @@
 local GetRandomFloat = import('/lua/utilities.lua').GetRandomFloat
 local Projectile = import('/lua/sim/projectile.lua').Projectile
 
-ShieldCollider = Class(Projectile) {
-    OnCreate = function(self)
-        Projectile.OnCreate(self)
+local oldShieldCollider = ShieldCollider
 
-        self:SetVizToFocusPlayer('Never') -- Set to 'Always' to see a nice box
-        self:SetVizToAllies('Never')
-        self:SetVizToNeutrals('Never')
-        self:SetVizToEnemies('Never')
-        self:SetStayUpright(false)
-        self:SetCollision(true)
-    end,
-
-    -- Shields only detect projectiles, so we attach one to keep track of the unit.
-    Start = function(self, parent, bone)
-        self.PlaneBone = bone
-        self.Plane = parent
-        self:StartFalling()
-    end,
-
-    StartFalling = function(self)
-        local vx, vy, vz = self.Plane:GetVelocity()
-
-        -- For now we just follow the plane along, not attaching so it can rotate
-        self:SetVelocity(10 * vx, 10 * vy, 10 * vz)
-        Warp(self, self.Plane:GetPosition(self.PlaneBone), self.Plane:GetOrientation())
-    end,
-
-    OnCollisionCheck = function(self, other)
-        -- We intercept this just incase the projectile collides with something it shouldn't
-        WARN('Shield collision projectile checking collision! Fix me!')
-        if IsUnit(other) then WARN('It was a unit!') return end
-
-        Projectile.OnCollisionCheck(self, other)
-    end,
-
-    OnDestroy = function(self)
-        self:DetachAll('anchor') -- If our projectile is getting destroyed we never want to have anything attached
-        if self.Trash then
-            self.Trash:Destroy()
-        end
-    end,
-
+ShieldCollider = Class(oldShieldCollider) {
     -- Destroy the sinking unit when it hits the ground.
     OnImpact = function(self, targetType, targetEntity)
         if self and not self:BeenDestroyed() and self.Plane and not self.Plane:BeenDestroyed() then
@@ -116,60 +77,6 @@ ShieldCollider = Class(Projectile) {
                 self:Destroy()
             end
         end
-    end,
-
-    -- Lets do some maths that will make the units bounce off shields
-    ShieldBounce = function(self, shield, vector)
-        local bp = self.Plane:GetBlueprint()
-        local volume = bp.SizeX * bp.SizeY * bp.SizeZ -- We will use this to *guess* how much force to apply
-
-        local spin = math.min (4 / volume, 2) -- Less for larger planes; also 2 is a nice number
-        self:SetLocalAngularVelocity(spin, spin, spin) -- Ideally I would just set this to whatever the plane had but I dont know how
-
-        local vx, vy, vz = self.Plane:GetVelocity() -- Current plane velocity
-        local wx, wy, wz = vector.x, vector.y, vector.z
-
-        -- Convert our speed values from units per tick to units per second
-        vx = 10 * vx
-        vy = 10 * vy
-        vz = 10 * vz
-
-        local speed = math.sqrt(vx * vx + vy * vy + vz * vz) -- The length of our vector
-        local shieldMag = math.sqrt(wx * wx + wy * wy + wz * wz) -- The length of our other vector
-
-        -- Normalizing all our shield vector, so we dont need to deal with scalar nonsense
-        wx = wx / shieldMag
-        wy = wy / shieldMag
-        wz = wz / shieldMag
-
-        -- Get our dot products going
-        local dotProduct = vx * wx + vy * wy + vz * wz
-
-        local ke = 0.5 * volume * speed * speed -- Our kinetic energy, used to scale the stoppingpower
-        local stoppingPower = math.min(50 / (ke * 0.5), 2) -- 2 is a perfect bounce, 0 is unaffected velocity
-
-        local angleCos = 10 * dotProduct / (speed * shieldMag) -- We take our unit vectors and calculate the angle. That 10 is to convert speed back to its "proper" length
-        angleCos = math.clamp(-1, angleCos, 1)
-
-        -- Well, almost - its incredibly inaccurate at angles close to 0, but it doesnt matter since this is mostly a visual thing
-        -- Angle = atan2(norm(cross(a,b)),dot(a,b)) -- This is the "correct" way, but we dont use atan because its a pain in the ass in lua
-        -- So we just clamp it to make sure its ok and no more worries
-
-        local forceScalar = 1 - 0.65 * angleCos * (stoppingPower / 2) -- Bounciness coefficient, set to taste; 1.0 is a 'perfect' bounce
-        -- The more direct the hit the lower it is, down to a minimum of 1-0.5
-        -- StoppingPower also affects this, so the more ke we have, the less our velocity is changed, and so the less our coefficient is affected.
-
-        -- Applying our bounce velocity
-        vx = -stoppingPower * wx * dotProduct + vx
-        vy = -stoppingPower * wy * dotProduct + vy
-        vz = -stoppingPower * wz * dotProduct + vz
-
-        -- Sometimes absurd values pop up, probably due to rounding errors or something, so we prevent huge speeds here
-        vx = math.clamp(vx, -7, 7)
-        vy = math.clamp(vy, -4, 4) -- Less for y so we dont get planes flying into space
-        vz = math.clamp(vz, -7, 7)
-
-        self:SetVelocity(forceScalar * vx, forceScalar * vy, forceScalar * vz)
     end,
 }
 
