@@ -51,7 +51,7 @@ BlueprintId = "uel0401",
         BuildCostEnergy = 350000,
         BuildCostMass = 28000,
         BuildRate = 200,        --from 180
-        BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
+        BuildTime = 35000,                    -- its four times faster than building equal mass in percivals/bricks
         BuildableCategory = nil, --remove the building ability
         BuildableCategoryMobile = {
             'BUILTBYTIER3FACTORY UEF MOBILE LAND',

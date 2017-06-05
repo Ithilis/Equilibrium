@@ -15,7 +15,7 @@ BlueprintId = "url0402",
     Economy = {
         BuildCostEnergy = 250000,
         BuildCostMass = 20000,
-        BuildTime = 33333,                    -- its three time faster as build same mass in percivals/bricks
+        BuildTime = 25000,                    -- its four times faster than building equal mass in percivals/bricks
         MaintenanceConsumptionPerSecondEnergy = 250,        --from 400
     },
     Weapon = {

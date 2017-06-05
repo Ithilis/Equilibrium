@@ -15,7 +15,7 @@ BlueprintId = "xsl0401",
     Economy = {
         BuildCostEnergy = 350000, 
         BuildCostMass = 28000,
-        BuildTime = 46666,                    -- its three time faster as build same mass in percivals/bricks
+        BuildTime = 35000,                    -- its four times faster than building equal mass in percivals/bricks
     },
     Physics = {
         RotateOnSpot = true, --improve handling on close range
