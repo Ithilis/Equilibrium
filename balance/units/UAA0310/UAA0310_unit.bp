@@ -56,7 +56,7 @@ BlueprintId = "uaa0310",
         BuildCostEnergy = 1125000,
         BuildCostMass = 45000,
         BuildRate = 240,            --from 180
-        BuildTime = 67500,            --it is 4x faster as build same mass in gunships
+        BuildTime = 56250,                    -- its four times faster than building equal mass in percivals/bricks
         BuildableCategoryMobile = {
             'BUILTBYTIER3FACTORY AEON MOBILE AIR',
         },
