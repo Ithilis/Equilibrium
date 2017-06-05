@@ -7,7 +7,7 @@ local GetRandomFloat = import('utilities.lua').GetRandomFloat
 
 --veterancy system added
 --auto refuel toggle button added
-local oldAirUnit = AirUnit
+oldAirUnit = AirUnit
 
 AirUnit = Class(oldAirUnit) {
 
@@ -16,6 +16,7 @@ AirUnit = Class(oldAirUnit) {
         if not bp.Air.DisableAutoRefuel then
             self:SetAutoRefuel(true) --on by default
         end
+        --WARN('onstopbeingbuilt inside an air unit apparently')
         --TODO: make this only work for units that have the dock order available.
         oldAirUnit.OnStopBeingBuilt(self,builder,layer)
     end,
