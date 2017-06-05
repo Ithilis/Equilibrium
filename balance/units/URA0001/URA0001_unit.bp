@@ -1,0 +1,7 @@
+UnitBlueprint {
+Merge = true,
+BlueprintId = "ura0001",
+    Air = {
+        DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
+    },
+}
