@@ -10,10 +10,7 @@
 
 function SmartJamming(SuperClass)
     return Class(SuperClass) {
-        OnCreate = function(self)
-            SuperClass.OnCreate(self)
-        end,
-
+    
         OnStopBeingBuilt = function(self,builder,layer)
             SuperClass.OnStopBeingBuilt(self,builder,layer)
             --set up a jamming delay, usually its fine but for some units might want to fine tune
@@ -21,10 +18,6 @@ function SmartJamming(SuperClass)
             self.JammingDelay = bp.Intel.JammingDelay or 30
             
             self.JammingReset = self:ForkThread(self.WatchJamming)
-        end,
-
-        OnKilled = function(self, instigator, type, overkillRatio)
-            SuperClass.OnKilled(self, instigator, type, overkillRatio)
         end,
         
         WatchJamming = function(self)
