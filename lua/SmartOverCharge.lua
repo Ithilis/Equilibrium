@@ -48,7 +48,6 @@ function SmartOverCharge(SuperClass)
             -- WARN('target total current hp: ' .. targetHealth)
             -- WARN(repr(targetEntity))
         end
-        
         SuperClass.OnImpact(self, targetType, targetEntity)
     end,
     
@@ -63,8 +62,12 @@ function SmartOverCharge(SuperClass)
         
         local chargesNeeded = 1
         
+        if Health < 0 then
+            WARN('Equilibrium - overcharge found a neagtive hp value!')
+        end
+        
         if armourType > 0 then
-            chargesNeeded = math.ceil(Health/(1000*armourType))
+            chargesNeeded = math.max(math.ceil(Health/(1000*armourType)), 1) -- we need to damage once at least to account for dead units
         else
             WARN('Equilibrium - overcharge found an armour multiplier of 0 or less!')
         end
@@ -87,13 +90,12 @@ function SmartOverCharge(SuperClass)
         --acus take 10x less damage so 100 per charge
         --buildings take 5x less damage so 200 per charge
         
-        
         --logging - remember that we have one free charge to use from the weapon drain.
         -- WARN('energy needed for one charge: ' .. self.SmartOverChargeScale)
-         WARN('charges needed for target: ' .. chargesNeeded)
-         WARN('charges available: ' .. chargesAvailable)
-         WARN('charges used: ' .. chargesUsed)
-         WARN('energy drained: ' .. energyNeeded)
+        -- WARN('charges needed for target: ' .. chargesNeeded)
+        -- WARN('charges available: ' .. chargesAvailable)
+        -- WARN('charges used: ' .. chargesUsed)
+        -- WARN('energy drained: ' .. energyNeeded)
         
         return damage
     end
