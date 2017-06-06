@@ -56,13 +56,18 @@ function SmartOverCharge(SuperClass)
         
         local energyStored = self:GetLauncher():GetAIBrain():GetEconomyStored('ENERGY')
         local chargesAvailable = math.floor(energyStored/self.SmartOverChargeScale)
-        --each charge is 2000(or however) energy and adds damage
-    
+        
+        --each charge is 2000(or however) energy and adds 1000 damage
+        --and we dont want to overkill our target and waste energy
         --to enable the OC ui to work the first 2000(or however) is drained on the weapon on fire, the rest is decided on impact.
         
-        --each charge adds 1000 damage, and we dont want to overkill our target and waste energy
+        local chargesNeeded = 1
         
-        local chargesNeeded = math.ceil(Health/(1000*armourType))
+        if armourType > 0 then
+            chargesNeeded = math.ceil(Health/(1000*armourType))
+        else
+            WARN('Equilibrium - overcharge found an armour multiplier of 0 or less!')
+        end
         
         --buildings + ACUs need a special exception to the damage calculation since they have armour.
         
@@ -85,10 +90,10 @@ function SmartOverCharge(SuperClass)
         
         --logging - remember that we have one free charge to use from the weapon drain.
         -- WARN('energy needed for one charge: ' .. self.SmartOverChargeScale)
-        -- WARN('charges needed for target: ' .. chargesNeeded)
-        -- WARN('charges available: ' .. chargesAvailable)
-        -- WARN('charges used: ' .. chargesUsed)
-        -- WARN('energy drained: ' .. energyNeeded)
+         WARN('charges needed for target: ' .. chargesNeeded)
+         WARN('charges available: ' .. chargesAvailable)
+         WARN('charges used: ' .. chargesUsed)
+         WARN('energy drained: ' .. energyNeeded)
         
         return damage
     end
