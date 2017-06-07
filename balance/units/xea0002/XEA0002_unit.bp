@@ -18,7 +18,7 @@ BlueprintId = "xea0002",
             DamageRadius = 2.5,   --from1
         },
         {
-            Damage = 500,        --from 3000
+            Damage = 3000,        --from 3000
             DisplayName = 'Air Crash',
         },
     },
