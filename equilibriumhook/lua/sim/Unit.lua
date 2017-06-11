@@ -257,7 +257,7 @@ Unit = Class(oldUnit) {
         -- First, we need to create the Affects section
         local affects = {}
         affects[effectType] = {
-            DoNoFill = effectType == 'MaxHealth',
+            DoNotFill = effectType == 'MaxHealth',
             Add = 0,
             Mult = 0,
         }

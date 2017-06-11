@@ -32,7 +32,7 @@ XSL0001 = Class(oldXSL0001) {
                         MaxHealth = {
                             Add = 0,
                             Mult = bp.MaxHealthFactor or 1.0,
-                            DoNoFill = true,
+                            DoNotFill = true,
                         }, 
                     },
                 }
@@ -41,7 +41,7 @@ XSL0001 = Class(oldXSL0001) {
                     buff_bp.Affects.MaxHealth = {
                         Add = 0,
                         Mult = bp.MaxHealthFactor or 1.0,
-                        DoNoFill = true,
+                        DoNotFill = true,
                     }
                 end
 
