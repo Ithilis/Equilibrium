@@ -1,4 +1,4 @@
-local Version = 'Equilibrium 45'
+local Version = 'Equilibrium 46'
 function GetVersion()
     LOG('Supreme Commander: Forged Alliance version ' .. Version)
     return Version
