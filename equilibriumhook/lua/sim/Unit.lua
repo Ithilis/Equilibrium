@@ -388,52 +388,10 @@ Unit = Class(oldUnit) {
 ----RECLAIM------
 ---------------
 
-    CreateWreckageProp = function( self, overkillRatio )
-        local bp = self:GetBlueprint()
-        local wreck = bp.Wreckage.Blueprint
+ -- there used to be CreateWreckageProp but faf has since copied these changes so its no longer needed.
 
-        if not wreck then
-            return nil
-        end
-
-        local mass = bp.Economy.BuildCostMass * (bp.Wreckage.MassMult or 0)
-        local energy = bp.Economy.BuildCostEnergy * (bp.Wreckage.EnergyMult or 0)
-        local time = (bp.Wreckage.ReclaimTimeMultiplier or 1) * 2  --change by Ithilis it for doubled reclaim time 
-        local pos = self:GetPosition()
-        local layer = self:GetCurrentLayer()
-
-        if layer == 'Water' then
-            --Reduce the mass value of submerged wrecks
-            mass = mass * 0.5
-            energy = energy * 0.5
-        end
-
-        -- make sure air / naval wrecks stick to ground / seabottom
-        if layer == 'Air' or EntityCategoryContains(categories.NAVAL - categories.STRUCTURE, self) then
-            pos[2] = GetTerrainHeight(pos[1], pos[3]) + GetTerrainTypeOffset(pos[1], pos[3])
-        end
-
-        local overkillMultiplier = 1 - (overkillRatio or 1)
-        mass = mass * overkillMultiplier * self:GetFractionComplete()
-        energy = energy * overkillMultiplier * self:GetFractionComplete()
-        time = time * overkillMultiplier
-
-        local prop = Wreckage.CreateWreckage(bp, pos, self:GetOrientation(), mass, energy, time)
-
-        -- Attempt to copy our animation pose to the prop. Only works if
-        -- the mesh and skeletons are the same, but will not produce an error if not.
-        if layer ~= 'Air' and self.PlayDeathAnimation then
-            TryCopyPose(self, prop, true)
-        end
-
-        --Create some ambient wreckage smoke
-        explosion.CreateWreckageEffects(self,prop)
-
-        return prop
-    end,    
-    
 -----
---Mass storages lose portion of mass when die  
+--Mass storages lose the mass contained in them when they die  
 -- code is from there  https://github.com/FAForever/fa/pull/581/files
 -----
 
