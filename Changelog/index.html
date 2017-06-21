@@ -347,6 +347,7 @@
             <h4>Main gun</h4>
 			The gun range is nerfed to keep it in line with the other changes and keep ranges consistent throughout the mod.
             <p>The turret turn rate helps with microing the acu when it switches targets - makes it nicer to use.
+            <p>Target priorities were adjusted to prevent a rare bug when the enemy ACU was prioritized over units.
                 <ul>
                 <li><b>Range:</b> <strike>22</strike> → 23
                     <ul>
@@ -354,6 +355,7 @@
                     <li><b>Aeon gun upgrade range:</b> <strike>35</strike> → 33
                     </ul>
                 <li><b>Turret turn rate:</b> <strike>90°</strike> → 100°/s
+                <li><b>Target priorities:</b> LAB -> T1 mobile tank -> T1 mobile-> T2 mobile -> T3 mobile -> structure defense 
                 </ul>
             
 			<h4>Overcharge</h4>
@@ -564,8 +566,9 @@
             <li>The Mech Marine is the strongest lab, but doesnt have any abilities.
                
                 <ul>
-                <li>Changed target priority to ACU -> mobile radar -> T1/2/3... + display "ghetto" on unit (except Seraphim)
-                <li>Veterancy multiplier 2.5 so it vet for +- same speed as t1 tanks
+                <li><b>Target priorities:</b> ACU -> mobile radar -> T1/2/3...
+                <li>Added "ghetto" display ability on unit (except Seraphim)
+                <li>Veterancy multiplier 2.5 so it vets up at roughly the same speed as T1 tanks
                 <li>Reduced ROF of LABs on transports to 75% of normal
                 
                 <p>
@@ -670,9 +673,9 @@
             
 			<h4>AA Flak</h4>
             
-            AA flak: To make gunships a more useful option, the hover ability is now more expensive. Faction with t2 shield have less HP on flak. Target priority changed to reduce annoying behavior, less range, and more <a href="http://recordit.co/VfcGiVdhbU"> muzzle velocity<a/>  to make them be more reliable.
+            AA flak: To make gunships a more useful option, the hover ability is now more expensive. Faction with t2 shield have less HP on flak. Target priorities changed to reduce annoying behavior, less range, and more <a href="http://recordit.co/VfcGiVdhbU"> muzzle velocity<a/>  to make them be more reliable.
                 <ul>
-                    <li><b>General AA changes:</b> <strike>2.5 firing randomness, 40r</strike> → 4fr, 38r, changed target priority to gunships before anti-air units
+                    <li><b>General AA changes:</b> <strike>2.5 firing randomness, 40r</strike> → 4fr, 38r, changed target priorities to gunships before anti-air units
                     </ul>
                
                 <p>
@@ -720,7 +723,7 @@
                 <li><b>Ythisah:</b> <strike>800HP, 2.7speed</strike> → 625HP, 2.4speed
                     <ul>
                     <li><b>Missile:</b> Now tracks its targets if they are below 38 range, this is displayed with a new range circle.
-                    <li><b>Target priority:</b> <strike>defence structure ->T3 mobile ->T2 mobile... </strike> → defence structure ->T2 bot uef cybran ->command ->T3 mobile -> T2 mobile..
+                    <li><b>Target priorities:</b> <strike>defence structure ->T3 mobile ->T2 mobile... </strike> → defence structure ->T2 bot uef cybran ->command ->T3 mobile -> T2 mobile..
                     <li><b>Added display ability:</b> "Homing Missile"
                     </ul>
                 </ul>
@@ -737,7 +740,7 @@
                 
                 <li><b>Hoplite:</b> <strike>450HP 3.6speed 37r 4s reload</strike> → 500HP 2.8speed 36r 6s reload time
                     <ul>
-                    <li>Changed target priority to ACU
+                    <li>Changed target priorities to ACU first
                     <li>Friendly fire disabled
                     </ul>
                 
@@ -775,7 +778,7 @@
                 <li><b>Mongoose:</b> <strike>200m 650HP 60dps 3.6sp</strike> → 280m 1250HP 45dps(2.5aoe)+30dps 18/33r 2.5speed
                     <ul>
                     <li>Mongeese <a href="http://recordit.co/r0KRtUanmy"> don't miss!<a/> 
-                    <li>Mongoose long range weapon primary target priority changed to ACU
+                    <li>Mongoose long range weapon primary target priorities changed to ACU first
                     <li>Grenade friendly fire disabled
                     <li>Grenade weapon now has an <b>indirect fire</b> range indicator
                     <li>Grenade projectiles made more visible
@@ -793,7 +796,7 @@
 			
 			<h4>360 Mass Category</h4>
 			<li>Riptide is made useable on land, has more build time so its harder to spam, which makes them less effective against navy.
-			<li>Obsidians with their changed target priority are now less vulnerable to OC, because you can now spread them and still focus the ACU.
+			<li>Obsidians with their changed target priorities are now less vulnerable to OC, because you can now spread them and still focus the ACU.
 			<li>The Ilshavoh had a strange bug when it couldnt shoot units right next to it. Now it can.
             <li>Fire beetles are more effective against land armies and worse for sniping ACUs, their cloak can be combined with deceivers for a potentially deadly weapon. Use with cloaked moles to confuse the enemy!
 			
@@ -806,7 +809,7 @@
                 
                 <li><b>Obsidian:</b> <strike>1250HP+1500HP 75s recharge 2.6sp 4s reload time -10e</strike> → 1500HP+1125shield (60s recharge time) 2.65sp 3.3s reload time -1e drain
                     <ul>
-                    <li>Changed primary target priority to ACU
+                    <li>Changed target priorities to ACU
                     </ul>
                 
                 <li><b>Ilshavoh:</b> Turn rate: <strike>70°</strike> → 180°; TurretPitchRange: <strike>60°</strike> → 90
@@ -908,15 +911,14 @@
 			T3 Tanks have been tweaked to be more convienient, with slight adjustments to how they interact with eachother.
             <p>
             <li>Othuums now need micro to win against Harbingers. Also they got their much needed buff.
-            <li>Harbingers: make early harbs easier to catch.
-            <li>They also get more buildpower because reclaim rate was decreased.
+            <li>Harbinger get more buildpower because reclaim rate was decreased.
 			
                 <ul>
                 <li><b>Othuum:</b> <strike>6700HP 2.5sp 300+100dps 25/32r</strike> → 6000HP 2.6sp 168+100dps 23/33r
                     <ul>
                     <li><b>Torpedoes:</b> switched to depth charges 75dmg every 5s on 20r
                     </ul>
-                <li><b>Harbinger:</b> <strike>5900HP (60s recharge 9HP/s) 3sp 375dps 3br 25e/s drain</strike> → 3000HP+1500shield (45s recharge 6HP/s) 2.8sp 300dps 10br 1e/s drain
+                <li><b>Harbinger:</b> <strike>5900HP (60s recharge 9HP/s) 375dps 3br 25e/s drain</strike> → 3000HP+1500shield (45s recharge 6HP/s) 300dps 10br 1e/s drain
                 </ul>
 			
 			
@@ -1239,7 +1241,7 @@
                     <p><b>Aeon:</b> Increasing faction diversity, the Aeon bomber is better for single targets, and higher tech units; the emp can also support your army, but it’s less useful for armies, unlike Seraphim with its large aoe.
                     <li><b>Price:</b>  <strike>80m 2250e 500bt</strike> → 90m 2250e 600bt  
                     <li> <strike>4s reload time, </strike> → 6s reload time 
-                    <li>Maneuverabilty improved, target priority changed to engineers (from T1 air units)
+                    <li>Maneuverabilty improved, target priorities changed to engineers (from T1 air units)
                     <li>Removed friendly fire to avoid situations where multiple bombers kill themselves with their own bombs.
                     
                     <p>
@@ -1313,13 +1315,13 @@
             
 			T2 air needed to be better against T3 air, so T2fighter/bombers cost less, have less ground damage and health, but AA dps is unchanged. Also the Notha firing tolerance changed so it doesn't miss as much. 
                 <ul>
-                <p>Target priorities to make using them less frustrating
+                <p>Target priorities changed to make using them less frustrating
                 <p>Corsair AA was buffed to be more similar to other T2 bombers (still much worse)
                 <p>Swift winds have a higher price and receive more HP to maintain their advantage as the best T2 AA fighter.
                 
                 <li><b>Price:</b>  <strike>420m 8400e 2400bt</strike> → 350m 7500e 2000bt
-                <li>target priority changed: T3 land mobile AA -> T2 land mobile AA
-                <li>Reload time and damage doubled - now FBs destroy interceptor in a single shot
+                <li><b>Target priorities:</b> T3 land mobile AA -> T2 land mobile AA
+                <li>Reload time and damage doubled - now FBs destroy interceptors in a single shot
                 <ul>
                 <li><b>Corsair:</b> <strike>1100HP 1200dmg bomb 2aoe</strike> → 900HP 1000dmg bomb 2.5aoe 45r
                     <ul>
@@ -1343,7 +1345,7 @@
 			Mercies have been reworked to be better against sniping buildings, damage big army and worse for ACU snipes - an ACU moving away will receive only ~50% of the full damage. Crash damage was increased so that the mercy is only 99% useless if it gets shot down and because it makes more sense for a flying bomb to deal some damage on falling.
                 <ul>
                 <li><b>Price:</b>  <strike>300m 6000e 2000bt</strike> → 245m 5250e 1400bt
-                <li><strike>10speed 50s fuel time 25crash dmg</strike> →  12speed 120s fuel time 500crash dmg
+                <li><strike>50s fuel time 25crash dmg</strike> →  120s fuel time 500crash dmg
                 <li><strike>2400dmg 3aoe muzzle velocity 18</strike> → 300dmg/0.3s for 3s (=3000dmg) 4.5aoe, muzzle velocity 10
                 </ul>
             
