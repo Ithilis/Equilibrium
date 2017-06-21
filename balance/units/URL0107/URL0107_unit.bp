@@ -20,7 +20,8 @@ BlueprintId = "url0107",
         MaxSpeedReverse = 3.7, 
         MaxSteerForce = 3.7, 
     },
-    StrategicIconName = 'icon_land1_directfire',
+    --StrategicIconName = 'icon_land1_directfire', --t1 tank strategic icon - mod side - people complained (
+    StrategicIconName = 'icon_bot1eq_directfire', --this is a new icon that lets us change it via mods. no mod = no change
     Weapon = {
         {
         Damage = 7,        --from 7 = 23.3dps
