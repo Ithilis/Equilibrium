@@ -35,14 +35,14 @@ BlueprintId="xss0201",
             DamageRadius = 1.5,        --from 1
         },
         {
-            Damage = 80,    --80
+            Damage = 40,    --from 80, twice the torpedoes for half the damage.
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             FireTargetLayerCapsTable = {
                 Water = 'Seabed|Sub|Water',
             },
             MaxRadius = 45,
-            MuzzleSalvoDelay = 0.8,
-            MuzzleSalvoSize = 2,
+            MuzzleSalvoDelay = 0.4,
+            MuzzleSalvoSize = 4,
             MuzzleVelocity = 15,
             ProjectileLifetime = 7,
             RateOfFire = 1,
