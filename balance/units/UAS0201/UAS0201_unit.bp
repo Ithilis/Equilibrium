@@ -60,7 +60,7 @@ BlueprintId="uas0201",
             MaxRadius = 45,
             MuzzleSalvoSize = 2,
             MuzzleVelocity = 15,
-            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
+            ProjectileId = '/projectiles/CANTorpedoNanite02/CANTorpedoNanite02_proj.bp', -- now shooting depth charges to make it work vs sub hunters, with lower dps
             RateOfFire = 0.2,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
