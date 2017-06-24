@@ -25,7 +25,7 @@ BlueprintId="xes0307",
         { --torps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MuzzleVelocity = 15,
-            ProjectileId = '/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
+            ProjectileId = '/projectiles/CANTorpedoNanite02/CANTorpedoNanite02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
