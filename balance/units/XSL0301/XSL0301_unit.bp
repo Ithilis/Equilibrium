@@ -60,6 +60,7 @@ BlueprintId = "xsl0301",
             BuildCostEnergy = 250000,    --from 27000
             BuildCostMass = 5000,        --from 4500
             BuildTime = 12500,            --from 12600
+            NewMaxRadius = 28,
             --Range for oc only 28
         },
         Shield = {
@@ -184,7 +185,7 @@ BlueprintId = "xsl0301",
             EnergyDrainPerSecond = 10000,
             EnergyRequired = 1000, --from 5000, now its variable oc
             ManualFire = true,
-            MaxRadius = 28,                --from25
+            MaxRadius = 23,                --from25, this is actually 28 when the upgrade is done
             MuzzleVelocity = 25,        --from22 -> as projectile
             RateOfFire = 0.1,            --from 0,2
         },
@@ -193,7 +194,7 @@ BlueprintId = "xsl0301",
             DamageRadius = 3.5,
             EnergyDrainPerSecond = 10000,
             EnergyRequired = 1000, --from 5000, now its variable oc
-            MaxRadius = 28,                --from25
+            MaxRadius = 23,                --from25, this is actually 28 when the upgrade is done
             MuzzleVelocity = 25,        --from22 -> as projectile
             RateOfFire = 0.1,            --from 0,2
         },

@@ -25,6 +25,30 @@ XSL0301 = Class(OldXSL0301) {
     
     CreateEnhancement = function(self, enh)
         OldXSL0301.CreateEnhancement(self, enh)
+        
+        
+        local bp = self:GetBlueprint().Enhancements[enh]
+        if not bp then return end
+        
+        --EQ: OC has a longer range than regular gun, so if you dont have the upgrade we keep it at a lower range so it doesnt mess with range circles
+        if enh == 'Overcharge' then
+            self:AddCommandCap('RULEUCC_Overcharge')
+            self:GetWeaponByLabel('OverCharge').NeedsUpgrade = false
+            self:GetWeaponByLabel('AutoOverCharge').NeedsUpgrade = false
+            local wep = self:GetWeaponByLabel('OverCharge')
+            wep:ChangeMaxRadius(bp.NewMaxRadius or 28)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:ChangeMaxRadius(bp.NewMaxRadius or 28)
+        elseif enh == 'OverchargeRemove' then
+            local bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius or 23
+            local wep = self:GetWeaponByLabel('OverCharge')
+            wep:ChangeMaxRadius(bpDisrupt)
+            local aoc = self:GetWeaponByLabel('AutoOverCharge')
+            aoc:ChangeMaxRadius(bpDisrupt)
+        end
+        
+        
+        
         self:AdjustPriceOnEnh() --EQ: we adjust our sacus price when we get or lose an enhancement
     end,
 
