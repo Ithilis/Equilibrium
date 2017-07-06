@@ -171,6 +171,7 @@ BlueprintId = "uel0301",
             Damage = 200,                        --from 300
             MaxRadius = 23,        --from 25
             RateOfFire = 1,
+            ProjectileLifetimeUsesMultiplier = 3.0,
         },
         {
             CollideFriendly = false,

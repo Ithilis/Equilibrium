@@ -201,6 +201,7 @@ BlueprintId = "url0301",
             Damage = 175,
             MaxRadius = 23,            --from 25
             MuzzleVelocity = 25,    --from 18
+            ProjectileLifetimeUsesMultiplier = 3.0,
             RateOfFire = 1,
         },
         {
