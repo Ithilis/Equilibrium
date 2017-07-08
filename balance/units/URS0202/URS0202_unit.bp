@@ -7,6 +7,9 @@ BlueprintId = "urs0202",
     AI = {
         GuardScanRadius = 300,
     },
+    Categories = {
+        'NOAUTOREFUEL',
+    },
     Defense = {
         Health = 4500,      --from 3000hp; this is 6 t2 torb bomber or 2 t3 torp bomber
         MaxHealth = 4500,

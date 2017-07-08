@@ -29,6 +29,7 @@ BlueprintId = "uel0401",
         'DRAGBUILD',
         --'SHOWQUEUE', --remove the queue option
         'MOBILEFACTORY', --not yet used but you know :D
+        'NOAUTOREFUEL', --disable planes trying to refuel to it, docking is bugged if the target is moving
         'OVERLAYMISC',
         'OVERLAYANTIAIR',
         'OVERLAYDEFENSE',
@@ -66,7 +67,7 @@ BlueprintId = "uel0401",
         },
     },
     Weapon = {
-        {
+        { --main cannon 1
             Damage = 250,        --4x525dps on 100r
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -81,7 +82,7 @@ BlueprintId = "uel0401",
                 'ALLUNITS',
             },
         },
-        {
+        { --main cannon 2
             Damage = 250,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -96,7 +97,7 @@ BlueprintId = "uel0401",
                 'ALLUNITS',
             },
         },
-        {
+        { --main cannon 3
             Damage = 250,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -111,7 +112,7 @@ BlueprintId = "uel0401",
                 'ALLUNITS',
             },
         },
-        {
+        { --main cannon 4
             Damage = 250,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -126,7 +127,7 @@ BlueprintId = "uel0401",
                 'ALLUNITS',
             },
         },
-        {
+        { --riot gun 1
             Damage = 225,        --2x750dps on 45r
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -141,7 +142,7 @@ BlueprintId = "uel0401",
                 'ALLUNITS',
             },
         },
-        {
+        { --riot gun 2
             Damage = 225,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -156,17 +157,16 @@ BlueprintId = "uel0401",
                 'ALLUNITS',
             },
         },
-        {
+        { --aa 1
             Damage = 120,
         },
-        {
+        { --aa 2
             Damage = 120,    --from 20 =350AA dmg in total
         },
         {   --torpedo
             Damage = 150,              --from 75
             DamageRadius = 0.5,        -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 60,            --from 40
-            
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',

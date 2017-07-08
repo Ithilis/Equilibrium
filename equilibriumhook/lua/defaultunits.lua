@@ -69,7 +69,7 @@ AirUnit = Class(oldAirUnit) {
         -- Find air stage
         if aiBrain:GetCurrentUnits( categories.AIRSTAGINGPLATFORM ) > 0 then
             local unitPos = self:GetPosition()
-            local plats = AIUtils.GetOwnUnitsAroundPoint( aiBrain, categories.AIRSTAGINGPLATFORM, unitPos, 400 )
+            local plats = AIUtils.GetOwnUnitsAroundPoint( aiBrain, categories.AIRSTAGINGPLATFORM - categories.CARRIER - categories.NOAUTOREFUEL, unitPos, 400 )
             if table.getn( plats ) > 0 then
                 table.sort(plats, function(a,b)--sort all our staging platforms by distance
                     local platPosA = a:GetPosition()
@@ -103,8 +103,10 @@ AirUnit = Class(oldAirUnit) {
         for k,v in plats do
             if not v.Dead then
                 local roomAvailable = false
-                if EntityCategoryContains( categories.CARRIER, v ) then
+                if EntityCategoryContains( categories.CARRIER, v ) or EntityCategoryContains( categories.NOAUTOREFUEL, v ) then
                     --roomAvailable = v:TransportHasAvailableStorage( self )
+                    WARN('EQ: found a carrier or no auto fuel unit when refueling. issuing move order to location')
+                    --we dont land on carriers and such since docking is bugged when the carrier is moving
                 else
                     roomAvailable = v:TransportHasSpaceFor( self )
                 end
