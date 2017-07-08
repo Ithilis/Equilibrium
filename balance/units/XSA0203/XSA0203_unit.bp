@@ -38,6 +38,8 @@ BlueprintId = "xsa0203",
             ProjectilesPerOnFire = 2,    --from 4
             RateOfFire = 1,                --from 1.25 = 1,5s
             TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretPitchRange = 80, --from 60
+            UseFiringSolutionInsteadOfAimBone = true, --fixes a bug where it misses units when directly above them
         },
         { --ground fire weapon
             Damage = 20,                --from12
@@ -50,6 +52,8 @@ BlueprintId = "xsa0203",
             ProjectilesPerOnFire = 2,    --from 4
             RateOfFire = 1,                --from 1.25 = 1,5s
             TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
+            TurretPitchRange = 80, --from 60
+            UseFiringSolutionInsteadOfAimBone = true, --fixes a bug where it misses units when directly above them
         },
         {
             Damage = 250,
