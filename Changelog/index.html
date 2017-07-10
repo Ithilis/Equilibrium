@@ -32,7 +32,7 @@
 			There are many changes in this mod, but don't worry, you need to remember only a few of them! The rest are designed to bring improvements while not compromising your gameplay.
 			<ul>
 			<li> Mercies deal damage over time! Moving targets receive only a fraction of the damage.
-			<li> Submarine warfare: Subs now counter suface ships; Sub Hunters counter subs and destroyers counter sub hunters!
+			<li> Submarine warfare: Subs now counter surface ships; Sub Hunters counter subs and destroyers counter sub hunters!
             <li> Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.
 			<li> RAS energy income has been nerfed, don't reclaim your pgens afterwards!
 			<li> T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.
@@ -116,7 +116,7 @@
 		<div id="factories" class="card">
 			<h3><img src="http://wiki.faforever.com/images/7/77/Cybran_T1_Land_Factory.png">Factories</h3>
 			<p>Unit and Factory stats have been normalized to drain a constant amount of resources, so now it's much easier to predict how many factories you can support on X amount of eco.
-			<p>Reduction of the amount of engineers one is required to have throughout the game. Support factories are built more quickly and are cheaper, and can support more aggressive gameplay. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
+			<p>Land factories have an increased buildpower so that they are more efficient than assisting engineers. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
 			<p>Unassisted factories of the same tech level now drain resources at the same rate regardless of what is being built. A higher tech factory building lower tech units drains at the same rate, but builds units faster.
 			<ul>
             <li><b>Factory Build Rates - T1 - T2 - T3</b>
@@ -635,13 +635,13 @@
             <p>Speed decreased to let LABs have more room for raiding.
             <p>Mantis now have a tank icon so you can separate them from labs, which are now usable in your main army. More build rate so the assist feature is used more often, less dps, but better damage per shot. It’s mainly a nerf for Cybran, where they have additional damage from MAA, basically for free now. 
                 <ul>
-                <li><b>Mantis:</b> <strike>52m 273e 260bt; 270HP 26dps 3,7sp, 1br</strike> → 50m 250e 250bt; 330HP 23.3dps 3,7sp 1.5br
+                <li><b>Mantis:</b> <strike>52m 273e 260bt; 270HP 26dps 3,7sp, 1br</strike> → 55m 275e 275bt; 330HP 23.3dps 3,7sp 1.5br
                     <ul>
                     <li><b>Icon changed:</b>  <strike>bot</strike> → tank
                     </ul>
-                <li><b>Thaam:</b> <strike>54m 270e 270bt; 280HP 24dps 3,5sp</strike> → 50m 250e 250bt; 360HP 23dps 3.4sp
-                <li><b>Aurora:</b> <strike>52m 260e 260bt; 140HP 26dps 26r 1,5s r.t 2.9sp</strike> → 50m 250e 250bt; 200HP 25dps 23r 1.8s reload time 2.8sp
-                <li><b>Striker:</b> <strike>56m 266e 280bt; 300HP 24dps 3,4sp</strike> → 50m 250e 250bt; 400HP 20dps 3.3sp
+                <li><b>Thaam:</b> <strike>54m 270e 270bt; 280HP 24dps 3,5sp</strike> → 55m 275e 275bt; 360HP 23dps 3.4sp
+                <li><b>Aurora:</b> <strike>52m 260e 260bt; 140HP 26dps 26r 1,5s r.t 2.9sp</strike> → 55m 275e 275bt; 200HP 25dps 23r 1.8s reload time 2.8sp
+                <li><b>Striker:</b> <strike>56m 266e 280bt; 300HP 24dps 3,4sp</strike> → 55m 275e 275bt; 400HP 20dps 3.3sp
                 </ul>
 			
 		</div>
@@ -1056,6 +1056,7 @@
                     <li><b>Rapid fabricator:</b> adds <strike>96</strike> → 100br; Cost: <strike>800m</strike> → 600m 30 000e 1500bt
                     <li><b>RAS:</b> 4200m 210 000e 10 500bt; increase death explosion <strike>2500dmg</strike> → 5000dmg
                     <li><b>Teleport:</b> 15 000m 1 500 000e 18750br (drains 20m/2000e/s)
+                    <li>Fixed a bug with most SACUs with a range upgrade where projectiles despawned on the edge of their range
                     </ul>
                 </ul>
 			
@@ -1284,7 +1285,7 @@
             
 			Increased the faction diversity with gunships:
                     <ul>
-                    <p>Spectres are faster because Aeon doesn't have a T2 bomber
+                    <p>Spectres are faster because Aeon doesn't have a T2 bomber, and they are also cheaper and weaker
                     <p>Renegades have  more range because they can't move while firing effectively
                     <p>Vulthoos are stronger because Seraphim doesn't have T3 gunships
                     
@@ -1298,6 +1299,7 @@
                     <li><b>Vulthoo:</b> <strike>864HP 60dps 0aoe 22r</strike> → 315m 6750e 1800bt 1200HP 80dps 0.5aoe 24r
                         <ul>
                         <li><b>Uniform scale:</b> <strike>0.06</strike> → 0.4  (only visual = bigger model)
+                        <li>Improved targeting on its ground weapons so it misses units much less often.
                         </ul>
                     </ul>
                 
@@ -1326,7 +1328,7 @@
                 <li><b>Corsair:</b> <strike>1100HP 1200dmg bomb 2aoe</strike> → 900HP 1000dmg bomb 2.5aoe 45r
                     <ul>
                     <li>AA weapon:</b> <strike>152dps 30r 55muzzle</strike> → 200dps 40r  95 muzzle velocity
-                    <li>Improved targetting on its ground missiles, and prevent them from missing wildly on turns.
+                    <li>Improved targeting on its ground missiles, and prevent them from missing wildly on turns.
                     </ul>
                 <li><b>Janus:</b> <strike>1200HP 1200dmg 3aoe</strike> → 950HP 300+800bomb dmg 5aoe 45r
                 <li><b>Notha:</b> <strike>1175HP 1175dmg bomb 3aoe</strike> → 925HP 1050bomb dmg 4aoe 45r firing tolerance 20
@@ -1679,6 +1681,7 @@
                 <li><b>Uashavoh beam weapons:</b> <strike>1AOE</strike> → 1.5AOE
                     <ul>
                     <li><b>Torpedo defense:</b> <strike>3.8s reload-time</strike> → 1s reload-time
+                    <li>Adjusted firing pattern on its torpedoes to be more robust (dps unchanged)
                     </ul>
                 </ul>
 			
@@ -1892,7 +1895,7 @@
             
             <h4>Tactical missile launchers</h4>
             
-            AOE increased to kill storage around mexes when targetting them. It is also better at hitting moving units now, to make using this against armies more viable. The amount of missiles TMLs can store has also been decreased, since you never need 20 and forgetting to disable autobuild will waste eco.
+            AOE increased to kill storage around mexes when targeting them. It is also better at hitting moving units now, to make using this against armies more viable. The amount of missiles TMLs can store has also been decreased, since you never need 20 and forgetting to disable autobuild will waste eco.
             
                 <ul>
                 <li><b>AOE:</b> <strike>2</strike> → 3
