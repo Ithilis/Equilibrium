@@ -32,8 +32,11 @@ BlueprintId = "xrl0305",
         },
     },    
     Intel = {
-        WaterVisionRadius = 5,    --from 26
+        WaterVisionRadius = 15,    --from 26
     },
+    Physics = {
+        LayerChangeOffsetHeight = -0.3,
+    },    
     Weapon = {
         { --main gun
 			Damage = 120,            --300dps
