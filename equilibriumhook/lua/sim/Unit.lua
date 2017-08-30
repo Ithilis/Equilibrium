@@ -431,6 +431,59 @@ Unit = Class(oldUnit) {
     end,
     
 -------------------------------------------------------------------------------------------
+-- LAYER EVENTS
+-------------------------------------------------------------------------------------------
+
+--here we let all units have proper watervision radii. helps with units shooting each other form the shore.
+--we dont hook since normal faf has a vision disable code on amphibious units. bleh.
+    OnLayerChange = function(self, new, old)
+        -- Bail out early if dead. The engine calls this function AFTER entity:Destroy() has killed
+        -- the C object. Any functions down this line which expect a live C object (self:CreateAnimator())
+        -- for example, will throw an error.
+        if self.Dead then return end
+
+        for i = 1, self:GetWeaponCount() do
+            self:GetWeapon(i):SetValidTargetsForCurrentLayer(new)
+        end
+
+        -- All units want normal vision!
+        if old == 'None' then
+            self:EnableIntel('Vision')
+            self:EnableIntel('WaterVision')
+        end
+        
+        --EQ: Units on land want a smaller watervision than units on water?
+        --[[
+        if (old == 'Seabed' or old == 'Water' or old == 'Sub' or old == 'None') and new == 'Land' then
+            self:EnableIntel('WaterVision')
+        elseif (old == 'Land' or old == 'None') and (new == 'Seabed' or new == 'Water' or new == 'Sub') then
+            self:EnableIntel('WaterVision')
+        end
+        --]]
+
+        if new == 'Land' then
+            self:PlayUnitSound('TransitionLand')
+            self:PlayUnitAmbientSound('AmbientMoveLand')
+        elseif new == 'Water' or new == 'Seabed' then
+            self:PlayUnitSound('TransitionWater')
+            self:PlayUnitAmbientSound('AmbientMoveWater')
+        elseif new == 'Sub' then
+            self:PlayUnitAmbientSound('AmbientMoveSub')
+        end
+
+        local bpTable = self:GetBlueprint().Display.MovementEffects
+        if not self.Footfalls and bpTable[new].Footfall then
+            self.Footfalls = self:CreateFootFallManipulators(bpTable[new].Footfall)
+        end
+        self:CreateLayerChangeEffects(new, old)
+
+        -- Trigger the re-worded stuff that used to be inherited, no longer because of the engine bug above.
+        if self.LayerChangeTrigger then
+            self:LayerChangeTrigger(new, old)
+        end
+    end,
+    
+-------------------------------------------------------------------------------------------
 -- BUFFS
 -------------------------------------------------------------------------------------------
 --there was some fucked up changes to do with stun mechanics so we need to hook these to fix them
