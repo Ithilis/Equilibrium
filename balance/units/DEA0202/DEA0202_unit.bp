@@ -30,7 +30,7 @@ BlueprintId = "dea0202",
             RateOfFire = 0.5,
         },
         {
-            BombDropThreshold = 4,
+            BombDropThreshold = 10,
             Damage = 10,                    --800dmg by fire
             DamageRadius = 5,              -- from 3
             DoTPulses = 10,

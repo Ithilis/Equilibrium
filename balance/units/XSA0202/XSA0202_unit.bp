@@ -35,6 +35,7 @@ BlueprintId = "xsa0202",
             RateOfFire = 0.5,           -- from1
         },
         {
+            BombDropThreshold = 10,           -- from 4, makes it drop bombs better
             Damage = 1050,            --from 1175
             DamageRadius = 4,        --from 3
             FiringTolerance = 20,    --from 6
