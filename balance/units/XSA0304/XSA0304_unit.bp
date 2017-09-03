@@ -19,15 +19,16 @@ BlueprintId = "xsa0304",
     },
     Weapon = {
         {
-            DamageFriendly = false,     --from true
+            BombDropThreshold = 15,           -- from 6, makes it drop bombs better
+            DamageFriendly = false,         --from true
             Damage = 3150,
-            DamageRadius = 5.5,        --from 5
-            MaxRadius = 80,            --from 90
-            RateOfFire = 0.1666,    --from 0.2
+            DamageRadius = 5.5,             --from 5
+            MaxRadius = 80,                 --from 90
+            RateOfFire = 0.1666,            --from 0.2
         },
         {
             Damage = 500,
-            DamageRadius = 3,        --from 1
+            DamageRadius = 3,               --from 1
             DisplayName = 'Air Crash',
         },
     },

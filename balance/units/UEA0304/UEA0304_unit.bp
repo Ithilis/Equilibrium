@@ -19,29 +19,30 @@ BlueprintId = "uea0304",
     },
     Weapon = {
         {
-            DamageFriendly = false,     --from true
+            BombDropThreshold = 15,           -- from 6, makes it drop bombs better
+            DamageFriendly = false,             --from true
             Damage = 3000,
             DamageRadius = 6,
-            MaxRadius = 80,            --from 90
-            RateOfFire = 0.1666,        --from 0.2
+            MaxRadius = 80,                 --from 90
+            RateOfFire = 0.1666,            --from 0.2
         },
         {
-            Damage = 12,                -- = 48AAdps
-            MaxRadius = 45,                --from 44
+            Damage = 12,                    -- = 48AAdps
+            MaxRadius = 45,                 --from 44
             MuzzleVelocity = 45,
-            RateOfFire = 0.5,            --from 1,5
-            TargetCheckInterval = 0.5,    --from 0,16
+            RateOfFire = 0.5,               --from 1,5
+            TargetCheckInterval = 0.5,      --from 0,16
         },
         {
-            Damage = 12,                -- = 48AAdps
-            MaxRadius = 45,                --from 44
+            Damage = 12,                    -- = 48AAdps
+            MaxRadius = 45,                 --from 44
             MuzzleVelocity = 45,
-            RateOfFire = 0.5,            --from 1,5
-            TargetCheckInterval = 0.5,    --from 0,16
+            RateOfFire = 0.5,               --from 1,5
+            TargetCheckInterval = 0.5,      --from 0,16
         },
         {
             Damage = 500,
-            DamageRadius = 3,        --from 1
+            DamageRadius = 3,               --from 1
             DisplayName = 'Air Crash',
         },
     },
