@@ -23,6 +23,7 @@ BlueprintId = "xsa0103",
     },
     Weapon = {
         {
+            BombDropThreshold = 10,           -- from 3, makes it drop bombs better
             Damage = 250,       --from 250
             DamageRadius = 3.5,   -- 4
             DamageFriendly = false,

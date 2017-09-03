@@ -23,7 +23,7 @@ BlueprintId = "uea0103",
     },
     Weapon = {
         {            
-            BombDropThreshold = 7,
+            BombDropThreshold = 10,           -- from 3, makes it drop bombs better
             DamageRadius = 3.5,            --from3
             DamageFriendly = false,
             

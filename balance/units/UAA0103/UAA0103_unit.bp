@@ -58,6 +58,7 @@ BlueprintId = "uaa0103",
                     TargetDisallow = 'WALL, NAVAL',
                 },
             },
+            BombDropThreshold = 10,           -- from 3, makes it drop bombs better
             DamageFriendly = false,    --from true, for not stunn ally units
             DamageRadius = 2.5,   
             Damage = 400,            --strong against single building

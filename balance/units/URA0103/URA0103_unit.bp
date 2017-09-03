@@ -24,7 +24,7 @@ BlueprintId = "ura0103",
     Weapon = {
         {
             Damage = 50,
-            BombDropThreshold = 7,          --from 3
+            BombDropThreshold = 10,           -- from 3, makes it drop bombs better
             DamageRadius = 3,            --from3
             DamageFriendly = false,
             FiringRandomness = 0,           --from 3
