@@ -21,7 +21,7 @@ BlueprintId = "url0203",
     }, 
     Intel = {
         VisionRadius = 15,
-        WaterVisionRadius = 5,    --from 20
+        WaterVisionRadius = 10,    --from 20
     },
     Weapon = {
         { --rockets (land weapon)
