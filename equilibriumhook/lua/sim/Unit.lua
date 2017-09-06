@@ -322,7 +322,22 @@ Unit = Class(oldUnit) {
 -- CONSTRUCTING - BUILDING - REPAIR
 ----------------------------------------------------------------------------------------------
 
-    --global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
+--advanced rebuild with re-assist
+    OnStopBuild = function(self, built)
+        --we catch this flag left by the wreckage, letting us know if we need to re-assist it after rebuilding it.
+        if self.ShouldAssist == true then
+            self.ShouldAssist = false --flag the unit as not rebuilding anything.
+            IssueGuard({self}, built)
+        end
+        oldUnit.OnStopBuild(self, built)
+    end,
+
+    OnFailedToBuild = function(self)
+        self.ShouldAssist = false --flag the unit as not rebuilding anything.
+        oldUnit.OnFailedToBuild(self)
+    end,
+    
+--global sacrifice system adjustment, the order itself is engine-side so we just pick up the pieces
     OnStartSacrifice = function(self, target_unit)
         EffectUtilities.PlaySacrificingEffects(self,target_unit)
         local bp = self:GetBlueprint().Economy
