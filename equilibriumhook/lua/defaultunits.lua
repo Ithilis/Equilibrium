@@ -1,6 +1,5 @@
 local AIUtils = import('/lua/ai/aiutilities.lua')
 local GetRandomFloat = import('utilities.lua').GetRandomFloat
-
 --------------------------------------------------------------
 --  AIR UNITS
 ---------------------------------------------------------------
@@ -161,9 +160,18 @@ AirStagingPlatformUnit = Class(oldAirStagingPlatformUnit) {
 -----------------------------------------------------------------
 oldStructureUnit = StructureUnit
 
+--this is so maddening i cant begin to describe it.
+--for some ABSURD reason only like half of the units decide to even notice StructureUnit in this file, and its NOTHING to do with function overwriting or anything else i could tell.
+--if it hooks ANYTHING in defaultunits.lua (the fa version) it just goddamn ignores this class. you can put anything bar syntax errors in here and it wont care.
+--as a result, i gave up and the great rebuild functionality works perfectly for only half of the buildings. i tried.
+--m a d d e n i n g
+
+-- STRUCTURE UNITS
 StructureUnit = Class(oldStructureUnit) {
 
-    OnKilled = function(self, instigator, type, overKillRatio)
+    OnKilled = function(self, instigator, type, overkillRatio)
+        --WARN('m a d d e n i n g')
+        oldStructureUnit.OnKilled(self, instigator, type, overkillRatio)
         local engies = EntityCategoryFilterDown(categories.ENGINEER * categories.TECH3, self:GetGuards())
         if engies[1] then
             for _, u in engies do
@@ -172,7 +180,6 @@ StructureUnit = Class(oldStructureUnit) {
             end
         end
 
-        oldStructureUnit.OnKilled(self, instigator, type, overKillRatio)
     end,
 
     CheckRepairersForRebuild = function(self, wreckage)
@@ -193,59 +200,60 @@ StructureUnit = Class(oldStructureUnit) {
 
         wreckage:Rebuild(units)
     end,
-
-    CreateWreckage = function(self, overkillRatio)
-        local wreckage = Unit.CreateWreckage(self, overkillRatio)
-        if wreckage then
-            self:CheckRepairersForRebuild(wreckage)
-        end
-
-        return wreckage
-    end,
 }
 
-oldMassStorageUnit = MassStorageUnit
-
-MassStorageUnit = Class(oldMassStorageUnit) {
-
-    OnKilled = function(self, instigator, type, overKillRatio)
-        local engies = EntityCategoryFilterDown(categories.ENGINEER * categories.TECH3, self:GetGuards())
-        if engies[1] then
-            for _, u in engies do
-                u:SetFocusEntity(self)
-                self.Repairers[u:GetEntityId()] = u
-            end
-        end
-
-        oldMassStorageUnit.OnKilled(self, instigator, type, overKillRatio)
-    end,
-
-    CheckRepairersForRebuild = function(self, wreckage)
-        local units = {}
-        for id, u in self.Repairers do
-            if u:BeenDestroyed() then
-                self.Repairers[id] = nil
-            else
-                local focus = u:GetFocusUnit()
-                if focus == self and ((u:IsUnitState('Repairing') and not u:GetGuardedUnit()) or
-                                      EntityCategoryContains(categories.ENGINEER * categories.TECH3, u)) then
-                    table.insert(units, u)
+--i cant believe i had to do this. this is insane on so many levels. if you ever want to take this code just do it properly instead.
+function RebuildUnitInsanity(SuperClass)
+    return Class(SuperClass) {
+        
+        OnKilled = function(self, instigator, type, overKillRatio)
+            SuperClass.OnKilled(self, instigator, type, overKillRatio)
+            local engies = EntityCategoryFilterDown(categories.ENGINEER * categories.TECH3, self:GetGuards())
+            if engies[1] then
+                for _, u in engies do
+                    u:SetFocusEntity(self)
+                    self.Repairers[u:GetEntityId()] = u
                 end
             end
-        end
+            --WARN('m a d d e n i n g')
+        end,
 
-        if not units[1] then return end
+        CheckRepairersForRebuild = function(self, wreckage)
+            local units = {}
+            for id, u in self.Repairers do
+                if u:BeenDestroyed() then
+                    self.Repairers[id] = nil
+                else
+                    local focus = u:GetFocusUnit()
+                    if focus == self and ((u:IsUnitState('Repairing') and not u:GetGuardedUnit()) or
+                                          EntityCategoryContains(categories.ENGINEER * categories.TECH3, u)) then
+                        table.insert(units, u)
+                    end
+                end
+            end
 
-        wreckage:Rebuild(units)
-    end,
+            if not units[1] then return end
 
-    CreateWreckage = function(self, overkillRatio)
-        local wreckage = Unit.CreateWreckage(self, overkillRatio)
-        if wreckage then
-            self:CheckRepairersForRebuild(wreckage)
-        end
+            wreckage:Rebuild(units)
+        end,
 
-        return wreckage
-    end,
-    
-}
+    }    
+end
+
+--end me now i swear
+StructureUnit = RebuildUnitInsanity(StructureUnit)
+LandFactoryUnit = RebuildUnitInsanity(LandFactoryUnit)
+AirFactoryUnit = RebuildUnitInsanity(AirFactoryUnit)
+EnergyCreationUnit = RebuildUnitInsanity(EnergyCreationUnit)
+EnergyStorageUnit = RebuildUnitInsanity(EnergyStorageUnit)
+AirStagingPlatformUnit = RebuildUnitInsanity(AirStagingPlatformUnit)
+--FactoryUnit = RebuildUnitInsanity(FactoryUnit)
+MassCollectionUnit = RebuildUnitInsanity(MassCollectionUnit)
+MassFabricationUnit = RebuildUnitInsanity(MassFabricationUnit)
+MassStorageUnit = RebuildUnitInsanity(MassStorageUnit)
+RadarUnit = RebuildUnitInsanity(RadarUnit)
+RadarJammerUnit = RebuildUnitInsanity(RadarJammerUnit)
+SonarUnit = RebuildUnitInsanity(SonarUnit)
+ShieldStructureUnit = RebuildUnitInsanity(ShieldStructureUnit)
+SeaFactoryUnit = RebuildUnitInsanity(SeaFactoryUnit)
+QuantumGateUnit = RebuildUnitInsanity(QuantumGateUnit)
