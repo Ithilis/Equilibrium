@@ -13,11 +13,10 @@ BlueprintId = "uab4201",
         {   --tmd
             CannotAttackGround = false,
             Flare = {
-                Category = 'MISSILE',
+                Category = 'MISSILE TACTICAL', --This should be the same as the target only allow cats, unless you are doing sth crazy.
                 Radius = 15,
                 Stack = true, --added special flag to trigger multi-sphere collision
                 OffsetMult = 1.33,
-                IgnoreCategory = 'STRATEGIC',
             },
             MuzzleVelocity = 15,
             ProjectileLifetime = 3,
