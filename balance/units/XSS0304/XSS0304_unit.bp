@@ -36,6 +36,7 @@ BlueprintId="xss0304",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         { --torp defense 1
             RateOfFire = 0.5,

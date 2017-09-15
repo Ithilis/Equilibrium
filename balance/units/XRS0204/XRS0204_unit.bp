@@ -38,7 +38,7 @@ BlueprintId="xrs0204",
         MaxSpeedReverse = 5.5,
     },
     Weapon = {
-        {
+        { --torpedoes
             Damage = 15, --75*6 = 450 per salvo ; 112.5dps
             DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 5,
@@ -61,8 +61,9 @@ BlueprintId="xrs0204",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense flares
             Label = 'AntiTorpedo01',
             MaxRadius = 25,
             MuzzleVelocity = 5,

@@ -34,7 +34,7 @@ BlueprintId="xas0204",
         MaxSpeedReverse = 6,
     },
     Weapon = {
-        {
+        { --torpedoes
             Damage = 60, --from 90; 6*60 = 360
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             FiringTolerance = 2,
@@ -58,8 +58,9 @@ BlueprintId="xas0204",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense flares
             DepthCharge = { -- increases its effectiveness i think
                 Radius = 5,
             },

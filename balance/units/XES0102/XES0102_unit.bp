@@ -17,7 +17,7 @@ BlueprintId="xes0102",
     SizeY = 1.2,    --0.65
     SizeZ = 3.2,    --2
     Weapon = {
-        {
+        { --torpedoes
             Damage = 90,    --4*90=360; 90dps 
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 50,
@@ -35,8 +35,9 @@ BlueprintId="xes0102",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense flares
             DisplayName = 'Smart Charge AntiTorpedo',
             RateOfFire = 0.4,    --from unchanged
         },
