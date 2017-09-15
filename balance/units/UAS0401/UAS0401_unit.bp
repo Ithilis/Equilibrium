@@ -53,10 +53,10 @@ BlueprintId="uas0401",
             DamageRadius = 7,    --from 5
             Damage = 7500,
         },
-        { --torps
-            MaxRadius = 75,        --from 80r
+        { --depth charges
             Damage = 275,        --from 350 = 330dps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            MaxRadius = 75,        --from 80r
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
@@ -69,6 +69,7 @@ BlueprintId="uas0401",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         { --torp defense
         },

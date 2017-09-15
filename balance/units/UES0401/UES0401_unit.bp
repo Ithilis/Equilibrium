@@ -56,6 +56,7 @@ BlueprintId="ues0401",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         {
             Damage = 280,        --sams unchanged

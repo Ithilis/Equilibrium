@@ -40,7 +40,7 @@ BlueprintId="urs0302",
             Damage = 20,        -- 120dps
             RateOfFire = 0.666,    --from 1.2 = 1.5s
         },
-        { --torps
+        { --depth charges
             Damage = 25,        --from 10 = 50dps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 60,
@@ -58,6 +58,7 @@ BlueprintId="urs0302",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         { --tmd 1
         },

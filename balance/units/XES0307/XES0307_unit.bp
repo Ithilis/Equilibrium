@@ -22,7 +22,7 @@ BlueprintId="xes0307",
         { --main laser
             DamageRadius = 1.5,   --from 1
         },
-        { --torps
+        { --depth charges
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MuzzleVelocity = 15,
             ProjectileId = '/projectiles/CANTorpedoNanite02/CANTorpedoNanite02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
@@ -38,6 +38,7 @@ BlueprintId="xes0307",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         { --tmd
         },

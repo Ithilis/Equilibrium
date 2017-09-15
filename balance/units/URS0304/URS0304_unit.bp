@@ -44,8 +44,8 @@ BlueprintId="urs0304",
             DamageRadius = 3,        --from4
         },
         { --torpedoes
-            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             Damage = 15,            --from 45 ; 7*15*5 = 525 damage
+            DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             DoTPulses = 7,
             DoTTime = 0.7,
             MaxRadius = 65,            --from80 ; decrease this to tune units effectiveness
@@ -63,6 +63,7 @@ BlueprintId="urs0304",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         { --nuke
             Buffs = {
