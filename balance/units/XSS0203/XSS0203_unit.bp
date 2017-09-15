@@ -29,7 +29,7 @@ BlueprintId="xss0203",
         MaxSpeedReverse = 6.5,        
     },
     Weapon = {
-        {
+        { --torpedoes
             Damage = 75, --from 37.5
             DamageRadius = 0.5,     --from 0 ; this is to stop you from submarine stacking
             MaxRadius = 35,     --from 32 ; use this to fine tune vs kiting destroyers.
@@ -47,6 +47,7 @@ BlueprintId="xss0203",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
         { --torpedo defense; not so good 1v1 subs, but when stacking it gets better
             Damage = 2,
@@ -57,7 +58,7 @@ BlueprintId="xss0203",
                                 --so its more like a subhunter-sub hybrid in that way
             TargetCheckInterval = 0.1, --from 0.5, makes it very responsive at short ranges, so you cant park on top of sub and rape it.
         },
-        {
+        { --deck gun
             MaxRadius = 24,    --from 32 because it was longer than frigates
         },
     },

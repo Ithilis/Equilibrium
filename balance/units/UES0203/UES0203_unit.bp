@@ -29,7 +29,7 @@ BlueprintId="ues0203",
         MaxSpeedReverse = 6,        
     },
     Weapon = {
-        {
+        { --torpedoes
             Damage = 75, --2 torps per salvo; from 75
             DamageRadius = 0.5,     -- from 0
             MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
@@ -47,8 +47,9 @@ BlueprintId="ues0203",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --deck gun
             Damage = 25,    --from 25
             MaxRadius = 30,    --from 32; its higher deck cannon range with bigger damage and can be used also against ships to increase dmg when really needed
         },

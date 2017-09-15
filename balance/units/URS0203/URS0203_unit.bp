@@ -29,7 +29,7 @@ BlueprintId="urs0203",
         MaxSpeedReverse = 6.5,
     },
     Weapon = {
-        {
+        { --torpedoes
             Damage = 16, -- 2 torpedoes with 5 pulses each ; 16*5*2 = 160 damage/salvo
             DamageRadius = 0.5,     -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 35,    --from 32 ; use this to fine tune vs kiting destroyers.
@@ -48,8 +48,9 @@ BlueprintId="urs0203",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --deck gun
             MaxRadius = 24,    --from 32 because it was longer than frigates
         },
     },
