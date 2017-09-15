@@ -28,13 +28,13 @@ BlueprintId="xss0201",
         Elevation = -2.5,        --from -2
     },
     Weapon = {
-        {
+        { --front laser
             DamageRadius = 1.5,        --from 1
         },
-        {
+        { --back laser
             DamageRadius = 1.5,        --from 1
         },
-        {
+        { --torpedoes
             Damage = 40,    --from 80, twice the torpedoes for half the damage.
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             FireTargetLayerCapsTable = {
@@ -59,8 +59,9 @@ BlueprintId="xss0201",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense
             RateOfFire = 1,  --from 0.26
         },
     },

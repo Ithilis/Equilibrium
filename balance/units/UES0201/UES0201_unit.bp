@@ -33,17 +33,17 @@ BlueprintId="ues0201",
     },
     StrategicIconName = 'icon_ship2_directfire',  --icon only as secure code from potencial future change
     Weapon = {
-        { --ground gun
+        { --front ground gun
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
 
         },
-        { --ground gun
+        { --back ground gun
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
         },
-        {
-            Damage = 30,        --from 10 = 42aa dps
+        { -- aa
+            Damage = 30,        --from 10 = 42 dps
         },
         { --depth charges
             Damage = 30, -- 75 = same 30dps
@@ -70,8 +70,9 @@ BlueprintId="ues0201",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense
         },
     },
 }

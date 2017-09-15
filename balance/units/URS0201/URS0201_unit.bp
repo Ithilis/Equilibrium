@@ -25,7 +25,7 @@ BlueprintId="urs0201",
         VisionRadius = 30,  --from 32
         WaterVisionRadius = 30,    --from 45
     },
-    StrategicIconName = 'icon_ship2_directfire',  --valiant icon because have weaker torpedos
+    StrategicIconName = 'icon_ship2_directfire',  --Direct fire icon because of weaker torpedoes
     Weapon = {
         {   --direct fire
             DamageRadius = 1.5,        --from 1
@@ -62,8 +62,9 @@ BlueprintId="urs0201",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense
             RateOfFire = 0.05, --from 0.26 ; this uses flares not normal anti torps!
         },
     },

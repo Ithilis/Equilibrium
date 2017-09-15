@@ -22,7 +22,7 @@ BlueprintId="uas0201",
         VisionRadius = 30,  --from 32
         WaterVisionRadius = 30,    --from 45
     },
-    StrategicIconName = 'icon_ship2_directfire',  --valiant icon because have weaker torpedos
+    StrategicIconName = 'icon_ship2_directfire',  --Direct fire icon because of weaker torpedoes
     Weapon = {
         { --main gun
             Damage = 1000,            --from 1060 = 200dps
@@ -30,7 +30,7 @@ BlueprintId="uas0201",
             MuzzleVelocity = 30,    --from 30
             FiringRandomness = 0.3,    --from 0,25
         },
-        {   -- sub + surface dps
+        {   -- depth charge
             DisplayName = 'Harmonic Depth Charge',
             Damage = 100,        --from 350 = 20dps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
@@ -52,9 +52,10 @@ BlueprintId="uas0201",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
             
         },
-        {   -- sub + surface dps
+        {   -- old torpedoes (now depth charges as well)
             Damage = 100,            --from 150 = 40dps on torpedo
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
             MaxRadius = 45,
@@ -74,8 +75,9 @@ BlueprintId="uas0201",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TargetRestrictDisallow = 'UNTARGETABLE, HOVER, TRANSPORTATION', --stop landed transports being shootable with torpedoes
         },
-        {
+        { --torpedo defense
         },
     },
 }
