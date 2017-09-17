@@ -10,4 +10,5 @@ BlueprintId = "uab0304",
         BuildRate = 100,
         BuildTime = 3750,
     },
+    StrategicIconName = 'icon_factory3_transport',
 }
