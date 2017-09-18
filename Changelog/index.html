@@ -1,9 +1,8 @@
-
-<!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Equilibrium Changelog</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -30,6 +29,7 @@
         <div id="summary" class="card">
 			<h3><img src="http://wiki.faforever.com/images/f/ff/Cybran_Wall.png"> Quick Summary</h3>
 			There are many changes in this mod, but don't worry, you need to remember only a few of them! The rest are designed to bring improvements while not compromising your gameplay.
+            
 			<ul>
 			<li> Mercies deal damage over time! Moving targets receive only a fraction of the damage.
 			<li> Submarine warfare: Subs now counter surface ships; Sub Hunters counter subs and destroyers counter sub hunters!
@@ -44,8 +44,7 @@
 		<div id="veterancy" class="card">
 			<h3><img src="http://wiki.faforever.com/images/c/cf/Upgrade_Icon.png">Veterancy</h3>
 			This is the first major change of the mod, which overhauls the veterancy system and also allows it to become a larger part of the game rather than being mostly irrelevant for everything except T4 units and ACUs.
-            
-			<p> Here are the rules the new veterancy system:
+            <p>
                 <ul>
                 <li>Units now receive veterancy points that are equal to the destroyed unit's mass cost. 
                 <li>Units gain a veterancy level when they get 150% of their own mass cost in veterancy points.
@@ -58,26 +57,30 @@
                     </ul>
                 <p>
                 <li>Regen values for units have been normalized and split into categories by tech level. Naval units get the regen of one tech level above them.
-                </ul>
             
-            <b>Land Units</b>
-                <ul>
-                <li> <b>T1:</b> +1 => 1/2/3/4/5
-                <li> <b>T2:</b> +3 => 3/6/9/12/15
-                <li> <b>T3:</b> +6 => 6/12/18/24/30
-                <li> <b>SACUs:</b> +9 => 9/18/27/36/45
-                <li> <b>T4:</b> +12 => 12/24/36/48/60
+                <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Regeneration Values</b></span>
+                <p><b>Land Units</b>
+                    <ul>
+                    <li> <b>T1:</b> +1 → 1/2/3/4/5
+                    <li> <b>T2:</b> +3 → 3/6/9/12/15
+                    <li> <b>T3:</b> +6 → 6/12/18/24/30
+                    <li> <b>SACUs:</b> +9 → 9/18/27/36/45
+                    <li> <b>T4:</b> +12 → 12/24/36/48/60
+                    <p>
+                    <li> <b>ACUs:</b> +6 → 6/12/18/24/30
+                    </ul>
+                
+                <p><b>Naval Units</b>
+                    <ul>
+                    <li> <b>T1:</b> +3 → 3/6/9/12/15
+                    <li> <b>T2:</b> +6 → 6/12/18/24/30
+                    <li> <b>T3:</b> +9 → 9/18/27/36/45
+                    <li> <b>T4:</b> +12 → 12/24/36/48/60
+                    </ul>
+                </div><p>
+                
+                </ul>
                 <p>
-                <li> <b>ACUs:</b> +6 => 6/12/18/24/30
-                </ul>
-            
-            <b>Naval Units</b>
-                <ul>
-                <li> <b>T1:</b> +3 => 3/6/9/12/15
-                <li> <b>T2:</b> +6 => 6/12/18/24/30
-                <li> <b>T3:</b> +9 => 9/18/27/36/45
-                <li> <b>T4:</b> +12 => 12/24/36/48/60
-                </ul>
 			
             <h4>Purpose</h4>
             
@@ -118,43 +121,47 @@
 			<p>Unit and Factory stats have been normalized to drain a constant amount of resources, so now it's much easier to predict how many factories you can support on X amount of eco.
 			<p>Land factories have an increased buildpower so that they are more efficient than assisting engineers. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
 			<p>Unassisted factories of the same tech level now drain resources at the same rate regardless of what is being built. A higher tech factory building lower tech units drains at the same rate, but builds units faster.
-			<ul>
-            <li><b>Factory Build Rates - T1 - T2 - T3</b>
-            <li><b>Land:</b> <strike>20/40/90</strike> → 25/50/100 
-			<li><b>Air:</b> <strike>20/40/120</strike> → 20/40/120 
-			<li><b>Navy:</b> <strike>20/60/120</strike> → 20/60/180 
-			<li><b>Quantum gateway:</b> <strike>120</strike> → 100 
-            <p>
-			<li><b>Factory Drain Rates - 	T1 - 	T2 - 	T3</b>
-			<li><b>Land:</b> - 5m/25e - 10m/50e - 20m/200e
-			<li><b>Air:</b> - 3m/50e - 7m/150e - 20m/1000e
-			<li><b>Navy:</b> - 5m/50e - 15m/100e - 45m/450e
+			<p>Building/upgrading a factory has the same drain rate as building units inside the upgraded factory
+            
+            <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Factory Economy Changes</b></span>
+                
+                <p><b>Factory Build Rates - T1 - T2 - T3</b>
+                <ul>
+                <li><b>Land:</b> <strike>20/40/90</strike> → 25/50/100 
+                <li><b>Air:</b> <strike>20/40/120</strike> → 20/40/120 
+                <li><b>Navy:</b> <strike>20/60/120</strike> → 20/60/180 
+                <li><b>Quantum gateway:</b> <strike>120</strike> → 100 
+                    <ul>
+                    <li>Changed strategic icon to a factory type rather than structure. 
+                    </ul>
+                </ul>
+                <p><b>Factory Drain Rates - 	T1 - 	T2 - 	T3</b>
+                <ul>
+                <li><b>Land:</b> - 5m/25e - 10m/50e - 20m/200e
+                <li><b>Air:</b> - 3m/50e - 7m/150e - 20m/1000e
+                <li><b>Navy:</b> - 5m/50e - 15m/100e - 45m/450e
+                </ul>
+                <b>Factory prices - 	T1 - 	T2 - 	T3</b>
+                <ul>
+                <li><b>Land:</b> - <strike>240m 2100e 300bt - 800m 7200e 1600bt - 3400m  30600e 11000bt</strike> → <br/>
+                300m 1500e 300bt - 900m 4500e 2250bt - 3600m  36000e 9000bt
+                <li><b>Air:</b> - <strike>210m 2400e 300bt - 640m 11700e 1600bt - 3250m  85091e 10400bt</strike> →<br/>
+                210m 3500e 350bt - 630m 13500e  1800bt  - 3600m 120000e 9600bt
+                <li><b>Naval:</b> - <strike>300m 1500e 300bt - 1370m 6600e 1800bt - 5450m  24472e 9180bt</strike> →<br/>
+                300m 3000e 300bt  - 1350m 9000e 1800bt - 3600m 36000e 9000bt
+                </ul>
+                
+                <ul>
+                <li>T2/T3 support factories are built 3 times faster than HQs when upgraded from an existing factory.
+                <li>In FAF, factories change their price depending on if you upgrade them or build with a higher tech engy. In equilibrium, the prices are tuned towards upgrading from existing factories, so building with engies may not give consistent drain values.
+                <li>The dynamic price function was not fully working in FAF. It's been fixed in equilibrium; now the build time is also included in the dynamic price adjustment, so building with an engy is now done at the correct speed.
+                </ul>
+            
+            </div><p>
 			</ul>
-        Building/upgrading a factory has the same drain rate as building units inside the upgraded factory
-			<ul>
-			<li><b>Factory type - 	T1 - 	T2 - 	T3</b>
-            <li><b>Land:</b> - <strike>240m 2100e 300bt - 800m 7200e 1600bt - 3400m  30600e 11000bt</strike> → <br/>
-			300m 1500e 300bt - 900m 4500e 2250bt - 3600m  36000e 9000bt
-            <li><b>Air:</b> - <strike>210m 2400e 300bt - 640m 11700e 1600bt - 3250m  85091e 10400bt</strike> →<br/>
-			210m 3500e 350bt - 630m 13500e  1800bt  - 3600m 120000e 9600bt
-            <li><b>Naval:</b> - <strike>300m 1500e 300bt - 1370m 6600e 1800bt - 5450m  24472e 9180bt</strike> →<br/>
-			300m 3000e 300bt  - 1350m 9000e 1800bt - 3600m 36000e 9000bt
-			</ul>
-			<ul>
-            <li>T2/T3 support factories are built 3 times faster than HQs when upgraded from an existing factory.
-            <li>In FAF, factories change their price depending on if you upgrade them or build with a higher tech engy. In equilibrium, the prices are tuned towards upgrading from existing factories, so building with engies may not give consistent drain values.
-            <li>The dynamic price function was not fully working in FAF. It's been fixed in equilibrium; now the build time is also included in the dynamic price adjustment, so building with an engy is now done at the correct speed.
-			</ul>
-		
+            
 			
-			<h4>Build time of experimentals</h4>
-            Made experimentals slower to build overall. Experimentals should not be able to be built in the same amount of time as a few T3 tanks.
-            <p>
-
-			<ul>
-			<li>T4 <b>land</b> units build <b>3</b> times faster than equivalent mass in a T3 factory
-			<li>T4 <b>air</b> units build <b>4.8</b> times faster than equivalent mass in a T3 factory
-			</ul>
+			
 			
 			<h4>Factory HP</h4>
 			Factory HP values were changed to be easier to snipe, encouraging thoughtful placement and shielding.
@@ -162,7 +169,8 @@
 			Since the Cybran naval factories are not able to be shielded, so to better protect them from snipes they now have the highest HP, rather than the lowest, in an ironic twist of faction diversity.
             <p>
             
-            <h4>T1 factories</h4>
+            <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Factory HP Changes</b></span>
+            <p><b>T1 factories</b>
             
                 <ul><b>Land/Air: T1 factory/T2 support factory</b>
                     <li><b>Cybran:</b> <strike>3500HP</strike> → 3375HP  
@@ -178,7 +186,7 @@
                     <li><b>UEF:</b> <strike>4800HP /9000HP</strike> → 5500HP /8250HP
                 </ul>
             
-            <h4>T2 factories</h4>
+            <b>T2 factories</b>
 			
                 <ul><b>Land/Air: T2 HQ factory/T3 support factory</b>
                     <li><b>Cybran:</b> <strike>7800HP</strike> → 6750HP 
@@ -194,7 +202,7 @@
                     <li><b>UEF:</b> <strike>18000HP /20000HP</strike> → 11000HP /16500HP
                 </ul>
             
-            <h4>T3 factories</h4>
+            <b>T3 factories</b>
 			
                 <ul><b>Land/Air: T3 HQ factory</b>
                     <li><b>Cybran:</b> <strike>19000HP</strike> →13500HP  
@@ -209,8 +217,16 @@
                     <li><b>Seraphim:</b> <strike>38000HP</strike> → 21000HP 
                     <li><b>UEF:</b> <strike>40000HP</strike> → 22000HP 
                 </ul>
+            </div><p>
             
-			
+			<h4>Build time of experimentals</h4>
+            Made experimentals slower to build overall. Experimentals should not be able to be built in the same amount of time as a few T3 tanks.
+            <p>
+
+			<ul>
+			<li>T4 <b>land & air</b> units build <b>4</b> times faster than equivalent mass in a T3 factory
+			</ul>
+            
 		</div>
 		
 		<div id="buildpower" class="card">
@@ -219,32 +235,36 @@
 			<h4>Engineer cost changes</h4>
 			Making buildpower easier to estimate. Nerfed the build rates on Aeon and Seraphim T3 engineers to bring them in line with the other two races, buffed engineering stations, and normalized all engineer costs to correspond to new factory build and drain rates.
 			<p>There were also some tweaks to the cybran build effects. They are for the purpose of reducing lag and, interestingly, revert to a more original representation of the game.
-			<ul>
-			<li><b>T2:</b> <strike>140</strike> → 125m
-				<ul>
-				<li><b>T2 Sparky:</b> <strike>225</strike> → 280m; <strike>17.5</strike> → 20br +Added rebuild function (same as SACUs have)
-				</ul>
-			<li><b>T3 UEF/Cybran:</b> <strike>440</strike> → 250m; <strike>30</strike> → 25br  +Added rebuild function (same as SACUs have)
-				<ul>
-				<li><b>UEF T3 engineers:</b> <strike>600</strike> → 400HP 
-				<li><b>Cybran T3 engineers:</b> <strike>540</strike> → 360HP 
-				</ul>
-			<li><b>T3 Aeon/Seraphim:</b> <strike>440</strike> →  375m; <strike>40</strike> → 37.5br +Added rebuild function (same as SACUs have)
-				<ul>
-				<li><b>Aeon:</b> 480HP
-				<li><b>Seraphim:</b> 500HP
-				</ul>
-			</ul>
-			
-			<h4>Engineering stations</h4>
-			<ul>
-			<li><b>Hive:</b> <strike>350m 1750e 1171bt</strike> → 275m 2750e 687.5bt -> 550m 5500e 1375bt-> 825m 8250e 2750bt
-			<li><b>Kennel:</b> <strike>550m 2750e 1100bt</strike> → 300m 3000e 750bt -> 600m 6000e  1500bt
-			<ul>
-                <li><b>Kennel building build rate:</b> <strike>20</strike> → 25 
-                <li><b>Kennel drone:</b> <strike>250m 2500e 750bt</strike> → 125m 1250e 625bt 
-                </ul>
-            </ul>
+            
+            <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Buildpower Changes</b></span>
+                <p><b>Engineers</b>
+                    <ul>
+                    <li><b>T2:</b> <strike>140</strike> → 125m
+                        <ul>
+                        <li><b>T2 Sparky:</b> <strike>225</strike> → 280m; <strike>17.5</strike> → 20br +Added rebuild function (same as SACUs have)
+                        </ul>
+                    <li><b>T3 UEF/Cybran:</b> <strike>440</strike> → 250m; <strike>30</strike> → 25br  +Added rebuild function (same as SACUs have)
+                        <ul>
+                        <li><b>UEF T3 engineers:</b> <strike>600</strike> → 400HP 
+                        <li><b>Cybran T3 engineers:</b> <strike>540</strike> → 360HP 
+                        </ul>
+                    <li><b>T3 Aeon/Seraphim:</b> <strike>440</strike> →  375m; <strike>40</strike> → 37.5br +Added rebuild function (same as SACUs have)
+                        <ul>
+                        <li><b>Aeon:</b> 480HP
+                        <li><b>Seraphim:</b> 500HP
+                        </ul>
+                    </ul>
+                
+                <b>Engineering stations</b>
+                    <ul>
+                    <li><b>Hive:</b> <strike>350m 1750e 1171bt</strike> → 275m 2750e 687.5bt -> 550m 5500e 1375bt-> 825m 8250e 2750bt
+                    <li><b>Kennel:</b> <strike>550m 2750e 1100bt</strike> → 300m 3000e 750bt -> 600m 6000e  1500bt
+                    <ul>
+                        <li><b>Kennel building build rate:</b> <strike>20</strike> → 25 
+                        <li><b>Kennel drone:</b> <strike>250m 2500e 750bt</strike> → 125m 1250e 625bt 
+                        </ul>
+                    </ul>
+            </div><p>
 			
 			<h4>ACU build rates</h4>
             SACU default build rates decreased to help separate combat presets from eco and field engineer ones. This will create a real choice when deciding which to build.
@@ -772,7 +792,7 @@
                 <li><b>Wagner:</b> <strike>300m 1980e 1450HP 100dps</strike> → 280m 2800e 1500HP 3.8sp 30+60dps+10torp dmg on 18/23/20r
                     <ul>
                     <li><b>Torpedoes:</b> switched to depth charges, 15s reload-time
-                    <li><b>Underwater vision:</b> <strike>20</strike> → 5
+                    <li><b>Underwater vision:</b> <strike>20</strike> → 10
                     </ul>
                 
                 <li><b>Mongoose:</b> <strike>200m 650HP 60dps 3.6sp</strike> → 280m 1250HP 45dps(2.5aoe)+30dps 18/33r 2.5speed
@@ -1243,6 +1263,7 @@
                     <li><b>Price:</b>  <strike>80m 2250e 500bt</strike> → 90m 2250e 600bt  
                     <li> <strike>4s reload time, </strike> → 6s reload time 
                     <li>Maneuverabilty improved, target priorities changed to engineers (from T1 air units)
+                    <li>Bombers are more reliable with bomb dropping now, and fail to drop less often.
                     <li>Removed friendly fire to avoid situations where multiple bombers kill themselves with their own bombs.
                     
                     <p>
@@ -1332,6 +1353,7 @@
                     </ul>
                 <li><b>Janus:</b> <strike>1200HP 1200dmg 3aoe</strike> → 950HP 300+800bomb dmg 5aoe 45r
                 <li><b>Notha:</b> <strike>1175HP 1175dmg bomb 3aoe</strike> → 925HP 1050bomb dmg 4aoe 45r firing tolerance 20
+                <li>T2 Fighter/bombers are more reliable with bomb dropping now, and fail to drop less often.
                 </ul>
                 </ul>
             
@@ -1437,9 +1459,10 @@
             
             Strats were a bit of a cheese unit so they have less speed and HP so they can be countered with T1/2 air, they got some damage tweaks to make them more consistent, more reload time so they doesn’t destroy mexes too well while hover bombing.
                 <ul>
-                <p>Cybran strat was nerfed with less survivability and more energy maintenance since stealth is a huge advantage and it now destroys T2 mex in a single pass as others.
+                <p>Cybran strat was nerfed with less survivability and more energy maintenance since stealth is a huge advantage and it now destroys T2 mex in a single pass like the others.
                 <li><b>Price:</b> <strike>2100m 105 000e 8400bt</strike> → 2000m 100 000e 9600bt
                 <li> <strike>17sp 90r 4s reload time</strike> → 16 speed 80r 6s reload time
+                <li>T3 Bombers are more reliable with bomb dropping now, and fail to drop less often.
                 <li><b>Aeon:</b> <strike>3450dmg 4aoe</strike> → 3300dmg 5aoe
                 <li><b>Seraphim:</b> <strike>3250dmg 5aoe</strike> → 3150dmg 5,5aoe
                 <li><b>UEF:</b> <strike>3000dmg 6aoe 45AA dps 44r</strike> → 3000dmg 6aoe 48AA dps 45r
@@ -1913,7 +1936,7 @@
                 <li><b>UEF/Cybran/Seraphim:</b> <strike>31r</strike> → 32r
                 <li><b>Aeon:</b> building/cruiser/battleship fix was integrated from EQ to official balance
                     <ul>
-                    <li>Fixed a bug where it was able to deflect nukes.
+                    <li>Fixed a bug where it was able to deflect nukes, mercy projectiles and some others.
                     </ul>
                 </ul>
             
@@ -2119,14 +2142,14 @@
                
             <h4>Novax</h4>
             
-            The Novax was almost in the right place, it just needed a nudge to make it nicer to use. Since it is a spy satellite and the UEF doesn't have a dedicated advanced intel structure, it got a slight intel boost. Removed the exploit of ctrl-k'ing Novaxes in midair to destroy SMDs, T3 artillery, and other expensive targets with no counterplay.
+            The Novax was almost in the right place, it just needed a nudge to make it nicer to use. Since it is a spy satellite and the UEF doesn't have a dedicated advanced intel structure, it got a slight intel boost. Since shields absorb crash damage now, the damage reduction has been reverted to its previous value as its not possible to exploit anymore.
             
                 <ul><b>Price:</b> <strike>28000m 400000e 25000bt</strike> → 30000m 450000e 18750bt
                 <li> <strike>9000HP 0HP/s</strike> → 15000HP, 25HP/s regeneration
                 <li><b>Speed of satellite:</b> <strike>6</strike> → 8
                 <li><b>Damage radius of beam:</b> <strike>1</strike> →  2.5
                 <li><b>Radar radius:</b> <strike>70</strike> → 150, visual radius <strike>40</strike> → 50, omni radius <strike>0</strike> → 30
-                <li><b>Satellite crash damage:</b> <strike>3000</strike> → 500
+                <li><b>Satellite crash damage:</b> <strike>1000</strike> → 3000
                 </ul>
 
             
@@ -2219,4 +2242,16 @@
 	</td>
 </tr></table>
 </body>
+<script type="text/javascript">
+var toggle = function () {
+
+        $(this).parent().children().toggle();
+        $(this).toggle();
+        $(this).toggleClass("minus"); 
+    };
+
+$(".SpoilerDarkCollapsed").click(toggle);
+$(".SpoilerDarkCollapsed").each(toggle);
+</script>
+
 </html>
