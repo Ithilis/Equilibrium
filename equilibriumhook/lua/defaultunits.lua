@@ -257,3 +257,31 @@ SonarUnit = RebuildUnitInsanity(SonarUnit)
 ShieldStructureUnit = RebuildUnitInsanity(ShieldStructureUnit)
 SeaFactoryUnit = RebuildUnitInsanity(SeaFactoryUnit)
 QuantumGateUnit = RebuildUnitInsanity(QuantumGateUnit)
+
+
+-- FACTORY UNITS
+--same crap as above. disgusting.
+--here we rotate units based on the direction they should be facing when they just finish building so they dont get stuck in there.
+
+function FactoryRolloffInsanity(SuperClass)
+    return Class(SuperClass) {
+        FinishBuildThread = function(self, unitBeingBuilt, order)
+            self:SetBusy(true)
+            self:SetBlockCommandQueue(true)
+            
+            local spin, x, y, z = self:CalculateRollOffPoint() --eq: rotate the unit so it faces the right way when we finish not start building
+            if self.BuildBoneRotator then
+                self.BuildBoneRotator:SetGoal(spin)
+            end
+            WaitTicks(1) -- give the rotator time to rotate the unit before detaching
+            SuperClass.FinishBuildThread(self, unitBeingBuilt, order)
+        end,
+    
+    }
+end
+
+--apply the hook, this should have been so much easier inside FactoryUnit but that gets ignored since this file is added on the end of defaultunits.lua which makes the class inherited before
+--so this is like an alternate reality version, so we need to re-apply it to all its child classes again. xdddddddddd
+LandFactoryUnit = FactoryRolloffInsanity(LandFactoryUnit)
+AirFactoryUnit = FactoryRolloffInsanity(AirFactoryUnit)
+SeaFactoryUnit = FactoryRolloffInsanity(SeaFactoryUnit)
