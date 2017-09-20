@@ -51,7 +51,7 @@ BlueprintId = "uel0001",
             BuildCostMass = 5000,
             BuildTime = 2500,            --from 1400bt
         },
-        DamageStablization = {
+        DamageStabilization = {
             BuildCostEnergy = 32000,
             BuildCostMass = 800,
             BuildTime = 800,
