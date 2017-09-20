@@ -18,6 +18,9 @@ BlueprintId = "xel0305",
     },
     Physics = {
         LayerChangeOffsetHeight = -0.3,
+        MaxAcceleration = 2.1,
+        MaxBrake = 2.1,
+        MaxSpeed = 2.1,
     },   
     Weapon = {
         {

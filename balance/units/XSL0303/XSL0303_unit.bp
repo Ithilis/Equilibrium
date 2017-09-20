@@ -42,17 +42,17 @@ BlueprintId = "xsl0303",
     },
     Weapon = {
         { --side gun 1
-            Damage = 42,        --168 dps
+            Damage = 40,        --160 dps
             MaxRadius = 23,
             RateOfFire = 2,
         },
         { --side gun 2
-            Damage = 42,
+            Damage = 40,
             MaxRadius = 23,
             RateOfFire = 2,
         },
         { --long range gun
-            Damage = 400,        --100 dps
+            Damage = 300,        --75 dps
             MaxRadius = 33,
         },
         { --torpedoes
