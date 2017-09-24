@@ -161,9 +161,7 @@
             </div><p>
 			</ul>
             
-			
-			
-			
+
 			<h4>Factory HP</h4>
 			Factory HP values were changed to be easier to snipe, encouraging thoughtful placement and shielding.
             <p>
@@ -314,7 +312,7 @@
 			</ul>
 			<h4>Mass extractors</h4>
 			<ul>
-			<li><b>T1:</b> <strike>36m 360e 60bt +2m-2e 600HP</strike> → 30m 300e 50bt +2m -1e 500HP
+			<li><b>T1:</b> <strike>36m 360e 60bt +2m-2e</strike> → 30m 300e 50bt +2m -1e
 			<li><b>T2:</b> <strike>900m 5400e 1171bt +6m-12e 3000HP</strike> → 800m 6000e 1250bt +6m -10e 2000HP
 			<li><b>T3:</b> <strike>4600m 31625e 3944bt +18m-46e 8400HP</strike> → 3600m 36000e 4500bt +16m -50e 6000HP
 			</ul>
@@ -337,9 +335,9 @@
 			<h4>Power generators:</h4>
 			<ul>
             <li><b>Hydrocarbon power plant:</b> <strike>1600HP</strike> → 1500HP
-			<li><b>T1 pgen:</b> <strike>600HP 2aoe death explosion</strike> → 500HP 2.5aoe death explosion
+			<li><b>T1 pgen:</b> <strike>2aoe death explosion</strike> → 2.5aoe death explosion
 			<li><b>T2 pgen:</b> <strike>2198bt 2120HP</strike> →  1875bt 2000HP
-			<li><b>T3 pgen:</b> <strike>3240m 9640HP 8000dmg</strike> → 3200m 8000HP  7500dmg explosion
+			<li><b>T3 pgen:</b> <strike>3240m 8640HP 8000dmg</strike> → 3200m 8000HP  7500dmg explosion
 			</ul>
 			<h4>Resource Allocation System</h4>
             RAS is, quite frankly, OP. There is rarely a time where you don't want it, or a time where you would ever build a T3 pgen before getting RAS. RAS has been nerfed to increase the value of pgens, which opens up more strategic choices and new ways to attack your opponent. 
@@ -729,10 +727,10 @@
                 </ul> 
             </div> 
             <button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none') {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show/hide</button>
-            <li><b>Aeon:</b> Big reload time, is huge disadvantage against tmd, projectile are faster what will help and with more aoe also can do some damage to army. 
+            <li><b>Aeon:</b> A large reload time, which is a disadvantage against TMD, but its projectiles are faster and have some AOE instead, which helps against both TMD and mobile units.
             <li><b>UEF:</b> Camera on UEF T1 artillery is a nice feature, so now the UEF has it equipped on its <a href="http://recordit.co/S6emCMbGwT"> missile weapons<a/>, so you can use it to tell what you are shooting at - complementing the turtle-war specialised faction.
                 <ul>
-                <li><b>Price:</b> <strike>1500e, 1500bt</strike> → 1400e/2100e(aeon/Seraphim), 1400bt
+                <li><b>Price:</b> <strike>1500e, 1500bt</strike> → 1400e/2100e(aeon/Seraphim), 1400bts
                 <li><b>Minimum range:</b> <strike>5/4/4/3</strike> → 5
                 <p>
                 <li><b>Evensong:</b> <strike>750HP</strike> → 650HP
@@ -744,6 +742,7 @@
                 <li><b>Ythisah:</b> <strike>800HP, 2.7speed</strike> → 625HP, 2.4speed
                     <ul>
                     <li><b>Missile:</b> Now tracks its targets if they are below 38 range, this is displayed with a new range circle.
+                    <li><b>Short range dps:</b> 30 (long range dps: 60)
                     <li><b>Target priorities:</b> <strike>defence structure ->T3 mobile ->T2 mobile... </strike> → defence structure ->T2 bot uef cybran ->command ->T3 mobile -> T2 mobile..
                     <li><b>Added display ability:</b> "Homing Missile"
                     </ul>
@@ -902,7 +901,7 @@
 			
 			<h4>640 Mass Category (Sniper bots)</h4>
             Snipers have been adjusted to the rest of the T3 land units, and tweaked to be a little easier to use.
-            <li>The Seraphim sniper bot has been remade to be more convenient - it is now on sniper mode by default and its short range mode is more pronounced - use it for higher dps on lower ranges.
+            <li>The Seraphim sniper bot has been remade to be more convenient - it is now on sniper mode by default and its short range mode is more pronounced - use it for higher dps on lower ranges. Also any issues it had with attack move have been fixed. Now switching modes doesnt make it go closer than it needs to.
 
 			
                 <ul>
@@ -1589,7 +1588,7 @@
                 <li><b>Beacon Class:</b> <strike>290m 2900e 1450bt</strike> → 280m 2800e 1120bt
                     <ul>
                     <li><strike>1800HP 6sp 48dps 31r</strike> → 2000HP 5.8speed 60dps 35r
-                    <li><b>Torpedo defense</b> reload time: <strike>10s</strike> → 5s
+                    <li><b>Torpedo defense reload time:</b> <strike>10s</strike> → 5s
                     </ul>
                 </ul>
                 
@@ -1597,6 +1596,7 @@
             
                 <ul>
                 <li><b>Price:</b> <strike>120m 1200e 800bt 750HP 8speed, visual 32</strike> → 150m 1500e 600bt 1000HP 7speed visual intel 35
+                <li><b>Anti-Air:</b> <strike>35dps 48r</strike> → 45dps 50r
                 <li><b>Added torpedo defence:</b> 35r 2.5s reload time
                 </ul>
             <h4>Submarines</h4>
@@ -1808,14 +1808,14 @@
             
                 <ul>
                 <p>Atlantis is faster so it’s not a sea snail. Regen added because every T4 has natural regen. 
-                <p>Tempest build time increased by a lot (4x), fixed so it's a real experimental - it still loses against equal mass in battleships or subs but now it has a reason to be built, aside from a stupidly fast build time. 
+                <p>Tempest build time increased by a lot (3x), fixed so it's a real experimental - it still loses against equal mass in battleships or subs but now it has a reason to be built, aside from a stupidly fast build time. 
                 <p>Both are now able to build units while moving! There is now a separately selectable submodule on the experimental which builds the units. The Atlantis can build underwater.
-                <li><b>Atlantis:</b> <strike>80r 0reg  252sonar, water-vision 100, storage 150units 2.8sp</strike> → 75r 15HP/s reg  250sonar 55water-vision 50air-storage 3.5sp
+                <li><b>Atlantis:</b> <strike>80r 0reg 14400bt 252sonar, water-vision 100, storage 150units 2.8sp</strike> → 75r 30000bt 15HP/s reg  250sonar 55water-vision 50air-storage 3.5sp
                     <ul>
                     <li><strike>reload time 2s; damage 200</strike> → reload time 1s; damage 100
                     <li><b>Elevation:</b> <strike>5</strike> → 15, and also added proper hit-boxes and animation
                     </ul>
-                <li><b>Tempest:</b> <strike>0regen 14400bt 100water-vision 2.5sp 60 000HP</strike> → 15HP/s reg 54 000bt 55water-vision 2.8sp 125000HP
+                <li><b>Tempest:</b> <strike>0regen 14400bt 100water-vision 2.5sp 60 000HP</strike> → 15HP/s reg 40000bt 55water-vision 2.8sp 125000HP
                     <ul>
                     <li><b>Main cannon:</b> <strike>8000dmg 5aoe 10reload time</strike> → 7500dmg 7aoe 12,5s reload time - 600dps
                     <li><b>Depth charges:</b> <strike>80r 420dps</strike> → 75r 330dps
@@ -2152,7 +2152,7 @@
                 <li><b>Speed of satellite:</b> <strike>6</strike> → 8
                 <li><b>Damage radius of beam:</b> <strike>1</strike> →  2.5
                 <li><b>Radar radius:</b> <strike>70</strike> → 150, visual radius <strike>40</strike> → 50, omni radius <strike>0</strike> → 30
-                <li><b>Satellite crash damage:</b> <strike>1000</strike> → 3000
+                <li><b>Satellite crash damage:</b> <strike>3000</strike> → 3000 (unchanged from previous patches)
                 </ul>
 
             
