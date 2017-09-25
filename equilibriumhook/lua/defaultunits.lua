@@ -9,21 +9,6 @@ local GetRandomFloat = import('utilities.lua').GetRandomFloat
 oldAirUnit = AirUnit
 
 AirUnit = Class(oldAirUnit) {
-
---air units killed in the air layer override mobileunit.onkilled so we need to add it back in here.
-    OnImpact = function(self, with)
-        oldAirUnit.OnImpact(self, with)
-        if self.AirInstigator then
-            self:VeterancyDispersal()
-        end
-    end,
---we need to save the instigator here so we can pass it on in OnImpact
-    OnKilled = function(self, instigator, type, overkillRatio)
-        if instigator and self.totalDamageTaken ~= 0 then
-            self.AirInstigator = instigator
-        end
-        oldAirUnit.OnKilled(self, instigator, type, overkillRatio)
-    end,
     
     OnStopBeingBuilt = function(self,builder,layer)
         local bp = self:GetBlueprint()
@@ -130,6 +115,15 @@ AirUnit = Class(oldAirUnit) {
             end
         end
         return false
+    end,
+}
+
+oldCommandUnit = CommandUnit
+
+ACUUnit = Class(oldCommandUnit) {
+    OnKilledUnit = function(self, unitKilled, massKilled)
+        --we intercept this function and just make it do nothing again so the acu doesnt follow any crazy rules regarding vet.
+        CommandUnit.OnKilledUnit(self, unitKilled, massKilled)
     end,
 }
 
