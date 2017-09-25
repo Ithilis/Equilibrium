@@ -30,11 +30,6 @@ Unit = Class(oldUnit) {
     -- Veterancy can't be 'Undone', so we heal the unit directly, one-off, rather than using a buff. Much more flexible.
     -- Or we would if healing wasnt a dumb idea, so now its just doing nothing.
     DoVeterancyHealing = function(self, level)
-        local bp = self:GetBlueprint()
-        local maxHealth = bp.Defense.MaxHealth
-        local mult = bp.VeteranHealingMult[level] or 0 -- Still can override if we are feeling sufficiently mad.
-
-        self:AdjustHealth(self, maxHealth * mult) -- Adjusts health by the given value (Can be +tv or -tv), not to the given value
     end,
 
     CreateVeterancyBuffs = function(self, level)

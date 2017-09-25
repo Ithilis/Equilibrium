@@ -118,9 +118,9 @@ AirUnit = Class(oldAirUnit) {
     end,
 }
 
-oldCommandUnit = CommandUnit
+oldACUUnit = ACUUnit
 
-ACUUnit = Class(oldCommandUnit) {
+ACUUnit = Class(oldACUUnit) {
     OnKilledUnit = function(self, unitKilled, massKilled)
         --we intercept this function and just make it do nothing again so the acu doesnt follow any crazy rules regarding vet.
         CommandUnit.OnKilledUnit(self, unitKilled, massKilled)
