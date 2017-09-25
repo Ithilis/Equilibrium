@@ -38,7 +38,7 @@ BlueprintId = "xsl0303",
     },
     Intel = {
         VisionRadius = 22,
-        WaterVisionRadius = 5,    --from 25
+        WaterVisionRadius = 15,    --from 25
     },
     Weapon = {
         { --side gun 1
