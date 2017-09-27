@@ -36,18 +36,19 @@ BlueprintId = "xrl0305",
     },
     Physics = {
         LayerChangeOffsetHeight = -0.3,
-        MaxAcceleration = 2.1,
-        MaxBrake = 2.1,
-        MaxSpeed = 2.1,
+        MaxAcceleration = 2.0,
+        MaxBrake = 2.0,
+        MaxSpeed = 2.0,
     },    
     Weapon = {
         { --main gun
 			Damage = 120,            --300dps
 			MaxRadius = 33,
 			RateOfFire = 2.5,
-        
+            TrackingRadius = 1.2, --makes them face their enemy instead of fucking up
 			TurretPitch = 10,
 			TurretPitchRange = 90,
+            TurretYawSpeed = 70, --make them able to turn their turret without fucking up
         },
         { --torpedoes
 			Damage = 25,                --2*25 = 50 ; 10dps

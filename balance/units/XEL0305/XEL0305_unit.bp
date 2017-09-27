@@ -18,15 +18,17 @@ BlueprintId = "xel0305",
     },
     Physics = {
         LayerChangeOffsetHeight = -0.3,
-        MaxAcceleration = 2.1,
-        MaxBrake = 2.1,
-        MaxSpeed = 2.1,
+        MaxAcceleration = 2.0,
+        MaxBrake = 2.0,
+        MaxSpeed = 2.0,
     },   
     Weapon = {
         {
-        Damage = 900,            --300dps
-        MaxRadius = 33,
-        RateOfFire = 0.333,        --from 4s to 3s 
+            Damage = 900,            --300dps
+            MaxRadius = 33,
+            RateOfFire = 0.333,        --from 4s to 3s 
+            TrackingRadius = 1.2, --makes them face their enemy instead of fucking up
+            TurretYawSpeed = 70, --make them able to turn their turret without fucking up
         },
     },
     CollisionOffsetZ = -0.1,

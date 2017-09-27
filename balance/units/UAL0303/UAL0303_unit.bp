@@ -27,7 +27,7 @@ BlueprintId = "ual0303",
     },
     Weapon = {
         {
-        Damage = 240,            --300dps
+        Damage = 220,            --275dps
         },
     },
 }
