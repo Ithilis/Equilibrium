@@ -25,7 +25,7 @@ BlueprintId = "ual0202",
         MaxSpeed = 2.65,
     },
     Weapon = {
-            {
+        {
             Damage = 400,
             RateOfFire = 0.3,
             TargetPriorities = {
@@ -38,6 +38,7 @@ BlueprintId = "ual0202",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-            },
+            TurretYawSpeed = 100, --stops it fucking up while turning
+        },
     },
 }
