@@ -278,4 +278,4 @@ end
 --so this is like an alternate reality version, so we need to re-apply it to all its child classes again. xdddddddddd
 LandFactoryUnit = FactoryRolloffInsanity(LandFactoryUnit)
 AirFactoryUnit = FactoryRolloffInsanity(AirFactoryUnit)
-SeaFactoryUnit = FactoryRolloffInsanity(SeaFactoryUnit)
+--SeaFactoryUnit = FactoryRolloffInsanity(SeaFactoryUnit)
