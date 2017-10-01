@@ -55,7 +55,7 @@ UnitBlueprint {
         'UNTARGETTABLE',
     },
     CollisionOffsetZ = 0,
-    Description = '<LOC uel0401_desc>Mobile Factory Module',
+    Description = 'Mobile Factory Module',
     Display = {
         Abilities = {
             '<LOC ability_factory>Factory',
@@ -105,7 +105,7 @@ UnitBlueprint {
         FactionName = 'UEF',
         Icon = 'amph',
         TechLevel = 'RULEUTL_Experimental',
-        UnitName = '<LOC uel0401_name>Mobile Factory Module',
+        UnitName = 'Mobile Factory Module',
         UnitWeight = 1,
     },
     Intel = {
@@ -113,7 +113,7 @@ UnitBlueprint {
         WaterVisionRadius = 32,
     },
     Interface = {
-        HelpText = '<LOC uel0401_help>Mobile Factory Module',
+        HelpText = 'Mobile Factory Module',
     },
     LifeBarHeight = 0.075,
     LifeBarOffset = 4.35,
