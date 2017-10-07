@@ -2,8 +2,19 @@
 --Cybran ACU
 
 local oldURL0001 = URL0001
-URL0001 = Class(oldURL0001) {
+local SeabedRevealFile = import('/lua/SeabedReveal.lua') --import our intel relay entity code
+local SeabedReveal = SeabedRevealFile.SeabedReveal --this part applies to the weapon
+local SeabedRevealUnit = SeabedRevealFile.SeabedRevealUnit --this part applies to the unit
 
+CCannonMolecularWeapon = SeabedReveal(CCannonMolecularWeapon) --inject our revealing code in here
+--SDFSinnuntheWeapon = SeabedReveal(SDFSinnuntheWeapon) --inject our revealing code in here
+oldURL0001 = SeabedRevealUnit(oldURL0001)
+URL0001 = Class(oldURL0001) {
+ Weapons = {
+        DeathWeapon = Class(DeathNukeWeapon) {},
+        RightRipper = Class(CCannonMolecularWeapon) {},
+        Torpedo = Class(CANTorpedoLauncherWeapon) {},
+        },
 
 
 

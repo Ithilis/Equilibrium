@@ -1,8 +1,26 @@
 --Sera ACU
 
 local oldXSL0001 = XSL0001
-XSL0001 = Class(oldXSL0001) {
+local SeabedRevealFile = import('/lua/SeabedReveal.lua') --import our intel relay entity code
+local SeabedReveal = SeabedRevealFile.SeabedReveal --this part applies to the weapon
+local SeabedRevealUnit = SeabedRevealFile.SeabedRevealUnit --this part applies to the unit
 
+SDFChronotronCannonWeapon = SeabedReveal(SDFChronotronCannonWeapon) --inject our revealing code in here
+--SDFSinnuntheWeapon = SeabedReveal(SDFSinnuntheWeapon) --inject our revealing code in here
+oldXSL0001 = SeabedRevealUnit(oldXSL0001)
+XSL0001 = Class(oldXSL0001) {
+Weapons = {
+        DeathWeapon = Class(DeathNukeWeapon) {},
+        ChronotronCannon = Class(SDFChronotronCannonWeapon) {},
+        Missile = Class(SIFLaanseTacticalMissileLauncher) {
+            OnCreate = function(self)
+                SIFLaanseTacticalMissileLauncher.OnCreate(self)
+                self:SetWeaponEnabled(false)
+            end,
+        },
+        OverCharge = Class(SDFChronotronOverChargeCannonWeapon) {},
+        AutoOverCharge = Class(SDFChronotronOverChargeCannonWeapon) {},
+    },
 
     CreateEnhancement = function(self, enh)
         ACUUnit.CreateEnhancement(self, enh)

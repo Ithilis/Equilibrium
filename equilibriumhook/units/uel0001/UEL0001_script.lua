@@ -1,6 +1,14 @@
 --UEF ACU
 
 local oldUEL0001 = UEL0001
+local SeabedRevealFile = import('/lua/SeabedReveal.lua') --import our intel relay entity code
+local SeabedReveal = SeabedRevealFile.SeabedReveal --this part applies to the weapon
+local SeabedRevealUnit = SeabedRevealFile.SeabedRevealUnit --this part applies to the unit
+
+TDFZephyrCannonWeapon = SeabedReveal(TDFZephyrCannonWeapon) --inject our revealing code in here
+--SDFSinnuntheWeapon = SeabedReveal(SDFSinnuntheWeapon) --inject our revealing code in here
+oldUEL0001 = SeabedRevealUnit(oldUEL0001)
+
 UEL0001 = Class(oldUEL0001) {
     Weapons = {
         DeathWeapon = Class(DeathNukeWeapon) {},
