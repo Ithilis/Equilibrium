@@ -1,8 +1,15 @@
 --Deciever - mobile stealth generator
-
+local DefaultProjectileWeapon = import('/lua/sim/defaultweapons.lua').DefaultProjectileWeapon --import a default weapon so our pointer doesnt explode
+local SmartPointer = import('/lua/SmartPointer.lua').SmartPointer --import our pointer disable code
 
 local oldURL0306 = URL0306
+
+oldURL0306 = SmartPointer(oldURL0306)
+
 URL0306 = Class(oldURL0306) {
+    Weapons = {
+        TargetPointer = Class(DefaultProjectileWeapon) {},
+    },
     
     RetardedTurnOffStealth = function(self)
         self:DisableIntel('RadarStealthField') -- for some absurd reason toggling scriptbit for stealth doesnt work here, but does work OnStopBeingBuilt. crazy. so i just did it manually.
