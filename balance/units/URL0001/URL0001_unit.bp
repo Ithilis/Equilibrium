@@ -85,6 +85,8 @@ BlueprintId = "url0001",
         RequirementMult = 0.5,
     },
     Weapon = {
+        { -- dummy weapon
+        },
         { -- main gun
             MaxRadius = 23,  --from 22
             TargetPriorities = {
