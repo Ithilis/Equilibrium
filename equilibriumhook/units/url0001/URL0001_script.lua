@@ -18,7 +18,7 @@ URL0001 = Class(oldURL0001) {
         elseif enh == 'StealthGenerator' then
             self:AddToggleCap('RULEUTC_CloakToggle')
             if self.IntelEffectsBag then
-                EffectUtil.CleanupEffectBag(self,'IntelEffectsBag')
+                EffectUtil.CleanupEffectBag(self, 'IntelEffectsBag')
                 self.IntelEffectsBag = nil
             end
             self.CloakEnh = false
@@ -92,10 +92,10 @@ URL0001 = Class(oldURL0001) {
                             Mult = 1.0,
                         },
                     },
-                } 
+                }
             end
-            if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
-                Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
+            if Buff.HasBuff(self, 'CybranACUCloakBonus') then
+                Buff.RemoveBuff(self, 'CybranACUCloakBonus')
             end
             Buff.ApplyBuff(self, 'CybranACUCloakBonus')
         elseif enh == 'CloakingGeneratorRemove' then
@@ -105,13 +105,13 @@ URL0001 = Class(oldURL0001) {
             self:DisableUnitIntel('Enhancement', 'SonarStealth')
             self.CloakEnh = false
             self.StealthEnh = false
-            if Buff.HasBuff( self, 'CybranACUCloakBonus' ) then
-                Buff.RemoveBuff( self, 'CybranACUCloakBonus' )
+            if Buff.HasBuff(self, 'CybranACUCloakBonus') then
+                Buff.RemoveBuff(self, 'CybranACUCloakBonus')
             end
             if Buff.HasBuff( self, 'CybranACUStealthBonus' ) then
                 Buff.RemoveBuff( self, 'CybranACUStealthBonus' )
             end              
-        --T2 Engineering
+        -- T2 Engineering
         elseif enh =='AdvancedEngineering' then
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
@@ -141,19 +141,17 @@ URL0001 = Class(oldURL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'CybranACUT2BuildRate')
-        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-        self:updateBuildRestrictions()
+            self:updateBuildRestrictions()
         elseif enh =='AdvancedEngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
             self:RestoreBuildRestrictions()
-            self:AddBuildRestriction( categories.CYBRAN * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
-            if Buff.HasBuff( self, 'CybranACUT2BuildRate' ) then
-                Buff.RemoveBuff( self, 'CybranACUT2BuildRate' )
+            self:AddBuildRestriction(categories.CYBRAN * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER))
+            if Buff.HasBuff(self, 'CybranACUT2BuildRate') then
+                Buff.RemoveBuff(self, 'CybranACUT2BuildRate')
             end
-        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-        self:updateBuildRestrictions()
-        --T3 Engineering
+            self:updateBuildRestrictions()
+        -- T3 Engineering
         elseif enh =='T3Engineering' then
             local bp = self:GetBlueprint().Enhancements[enh]
             if not bp then return end
@@ -183,48 +181,55 @@ URL0001 = Class(oldURL0001) {
                 }
             end
             Buff.ApplyBuff(self, 'CybranACUT3BuildRate')
-        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-        self:updateBuildRestrictions()
+            self:updateBuildRestrictions()
         elseif enh =='T3EngineeringRemove' then
             local bp = self:GetBlueprint().Economy.BuildRate
             if not bp then return end
             self:RestoreBuildRestrictions()
-            if Buff.HasBuff( self, 'CybranACUT3BuildRate' ) then
-                Buff.RemoveBuff( self, 'CybranACUT3BuildRate' )
+            if Buff.HasBuff(self, 'CybranACUT3BuildRate') then
+                Buff.RemoveBuff(self, 'CybranACUT3BuildRate')
             end
-            self:AddBuildRestriction( categories.CYBRAN * ( categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER) )
-
-        -- Engymod addition: After fiddling with build restrictions, update engymod build restrictions
-        self:updateBuildRestrictions()
+            self:AddBuildRestriction(categories.CYBRAN * (categories.BUILTBYTIER2COMMANDER + categories.BUILTBYTIER3COMMANDER))
+            self:updateBuildRestrictions()
         elseif enh =='CoolingUpgrade' then
             local bp = self:GetBlueprint().Enhancements[enh]
             local wep = self:GetWeaponByLabel('RightRipper')
-            wep:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            wep:ChangeMaxRadius(bp.NewMaxRadius or 28)
+            self.normalRange = bp.NewMaxRadius or 28
             wep:ChangeRateOfFire(bp.NewRateOfFire or 2)
             local microwave = self:GetWeaponByLabel('MLG')
-            microwave:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            microwave:ChangeMaxRadius(bp.NewMaxRadius or 28)
             local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bp.NewMaxRadius or 44)
+            oc:ChangeMaxRadius(bp.NewMaxRadius or 28)
             local aoc = self:GetWeaponByLabel('AutoOverCharge')
-            aoc:ChangeMaxRadius(bp.NewMaxRadius or 44)
-            local torp = self:GetWeaponByLabel('Torpedo') --increase torpedo upgrade range too
-            local torpRange = self:GetBlueprint().Weapon[6].MaxRadius
-            torp:ChangeMaxRadius(torpRange + 10)
+            aoc:ChangeMaxRadius(bp.NewMaxRadius or 28)
+            --EQ: increase torpedo upgrade range too
+            local torpRange = self:GetBlueprint().Weapon[7].MaxRadius
+            self:GetWeaponByLabel('Torpedo'):ChangeMaxRadius(torpRange + 10)
+            if not (self:GetCurrentLayer() == 'Seabed' and self:HasEnhancement('NaniteTorpedoTube')) then
+                self:GetWeaponByLabel('DummyWeapon'):ChangeMaxRadius(self.normalRange)
+            end
         elseif enh == 'CoolingUpgradeRemove' then
             local wep = self:GetWeaponByLabel('RightRipper')
-            local bpDisrupt = self:GetBlueprint().Weapon[1].RateOfFire
-            wep:ChangeRateOfFire(bpDisrupt or 1)
-            bpDisrupt = self:GetBlueprint().Weapon[1].MaxRadius
-            wep:ChangeMaxRadius(bpDisrupt or 23)
-            local microwave = self:GetWeaponByLabel('MLG')
-            microwave:ChangeMaxRadius(bpDisrupt or 23)
-            local oc = self:GetWeaponByLabel('OverCharge')
-            oc:ChangeMaxRadius(bpDisrupt or 23)
-            local aoc = self:GetWeaponByLabel('AutoOverCharge')
-            aoc:ChangeMaxRadius(bpDisrupt or 23)
-            local torp = self:GetWeaponByLabel('Torpedo')
-            local torpRange = self:GetBlueprint().Weapon[6].MaxRadius
-            torp:ChangeMaxRadius(torpRange)
+            local wepBp = self:GetBlueprint().Weapon
+            for k, v in wepBp do
+                if v.Label == 'RightRipper' then
+                    wep:ChangeRateOfFire(v.RateOfFire or 1)
+                    wep:ChangeMaxRadius(v.MaxRadius or 23)
+                    self.normalRange = v.MaxRadius or 23
+                    self:GetWeaponByLabel('MLG'):ChangeMaxRadius(v.MaxRadius or 23)
+                    self:GetWeaponByLabel('OverCharge'):ChangeMaxRadius(v.MaxRadius or 23)
+                    self:GetWeaponByLabel('AutoOverCharge'):ChangeMaxRadius(v.MaxRadius or 23)
+                    self.normalRange = v.MaxRadius or 22
+                    if not (self:GetCurrentLayer() == 'Seabed' and self:HasEnhancement('NaniteTorpedoTube')) then
+                        self:GetWeaponByLabel('DummyWeapon'):ChangeMaxRadius(self.normalRange)
+                    end
+                    break
+                end
+            end
+            --EQ: reset the range of torpedo upgrade
+            local torpRange = self:GetBlueprint().Weapon[7].MaxRadius
+            self:GetWeaponByLabel('Torpedo'):ChangeMaxRadius(torpRange)
         elseif enh == 'MicrowaveLaserGenerator' then
             self:SetWeaponEnabledByLabel('MLG', true)
         elseif enh == 'MicrowaveLaserGeneratorRemove' then
@@ -232,10 +237,16 @@ URL0001 = Class(oldURL0001) {
         elseif enh == 'NaniteTorpedoTube' then
             self:SetWeaponEnabledByLabel('Torpedo', true)
             self:EnableUnitIntel('Enhancement', 'Sonar')
+            if self:GetCurrentLayer() == 'Seabed' then
+                self:GetWeaponByLabel('DummyWeapon'):ChangeMaxRadius(self.torpRange)
+            end
         elseif enh == 'NaniteTorpedoTubeRemove' then
             self:SetWeaponEnabledByLabel('Torpedo', false)
             self:DisableUnitIntel('Enhancement', 'Sonar')
-        end             
+            if self:GetCurrentLayer() == 'Seabed' then
+                self:GetWeaponByLabel('DummyWeapon'):ChangeMaxRadius(self.normalRange)
+            end
+        end
     end,
 
 }
