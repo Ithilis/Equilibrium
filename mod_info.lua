@@ -16,15 +16,19 @@ before = {}
 after = {}
 _faf_modname='equilibrium'
 mountpoints = {
+    ['animations'] = '/animations',
     ['balance'] = '/balance',
     ['equilibriumhook'] = '/equilibriumhook',
-    ['animations'] = '/animations',
+    ['lua'] = '/lua',
     ['modules'] = '/modules',
     ['projectiles'] = '/projectiles',
     ['textures'] = '/textures',
     ['units'] = '/units',
 }
 hooks = {
+    '/schook',
+    '/hook',
     '/equilibriumhook',
     '/balance',
+    '/EQhook', --special hook folder for mods to hook after eq. this is also great because it doesn't do anything if eqs not loaded.
 }
