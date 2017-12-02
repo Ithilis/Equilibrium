@@ -84,6 +84,125 @@ local startBehaviors = {}
 local endBehaviors = {}
 
 local ignoreSelection = false
+function SetIgnoreSelection(ignore)
+    ignoreSelection = ignore
+end
+
+function OnCommandModeBeat()
+    if issuedOneCommand and not IsKeyDown('Shift') then
+        EndCommandMode(true)
+    end
+end
+
+import('/lua/ui/game/gamemain.lua').AddBeatFunction(OnCommandModeBeat)
+
+-- behaviors are functions that take a single string parameter, the commandMode (or false if none)
+function AddStartBehavior(behavior)
+    table.insert(startBehaviors, behavior)
+end
+
+function AddEndBehavior(behavior)
+    table.insert(endBehaviors, behavior)
+end
+
+function StartCommandMode(newCommandMode, data)
+    if commandMode then
+        EndCommandMode(true)
+    end
+
+    commandMode = newCommandMode
+    modeData = data
+    for i,v in startBehaviors do
+        v(commandMode, modeData)
+    end
+
+    import('/lua/ui/controls/worldview.lua').OnStartCommandMode(newCommandMode, data)
+end
+
+function GetCommandMode()
+    return {commandMode, modeData}
+end
+
+function EndCommandMode(isCancel)
+    if ignoreSelection then
+        return
+    end
+
+    modeData.isCancel = isCancel or false
+    for i,v in endBehaviors do
+        v(commandMode, modeData)
+    end
+
+    if modeData.isCancel then
+        ClearBuildTemplates()
+    end
+
+    commandMode = false
+    modeData = false
+    issuedOneCommand = false
+end
+
+function AddCommandFeedbackByType(pos, type)
+
+    if commandMeshResources[type] == nil then
+        return false;
+    else
+        AddCommandFeedbackBlip({
+                    Position = pos,
+                    MeshName = commandMeshResources[type][1],
+                    TextureName = commandMeshResources[type][2],
+                    ShaderName = 'CommandFeedback',
+                    UniformScale = 0.125,
+                }, 0.7)
+    end
+
+    return true;
+end
+
+function AddDefaultCommandFeedbackBlips(pos)
+    AddCommandFeedbackBlip({
+        Position = pos,
+        MeshName = '/meshes/game/flag02d_lod0.scm',
+        TextureName = '/meshes/game/flag02d_albedo.dds',
+        ShaderName = 'CommandFeedback',
+        UniformScale = 0.5,
+    }, 0.7)
+
+    AddCommandFeedbackBlip({
+        Position = pos,
+        MeshName = '/meshes/game/crosshair02d_lod0.scm',
+        TextureName = '/meshes/game/crosshair02d_albedo.dds',
+        ShaderName = 'CommandFeedback2',
+        UniformScale = 0.5,
+    }, 0.75)
+end
+
+local lastMex = nil
+function AssistMex(command)
+    local units = EntityCategoryFilterDown(categories.ENGINEER, command.Units)
+    if not units[1] then return end
+    local mex = GetUnitById(command.Target.EntityId)
+    if not mex or IsDestroyed(mex) then return end
+
+    local eco = mex:GetEconData()
+    local bp = mex:GetBlueprint()
+    local is_capped = eco.massProduced == bp.Economy.ProductionPerSecondMass * 1.5
+    if is_capped then return end
+
+    local cap = false
+    local focus = mex:GetFocus()
+
+    if focus then -- upgrading
+        cap = IsKeyDown('Shift') and lastMex == mex
+        lastMex = mex
+    elseif not mex:IsInCategory('TECH1')  then
+        cap = true
+    end
+
+    if cap then
+        SimCallback({Func = 'CapMex', Args = {target = command.Target.EntityId}}, true)
+    end
+end
 
 function OnCommandIssued(command)
     if not command.Clear then
