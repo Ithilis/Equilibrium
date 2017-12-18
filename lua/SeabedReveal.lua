@@ -45,10 +45,11 @@ function SeabedReveal(SuperClass)
                         unit.WVizEndTick = tick + 80 --we need to have some fancy timers since we want to reset the duration, and for this to transcend any threading
                         
                         --only mess with the units that we havent touched before
-                        if not unit.NormalWVision or unit.NormalWVision == false then
+                        if not unit.NormalWVision then
                             unit.NormalWVision = unit:GetIntelRadius('watervision') --we store the old value so we can revert it later
                             unit:SetIntelRadius('watervision', unit:GetIntelRadius('vision'))
                             --WARN(unit.NormalWVision)
+                            --TODO:add the unit into some sort of table thats accessible globally from ScenarioFramework.lua
                         end
                     end
                     
