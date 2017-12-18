@@ -8,6 +8,19 @@
 --**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
 --****************************************************************************
 
+--how to set this up:
+--apply SeabedReveal to the unit weapon class inside the unit script, can do multiple if you want
+--apply SeabedRevealUnit to the unit class inside its script
+--how this works:
+--1. units on the seabed fire their weapon, and flag all units around them
+--2. these units get watervision equal to their normal vision so they can see what fired on them
+--3. they also get a timestamp each and are stored into a table containing all changed units
+--4. a global thread checks the table every second and removes the effect for expired timestamps.
+--5. profit?
+
+
+local SeabedRevealingUnits = import('/lua/scenarioFramework.lua').SeabedRevealingUnits --import our table for storing units
+
 --apply to weapon
 function SeabedReveal(SuperClass)
     return Class(SuperClass) {
@@ -49,7 +62,7 @@ function SeabedReveal(SuperClass)
                             unit.NormalWVision = unit:GetIntelRadius('watervision') --we store the old value so we can revert it later
                             unit:SetIntelRadius('watervision', unit:GetIntelRadius('vision'))
                             --WARN(unit.NormalWVision)
-                            --TODO:add the unit into some sort of table thats accessible globally from ScenarioFramework.lua
+                            table.insert(SeabedRevealingUnits, unit) --insert our unit into a table to be monitored later
                         end
                     end
                     
