@@ -118,6 +118,9 @@ AirUnit = Class(oldAirUnit) {
     end,
 }
 
+oldAirTransport = AirTransport
+AirTransport = Class(oldAirTransport, AirUnit) {} --disgusting.
+
 oldACUUnit = ACUUnit
 
 ACUUnit = Class(oldACUUnit) {
