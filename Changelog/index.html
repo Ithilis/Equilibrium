@@ -43,13 +43,14 @@
         
 		<div id="veterancy" class="card">
 			<h3><img src="http://wiki.faforever.com/images/c/cf/Upgrade_Icon.png">Veterancy</h3>
-			This is the first major change of the mod, which overhauls the veterancy system and also allows it to become a larger part of the game rather than being mostly irrelevant for everything except T4 units and ACUs.
+			This is the first major change of the mod, which compared to normal FAF, removes over 8 different arbitrary rules, making the veterancy system far simpler to understand and predict.
             <p>
                 <ul>
-                <li>Units now receive veterancy points that are equal to the destroyed unit's mass cost. 
-                <li>Units gain a veterancy level when they get 200% of their own mass cost in veterancy points.
+                <li>Units rreceive veterancy points that are equal to the destroyed unit's mass cost. No exceptions.
+                <li>There are no multipliers for the amount of vet you get based on tech level, unit type or anything else. Every unit gives the amount of veterancy it should.
+                <li>All units gain a veterancy level when they get 200% of their own mass cost in veterancy points.
                 <li>ACUs & Experimentals require only 50% of their mass value to gain a rank.
-                <li>Multiple units killing the same target will split the veterency points between all units involved, in proportion to the damage dealt by each unit. A unit that deals 75% of the damage of a kill will be awarded 75% of that unit's mass in veterency points. <a href="http://recordit.co/t3kGOiPqcq">What that looks like.<a/>
+                <li>Just like in normal FAF, multiple units killing the same target will split the veterency points between all units involved. <a href="http://recordit.co/t3kGOiPqcq">What that looks like.<a/>
                 <p>
                 <li>Promoted units receive new max health and gain higher regeneration, but  <a href="http://recordit.co/Y61oe1SANB"> no longer get any insta-heal<a/>. 
                     <ul>
@@ -87,7 +88,7 @@
 			<ul>
 			<li>Rewarding killing expensive (and therefore high hp and powerfully-armed) units. A T3 scout worth 195m should not award the same veterency as destroying a T3 battleship worth 9000m.
 			<li>To make veterancy a system which is intuitive and predictable for each unit. Units need to destroy 200% of their own mass to vet up.
-			<li>Removing the unintuitive requirement of self destructing lower tech units to prevent the enemy from gaining ridiculous amounts of experience.
+			<li>Making the veterancy system predictable. With rules like "buildings give 50% of vet" it was impossible to predict when your units would gain veterancy.
 			<li>Splitting veterancy rewards. Your units should gain xp relatively evenly, rather than have one level 5 Loyalist after an exp battle.
 			<li>Naval units and submarines are far more expensive than land units and have far more HP, so they also gain more regeneration.
 			</ul>
@@ -119,7 +120,7 @@
 		<div id="factories" class="card">
 			<h3><img src="http://wiki.faforever.com/images/7/77/Cybran_T1_Land_Factory.png">Factories</h3>
 			<p>Unit and Factory stats have been normalized to drain a constant amount of resources, so now it's much easier to predict how many factories you can support on X amount of eco.
-			<p>Land factories have an increased buildpower so that they are more efficient than assisting engineers. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
+			<p>On top of the above change, land factories have an increased buildpower so that they are more efficient than assisting engineers. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
 			<p>Unassisted factories of the same tech level now drain resources at the same rate regardless of what is being built. A higher tech factory building lower tech units drains at the same rate, but builds units faster.
 			<p>Building/upgrading a factory has the same drain rate as building units inside the upgraded factory
 			<p>Units built inside the factory will be orientated to the closest exist just before they leave so if you change your rally point mid-construction it will not cause the unit to be stuck turning around on the build platform.
@@ -163,58 +164,60 @@
             
 
 			<h4>Factory HP</h4>
-			Factory HP values were changed to be easier to snipe, encouraging thoughtful placement and shielding.
+			Factory HP values were changed to be harder to snipe, reducing the frustration from them being sniped so easily. The spread of HP between the factories was also reduced, so no faction would not get an unfair advantage.
             <p>
-			Since the Cybran naval factories are not able to be shielded, so to better protect them from snipes they now have the highest HP, rather than the lowest, in an ironic twist of faction diversity.
+            Cybran structure regeneration changes have been reversed to 0, they didnt compensate well for the lack of HP, which is no longer present in EQ.
+            <p>
+			Since the Cybran naval factories are not able to be shielded, to better protect them from snipes they now have the highest HP, rather than the lowest, in an ironic twist of faction diversity.
             <p>
             
             <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Factory HP Changes</b></span>
             <p><b>T1 factories</b>
             
                 <ul><b>Land/Air: T1 factory/T2 support factory</b>
-                    <li><b>Cybran:</b> <strike>3500HP</strike> → 3375HP  
-                    <li><b>Aeon:</b> <strike>3700HP</strike> → 3500HP 
-                    <li><b>Seraphim:</b> <strike>3700HP/3900HP air</strike> → 3625HP 
-                    <li><b>UEF:</b> <strike>4100HP</strike> → 3750HP 
+                    <li><b>Cybran:</b> <strike>2750HP</strike> → 3375HP  
+                    <li><b>Aeon:</b> <strike>3200HP</strike> → 3500HP 
+                    <li><b>Seraphim:</b> <strike>3500HP</strike> → 3625HP 
+                    <li><b>UEF:</b> <strike>4000HP</strike> → 3750HP 
                 </ul>
                 
                 <ul><b>Naval: T1 factory/T2 support</b>
-                    <li><b>Cybran:</b> <strike>4200HP /7500HP</strike> → 4750HP /11250HP
-                    <li><b>Aeon:</b> <strike>4400HP /8000HP</strike> → 5000HP /7500HP
-                    <li><b>Seraphim:</b> <strike>4600HP /8500HP</strike> → 5250HP /7875HP
-                    <li><b>UEF:</b> <strike>4800HP /9000HP</strike> → 5500HP /8250HP
+                    <li><b>Cybran:</b> <strike>3200HP /5500HP</strike> → 4750HP /11250HP
+                    <li><b>Aeon:</b> <strike>3700HP /6400HP</strike> → 5000HP /7500HP
+                    <li><b>Seraphim:</b> <strike>4000HP /7000HP</strike> → 5250HP /7875HP
+                    <li><b>UEF:</b> <strike>4500HP /8000HP</strike> → 5500HP /8250HP
                 </ul>
             
             <b>T2 factories</b>
 			
                 <ul><b>Land/Air: T2 HQ factory/T3 support factory</b>
-                    <li><b>Cybran:</b> <strike>7800HP</strike> → 6750HP 
-                    <li><b>Aeon:</b> <strike>8200HP</strike> → 7000HP 
-                    <li><b>Seraphim:</b> <strike>8200HP</strike> → 7250HP 
-                    <li><b>UEF:</b> <strike>9000HP</strike> → 7500HP
+                    <li><b>Cybran:</b> <strike>5500HP</strike> → 6750HP 
+                    <li><b>Aeon:</b> <strike>6400HP</strike> → 7000HP 
+                    <li><b>Seraphim:</b> <strike>7000HP</strike> → 7250HP 
+                    <li><b>UEF:</b> <strike>8000HP</strike> → 7500HP
                 </ul>    
             
                 <ul><b>Naval: T2 HQ factory/T3 support</b>
-                    <li><b>Cybran:</b> <strike>15000HP /17000HP</strike> → 15000HP /22500HP
-                    <li><b>Aeon:</b> <strike>16000HP /18750HP</strike> → 10000HP /15000HP
-                    <li><b>Seraphim:</b> <strike>17000HP /19000HP</strike> → 10500HP /15750HP
-                    <li><b>UEF:</b> <strike>18000HP /20000HP</strike> → 11000HP /16500HP
+                    <li><b>Cybran:</b> <strike>11000HP</strike> → 15000HP /22500HP
+                    <li><b>Aeon:</b> <strike>12800HP</strike> → 10000HP /15000HP
+                    <li><b>Seraphim:</b> <strike>14000HP</strike> → 10500HP /15750HP
+                    <li><b>UEF:</b> <strike>16000HP</strike> → 11000HP /16500HP
                 </ul>
             
             <b>T3 factories</b>
 			
                 <ul><b>Land/Air: T3 HQ factory</b>
-                    <li><b>Cybran:</b> <strike>19000HP</strike> →13500HP  
-                    <li><b>Aeon:</b> <strike>20000HP</strike> → 14000HP 
-                    <li><b>Seraphim:</b> <strike>21000HP</strike> → 14500HP 
-                    <li><b>UEF:</b> <strike>22000HP</strike> → 15000HP 
+                    <li><b>Cybran:</b> <strike>11000HP</strike> → 13500HP  
+                    <li><b>Aeon:</b> <strike>12800HP</strike> → 14000HP 
+                    <li><b>Seraphim:</b> <strike>14000HP</strike> → 14500HP 
+                    <li><b>UEF:</b> <strike>16000HP</strike> → 15000HP 
                 </ul>
                 
                 <ul><b>Naval: T3 HQ Factory</b>
-                    <li><b>Cybran:</b> <strike>34000HP</strike> → 30000HP 
-                    <li><b>Aeon:</b> <strike>37500HP</strike> → 20000HP 
-                    <li><b>Seraphim:</b> <strike>38000HP</strike> → 21000HP 
-                    <li><b>UEF:</b> <strike>40000HP</strike> → 22000HP 
+                    <li><b>Cybran:</b> <strike>17000HP</strike> → 30000HP 
+                    <li><b>Aeon:</b> <strike>21000HP</strike> → 20000HP 
+                    <li><b>Seraphim:</b> <strike>23000HP</strike> → 21000HP 
+                    <li><b>UEF:</b> <strike>26000HP</strike> → 22000HP 
                 </ul>
             </div><p>
             
@@ -232,7 +235,7 @@
 			<h3><img src="http://wiki.faforever.com/images/4/48/Cybran_T2_Engineering_Station_L3.png"> Build Power</h3>
 
 			<h4>Engineer cost changes</h4>
-			Making buildpower easier to estimate. Nerfed the build rates on Aeon and Seraphim T3 engineers to bring them in line with the other two races, buffed engineering stations, and normalized all engineer costs to correspond to new factory build and drain rates.
+			Making buildpower easier to estimate. Buffed engineering stations, and normalized all engineer costs to correspond to new factory build and drain rates. The Aeon and Seraphim have more expensive engineers that also have more buildpower, so they are easier to concentrate in the same spot.
 			<p>There were also some tweaks to the cybran build effects. They are for the purpose of reducing lag and, interestingly, revert to a more original representation of the game.
             
             <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Buildpower Changes</b></span>
@@ -244,13 +247,13 @@
                         </ul>
                     <li><b>T3 UEF/Cybran:</b> <strike>440</strike> → 250m; <strike>30</strike> → 25br  +Added rebuild function (same as SACUs have)
                         <ul>
-                        <li><b>UEF T3 engineers:</b> <strike>600</strike> → 400HP 
-                        <li><b>Cybran T3 engineers:</b> <strike>540</strike> → 360HP 
+                        <li><b>UEF T3 engineers:</b> <strike>800</strike> → 400HP 
+                        <li><b>Cybran T3 engineers:</b> <strike>740</strike> → 360HP 
                         </ul>
                     <li><b>T3 Aeon/Seraphim:</b> <strike>440</strike> →  375m; <strike>40</strike> → 37.5br +Added rebuild function (same as SACUs have)
                         <ul>
-                        <li><b>Aeon:</b> 480HP
-                        <li><b>Seraphim:</b> 500HP
+                        <li><b>Aeon T3 engineers:</b> <strike>680</strike> → 480HP
+                        <li><b>Seraphim T3 engineers:</b> <strike>700</strike> → 500HP
                         </ul>
                     </ul>
                 
@@ -291,6 +294,7 @@
             <ul>
 			<li>T2 mexes cost less mass to get players faster onto T2 eco, where the game becomes more interesting.
 			<li>T3 mexes that are cheaper, but with the same eco efficiency, this is a semi-nerf to T3 eco, to smoothen the transition between T2/3 mexes.
+			<li>All factions' mexes have the same HP again, and not a large range.
 			</ul>
 			
 			<h4>Mass storage</h4>
@@ -305,16 +309,16 @@
 			<ul>
 			<li><b>Price change:</b> <strike>200m 1500e 250bt </strike> → 100m 1000e 125bt
 			<li><b>Storage capacity:</b> <strike>500m</strike> → 1000m
-			<li><b>Health:</b> <strike>1600</strike> → 750
+			<li><b>Health:</b> <strike>800-1200</strike> → 750
 			<li><b>Adjacency bonus:</b> <strike>50%</strike> → 25% efficiency when fully surrounded
             <li>The mass they store within them is now lost on death.
             <li>They now have a new strategic icon - its the same as before but without the tech bar at the bottom, so just like the energy storage.
 			</ul>
 			<h4>Mass extractors</h4>
 			<ul>
-			<li><b>T1:</b> <strike>36m 360e 60bt +2m-2e</strike> → 30m 300e 50bt +2m -1e
-			<li><b>T2:</b> <strike>900m 5400e 1171bt +6m-12e 3000HP</strike> → 800m 6000e 1250bt +6m -10e 2000HP
-			<li><b>T3:</b> <strike>4600m 31625e 3944bt +18m-46e 8400HP</strike> → 3600m 36000e 4500bt +16m -50e 6000HP
+			<li><b>T1:</b> <strike>36m 360e 60bt +2m-2e</strike> → 30m 300e 50bt +2m -1e 600HP
+			<li><b>T2:</b> <strike>900m 5400e 1171bt +6m-12e 1800-2500HP</strike> → 800m 6000e 1250bt +6m -10e 2000HP
+			<li><b>T3:</b> <strike>4600m 31625e 3944bt +18m-46e 6000-9000HP</strike> → 3600m 36000e 4500bt +16m -50e 6000HP
 			</ul>
 			<h4>Mass fabricators</h4>
 			Making mass fabricators a more viable option. Their efficiency is the same, but they live longer, and need less power to support them. Mass fabs are great to put next to t3 factories, and also work next to pgens in grids, but they're not as efficient as t3 mexes.
@@ -333,20 +337,23 @@
 			<li><b>Adjacency bonus:</b> <strike>50%</strike> → +100% efficiency when fully surrounded
 			</ul>
 			<h4>Power generators:</h4>
+            <ul>
+			<li>All factions' power generators have the same HP again, and not a large range.
+			</ul>
 			<ul>
-            <li><b>Hydrocarbon power plant:</b> <strike>1600HP</strike> → 1500HP
-			<li><b>T1 pgen:</b> <strike>2aoe death explosion</strike> → 2.5aoe death explosion
-			<li><b>T2 pgen:</b> <strike>2198bt 2120HP</strike> →  1875bt 2000HP
-			<li><b>T3 pgen:</b> <strike>3240m 8640HP 8000dmg</strike> → 3200m 8000HP  7500dmg explosion
+            <li><b>Hydrocarbon power plant:</b> <strike>1400-1800HP</strike> → 1500HP
+			<li><b>T1 pgen:</b> <strike>2aoe death explosion 500-760HP</strike> → 2.5aoe death explosion 600HP
+			<li><b>T2 pgen:</b> <strike>2198bt 1800-2500HP</strike> →  1875bt 2000HP
+			<li><b>T3 pgen:</b> <strike>3240m 6000-9000HP 8000dmg</strike> → 3200m 8000HP  7500dmg explosion
 			</ul>
 			<h4>Resource Allocation System</h4>
-            RAS is, quite frankly, OP. There is rarely a time where you don't want it, or a time where you would ever build a T3 pgen before getting RAS. RAS has been nerfed to increase the value of pgens, which opens up more strategic choices and new ways to attack your opponent. 
+            RAS was prohibitively energy expensive to get easily, but still pretty efficient if you did have the income required. This caused interesting issues where it was not used much. EQ RAS is significantly cheaper, possible to get as quickly as old RAS, but has less energy income.
 			<ul>
 			<li><b>Price for all factions:</b> <strike>5000m 175000e 2800bt</strike> → 5000m 125000e 2500bt
-			<li><b>Cybran:</b> <strike>12m 3500e</strike> → 12m 2100e
-			<li><b>UEF:</b> <strike>14m 3300e</strike> → 14m 1800e 
-			<li><b>Seraphim:</b> <strike>16m 3000e</strike> → 16m 1500e / <strike>32m 6000e</strike> → 32m 2700e
-			<li><b>Aeon:</b> <strike>18m 2700e</strike> → 18m 1200e / <strike>36m 5400e</strike> → 36m 2100e
+			<li><b>Cybran:</b> <strike>12m 2700e</strike> → 12m 2100e
+			<li><b>UEF:</b> <strike>14m 2500e</strike> → 14m 1800e
+			<li><b>Seraphim:</b> <strike>16m 2000e</strike> → 16m 1500e / <strike>32m 4000e</strike> → 32m 2700e
+			<li><b>Aeon:</b> <strike>18m 1700e</strike> → 18m 1200e / <strike>36m 3400e</strike> → 36m 2100e
 			</ul>
 			
 			
@@ -392,7 +399,7 @@
 			
 			<h4>Cybran base regeneration</h4>
             
-			This makes the Cybran ACU have more consistent regen with the other factions.
+			This makes the Cybran ACU have more consistent regen with the other factions. Normal FAF has since copied this change.
             
                 <ul>
                 <li><b>Regeneration:</b> <strike>17</strike> → 15HP/s
@@ -400,22 +407,22 @@
 			
 			<h4>T2 upgrade</h4>
             
-            Making T2 more useful for building, and less for fighting, for fighting there is a different upgrade, Aeon and Cybran have more because they can't have gun + T2.
+            Making T2 more useful, as it was a bit too expensive compared to gun, causing more frequent rambo coms with T1 spam. Aeon and Cybran get larger HP bonuses since they cant get gun + T2.
             
                 <ul>
-                <li><b>Price:</b> <strike>720m 18000e 900bt</strike> → 700m 14000e 700bt
+                <li><b>Price:</b> <strike>800m 18000e 900bt</strike> → 700m 14000e 700bt
                 <p>
-                <li><b>UEF/Seraphim:</b> <strike>+3000</strike> → +1000HP
-                <li><b>Aeon:</b> <strike>+3000</strike> → +1500HP
-                <li><b>Cybran:</b> <strike>+3500</strike> → +2000HP
+                <li><b>UEF/Seraphim:</b> <strike>+2000</strike> → +1000HP
+                <li><b>Aeon:</b> <strike>+2000</strike> → +1500HP
+                <li><b>Cybran:</b> <strike>+2000</strike> → +2000HP
                 </ul>
 			
 			<h4>T3 upgrade</h4>
             
-            Price changed for to give a constant drain of 10m/s 200e/s, and less HP since veterancy has been changed, and it would be a serious gain to the total HP of the ACU, especially for Seraphim with double nano, that would survive a nuke.
+            Price changed to give a constant drain of 10m/s 200e/s, made slightly more expensive and now gives a slightly larger HP bonus since veterancy no longer instant-heals.
             
                 <ul>
-                <li><b>Price:</b> <strike>2400m 8400bt +6000/7000HP</strike> → 2500m 5000bt +4000HP
+                <li><b>Price:</b> <strike>2400m 8400bt +3000/3500HP</strike> → 2500m 5000bt +4000HP
                 </ul>
             
 			<h4>RAS/ARAS</h4>
@@ -431,22 +438,22 @@
             
 			<h4>Teleport</h4>
             
-			More consistent drain values when upgrading. A little improvement for all teleport animation. Fixed a bug where the sound did not go away after cancelling tele or teleporting.
+			More consistent drain values when upgrading. A little improvement for all teleport animations. Fixed a bug where the sound did not go away after cancelling tele or teleporting.
             
                 <ul>
                 <li><b>Price:</b>  <strike>4200bt</strike> → 5000bt
-                <li><b>Cybran:</b> Re-added teleport effect
+                <li><b>Cybran:</b> Re-added teleport effect (since implemented in normal FAF)
                 </ul>
             
 			<h4>TML</h4>
             
-			Making it harder to kill an enemy ACUs at close ranges with ACU TML, and preventing it from being able to destroy TMD in some cases. UEF missile get camera vision as faction trait to support they position as turtle-war specialist
+			Making it harder to kill an enemy ACUs at close ranges with ACU TML, and preventing it from being able to destroy TMD in some cases. UEF missile get camera vision as one of their faction traits, which can reveal useful info about enemy positions.
             
                 <ul>
                 <li><b>Price:</b> <strike>1500m</strike> → 1200m 60000e 1200bt
                 <li><b>Minimum range:</b> <strike>5</strike> → 15
                 <li><b>Missile HP:</b><strike>3</strike> →  2HP
-                <li><b>UEF:</b> Added camera vision on missile 10aoe 10s 
+                <li><b>UEF:</b> Added camera vision on missile 10aoe 10s
                 </ul>
 			
 			<h4>Aeon upgrades</h4>
@@ -458,7 +465,7 @@
                     <li><b>Recharge time from depletion:</b> <strike>65s</strike> → 120s
                     </ul>
                 <li><b>Heavy Shield:</b> <strike>4500m 1Me 3500bt 44sHP/s</strike> → 3600m 480Ke 2400bt 60sHP/s
-                <li><b>Chrono dampener:</b> <strike>1750m 5250e 1225bt 200e/shot</strike> → 1500m 60 000e 1500bt drain 400e/shot
+                <li><b>Chrono dampener:</b> <strike>1750m 52500e 1225bt 200e/shot</strike> → 1500m 60 000e 1500bt drain 400e/shot
                     <ul>
                     <li><strike>35r, 3.5s stun, 5s reload time</strike> → 33r, 2s stun, 4s reload time
                     <li>20HP/s regeneration added.
@@ -468,10 +475,10 @@
                 </ul>
 			
 			<h4>UEF upgrades</h4>
-            Nano needed a small buff since it was quite bad. The HP helps with survivability and veterancy for the ACU, a true offensive upgrade.
+            Nano needed a nerf because it was used extremely frequently as a cheap all in strategy after it was overbuffed - now it works with the EQ veterancy system, giving no bonus HP but slightly more regen, helping you fill up the HP after a veterancy.
             <p>Compared to Aeon the UEF shield costs less mass but more energy.
             <p>The shoulder drones got some quality-of-life improvements to make them nicer to use - they now upgrade alongside tech upgrades for your acu, increasing their build power. They are also cheaper to rebuild than to build.
-            <p>The Billy is now a more consistent weapon, where it's easier to defend against, but more dangerous against T3 land units. Also get camera vision to watch such nice explosion from first seat!
+            <p>The Billy is now a more consistent weapon, where it's easier to defend against, but more dangerous against T3 land units. Also gets camera vision as part of the UEF faction traits.
             
                 <ul>
                 <li><b>Drone:</b> 150m 2250e 300bt
@@ -482,10 +489,10 @@
                     </ul>
                 <li><b>Nano:</b> 32000e 800bt
                     <ul>
-                    <li>adds no bonus HP, 50HP/s
+                    <li><strike>2000 bonus HP, 40HP/s</strike> → no bonus HP, 50HP/s
                     </ul>
-                <li><b>Shield:</b> 1400m 126000e 1400bt, 35sHP/s
-                <li><b>Bubble shield:</b> <strike>450 000e 2800bt</strike> → 3000m 500 000e 2000bt 50sHP/s
+                <li><b>Shield:</b> <strike>1500m 112500e 2800bt</strike> → 1400m 126000e 1400bt, 35sHP/s
+                <li><b>Bubble shield:</b> <strike>3000m 450 000e 2800bt</strike> → 3000m 500 000e 2000bt 50sHP/s
                 <li><b>Billy nuke:</b> <strike>5400m 315 000e 5600bt</strike> → 5000m 375 000e 2500bt
                     <ul>
                     <li><b>Missile cost:</b> <strike>3000m 316260e 3060bt</strike> → 3000m 300 000e 3000bt
@@ -503,7 +510,7 @@
             <p>Cloak: Making it cheaper so it can be used more often, because it’s an interesting part of the game. The regen is added to make it a bit more defensive.
             
                 <ul>
-                <li><b>Laser:</b> 4200m 560 000e
+                <li><b>Laser:</b> <strike>4000m 560 000e</strike> → 4200m 560 000e
                 <li><b>Torpedo:</b> <strike>37500e</strike> → 45000e adjusted firing pattern
                     <ul>
                     <li>Having the gun upgrade increases its range by <b>10</b>
@@ -518,7 +525,7 @@
 			
 			<h4>Seraphim upgrades</h4>
             
-            Restoration Field: It's hard to compare the Sera Regen field to gun, so now its a choice between having a stronger acu, or a stronger army. More HP and regen to allow the acu to stay in fights longer. Reducing max regeneration on advanced restoration field is for a reason: to prevent abuse. Did you know that a single full vet Seraphim destroyer (surfaced) with an ACU with resto field can quite easily beat a battleship?
+            Restoration Field: It's hard to compare the Sera Regen field to gun, so now its a choice between having a stronger acu, or a stronger army. More HP and regen to allow the acu to stay in fights longer. The max regeneration on advanced restoration field was reduced to prevent abusive cases where a couple of destroyers could easily beat battleships.
             <p>Heavy gun: The range increase and price change helps it be used more often in the game, because it was simply too expensive for what it did.
             
                 <ul>
@@ -542,8 +549,8 @@
                     <ul>
                     <li>Adds max <strike>3000HP</strike> → 3500HP
                     </ul>
-                <li><b>Advanced Nano-repair system:</b> <strike>20 000HP 225HP/s 4200bt</strike> → 15 000HP 185HP/s regen 3000bt
-                <li><b>Heavy Gun:</b> <strike>3500m 4200bt 23r</strike> → 3000m 300 000e 2000bt 26r
+                <li><b>Advanced Nano-repair system:</b> <strike>23 000HP 210HP/s 4200bt</strike> → 15 000HP 185HP/s regen 3000bt
+                <li><b>Heavy Gun:</b> <strike>4800m 270 000e 4200bt 23r</strike> → 3000m 300 000e 2000bt 26r
                 </ul>
 
 			
@@ -557,7 +564,7 @@
 			<li>T1 units have more HP, and less dps, in total with the same efficiency, but give more time while they are being killed = can be used as a meat shield for higher tech armies that have a larger range
 			<li>T2 units have more concentrated dps in one unit, and have units with special roles
 			<li>T3 units have even more concentrated dps and HP in one unit than T2, and have additional units for special roles.
-			<li>T4 experimentals have a new build-time, which is 33% of their mass spent on units built from a T3 factory, before was experimental build-time was equal to ~12%.
+			<li>T4 experimentals have a new build-time, which is 25% of their mass spent on units built from a T3 factory, before was experimental build-time was equal to ~12%.
 			<p><li>Units that have personal cloak now feature the cloak effect from BlackOps! (Original work by OrangeKnight, Lt_Hawkeye, and Exavier Macbeth)
 			</ul>
         
@@ -588,7 +595,7 @@
                 <li><b>Target priorities:</b> ACU -> mobile radar -> T1/2/3...
                 <li>Added "ghetto" display ability on unit (except Seraphim)
                 <li>Veterancy multiplier 2.5 so it vets up at roughly the same speed as T1 tanks
-                <li>Reduced ROF of LABs on transports to 75% of normal
+                <li>Reduced ROF of LABs on transports to 75% of normal to prevent T2 Ghetto snipes from being extremely strong
                 
                 <p>
                 <li><b>Selen:</b> <strike>20m 80e 80bt; -5e/s 35HP, 13dps, 16r 4sp</strike> → 30m 300e 150bt -0e/s; 75HP, 18dps, 18r, 4.5sp 
@@ -608,21 +615,21 @@
                 </ul>
             
 			<h4>Mobile AA</h4>
-			This unit was in sore need of a buff, almost never being used, so it got one both in HP and DPS. Its speed was increased to chase bombers better, and to be worth building in the first place, now it can also hit interceptors.
+			This unit became frustrating when it was overbuffed, in EQ it doesnt kill a bomber in a single pass, and hits more consistently in return for lower DPS. Its speed was increased to chase bombers better, and now it can also hit interceptors.
             
-            <p>AA units have only AA weapon and when are mixed in army then don't react on ground attack order. We fix this problem so now they don't stay on place. 
+            <p>AA units have only AA weapon and when are mixed in army then don't react on ground attack order. We fix this problem so now they don't stay in one place. 
             
             <p>The Cybran MAA is also usable like a weaker aurora, with the same range. The ground projectile now tracks its target, to make it more consistent. It’s slower than other mobile AA so it has more range to compensate.
                 
                 <ul>
                 The ghetto function is a fun feature, like mantis repair. It's nearly useless but maybe it can have a creative use sometimes. Their range is reduced in transports so they don't outrange interceptors, and can't kite them.
                 <p>
-                <li><b>Price:</b> <strike>28m 140e 140bt; 15/16dps; 3 speed; 45 muzzle velocity; 200HP</strike> → 50m 250e 250bt; 20/21dps; 3.5 speed; 60 Muzzle Velocity
+                <li><b>Price:</b> <strike>55m 275e 220bt; 30/32dps; 3 speed; 45 muzzle velocity; 250-360HP</strike> → 50m 250e 250bt; 20/21dps; 3.5 speed; 60 Muzzle Velocity
 				<li>Dummy weapon added enabling them to react on attack move
                 <li><b>Thistle:</b> 305HP
 				<li><b>Ia-istle:</b> 310HP
 				<li><b>Archer:</b> 320HP
-                <li><b>Sky Slammer:</b> <strike>28m 140e 140bt 130HP 16/20dps 0.75fr 2.9sp 15muzzle 18/32r</strike> → 50m 250e 250bt 200HP 18gf/26aa dps <a href="http://recordit.co/Rp9QoLamCx"> homing missile<a/> 23/35r 2.7sp 35muzzle
+                <li><b>Sky Slammer:</b> <strike>55m 275e 220bt 260HP 16/32dps 0.75fr 2.9sp 15muzzle 18/32r</strike> → 50m 250e 250bt 200HP 18gf/26aa dps <a href="http://recordit.co/Rp9QoLamCx"> homing missile<a/> 23/35r 2.7sp 35muzzle
                 </ul>
                 <ul>
                     <ul>
@@ -634,7 +641,7 @@
 			<h4>Mobile Artillery</h4>
             T1 Mobile artillery: mostly unchanged, but it needed some adjustments to fit in with the balance and got some quality-of-life changes.
             <p>Medusa: Stun added against T3 units, dps added to make it less annoying to use vs pd, so price is also increased.
-            <p>Fervor: Compensating for the aurora losing range, their main advantage on T1, the fervor was made better for use against land units (and acu). 
+            <p>Fervor: Compensating for the aurora losing range, their main advantage on T1, the fervor was made better for use against land units (and ACUs). 
             <p>Lobo: vision time increase to give this feature more potential. AOE increased to help it compete with other artillery.
                 <ul>
                 <li><b>Price:</b> Aeon/UEF <strike>36m 180e 180bt</strike> → 35m 175e 175bt
@@ -650,11 +657,11 @@
                 </ul>
 			
 			<h4>Tanks</h4>
-			T1 now tanks live longer, so take a longer time to defend against push. Also can be a better meat shield for higher tech units, so they are more useful in late game.
+			T1 now tanks live longer, so take a longer time to defend against pushes. Also they are a better meat shield for higher tech units, so they are more useful in late game. The overall gameplay with T1 land is largely unchanged, with a couple of tweaks here and there to make it more defined.
             <p>Speed decreased to let LABs have more room for raiding.
-            <p>Mantis now have a tank icon so you can separate them from labs, which are now usable in your main army. More build rate so the assist feature is used more often, less dps, but better damage per shot. It’s mainly a nerf for Cybran, where they have additional damage from MAA, basically for free now. 
+            <p>Manits now have more build rate so the assist feature is used more often.
                 <ul>
-                <li><b>Mantis:</b> <strike>52m 273e 260bt; 270HP 26dps 3,7sp, 1br</strike> → 55m 275e 275bt; 330HP 23.3dps 3,7sp 1.5br
+                <li><b>Mantis:</b> <strike>52m 273e 260bt; 270HP 26dps 3,7sp, 1br</strike> → 55m 275e 275bt; 330HP 23.3dps 3.7sp 1.5br
                     <ul>
                     <li><b>Icon changed:</b>  <strike>bot</strike> → tank
                     </ul>
@@ -803,7 +810,6 @@
                     <li>Grenade weapon now has an <b>indirect fire</b> range indicator
                     <li>Grenade projectiles made more visible
                     </ul>
-                
                 
                 <li><b>Rhino:</b> <strike>300m 86dps 1900hp 2.7sp</strike> → 280m 90dps 1800hp 2.6sp
                     <ul>
@@ -1167,7 +1173,7 @@
 			<h3><img src="http://wiki.faforever.com/images/f/fc/Cybran_T2_Airstaging.png">General changes</h3>
             
             <ul>
-            <li>Shields now absorb crash damage from falling wrecks, and now wrecks bounce off of shields!
+            <li>Shields now absorb crash damage from falling wrecks, and now wrecks bounce off of shields! (since integrated into normal FAF)
             <ul>
             <li>A shield can absorb up to <b>20%</b> of its maximum HP from a unit - so experimentals can still damage the ground after colliding with shields.
             </ul>
@@ -1203,23 +1209,11 @@
             <li>Crash damage is now more predictable - higher tech units deal more crash damage
             <li>Air staging facility: buildable as <b>T1</b> building, <strike>175m, 2100e, 534bt</strike> →  150m, 1500e, 150bt
             
-            <li>Air staging facilities now can accommodate more planes of higher tech levels at once:
-                <ul>
-                <li>For UEF/Cybran staging facilities:
-                <li><b>ASF:</b> <strike>1</strike> →  4
-                <li><b>Torpedo Bombers:</b> <strike>2</strike> →  4
-                <li><b>Aeon T3 Torpedo Bomber:</b> <strike>1</strike> →  2
-                <li><b>T3 Spy planes:</b> <strike>2</strike> →  4
-                <li><b>T2 Fighters:</b> <strike>2</strike> →  4
-                <li><b>T2 Gunships:</b> <strike>2</strike> →  4
-                <li><b>T3 Gunships:</b> <strike>1</strike> →  2
-                <li>Mercies (still) can't refuel
-                <li>Aeon/Seraphim have 5 docks so everything that can land 4 at a time lands 5 at a time on them.
-                </ul>
+            <li>Air staging facilities now can accommodate more planes of higher tech levels at once. (Since integrated into normal FAF)
             <li>Air Staging facilities now repair for free.
 			</ul>
             
-            <li>Gunships are not able to fire on air units with ground fire weapon anymore
+            <li>Gunships are not able to fire on air units with their ground fire weapon anymore
 
 			
 			
@@ -1245,14 +1239,14 @@
             
             <h4>Scouts</h4>
             
-            Price changed to standardise the factory drain values and to help promote scouting.
+            Price changed to help promote scouting.
                 <ul>
                 <li><b>Price:</b>  <strike>40m 420e 145bt</strike> → 30m 750e 200bt
                 </ul>
             
             <h4>Interceptors</h4>
             
-            Less energy cost and more mass cost to make tech switching is easier and to encourage each player in a team game to build some air. The speed increase helps catch strats.
+            Less energy cost and more mass cost to make tech switching easier and to encourage each player in a team game to build some air. The speed increase helps catch strats, so you are never powerless against them.
                 <ul>
                 <li><b>Price:</b> <strike>50m 2250e 500bt</strike> → 60m 1500e 400bt
                 <li><b>Speed:</b> <strike>15</strike> → 16
@@ -1260,12 +1254,12 @@
             
             <h4>Bombers</h4>
             
-            Buffed bombers, to make them easier to use, since they make the game more interesting and to keep them in line since MAA is buffed in this mod. There is now much less reason to hoverbomb since they bombers have a much improved turning circle.
+            Buffed bombers, to make them easier to use, since they make the game more interesting and to keep them in line since MAA is buffed in this mod. There is now much less reason to hoverbomb since the bombers have a much improved turning circle.
                 <ul>
                 
                     <p><b>Aeon:</b> Increasing faction diversity, the Aeon bomber is better for single targets, and higher tech units; the emp can also support your army, but it’s less useful for armies, unlike Seraphim with its large aoe.
-                    <li><b>Price:</b>  <strike>80m 2250e 500bt</strike> → 90m 2250e 600bt  
-                    <li> <strike>4s reload time, </strike> → 6s reload time 
+                    <li><b>Price:</b>  <strike>105m 2450e 500bt</strike> → 90m 2250e 600bt  
+                    <li><strike>4s reload time, </strike> → 6s reload time 
                     <li>Maneuverabilty improved, target priorities changed to engineers (from T1 air units)
                     <li>Bombers are more reliable with bomb dropping now, and fail to drop less often.
                     <li>Removed friendly fire to avoid situations where multiple bombers kill themselves with their own bombs.
@@ -1277,13 +1271,13 @@
                         <ul>
                         <li><strike>80m 2250e 500bt</strike> → 105m 2625e 700bt 
                         <li>Target priorities changed to: engineers -> T2 land AA -> T2 mobile land
-                        <li><b>Stun:</b> <strike>T1/T2 1,5s 4aoe</strike> → STUN: T1:3s 7.5aoe, T2:2s 5aoe, T31s 2.5aoe (not able stun t3 navy)
+                        <li><b>Stun:</b> <strike>T1/T2 1,5s 4aoe</strike> → T1:3s 7.5aoe, T2:2s 5aoe, T31s 2.5aoe (unable stun t3 navy)
                     </ul>
                 </ul>
                 
             <h4>Jester</h4>
             
-            First jester is not an issue, so it can be of a similar mass efficiency to T2 gunships, also the buff helps maintain its effectiveness since T1/2 MAA has been buffed here.
+            In EQ, first jester is not an issue, so it can be of a similar mass efficiency to T2 gunships, also the buff helps maintain its effectiveness versus T1/2 maa.
                 <ul>
                 <li><b>Price:</b>  <strike>200m 5000e 1000bt</strike> → 175m 3500e 700bt
                 <li><strike>53dps 0.3s reload time 12speed</strike> → 55dps 0.4reload time 10speed
@@ -1340,7 +1334,7 @@
             
             <h4>T2 Fighter/bombers</h4>
             
-			T2 air needed to be better against T3 air, so T2fighter/bombers cost less, have less ground damage and health, but AA dps is unchanged. Also the Notha firing tolerance changed so it doesn't miss as much. 
+			T2 air needed to be better against T3 air, so T2 fighter/bombers cost less, have less ground damage and health, but AA dps is unchanged. Also the Notha firing tolerance changed so it doesn't miss as much. 
                 <ul>
                 <p>Target priorities changed to make using them less frustrating
                 <p>Corsair AA was buffed to be more similar to other T2 bombers (still much worse)
@@ -1357,7 +1351,7 @@
                     </ul>
                 <li><b>Janus:</b> <strike>1200HP 1200dmg 3aoe</strike> → 950HP 300+800bomb dmg 5aoe 45r
                 <li><b>Notha:</b> <strike>1175HP 1175dmg bomb 3aoe</strike> → 925HP 1050bomb dmg 4aoe 45r firing tolerance 20
-                <li>T2 Fighter/bombers are more reliable with bomb dropping now, and fail to drop less often.
+                <li>T2 Fighter/bombers are more reliable with bomb dropping now, and fail to drop less often, and are in general more consistent with their behaviour.
                 </ul>
                 </ul>
             
@@ -1370,7 +1364,7 @@
             
             <h4>Mercy</h4>
             
-			Mercies have been reworked to be better against sniping buildings, damage big army and worse for ACU snipes - an ACU moving away will receive only ~50% of the full damage. Crash damage was increased so that the mercy is only 99% useless if it gets shot down and because it makes more sense for a flying bomb to deal some damage on falling.
+			Mercies have been reworked to be better against sniping buildings, damage large armies and worse for ACU snipes - an ACU moving away will receive only ~50% of the full damage. Crash damage was increased so that the mercy is only 99% useless if it gets shot down and because it makes more sense for a flying bomb to deal some damage on falling.
                 <ul>
                 <li><b>Price:</b>  <strike>300m 6000e 2000bt</strike> → 245m 5250e 1400bt
                 <li><strike>50s fuel time 25crash dmg</strike> →  120s fuel time 500crash dmg
@@ -1379,7 +1373,7 @@
             
             <h4>T2 transports</h4>
             
-			Transports got some regeneration to make them reusable without needing to pay attention to repair them, more speed because interceptors are also faster. Additionally, any units being transported now leave wrecks correctly if the transport is shot down.
+			Transports got some regeneration to make them reusable without needing to pay attention to repair them, more speed because interceptors are also faster. Additionally, any units being transported now leave wrecks correctly if the transport is shot down. (since implemented in normal FAF)
                 <ul>
                 <li><b>Price:</b>  <strike>300m 12000e 2400bt</strike> → 280m 6000e 1600bt
                 <li><strike>0HP/s regen 25/0 crash dmg</strike> →  5HP/s regen 100dmg 2aoe crash dmg
@@ -1511,7 +1505,6 @@
                 <li><b>Crash:</b> 10 000crash dmg 8 aoe
                 <li>Improved turning behaviour over base game so its once again possible to hover conveniently.
                 </ul>
-                
             <h4>Czar</h4>
             
 			CZAR: It was a useless unit, that could help only due to its massive crash damage. But the CZAR is an experimental fortress, not a mercy. Massive increases to its HP and AA effectiveness help it be at least a little useful against air, and less against land. Now a CZAR can destroy 50-75% of its own mass in asf.
@@ -2143,6 +2136,9 @@
                 <li><b>Cybran:</b> 12500HP 450dps 0.525fr 8aoe
                 <li><b>UEF:</b> 15000HP 550dps 0.525fr 6aoe
                 <li><b>Seraphim:</b> 13500HP 0.675fr 7aoe
+                    <ul>
+                    <li>Fixed a bug where it had a systematic firing error causing it to miss
+                    </ul>
                 </ul>
                
             <h4>Novax</h4>
