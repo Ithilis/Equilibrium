@@ -43,8 +43,6 @@ BlueprintId = "uel0301",
             BuildCostEnergy = 20000,
             BuildCostMass = 400,
             BuildTime = 1000,
-            
-            NewBuildRate = 50,        --ADD
         },
         RadarJammer = {
             BuildCostEnergy = 20000,
