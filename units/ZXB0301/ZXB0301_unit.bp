@@ -104,6 +104,7 @@ UnitBlueprint {
         ConstructionBar = true,
         FactionName = 'UEF',
         Icon = 'amph',
+        SelectionPriority = 3,
         TechLevel = 'RULEUTL_Experimental',
         UnitName = 'Mobile Factory Module',
         UnitWeight = 1,
