@@ -20,6 +20,7 @@ BlueprintId = "url0402",
     },
     Weapon = {
         {
+            MaximumBeamLength = 26, --stop the laser overreaching with its target tracking radius increase
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'COMMANDER',
@@ -32,6 +33,7 @@ BlueprintId = "url0402",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TrackingRadius = 1.15, --make laser turn nice and easy without having to suffer
         },
             TargetPriorities = {
                 'SPECIALHIGHPRI',
