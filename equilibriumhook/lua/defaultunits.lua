@@ -46,17 +46,15 @@ AirUnit = Class(oldAirUnit) {
         local waitTime = GetRandomFloat(0, 5)
         WaitSeconds(waitTime)
         while self.AutoRefuel == true and not self:IsDead() do
-            --WARN('checking for refuel need')
-            if (self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < .6)) and not self.AlreadyAttached then
-                --WARN('criteria for fueling met, nice')
-                
+            if (self.AutoRefuel and (self:GetFuelRatio() < 0.2 or self:GetHealthPercent() < 0.6)) and not self.AlreadyAttached then
                 --ideally we would check the command queue to avoid refitting units that already have the command queued
                 --but that needs to go ui side to even run the command which seems pretty absurd
-                --and doing this with a flag would just mean that we need to reset it on command given?
-                --if not self.AlreadyOrdered then
-                    --WARN('ordering refit')
+                --really i just hate the sim side GetCommandQueue function - its so handicapped compared to the ui side one
+                local UnitCommandQ = self:GetCommandQueue()
+                --we exclude units with multiple commands queued up since they have some job to do, this includes units ordered to refit.
+                if table.getn(UnitCommandQ) <= 1 then
                     self:AirUnitRefit()
-                --end
+                end
             end
             
             WaitSeconds(15)
@@ -84,6 +82,9 @@ AirUnit = Class(oldAirUnit) {
                     IssueStop( {self} )
                     IssueClearCommands( {self} )
                     IssueTransportLoad( {self}, closest )
+                    platPos = plats[1]:GetPosition()
+                    platPos[3] = platPos[3] + 10
+                    IssueMove( {self}, platPos) --queue a move order for something like a rally point
                 else
                     --if there are no available platforms (all full) then we move near one so when its empty we can fuel
                     platPos = plats[1]:GetPosition()
