@@ -21,7 +21,11 @@
         target = self:GetRealTarget(target)
         
         -- Ensure that targets already targeted can't be hit twice
-        if self:IsTargetAlreadyUsed(target) then 
+        if self:IsTargetAlreadyUsed(target) then
+            --EQ: check if theres a better target in range, and skip reloading since we are already reloaded
+            --Note: since reseting target is deterministic, it will find the same target again unless they move in that time. Well, I tried xD
+            self:ResetTarget()
+            ChangeState(self, self.IdleState)
             return 
         end
         
