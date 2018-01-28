@@ -62,8 +62,8 @@
     -- Override this function in the unit to check if another weapon already has this
     -- unit as a target.  Target argument should not be a recon blip
     IsTargetAlreadyUsed = function(self, target)        
-        -- Make a table with one value for each weapon, in this case 3 (See unit script)
-        local weaponTable = {1, 2, 3}
+        -- Make a table with one value for each weapon, in this case the two tractor claws (see unit script)
+        local weaponTable = {2, 3}
     
         for k, v in weaponTable do
             v = self.unit:GetWeapon(v)
@@ -73,6 +73,14 @@
                 end
             end
         end
+        
+        --EQ: We treat the laser differently - we grab the unit and redirect the laser somewhere else.
+        local laserWeapon = self.unit:GetWeapon(1)
+        if self:GetRealTarget(laserWeapon:GetCurrentTarget()) == target then
+            target:SetDoNotTarget(true)
+            laserWeapon:ResetTarget()
+        end
+        
         return false
     end,
 
