@@ -29,6 +29,7 @@ BlueprintId = "xsl0104",
         {
             Damage = 5,        --from 4 = 20dps
             MuzzleVelocity = 60,    --from 45
+            RackFireTogether = true, --fixes the dps bug
         },
     },
 }
