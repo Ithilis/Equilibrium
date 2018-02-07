@@ -20,7 +20,7 @@ BlueprintId = "ual0106",
         BuildTime = 175,
     },    
     Intel = {
-        IntelDurationOnDeath = 20,
+        IntelDurationOnDeath = 30,
         VisionRadiusOnDeath = 28,
     },
     Physics = {

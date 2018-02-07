@@ -12,7 +12,7 @@ BlueprintId = "url0106",
             },
             AppliedToTarget = true,
             BuffType = 'STUN',
-            Duration = 1.5,
+            Duration = 1.0,
             Radius = 7,
             TargetAllow = 'MOBILE, LAND',
             TargetDisallow = 'TECH3, COMMAND, EXPERIMENTAL, AIR',
@@ -42,7 +42,7 @@ BlueprintId = "url0106",
     SizeY = 0.7,
     SizeZ = 0.8,
     Veteran = {
-        RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
+        RequirementMult = 2.5,  --higher vet rate to prevent fast vetting from engies
     },
     Weapon = {
         {
@@ -54,7 +54,7 @@ BlueprintId = "url0106",
                 'SPECIALHIGHPRI',
                 'RADAR',
                 'MOBILE ENGINNER',
-                'COMMAND',                --ACU hight priority for ghetto sniping
+                'COMMAND',                --ACU high priority for ghetto sniping
                 'TECH1 MOBILE',
                 'TECH2 MOBILE',
                 'TECH3 MOBILE',
@@ -63,7 +63,7 @@ BlueprintId = "url0106",
                 'ALLUNITS',
             },
         },
-        {
+        { --add a stun weapon
             AboveWaterTargetsOnly = true,
             Accurate = true,
             BallisticArc = 'RULEUBA_None',
@@ -93,7 +93,7 @@ BlueprintId = "url0106",
                     RackBone = 0,
                 },
             },
-            RangeCategory = 'UWRC_IndirectFire',        --from direct
+            RangeCategory = 'UWRC_IndirectFire',
             RateOfFire = 0.5,
             SalvoSize = 1,
             SlavedToBody = true,
