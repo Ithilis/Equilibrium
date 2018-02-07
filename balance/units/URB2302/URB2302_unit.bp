@@ -1,4 +1,4 @@
---T3 Artilery
+--T3 Artillery
 
 UnitBlueprint {
 Merge = true,
@@ -15,11 +15,17 @@ BlueprintId = "urb2302",
     },
     Weapon = {
         {
-            MaxRadius = 700,
+            MaxRadius = 800,
             MinRadius = 150,
             FiringRandomness = 0.525,
-            Damage = 4500,
+            Damage = 2250,
             DamageRadius = 8,
+            MuzzleVelocity = 65,            --helps it fire consistently
+            MuzzleVelocityReduceDistance = 750,
+            RateOfFire = 0.2,                --from 0.1 - higher ROF same dps -> faction diversity
+            TurretPitchSpeed = 10,
+            TurretYawSpeed = 10,
+            UseFiringSolutionInsteadOfAimBone = true,
         },
     },
 }

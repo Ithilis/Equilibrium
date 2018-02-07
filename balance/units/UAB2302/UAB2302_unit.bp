@@ -1,4 +1,4 @@
---T3+ Artilery Emisary
+--T3+ Artillery Emissary
 
 UnitBlueprint {
 Merge = true,
@@ -22,15 +22,6 @@ BlueprintId = "uab2302",
         'SHOWATTACKRETICLE',
         'OVERLAYINDIRECTFIRE',
     },
-    Buffs = {
-        Regen = {
-            Level1 = 15,
-            Level2 = 30,
-            Level3 = 45,
-            Level4 = 60,
-            Level5 = 75,
-        },
-    },
     Defense = {
         Health = 8000,
         MaxHealth = 8000,
@@ -41,29 +32,23 @@ BlueprintId = "uab2302",
         BuildCostMass = 216000,
         BuildTime = 90000,
     },
-    Veteran = {
-        Level1 = 432,
-        Level2 = 864,
-        Level3 = 1296,
-        Level4 = 1728,
-        Level5 = 2160,
-    },
+    StrategicIconName = 'icon_experimental_generic',
     Weapon = {
         {
-            Damage = 2500,        --from 6000 = 2000dps
-            DamageRadius = 6,        --from5
+            Damage = 2500,        -- from 6000 = 2000dps
+            DamageRadius = 6,        -- from 5
             DoTPulses = 12,         -- every 0.5 seconds
             DoTTime = 6,
-            EnergyDrainPerSecond = 7500,    --
-            EnergyRequired = 15000,            --
-            FiringRandomness = 0.2,    --from 0,35
+            EnergyDrainPerSecond = 7500,
+            EnergyRequired = 15000,
+            FiringRandomness = 0.2,    -- from 0.35
             FiringTolerance = 1,
-            MaxRadius = 1800,    --
-            MinRadius = 175,    --
-            MuzzleVelocity = 100,    --from 65
-            MuzzleVelocityReduceDistance = 1750,    --
+            MaxRadius = 1800,
+            MinRadius = 175,
+            MuzzleVelocity = 100,    -- from 65
+            MuzzleVelocityReduceDistance = 1750,
             RackRecoilDistance = -5,
-            RateOfFire = 0.0666,    --15s
+            RateOfFire = 0.0666,    -- 15s
             TurretPitchRange = 45,
             TurretPitchSpeed = 6,
             TurretYaw = 0,

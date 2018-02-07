@@ -1,4 +1,4 @@
---T3 Artilery
+--T3 Artillery
 
 UnitBlueprint {
 Merge = true,
@@ -15,8 +15,13 @@ BlueprintId = "ueb2302",
     },
     Weapon = {
         {
-            MaxRadius = 700,
+            MaxRadius = 800,
             MinRadius = 150,
+            MuzzleVelocity = 65,            --helps it fire consistently
+            MuzzleVelocityReduceDistance = 750,
+            TurretPitchSpeed = 10,
+            TurretYawSpeed = 10,
+            UseFiringSolutionInsteadOfAimBone = true,
         },
     },
 }
