@@ -35,10 +35,10 @@ MissileRedirect = Class(Entity) {
         
     RedirectProjectile = function(self, enemyData, projectile)
         --calculate the reverse orientation
-        local ReverseOrientation = OrientFromDir(Vector(-enemyData.Velocity[1], (-enemyData.Velocity[2])+2, -enemyData.Velocity[3]))
+        local ReverseOrientation = OrientFromDir(Vector(-enemyData.Velocity[1], math.max(-enemyData.Velocity[1],1), -enemyData.Velocity[3]))
         
         --assign data
-        projectile:SetVelocity(-enemyData.Velocity[1], (-enemyData.Velocity[2])+2, -enemyData.Velocity[3])
+        projectile:SetVelocity(-enemyData.Velocity[1], math.max(-enemyData.Velocity[1],1), -enemyData.Velocity[3])
         projectile:SetOrientation(ReverseOrientation, true)
         projectile:SetPosition(Vector(enemyData.Position[1], enemyData.Position[2], enemyData.Position[3]),true)
         projectile.BlueprintId = enemyData.BlueprintId
