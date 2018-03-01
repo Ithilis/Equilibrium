@@ -76,6 +76,10 @@ XSL0101 = Class(SWalkingLandUnit) {
         -- If we stopped moving, hide
         if new == 'Stopped' then
             -- We need to fork in order to use WaitSeconds
+            if self.CloakThread then
+                KillThread(self.CloakThread)
+                self.CloakThread = nil
+            end
             self.CloakThread = self:ForkThread(self.CloakingThread)
         end
         -- If we begin moving, reveal ourselves
