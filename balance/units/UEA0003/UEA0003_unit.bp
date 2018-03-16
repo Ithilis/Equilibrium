@@ -10,4 +10,20 @@ BlueprintId = "uea0003",
         BuildCostMass = 75,
         BuildTime = 150,
     },
+    General = {
+        OrderOverrides = {
+            DroneL = {
+                bitmapId = 'drone',
+                helpText = 'drone_SACU',
+            },
+            DroneM = {
+                bitmapId = 'drone',
+                helpText = 'drone_SACU',
+            },
+            RULEUTC_WeaponToggle = {
+                bitmapId = 'dronerebuild',
+                helpText = 'drone_rebuild',
+            },
+        },
+    },
 }
