@@ -125,6 +125,12 @@ local function DroneMultInit(self, selection)
     end
 end
 
+local function MobileFactoryBehavior(self, modifiers)
+    if modifiers.Left then
+        SelectUnits(self._mFactories)
+    end
+end
+
 -- sets up an orderInfo for each order that comes in
 -- preferredSlot is custom data that is used to determine what slot the order occupies
 -- initialStateFunc is a function that gets called once the control is created and allows you to set the initial state of the button
@@ -159,6 +165,7 @@ local defaultOrdersTable = {
     DroneL = {                      helpText = "drone",             bitmapId = 'unload02',              preferredSlot = 9, behavior = DroneBehavior,               initialStateFunc = DroneInit},
     DroneR = {                      helpText = "drone",             bitmapId = 'unload02',              preferredSlot = 10, behavior = DroneBehavior,               initialStateFunc = DroneInit},
     DroneM = {                      helpText = "drone",             bitmapId = 'unload02',              preferredSlot = 9, behavior = DroneMultBehavior,               initialStateFunc = DroneMultInit}, --EQ
+    MFactory = {                      helpText = "mobile_factory",             bitmapId = 'production',              preferredSlot = 9, behavior = MobileFactoryBehavior}, --EQ
 
     -- Unit toggle rules
     RULEUTC_ShieldToggle = {        helpText = "toggle_shield",     bitmapId = 'shield',                preferredSlot = 8,  behavior = ScriptButtonOrderBehavior,   initialStateFunc = ScriptButtonInitFunction, extraInfo = 0},
@@ -180,17 +187,18 @@ local function CreateAltOrders(availableOrders, availableToggles, units)
 
     local assitingUnitList = {}
     local podUnits = {}
+    
+    local PodStagingPlatforms = EntityCategoryFilterDown(categories.PODSTAGINGPLATFORM, units)
+    local Pods = EntityCategoryFilterDown(categories.POD, units)
+        
     --EQ:we only touch this if function, everything else is just part of the deal
-    if table.getn(units) > 0 and (EntityCategoryFilterDown(categories.PODSTAGINGPLATFORM, units) or EntityCategoryFilterDown(categories.POD, units)) then
-        local PodStagingPlatforms = EntityCategoryFilterDown(categories.PODSTAGINGPLATFORM, units)
-        local Pods = EntityCategoryFilterDown(categories.POD, units)
+    if table.getn(units) > 0 and (PodStagingPlatforms[1] or Pods[1]) then
         local assistingUnits = {}
         local RelevantPods = GetAssistingUnitsList(PodStagingPlatforms)
         
         --if only one platform selected, button selects drones, 2 if needed
         --if platforms selected, button selects pods
         --if only drones selected, button selects platforms
-        
         
         if table.getn(PodStagingPlatforms) == 1 then --if only one platform selected/uef acu style
             assistingUnits = RelevantPods
@@ -220,6 +228,31 @@ local function CreateAltOrders(availableOrders, availableToggles, units)
         end
     end
 
+    local factoryModuleList = {}
+    local mobileFactoryUnits = EntityCategoryFilterDown(categories.MOBILEFACTORY, units)
+    
+    if table.getn(units) > 0 and mobileFactoryUnits[1] then
+        local RelevantProxies = GetAttachedUnitsList(mobileFactoryUnits)
+        local RelevantModules = GetAttachedUnitsList(RelevantProxies)
+        --WARN(table.getn(RelevantModules))
+        
+        local factoryModules = {}
+        -- for id, factory in mobileFactoryUnits do
+            
+            -- if factory.HelperFactory then
+                -- table.insert(factoryModules, factory.HelperFactory)
+            -- else
+                -- WARN('EQ2:found a mobile factory that didnt have a factory module! not showing the button!')
+            -- end
+        -- end
+        
+        factoryModules = EntityCategoryFilterDown(categories.HELPERFACTORY, RelevantModules)
+        if factoryModules[1] then
+            table.insert(availableOrders, 'MFactory')
+            factoryModuleList['MFactory'] = factoryModules
+        end
+    end
+    
     -- Determine what slots to put alt orders
     -- We first want a table of slots we want to fill, and what orders want to fill them
     local desiredSlot = {}
@@ -322,6 +355,11 @@ local function CreateAltOrders(availableOrders, availableToggles, units)
 
             if podUnits[availOrder] then
                 orderCheckbox._pod = podUnits[availOrder]
+            end
+            
+            --EQ: add mobile factory button
+            if factoryModuleList[availOrder] then
+                orderCheckbox._mFactories = factoryModuleList[availOrder]
             end
 
             if orderInfo.initialStateFunc then

@@ -28,7 +28,7 @@ BlueprintId = "uel0401",
         'RECLAIMABLE',
         'DRAGBUILD',
         --'SHOWQUEUE', --remove the queue option
-        'MOBILEFACTORY', --not yet used but you know :D
+        'MOBILEFACTORY', --for getting the select factory button to show up
         'NOAUTOREFUEL', --disable planes trying to refuel to it, docking is bugged if the target is moving
         'OVERLAYMISC',
         'OVERLAYANTIAIR',
