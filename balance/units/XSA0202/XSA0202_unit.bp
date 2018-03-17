@@ -29,10 +29,12 @@ BlueprintId = "xsa0202",
         { -- AA 1
             Damage = 50,                -- from 25
             RateOfFire = 0.5,           -- from1
+            NeedPrep = false,
         },
         { -- AA 2
             Damage = 50,
             RateOfFire = 0.5,           -- from1
+            NeedPrep = false,
         },
         {
             BombDropThreshold = 10,           -- from 4, makes it drop bombs better
@@ -40,6 +42,7 @@ BlueprintId = "xsa0202",
             DamageRadius = 4,        --from 3
             FiringTolerance = 20,    --from 6
             MaxRadius = 45,         --from 60
+            NeedPrep = false,       --no need to call OnGotTarget every time, messes up breakoffdistances for AA weapons
             RateOfFire = 0.1,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
