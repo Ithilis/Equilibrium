@@ -23,7 +23,7 @@ ZXB0301 = Class(TMobileFactoryUnit) {
         --tell it that it can build, and give it the right build rate as well.
         self.BuildingEnabled = true
         self:ForkThread( self.BuildrateThread )
-        --self:SetCollisionShape('None')
+        self:SetCollisionShape('None')
         --define the bone which we will attach our unit being built to
         ChangeState(self, self.IdleState)
     end,

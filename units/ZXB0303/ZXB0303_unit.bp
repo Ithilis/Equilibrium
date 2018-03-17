@@ -51,7 +51,8 @@ UnitBlueprint {
         'FACTORY',
         'DRAGBUILD',
         'SHOWQUEUE',
-        'MOBILEFACTORY', --not yet used but you know :D
+        'MOBILEFACTORY',
+        'HELPERFACTORY',
         'UNTARGETTABLE',
     },
     CollisionOffsetZ = 0,

@@ -2,6 +2,7 @@ UnitBlueprint {
     BuildIconSortPriority = 100,
     Categories = {
         'PRODUCTSC1',
+        'HELPERFACTORY',
         'EXPERIMENTAL',
         'UNTARGETTABLE',
     },
