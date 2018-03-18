@@ -5,6 +5,10 @@
 tooltipui0016="Variable Overcharge"
 tooltipui0017="Needs 2000 energy in storage to activate. Right click to toggle auto-fire. Drains 2000 energy for every 1000 damage dealt to regular units or 20% against structures."
 
+----UnitView UI
+
+gameui_0001="Damage: %d, Reload time: %0.1f (DPS: %d)  Range: %d"
+
 ----SACU Presets
 
 ----Aeon
