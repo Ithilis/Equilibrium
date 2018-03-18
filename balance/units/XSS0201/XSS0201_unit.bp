@@ -30,9 +30,11 @@ BlueprintId="xss0201",
     Weapon = {
         { --front laser
             DamageRadius = 1.5,        --from 1
+            DisplayName = 'Front Ultrachromatic Beam Generator', --they do different damage so its useful to tell them apart. also shown in the stats.
         },
         { --back laser
             DamageRadius = 1.5,        --from 1
+            DisplayName = 'Rear Ultrachromatic Beam Generator',
         },
         { --torpedoes
             Damage = 40,    --from 80, twice the torpedoes for half the damage.
@@ -45,7 +47,7 @@ BlueprintId="xss0201",
             MuzzleSalvoSize = 4,
             MuzzleVelocity = 15,
             ProjectileLifetime = 7,
-            RateOfFire = 1,
+            RateOfFire = 0.5,
             TargetCheckInterval = 0.2, -- from 2, stops it from fucking up when you give it a move command and it thinks about what its purpose is instead of shooting
             TargetPriorities = {
                 'SPECIALHIGHPRI',
