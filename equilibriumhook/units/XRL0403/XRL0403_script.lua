@@ -38,7 +38,17 @@ XRL0403 = Class(oldXRL0403) {
         AAGun = Class(CAABurstCloudFlakArtilleryWeapon) {},
         HackPegLauncher= Class(CDFBrackmanCrabHackPegLauncherWeapon){},
     },
+    
+    --EQ: we set a different collision box for it while its being built so that units can fire at and hit it.
+    OnStartBeingBuilt = function(self, builder, layer)
+        oldXRL0403.OnStartBeingBuilt(self, builder, layer)
+        self:SetCollisionShape('Box', 0, 1.7, -0.3, 2.5, 1.7, 3.5)
+    end,
 
+    OnStopBeingBuilt = function(self, builder, layer)
+        oldXRL0403.OnStopBeingBuilt(self, builder, layer)
+        self:RevertCollisionShape()--set the collision so its above the legs
+    end,
 }
 
 TypeClass = XRL0403
