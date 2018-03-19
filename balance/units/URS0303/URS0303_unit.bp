@@ -22,4 +22,20 @@ BlueprintId="urs0303",
         VisionRadius = 85,
         WaterVisionRadius = 25,        --from 36
     },
+    Weapon = {
+        { --AA front right
+            UseFiringSolutionInsteadOfAimBone = true, --fix systematic firing error
+        },
+        { --AA back right
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+        { --AA front left
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+        { --AA back left
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+        { --TMD
+        },
+    },
 }
