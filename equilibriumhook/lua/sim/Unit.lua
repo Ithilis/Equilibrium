@@ -413,6 +413,40 @@ Unit = Class(oldUnit) {
         end
     end,
     
+        
+-------------------------------------------------------------------------------------------
+-- TRANSPORTING
+-------------------------------------------------------------------------------------------
+    
+    --We set up flags so the unit knows when its inside a transport or not
+    OnAttachedToTransport = function(self, transport, bone)
+        self.InTransport = true --EQ: flag for in transport units
+        oldUnit.OnAttachedToTransport(self, transport, bone)
+    end,
+
+    OnDetachedFromTransport = function(self, transport, bone)
+        self.InTransport = false
+        oldUnit.OnDetachedFromTransport(self, transport, bone)
+    end,
+    
+    OnStopTransportBeamUp = function(self)
+        oldUnit.OnStopTransportBeamUp(self)
+        --EQ: if the transport command gets cancelled we need to cancel and remove the animation as well.
+        self:ForkThread(function()
+            WaitTicks(10)--OnAttachedToTransport is called after this so we need a delay
+            if not self.InTransport and self.TransAnimation and self.TransAnimThread then
+                KillThread(self.TransAnimThread)
+                self.TransAnimation:Destroy()
+                self.TransAnimation = nil
+            end
+        end)
+    end,
+    
+    -- EQ: we store this in a variable so the thread can be killed, instead of as a function
+    TransportAnimation = function(self, rate)
+        self.TransAnimThread = self:ForkThread(self.TransportAnimationThread, rate)
+    end,
+
 -------------------------------------------------------------------------------------------
 -- BUFFS
 -------------------------------------------------------------------------------------------
