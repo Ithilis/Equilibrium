@@ -30,6 +30,7 @@ BlueprintId = "uaa0204",
     },
     Weapon = {
         {
+            MaxRadius = 42, --make them have the same range as uef/cybran
             DamageRadius = 0.5,
         },
         {
