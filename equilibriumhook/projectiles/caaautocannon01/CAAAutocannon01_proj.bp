@@ -42,6 +42,7 @@ ProjectileBlueprint {
         DestroyOnWater = true,
         InitialSpeed = 45,    --from 35
         Lifetime = 1.25,    --from 1,5
+        TrackTarget = false, --no need to turn that on for fixing carrier when its already fixed in eq, and better
         UseGravity = false,
         VelocityAlign = true,
     },

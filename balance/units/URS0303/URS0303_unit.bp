@@ -25,15 +25,19 @@ BlueprintId="urs0303",
     Weapon = {
         { --AA front right
             UseFiringSolutionInsteadOfAimBone = true, --fix systematic firing error
+            ProjectileId = '/projectiles/CAAAutocannon01/CAAAutocannon01_proj.bp',--undo the projectile change, its a worse fix
         },
         { --AA back right
             UseFiringSolutionInsteadOfAimBone = true,
+            ProjectileId = '/projectiles/CAAAutocannon01/CAAAutocannon01_proj.bp',--undo the projectile change, its a worse fix
         },
         { --AA front left
             UseFiringSolutionInsteadOfAimBone = true,
+            ProjectileId = '/projectiles/CAAAutocannon01/CAAAutocannon01_proj.bp',--undo the projectile change, its a worse fix
         },
         { --AA back left
             UseFiringSolutionInsteadOfAimBone = true,
+            ProjectileId = '/projectiles/CAAAutocannon01/CAAAutocannon01_proj.bp',--undo the projectile change, its a worse fix
         },
         { --TMD
         },
