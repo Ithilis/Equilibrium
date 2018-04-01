@@ -28,6 +28,7 @@ BlueprintId = "xsl0307",
         Shield = {
             ShieldRechargeTime = 50,
             ShieldRegenRate = 100,
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
     },
     Economy = {

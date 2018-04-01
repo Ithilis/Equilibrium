@@ -73,11 +73,11 @@ BlueprintId = "uel0001",
             BuildCostEnergy = 500000,    --from 450 000e
             BuildCostMass = 3000,
             BuildTime = 2000,            --from 2800
-
             ShieldMaxHealth = 36000,
             ShieldRechargeTime = 175,
             ShieldRegenRate = 50,        --from 42
             ShieldSize = 16,
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
         TacticalMissile = {
             BuildCostEnergy = 60000,

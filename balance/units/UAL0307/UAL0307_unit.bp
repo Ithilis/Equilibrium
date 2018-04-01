@@ -47,6 +47,7 @@ BlueprintId = "ual0307",
             ShieldMaxHealth = 3750,        --from 3800
             ShieldRechargeTime = 25,    --from 28s
             ShieldRegenRate = 60,        --from 58
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
         RegenRate = 5,        --from 0 because cant get veterancy    
     },

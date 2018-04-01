@@ -12,7 +12,6 @@ BlueprintId = "uel0301",
         BuildCostMass = 1800,
         BuildRate = 25,                --from 56
         BuildTime = 4500,
-
         ProductionPerSecondEnergy = 20,
         ProductionPerSecondMass = 1,
         StorageEnergy = 5000,
@@ -23,19 +22,16 @@ BlueprintId = "uel0301",
             BuildCostEnergy = 50000,
             BuildCostMass = 1000,
             BuildTime = 2500,
-
-            NewRateOfFire = 2,        --from 2,5
+            NewRateOfFire = 2,        --from 2.5
         },
         HighExplosiveOrdnance = {
             BuildCostEnergy = 60000,
             BuildCostMass = 1200,
             BuildTime = 3000,
-
-            NewDamageRadius = 2,    --from 2,5, check HighExplosiveOrdnanceRemove when you change this
+            NewDamageRadius = 2,    --from 2.5, check HighExplosiveOrdnanceRemove when you change this
             NewMaxRadius = 33,        --from 35
         },
-        HighExplosiveOrdnanceRemove = { --this had incorrect vlaues in it making bugs.
-
+        HighExplosiveOrdnanceRemove = { --this had incorrect values in it making bugs.
             NewDamageRadius = -2, --make sure this is the same but negative of the UPGRADE ABOVE - HighExplosiveOrdnance
             NewMaxRadius = 23, --make sure this is the same as the WEAPON blueprint
         },
@@ -48,7 +44,6 @@ BlueprintId = "uel0301",
             BuildCostEnergy = 20000,
             BuildCostMass = 400,
             BuildTime = 1000,
-
             MaintenanceConsumptionPerSecondEnergy = 100,
             NewJammerRadius = 26,
         },
@@ -57,7 +52,6 @@ BlueprintId = "uel0301",
             BuildCostMass = 4200,
             BuildTime = 10500,
             NewDeathDamage = 5000,
-
             ProductionPerSecondEnergy = 1000,
             ProductionPerSecondMass = 10,
         },
@@ -65,7 +59,6 @@ BlueprintId = "uel0301",
             BuildCostEnergy = 20000,
             BuildCostMass = 400,
             BuildTime = 1000,
-
             NewOmniRadius = 80,
             NewVisionRadius = 45,
         },
@@ -94,7 +87,7 @@ BlueprintId = "uel0301",
             ShieldRegenRate = 200,
             ShieldRegenStartTime = 1,
             ShieldSize = 20,
-            ShieldSpillOverDamageMod = 0.5,
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
     },
     EnhancementPresets = {
@@ -176,7 +169,6 @@ BlueprintId = "uel0301",
             Damage = 2500,                --from 1000
             DamageFriendly = true,
             DamageRadius = 10,
-
             DamageType = 'Deathnuke',        --from normal 
         },
     },

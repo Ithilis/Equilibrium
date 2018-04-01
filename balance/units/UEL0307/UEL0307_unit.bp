@@ -13,6 +13,7 @@ BlueprintId = "uel0307",
     Defense = {
         Shield = {
             ShieldRechargeTime = 25,    --from 24
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
         RegenRate = 5,        --from 0 because cant get veterancy
     },

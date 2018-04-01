@@ -46,6 +46,7 @@ BlueprintId = "uel0401",
             ShieldMaxHealth = 15000,
             ShieldRechargeTime = 120,    --from 160
             ShieldRegenRate = 85,        --from 64
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
     },
     Economy = {

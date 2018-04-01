@@ -8,14 +8,15 @@ BlueprintId = "xea0306",
         DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
     },
     Defense = {
-        Health = 2000,                    --from4500
+        Health = 2000,                    --from 4500
         MaxHealth = 2000,
         RegenRate = 5,
         Shield = {
-            ShieldMaxHealth = 4000,        --from3000
-            ShieldRechargeTime = 50,    --from35
-            ShieldRegenRate = 25,        --from30
-            ShieldSize = 11,            --from 8,5
+            ShieldMaxHealth = 4000,        --from 3000
+            ShieldRechargeTime = 50,    --from 35
+            ShieldRegenRate = 25,        --from 30
+            ShieldSize = 11,            --from 8.5
+            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
     },
     Economy = {
