@@ -1,77 +1,275 @@
---Fire Beetle
-
 UnitBlueprint {
-Merge = true,
-BlueprintId = "xrl0302",
-
     AI = {
         TargetBones = {
             'torso',
         },
     },
-    Economy = {
-        BuildCostEnergy = 3600,    --100e per sec
-        BuildCostMass = 360,    --20m per sec
-        BuildTime = 1800,        --18s
-        MaintenanceConsumptionPerSecondEnergy = 50,
+    Audio = {
+        AmbientMove = Sound {
+            Bank = 'XRL',
+            Cue = 'XRL0302_Move_Loop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        Destroyed = Sound {
+            Bank = 'XRL_Weapon',
+            Cue = 'XRL0302_SelfDestructBomb',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        HoverKilledOnWater = Sound {
+            Bank = 'Explosions',
+            Cue = 'Expl_Water_Lrg_01',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        StartMove = Sound {
+            Bank = 'XRL',
+            Cue = 'XRL0302_Move_Start',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        StopMove = Sound {
+            Bank = 'XRL',
+            Cue = 'XRL0302_Move_Stop',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        UISelection = Sound {
+            Bank = 'Interface',
+            Cue = 'Cybran_Select_Vehicle',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
     },
+    Buffs = {
+        Stun = {   
+            Add = {
+                OnImpact = true,
+                OnDeath = true,
+            },
+            AppliedToTarget = false,
+            BuffType = 'STUN',
+            Duration = 2,
+            Radius = 6,
+            TargetAllow = 'ALLUNITS',
+            TargetDisallow = 'EXPERIMENTAL,WALL',
+        },
+    },
+    BuildIconSortPriority = 80,
+    Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER2FACTORY',
+        'BUILTBYTIER3FACTORY',
+        'CYBRAN',
+        'MOBILE',
+        'LAND',
+        'TECH2',
+        'COUNTERINTELLIGENCE',
+        'DIRECTFIRE',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWATTACKRETICLE',
+    },
+    CollisionOffsetZ = 0.05,
+    Defense = {
+        AirThreatLevel = 0,
+        ArmorType = 'FireBeetle',
+        EconomyThreatLevel = 0,
+        Health = 500,
+        MaxHealth = 500,
+        RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
+        SubThreatLevel = 0,
+        SurfaceThreatLevel = 4,
+    },
+    Description = '<LOC xrl0302_desc>Mobile Bomb',
     Display = {
         Abilities = {
             '<LOC ability_cloak>Cloaking',
             '<LOC ability_suicideweapon>Suicide Weapon',
             '<LOC ability_deathaoe>Volatile',
         },
+        AnimationWalk = '/units/XRL0302/XRL0302_Awalk.sca',
+        AnimationWalkRate = 11.5,
+        Mesh = {
+            IconFadeInZoom = 130,
+            LODs = {
+                {
+                    LODCutoff = 100,
+                    ShaderName = 'Insect',
+                },
+                {
+                    AlbedoName = 'xrl0302_lod1_albedo.dds',
+                    LODCutoff = 215,
+                    ShaderName = 'Insect',
+                    SpecularName = 'xrl0302_lod1_specteam.dds',
+                },
+            },
+        },
+        MovementEffects = {
+            Land = {
+                Effects = {
+                    {
+                        Bones = {
+                            'XRL0302',
+                        },
+                        Type = 'GroundKickup01',
+                    },
+                },
+            },
+        },
+        PlaceholderMeshName = 'UXL0011',
+        SpawnRandomRotation = true,
+        TransportAnimation = {
+            {
+                Animation = '/units/XRL0302/XRL0302_Afold01.sca',
+                Weight = 100,
+            },
+        },
+        UniformScale = 0.054,
+    },
+    Economy = {
+        BuildCostEnergy = 3600,    --100e per sec
+        BuildCostMass = 360,    --20m per sec
+        BuildTime = 1800,        --18s
+        MaintenanceConsumptionPerSecondEnergy = 50,
+        TeleportEnergyMod = 0.15,
+        TeleportMassMod = 1,
+        TeleportTimeMod = 0.01,
     },
     General = {
+        Category = 'Utility',
+        Classification = 'RULEUC_MilitaryVehicle',
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_CallTransport = true,
+            RULEUCC_Capture = false,
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Reclaim = false,
+            RULEUCC_Repair = false,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+            RULEUCC_Transport = false,
+        },
+        FactionName = 'Cybran',
+        Icon = 'land',
+        InstantDeathOnSelfDestruct = true,
+        OrderOverrides = {
+            RULEUTC_ProductionToggle = {
+                --  more options in textures.scd\textures\ui\common\game\orders
+                bitmapId = 'overcharge',
+                helpText = 'Detonate',
+            },
+        },
         ToggleCaps = {
             RULEUTC_CloakToggle = true,
+            RULEUTC_ProductionToggle = true,
         },
+        TechLevel = 'RULEUTL_Basic',
+        UnitName = '<LOC xrl0302_name>Fire Beetle',
+        UnitWeight = 1,
     },
     Intel = {
         Cloak = true,
         StealthWaitTime = 1,
         VisionRadius = 15,
     },
+    Interface = {
+        HelpText = '<LOC xrl0302_help>Mobile Bomb',
+    },
+    LifeBarHeight = 0.075,
+    LifeBarOffset = 0.25,
+    LifeBarSize = 0.5,
     Physics = {
-        MaxAcceleration = 4,    --from5 = same speed as deceiver
+        BankingSlope = 0.5,
+        BuildOnLayerCaps = {
+            LAYER_Air = false,
+            LAYER_Land = true,
+            LAYER_Orbit = false,
+            LAYER_Seabed = false,
+            LAYER_Sub = false,
+            LAYER_Water = false,
+        },
+        DragCoefficient = 0.2,
+        Elevation = 0.25,
+        MaxAcceleration = 4,    --from 5 = same speed as deceiver
         MaxBrake = 4,
         MaxSpeed = 4,
+        MaxSpeedReverse = 5,
+        MaxSteerForce = 1000,
+        MeshExtentsX = 0.55,
+        MeshExtentsY = 0.25,
+        MeshExtentsZ = 0.65,
+        MinSpeedPercent = 0,
+        MotionType = 'RULEUMT_Land',
+        TurnRadius = 4,
+        TurnRate = 160,
     },
-    Defense = {
-        Health = 500,
-        MaxHealth = 500,
-        RegenRate = 5,        --from 0 for slow regenerate while chilling in cloak
-    },
+    SelectionSizeX = 0.35,
+    SelectionSizeZ = 0.45,
+    SelectionThickness = 0.83,
     SizeX = 0.45,
     SizeY = 0.5, --make it just a tiny bit bigger so shots dont miss it as much
     SizeZ = 0.65,
+    StrategicIconName = 'icon_land2_bomb',
+    StrategicIconSortPriority = 135,
     Transport = {
         TransportClass = 2,
+        CanFireFromTransport = false,
     },
     Weapon = {
         {
-            Damage = 3000,                    --from 3500
-            DamageRadius = 5.5,               --changed from 4.5
-            MaxRadius = 5,                    --from4.5
-			RangeCategory = 'UWRC_IndirectFire',	--from none, for have visualisation of range
-        },
-        {
-            Damage = 1500,      --add death explosion when is destroyed
-            DamageFriendly = false,     -- its volitail explosion, but to not destroy own army in old yotha style it damage only enemy
-            DamageRadius = 5.5,
+            AboveWaterTargetsOnly = true,
+            CollideFriendly = false,
+            Damage = 3000,--remember to change the DamageMod as well for the death explosion!
+            DamageFriendly = false,
+            DamageMod = 0, --the difference to add to the death explosion (negative for lower damage)
+            DamageRadius = 6,
             DamageType = 'FireBeetleExplosion',
-            DisplayName = 'Death Weapon',
-            DummyWeapon = true,
-            Label = 'DeathWeapon',
-            WeaponCategory = 'Death',
+            DisplayName = 'Suicide',
+            FireOnSelfDestruct = true,
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            FiringTolerance = 180,
+            Label = 'Suicide',
+            MaxRadius = 4.5, --lower than DamageRadius so auto-explode hits multiple units more often
+			RangeCategory = 'UWRC_IndirectFire',	--adding a range ring
+            TargetCheckInterval = 0.1, --from 99999 - always checks its target and will go off if it finds one! the huge TrackingRadius lets it prioritise the right ones.
+            TargetPriorities = { --this is really important as it controls when beetles auto explode or not
+                --'SPECIALHIGHPRI',--probably not needed since its stuff like other beetles
+                'COMMAND',
+                'EXPERIMENTAL LAND',--not air/navy
+                'EXPERIMENTAL STRUCTURE',
+                'TECH3 STRUCTURE ANTIMISSILE', --smd
+                'TECH3 STRUCTURE STRATEGIC', --Nukes
+                'TECH3 STRUCTURE INTELLIGENCE', --Omni
+                'TECH3 MASSPRODUCTION', --t3 mexes+fabs
+                'TECH3 ENERGYPRODUCTION', --t3 pgens
+                'TECH2 MASSEXTRACTION', --t2 mexes
+                'TECH2 STRUCTURE STRATEGIC', --TML
+                'TECH3 LAND',
+                'TECH2 STRUCTURE',
+                'TECH2 LAND',
+                'MOBILE LAND',
+                'STRUCTURE DEFENSE',
+                'STRUCTURE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TrackingRadius = 5, --makes it not explode if something valuable is nearby! use an attack command to override.
+            Turreted = false,
+            WeaponCategory = 'Kamikaze',
         },
     },
     Wreckage = {
-        HealthMult = 0.1,    --from 0,9 because wreck still occur
-        MassMult = 0.1,        --from 0,9 because wreak still occur
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
+        ReclaimTimeMultiplier = 1,
         WreckageLayers = {
             Air = false,
-            Land = false,        --dont leave wreck, but it didnt work for magical reason
+            Land = false,
             Seabed = false,
             Sub = false,
             Water = false,
