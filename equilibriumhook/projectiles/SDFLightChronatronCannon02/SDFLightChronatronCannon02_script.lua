@@ -7,10 +7,8 @@
 --**
 --**  Copyright © 2007 Gas Powered Games, Inc.  All rights reserved.
 --****************************************************************************
-local SmartOverCharge = import('/lua/SmartOverCharge.lua').SmartOverCharge --import our OC code
 
 local oldSDFLightChronatronCannon02 = SDFLightChronatronCannon02
-oldSDFLightChronatronCannon02 = SmartOverCharge( oldSDFLightChronatronCannon02 )--inject our OC code here, so it damages dynamically
 
 SDFLightChronatronCannon02 = Class(oldSDFLightChronatronCannon02) {
     SmartOverChargeScale = 1000, --the upgrade costs a lot so we make it drain less since you can also build multiple of these.
