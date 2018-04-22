@@ -23,7 +23,7 @@ BlueprintId = "xsl0101",
         MaxSpeed = 4.5,
     },
     Veteran = {
-        RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
+        RequirementMult = 2.5,  --decrease vet rate, so it vets at the same speed as tanks
     },
     Weapon = {
         {
