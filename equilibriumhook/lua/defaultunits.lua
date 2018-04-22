@@ -234,7 +234,11 @@ function RebuildUnitInsanity(SuperClass)
 
             wreckage:Rebuild(units)
         end,
-
+        
+        --override OC changes so the structure damage isnt just capped.
+        DoTakeDamage = function(self, instigator, amount, vector, damageType)
+            Unit.DoTakeDamage(self, instigator, amount, vector, damageType)
+        end,
     }    
 end
 
