@@ -31,11 +31,17 @@ function GetTrueEnemyUnitsInCylinder(unit, position, radius, height, categories)
         if dist <= radius then --its less cpu time like this or something
             local vdist = math.abs(position[2] - vpos[2])
             local vArmy = v:GetArmy()
-            if vdist <= radius and unitArmy ~= vArmy and not IsAlly(unitArmy, vArmy) and EntityCategoryContains(categories or categories.ALLUNITS, v) then
+            if vdist <= cylHeight and unitArmy ~= vArmy and not IsAlly(unitArmy, vArmy) and EntityCategoryContains(categories or categories.ALLUNITS, v) then
                 table.insert(RadEntities, v)
             end
         end
     end
 
     return RadEntities
+end
+
+function Get2DDistanceBetweenTwoEntities(entity1, entity2)
+    local pos1 = entity1:GetPosition()
+    local pos2 = entity2:GetPosition()
+    return VDist2(pos1[1], pos1[3], pos2[1], pos2[3])
 end
