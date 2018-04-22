@@ -9,6 +9,7 @@ BlueprintId="xes0205",
         Shield = {
             ShieldSize = 80,    --from 120
             ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
+            ShieldRechargeTime = 32, --protect from balance changes
             ShieldVerticalOffset = -35, --from -50 needed due to the smaller shield size
         },
     },
