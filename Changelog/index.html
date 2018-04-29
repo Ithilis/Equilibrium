@@ -46,7 +46,7 @@
 			This is the first major change of the mod, which compared to normal FAF, removes over 8 different arbitrary rules, making the veterancy system far simpler to understand and predict.
             <p>
                 <ul>
-                <li>Units rreceive veterancy points that are equal to the destroyed unit's mass cost. No exceptions.
+                <li>Units receive veterancy points that are equal to the destroyed unit's mass cost. No exceptions.
                 <li>There are no multipliers for the amount of vet you get based on tech level, unit type or anything else. Every unit gives the amount of veterancy it should.
                 <li>All units gain a veterancy level when they get 200% of their own mass cost in veterancy points.
                 <li>ACUs & Experimentals require only 50% of their mass value to gain a rank.
@@ -448,12 +448,10 @@
             
 			<h4>TML</h4>
             
-			Making it harder to kill an enemy ACUs at close ranges with ACU TML, and preventing it from being able to destroy TMD in some cases. UEF missile get camera vision as one of their faction traits, which can reveal useful info about enemy positions.
+			Slight adjustments to the upgrades for UEF and Sera. UEF missiles get camera vision as one of their faction traits, which can reveal useful info about enemy positions.
             
                 <ul>
                 <li><b>Price:</b> <strike>1500m</strike> → 1200m 60000e 1200bt
-                <li><b>Minimum range:</b> <strike>5</strike> → 15
-                <li><b>Missile HP:</b><strike>3</strike> →  2HP
                 <li><b>UEF:</b> Added camera vision on missile 10aoe 10s
                 </ul>
 			
@@ -478,13 +476,13 @@
 			<h4>UEF upgrades</h4>
             Nano needed a nerf because it was used extremely frequently as a cheap all in strategy after it was overbuffed - now it works with the EQ veterancy system, giving no bonus HP but slightly more regen, helping you fill up the HP after a veterancy.
             <p>Compared to Aeon the UEF shield costs less mass but more energy.
-            <p>The shoulder drones got some quality-of-life improvements to make them nicer to use - they now upgrade alongside tech upgrades for your acu, increasing their build power. They are also cheaper to rebuild than to build.
+            <p>The shoulder drones got some quality-of-life improvements to make them nicer to use - they now upgrade alongside tech upgrades for your ACU, increasing their build power. They are also cheaper to rebuild than to build.
             <p>The Billy is now a more consistent weapon, where it's easier to defend against, but more dangerous against T3 land units. Also gets camera vision as part of the UEF faction traits.
             
                 <ul>
                 <li><b>Drone:</b> 150m 2250e 300bt
                     <ul>
-                    <li>Now scale buildpower with acu tech level, with special effects added so show that. This buildpower bonus is lost if the acu tech upgrade is removed.
+                    <li>Now scale buildpower with ACU tech level, with special effects added so show that. This buildpower bonus is lost if the ACU tech upgrade is removed.
                     <li><b>Buildpower T1/2/3:</b> 5/10/20
                     <li><b>Rebuild cost:</b> 75m 750e 15s (set time)
                     </ul>
@@ -494,11 +492,14 @@
                     </ul>
                 <li><b>Shield:</b> <strike>1500m 112500e 2800bt</strike> → 1400m 126000e 1400bt, 35sHP/s
                 <li><b>Bubble shield:</b> <strike>3000m 450 000e 2800bt</strike> → 3000m 500 000e 2000bt 50sHP/s
+                    <ul>
+                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
+                    </ul>
                 <li><b>Billy nuke:</b> <strike>5400m 315 000e 5600bt</strike> → 5000m 375 000e 2500bt
                     <ul>
                     <li><b>Missile cost:</b> <strike>3000m 316260e 3060bt</strike> → 3000m 300 000e 3000bt
                     <li><b>Billy missile HP:</b> <strike>4</strike> → 3
-                    <li><b>Minimum range:</b> <strike>5</strike> → 25
+                    <li><b>Minimum range:</b> <strike>15</strike> → 25
                     <li><b>Damage:</b> <strike>12000 15aoe + 250dmg on 25aoe</strike> → 9000dmg on 15aoe + 1000dmg on 25aoe
                     <li>Added camera vision on missile 20aoe 10s 
                     </ul>
@@ -684,7 +685,7 @@
             
             These units got quality of life changes as well as slight price adjustments to make their drain values more consistent. The Deceiver has been nerfed a little, and no longer works in transports.
                 <ul>
-                <li>Receive a <a href="http://recordit.co/fuJnY4InBJ"> dummy weapon<a/> so they move with the army when given an attack move, and stop behind your tanks so they dont charge in and die
+                <li>Receive a <a href="http://recordit.co/fuJnY4InBJ"> dummy weapon<a/> so they move with the army when given an attack move, and stop behind your tanks so they don't charge in and die. This is disabled if the unit is assisting another unit, in which case it will follow it regardless.
                 <li><b>5HP/s</b> natural regeneration
                 <p>
                 <li><b>Deceiver:</b> <strike>80m 25e/s</strike> → 84m 50e/s
@@ -692,9 +693,13 @@
                     <li>Stealth field does not work in transport anymore (same as shields)
                     </ul> 
                 <li><b>Parashield:</b> <strike>120m 110e drain</strike> → 105m 100e drain 3500shield
+                    <ul>
+                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
+                    </ul>
                 <li><b>Asylum:</b> <strike>144m 3800shield</strike> → 126m 75e drain 3750shield
                     <ul>
                     <li>Buildable from naval factories
+                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
                     </ul>
                 </ul>
             
@@ -825,7 +830,7 @@
 			<li>Riptide is made usable on land, has more build time so its harder to spam, which makes them less effective against navy.
 			<li>Obsidians with their changed target priorities are now less vulnerable to OC, because you can now spread them and still focus the ACU.
 			<li>The Ilshavoh had a strange bug when it couldn't shoot units right next to it. Now it can.
-            <li>Fire beetles are more effective against land armies and worse for sniping ACUs, their cloak can be combined with deceivers for a potentially deadly weapon. Use with cloaked moles to confuse the enemy!
+            <li>Fire beetles have been reworked to be more effective against land armies and worse for sniping ACUs, they are now much easier to use, and their cloak can be combined with deceivers for a potentially deadly weapon. Use with cloaked moles to confuse the enemy!
 			
                 <ul>
                 <li><b>Riptide:</b> <strike>1980e 1320bt 1700HP 90dps</strike> → 3600e 1800bt 2000HP 120dps
@@ -846,7 +851,8 @@
                 <li><b>Fire beetle:</b> <strike>300m 300hp 0 regen 5sp 3500dmg 4.5aoe 4.5r 22 visual</strike> → 360m 500hp 5HP/s regen 4sp 3000dmg 5.5aoe 5r cloak (-50e/s) 15 visual 
                     <ul>
                     <li>Explosion radius now shown with an <b>indirect fire</b> range indicator
-                    <li><b>Explodes on death:</b> deals 1500 damage and doesn't damage friendly units
+                    <li>Automatic targeting of highest value targets - when near something valuable they explode automatically. Set to hold fire to disable.
+                    <li>Explodes on death and doesn't damage friendly units so its not an issue if you dont ctrlk them
                     <li>Hitbox and target bones updated so units can hit it a little better and shoot the ground less
                     </ul>
                 </ul>
@@ -873,6 +879,7 @@
                 <li><b>Athanah:</b> <strike>540m 4800e 300e drain, 400HP</strike> → 518m 9250e 300e drain, 2000HP buildable from naval factories
                     <ul>
                     <li>Dummy weapon added enabling them to react on attack move
+                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
                     </ul>
                     
                 <li><b>Absolver:</b> <strike>420m 4800e 75r</strike> → 518m 9250e 80r buildable from naval factories
@@ -1035,6 +1042,9 @@
                 <li><b>Torpedoes:</b> <strike>75</strike> → 150dps; Range: <strike>40</strike> → 60
                 <li><b>AA weapon:</b> <strike>110</strike> → 360dps
                 <li><b>Shield: reload time::</b> <strike>160s 64/s</strike> → 120s regen 85/s
+                    <ul>
+                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
+                    </ul>
                 </ul>
 			
 			<h4>Scathis</h4>
@@ -1333,6 +1343,7 @@
                 <li><b>Speed:</b> <strike>15</strike> → 16
                 <li><b>Break Off Distance:</b> <strike>34</strike> → 55
                 <li>All now fire depth-charges with <strike>0aoe</strike> → 0.5 aoe
+                <li>All torpedo bombers now drop consistently and dont overshoot their targets.
                 </ul>
             
             <h4>T2 Fighter/bombers</h4>
@@ -1449,6 +1460,9 @@
                     <ul>
                     <li><strike>4500HP 30GF/264AA dps</strike> → 2500HP 30GF/120AA dps
                     <li> Shield dome:</b> <strike>3000shield 35s recharge time 30regen 8.5size</strike> → 4000shield 50recharge time 25regen 11size
+                        <ul>
+                        <li>Spills over 15% of its damage (unchanged unlike normal FAF)
+                        </ul>
                     </ul>
                 <li><b>Solace:</b> <strike>1650m 55000e 6600bt</strike> → 1625m 48750e 7800bt 
                     <ul>
@@ -1507,10 +1521,11 @@
                 <li><b>Anti-Air:</b> <strike>4x450dps 64r</strike> → 4x500AA 45r
                 <li><b>Crash:</b> 10 000crash dmg 8 aoe
                 <li>Improved turning behaviour over base game so its once again possible to hover conveniently.
+                <li>Greatly improved its ability to drop successfully, it should fail far less often, if ever.
                 </ul>
             <h4>Czar</h4>
             
-			CZAR: It was a useless unit, that could help only due to its massive crash damage. But the CZAR is an experimental fortress, not a mercy. Massive increases to its HP and AA effectiveness help it be at least a little useful against air, and less against land. Now a CZAR can destroy 50-75% of its own mass in asf.
+			It was a useless unit, that could help only due to its massive crash damage. But the CZAR is an experimental fortress, not a mercy. Massive increases to its HP and AA effectiveness help it be at least a little useful against air, and less against land. Now a CZAR can destroy 50-75% of its own mass in asf.
 			<p>It is now able to build units while moving! There is now a separately selectable submodule on the CZAR which builds the units.
                 <ul>
                 <p>The beam damage was changed to be more effective against buildings, and less against moving land units, and depth charge dps was increased so that they’re not absolutely useless. 
