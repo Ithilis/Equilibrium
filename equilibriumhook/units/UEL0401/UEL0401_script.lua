@@ -72,9 +72,39 @@ UEL0401 = Class(TMobileFactoryUnit) {
         self.ProxyAttach:DetachAll(1)
         self.HelperFactory:AttachTo(self.ProxyAttach, 1)
         self.ProxyAttach:AttachTo(self, self.FactoryAttachBone)
-        
         self:SetFactoryRestrictions()
+        
+        --this bits retarded but necessary :/ since theres no detection on when fatty disconnects a factory, we have to have a thread running that checks it.
+        if not self.PreserveThread then
+            self.PreserveThread = self:ForkThread(self.PreserveAttachment)
+        end
     end,
+    
+    
+    PreserveAttachment = function(self)
+        while not self.Dead do
+            WaitSeconds(1)
+            local dist = self:GetDistanceToFactory()
+        end
+    end,
+    
+    --can be triggered by teleportation but it doesnt really do any harm so whatever. still a shame that it has to exist :/
+    GetDistanceToFactory = function(self)
+        if self.ProxyAttach then
+            local fpos = self.ProxyAttach:GetPosition()
+            local mpos = self:GetPosition()
+            local dist = VDist2(mpos[1], mpos[3], fpos[1], fpos[3])
+            if dist > 3.2 then --enough for the fatty to move away a bit.
+            --factory disconnected, time to re-add it.
+                self:CreateHelperFac()
+                WARN('EQ:Proxy factory was disconnected, probably a user error. trying to add it back.')
+            end
+        else
+            WARN('EQ: Mobile factory tried to find proxy but could not! Setting distance to 0')
+            return 0
+        end
+    end,
+    
     
     
     OnGiven = function(self, newUnit)
