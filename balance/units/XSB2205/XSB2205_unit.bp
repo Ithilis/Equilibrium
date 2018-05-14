@@ -36,6 +36,7 @@ BlueprintId = "xsb2205",
             '<LOC ability_depthcharge>Depth Charges',   --from Torpedoes 
             '<LOC ability_personalstealth>Personal Stealth',
         },
+        AnimationDeath = false,--fix it being not rebuildable easily
     },
     Economy = {
         BuildCostEnergy = 10000,
@@ -77,6 +78,7 @@ BlueprintId = "xsb2205",
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
+            TurretBonePitch = 'Turret',
             TurretPitchSpeed = 100,  --from35
             TurretYawSpeed = 100,    --from30
         },
