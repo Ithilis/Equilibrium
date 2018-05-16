@@ -15,15 +15,25 @@ BlueprintId="uas0302",
         VisionRadius = 50,  --from 50
         WaterVisionRadius = 25,
     },
+    Physics = {
+        MaxAcceleration = 3.6,
+        MaxBrake = 3.6,
+        MaxSpeed = 3.6,
+        MaxSpeedReverse = 3.6,
+        TurnRate = 35,
+    },
     Weapon = {
         { --main cannon 1
             DamageRadius = 2.5,        --from 2
+            MaxRadius = 100,
         },
         { --main cannon 2
             DamageRadius = 2.5,        --from 2
+            MaxRadius = 100,
         },
         { --main cannon 3
             DamageRadius = 2.5,        --from 2
+            MaxRadius = 100,
         },
         { --tmd
             CannotAttackGround = false,

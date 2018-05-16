@@ -35,6 +35,7 @@ BlueprintId = "ual0201",
         Damage = 40,            --25dps from 22
         FiringRandomnessWhileMoving = 0.1, --protecting from balance changes
         RateOfFire = 0.55,      -- 1.8s
+        MuzzleVelocity = 30, --protecting from balance changes
         },
     },
 }

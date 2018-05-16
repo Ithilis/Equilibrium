@@ -18,15 +18,21 @@ BlueprintId="xss0302",
     Weapon = {
         {
             DamageRadius = 2.5,    --from2
+            FiringRandomness = 0.3,
             MaxRadius = 130,    --from 128
+            MuzzleVelocity = 30,
         },
         {
             DamageRadius = 2.5,    --from2
+            FiringRandomness = 0.3,
             MaxRadius = 130,    --from 128
+            MuzzleVelocity = 30,
         },
         {
             DamageRadius = 2.5,    --from2
+            FiringRandomness = 0.3,
             MaxRadius = 130,    --from 128
+            MuzzleVelocity = 30,
         },
         {
         },
