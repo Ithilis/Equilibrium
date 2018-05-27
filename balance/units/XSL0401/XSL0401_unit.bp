@@ -25,6 +25,7 @@ BlueprintId = "xsl0401",
     },
     Weapon = {
         {   --face cannon
+            Damage = 8000, --protection from balance changes
             MaxRadius = 45, --protection from balance changes
             MinRadius = 1, --better performance on close range
             MuzzleVelocity = 10,        --from 8
@@ -46,6 +47,7 @@ BlueprintId = "xsl0401",
             TurretYawRange = 90, --protection from balance changes
         },
         {   --gatling cannon
+            Damage = 550,
             FiringTolerance = 5, --better performance at close range when the aimmanip starts messing up
             HeadingArcCenter = 0,
             HeadingArcRange = 90,

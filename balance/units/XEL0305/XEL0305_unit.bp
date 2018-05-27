@@ -21,6 +21,7 @@ BlueprintId = "xel0305",
         MaxAcceleration = 2.0,
         MaxBrake = 2.0,
         MaxSpeed = 2.0,
+        TurnRate = 60,
     },   
     Weapon = {
         {

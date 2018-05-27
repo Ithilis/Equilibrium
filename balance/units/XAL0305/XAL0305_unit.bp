@@ -8,18 +8,35 @@ BlueprintId = "xal0305",
         Health = 450,
         MaxHealth = 450,
     },
+    Display = {
+        UniformScale = 0.08, --reverting from faf 0.095
+    },
     Economy = {
             BuildCostEnergy = 6800,
             BuildCostMass = 680,
             BuildTime = 3400,
     },
+    Physics = {
+        MaxAcceleration = 3,
+        MaxBrake = 3,
+        MaxSpeed = 3,
+        TurnRate = 90,
+    },
+    SelectionSizeX = 0.5,
+    SelectionSizeZ = 0.5,
+    SizeX = 0.8,
+    SizeY = 1.15,
+    SizeZ = 0.6,
     Weapon = {
         {
             Damage = 1000,            --from 950, its 100dps, still more as artilery, 
             DamageRadius = 1.5,
+            FiringTolerance = 0.5, --reverting from faf 2
             FiringRandomnessWhileMoving = 0.5,    --from 0,75
             RateOfFire = 0.1,    --from 7s to 10s
             MaxRadius = 70,
+            MuzzleVelocity = 120, --reverting from faf 90
+            TurretYawSpeed = 100, --from 110
         },
     },
 }

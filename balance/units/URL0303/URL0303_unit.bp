@@ -4,6 +4,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "url0303",
 
+    AI = {
+        TargetBones = {
+            'LegL_B01',
+            'LegR_B01',
+        },
+    },
     Buffs = {
         Stun = {
             Add = {
@@ -40,20 +46,23 @@ BlueprintId = "url0303",
     },
     Weapon = {
         {
-        Damage = 145,                --130dps
-        MaxRadius = 18,
-        RateOfFire = 0.3,
+            Damage = 145,                --130dps
+            MaxRadius = 18,
+            RateOfFire = 0.3,
+            TurretYawSpeed = 180, --revert from faf 180
         },
         {
-        Damage = 40,                --100dps
-        MaxRadius = 23,
-        RateOfFire = 2.5,
+            Damage = 40,                --100dps
+            MaxRadius = 23,
+            RateOfFire = 2.5,
+            MuzzleVelocity = 40,
+            TurretYawSpeed = 90, --revert from faf 120  - this ones extra funny since its mounted on the primary weapon, so its turn rate should be different
         },
         {
-        DisplayName = 'EMP',
-        MaxRadius = 10,
-        TargetRestrictDisallow = 'AIR, UNTARGETABLE, COMMAND',
-        RangeCategory = 'UWRC_IndirectFire',        --from direct
+            DisplayName = 'EMP',
+            MaxRadius = 10,
+            TargetRestrictDisallow = 'AIR, UNTARGETABLE, COMMAND',
+            RangeCategory = 'UWRC_IndirectFire',        --from direct
         },
         {--Added in EQ: missile redirection helper weapon
             BallisticArc = 'RULEUBA_None',
@@ -94,12 +103,6 @@ BlueprintId = "url0303",
             Turreted = true,
             WeaponCategory = 'Defense',
             WeaponUnpacks = false,
-        },
-    },
-    AI = {
-        TargetBones = {
-            'LegL_B01',
-            'LegR_B01',
         },
     },
     CollisionOffsetZ = 0.15,

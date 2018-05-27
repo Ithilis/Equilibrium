@@ -40,20 +40,28 @@ BlueprintId = "xsl0303",
         VisionRadius = 22,
         WaterVisionRadius = 15,    --from 25
     },
+    SizeY = 0.45,
+    SizeZ = 2.0,
     Weapon = {
         { --side gun 1
             Damage = 35,        --140 dps
             MaxRadius = 23,
+            MuzzleVelocity = 35,
             RateOfFire = 2,
+            TurretYawSpeed = 120,
         },
         { --side gun 2
             Damage = 40,
             MaxRadius = 23,
+            MuzzleVelocity = 35,
             RateOfFire = 2,
+            TurretYawSpeed = 120,
         },
         { --long range gun
             Damage = 400,        --100 dps
             MaxRadius = 33,
+            MuzzleVelocity = 30,
+            TurretYawSpeed = 120,
         },
         { --torpedoes
             Damage = 75,                 --2*75 = 150 ; 30dps

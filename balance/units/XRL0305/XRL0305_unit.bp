@@ -39,11 +39,13 @@ BlueprintId = "xrl0305",
         MaxAcceleration = 2.0,
         MaxBrake = 2.0,
         MaxSpeed = 2.0,
+        TurnRate = 60,
     },    
     Weapon = {
         { --main gun
 			Damage = 120,            --300dps
 			MaxRadius = 33,
+            MuzzleVelocity = 35, --revert from faf 42
 			RateOfFire = 2.5,
             TrackingRadius = 1.2, --makes them face their enemy instead of fucking up
 			TurretPitch = 10,
