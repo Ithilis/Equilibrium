@@ -1,7 +1,23 @@
 --Aeon Commander Script
 
 local oldUAL0001 = UAL0001
+local SeabedRevealFile = import('/lua/SeabedReveal.lua') --import our intel relay entity code
+local SeabedReveal = SeabedRevealFile.SeabedReveal --this part applies to the weapon
+local SeabedRevealUnit = SeabedRevealFile.SeabedRevealUnit --this part applies to the unit
+
+ADFDisruptorCannonWeapon = SeabedReveal(ADFDisruptorCannonWeapon) --inject our revealing code in here
+--SDFSinnuntheWeapon = SeabedReveal(SDFSinnuntheWeapon) --inject our revealing code in here
+oldUAL0001 = SeabedRevealUnit(oldUAL0001)
+
 UAL0001 = Class(oldUAL0001) {
+
+    Weapons = {
+        DeathWeapon = Class(DeathNukeWeapon) {},
+        RightDisruptor = Class(ADFDisruptorCannonWeapon) {},
+        ChronoDampener = Class(ADFChronoDampener) {},
+        OverCharge = Class(ADFOverchargeWeapon) {},
+        AutoOverCharge = Class(ADFOverchargeWeapon) {},
+    },
 
 
 
