@@ -103,6 +103,59 @@ Unit = Class(oldUnit) {
         -- We only have a DeathWeapon. Bail.
         return false
     end,
+
+    -- Tell any living instigators that they need to gain some veterancy
+    VeterancyDispersal = function(self, suicide)
+        local bp = self:GetBlueprint()
+        local mass = self:GetVeterancyValue()
+        -- Adjust mass based on current health when a unit is self destructed
+        if suicide then
+            mass = mass * (1 - self:GetHealth() / self:GetMaxHealth())
+        end
+
+        -- Non-combat structures only give 50% veterancy, but not in EQ because our system works outright instead.
+
+        for _, data in self.Instigators do
+            local unit = data.unit
+            -- Make sure the unit is something which can vet, and is not maxed
+            if unit and not unit.Dead and unit.gainsVeterancy and unit.Sync.VeteranLevel < 5 then
+                -- Find the proportion of yourself that each instigator killed
+                local massKilled = math.floor(mass * (data.damage / self.totalDamageTaken))
+                unit:OnKilledUnit(self, massKilled)
+            end
+        end
+    end,
+
+    GetVeterancyValue = function(self)
+        local bp = self:GetBlueprint()
+        local mass = self.BuildCostM or bp.Economy.BuildCostMass --EQ adds its own masscost tracking so no need to have crazy shit in here.
+        local fractionComplete = self:GetFractionComplete()
+        -- Allow units to count for more or less than their real mass if needed. EQ removes VeteranImportanceMult since we dont need it
+        return mass * fractionComplete + (self.cargoMass or 0)
+    end,
+
+    CalculateVeterancyLevel = function(self, massKilled)
+        local bp = self:GetBlueprint()
+
+        -- Limit the veterancy gain from one kill to one level worth, or we would if it caused a problem in EQ
+        --massKilled = math.min(massKilled, self.Sync.myValue)
+
+        -- Total up the mass the unit has killed overall, and store it
+        self.Sync.totalMassKilled = math.floor(self.Sync.totalMassKilled + massKilled)
+
+        -- Calculate veterancy level. By default killing your own mass value (Build cost mass * 2 by default) grants a level
+        local newVetLevel = math.min(math.floor(self.Sync.totalMassKilled / self.Sync.myValue), 5)
+
+        -- Bail if our veterancy hasn't increased
+        if newVetLevel == self.Sync.VeteranLevel then return end
+
+        -- Update our recorded veterancy level
+        self.Sync.VeteranLevel = newVetLevel
+
+        self:SetVeteranLevel(self.Sync.VeteranLevel)
+    end,
+
+
 -------------------------------------------------------------------------------------------
 -- DAMAGE
 -------------------------------------------------------------------------------------------
