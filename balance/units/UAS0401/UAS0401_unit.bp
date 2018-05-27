@@ -52,6 +52,7 @@ BlueprintId="uas0401",
             RateOfFire = 0.08,    --from 0,1 = 12,5s = 600dps
             DamageRadius = 7,    --from 5
             Damage = 7500,
+            MuzzleVelocity = 28, --reverting from fafs 35
         },
         { --depth charges
             Damage = 275,        --from 350 = 330dps
