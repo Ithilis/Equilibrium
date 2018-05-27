@@ -112,7 +112,7 @@ OverchargeProjectile = Class() {
     
     CalcEffectiveHP = function(self, targetType, targetEntity)
         --Find out how much damage we want to deal to the entity. Assumes Unit or Shield.
-        
+        if targetEntity.IsDead == true then WARN('EQ: OC hit a dead unit. Assuming it has 0 hp. Not really an error') return 0 end --dead things dont have health
         local effectiveHealth = targetEntity:GetHealth() -- our target health, unit or shield
         
         --the damage scales so that it doesnt overkill the target and waste energy, and it always spends enough to kill it, or try.
