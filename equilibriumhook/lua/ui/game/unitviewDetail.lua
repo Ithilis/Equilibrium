@@ -87,7 +87,7 @@ function WrapAndPlaceText(air, physics, weapons, abilities, text, control)
                             
                             local trueDamage = weapon.Damage*(weapon.DoTPulses or 1) + (weapon.InitialDamage or 0)
                             --beam weapons are a thing and do their own thing. yeah good luck working out that.
-                            trueDamage = math.max((math.floor((weapon.BeamLifetime or 0) / ((weapon.BeamCollisionDelay or 0)+0.1))-1)*weapon.Damage, trueDamage)
+                            trueDamage = math.max((math.floor((weapon.BeamLifetime or 0) / ((weapon.BeamCollisionDelay or 0)+0.1))+1)*weapon.Damage, trueDamage)
                             local salvoDamage = trueSalvoSize * trueDamage
                             local trueDPS = (salvoDamage / trueReload)
                             
