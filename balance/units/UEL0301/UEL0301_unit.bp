@@ -60,6 +60,7 @@ BlueprintId = "uel0301",
             BuildCostMass = 400,
             BuildTime = 1000,
             NewOmniRadius = 80,
+            NewRadarRadius = 120,
             NewVisionRadius = 45,
         },
         Shield = {

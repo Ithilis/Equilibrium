@@ -239,6 +239,49 @@ function RebuildUnitInsanity(SuperClass)
         DoTakeDamage = function(self, instigator, amount, vector, damageType)
             Unit.DoTakeDamage(self, instigator, amount, vector, damageType)
         end,
+        
+        --replace this so that everything rotates to nearest 90 and not just whatever
+        RotateTowardsEnemy = function(self)
+            local bp = self:GetBlueprint()
+            local army = self:GetArmy()
+            local brain = self:GetAIBrain()
+            local pos = self:GetPosition()
+            local x, y = GetMapSize()
+            local threats = {{pos = {x / 2, 0, y / 2}, dist = VDist2(pos[1], pos[3], x, y), threat = -1}}
+            local cats = EntityCategoryContains(categories.ANTIAIR, self) and categories.AIR or (categories.STRUCTURE + categories.LAND + categories.NAVAL)
+            local units = brain:GetUnitsAroundPoint(cats, pos, 2 * (bp.AI.GuardScanRadius or 100), 'Enemy')
+            for _, u in units do
+                local blip = u:GetBlip(army)
+                if blip then
+                    local on_radar = blip:IsOnRadar(army)
+                    local seen = blip:IsSeenEver(army)
+
+                    if on_radar or seen then
+                        local epos = u:GetPosition()
+                        local threat = seen and (u:GetBlueprint().Defense.SurfaceThreatLevel or 0) or 1
+
+                        table.insert(threats, {pos = epos, threat = threat, dist = VDist2(pos[1], pos[3], epos[1], epos[3])})
+                    end
+                end
+            end
+
+            table.sort(threats, function(a, b)
+                if a.threat <= 0 and b.threat <= 0 then
+                    return a.threat == b.threat and a.dist < b.dist or a.threat > b.threat
+                elseif a.threat <= 0 then return false
+                elseif b.threat <= 0 then return true
+                else return a.dist < b.dist end
+            end)
+
+            local t = threats[1]
+            local rad = math.atan2(t.pos[1]-pos[1], t.pos[3]-pos[3])
+            local degrees = rad * (180 / math.pi)
+            
+            --EQ:only bit we change, just remove the if condition
+            degrees = math.floor((degrees + 45) / 90) * 90
+
+            self:SetRotation(degrees)
+        end,
     }    
 end
 
