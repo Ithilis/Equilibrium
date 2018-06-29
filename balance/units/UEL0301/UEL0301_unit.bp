@@ -27,6 +27,7 @@ BlueprintId = "uel0301",
         'OVERLAYDIRECTFIRE',
         'OVERLAYCOUNTERINTEL',
         'OVERLAYRADAR',
+        --'OVERLAYSONAR',--overlays on top of radar so not really needed.
         'USEBUILDPRESETS',
         'BUBBLESHIELDSPILLOVERCHECK',
     },
@@ -89,6 +90,7 @@ BlueprintId = "uel0301",
             BuildTime = 1000,
             NewOmniRadius = 80,
             NewRadarRadius = 150,
+            NewSonarRadius = 150,
             NewVisionRadius = 45,
         },
         Shield = {
@@ -190,8 +192,10 @@ BlueprintId = "uel0301",
         ActiveIntel = {
             Omni = true,
             Radar = true,
+            Sonar = true,
         },
         RadarRadius = 16,
+        SonarRadius = 16,
     },
     Weapon = {
         {

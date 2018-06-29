@@ -85,13 +85,17 @@ UEL0301 = Class(OldUEL0301) {
             self:SetIntelRadius('Vision', bp.NewVisionRadius or 45)
             self:SetIntelRadius('Omni', bp.NewOmniRadius or 80)
             self:SetIntelRadius('Radar', bp.NewRadarRadius or 150)
+            self:SetIntelRadius('Sonar', bp.NewSonarRadius or 150)
             self:EnableUnitIntel('Enhancement', 'Radar')
+            self:EnableUnitIntel('Enhancement', 'Sonar')
         elseif enh == 'SensorRangeEnhancerRemove' then
             local bpIntel = self:GetBlueprint().Intel
             self:SetIntelRadius('Vision', bpIntel.VisionRadius or 26)
             self:SetIntelRadius('Omni', bpIntel.OmniRadius or 26)
             self:SetIntelRadius('Radar', 0)
+            self:SetIntelRadius('Sonar', 0)
             self:DisableUnitIntel('Enhancement', 'Radar')
+            self:DisableUnitIntel('Enhancement', 'Sonar')
         elseif enh == 'RadarJammer' then
             self:SetIntelRadius('Jammer', bp.NewJammerRadius or 26)
             self.RadarJammerEnh = true 
