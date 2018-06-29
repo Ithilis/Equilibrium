@@ -26,16 +26,16 @@ BlueprintId = "urb4207",
         Shield = {
             ShieldMaxHealth = 15000,
             ShieldRechargeTime = 22,
-            ShieldRegenRate = 140,
-            ShieldSize = 40,
+            ShieldRegenRate = 200,
+            ShieldSize = 44,
             ShieldVerticalOffset = -5,
         },
     },
     Economy = {
-        BuildCostEnergy = 75000, --32000 on its own
-        BuildCostMass = 4000, --1600 on its own
+        BuildCostEnergy = 59000, --16000 on its own---------------------
+        BuildCostMass = 3200, --800 on its own
         BuildRate = 25,
-        BuildTime = 3900, --1000 on its own
+        BuildTime = 3400, --500 on its own
         MaintenanceConsumptionPerSecondEnergy = 500,
         DifferentialUpgradeCostCalculation = true, 
     },
