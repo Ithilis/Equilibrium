@@ -82,12 +82,16 @@ UEL0301 = Class(OldUEL0301) {
             self.NewDeathDamage = (bp.NewDeathDamage or 2500)
             --we dont use self:GetBlueprint().Weapon[2].Damage because thats set to 5000 for some reason
         elseif enh == 'SensorRangeEnhancer' then
-            self:SetIntelRadius('Vision', bp.NewVisionRadius or 104)
-            self:SetIntelRadius('Omni', bp.NewOmniRadius or 104)
+            self:SetIntelRadius('Vision', bp.NewVisionRadius or 45)
+            self:SetIntelRadius('Omni', bp.NewOmniRadius or 80)
+            self:SetIntelRadius('Radar', bp.NewRadarRadius or 150)
+            self:EnableUnitIntel('Enhancement', 'Radar')
         elseif enh == 'SensorRangeEnhancerRemove' then
             local bpIntel = self:GetBlueprint().Intel
             self:SetIntelRadius('Vision', bpIntel.VisionRadius or 26)
             self:SetIntelRadius('Omni', bpIntel.OmniRadius or 26)
+            self:SetIntelRadius('Radar', 0)
+            self:DisableUnitIntel('Enhancement', 'Radar')
         elseif enh == 'RadarJammer' then
             self:SetIntelRadius('Jammer', bp.NewJammerRadius or 26)
             self.RadarJammerEnh = true 
