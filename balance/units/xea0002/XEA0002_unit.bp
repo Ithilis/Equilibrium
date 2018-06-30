@@ -22,4 +22,8 @@ BlueprintId = "xea0002",
             DisplayName = 'Air Crash',
         },
     },
+    Wreckage = {
+        HealthMult = 0.9,
+        MassMult = 0.45,        --from 0.9
+    },
 }
