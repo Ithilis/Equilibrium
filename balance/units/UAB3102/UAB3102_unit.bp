@@ -4,6 +4,12 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uab3102",
 
+    AI = {
+        TargetBones = { --make it easier to hit with beams
+            'Tower_01',
+            'UAB3102'
+        }
+    },
     Economy = {
         BuildCostEnergy = 500,    --from 544
         BuildCostMass = 50,        --from 64
@@ -13,4 +19,5 @@ BlueprintId="uab3102",
     Intel = {
         WaterVisionRadius = 60,
     },
+    SizeY = 0.7, --make it easier to hit with beams
 }

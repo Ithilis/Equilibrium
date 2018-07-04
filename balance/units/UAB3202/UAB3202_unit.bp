@@ -14,4 +14,5 @@ BlueprintId="uab3202",
     Intel = {
         WaterVisionRadius = 80,
     },
+    SizeY = 0.7, --make it easier to hit with beams
 }
