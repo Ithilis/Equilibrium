@@ -126,6 +126,17 @@ BlueprintId = "url0001",
         },
         { --Laser
             MaxRadius = 23,  --from 22
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'COMMAND',
+                'MOBILE EXPERIMENTAL',
+                'MOBILE TECH3',
+                'MOBILE TECH2',
+                'MOBILE TECH1',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --torpedoes
             Damage = 125, --from 4*250 = 1000
