@@ -7,14 +7,31 @@ local SeabedReveal = SeabedRevealFile.SeabedReveal --this part applies to the we
 local SeabedRevealUnit = SeabedRevealFile.SeabedRevealUnit --this part applies to the unit
 
 CCannonMolecularWeapon = SeabedReveal(CCannonMolecularWeapon) --inject our revealing code in here
---SDFSinnuntheWeapon = SeabedReveal(SDFSinnuntheWeapon) --inject our revealing code in here
 oldURL0001 = SeabedRevealUnit(oldURL0001)
 URL0001 = Class(oldURL0001) {
- Weapons = {
+    Weapons = {
         DeathWeapon = Class(DeathNukeWeapon) {},
         RightRipper = Class(CCannonMolecularWeapon) {},
         Torpedo = Class(CANTorpedoLauncherWeapon) {},
+        MLG = Class(CDFHeavyMicrowaveLaserGeneratorCom) {
+            DisabledFiringBones = {'Turret_Muzzle_03'},
+
+            SetOnTransport = function(self, transportstate)
+                CDFHeavyMicrowaveLaserGeneratorCom.SetOnTransport(self, transportstate)
+                self:ForkThread(self.OnTransportWatch)
+            end,
+
+            OnTransportWatch = function(self)
+                while self:GetOnTransport() do
+                    self:PlayFxBeamEnd()
+                    self:SetWeaponEnabled(false)
+                    WaitSeconds(0.3)
+                end
+            end,
         },
+        OverCharge = Class(CDFOverchargeWeapon) {},
+        AutoOverCharge = Class(CDFOverchargeWeapon) {},
+    },
 
 
 
