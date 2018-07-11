@@ -119,10 +119,9 @@
 		
 		<div id="factories" class="card">
 			<h3><img src="http://wiki.faforever.com/images/7/77/Cybran_T1_Land_Factory.png">Factories</h3>
-			<p>Unit and Factory stats have been normalized to drain a constant amount of resources, so now it's much easier to predict how many factories you can support on X amount of eco.
-			<p>On top of the above change, land factories have an increased buildpower so that they are more efficient than assisting engineers. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
-			<p>Unassisted factories of the same tech level now drain resources at the same rate regardless of what is being built. A higher tech factory building lower tech units drains at the same rate, but builds units faster.
-			<p>Building/upgrading a factory has the same drain rate as building units inside the upgraded factory
+			<p>In general, there are few changes to factory build rates.
+			<p>However, land factories have an increased buildpower so that they are more efficient than assisting engineers. This speeds up the game slightly, and lets you put out a strong spam of any tech level if you commit to it.
+			<p>Building/upgrading a factory has the same drain rate as building units inside the upgraded factory.
 			<p>Units built inside the factory will be orientated to the closest exist just before they leave so if you change your rally point mid-construction it will not cause the unit to be stuck turning around on the build platform.
             
             <p><div><span title="Click to expand" class="SpoilerDarkCollapsed"><b>Factory Economy Changes</b></span>
@@ -130,8 +129,8 @@
                 <p><b>Factory Build Rates - T1 - T2 - T3</b>
                 <ul>
                 <li><b>Land:</b> <strike>20/40/90</strike> → 25/50/100 
-                <li><b>Air:</b> <strike>20/40/120</strike> → 20/40/120 
-                <li><b>Navy:</b> <strike>20/60/120</strike> → 20/60/180 
+                <li><b>Air:</b> <strike>20/40/120</strike> → 20/40/120 (unchanged)
+                <li><b>Navy:</b> <strike>20/60/120</strike> → 20/60/180 (unchanged)
                 <li><b>Quantum gateway:</b> <strike>120</strike> → 100 
                     <ul>
                     <li>Changed strategic icon to a factory type rather than structure. 
@@ -364,10 +363,12 @@
 		<div id="acus" class="card">
 			<h3><img src="http://wiki.faforever.com/images/7/7b/Cybran_ACU.png">ACUs & Upgrades</h3>
 			
-            <h4>ACU Price</h4>
-			To make the ACU eventually repairable and work correctly with the new veterancy system.
+            <h4>General</h4>
+			ACU prices are changed to make them eventually repairable and work correctly with the new veterancy system.
             <ul>
 			<li><b>ACU Cost</b> (not normally seen/used): <strike>18Km 50Ke 6M bt</strike> → 2 000m 48000e 20 000bt
+			<li>Other units now can detect ACUs firing at them from the water, if they are in vision range, instead of them being invisible.
+			<li>Since they were nerfed in the official FAF patch and not in EQ, upgrades are stronger in Equilibrium because ACUs dont get instant heal from veterancy, so they can have a consistent performance and be strong throughout the game, even well into the T3 stage.
             </ul>
 			
 			
@@ -457,13 +458,18 @@
 			
 			<h4>Aeon upgrades</h4>
             Chrono: lowered price and effectiveness, making it a safer, more consistent upgrade, hoping that it will be seen more in game, because it’s an interesting option that is underused.
+            <p>Shield was mostly kept the same from old patches, so heavy shield is now stronger than current FAF.
                 <ul>
                 <li><b>Omni Sensor:</b> <strike>10000e 500bt</strike> → 8000e 400bt
                 <li><b>Shield:</b> <strike>35000e 8000HP 150e/s drain</strike> → 40000e 10000HP 100e/s drain
                     <ul>
                     <li><b>Recharge time from depletion:</b> <strike>65s</strike> → 120s
+                    <li><b>Price:</b> <strike>1300m 1300bt</strike> → 1000m 1000bt
                     </ul>
-                <li><b>Heavy Shield:</b> <strike>4500m 1Me 3500bt 44sHP/s</strike> → 3600m 480Ke 2400bt 60sHP/s
+                <li><b>Heavy Shield:</b> <strike>2300m 123750e 2450bt</strike> → 3600m 480Ke 2400bt
+                    <ul>
+                    <li><strike>25000HP 32sHP/s</strike> → 44000HP 60sHP/s
+                    </ul>
                 <li><b>Chrono dampener:</b> <strike>1750m 52500e 1225bt 200e/shot</strike> → 1500m 60 000e 1500bt drain 400e/shot
                     <ul>
                     <li><strike>35r, 3.5s stun, 5s reload time</strike> → 33r, 2s stun, 4s reload time
@@ -488,12 +494,15 @@
                     </ul>
                 <li><b>Nano:</b> 32000e 800bt
                     <ul>
-                    <li><strike>2000 bonus HP, 40HP/s</strike> → no bonus HP, 50HP/s
+                    <li><strike>1500 bonus HP, 40HP/s</strike> → no bonus HP, 50HP/s
                     </ul>
-                <li><b>Shield:</b> <strike>1500m 112500e 2800bt</strike> → 1400m 126000e 1400bt, 35sHP/s
-                <li><b>Bubble shield:</b> <strike>3000m 450 000e 2800bt</strike> → 3000m 500 000e 2000bt 50sHP/s
+                <li><b>Shield:</b> <strike>2300m 112500e 2800bt 35sHP/s</strike> → 1400m 126000e 1400bt 35sHP/s
                     <ul>
-                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
+                    <li><b></b><strike>19000HP 30sHP/s </strike> → 24000HP 35sHP/s (reverting FAF changes)
+                    </ul>
+                <li><b>Bubble shield:</b> <strike>3600m 450 000e 3400bt</strike> → 3000m 500 000e 2000bt 50sHP/s
+                    <ul>
+                    <li>Spills over 15% of its damage (reverting FAF changes)
                     </ul>
                 <li><b>Billy nuke:</b> <strike>5400m 315 000e 5600bt</strike> → 5000m 375 000e 2500bt
                     <ul>
@@ -513,6 +522,9 @@
             
                 <ul>
                 <li><b>Laser:</b> <strike>4000m 560 000e</strike> → 4200m 560 000e
+                    <ul>
+                    <li>Improved targeting priorities to target ACUs and experimentals before T1/2 units
+                    </ul>
                 <li><b>Torpedo:</b> <strike>37500e</strike> → 45000e adjusted firing pattern
                     <ul>
                     <li>Having the gun upgrade increases its range by <b>10</b>
@@ -527,15 +539,15 @@
 			
 			<h4>Seraphim upgrades</h4>
             
-            Restoration Field: It's hard to compare the Sera Regen field to gun, so now its a choice between having a stronger acu, or a stronger army. More HP and regen to allow the acu to stay in fights longer. The max regeneration on advanced restoration field was reduced to prevent abusive cases where a couple of destroyers could easily beat battleships.
+            Restoration Field: It's hard to compare the Sera Regen field to gun, so now its a choice between having a stronger ACU, or a stronger army. More HP and regen to allow the acu to stay in fights longer. The max regeneration on advanced restoration field was reduced to prevent abusive cases where a couple of destroyers could easily beat battleships.
             <p>Heavy gun: The range increase and price change helps it be used more often in the game, because it was simply too expensive for what it did.
             
                 <ul>
                 <li><b>Regen field price:</b> <strike>600m 4500e 600bt</strike> 600m 18000e 600bt 
                     <ul>
                     <li>Fixed bug where regen rate gets reduced to its maximum for units that have more regen.
-                    <li>Fix bug with regen aura that causes wierd behaviour when near another Seraphim acu with advanced regen aura.
-                    <li><strike>+1000HP 0HP/s</strike> → +1500HP +15HP/s regeneration for acu
+                    <li>Fix bug with regen aura that causes wierd behaviour when near another Seraphim ACU with advanced regen aura.
+                    <li><strike>+1000HP 0HP/s</strike> → +1500HP +15HP/s regeneration for ACU
                     <li><strike>0%</strike> → +6,25% new max HP for units in <strike>22</strike> → 23r
                     <li><b>Min/Max regen:</b> 10/20HP/s
                     </ul>
@@ -547,12 +559,15 @@
                     <li><b>Regeneration  of units’ total HP:</b> <strike>1,11111%</strike> → 1%
                     <li><b>Min/Max regen:</b> <strike>0/200</strike> → 10/60
                     </ul>
-                <li><b>Nano-repair system:</b> <strike>1200m 42000e 1200bt</strike> → 1500m 60000e 1500bt
+                <li><b>Nano-repair system:</b> <strike>1800m 56000e 1800bt</strike> → 1500m 60000e 1500bt
                     <ul>
-                    <li>Adds max <strike>3000HP</strike> → 3500HP
+                    <li>Adds max <strike>2000HP</strike> → 3500HP
                     </ul>
                 <li><b>Advanced Nano-repair system:</b> <strike>23 000HP 210HP/s 4200bt</strike> → 15 000HP 185HP/s regen 3000bt
-                <li><b>Heavy Gun:</b> <strike>4800m 270 000e 4200bt 23r</strike> → 3000m 300 000e 2000bt 26r
+                <li><b>Heavy Gun:</b> <strike>5400m 270 000e 4600bt 23r</strike> → 3000m 300 000e 2000bt 26r
+                    <ul>
+                    <li><b>Additional Damage:</b> <strike>620</strike> → 400
+                    </ul>
                 </ul>
 
 			
@@ -626,7 +641,7 @@
                 <ul>
                 The ghetto function is a fun feature, like mantis repair. It's nearly useless but maybe it can have a creative use sometimes. Their range is reduced in transports so they don't outrange interceptors, and can't kite them.
                 <p>
-                <li><b>Price:</b> <strike>55m 275e 220bt; 30/32dps; 3 speed; 45 muzzle velocity; 250-360HP</strike> → 50m 250e 250bt; 20/21dps; 3.5 speed; 60 Muzzle Velocity
+                <li><b>Price:</b> <strike>50m 275e 220bt; 30/32dps; 3 speed; 45 muzzle velocity; 250-360HP</strike> → 50m 250e 250bt; 20/21dps; 3.5 speed; 60 Muzzle Velocity
 				<li>Dummy weapon added enabling them to react on attack move
                 <li><b>Thistle:</b> 305HP
 				<li><b>Ia-istle:</b> 310HP
@@ -661,14 +676,14 @@
 			<h4>Tanks</h4>
 			T1 now tanks live longer, so take a longer time to defend against pushes. Also they are a better meat shield for higher tech units, so they are more useful in late game. The overall gameplay with T1 land is largely unchanged, with a couple of tweaks here and there to make it more defined.
             <p>Speed decreased to let LABs have more room for raiding.
-            <p>Manits now have more build rate so the assist feature is used more often.
+            <p>Mantis now have more build rate so the assist feature is used more often.
                 <ul>
                 <li><b>Mantis:</b> <strike>52m 273e 260bt; 270HP 26dps 3,7sp, 1br</strike> → 55m 275e 275bt; 330HP 23.3dps 3.7sp 1.5br
                     <ul>
                     <li><b>Icon changed:</b>  <strike>bot</strike> → tank
                     </ul>
                 <li><b>Thaam:</b> <strike>54m 270e 270bt; 280HP 24dps 3,5sp</strike> → 55m 275e 275bt; 360HP 23dps 3.4sp
-                <li><b>Aurora:</b> <strike>52m 260e 260bt; 140HP 26dps 26r 1,5s r.t 2.9sp</strike> → 55m 275e 275bt; 200HP 25dps 23r 1.8s reload time 2.8sp
+                <li><b>Aurora:</b> <strike>52m 260e 260bt; 140HP 26dps 26r 1.5s reload time 2.9sp</strike> → 55m 275e 275bt; 200HP 25dps 23r 1.8s reload time 2.8sp
                 <li><b>Striker:</b> <strike>56m 266e 280bt; 300HP 24dps 3,4sp</strike> → 55m 275e 275bt; 400HP 20dps 3.3sp
                 </ul>
 			
@@ -848,8 +863,9 @@
                 <li><b>Ilshavoh:</b> Turn rate: <strike>70°</strike> → 180°; TurretPitchRange: <strike>60°</strike> → 90
 
                 
-                <li><b>Fire beetle:</b> <strike>300m 300hp 0 regen 5sp 3500dmg 4.5aoe 4.5r 22 visual</strike> → 360m 500hp 5HP/s regen 4sp 3000dmg 5.5aoe 5r cloak (-50e/s) 15 visual 
+                <li><b>Fire beetle:</b> <strike>300m 500hp 0 regen 5sp 1500dmg 6aoe 22 visual</strike> → 360m 500hp 5HP/s regen 4sp 3000dmg 5.5aoe cloak (-50e/s) 15 visual 
                     <ul>
+                    <li>Stun on explosion removed
                     <li>Explosion radius now shown with an <b>indirect fire</b> range indicator
                     <li>Automatic targeting of highest value targets - when near something valuable they explode automatically. Set to hold fire to disable.
                     <li>Explodes on death and doesn't damage friendly units so its not an issue if you dont ctrlk them
@@ -899,16 +915,18 @@
                 </ul>
 			
                 <ul>
-                <li><b>Titan:</b> <strike>480m 5400e 3400HP (60s recharge 9HP/s) 166dps 20r 4sp 25e drain</strike> → 520m 6500e 2000HP+1000shield (45s recharge 6HP/s) 210dps 23r 3.5speed
+                <li><b>Titan:</b> <strike>480m 5400e 3150HP (15s recharge 20HP/s) 166dps 22r 3.8sp 25e drain</strike> → 520m 6500e 2000HP+1000shield (45s recharge 6HP/s) 210dps 23r 3.5speed
                     <ul>
                     <li><b>Shield drain:</b> 1e/s
+                    <li><b>Turn rate:</b> <strike>120</strike> → 150 (reverting FAF changes)
                     </ul>
                 
                 
-                <li><b>Loyalist:</b> <strike>480m 5400e 3100HP 190dps 25r 4sp</strike> → 520m 6500e 2700HP 100+130dps 23/18r 3.7sp
+                <li><b>Loyalist:</b> <strike>480m 5400e 3000HP 185dps 25r 3.8sp</strike> → 520m 6500e 2700HP 100+130dps 23/18r 3.7sp
                     <ul>
-                    <li><b>Stun on death:</b> <strike>2s</strike> → 1.5s
+                    <li><b>Stun on death:</b> <strike>1.4s</strike> → 1.5s
                     <li>Range of the EMP blast is now denoted with the <b>indirect fire</b> range ring
+                    <li><b>Turret Turn rate:</b> <strike>120</strike> → 180 (reverting FAF changes)
                     <li>Changed display ability from volatile to EMP
                     <li>The missile redirection code is greatly improved. Redirected missiles won't hit the ground, will be stopped by enemy shields, shot down by enemy TMD, and can be redirected again by enemy Loyalists. Possibly in a never ending cycle of TML bounces.
                     </ul>
@@ -921,13 +939,14 @@
 
 			
                 <ul>
-                <li><b>Seraphim:</b> <strike>3sp 116/140dps 5/14,3s reload time 65/75r 0aoe 0.8/0.6fr while moving</strike> → 2.1sp 120dps(1.5aoe) 0.6 fr while moving or 90dps(1aoe) 38/75r 0.4fr while moving, 5/15s reload time
+                <li><b>Seraphim:</b> <strike>3sp 116/140dps 5/14.3s reload time 65/75r 0aoe 0.8/0.6fr while moving</strike> → 2.1sp 120dps(1.5aoe) 0.6 fr while moving or 90dps(1aoe) 38/75r 0.4fr while moving, 5/15s reload time
                     <ul>
                     <li>No longer has any penalty to movement speed, it always moves at a constant speed irrespective of long or short range mode.
                     <li>Long range mode is on by default and is no longer reset when entering a transport.
                     <li>The snipers projectiles are less likely to hit the ground instead of their target.
                     </ul>
-                <li><b>Aeon:</b> <strike>135dps 7s reload time 70r 0aoe 0,75fr while moving</strike> → 450HP 100dps 10s reload time 70r 1.5aoe 0.5fr while moving
+                <li><b>Aeon:</b> <strike>135dps 7s reload time 70r 0aoe 0.75fr while moving</strike> → 450HP 100dps 10s reload time 70r 1.5aoe 0.5fr while moving
+                <li><b>Max Speed:</b> <strike>2.85</strike> → 3 (reverting FAF changes)
                 </ul>
 			
 			<h4>Mobile AA</h4>
@@ -947,14 +966,14 @@
 			T3 Tanks have been tweaked to be more convenient, with slight adjustments to how they interact with eachother.
             <p>
             <li>Othuums now need micro to win against Harbingers. Also they got their much needed buff.
-            <li>Harbinger get more buildpower because reclaim rate was decreased.
+            <li>Harbingers get more buildpower because reclaim rate was decreased.
 			
                 <ul>
-                <li><b>Othuum:</b> <strike>6700HP 2.5sp 300+100dps 25/32r</strike> → 6000HP 2.6sp 140+100dps 23/33r
+                <li><b>Othuum:</b> <strike>5000HP 2.5sp 156+131dps 25/32r</strike> → 6000HP 2.6sp 140+100dps 23/33r
                     <ul>
                     <li><b>Torpedoes:</b> switched to depth charges 75dmg every 5s on 20r
                     </ul>
-                <li><b>Harbinger:</b> <strike>5900HP (60s recharge 9HP/s) 375dps 3br 25e/s drain</strike> → 3000HP+1500shield (45s recharge 6HP/s) 275dps 10br 1e/s drain
+                <li><b>Harbinger:</b> <strike>3050HP+1000shield (40s recharge 30HP/s) 320dps 3br 25e/s drain</strike> → 3000HP+1500shield (45s recharge 6HP/s) 275dps 10br 1e/s drain
                 </ul>
 			
 			
@@ -974,19 +993,20 @@
 			
 			
 			<h4>1000 Mass Category</h4>
-			Removed unfair advantage from just spamming heavy bots, now when you use range advantage they win, if not, you draw or lose against equal mass against units in the 840m category.
+			In Equilibrium, when you use the range advantage of heavy bots they win, if not, you draw or lose against equal mass against units in the 840m category.
+			<p>Compared to the FAF rebalance, they are cheaper and weaker by a similar amount, so they are more versatile early on, and aren't so concentrated in one spot.
             <li>Brick: Increased its firing cone a little so it can fire more nicely.
                 <ul>
                 <li><b>Brick:</b> <strike>1280m 14 000e 6000bt</strike> → 1000m 10 000e 5000bt
                     <ul>
-                    <li><strike> 9000HP 375dps 35r</strike> →  5900HP 300dps 33r
+                    <li><strike> 7500HP 312.5dps 32r</strike> →  5900HP 300dps 33r
                     <li><strike>turret pitch 0, turret pitch range 75</strike> → turret pitch 10, turret pitch range 90
                     <li>Torpedoes switched to depth charges: <strike>15-32r</strike> → 25r firing pattern adjusted.
                     <li>Improved turret behaviour, now it wont stop shooting in some cases when you are trying to micro it.
                     </ul>
                 <li><b>Percival:</b> <strike>1280m 14000e 6000bt</strike> → 1000m 10000e 5000bt 
                     <ul>
-                    <li><strike>9300HP 400dps 4s reload time 35r</strike> →  6000HP 300dps 33r 3s reload time
+                    <li><strike>7200HP 334dps 4s reload time 32r</strike> →  6000HP 300dps 33r 3s reload time
                     <li><b>Movement speed: </b><strike>2.0</strike> →  2.1
                     <li>Improved turret behaviour, now it wont stop shooting in some cases when you are trying to micro it.
                     </ul>
@@ -1010,17 +1030,18 @@
 			
             <h4>Monkeylord</h4>
                 <ul>
-                <li><b>Price:</b> <strike>19 000m 15 750bt 45000HP -400e/s</strike> → 20 000m 33 333bt 40 000HP -250e/s
+                <li><b>Price:</b> <strike>20 000m 27 500bt 45000HP -400e/s</strike> → 20 000m 33 333bt 40 000HP -250e/s
                 <li>The laser turret now start turning at units before they are in range so its not stuck turning while being shot at.
                 </ul>
 			
             <h4>Ythotha</h4>
 			Its price increased because Ion storm is now extremely useful for supporting your army.
                 <ul>
-                <li><b>Price:</b>  <strike>25 000m 18 750bt 67 000HP</strike> → 28 000m 46666bt 60 000HP
-                <li><b>Direct fire range:</b>  <strike>47 (changed by balance team)</strike> → 45 (unchanged from 3650)
-                <li><b>Face cannon:</b> <strike>8muzzle</strike> → 10muzzle
-                <li><b>3rd gun:</b> <strike>1200dmg 6aoe</strike> → 1200dmg 3aoe
+                <li><b>Price:</b>  <strike>26 500m 46 875bt 67 000HP</strike> → 28 000m 46666bt 60 000HP
+                <li><b>Direct fire range:</b>  <strike>47</strike> → 45 (unchanged from 3650)
+                <li><b>Face cannon:</b> <strike>8muzzle 6000 damage</strike> → 10muzzle 8000 damage (reverting FAF changes)
+                <li><b>Gattling gun:</b> <strike>550 damage</strike> → 610 damage (reverting FAF changes)
+                <li><b>3rd gun:</b> <strike>1850dmg 6aoe</strike> → 1200dmg 3aoe
                 <li><b>AA:</b> <strike>1.5aoe</strike> → 3.5aoe <strike>20muzzle</strike> → 60muzzle; fixed bug with targeting
                 <li><b>Ion storm:</b> friendly fire disabled! <strike>friendly fire 1000dps 20r 0,1aoe, 30s life time</strike> → 400dps 28r 0.5aoe, 45s life time
                 <li>Improved handling on all of its weapons, so it never turns in such a way that one of its guns can't fire, and better performance on close range, reducing its weakness to bumping.
@@ -1028,7 +1049,7 @@
 			
             <h4>Galactic Colossus</h4>
                 <ul>
-                <li><b>Price:</b>  <strike>27 500m 20 625bt 99 999HP</strike> → 28000m 46 660bt 85 000HP
+                <li><b>Price:</b>  <strike>27 500m 51 500bt 99 999HP</strike> → 28000m 46 660bt 85 000HP
                 <li>Magnet claws now work better and more consistently, they can fire once every 10 seconds, or an equivalent of 600dps per claw when facing bricks/percies (6000HP units). (since integrated into normal faf but with fewer improvements than in EQ)
                 </ul>
 			
@@ -1036,14 +1057,14 @@
 			Its DPS was moved from long range to short, because T3 units have less HP, and dps, short range is less annoying and gives more time for opponents to deal with the fatboy.
 			<p>It is now able to build units while moving! There is now a separately selectable submodule on the Fatboy which builds the units. The Percival can also be built underwater now.
                 <ul>
-                <li><b>Price:</b>  <strike>21 000bt 32500HP -500e/s 180br</strike> → 46 660bt 35 000HP -250e/s 200br
+                <li><b>Price:</b>  <strike>47 500bt 32500HP -500e/s 180br</strike> → 46 660bt 35 000HP -250e/s 200br
                 <li><b>Main cannons:</b> (100r): <strike>4x750</strike> → 4x525dps
                 <li><b>Secondary guns:</b> (45r): <strike>2x450</strike> → 2x750dps
                 <li><b>Torpedoes:</b> <strike>75</strike> → 150dps; Range: <strike>40</strike> → 60
                 <li><b>AA weapon:</b> <strike>110</strike> → 360dps
-                <li><b>Shield: reload time::</b> <strike>160s 64/s</strike> → 120s regen 85/s
+                <li><b>Shield: reload time:</b> <strike>120s 100/s</strike> → 120s regen 85/s
                     <ul>
-                    <li>Spills over 15% of its damage (unchanged unlike normal FAF)
+                    <li>Spills over 15% of its damage (reverting FAF changes)
                     </ul>
                 </ul>
 			
@@ -1056,14 +1077,14 @@
                 <li>It is now able to support navies by firing from underwater - this is only useful on mostly water maps since on land you can have it shielded, and it is vulnerable to torpedo bombers.
 				</ul>
                 <ul>
-                <li><b>Price:</b>  <strike>85 000m 1 500 000e 31 500bt</strike> → 30 000m 375 000e 50 000bt
+                <li><b>Price:</b>  <strike>85 000m 1 500 000e 80 000bt</strike> → 30 000m 375 000e 50 000bt
                 <li><strike>17500HP 1.5sp 1578dps 7aoe 330r 1.9s reload time</strike> → 30 000HP 3sp 600dps 6aoe 200r 3s reload time 
                 <li><b>EMP:</b> 12aoe T1:3.5s T2:2.5s T3:1.5s
                 </ul>
             
 			<h4>Megalith</h4>
                 <ul>
-                <li><b>Price:</b>  <strike>18 750bt 110 000HP 180br 0,5HP/s regen underwater vision 32</strike> → 63 330bt 95 000HP 40br 15HP/s regen underwater vision 45
+                <li><b>Price:</b>  <strike>60 625bt 110 000HP 180br 0,5HP/s regen underwater vision 32</strike> → 63 330bt 95 000HP 40br 15HP/s regen underwater vision 45
                 <li><b>Flak:</b> <strike> 30dps 20 muzzle velocity </strike> → 80dps 55 muzzle velocity
                 <li><b>Torpedo defence</b> reload time: <strike>7.7s</strike> → 6.25s
                 <li>Megalith egg build times adjusted to the Megalith’s new build rate and units are built 2x faster than in a regular T3 factory.
@@ -1094,7 +1115,7 @@
                     <li><b>Seraphim resource generation:</b> 1m & 150e/s
                     </ul>
                 <p>The SACU wreck is reclaimable <b>2x</b> slower than other units.
-                <p><b>Death explosion:</b> 2500dmg on 10aoe, changed to acu nuke type - doesn’t damage buildings
+                <p><b>Death explosion:</b> 2500dmg on 10aoe, changed to ACU nuke type - doesn’t damage buildings
                     <ul>
                     <li><b>Rapid fabricator:</b> adds <strike>96</strike> → 100br; Cost: <strike>800m</strike> → 600m 30 000e 1500bt
                     <li><b>RAS:</b> 4200m 210 000e 10 500bt; increase death explosion <strike>2500dmg</strike> → 5000dmg
@@ -1120,13 +1141,18 @@
 			
 			<h4>UEF</h4>
             
-			<li>Jamming is cheaper, because it’s not used often and it buffs pure support SACUs. 
+			<li>Jamming is cheaper, because it’s not used often and it buffs pure support SACUs. It also now has sonar and a larger radar range.
 			<li>Gun: nerfed because it was OP.
 			<li>Bubble shields are cheaper and  have better regeneration to increase the use of pure support SACUs.
             
                 <ul>
                 <li>16 000HP 200dmg/1s reload time 
-                <li><b>Radar/jamming:</b> 400m 20 000e 1000bt
+                <li><b>Jamming:</b> 400m 20 000e 1000bt
+                <li><b>Radar:</b> 400m 20 000e 1000bt
+                    <ul>
+                    <li>Now has sonar as well
+                    <li><b>Radar/Sonar Range:</b> <strike>70</strike> → 150
+                    </ul>
                 <li><b>Drone:</b> 200m 10 000e 500bt adds 37.5br via drone
                 <li><b>Gun RoF:</b> 1000m 50 000e 2500bt rof 2/s = 400dps
                 <li><b>Gun AoE/range:</b> 1200m 60 000e 3000bt 2aoe 33r 
@@ -1507,7 +1533,7 @@
             Soul Ripper: decreased its mass cost, because it's not much stronger than a GC -  when instant heal doesn't exist air exps are weaker (and are less cheese). More crash damage, because it's a very big unit.
 
                 <ul>
-                <li><b>Price:</b> <strike>34000m 480 000e 20 000bt</strike> → 30 000m 750 000e 37 500bt
+                <li><b>Price:</b> <strike>34000m 480 000e 56 250bt</strike> → 30 000m 750 000e 37 500bt
                 <li><strike>90000HP 240AA dps 5000crash on 4aoe</strike> → 80 000HP 400AA dps 7500crash dmg on 6aoe 
                 </ul>
             
@@ -1515,13 +1541,13 @@
             
  			Reduced speed so it's easier to catch up to. Also its range was reduced so its not so easy to abuse its hover bombing ability to out-range SAMs (rather than making it possible but super annoying). Like other air exps, it got a boost to its AA dps, but we were careful not to make it OP, so it has reduced range because of that.
                 <ul>
-                <li><b>Price:</b> <strike>48 000m 780 000e 36 000bt</strike> → 40 000m 1 000 000e 50 000bt
+                <li><b>Price:</b> <strike>48 000m 780 000e 67 500bt</strike> → 40 000m 1 000 000e 50 000bt
                 <li><strike>52000HP 20speed</strike> → 60 000HP 16speed
                 <li><b>Ground:</b> <strike>20aoe 90r 20s</strike> → 11000dmg 15aoe 50r 15s reload time
                 <li><b>Anti-Air:</b> <strike>4x450dps 64r</strike> → 4x500AA 45r
                 <li><b>Crash:</b> 10 000crash dmg 8 aoe
                 <li>Improved turning behaviour over base game so its once again possible to hover conveniently.
-                <li>Greatly improved its ability to drop successfully, it should fail far less often, if ever.
+                <li>Greatly improved its ability to drop successfully, it should fail far less often, if ever. (since integrated partially into FAF)
                 </ul>
             <h4>Czar</h4>
             
@@ -1531,7 +1557,7 @@
                 <p>The beam damage was changed to be more effective against buildings, and less against moving land units, and depth charge dps was increased so that they’re not absolutely useless. 
                 <p>The CZARs speed was reduced to make it less about cheese and more about strategy, and also helping ground AA counter it (20-25% mass in land AA destroys a CZAR)
                 
-                <li><b>Price:</b> <strike>45 000m 731250e 33750bt 180br</strike> → 45 000m 1 125 000e 56 250bt 240build rate
+                <li><b>Price:</b> <strike>45 000m 731250e 50625bt 180br</strike> → 45 000m 1 125 000e 56 250bt 240build rate
                 <li><strike>58000HP 8speed </strike> → 150 000HP 5speed 
                 <li><b>Ground Laser:</b> <strike>3330dps</strike> → 2125dps against stationary objects 750dps against moving units.
                 <li><b>Depth Charges:</b> <strike>4x37.5dps 1.5aoe 50r</strike> → 100dps 1.5aoe 80r + 200dps 3aoe 40r
@@ -1802,15 +1828,21 @@
                     <li><b>AA:</b> <strike>2x30dps 0.8s Reload Time</strike> → 2x60dps 1.5s Reload Time
                     </ul>
                 
-                <li><b>Summit:</b> 50 000HP <strike>51000HP</strike> →
+                <li><b>Summit:</b> <strike>51000HP</strike> → 50 000HP
                     <ul>
                     <li><b>Main cannon damage:</b> <strike>1000 => 450dps</strike> → 900 => 405dps
                     <li><b>Main cannon muzzle velocity:</b> <strike>30</strike> → 28
                     <li><b>AA:</b> <strike>4x14dps</strike> → 4x20dps
                     </ul>
+                    
+                <li><b>Omen:</b> <strike>105/114r</strike> → 100r (reverting FAF changes)
+                    <ul>
+                    <li><b>Speed:</b> <strike>3.7</strike> → 3.6 (reverting FAF changes)
+                    </ul>
                 
                 <li><b>Huaathun:</b> <strike>128r</strike> → 130r
                     <ul>
+                    <li><b>Main Cannons:</b> firing randomness: <strike>2.5</strike> → 1; muzzle velocity:<strike>40</strike> → 30 (reverting FAF changes)
                     <li><b>AA reload time:</b> <strike>1.1s = 29.1dps</strike> → 2s = 50dps, firing randomness: <strike>2.5</strike> → 1; muzzle velocity:<strike>20</strike> → 30
                     <li><b>Nuke minimum range:</b> <strike>128r</strike> → 130r (to not have additional circle)
                     </ul>
@@ -1823,14 +1855,14 @@
                 <p>Atlantis is faster so it’s not a sea snail. Regen added because every T4 has natural regen. 
                 <p>Tempest build time increased by a lot (3x), fixed so it's a real experimental - it still loses against equal mass in battleships or subs but now it has a reason to be built, aside from a stupidly fast build time. 
                 <p>Both are now able to build units while moving! There is now a separately selectable submodule on the experimental which builds the units. The Atlantis can build underwater.
-                <li><b>Atlantis:</b> <strike>80r 0reg 14400bt 252sonar, water-vision 100, storage 150units 2.8sp</strike> → 75r 30000bt 15HP/s reg  250sonar 55water-vision 50air-storage 3.5sp
+                <li><b>Atlantis:</b> <strike>80r 0reg 20500bt 252sonar, water-vision 100, storage 150units 2.8sp</strike> → 75r 30000bt 15HP/s reg  250sonar 55water-vision 50air-storage 3.5sp
                     <ul>
                     <li><strike>reload time 2s; damage 200</strike> → reload time 1s; damage 100
                     <li><b>Elevation:</b> <strike>5</strike> → 15, and also added proper hit-boxes and animation
                     </ul>
-                <li><b>Tempest:</b> <strike>0regen 14400bt 100water-vision 2.5sp 60 000HP</strike> → 15HP/s reg 40000bt 55water-vision 2.8sp 125000HP
+                <li><b>Tempest:</b> <strike>0regen 28000bt 100water-vision 2.5sp 60 000HP</strike> → 15HP/s reg 40000bt 55water-vision 2.8sp 125000HP
                     <ul>
-                    <li><b>Main cannon:</b> <strike>8000dmg 5aoe 10reload time</strike> → 7500dmg 7aoe 12,5s reload time - 600dps
+                    <li><b>Main cannon:</b> <strike>8000dmg 5aoe 10reload time</strike> → 7500dmg 7aoe 12.5s reload time - 600dps, 28 muzzle velocity
                     <li><b>Depth charges:</b> <strike>80r 420dps</strike> → 75r 330dps
                     <li><b>Uniform scale:</b> <strike>0.1</strike> → 0.08 (80% model size)
                     <li><b>Elevation:</b> <strike>5</strike> → 15, and also added proper hit-boxes and animation
@@ -1856,6 +1888,9 @@
 			T3 Sonar costs more. It was stupidly cheap compared to naval units and intel structures.
                 <ul>
                 <li><b>T1:</b> <strike>64m 0 water vision</strike> → 50m 60 water vision
+                    <ul>
+                    <li>Fixed Target bones, so Seraphim destroyers are able to fire at them properly
+                    </ul>
                 <li><b>T2:</b> <strike>120m 0 water vision 100e/s drain</strike> → 200m 80 water vision 150e/s upkeep
                 <li><b>T2.5 Seraphim:</b> <strike>180m 0 water vision</strike> → 300m 90 water vision 250e/s upkeep
                 <li><b>T3:</b> <strike>400/480m 24 water vision</strike> → 1200m 100 water vision 500e/s upkeep (650Cybran)
@@ -2034,11 +2069,13 @@
 
             <h4>T3 shields</h4>
             
+            The ED5 was significantly weaker than other shields, costing more than the seraphim while being both weaker and smaller than the UEF! So it has been made significantly cheaper and now has a slightly wider area of effect, making it like a slightly worse UEF analogue.
+            
                 <ul>
                 <li><b>ED4:</b> <strike>1200m(2460) 24000e 3600bt 11,81br 500HP 130reg 34aoe</strike> → 1400m(2400m) 2800e(43000e) 2900bt 12.5br 800HP 120reg 350e/s 35aoe 
                 <li>Buildable as a T3 shield.
                 </ul>
-                <li><b>ED5:</b> <strike>1800m(4060) 26666e 5254bt 500HP 140reg</strike> → 1600m(4000m) 32000e(75000e) 3900bt 1000HP 140reg 500e/s
+                <li><b>ED5:</b> <strike>1800m(4060) 26666e 5254bt 500HP 140reg 40aoe</strike> → 800m(3400m) 16000e(59000e) 3400bt 1000HP 200reg 500e/s 44aoe
                 <li><b>Aeon:</b> <strike>2400m 44000e 4097bt 300e/s 150reg</strike> → 2400m 48000e 3000bt 300HP 150reg 300e/s
                 <li><b>UEF:</b> <strike>3000m 50000e 4988bt 400e/s 131reg 44aoe</strike> → 3000m 60000e 3750bt 500HP 130reg 400e/s 45aoe
                 <li><b>Seraphim:</b> <strike>3600m 60000e 5841bt 600HP 168reg 46aoe</strike> → 3600m 72000e 45000bt 700HP 160reg 500e/s 50aoe
@@ -2164,12 +2201,13 @@
             
             The Novax was almost in the right place, it just needed a nudge to make it nicer to use. Since it is a spy satellite and the UEF doesn't have a dedicated advanced intel structure, it got a slight intel boost. Since shields absorb crash damage now, the damage reduction has been reverted to its previous value as its not possible to exploit anymore.
             
-                <ul><b>Price:</b> <strike>28000m 400000e 25000bt</strike> → 30000m 450000e 18750bt
+                <ul><b>Price:</b> <strike>28000m 400000e 30000bt</strike> → 30000m 450000e 18750bt
                 <li> <strike>9000HP 0HP/s</strike> → 15000HP, 25HP/s regeneration
                 <li><b>Speed of satellite:</b> <strike>6</strike> → 8
                 <li><b>Damage radius of beam:</b> <strike>1</strike> →  2.5
                 <li><b>Radar radius:</b> <strike>70</strike> → 150, visual radius <strike>40</strike> → 50, omni radius <strike>0</strike> → 30
                 <li><b>Satellite crash damage:</b> <strike>3000</strike> → 3000 (unchanged from previous patches)
+                <li><b>Satellite wreck value:</b> <strike>8100</strike> → 4050 to avoid the wreckage of the satellite and centre combined being more than the buildcost, allowing an infinite mass exploit
                 </ul>
 
             
@@ -2186,6 +2224,7 @@
                 <li>Yolona Oss:</b> <strike>187650m 10008000e 125100bt</strike> → 180000m 10800000e 90 000bt
                     <ul>
                     <li> <strike>12000HP 0HP/s</strike> → 10000HP 5HP/s regeneration
+                    <li> Improvements in scripts for more consistent launching behaviour
                     </ul>
                     
                 <li>Mavor:</b> <strike>224775m 5994000e 99900bt</strike> → 216000m 4320000e 90 000bt
