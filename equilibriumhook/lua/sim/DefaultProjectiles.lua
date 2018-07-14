@@ -64,7 +64,6 @@ OverchargeProjectile = Class() {
         
         --each charge is 2000(or however) energy and adds 1000 damage
         --and we dont want to overkill our target and waste energy
-        --to enable the OC ui to work the first 2000(or however) is drained on the weapon on fire, the rest is decided on impact.
         
         local chargesNeeded = math.max( math.ceil(Health/1000), 1) -- we need to damage once at least to account for dead units
         --cap our damage to the energy available, and to 15000 to avoid owning exps too easily
