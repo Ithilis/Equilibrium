@@ -12,6 +12,7 @@ local Get2DDistanceBetweenTwoEntities = import('/lua/utilities.lua').Get2DDistan
 -----------------------------------------------------------
 -- PROJECTILE THAT ADJUSTS DAMAGE AND ENERGY COST ON IMPACT
 -----------------------------------------------------------
+local OCProjectiles = {} --EQ: add a shared table for the OC projectiles to use
 
 --EQ:dynamic overcharge damage script rewritten from the ground
 OverchargeProjectile = Class() {
@@ -34,30 +35,46 @@ OverchargeProjectile = Class() {
     end,
     
     CalcDamage = function(self, Health)
+        if not Health > 0 then
+            WARN('Equilibrium - overcharge found a negative or nil hp value!')
+            return 1000 --1 stacks worth of damage and call it a day.
+        end
+        
         local energyStored = self:GetLauncher():GetAIBrain():GetEconomyStored('ENERGY')
-        local chargesAvailable = math.floor(energyStored/self.SmartOverChargeScale)
+        
+        --in case of multiple OC projectiles landing at the same time, adjust energy storage, we need a table since they all drain at the same time too.
+        local army = self:GetArmy()
+        if not OCProjectiles[army] then
+            OCProjectiles[army] = {}
+        end
+        
+        if OCProjectiles[army].LastTickChecked == GetGameTick() then
+            if not OCProjectiles[army].TrueEnergyStored then
+                WARN('Equilibrium - TrueEnergyStored not found in OC projectile table when there are multiple projectiles on impact!')
+                OCProjectiles[army].TrueEnergyStored = energyStored
+            end
+            energyStored = OCProjectiles[army].TrueEnergyStored
+        end
+        --record the time this check was made so that if another projectile lands at the same time we know what to do.
+        OCProjectiles[army].LastTickChecked = GetGameTick()
+                
+        -- Get max energy available to drain according to how much we have
+        -- Minimum of one charge in cases where theres no energy left on impact. it will dip into negative but thats better than wasting oc completely.
+        local chargesAvailable = math.max(math.floor(energyStored/self.SmartOverChargeScale), 1)
         
         --each charge is 2000(or however) energy and adds 1000 damage
         --and we dont want to overkill our target and waste energy
         --to enable the OC ui to work the first 2000(or however) is drained on the weapon on fire, the rest is decided on impact.
         
-        local chargesNeeded = 1
-        
-        if Health < 0 then
-            WARN('Equilibrium - overcharge found a negative or nil hp value!')
-            return 1000 --1 stacks worth of damage and call it a day.
-        end
-        
-        chargesNeeded = math.max( math.ceil(Health/1000), 1) -- we need to damage once at least to account for dead units
-        local chargesUsed = math.min(chargesNeeded, chargesAvailable)
-        
-        --cap our damage at 15000, so you cant own exps super easy.
-        chargesUsed = math.min(chargesUsed, self.MaxOverChargeCharges)
-        
+        local chargesNeeded = math.max( math.ceil(Health/1000), 1) -- we need to damage once at least to account for dead units
+        --cap our damage to the energy available, and to 15000 to avoid owning exps too easily
+        local chargesUsed = math.min(chargesNeeded, chargesAvailable, self.MaxOverChargeCharges)
         local energyNeeded = math.max((chargesUsed)*self.SmartOverChargeScale, 0) --math.max incase it aims for dead unit
         
         --drain the energy
         CreateEconomyEvent(self:GetLauncher(), energyNeeded, 0, 0.1)
+        --update the amount of storage available during this tick
+        OCProjectiles[army].TrueEnergyStored = math.max(energyStored - energyNeeded, 0)
         
         --apply our buffs
         local damage = 1000*chargesUsed
@@ -112,7 +129,7 @@ OverchargeProjectile = Class() {
     
     CalcEffectiveHP = function(self, targetType, targetEntity)
         --Find out how much damage we want to deal to the entity. Assumes Unit or Shield.
-        if targetEntity.IsDead == true then WARN('EQ: OC hit a dead unit. Assuming it has 0 hp. Not really an error') return 0 end --dead things dont have health
+        if targetEntity.IsDead == true then WARN('Equilibrium - OC hit a dead unit. Assuming it has 0 hp. Not really an error') return 0 end --dead things dont have health
         local effectiveHealth = targetEntity:GetHealth() -- our target health, unit or shield
         
         --the damage scales so that it doesnt overkill the target and waste energy, and it always spends enough to kill it, or try.
