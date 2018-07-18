@@ -19,22 +19,22 @@ BlueprintId = "uel0106",
         },
     },
     Physics = {
-        MaxAcceleration = 4.2,
-        MaxBrake = 4.2,
-        MaxSpeed = 4.2,
+        MaxAcceleration = 4,
+        MaxBrake = 4,
+        MaxSpeed = 4,
     },
     Veteran = {
         RequirementMult = 2.5,  --need kill 2.5x more mass for vet level (normaly its 1.5x) as cost, to have +-same value as tanks
     },
     Weapon = {
         {
-        Damage = 8.5,            --25.5dps
+        Damage = 6.5,            -- around 24dps with 0.3 reload time
         MaxRadius = 15,
         TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'RADAR',
-                'MOBILE ENGINNER',
-                'COMMAND',                --ACU hight priority for ghetto sniping
+                'MOBILE ENGINEER',
+                'COMMAND',                --ACU high priority for ghetto sniping
                 'TECH1 MOBILE',
                 'TECH2 MOBILE',
                 'TECH3 MOBILE',
