@@ -24,7 +24,7 @@ BlueprintId = "xab3301",
         BuildCostEnergy = 60000,
         BuildCostMass = 3000,
         BuildTime = 3750,
-        InitialRemoteViewingEnergyDrain = 5000,    --from 10 000
+        InitialRemoteViewingEnergyDrain = 3800,    --from 10 000, usable without storage!
         MaintenanceConsumptionPerSecondEnergy = 5000,
     },
     Footprint = {
