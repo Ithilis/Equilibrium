@@ -480,10 +480,10 @@ Unit_Description_0454="Further increases the rate at which the ACU repairs its a
 
 ----Support Commander
 Unit_Description_0433="A highly versatile combat and engineering unit useful on late-stage battlefields."
-Unit_Description_0434="Mounts a Tactical Missile Launcher onto the back of the SACU. Can store up to 3 missiles. " --Ithilis
+Unit_Description_0434="Mounts a Tactical Missile Launcher onto the back of the SACU. Can store up to 3 missiles." --Ithilis
 Unit_Description_0435="Massively increases the rate at which the SACU repairs its armour as well as providing a large HP boost."
 Unit_Description_0436="Greatly increases the range of the SACU's weapons and sensors."
-Unit_Description_0437="Massively increases SACU build speed."
+Unit_Description_0437="Massively increases SACU build speed. Increases SACU's resource generation to 4 mass per second and 600 energy per second." --Ithilis
 Unit_Description_0438="Creates a protective Personal Shield around the SACU. Requires energy to run."
 Unit_Description_0439="Adds Teleportation capability. Requires considerable energy to activate."
 Unit_Description_0440="Expands the SACU's weaponry with an Overcharge function." --Ithilis

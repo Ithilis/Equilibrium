@@ -26,7 +26,6 @@ XSL0301 = Class(OldXSL0301) {
     CreateEnhancement = function(self, enh)
         OldXSL0301.CreateEnhancement(self, enh)
         
-        
         local bp = self:GetBlueprint().Enhancements[enh]
         if not bp then return end
         
@@ -45,6 +44,15 @@ XSL0301 = Class(OldXSL0301) {
             wep:ChangeMaxRadius(bpDisrupt)
             local aoc = self:GetWeaponByLabel('AutoOverCharge')
             aoc:ChangeMaxRadius(bpDisrupt)
+        elseif enh == 'EngineeringThroughput' then --add changes to the resource generation of the engineering upgrade. the bp changes are done in the unhooked function.
+            local bpEcon = self:GetBlueprint().Economy
+            if not bp then return end
+            self:SetProductionPerSecondEnergy(bp.ProductionPerSecondEnergy + bpEcon.ProductionPerSecondEnergy or 0)
+            self:SetProductionPerSecondMass(bp.ProductionPerSecondMass + bpEcon.ProductionPerSecondMass or 0)
+        elseif enh == 'EngineeringThroughputRemove' then
+            local bpEcon = self:GetBlueprint().Economy
+            self:SetProductionPerSecondEnergy(bpEcon.ProductionPerSecondEnergy or 0)
+            self:SetProductionPerSecondMass(bpEcon.ProductionPerSecondMass or 0)
         end
         
         

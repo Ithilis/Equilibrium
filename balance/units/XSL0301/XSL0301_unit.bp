@@ -13,8 +13,8 @@ BlueprintId = "xsl0301",
         BuildRate = 25,                --from 56
         BuildTime = 5000,
 
-        ProductionPerSecondEnergy = 150,        --from 200
-        ProductionPerSecondMass = 1,        --from 2
+        ProductionPerSecondEnergy = 300,        --from 200
+        ProductionPerSecondMass = 2,        --from 2
         StorageEnergy = 5000,
         StorageMass = 500,
 
@@ -28,11 +28,12 @@ BlueprintId = "xsl0301",
             NewRegenRate = 145,        --from 250
         },
         EngineeringThroughput = {
-            BuildCostEnergy = 30000,
-            BuildCostMass = 600,
-            BuildTime = 1500,
+            BuildCostEnergy = 40000,
+            BuildCostMass = 800,
+            BuildTime = 2000,
             NewBuildRate = 100,
-            
+            ProductionPerSecondEnergy = 300,        --added extra resource generation
+            ProductionPerSecondMass = 2,        --added extra resource generation
             Slot = 'RCH',
             UpgradeEffectBones = {
                 'Right_Arm_Muzzle',
