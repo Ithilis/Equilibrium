@@ -26,6 +26,7 @@ BlueprintId = "uaa0302",
         OmniRadius = 35,    --from30
         RadarRadius = 100,
         VisionRadius = 65,
+        WaterVisionRadius = 25,
     },
     Physics = {
         FuelRechargeRate = 15,

@@ -9,6 +9,9 @@ BlueprintId = "ura0101",
         BuildCostMass = 30,
         BuildTime = 200,
     },
+    Intel = {
+        WaterVisionRadius = 20,
+    },
     Physics = {
         FuelUseTime = 240,    --from 500
     },

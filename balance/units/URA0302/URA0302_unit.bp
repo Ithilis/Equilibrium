@@ -40,6 +40,7 @@ BlueprintId = "ura0302",
         VisionRadius = 55,    --from64
         RadarStealth = true,
         SonarRadius = 85,    --from98
+        WaterVisionRadius = 25,
     },
     Physics = {
         FuelRechargeRate = 15,

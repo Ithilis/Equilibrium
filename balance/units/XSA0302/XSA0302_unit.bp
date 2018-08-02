@@ -56,6 +56,7 @@ BlueprintId = "xsa0302",
         RadarRadius = 80,    --from96/85
         VisionRadius = 50,   --from64/55
         SonarRadius = 85,    --from98
+        WaterVisionRadius = 25,
     },
     Physics = {
         FuelRechargeRate = 15,
