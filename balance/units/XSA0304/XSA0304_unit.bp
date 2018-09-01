@@ -13,10 +13,6 @@ BlueprintId = "xsa0304",
         BuildCostMass = 2000,
         BuildTime = 9600,
     },
-    Physics = {
-        FuelRechargeRate = 15,
-        FuelUseTime = 360,
-    },
     Weapon = {
         {
             BombDropThreshold = 15,           -- from 6, makes it drop bombs better

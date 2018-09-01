@@ -28,10 +28,6 @@ BlueprintId = "uaa0302",
         VisionRadius = 65,
         WaterVisionRadius = 25,
     },
-    Physics = {
-        FuelRechargeRate = 15,
-        FuelUseTime = 600,
-    },
     Weapon = {
         {
             Damage = 150,

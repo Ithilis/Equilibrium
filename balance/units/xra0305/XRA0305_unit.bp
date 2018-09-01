@@ -61,9 +61,6 @@ UnitBlueprint {
         },
         JammerBlips = 0,
     },
-    Physics = {
-        FuelUseTime = 300,                -- from600
-    },
     Veteran = { -- not really needed
         Level1 = 30,
         Level2 = 45,

@@ -18,9 +18,6 @@ BlueprintId = "ura0103",
         BuildCostMass = 90,
         BuildTime = 600,
     },
-    Physics = {
-        FuelUseTime = 240,
-    },
     Weapon = {
         {
             Damage = 50,

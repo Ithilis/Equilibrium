@@ -16,9 +16,6 @@ BlueprintId = "xsa0104",
         BuildCostMass = 280,        --300m
         BuildTime = 1600,           --2400bt
     },
-    Physics = {
-        FuelUseTime = 420,
-    },
     Weapon = {
         {
         },

@@ -20,10 +20,6 @@ BlueprintId = "xaa0305",
         BuildCostMass = 1000,
         BuildTime = 6000,
     },
-    Physics = {
-        FuelRechargeRate = 15,
-        FuelUseTime = 300,
-    },
     Weapon = {
         { --ground fire weapon
             Damage = 25,        --from24

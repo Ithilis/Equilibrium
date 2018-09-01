@@ -58,10 +58,6 @@ BlueprintId = "xsa0302",
         SonarRadius = 85,    --from98
         WaterVisionRadius = 25,
     },
-    Physics = {
-        FuelRechargeRate = 15,
-        FuelUseTime = 600,
-    },
     Weapon = {
         {
             Damage = 150,

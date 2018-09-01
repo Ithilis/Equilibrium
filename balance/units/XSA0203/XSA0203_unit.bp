@@ -23,9 +23,6 @@ BlueprintId = "xsa0203",
         BuildCostMass = 315,
         BuildTime = 1800,
     },
-    Physics = {
-        FuelUseTime = 300,
-    },
     Weapon = {
         { --ground fire weapon
             Damage = 20,                --from12 = 80dps

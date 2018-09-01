@@ -15,9 +15,6 @@ BlueprintId = "xsa0107",
         BuildCostMass = 120,        --120m
         BuildTime = 800,
     },
-    Physics = {
-        FuelUseTime = 300,
-    },
     Weapon = {
         {
             Damage = 100,

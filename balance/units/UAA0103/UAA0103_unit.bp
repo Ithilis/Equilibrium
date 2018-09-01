@@ -18,9 +18,6 @@ BlueprintId = "uaa0103",
         BuildCostMass = 105,
         BuildTime = 700,
     },
-    Physics = {
-        FuelUseTime = 240,
-    },
     Weapon = {
         {
             Buffs = {

@@ -21,9 +21,6 @@ BlueprintId = "xsa0204",
         BuildCostMass = 245,
         BuildTime = 1400,
     },
-    Physics = {
-        FuelUseTime = 300,    --from 600
-    },
     Transport = {
         AirClass = true,
         TransportClass = 1,

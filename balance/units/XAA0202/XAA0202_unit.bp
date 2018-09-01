@@ -17,9 +17,6 @@ BlueprintId = "xaa0202",
         BuildCostMass = 245,
         BuildTime = 1550,
     },
-    Physics = {
-        FuelUseTime = 300,
-    },
     Weapon = {
         { -- AA
             Damage = 50,

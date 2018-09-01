@@ -23,9 +23,6 @@ BlueprintId = "uaa0203",
         BuildCostMass = 175,
         BuildTime = 1000,
     },
-    Physics = {
-        FuelUseTime = 300,
-    },
     Weapon = {
         { --ground fire weapon
             Damage = 10,    --from 13 = 50dps

@@ -13,9 +13,6 @@ BlueprintId = "uea0203",
         BuildCostMass = 245,
         BuildTime = 1400,
     },
-    Physics = {
-        FuelUseTime = 300,
-    },
     Transport = {
         AirClass = true,
         TransportClass = 1,

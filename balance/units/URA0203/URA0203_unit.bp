@@ -17,9 +17,6 @@ BlueprintId = "ura0203",
         BuildCostMass = 245,
         BuildTime = 1400,
     },
-    Physics = {
-        FuelUseTime = 300,
-    },
     Weapon = {
         { --Ground Fire Weapon
             Damage = 20,

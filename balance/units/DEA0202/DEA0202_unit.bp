@@ -17,9 +17,6 @@ BlueprintId = "dea0202",
         BuildCostMass = 350,
         BuildTime = 2000,
     },
-    Physics = {
-        FuelUseTime = 300,                --from 500
-    },
     Weapon = {
         {
             Damage = 150,              -- from 2x75

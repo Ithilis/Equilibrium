@@ -12,9 +12,6 @@ BlueprintId = "xra0105",
         BuildCostMass = 175,
         BuildTime = 700,
     },
-    Physics = {
-        FuelUseTime = 240,
-    },
     Weapon = {
         { --ground fire weapon
             Damage = 22,    --from 16 =55dps

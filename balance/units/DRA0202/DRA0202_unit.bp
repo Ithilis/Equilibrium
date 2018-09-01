@@ -17,9 +17,6 @@ BlueprintId = "dra0202",
         BuildCostMass = 350,
         BuildTime = 2000,
     },
-    Physics = {
-        FuelUseTime = 300,                --from 500
-    },
     Weapon = {
         {
             Damage = 100,                --200dps but its not real 200

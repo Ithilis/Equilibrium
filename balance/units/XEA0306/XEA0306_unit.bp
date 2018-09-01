@@ -25,10 +25,6 @@ BlueprintId = "xea0306",
         BuildTime = 8400,
         MaintenanceConsumptionPerSecondEnergy = 150,
     },
-    Physics = {
-        FuelRechargeRate = 70,
-        FuelUseTime = 420,
-    },
     Weapon = {
         { --Ground Fire=60dps
         },

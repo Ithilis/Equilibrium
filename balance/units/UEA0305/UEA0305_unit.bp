@@ -52,9 +52,6 @@ BlueprintId = "uea0305",
         JammerBlips = 4,
         VisionRadius = 32,
     },
-    Physics = {
-        FuelUseTime = 300,            --from800
-    },
     Weapon = {
         { --Ground fire weapon
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)

@@ -12,7 +12,4 @@ BlueprintId = "ura0101",
     Intel = {
         WaterVisionRadius = 20,
     },
-    Physics = {
-        FuelUseTime = 240,    --from 500
-    },
 }

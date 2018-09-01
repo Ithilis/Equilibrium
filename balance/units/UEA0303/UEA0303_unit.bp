@@ -16,9 +16,6 @@ BlueprintId = "uea0303",
         BuildCostMass = 525,
         BuildTime = 4200,
     },
-    Physics = {
-        FuelUseTime = 360,
-    },
     Weapon = {
         { --AA 1
             Damage = 225,
