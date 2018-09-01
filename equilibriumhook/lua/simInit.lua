@@ -10,8 +10,10 @@
 -- the initial units and any other gameplay state we need.
 -- EQ: forks a thread that resets unit vision after seabed units revealed themselves
 local oldBeginSession = BeginSession
+local ScenarioFramework = import('/lua/ScenarioFramework.lua')
 
 function BeginSession()
     oldBeginSession()
-    SeabedResetThread = ForkThread(import('/lua/ScenarioFramework.lua').WaterVisionResetThread)
+    SeabedResetThread = ForkThread(ScenarioFramework.WaterVisionResetThread)
+    AirRefuelThread = ForkThread(ScenarioFramework.AirRefuelManagerThread)
 end
