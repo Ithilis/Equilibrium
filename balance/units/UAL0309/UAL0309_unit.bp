@@ -38,4 +38,10 @@ BlueprintId = "ual0309",
         'PATROLHELPER',
         'SHOWQUEUE',
     },
+    Physics = {
+        MaxAcceleration = 1.9,
+        MaxBrake = 1.9,
+        MaxSpeed = 1.9,
+        MaxSpeedReverse = 1.9,
+    },
 }

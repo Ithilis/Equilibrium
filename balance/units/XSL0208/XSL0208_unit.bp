@@ -15,4 +15,10 @@ BlueprintId = "xsl0208",
         StorageEnergy = 0,
         StorageMass = 0,
     },
+    Physics = {
+        MaxAcceleration = 1.9,
+        MaxBrake = 1.9,
+        MaxSpeed = 1.9,
+        MaxSpeedReverse = 1.9,
+    },
 }
