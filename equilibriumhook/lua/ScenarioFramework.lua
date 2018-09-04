@@ -96,9 +96,8 @@ AirRefuelManagerThread = function()
             --WARN('platforms monitored in global table: '..table.getsize(AutoRefuelingPlatforms[army]))
         end
         
-        WARN('units being monitored: '..table.getsize(AutoRefuelingUnits))
-        WaitTicks(30)--debug
-        --WaitTicks(150)
+        --WARN('units being monitored: '..table.getsize(AutoRefuelingUnits))
+        WaitTicks(30)
     end
 end
 
