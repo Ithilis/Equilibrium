@@ -150,6 +150,8 @@ BlueprintId = "uel0001",
             NukeInnerRingRadius = 15,    --from 15
             NukeOuterRingDamage = 1000,    --from 250
             NukeOuterRingRadius = 20,    --from 25
+            RackReloadTimeout = 5,
+            RackSalvoReloadTime = 5,
         },
         { -- death nuke
         },

@@ -30,4 +30,11 @@ BlueprintId = "xsb2401",
         Level4 = 1728,
         Level5 = 2160,
     },
+    Weapon = {
+        {
+            RackReloadTimeout = 1,
+            RateOfFire = 0.05, --every 20 seconds is already insane, thanks.
+            WeaponRepackTimeout = 5,
+        },
+    },
 }
