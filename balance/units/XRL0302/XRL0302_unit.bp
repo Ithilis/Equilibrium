@@ -90,14 +90,20 @@ UnitBlueprint {
             IconFadeInZoom = 130,
             LODs = {
                 {
+                    AlbedoName = '/units/xrl0302/xrl0302_albedo.dds',
                     LODCutoff = 100,
+                    MeshName = '/units/xrl0302/xrl0302_lod0.scm',
+                    NormalsName = '/units/xrl0302/xrl0302_normalsTS.dds',
                     ShaderName = 'Insect',
+                    SpecularName = '/units/xrl0302/xrl0302_SpecTeam.dds',
                 },
                 {
-                    AlbedoName = 'xrl0302_lod1_albedo.dds',
+                    AlbedoName = '/units/xrl0302/xrl0302_lod1_albedo.dds',
                     LODCutoff = 215,
+                    MeshName = '/units/xrl0302/xrl0302_lod1.scm',
+                    NormalsName = '/units/xrl0302/xrl0302_normalsTS.dds',
                     ShaderName = 'Insect',
-                    SpecularName = 'xrl0302_lod1_specteam.dds',
+                    SpecularName = '/units/xrl0302/xrl0302_lod1_specteam.dds',
                 },
             },
         },
