@@ -92,7 +92,7 @@ XSB2401 = Class(SStructureUnit) {
     MissileBuildSequence = function(self)
         WaitSeconds(0.5)
         self:ShowBone(self.missileBone, true)
-        self.MissileSlider:SetSpeed(5)
+        self.MissileSlider:SetSpeed(6)
         local fractionComplete = 0
 
         --watch the build time to check for cancellation
