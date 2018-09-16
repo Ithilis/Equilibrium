@@ -10,8 +10,8 @@ BlueprintId = "url0203",
         BuildTime = 1400,
     },
     Defense = {
-        Health = 1500,
-        MaxHealth = 1500,
+        Health = 1200,
+        MaxHealth = 1200,
     },
     Display = {
         Abilities = {
@@ -25,24 +25,25 @@ BlueprintId = "url0203",
     },
     Weapon = {
         { --rockets (land weapon)
-            Damage = 200,        --60dps
+            Damage = 100,        --30dps
             MaxRadius = 23,
             MuzzleVelocity = 30,
-            RateOfFire = 0.3030303030,
+            RateOfFire = 0.3,
         },
         { --electron bolter (land weapon)
-            Damage = 30,        --30dps, 30*2 = 60 damage
+            Damage = 80,        --80dps, 80*2 = 160 damage
             MaxRadius = 18,
             RateOfFire = 0.5,
         },
         { --torpedoes
-            Damage = 25,        --2*25 = 50 ; 10dps
+            Damage = 40,        --2*40 = 80 ; 20dps
             DamageRadius = 0.5,          -- from 0 ; this is to stop you from submarine stacking
+            FiringTolerance = 60,
             MaxRadius = 20,
             MuzzleVelocity = 15,
             ProjectileId = '/projectiles/CANTorpedoNanite02/CANTorpedoNanite02_proj.bp', -- now shooting depth charges to make it work vs sub hunters
             ProjectilesPerOnFire = 2,
-            RateOfFire = 0.2,
+            RateOfFire = 0.25,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'MOBILE SHIELD',
