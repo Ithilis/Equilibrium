@@ -11,7 +11,7 @@ BlueprintId = "urs0202",
         'NOAUTOREFUEL',
     },
     Defense = {
-        Health = 4500,      --from 3000hp; this is 6 t2 torb bomber or 2 t3 torp bomber
+        Health = 4500,      --from 3000hp; this is 6 t2 torp bombers or 2 t3 torp bombers
         MaxHealth = 4500,
     },
     Economy = {
@@ -31,7 +31,7 @@ BlueprintId = "urs0202",
             MaxRadius = 75, --from 75 
         },
         {   --AA
-            Damage = 115,
+            Damage = 100,
             MaxRadius = 75, --from 75
             MuzzleSalvoSize = 6,
             MuzzleVelocity = 20,
@@ -43,22 +43,36 @@ BlueprintId = "urs0202",
         },
         {   --DF from toggled AA missile
             Damage = 35,    --from 60; = 105dps now
-            FiringRandomness = 0.3, --from 0.9
+            FiringRandomness = 0.9, --from 0.9
             MaxRadius = 80,
-            MuzzleSalvoDelay = 0.3, --from 0.2
+            MuzzleSalvoDelay = 0, --from 0.2
             MuzzleSalvoSize = 6,    --from 3
             MuzzleVelocity = 30,
-            ProjectileId = '/projectiles/CAANanoDart01/CAANanoDart01_proj.bp',
+            ProjectileId = '/projectiles/CAANanoDart03/CAANanoDart03_proj.bp',
+            RackBones = { --make the ground fire weapon have the same firing pattern as the anti-air
+                {
+                    MuzzleBones = {
+                        'Right_Launcher_Muzzle01',
+                        'Right_Launcher_Muzzle02',
+                        'Right_Launcher_Muzzle03',
+                        'Left_Launcher_Muzzle01',
+                        'Left_Launcher_Muzzle02',
+                        'Left_Launcher_Muzzle03',
+                    },
+                    RackBone = 'launcher_barrel',
+                },
+            },
+            RackFireTogether = true,
             RackReloadTimeout = 10, --from 0 (dont know why)
-            RateOfFire = 0.5,       --from1
-            TargetCheckInterval = 0.1,  --from 0.3
-            TargetPriorities = {    --Zock broke target priority, where copypast it from AA weapon while this is GF
+            RateOfFire = 0.5,       --from 1
+            TargetCheckInterval = 0.3,  --from 0.3
+            TargetPriorities = { 
                 'SPECIALHIGHPRI',
                 'NAVAL MOBILE',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
             },
-            TrackingRadius = 1,   --from 1,4
+            TrackingRadius = 1,   --from 1.4
             TurretYawRange = 135,
         },
     },

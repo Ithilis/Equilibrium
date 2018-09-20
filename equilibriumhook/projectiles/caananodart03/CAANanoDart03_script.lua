@@ -14,7 +14,7 @@ CAANanoDart01 = Class(CAANanoDartProjectile) {
 
     UpdateThread = function(self)
         WaitSeconds(0.35)
-        self:SetMaxSpeed(2)
+        self:SetMaxSpeed(10)
         self:SetBallisticAcceleration(-0.5)
         local army = self:GetArmy()
 
