@@ -22,9 +22,14 @@ BlueprintId = "delk002",
             MaxRadius = 33,
         },
         {
-            Damage = 100,                --from 100
+            Damage = 100,                --from 100, uef spyplane survives with 0.1hp due to regen
+            DamageRadius = 1.5,
+            DetonatesAtTargetHeight = true, --transforms this unit from an annoying flyswatter into an unstoppable lead spewing killing machine
             FiringRandomness = 0.1,        --from 0.2
             RateOfFire = 1,
+            ProjectileLifetime = 0.7,
+            TurretPitchSpeed = 360,
+            TurretYawSpeed = 270,
         },    
     },
 }
