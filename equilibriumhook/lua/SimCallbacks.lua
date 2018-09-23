@@ -20,3 +20,6 @@ Callbacks.FlagShield = function(data, units)
         end
     end
 end
+
+--improved priorities parser
+Callbacks.WeaponPriorities = import('/lua/WeaponPriorities.lua').SetWeaponPriorities
