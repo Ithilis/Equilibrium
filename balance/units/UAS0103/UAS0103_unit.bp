@@ -39,8 +39,24 @@ BlueprintId="uas0103",
             MuzzleChargeDelay = 0.5,
         },
         {
-            RateOfFire = 0.2,        --from 0,1
+            FiringTolerance = 180,
             MaxRadius = 35,            --from 31
+            ProjectileLifetime = 4,     --from 1
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Projectile01',
+                    },
+                    RackBone = 'Projectile01',
+                },
+                {
+                    MuzzleBones = {
+                        'Projectile02',
+                    },
+                    RackBone = 'Projectile02',
+                },
+            },
+            RateOfFire = 0.3,        --from 0.08
         },
     },
 }
