@@ -271,6 +271,7 @@ TOrbitalDeathLaserBeamWeapon = Class(DefaultBeamWeapon) {
     end,
     
     IdleState = State (DefaultProjectileWeapon.IdleState) {
+    --EQ:this is the only bit we add, really.
         CreateProjectileAtMuzzle = DefaultBeamWeapon.CreateProjectileAtMuzzle,
         Main = function(self)
             DefaultProjectileWeapon.IdleState.Main(self)
