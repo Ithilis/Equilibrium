@@ -59,7 +59,7 @@ AirRefuelManagerThread = function()
         local units = AutoRefuelingUnits --get all units in our table
         for key, unit in units do
             if unit.AutoRefuel == true and not unit.Dead then
-                if (unit:GetFuelRatio() < 0.9 or unit:GetHealthPercent() < 0.6) and table.getsize(AutoRefuelingPlatforms) then
+                if (unit:GetFuelRatio() < 0.4 or unit:GetHealthPercent() < 0.6) and table.getsize(AutoRefuelingPlatforms) then
                     --ideally we would check the command queue to avoid refitting units that already have the command queued
                     --but that needs to go ui side to even run the command which seems pretty absurd
                     --really i just hate the sim side GetCommandQueue function - its so handicapped compared to the ui side one
