@@ -1,0 +1,85 @@
+--Torpedo launcher T3
+
+UnitBlueprint {
+Merge = true,
+BlueprintId = "xrb2309",
+
+    AI = {
+        TargetBones = {
+            'B01',
+            'B02',
+            'B03',
+        },
+    },
+    Audio = {
+        Deploy = Sound {
+            Bank = 'XRB',
+            Cue = 'XRB2308_Activate',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+        DoneBeingBuilt = Sound {
+            Bank = 'Explosions',
+            Cue = 'Expl_Water_Lrg_01',
+            LodCutoff = 'UnitMove_LodCutoff',
+        },
+    },
+    CollisionOffsetY = 0, --to make the collision box in the right spot
+    Defense = {
+        Health = 3000,        --from 11000
+        MaxHealth = 3000,
+    },
+    Display = {
+        AnimationPermOpen = '/animations/XRB2308_NIL.sca',
+        AnimationDeploy = '/animations/XRB2308_aopen.sca', --needs updating if you ever move this ; this is an unfucked version of the animation, that's all.
+        Abilities = {
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_torpedo>Torpedoes',
+            '<LOC ability_personalstealth>Personal Stealth',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 30000,
+        BuildCostMass = 3000,
+        BuildTime = 3750,
+    },
+    Intel = {
+        RadarStealth = true,
+        SonarRadius = 60,
+        SonarStealth = true,
+        VisionRadius = 35,            --from 20
+        WaterVisionRadius = 50,        --from 45
+    },
+    Physics = {
+        Elevation = 0,        --to make it sit as close to the seabed as possible or so deep it doesnt matter
+    },
+    Weapon = {
+        {
+            Damage = 35, --from 50 ; less damage per torp but double fire rate, 525dps
+            DoTPulses = 5, --from 5
+            DoTTime = 0.5, --from 0.5
+            DamageRadius = 0.5,          --from 0 ; this is to stop you from submarine stacking
+            DamageFriendly = false,     --add, because for unknown reason torpedo with aoe explosion destroy other torpedo
+            FireTargetLayerCapsTable = { --so it can shoot from the seabed
+                Sub = 'Seabed|Sub|Water',
+            },
+            MuzzleSalvoDelay = 0.3, --from 0.6
+            MuzzleSalvoSize = 6, --from 6 
+            FiringTolerance = 60, --to make it fire upwards
+            RateOfFire = 0.5, --from 0.25
+            TargetCheckInterval = 0.5,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'T2SUBMARINE', --these have torp defense so thats why its best to kill them first
+                'T3SUBMARINE',
+                'T1SUBMARINE',
+                'DESTROYER',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TurretPitch = 0, --to make it fire upwards
+        },
+    },
+}
