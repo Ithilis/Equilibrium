@@ -53,7 +53,7 @@ end
 local OrderTogglesTable = {
     Attack = {
         ToggleFromOn = function() SetWeaponPriorities(0, 'Default') end,
-        ToggleFromOff = function() SetWeaponPriorities("{categories.COMMAND, categories.STRATEGIC, categories.ANTIMISSILE * categories.TECH3, categories.ENERGYPRODUCTION * categories.STRUCTURE * categories.TECH3, categories.ENERGYPRODUCTION * categories.STRUCTURE * categories.TECH2, categories.MASSFABRICATION * categories.STRUCTURE, categories.MASSEXTRACTION * categories.STRUCTURE * categories.TECH3, categories.MASSEXTRACTION * categories.STRUCTURE * categories.TECH2, categories.SHIELD,}",
+        ToggleFromOff = function() SetWeaponPriorities("{categories.COMMAND, categories.STRATEGIC, categories.ANTIMISSILE * categories.TECH3, categories.MASSEXTRACTION * categories.STRUCTURE * categories.TECH3, categories.MASSEXTRACTION * categories.STRUCTURE * categories.TECH2, categories.ENERGYPRODUCTION * categories.STRUCTURE * categories.TECH3, categories.ENERGYPRODUCTION * categories.STRUCTURE * categories.TECH2, categories.MASSFABRICATION * categories.STRUCTURE, categories.SHIELD,}",
                                     'Snipe', false) end,
     },
 }
