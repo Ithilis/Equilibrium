@@ -62,8 +62,10 @@ XRL0302 = Class(CWalkingLandUnit) {
         if self:GetCurrentLayer() == 'Land' then --avoid them exploding in transports
             local bp = self:GetBlueprint().Weapon[1] --EQ:this will break if a weapon is added before this one.
             local wep = self:GetWeaponByLabel('Suicide')
-            wep:AddDamageMod(bp.DamageMod)
-            self:GetWeaponByLabel('Suicide'):FireWeapon()
+            if wep then --prevent things going wrong when the beetle dies due to scripts or whatever. such as in transports.
+                wep:AddDamageMod(bp.DamageMod)
+                self:GetWeaponByLabel('Suicide'):FireWeapon()
+            end
         end
         CWalkingLandUnit.OnKilled(self, instigator, type, overkillRatio)
     end,
