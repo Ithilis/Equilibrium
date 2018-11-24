@@ -1,6 +1,6 @@
 name = "Equilibrium_Balance_Mod"
-uid = "FEATURE1-V59F-DJK8-C27S-EQBALANCEMOD"
-version = 59
+uid = "FEATURE2-V60F-3JKS-D39T-EQBALANCEMOD"
+version = 60
 copyright = "Ithilis - feel free to use this code, but ask permission first, and credit Equilibrium in your mod."
 description = "This mod fixes all balance issues with the game, and improves the gameplay to a higher level."
 icon = "/Equilibrium_balance_mod.png"
