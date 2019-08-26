@@ -38,16 +38,17 @@ BlueprintId = "ual0307",
             RULEUCC_Transport = false,
         },
     Economy = {
-        BuildCostEnergy = 1350,    --75e per sec
-        BuildCostMass = 126,    --7m per sec
-        BuildTime = 900,        --18s
+        BuildCostEnergy = 1250,    --50e per sec
+        BuildCostMass = 175,    --7m per sec
+        BuildTime = 1250,        --25s
+        MaintenanceConsumptionPerSecondEnergy = 50,
     },
     Defense = {
         Shield = {
             ShieldMaxHealth = 3750,        --from 3800
             ShieldRechargeTime = 25,    --from 28s
-            ShieldRegenRate = 60,        --from 58
-            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
+            ShieldRegenRate = 75,        --from 58
+            ShieldSpillOverDamageMod = 0.2, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
         RegenRate = 5,        --from 0 because cant get veterancy    
     },

@@ -28,13 +28,15 @@ BlueprintId = "xsl0307",
         Shield = {
             ShieldRechargeTime = 50,
             ShieldRegenRate = 100,
-            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
+            ShieldSpillOverDamageMod = 0.2, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
     },
     Economy = {
         BuildCostEnergy = 9250,
         BuildCostMass = 518,
         BuildTime = 3700,
+        MaintenanceConsumptionPerSecondEnergy = 200,
+        ShieldSpillOverDamageMod = 0.2,
     },
     Display = {
         Abilities = {

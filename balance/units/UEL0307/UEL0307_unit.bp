@@ -5,15 +5,15 @@ Merge = true,
 BlueprintId = "uel0307",
 
     Economy = {
-        BuildCostEnergy = 1125,    --75e per sec
-        BuildCostMass = 105,    --7m per sec
-        BuildTime = 750,        --15s
-        MaintenanceConsumptionPerSecondEnergy = 100,
+        BuildCostEnergy = 1250,    --50e per sec
+        BuildCostMass = 175,    --7m per sec
+        BuildTime = 1250,        --25s
+        MaintenanceConsumptionPerSecondEnergy = 75,
     },
     Defense = {
         Shield = {
             ShieldRechargeTime = 25,    --from 24
-            ShieldSpillOverDamageMod = 0.15, --was bugged out to always 15% but its balanced with this in mind so no need to change
+            ShieldSpillOverDamageMod = 0.2, --was bugged out to always 15% but its balanced with this in mind so no need to change
         },
         RegenRate = 5,        --from 0 because cant get veterancy
     },
