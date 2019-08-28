@@ -5,22 +5,22 @@ Merge = true,
 BlueprintId = "ura0203",
 
     Defense = {
-        Health = 850,            --from 832hp
-        MaxHealth = 850,
+        Health = 800,            --from 832hp
+        MaxHealth = 800,
     },
     Transport = {
         AirClass = true,
         TransportClass = 1,
     },
     Economy = {
-        BuildCostEnergy = 5250,
-        BuildCostMass = 245,
-        BuildTime = 1400,
+        BuildCostEnergy = 6000,
+        BuildCostMass = 280,    --increase price, because in faf balance, and also i wana keep range advantage
+        BuildTime = 1600,
     },
     Weapon = {
         { --Ground Fire Weapon
             Damage = 20,
-            DamageRadius = 3.5,        --from 3, because corsair is weak against army
+            DamageRadius = 3,        --from 3
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
