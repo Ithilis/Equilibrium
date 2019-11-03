@@ -5,11 +5,11 @@ Merge = true,
 BlueprintId = "delk002", 
 
     Defense = {
-        Health = 2200,
-        MaxHealth = 2200,
+        Health = 3800,
+        MaxHealth = 3800,
     },
     Economy = {
-        BuildCostEnergy = 9500,
+        BuildCostEnergy = 7600,
         BuildCostMass = 760,
         BuildTime = 3800,
     },    
@@ -23,9 +23,13 @@ BlueprintId = "delk002",
         },
         {
             Damage = 100,                --from 100, uef spyplane survives with 0.1hp due to regen
-            DamageRadius = 1.5,
+            DamageRadius = 0.5,
             DetonatesAtTargetHeight = true, --transforms this unit from an annoying flyswatter into an unstoppable lead spewing killing machine
             FiringRandomness = 0.1,        --from 0.2
+            MaxRadius = 50,         --from 60
+            MuzzleSalvoDelay = 0.1,
+            MuzzleSalvoSize = 10,       --from 12
+            MuzzleVelocity = 100,
             RateOfFire = 1,
             ProjectileLifetime = 0.7,
             TurretPitchSpeed = 360,

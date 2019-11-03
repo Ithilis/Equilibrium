@@ -5,11 +5,11 @@ Merge = true,
 BlueprintId = "dalk003",   
     
     Defense = {
-        Health = 1900,
-        MaxHealth = 1900,
+        Health = 3500,
+        MaxHealth = 3500,
     },
     Economy = {
-        BuildCostEnergy = 9500,
+        BuildCostEnergy = 7600,
         BuildCostMass = 760,
         BuildTime = 3800,
     },
@@ -22,7 +22,8 @@ BlueprintId = "dalk003",
             MaxRadius = 33,
         },
         {
-            Damage = 1200,        --200dps
+            Damage = 1000,        --166dps
+            DamageRadius = 1,     --from 1.5
             MaxRadius = 54,
             RateOfFire = 0.1667,
         },      

@@ -5,11 +5,11 @@ Merge = true,
 BlueprintId = "dslk004", 
     
     Defense = {
-        Health = 2000,
-        MaxHealth = 2000,
+        Health = 4000,
+        MaxHealth = 4000,
     },
     Economy = {
-        BuildCostEnergy = 10500,
+        BuildCostEnergy = 8400,
         BuildCostMass = 840,
         BuildTime = 4200,
     },
@@ -22,19 +22,19 @@ BlueprintId = "dslk004",
         { -- ground weapon
             BeamCollisionDelay = 0.05,
             BeamLifetime = 0.4,
-            Damage = 270,            --180dps
+            Damage = 250,            --166dps
             DamageRadius = 1,
             FireTargetLayerCapsTable = { --stop it fucking up on hovering and naval and units standing in water
                 Land = 'Land|Water|Seabed',
             },
             MaxRadius = 28,
-            RateOfFire = 0.1666,    --from 4s, 6s
+            RateOfFire = 0.1666,    --from 4s, to 6s
         },
         { -- aa weapon
             BeamCollisionDelay = 0.01,    --from 0.01
             BeamLifetime = 0.4,            --from 0.6
             
-            Damage = 200,            --300dps for 4sec 
+            Damage = 100,    --150dps        
             RateOfFire = 1,
             MaxRadius = 48,
         },

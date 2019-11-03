@@ -21,11 +21,11 @@ BlueprintId = "drlk001",
         'DUMMYGSRWEAPON', --added to make its GSR longer
     },
     Defense = {
-        Health = 1800,      --from 1900
-        MaxHealth = 1800,   --from 1900
+        Health = 3200,      --from 1900
+        MaxHealth = 3200,   --from 1900
     },
     Economy = {
-        BuildCostEnergy = 10500,    --from 10000
+        BuildCostEnergy = 8400,    --from 10000
         BuildCostMass = 840,        --from 800
         BuildTime = 4200,           --from 4000
     },
@@ -38,7 +38,9 @@ BlueprintId = "drlk001",
         {   --GF
             Damage = 30,    --100dps
             FiringRandomness = 0,        --from 1
-            MaxRadius = 38,                --from 25
+            MaxRadius = 33,                --from 25
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 2,
             MuzzleVelocity = 10,
             MuzzleVelocityReduceDistance = 30,
             RateOfFire = 1.667,
@@ -47,8 +49,8 @@ BlueprintId = "drlk001",
             MaxRadius = 52, 
         },
         {   --AA
-            Damage = 100,
-            DamageRadius = 1.5,
+            Damage = 75,        --90dps
+            DamageRadius = 1,
             MaxRadius = 52,
             MuzzleSalvoSize = 2,
             MuzzleVelocity = 15,
