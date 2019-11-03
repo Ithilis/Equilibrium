@@ -1,6 +1,9 @@
+--Cybran T3 gunship
+
 UnitBlueprint {
     Merge = true,
     BlueprintId = "xra0305", 
+    
     Buffs = {
         Regen = {
             Level1 = 6,
@@ -10,56 +13,15 @@ UnitBlueprint {
             Level5 = 18,
         },
     },
-    Categories = {
-        'PRODUCTFA',
-        'SELECTABLE',
-        'BUILTBYTIER3FACTORY',
-        'CYBRAN',
-        'MOBILE',
-        'AIR',
-        'TECH3',
-        'GROUNDATTACK',
-        'VISIBLETORECON',
-        'COUNTERINTELLIGENCE',        -- add stealth
-        'RECLAIMABLE',
-        'OVERLAYANTIAIR',
-        'OVERLAYDIRECTFIRE',
-    },
     Defense = {
         Health = 4250,        -- from 5900
         MaxHealth = 4250,
-    },
-    Display = {
-        Abilities = {
-            '<LOC ability_aa>Anti-Air',
-            '<LOC ability_personalstealth>Personal Stealth',
-        },
     },
     Economy = {
         BuildCostEnergy = 25000,
         BuildCostMass = 1000,
         BuildTime = 6000,
         MaintenanceConsumptionPerSecondEnergy = 50,
-    },
-    General = {
-        OrderOverrides = {
-            RULEUTC_StealthToggle = {
-                bitmapId = 'stealth-personal',
-                helpText = 'toggle_stealth_personal',
-            },
-        },
-        ToggleCaps = {
-            RULEUTC_StealthToggle = true,
-            RULEUTC_JammingToggle = false,
-        },
-    },
-    Intel = {
-        RadarStealth = true,
-        JamRadius = {
-            Max = 1,
-            Min = 0,
-        },
-        JammerBlips = 0,
     },
     Veteran = { -- not really needed
         Level1 = 30,
@@ -76,7 +38,8 @@ UnitBlueprint {
                 Land = 'Land|Water|Seabed',
             },
             FiringTolerance = 2,            --from 0.5
-            MinRadius = 0,                    --from 2
+            MaxRadius = 25,
+            MinRadius = 2,
             RateOfFire = 1,                    --from 1.6
             TargetPriorities = {
                 'SPECIALHIGHPRI',

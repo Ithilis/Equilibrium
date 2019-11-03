@@ -4,21 +4,6 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "uea0305",
 
-    Categories = {
-        'PRODUCTSC1',
-        'SELECTABLE',
-        'BUILTBYTIER3FACTORY',
-        'UEF',
-        'MOBILE',
-        'AIR',
-        'TECH3',
-        'GROUNDATTACK',
-        'VISIBLETORECON',
-        'RECLAIMABLE',
-        'OVERLAYANTIAIR',
-        'OVERLAYDIRECTFIRE',
-        'OVERLAYCOUNTERINTEL',  --add
-    },
     Transport = {
         AirClass = true,
         TransportClass = 2,
@@ -27,30 +12,11 @@ BlueprintId = "uea0305",
         Health = 4500,
         MaxHealth = 4500,
     },
-    Display = {
-        Abilities = {
-            '<LOC ability_aa>Anti-Air',
-            '<LOC ability_jamming>Jamming',
-        },
-    },
     Economy = {
         BuildCostEnergy = 25000,
         BuildCostMass = 1000,
         BuildTime = 6000,
         MaintenanceConsumptionPerSecondEnergy = 25,
-    },
-    General = {
-        ToggleCaps = {
-            RULEUTC_JammingToggle = true,
-        },
-    },
-    Intel = {
-        JamRadius = {
-            Max = 40,
-            Min = 10,
-        },
-        JammerBlips = 4,
-        VisionRadius = 32,
     },
     Weapon = {
         { --Ground fire weapon
@@ -58,7 +24,9 @@ BlueprintId = "uea0305",
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
             },
+            Damage = 100,
             FiringRandomness = 0,          --from0,3
+            MaxRadius = 25,
             RateOfFire = 2,                --from2,5
             TargetCheckInterval = 0.5,     --from0,27
             TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
@@ -67,7 +35,7 @@ BlueprintId = "uea0305",
             Damage = 25,                   --from32=50dps
             MaxRadius = 50,                --from44
             MuzzleVelocity = 90,           --from45
-             RateOfFire = 1,               --from0,75
+            RateOfFire = 1,               --from0,75
             TargetCheckInterval = 0.5,     --from0,25
             TargetPriorities = {
                 'SPECIALHIGHPRI',
