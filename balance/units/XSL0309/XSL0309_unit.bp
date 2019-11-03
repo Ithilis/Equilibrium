@@ -15,6 +15,7 @@ BlueprintId = "xsl0309",
         BuildRate = 37.5,        --from 40
         StorageEnergy = 0,
         StorageMass = 0,
+        MaxBuildDistance = 10,
     },
     Categories = {
         'PRODUCTFA',

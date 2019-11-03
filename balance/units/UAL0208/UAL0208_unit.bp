@@ -12,11 +12,14 @@ BlueprintId = "ual0208",
         BuildCostEnergy = 625,
         BuildCostMass = 125,
         BuildTime = 625,
+        BuildRate = 12.5,
         StorageEnergy = 0,
         StorageMass = 0,
         
         SacrificeMassMult = 0.8,    --from 0.6
         SacrificeEnergyMult = 0.8,    --from 0.6
+        
+        MaxBuildDistance = 7.5,
     },
     Physics = {
         MaxAcceleration = 1.9,

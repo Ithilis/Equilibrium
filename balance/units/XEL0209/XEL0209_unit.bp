@@ -11,6 +11,7 @@ BlueprintId = "xel0209",
         BuildRate = 20,            --17,5
         StorageEnergy = 0,
         StorageMass = 0,
+        MaxBuildDistance = 7.5,
     },
     Categories = {                --Not build-able on AIR/NAVAL factory -> i cant remove it and dont cause crazy bug with T2 air factory, that would be able build only sacu and T3 enginer... 
         'PRODUCTFA',

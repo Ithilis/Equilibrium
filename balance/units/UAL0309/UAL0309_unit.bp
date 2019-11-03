@@ -18,6 +18,8 @@ BlueprintId = "ual0309",
         
         SacrificeMassMult = 0.8,    --from 0.6
         SacrificeEnergyMult = 0.8,    --from 0.6
+        
+        MaxBuildDistance = 10,
     },
     Categories = {
         'PRODUCTSC1',

@@ -8,10 +8,13 @@ BlueprintId = "ual0105",
         BuildCostEnergy = 250,
         BuildCostMass = 50,
         BuildTime = 250,
+        BuildRate = 5,
         StorageEnergy = 0,
         StorageMass = 0,
         
         SacrificeMassMult = 0.8,    --from 0.6
         SacrificeEnergyMult = 0.8,    --from 0.6
+        
+        MaxBuildDistance = 5,
     },
 }
