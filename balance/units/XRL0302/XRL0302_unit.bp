@@ -224,7 +224,7 @@ UnitBlueprint {
         {
             AboveWaterTargetsOnly = true,
             CollideFriendly = false,
-            Damage = 3000,--remember to change the DamageMod as well for the death explosion!
+            Damage = 2500,--remember to change the DamageMod as well for the death explosion!
             DamageFriendly = false,
             DamageMod = 0, --the difference to add to the death explosion (negative for lower damage)
             DamageRadius = 6,

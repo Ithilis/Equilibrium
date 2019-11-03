@@ -22,9 +22,9 @@ BlueprintId = "daa0206",
         AirClass = false,
     },
     Economy = {
-        BuildCostEnergy = 5250,
-        BuildCostMass = 245,
-        BuildTime = 1400,
+        BuildCostEnergy = 6000,
+        BuildCostMass = 280,
+        BuildTime = 1600,
     },    
     Physics = {
         FuelRechargeRate = 5,        --from 0
