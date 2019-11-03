@@ -21,8 +21,8 @@ BlueprintId = "xrl0305",
         BuildTime = 5000,
     },
     Defense = {
-        Health = 5900,                
-        MaxHealth = 5900,
+        Health = 6500,                
+        MaxHealth = 6500,
     },
     Display = {
         Abilities = {
@@ -36,19 +36,19 @@ BlueprintId = "xrl0305",
     },
     Physics = {
         LayerChangeOffsetHeight = -0.3,
-        MaxAcceleration = 2.0,
-        MaxBrake = 2.0,
-        MaxSpeed = 2.0,
+        MaxAcceleration = 2.2,
+        MaxBrake = 2.2,
+        MaxSpeed = 2.2,
         TurnRate = 60,
     },    
     Weapon = {
         { --main gun
 			Damage = 120,            --300dps
-			MaxRadius = 33,
+			MaxRadius = 30,
             MuzzleVelocity = 35, --revert from faf 42
 			RateOfFire = 2.5,
             TrackingRadius = 1.2, --makes them face their enemy instead of fucking up
-			TurretPitch = 10,
+			TurretPitch = 30,
 			TurretPitchRange = 90,
             TurretYawSpeed = 70, --make them able to turn their turret without fucking up
         },

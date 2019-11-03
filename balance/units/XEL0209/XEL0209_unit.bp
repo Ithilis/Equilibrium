@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "xel0209",
 
     Economy = {
-        BuildCostEnergy = 2100,    --75e per sec
+        BuildCostEnergy = 2800,    --100e per sec
         BuildCostMass = 280,    --10m per sec
         BuildTime = 1400,        --25s
         BuildRate = 20,            --17,5

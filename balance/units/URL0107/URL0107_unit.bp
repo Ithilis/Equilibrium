@@ -11,8 +11,8 @@ BlueprintId = "url0107",
         BuildRate = 1.5,    --from 1
     },
     Defense = {
-        Health = 330,
-        MaxHealth = 330,
+        Health = 300,
+        MaxHealth = 300,
     },
     Physics = {
         MaxAcceleration = 3.7,
@@ -24,8 +24,8 @@ BlueprintId = "url0107",
     StrategicIconName = 'icon_bot1eq_directfire', --this is a new icon that lets us change it via mods. no mod = no change
     Weapon = {
         {
-        Damage = 7,        --from 7 = 23.3dps
-        RateOfFire = 3,        --from 3
+            Damage = 8,        --from 8 = 26.4dps
+            RateOfFire = 3,        --from 3
         },
     },
 }

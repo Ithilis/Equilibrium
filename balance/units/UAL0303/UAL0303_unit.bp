@@ -21,13 +21,13 @@ BlueprintId = "ual0303",
         },
     },
     Physics = {
-    MaxAcceleration = 2.8,
-    MaxBrake = 2.8,
-    MaxSpeed = 2.8,
+        MaxAcceleration = 3,
+        MaxBrake = 3,
+        MaxSpeed = 3,
     },
     Weapon = {
         {
-        Damage = 220,            --275dps
+            Damage = 220,            --275dps
         },
     },
 }

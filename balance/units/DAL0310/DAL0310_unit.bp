@@ -11,7 +11,7 @@ BlueprintId = "dal0310",
         'AEON',
         'MOBILE',
         'LAND',
-        'NAVAL',
+        --'NAVAL',
         'TECH3',
         'DIRECTFIRE',
         'VISIBLETORECON',
@@ -27,8 +27,8 @@ BlueprintId = "dal0310",
     },
     Weapon = {
         {
-        Damage = 10,        --from5
-        MaxRadius = 80,        --from 75 for out-range ravagers
+            Damage = 10,        --from5
+            MaxRadius = 80,        --from 75 for out-range ravagers
         },
     },
 }

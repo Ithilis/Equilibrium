@@ -20,7 +20,8 @@ BlueprintId = "uel0201",
     },
     Weapon = {
         {
-        Damage = 20,        --from 24 = 20dps
+            Damage = 20,        --from 24 = 20dps
+            RateOfFire = 1,
         },
     },
 }

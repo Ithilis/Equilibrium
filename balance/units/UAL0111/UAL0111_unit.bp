@@ -9,7 +9,7 @@ BlueprintId = "ual0111",
         MaxHealth = 650,
     },
     Economy = {
-        BuildCostEnergy = 2100,
+        BuildCostEnergy = 1400,
         BuildCostMass = 196,
         BuildTime = 1400,
     },
