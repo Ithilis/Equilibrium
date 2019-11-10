@@ -20,9 +20,9 @@ UnitBlueprint {
         MaxHealth = 1250,
     },
     Physics = {
-        MaxAcceleration = 2.5,
-        MaxBrake = 2.5,
-        MaxSpeed = 2.5,
+        MaxAcceleration = 2.8,
+        MaxBrake = 2.8,
+        MaxSpeed = 2.8,
     },
     Intel = {
         VisionRadius = 20,            --from26
@@ -36,6 +36,7 @@ UnitBlueprint {
             DamageRadius = 0.5,        --dont miss
             MaxRadius = 33,
             FiringRandomness = 0.2,
+            MuzzleSalvoSize = 15,
             MuzzleVelocity = 35,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
@@ -54,6 +55,9 @@ UnitBlueprint {
             DamageFriendly = false,
             FiringRandomness = 1.75,
             MaxRadius = 18,
+            MuzzleSalvoDelay = 0.3,
+            MuzzleSalvoSize = 4,
+            MuzzleVelocity = 12.8,
             CollideFriendly = false,
             RangeCategory = 'UWRC_IndirectFire',    --from direct fire -> yellow circle for grenades
             --RateOfFire = 0.15,            this doesnt work, reload time is 7s and change didnt occur
