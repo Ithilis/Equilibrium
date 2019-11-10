@@ -4,12 +4,26 @@ UnitBlueprint {
 Merge = true,
 BlueprintId = "xsl0202",
     
+    Defense = {
+        Health = 2500,
+        MaxHealth = 2500,
+    },
     Economy = {
         BuildCostEnergy = 1800,
         BuildCostMass = 360,
         BuildTime = 1800,
     },
+    Physics = {
+        MaxAcceleration = 2.5,
+        MaxBrake = 2.5,
+        MaxSpeed = 2.5,
+    },
     Weapon = {
+        Damage = 35,        --115dps
+        MaxRadius = 26,
+        MuzzleSalvoSize = 1,
+        MuzzleVelocity = 30,
+        RateOfFire = 3,
         TurretPitchRange = 90,  --from 60, to help it shoot at units very close to it.
         TurretYawSpeed = 180,   --from 70 = on prenerf value
     },

@@ -21,7 +21,7 @@ BlueprintId="urs0302",
     },
     Weapon = {
         { --main gun 1
-            Damage = 225,        --from 900 = 450dps
+            Damage = 225,        --from 900 = 225dps
             DamageRadius = 2.5,    --from 2
             RateOfFire = 1,        --from 0.25
             MaxRadius = 135,    --from 128

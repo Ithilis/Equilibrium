@@ -4,6 +4,11 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0302",
 
+    Defense = {
+        Health = 49000,
+        MaxHealth = 49000,
+        RegenRate = 0,
+    },
     Economy = {
         BuildCostEnergy = 90000,
         BuildCostMass = 9000,
@@ -17,22 +22,28 @@ BlueprintId="xss0302",
     },
     Weapon = {
         {
+            Damage = 600,
             DamageRadius = 2.5,    --from2
             FiringRandomness = 0.3,
             MaxRadius = 130,    --from 128
             MuzzleVelocity = 30,
+            RateOfFire = 0.25,
         },
         {
+            Damage = 600,
             DamageRadius = 2.5,    --from2
             FiringRandomness = 0.3,
             MaxRadius = 130,    --from 128
             MuzzleVelocity = 30,
+            RateOfFire = 0.25,
         },
         {
+            Damage = 600,
             DamageRadius = 2.5,    --from2
             FiringRandomness = 0.3,
             MaxRadius = 130,    --from 128
             MuzzleVelocity = 30,
+            RateOfFire = 0.25,
         },
         {
         },

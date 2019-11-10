@@ -24,16 +24,22 @@ BlueprintId="ues0302",
             DamageRadius = 2.5,    --from2
             Damage = 900,    --from 1000 = 405dps
             MuzzleVelocity = 28,    --from 30
+            MaxRadius = 150,
+            RateOfFire = 0.05,
         },
         {
             DamageRadius = 2.5,    --from2
             Damage = 900,    --from 1000 = 405dps
             MuzzleVelocity = 28,    --from 30
+            MaxRadius = 150,
+            RateOfFire = 0.05,
         },
         {
             DamageRadius = 2.5,    --from2
             Damage = 900,    --from 1000 = 405dps
             MuzzleVelocity = 28,    --from 30
+            MaxRadius = 150,
+            RateOfFire = 0.05,
         },
         {
             Damage = 17,    --From 12 = 4x20dps

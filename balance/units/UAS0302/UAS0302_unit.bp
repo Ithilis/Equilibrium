@@ -4,6 +4,10 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="uas0302",
 
+    Defense = {
+        Health = 48000,
+        MaxHealth = 48000,
+    },
     Economy = {
         BuildCostEnergy = 90000,
         BuildCostMass = 9000,
@@ -24,16 +28,22 @@ BlueprintId="uas0302",
     },
     Weapon = {
         { --main cannon 1
+            Damage = 1000,
             DamageRadius = 2.5,        --from 2
             MaxRadius = 100,
+            RateOfFire = 0.17,
         },
         { --main cannon 2
+            Damage = 1000,
             DamageRadius = 2.5,        --from 2
             MaxRadius = 100,
+            RateOfFire = 0.17,
         },
         { --main cannon 3
+            Damage = 1000,
             DamageRadius = 2.5,        --from 2
             MaxRadius = 100,
+            RateOfFire = 0.17,
         },
         { --tmd
             CannotAttackGround = false,
