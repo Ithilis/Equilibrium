@@ -87,10 +87,10 @@ UAL0001 = Class(oldUAL0001) {
         -- Chrono Dampener
         elseif enh == 'ChronoDampener' then
             self:SetWeaponEnabledByLabel('ChronoDampener', true)
-            if not Buffs['AeonACUChronoBonus'] then
+            if not Buffs['AeonACUChronoDampener'] then
                 BuffBlueprint {
-                    Name = 'AeonACUChronoBonus',
-                    DisplayName = 'AeonACUChronoBonus',
+                    Name = 'AeonACUChronoDampener',
+                    DisplayName = 'AeonACUChronoDampener',
                     BuffType = 'ACUChronoBonus',
                     Stacks = 'REPLACE',
                     Duration = -1,
@@ -99,14 +99,18 @@ UAL0001 = Class(oldUAL0001) {
                             Add = bp.NewRegenRate,
                             Mult = 1.0,
                         },
+                        MaxHealth = {
+                            Add = bp.NewHealth,
+                            Mult = 1.0,
+                        },
                     },
                 }
             end
-            Buff.ApplyBuff(self, 'AeonACUChronoBonus')
+            Buff.ApplyBuff(self, 'AeonACUChronoDampener')
         elseif enh =='ChronoDampenerRemove' then
             self:SetWeaponEnabledByLabel('ChronoDampener', false)
-            if Buff.HasBuff( self, 'AeonACUChronoBonus' ) then
-                Buff.RemoveBuff( self, 'AeonACUChronoBonus' )
+            if Buff.HasBuff( self, 'AeonACUChronoDampener' ) then
+                Buff.RemoveBuff( self, 'AeonACUChronoDampener' )
             end
         -- T2 Engineering
         elseif enh =='AdvancedEngineering' then
@@ -227,6 +231,13 @@ UAL0001 = Class(oldUAL0001) {
             self:SetIntelRadius('Omni', bpIntel.OmniRadius or 26)
       end
     end,
+    
+    CreateHeavyShield = function(self, bp)
+        WaitTicks(1)
+        self:CreateShield(bp)
+        self:SetEnergyMaintenanceConsumptionOverride(bp.MaintenanceConsumptionPerSecondEnergy or 0)
+        self:SetMaintenanceConsumptionActive()
+    end
 }
 
 TypeClass = UAL0001

@@ -266,6 +266,10 @@ UEL0001 = Class(oldUEL0001) {
                             Add = bp.NewRegenRate,
                             Mult = 1.0,
                         },
+                        MaxHealth = {
+                            Add = bp.NewHealth,
+                            Mult = 1.0,
+                        },
                     },
                 }
             end

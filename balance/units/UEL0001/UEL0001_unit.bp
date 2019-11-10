@@ -32,6 +32,9 @@ BlueprintId = "uel0001",
         },            
         HeavyAntiMatterCannon = {
             NewMaxRadius = 28,        --from 30
+            BuildCostEnergy = 24000,
+            BuildCostMass = 800,
+            BuildTime = 800,
         },
         LeftPod = {
             BuildCostEnergy = 2250,
@@ -52,12 +55,12 @@ BlueprintId = "uel0001",
             BuildTime = 2500,            --from 1400bt
         },
         DamageStabilization = {
-            BuildCostEnergy = 32000,
+            BuildCostEnergy = 24000,
             BuildCostMass = 800,
             BuildTime = 800,
             
-            NewHealth = 0,        --add
-            NewRegenRate = 50,
+            NewHealth = 1000,        --add
+            NewRegenRate = 45,
         },
         Shield = {
             BuildCostEnergy = 126000,    --from 112500

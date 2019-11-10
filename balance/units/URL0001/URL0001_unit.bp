@@ -49,6 +49,9 @@ BlueprintId = "url0001",
         },
         CoolingUpgrade = {
             NewMaxRadius = 28,            --from30
+            BuildCostEnergy = 24000,
+            BuildCostMass = 800,
+            BuildTime = 800,
         },
         MicrowaveLaserGenerator = {
             BuildCostEnergy = 560000,

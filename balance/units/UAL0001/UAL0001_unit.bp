@@ -32,21 +32,31 @@ BlueprintId = "ual0001",
         },
         CrysalisBeam = {
             NewMaxRadius = 33,            --from 35
+            BuildCostEnergy = 15000,
+            BuildCostMass = 500,
+            BuildTime = 500,
+        },
+        HeatSink = {
+            BuildCostEnergy = 15000,
+            BuildCostMass = 500,
+            BuildTime = 500,
+            NewRateOfFire = 2,
         },
         ChronoDampener = {
             BuildCostEnergy = 60000,    --from 52500
             BuildCostMass = 1500,        --from 1750
             BuildTime = 1500,            --from 1225
             
+            NewHealth = 2000,
             NewRegenRate = 20,            --ADD
         },
         EnhancedSensors = {
-            BuildCostEnergy = 8000,
-            BuildCostMass = 400,
-            BuildTime = 400,
+            BuildCostEnergy = 7000,
+            BuildCostMass = 350,
+            BuildTime = 350,
             
-            NewOmniRadius = 100,
-            NewVisionRadius = 50,       --50
+            NewOmniRadius = 80,
+            NewVisionRadius = 80,       --50
         },
         ResourceAllocation = {
             ProductionPerSecondEnergy = 1200,    --from2700
@@ -72,7 +82,7 @@ BlueprintId = "ual0001",
             MaintenanceConsumptionPerSecondEnergy = 100,
             ShieldMaxHealth = 10000,
             ShieldRechargeTime = 120,
-            ShieldRegenRate = 30,            --from 37
+            ShieldRegenRate = 40,            --from 37
         },
         ShieldHeavy = {
             BuildCostEnergy = 480000,            --from 1 000000e
@@ -81,7 +91,7 @@ BlueprintId = "ual0001",
             MaintenanceConsumptionPerSecondEnergy = 500, --prevent official balance from changing stuff
             ShieldMaxHealth = 44000,
             ShieldRechargeTime = 200,
-            ShieldRegenRate = 60,        --from 44
+            ShieldRegenRate = 80,        --from 44
         },
         Teleporter = {
             BuildCostEnergy = 1500000,
@@ -91,6 +101,11 @@ BlueprintId = "ual0001",
     },
     Transport = {
         CanFireFromTransport = true,
+    },
+    Intel = {
+        OmniRadius = 28,
+        VisionRadius = 28,
+        WaterVisionRadius = 28,
     },
     Veteran = {
         RequirementMult = 0.5,
@@ -155,7 +170,8 @@ BlueprintId = "ual0001",
             },
             
             MaxRadius = 33,                    --from 35
-            RateOfFire = 0.25,                --from 5s
+            RateOfFire = 10,                --from 5s
+            RackReloadTimeout = 5,             --from10
             
             EnergyDrainPerSecond = 400,        --from 200
             EnergyRequired = 400,            --from 200
