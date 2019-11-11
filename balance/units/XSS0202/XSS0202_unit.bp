@@ -4,16 +4,80 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0202",
 
+    Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER2FACTORY',
+        'BUILTBYTIER3FACTORY',
+        'BUILTBYEXPERIMENTALSUB',
+        'SERAPHIM',
+        'MOBILE',
+        'NAVAL',
+        'TECH2',
+        'INDIRECTFIRE',
+        'ANTIAIR',
+        'ANTIMISSILE',
+        'SUBMERSIBLE',  --added
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'CRUISER',
+        'SHOWATTACKRETICLE',
+        'OVERLAYANTIAIR',
+        'OVERLAYRADAR',
+        'OVERLAYSONAR',
+        'OVERLAYDEFENSE',
+        'OVERLAYINDIRECTFIRE',
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_aa>Anti-Air',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_submersible>Submersible',
+            '<LOC ability_tacmissiledef>Tactical Missile Defense',
+        },
+    },
     Economy = {
         BuildCostEnergy = 13000,    --from 18000
         BuildCostMass = 1950,
         BuildTime = 7800,
+    },
+    General = {
+        Category = 'Ship',
+        Classification = 'RULEUC_MilitaryShip',
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_CallTransport = false,
+            RULEUCC_Capture = false,
+            RULEUCC_Dive = true,    --add
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Nuke = false,
+            RULEUCC_Patrol = true,
+            RULEUCC_Reclaim = false,
+            RULEUCC_Repair = false,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+            RULEUCC_Transport = false,
+        },
     },
     Intel = {
         RadarRadius = 150,
         SonarRadius = 120,
         VisionRadius = 65,
         WaterVisionRadius = 60,
+    },
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Air = false,
+            LAYER_Land = false,
+            LAYER_Orbit = false,
+            LAYER_Seabed = false,
+            LAYER_Sub = true,
+            LAYER_Water = true,
+        },
+        Elevation = -2.5,
+        MotionType = 'RULEUMT_SurfacingSub',
     },
     Weapon = {
         {
