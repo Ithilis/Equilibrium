@@ -413,6 +413,230 @@ Unit = Class(oldUnit) {
         return prop
     end,
     
+    
+    ----------------------------------------------------------------------------------------------
+    -- CONSTRUCTING - BEING BUILT
+    ----------------------------------------------------------------------------------------------
+    
+    --we add only line that prevent repair help construct unfinished builiding (430)
+    
+    OnStopBeingBuilt = function(self, builder, layer)
+        if self.Dead or self:BeenDestroyed() then -- Sanity check, can prevent strange shield bugs and stuff
+            self:Kill()
+            return false
+        end
+
+        local bp = self:GetBlueprint()
+        self.isFinishedUnit = true      --this one
+
+        -- Set up Veterancy tracking here. Avoids needing to check completion later.
+        -- Do all this here so we only have to do for things which get completed
+        -- Don't need to track damage for things which cannot attack!
+        self.gainsVeterancy = self:ShouldUseVetSystem()
+
+        if self.gainsVeterancy then
+            self.Sync.totalMassKilled = 0
+            self.Sync.totalMassKilledTrue = 0
+            self.Sync.VeteranLevel = 0
+
+            -- Allow units to require more or less mass to level up. Decimal multipliers mean
+            -- faster leveling, >1 mean slower. Doing this here means doing it once instead of every kill.
+            local defaultMult = 2
+            self.Sync.myValue = math.max(math.floor(bp.Economy.BuildCostMass * (bp.VeteranMassMult or defaultMult)), 1)
+        end
+
+        self:EnableUnitIntel('NotInitialized', nil)
+        self:ForkThread(self.StopBeingBuiltEffects, builder, layer)
+
+        if self:GetCurrentLayer() == 'Water' then
+            self:StartRocking()
+            local surfaceAnim = bp.Display.AnimationSurface
+            if not self.SurfaceAnimator and surfaceAnim then
+                self.SurfaceAnimator = CreateAnimator(self)
+            end
+            if surfaceAnim and self.SurfaceAnimator then
+                self.SurfaceAnimator:PlayAnim(surfaceAnim):SetRate(1)
+            end
+        end
+
+        self:PlayUnitSound('DoneBeingBuilt')
+        self:PlayUnitAmbientSound('ActiveLoop')
+
+        if self.IsUpgrade and builder then
+            -- Set correct hitpoints after upgrade
+            local hpDamage = builder:GetMaxHealth() - builder:GetHealth() -- Current damage
+            local damagePercent = hpDamage / self:GetMaxHealth() -- Resulting % with upgraded building
+            local newHealthAmount = builder:GetMaxHealth() * (1 - damagePercent) -- HP for upgraded building
+            builder:SetHealth(builder, newHealthAmount) -- Seems like the engine uses builder to determine new HP
+            self.DisallowCollisions = false
+            self:SetCanTakeDamage(true)
+            self:RevertCollisionShape()
+            self.IsUpgrade = nil
+        end
+
+        -- Turn off land bones if this unit has them.
+        self:HideLandBones()
+        self:DoUnitCallbacks('OnStopBeingBuilt')
+
+        -- Create any idle effects on unit
+        if table.getn(self.IdleEffectsBag) == 0 then
+            self:CreateIdleEffects()
+        end
+
+        -- If we have a shield specified, create it.
+        -- Blueprint registration always creates a dummy Shield entry:
+        -- {
+        --     ShieldSize = 0
+        --     RegenAssistMult = 1
+        -- }
+        -- ... Which we must carefully ignore.
+        local bpShield = bp.Defense.Shield
+        if bpShield.ShieldSize ~= 0 then
+            self:CreateShield(bpShield)
+        end
+
+        -- Create spherical collisions if defined
+        if bp.SizeSphere then
+            self:SetCollisionShape(
+                'Sphere',
+                bp.CollisionSphereOffsetX or 0,
+                bp.CollisionSphereOffsetY or 0,
+                bp.CollisionSphereOffsetZ or 0,
+                bp.SizeSphere
+            )
+        end
+
+        if bp.Display.AnimationPermOpen then
+            self.PermOpenAnimManipulator = CreateAnimator(self):PlayAnim(bp.Display.AnimationPermOpen)
+            self.Trash:Add(self.PermOpenAnimManipulator)
+        end
+
+        -- Initialize movement effects subsystems, idle effects, beam exhaust, and footfall manipulators
+        local bpTable = bp.Display.MovementEffects
+        if bpTable.Land or bpTable.Air or bpTable.Water or bpTable.Sub or bpTable.BeamExhaust then
+            self.MovementEffectsExist = true
+            if bpTable.BeamExhaust and (bpTable.BeamExhaust.Idle ~= false) then
+                self:UpdateBeamExhaust('Idle')
+            end
+            if not self.Footfalls and bpTable[layer].Footfall then
+                self.Footfalls = self:CreateFootFallManipulators(bpTable[layer].Footfall)
+            end
+        else
+            self.MovementEffectsExist = false
+        end
+
+        ArmyBrains[self:GetArmy()]:AddUnitStat(self:GetUnitId(), "built", 1)
+
+        -- Prevent UI mods from violating game/scenario restrictions
+        local id = self:GetUnitId()
+        local index = self:GetArmy()
+        if not ScenarioInfo.CampaignMode and Game.IsRestricted(id, index) then
+            WARN('Unit.OnStopBeingBuilt() Army ' ..index.. ' cannot create restricted unit: ' .. (bp.Description or id))
+            if self ~= nil then self:Destroy() end
+
+            return false -- Report failure of OnStopBeingBuilt
+        end
+
+        if bp.EnhancementPresetAssigned then
+            self:ForkThread(self.CreatePresetEnhancementsThread)
+        end
+
+        -- Don't try sending a Notify message from here if we're an ACU
+        if self.techCategory ~= 'COMMAND' then
+            self:SendNotifyMessage('completed')
+        end
+
+        return true
+    end,
+    
+    
+    -------------------------------------------------------------------------------------------
+    -- ECONOMY/REPAIR
+    -------------------------------------------------------------------------------------------   
+    
+    -- Called when we start building a unit, turn on/off, get/lose bonuses, or on
+    -- any other change that might affect our build rate or resource use.
+    UpdateConsumptionValues = function(self)
+        local energy_rate = 0
+        local mass_rate = 0
+
+        if self.ActiveConsumption then
+            local focus = self:GetFocusUnit()
+            local time = 1
+            local mass = 0
+            local energy = 0
+            local targetData
+            local baseData
+            local repairRatio = 1
+
+            if focus then -- Always inherit work status of focus
+                self:InheritWork(focus)
+            end
+
+            if self.WorkItem then -- Enhancement
+                targetData = self.WorkItem
+            elseif focus then -- Handling upgrades
+                if self:IsUnitState('Upgrading') then
+                    baseData = self:GetBlueprint().Economy -- Upgrading myself, subtract ev. baseCost
+                elseif focus.originalBuilder and not focus.originalBuilder.Dead and focus.originalBuilder:IsUnitState('Upgrading') and focus.originalBuilder:GetFocusUnit() == focus then
+                    baseData = focus.originalBuilder:GetBlueprint().Economy
+                end
+
+                if baseData then
+                    targetData = focus:GetBlueprint().Economy
+                end
+            end
+
+            if targetData then -- Upgrade/enhancement
+                time, energy, mass = Game.GetConstructEconomyModel(self, targetData, baseData)
+            elseif focus then -- Building/repairing something
+                if focus:IsUnitState('SiloBuildingAmmo') then
+                    local siloBuildRate = focus:GetBuildRate() or 1
+                    time, energy, mass = focus:GetBuildCosts(focus.SiloProjectile)
+                    energy = (energy / siloBuildRate) * (self:GetBuildRate() or 1)
+                    mass = (mass / siloBuildRate) * (self:GetBuildRate() or 1)
+                else
+                    time, energy, mass = self:GetBuildCosts(focus:GetBlueprint())
+                    if self:IsUnitState('Repairing') and focus.isFinishedUnit then
+                        energy = energy * repairRatio
+                        mass = mass * repairRatio * 0.5       --repairing cost 50% mass
+                    end
+                end
+            end
+
+            energy = math.max(1, energy * (self.EnergyBuildAdjMod or 1))
+            mass = math.max(1, mass * (self.MassBuildAdjMod or 1))
+            energy_rate = energy / time
+            mass_rate = mass / time
+        end
+
+        self:UpdateAssistersConsumption()
+
+        local myBlueprint = self:GetBlueprint()
+        if self.MaintenanceConsumption then
+            local mai_energy = (self.EnergyMaintenanceConsumptionOverride or myBlueprint.Economy.MaintenanceConsumptionPerSecondEnergy)  or 0
+            local mai_mass = myBlueprint.Economy.MaintenanceConsumptionPerSecondMass or 0
+
+            -- Apply economic bonuses
+            mai_energy = mai_energy * (100 + self.EnergyModifier) * (self.EnergyMaintAdjMod or 1) * 0.01
+            mai_mass = mai_mass * (100 + self.MassModifier) * (self.MassMaintAdjMod or 1) * 0.01
+
+            energy_rate = energy_rate + mai_energy
+            mass_rate = mass_rate + mai_mass
+        end
+
+         -- Apply minimum rates
+        energy_rate = math.max(energy_rate, myBlueprint.Economy.MinConsumptionPerSecondEnergy or 0)
+        mass_rate = math.max(mass_rate, myBlueprint.Economy.MinConsumptionPerSecondMass or 0)
+
+        self:SetConsumptionPerSecondEnergy(energy_rate)
+        self:SetConsumptionPerSecondMass(mass_rate)
+        self:SetConsumptionActive(energy_rate > 0 or mass_rate > 0)
+    end,
+    
+    
+    
+    
 -------------------------------------------------------------------------------------------
 -- LAYER EVENTS
 -------------------------------------------------------------------------------------------
