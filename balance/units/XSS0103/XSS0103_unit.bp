@@ -4,10 +4,60 @@ UnitBlueprint {
 Merge = true,
 BlueprintId="xss0103",
 
-     Economy = {
+    Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER1FACTORY',
+        'BUILTBYTIER2FACTORY',
+        'BUILTBYTIER3FACTORY',
+        'SERAPHIM',
+        'MOBILE',
+        'NAVAL',
+        'TECH1',
+        'DIRECTFIRE',
+        'INTELLIGENCE',
+        'RADAR',
+        'SONAR',
+        'SUBMERSIBLE',  --added
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'FRIGATE',
+        'OVERLAYANTIAIR',
+        'OVERLAYSONAR',
+        'OVERLAYRADAR',
+        'OVERLAYDIRECTFIRE',
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_aa>Anti-Air',
+            '<LOC ability_radar>Radar',
+            '<LOC ability_sonar>Sonar',
+            '<LOC ability_submersible>Submersible',
+        },
+    },
+    Economy = {
         BuildCostEnergy = 2600,
         BuildCostMass = 260,
         BuildTime = 1040,
+    },
+    General = {
+        Category = 'Ship',
+        Classification = 'RULEUC_MilitaryShip',
+        CommandCaps = {
+            RULEUCC_Attack = true,
+            RULEUCC_CallTransport = false,
+            RULEUCC_Capture = false,
+            RULEUCC_Dive = true,    --add
+            RULEUCC_Guard = true,
+            RULEUCC_Move = true,
+            RULEUCC_Nuke = false,
+            RULEUCC_Patrol = true,
+            RULEUCC_Reclaim = false,
+            RULEUCC_Repair = false,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Stop = true,
+            RULEUCC_Transport = false,
+        },
     },
     Intel = {
         RadarRadius = 80,
@@ -15,9 +65,30 @@ BlueprintId="xss0103",
         VisionRadius = 30,        --from 32
         WaterVisionRadius = 35,    --from 16
     },
+    Physics = {
+        BuildOnLayerCaps = {
+            LAYER_Air = false,
+            LAYER_Land = false,
+            LAYER_Orbit = false,
+            LAYER_Seabed = false,
+            LAYER_Sub = true,
+            LAYER_Water = true,
+        },
+        MaxAcceleration = 5.5,  --from 6, because sumberibility
+        MaxBrake = 5.5,  --from 6, because sumberibility
+        MaxSpeed = 5.5,  --from 6, because sumberibility
+        MaxSpeedReverse = 5.5,  --from 6, because sumberibility
+        Elevation = -1,     --so even navy can hit it by ground fire, what is not true for other eq navy
+        MotionType = 'RULEUMT_SurfacingSub',
+    },
     Weapon = {
         {
+            Damage = 20,
+            DamageRadius = 1,
             MaxRadius = 30,
+            MuzzleSalvoSize = 3,
+            MuzzleVelocity = 30,
+            RateOfFire = 0.9,
         },
         {
         },
