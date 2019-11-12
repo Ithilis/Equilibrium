@@ -22,7 +22,7 @@ BlueprintId = "dslk004",
         { -- ground weapon
             BeamCollisionDelay = 0.05,
             BeamLifetime = 0.4,
-            Damage = 250,            --166dps
+            Damage = 200,            --133dps   it do 1000dmg by single lightning
             DamageRadius = 1,
             FireTargetLayerCapsTable = { --stop it fucking up on hovering and naval and units standing in water
                 Land = 'Land|Water|Seabed',
@@ -34,7 +34,7 @@ BlueprintId = "dslk004",
             BeamCollisionDelay = 0.01,    --from 0.01
             BeamLifetime = 0.4,            --from 0.6
             
-            Damage = 100,    --150dps        
+            Damage = 100,    --150dps        500dmg by single lightning (its somehow imposible to change rof, sadly)
             RateOfFire = 1,
             MaxRadius = 48,
         },

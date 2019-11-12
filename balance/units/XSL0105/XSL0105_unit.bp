@@ -13,5 +13,4 @@ BlueprintId = "xsl0105",
         StorageMass = 0,
         MaxBuildDistance = 5,
     },
-    },
 }

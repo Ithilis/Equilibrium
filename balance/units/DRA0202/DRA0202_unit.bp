@@ -20,7 +20,7 @@ BlueprintId = "dra0202",
     Weapon = {
         {
             Damage = 100,                --200dps but its not real 200
-            MaxRadius = 40,
+            MaxRadius = 30,
             MuzzleVelocity = 95,        -- from 55
             ProjectilesPerOnFire = 4,    --from 4 dont react on change
             RateOfFire = 0.5,           -- from1
@@ -28,10 +28,13 @@ BlueprintId = "dra0202",
         {
             Damage = 125,                --1000dps
             DamageRadius = 2.5,
-            FiringRandomness = 0.8, --sometimes misses t2 pgens with 0.8, can make it better by reducing this but needs more thought
+            FiringRandomness = 0.4, --sometimes misses t2 pgens with 0.8, can make it better by reducing this but needs more thought
             FiringTolerance = 0.5,
             MaxRadius = 40,
             MuzzleSalvoSize = 4,
+            MuzzleSalvoDelay = 0.05,
+            MuzzleVelocity = 30,
+            RangeCategory = false,
             RackBones = { --making the corsair have a not insane weapon, makes it able to shoot in the direction it wants and not random misses
                 { --we kinda fire 2 missiles at a time but whatever right?
                     MuzzleBones = {

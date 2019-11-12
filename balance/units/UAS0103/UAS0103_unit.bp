@@ -20,10 +20,10 @@ BlueprintId="uas0103",
         WaterVisionRadius = 35,    --from 16
     },
     Physics = {
-        MaxAcceleration = 5.8,    --from 6
-        MaxBrake = 5.8,
-        MaxSpeed = 5.8,
-        MaxSpeedReverse = 5.8,
+        MaxAcceleration = 5.5,    --from 6
+        MaxBrake = 5.5,
+        MaxSpeed = 5.5,
+        MaxSpeedReverse = 5.5,
     },
     Weapon = {
         {

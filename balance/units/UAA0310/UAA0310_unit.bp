@@ -36,9 +36,18 @@ BlueprintId = "uaa0310",
         'CANNOTUSEAIRSTAGING',
     },
     Defense = {
-        Health = 150000,
-        MaxHealth = 150000,    --from 58 000
+        Health = 100000,
+        MaxHealth = 100000,    --from 58 000
         RegenRate = 25,        --from 15
+        Shield = {
+            RegenAssistMult = 60,
+            ShieldEnergyDrainRechargeTime = 5,
+            ShieldMaxHealth = 50000,
+            ShieldRechargeTime = 240,
+            ShieldRegenRate = 180,
+            ShieldRegenStartTime = 2,
+            ShieldSize = 36,
+        },
     },
     Display = {
         Abilities = {
@@ -60,6 +69,7 @@ BlueprintId = "uaa0310",
         BuildableCategoryMobile = {
             'BUILTBYTIER3FACTORY AEON MOBILE AIR',
         },
+        MaintenanceConsumptionPerSecondEnergy = 500,
     },
     LifeBarHeight = 0.075,
     LifeBarOffset = 12,

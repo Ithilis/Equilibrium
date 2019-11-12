@@ -17,7 +17,6 @@ BlueprintId = "uel0208",
         StorageMass = 0,
         MaxBuildDistance = 7.5,
     },
-    },
     Physics = {
         MaxAcceleration = 1.9,
         MaxBrake = 1.9,

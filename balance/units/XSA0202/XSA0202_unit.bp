@@ -12,6 +12,12 @@ BlueprintId = "xsa0202",
         Health = 1175,
         MaxHealth = 1175,
     },
+    Display = {
+        UniformScale = 0.08, --from 0.5 while its too small
+    },
+    LifeBarHeight = 0.075,
+    LifeBarOffset = 0.7,
+    LifeBarSize = 1.4,  --make it bigger to fit biger size
     Transport = {
         AirClass = true,
         TransportClass = 1,

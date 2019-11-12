@@ -222,6 +222,17 @@ BlueprintId = "url0301",
         },
     },
     Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
         ReclaimTimeMultiplier = 2,    --from 1
+        WreckageLayers = {
+            Air = false,
+            Land = true,
+            Seabed = false,
+            Sub = false,
+            Water = false,
+        },
     },
 }

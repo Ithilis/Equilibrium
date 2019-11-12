@@ -13,11 +13,10 @@ BlueprintId = "xsl0301",
         BuildRate = 25,                --from 56
         BuildTime = 5000,
 
-        ProductionPerSecondEnergy = 300,        --from 200
+        ProductionPerSecondEnergy = 200,        --from 200
         ProductionPerSecondMass = 2,        --from 2
         StorageEnergy = 5000,
         StorageMass = 500,
-
     },
     Enhancements = {
         DamageStabilization = {
@@ -28,11 +27,11 @@ BlueprintId = "xsl0301",
             NewRegenRate = 145,        --from 250
         },
         EngineeringThroughput = {
-            BuildCostEnergy = 40000,
-            BuildCostMass = 800,
-            BuildTime = 2000,
+            BuildCostEnergy = 50000,
+            BuildCostMass = 1000,
+            BuildTime = 2500,
             NewBuildRate = 100,
-            ProductionPerSecondEnergy = 300,        --added extra resource generation
+            ProductionPerSecondEnergy = 200,        --added extra resource generation
             ProductionPerSecondMass = 2,        --added extra resource generation
             Slot = 'RCH',
             UpgradeEffectBones = {
@@ -220,6 +219,17 @@ BlueprintId = "xsl0301",
         },
     },
     Wreckage = {
+        Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+        EnergyMult = 0,
+        HealthMult = 0.9,
+        MassMult = 0.9,
         ReclaimTimeMultiplier = 2,    --from 1
+        WreckageLayers = {
+            Air = false,
+            Land = true,
+            Seabed = false,
+            Sub = false,
+            Water = false,
+        },
     },
 }
