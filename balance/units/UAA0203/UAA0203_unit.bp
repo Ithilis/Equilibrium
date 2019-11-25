@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "uaa0203",
 
     Air = {
-        MaxAirspeed = 13,        --from12
+        MaxAirspeed = 14,        --from12
     },
     Defense = {
         Health = 750,

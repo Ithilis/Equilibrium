@@ -15,7 +15,7 @@ BlueprintId = "xaa0202",
     Economy = {
         BuildCostEnergy = 5250,
         BuildCostMass = 245,
-        BuildTime = 1550,
+        BuildTime = 1400,
     },
     Weapon = {
         { -- AA
