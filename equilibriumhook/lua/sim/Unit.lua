@@ -598,8 +598,8 @@ Unit = Class(oldUnit) {
                 else
                     time, energy, mass = self:GetBuildCosts(focus:GetBlueprint())
                     if self:IsUnitState('Repairing') and focus.isFinishedUnit then
-                        energy = energy * repairRatio
-                        mass = mass * repairRatio * 0.5       --repairing cost 50% mass
+                        energy = energy * repairRatio * 0.5       --repairing cost 50% energy
+                        mass = mass * repairRatio * 0.5           --repairing cost 50% mass
                     end
                 end
             end

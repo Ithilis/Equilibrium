@@ -1,3 +1,96 @@
+v.62
+______
+In this version we focus to fix stuff that break while balance patch was coming out. 
+Another focus was make faction diversity deeper and promote more sharp desing, where not everything is poolish and smooth. 
+
+_____
+Misc
+
+- fix scatis to work again
+- fix sera sniper pricing mistake
+- fix swift win pricing mistake
+- shields/absolver not able to in naval factory
+- T2 mml/t3 maa/sparky lover energy cost to drain same as tanks
+- lock TML price to 180m
+- add code that preventing some unit in future break
+
+- Enginers -> bigger build range by tech level
+T1-5, T2-7.5 (sparky incuded), T3-10
+
+- Repair discont to 50% mass and energy
+
+____
+LAND 
+
+ACU
+- sera - swap T2/T3 upgrade with regen aura
+- UEF - nano 24000e (32000) 45reg(50) +1000hp (+0)
+- Aeon - Chrono +2000hp (+0) -> fix it work again
+-- sensor - 350e 7000e 350bt (500m 8000e 400bt)
+
+Matis
+- 300hp (330) 8dmg (7) ->26,4dps (23,3)
+
+T2 Land
+- Beetle 2500dmg (3000), remove EMP
+- Mongoose 2,8sp (2,5)
+- Hoplite 3s (2,8)
+
+Mobile shields/deciver: 
+- T2: 175m 1250e 1250bt (126m, 1350e, 900bt)
+- Shield split over damage ratio 0.2 (0.3)
+-- cybran 25e drain
+-- aeon 50e drain, 70shield regen (60)
+-- uef 75e drain
+-- sera 200e drain
+
+T3 MAA: more hp and less dps so are more likely to stay alive in land combat, also potencial use for sera/cybran on land
+- Aeon - 3500hp (1900) 1000dmg (1200) 1aoe (1,5aoe)
+- UEF - 3800hp (2200) 0.5aoe (1,5) 50r (60r)
+- cybran - 3200hp (1800) AA: 75dmg (100) 1 aoe (1,5) GF: 33r (38r)
+- sera - 4000hp (2000) AA:600dmg (1200) GF:1000dmg (1500)
+
+T3 land
+- Harbringer 3sp (2,8)
+- Brick 6500hp (5900) 2,2sp(2) 30r(33) turretPitch 30(10)
+- Outhum sizeX 1(0,7) -> fix hiting problem
+
+Sera SACu 
+- natural produce 2m 200e (2m 300e) 
+- enginnering 1000m 50000e 2000bt (800m 40000e 2500bt) + 2m 200e (2m 300e)
+
+___
+AIR
+
+T2 gunship
+- cybran 
+-- 280m 6000e 1600bt (245m 525e 1400bt) -> becasue fixing firing patern where can shoot and move
+-- 800hp (850), 3aoe (3.5aoe)
+- Aeon
+-- 14sp (13)
+
+Mercies
+- 280m 6000e 1600bt (245m 525e 1400bt)
+
+T2 fighter
+- sera 420m 9000e 2400bt (350m 7500e 2000bt) -> faction diversity to scala power
+-- 1175hp (925) 1250dmg (1050) 50r (45) uniform scale 0,08(0,5)
+- cybran AA: 30r (40) 0,4 firing randomnes (0,8)
+
+Czar
+- 100 000hp (150 000) + 50 000shield (0shield) 500e drain -> add shield, while its most likely it will be in future patch
+
+
+_____
+NAVAL
+
+- Sera frigate - add submersibility, weapons are off underwater -> its posible to ground fire as underwater
+-- 5,5 sp (6)
+- Sera cruiser - add submersibility, weapons are off underwater
+
+- Aeon frigate 5,5sp (6)
+
+
 V. 41
 _________
 

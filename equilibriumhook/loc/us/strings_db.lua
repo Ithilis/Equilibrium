@@ -48,7 +48,7 @@ xsl0301_NanoCombat_name="SACU (Nano Combatant Preset)"
 ----Armoured Command Unit
 Unit_Description_0004="Mounts a Tactical Missile Launcher onto the back of the ACU. Missiles equipped with a camera system that reveals the target area." --ithilis
 Unit_Description_0005="Grants Tech 2 schematic access and increases the ACU's build speed for 40, 500 health, and health regeneration." --ithilis
-Unit_Description_0006="Increases the speed at which the ACU repairs itself by 50." --ithilis
+Unit_Description_0006="Increases the speed at which the ACU repairs itself by 45 and add 1000hp." --ithilis
 Unit_Description_0007="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed for 120, maximum health, and health regeneration." --ithilis
 Unit_Description_0008="Doubles the ACU's main weapon damage, and increases its range and that of Overcharge."
 Unit_Description_0009="Tactical Missiles replaced by much more expensive, powerful Tactical Nuclear Missiles. Missiles equipped with a camera system that reveals the target area." --ithilis
@@ -221,7 +221,7 @@ Unit_Description_0134="Extremely fast Heavy Raiding Bot which explodes with a sm
 Unit_Description_0135="Slow-moving Heavy Artillery. Must be stationary to fire."
 Unit_Description_0136="Experimental Amphibious Spiderbot armed with Microwave Laser, blasters, weak anti-air and torpedoes. Equipped with sonar and a stealth field generator."
 Unit_Description_0137="Experimental Mobile Rapid-fire Artillery for bombarding bases and support army. Armed with EMP shells capable of stunning units for 2.5/2/1.5s on 10aoe. Must be stationary to fire." --Ithilis
-Unit_Description_0317="A truly Beetleful unit. Deals 3000 damage on a moderate area. A premature death deals 1500 damage. Equipped with personal cloak, use it for ambushes with stealth field generators." --Ithilis
+Unit_Description_0317="A truly Beetleful unit. Deals 2500 damage on a moderate area, even if is destroyed. Equipped with personal cloak, use it for ambushes with stealth field generators." --Ithilis
 Unit_Description_0318="Extremely heavy Amphibious Assault Robot equipped with a direct fire blaster, depth charges and anti-torpedo flares. Designed to engage enemy Experimental units, heavy units, and defense structures." --Ithilis
 Unit_Description_0319="Experimental Amphibious Megabot armed with Proton Cannons, torpedoes and weak anti-air. Equipped with anti-torpedo flares and an egg-based engineering system."
 Unit_Description_0444="Lightly armoured support robot armed with long-range rocket launcher."
@@ -329,7 +329,7 @@ Unit_Description_0192="Allows you to construct Support Command Units, either in 
 ----Armoured Command Unit
 Unit_Description_0305="Houses Commander. Combination of Barracks and Command Center. Contains all the blueprints necessary to build a basic army from scratch."
 Unit_Description_0156="Grants Tech 2 schematic access and increases the ACU's build speed adds maximum health, and health regeneration." --Ithilis
-Unit_Description_0157="Creates periodic EMP pulses around the ACU. Provides small regeneration bonus. Works while the ACU is underwater or in a transport. Consumes energy while firing." --Ithilis
+Unit_Description_0157="Creates periodic EMP pulses around the ACU. Provides small regeneration and armor bonus. Works while the ACU is underwater or in a transport. Consumes energy while firing." --Ithilis
 Unit_Description_0158="Massively increases main cannon range."
 Unit_Description_0159="Grants the ACU a long range omni Sensor and increased optical range."
 Unit_Description_0160="Replaces the Tech 2 engineering Suite. Grants Tech 3 and Experimental schematic access and further increases the ACU's build speed, adds additional maximum health and health regeneration." --Ithilis
@@ -483,7 +483,7 @@ Unit_Description_0433="A highly versatile combat and engineering unit useful on 
 Unit_Description_0434="Mounts a Tactical Missile Launcher onto the back of the SACU. Can store up to 3 missiles." --Ithilis
 Unit_Description_0435="Massively increases the rate at which the SACU repairs its armour as well as providing a large HP boost."
 Unit_Description_0436="Greatly increases the range of the SACU's weapons and sensors."
-Unit_Description_0437="Massively increases SACU build speed. Increases SACU's resource generation to 4 mass per second and 600 energy per second." --Ithilis
+Unit_Description_0437="Massively increases SACU build speed. Increases SACU's resource generation to 4 mass per second and 420 energy per second." --Ithilis
 Unit_Description_0438="Creates a protective Personal Shield around the SACU. Requires energy to run."
 Unit_Description_0439="Adds Teleportation capability. Requires considerable energy to activate."
 Unit_Description_0440="Expands the SACU's weaponry with an Overcharge function." --Ithilis
@@ -518,13 +518,13 @@ Unit_Description_0360="Strategic Bomber designed to surgically destroy key targe
 Unit_Description_0361="Massive bomber capable of devastating entire bases. Armed with an experimental strategic bomb and three AA auto-cannons."
 
 ----Navy
-Unit_Description_0362="Low-end naval support unit."
-Unit_Description_0363="Attack Submarine. Effective against surface ships in large numbers. Can surface to use an extra direct-fire weapon. Equipped with torpedo defense that is powerful in large numbers."
-Unit_Description_0364="Anti-Aircraft naval vessel. Armed with an anti-air weaponry and a tactical missile launcher. Equipped with tactical missile defense and a full sensor suite."
-Unit_Description_0365="Primary Submersible surface combatant with powerful direct fire lasers, torpedoes, basic anti-air weapons, torpedo defense, and a full sensor suite."
-Unit_Description_0366="Surface Bombardment Ship. Armed with direct fire cannons and weak anti-air. Equipped with tactical missile defense and a full sensor suite. Can build and launch full-strength strategic nuclear weapons."
-Unit_Description_0367="Heavy Assault Submarine Hunter armed with extremely powerful torpedoes and effective torpedo defenses. Can surface to engage with strong anti-air cannons." --Ithilis
-Unit_Description_0368="Aircraft Carrier. Can store, transport and repair aircraft. Armed with two pairs of AA auto-cannons."
+Unit_Description_0362="Low-end submersible naval support unit. Can hide underwater, but as only vesel recieve damage from ground fire."
+Unit_Description_0363="Attack submarine. Effective against surface ships in large numbers. Can surface to use an extra direct-fire weapon. Equipped with torpedo defense that is powerful in large numbers."
+Unit_Description_0364="Anti-Aircraft submersible vessel. Armed with an anti-air weaponry and a tactical missile launcher. Equipped with tactical missile defense and a full sensor suite."
+Unit_Description_0365="Primary submersible surface combatant with powerful direct fire lasers, torpedoes, basic anti-air weapons, torpedo defense, and a full sensor suite."
+Unit_Description_0366="Surface bombardment ship. Armed with direct fire cannons and weak anti-air. Equipped with tactical missile defense and a full sensor suite. Can build and launch full-strength strategic nuclear weapons."
+Unit_Description_0367="Heavy assault submarine hunter armed with extremely powerful torpedoes and effective torpedo defenses. Can surface to engage with strong anti-air cannons." --Ithilis
+Unit_Description_0368="Aircraft carrier. Can store, transport and repair aircraft. Armed with two pairs of AA auto-cannons."
 
 ----Offensive Buildings
 Unit_Description_0369="Low-end defensive tower that attacks land- and sea-based units. Does not engage aircraft or submerged units."

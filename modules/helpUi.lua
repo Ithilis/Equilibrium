@@ -21,7 +21,7 @@ local settings = {
     -- helpPanel settings
     panel_posX = 2,
     panel_posY = 150,
-    panel_height = 270,
+    panel_height = 240,
     panel_width = 625,
 
     -- text in helpPanel
@@ -31,11 +31,10 @@ local settings = {
         "- However here are some things which you might want to take into account while playing:",
         "",
         "1. Veterancy doesn't instant-heal units anymore, but get more max hp. Units share experience from kills.",
-        "2. Overcharge now does variable damage from 1000-15000 and drains 2k-30k energy accordingly.",
+        "2. Repairing units cost only half of recources.",
         "3. Mass storages provide less adjacency and any mass stored in them is lost when they are destroyed.",
         "4. Submarine combat: Subs counter suface ships; Sub Hunters counter subs; Destroyers counter sub hunters.",       
         "5. Mercies deal damage over time! Moving targets receive only a fraction of the damage.",
-        "6. T4 units take much longer to build. Get t2/3 engineers, they are more efficient in this mod.",
     }
 }
 
