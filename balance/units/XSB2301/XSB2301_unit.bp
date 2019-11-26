@@ -9,4 +9,18 @@ BlueprintId = "xsb2301",
         BuildCostMass = 500,
         BuildTime = 625,
     },
+    Weapon = {
+        {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE INDIRECTFIRE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+    },
 }

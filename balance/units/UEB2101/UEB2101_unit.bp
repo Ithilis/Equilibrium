@@ -9,4 +9,19 @@ BlueprintId = "ueb2101",
         BuildCostMass = 250,
         BuildTime = 250,
     },
+    Weapon = {
+        {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE ARTILLERY',
+                'MOBILE INDIRECTFIRE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+    },
 }

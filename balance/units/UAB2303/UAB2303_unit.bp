@@ -40,6 +40,16 @@ BlueprintId = "uab2303",
             WeaponUnpackAnimation = '/units/UAB2303/UAB2303_Aopen.sca', -- reusing the original animation
             WeaponUnpackAnimationRate = 1.0,
             WeaponUnpacks = true,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'STRUCTURE SHIELD'
+                'TECH3 ENERGYPRODUCTION',
+                'TECH2 ENERGYPRODUCTION',
+                'STRUCTURE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },    
 }

@@ -21,6 +21,16 @@ BlueprintId = "uab2301",
             WeaponUnpackAnimation = '/units/UAB2301/UAB2301_Aopen.sca', -- reusing the original animation
             WeaponUnpackAnimationRate = 2.0,
             WeaponUnpacks = true,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE INDIRECTFIRE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },
 }

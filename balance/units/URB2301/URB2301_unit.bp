@@ -9,4 +9,18 @@ BlueprintId = "urb2301",
         BuildCostMass = 480,
         BuildTime = 600,
     },
+    Weapon = {
+        {
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE INDIRECTFIRE',
+                'TECH3 MOBILE',
+                'TECH2 MOBILE',
+                'TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+        },
+    },
 }

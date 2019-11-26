@@ -28,6 +28,16 @@ BlueprintId = "xsb2303",
             
             TurretPitchSpeed = 15,    --from 6
             TurretYawSpeed = 15,    --from 6
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'EXPERIMENTAL',
+                'STRUCTURE SHIELD'
+                'TECH3 ENERGYPRODUCTION',
+                'TECH2 ENERGYPRODUCTION',
+                'STRUCTURE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
     },    
 }
