@@ -31,10 +31,30 @@ BlueprintId="xss0201",
         { --front laser
             DamageRadius = 1.5,        --from 1
             DisplayName = 'Front Ultrachromatic Beam Generator', --they do different damage so its useful to tell them apart. also shown in the stats.
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'DESTROYER',
+                'NAVAL MOBILE STEALTHFIELD',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --back laser
             DamageRadius = 1.5,        --from 1
             DisplayName = 'Rear Ultrachromatic Beam Generator',
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'DESTROYER',
+                'NAVAL MOBILE STEALTHFIELD',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --torpedoes
             Damage = 40,    --from 80, twice the torpedoes for half the damage.

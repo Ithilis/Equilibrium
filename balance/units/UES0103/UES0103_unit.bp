@@ -26,10 +26,26 @@ BlueprintId="ues0103",
         WaterVisionRadius = 35,    --from 16
     },
     Weapon = {
-        {
+        {   -- direct fire
+            Damage = 85,    --50dps
+            DamageRadius = 1,
+            FiringRandomness = 0.2,
             MaxRadius = 30,    --from 28
+            RateOfFire = 0.588,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE HOVER ARTILLERY'
+                'MOBILE SHIELD',
+                'MOBILE HOVER'
+                'NAVAL MOBILE STEALTHFIELD',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
-        {
+        {   --aa
+            Damage = 5,
+            MaxRadius = 48,
+            RateOfFire = 1,
         },
     },
 }

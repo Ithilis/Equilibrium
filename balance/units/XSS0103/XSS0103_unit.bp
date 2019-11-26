@@ -82,13 +82,22 @@ BlueprintId="xss0103",
         MotionType = 'RULEUMT_SurfacingSub',
     },
     Weapon = {
-        {
+        {   --DIRECT FIREF
             Damage = 20,
             DamageRadius = 1,
             MaxRadius = 30,
             MuzzleSalvoSize = 3,
             MuzzleVelocity = 30,
             RateOfFire = 0.9,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE HOVER ARTILLERY'
+                'MOBILE SHIELD',
+                'MOBILE HOVER'
+                'NAVAL MOBILE STEALTHFIELD',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
         },

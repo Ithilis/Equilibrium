@@ -29,6 +29,16 @@ BlueprintId="uas0201",
             DamageRadius = 2.5,        --from 1
             MuzzleVelocity = 30,    --from 30
             FiringRandomness = 0.3,    --from 0,25
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'DESTROYER',
+                'NAVAL MOBILE STEALTHFIELD',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {   -- depth charge
             DisplayName = 'Harmonic Depth Charge',

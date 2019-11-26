@@ -26,6 +26,15 @@ BlueprintId="ues0302",
             MuzzleVelocity = 28,    --from 30
             MaxRadius = 150,
             RateOfFire = 0.05,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL TECH3 MOBILE',
+                'NAVAL TECH2 MOBILE',
+                'NAVAL TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             DamageRadius = 2.5,    --from2
@@ -33,6 +42,15 @@ BlueprintId="ues0302",
             MuzzleVelocity = 28,    --from 30
             MaxRadius = 150,
             RateOfFire = 0.05,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL TECH3 MOBILE',
+                'NAVAL TECH2 MOBILE',
+                'NAVAL TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             DamageRadius = 2.5,    --from2
@@ -40,6 +58,15 @@ BlueprintId="ues0302",
             MuzzleVelocity = 28,    --from 30
             MaxRadius = 150,
             RateOfFire = 0.05,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL TECH3 MOBILE',
+                'NAVAL TECH2 MOBILE',
+                'NAVAL TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             Damage = 17,    --From 12 = 4x20dps

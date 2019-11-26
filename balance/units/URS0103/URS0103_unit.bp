@@ -23,6 +23,15 @@ BlueprintId="urs0103",
         {   --direct fire
             Damage = 42,     -- from45 = 60dps
             MaxRadius = 30,    --from 28
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE HOVER ARTILLERY'
+                'MOBILE SHIELD',
+                'MOBILE HOVER'
+                'NAVAL MOBILE STEALTHFIELD',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {   --AA
             Damage = 3,  --from 4 = 12dps

@@ -36,6 +36,16 @@ BlueprintId="ues0201",
         { --front ground gun
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'DESTROYER',
+                'NAVAL MOBILE STEALTHFIELD',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
 
         },
         { --back ground gun

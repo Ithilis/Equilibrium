@@ -31,12 +31,30 @@ BlueprintId="uas0103",
             RateOfFire = 0.2,
             MaxRadius = 35,            --from 31
             MuzzleChargeDelay = 0.5,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE HOVER ARTILLERY'
+                'NAVAL MOBILE SHIELD',
+                'MOBILE HOVER'
+                'NAVAL MOBILE STEALTHFIELD',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             Damage = 150,            --from 140
             RateOfFire = 0.2,
             MaxRadius = 35,            --from 31
             MuzzleChargeDelay = 0.5,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE HOVER ARTILLERY'
+                'MOBILE SHIELD',
+                'MOBILE HOVER'
+                'NAVAL MOBILE STEALTHFIELD',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {
             FiringTolerance = 180,

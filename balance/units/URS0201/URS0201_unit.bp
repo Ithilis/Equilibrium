@@ -30,6 +30,16 @@ BlueprintId="urs0201",
         {   --direct fire
             DamageRadius = 1.5,        --from 1
             MuzzleVelocity = 35,    --from 30
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'MOBILE SHIELD',
+                'DESTROYER',
+                'NAVAL MOBILE STEALTHFIELD',
+                'MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         {   --AA 
             Damage = 10,    --from 10 = 40dps

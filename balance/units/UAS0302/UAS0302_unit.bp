@@ -32,18 +32,45 @@ BlueprintId="uas0302",
             DamageRadius = 2.5,        --from 2
             MaxRadius = 100,
             RateOfFire = 0.17,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL TECH3 MOBILE',
+                'NAVAL TECH2 MOBILE',
+                'NAVAL TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --main cannon 2
             Damage = 1000,
             DamageRadius = 2.5,        --from 2
             MaxRadius = 100,
             RateOfFire = 0.17,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL TECH3 MOBILE',
+                'NAVAL TECH2 MOBILE',
+                'NAVAL TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --main cannon 3
             Damage = 1000,
             DamageRadius = 2.5,        --from 2
             MaxRadius = 100,
             RateOfFire = 0.17,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'NAVAL TECH3 MOBILE',
+                'NAVAL TECH2 MOBILE',
+                'NAVAL TECH1 MOBILE',
+                'STRUCTURE DEFENSE',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
         },
         { --tmd
             CannotAttackGround = false,
