@@ -25,9 +25,9 @@ BlueprintId="urs0103",
             MaxRadius = 30,    --from 28
             TargetPriorities = {
                 'SPECIALHIGHPRI',
-                'MOBILE HOVER ARTILLERY'
+                'MOBILE HOVER ARTILLERY',
                 'MOBILE SHIELD',
-                'MOBILE HOVER'
+                'MOBILE HOVER',
                 'NAVAL MOBILE STEALTHFIELD',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
