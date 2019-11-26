@@ -20,6 +20,14 @@ Unit = Class(oldUnit) {
         self.BuildCostE = bpEcon.BuildCostEnergy
         self.BuildT = bpEcon.BuildTime
     end,
+    
+    OnStopBeingBuilt = function(self, builder, layer)
+        oldUnit.OnStopBeingBuilt(self, builder, layer)
+        local bp = self:GetBlueprint()
+        if bp.Intel.RadarStealthTransFlag then
+            self:DisableIntel('RadarStealth')
+        end
+    end,
 
     OnKilled = function(self, instigator, type, overkillRatio)
         self.Dead = true
@@ -699,11 +707,13 @@ Unit = Class(oldUnit) {
     OnAttachedToTransport = function(self, transport, bone)
         self.InTransport = true --EQ: flag for in transport units
         oldUnit.OnAttachedToTransport(self, transport, bone)
+        self:EnableIntel('RadarStealth')
     end,
 
     OnDetachedFromTransport = function(self, transport, bone)
         self.InTransport = false
         oldUnit.OnDetachedFromTransport(self, transport, bone)
+        self:DisableIntel('RadarStealth')
     end,
     
     OnStopTransportBeamUp = function(self)

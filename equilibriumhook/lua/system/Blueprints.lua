@@ -22,6 +22,20 @@ end
         OldModBlueprints(all_blueprints)
         for id,bp in all_blueprints.Unit do
             WaterGuard(bp)
+            
+            -- skip units without categories
+            if not bp.Categories then
+                continue
+            end
+            
+            --enable stealth for all transportables, and add a special flag so we know about this
+            if bp.CategoriesHash.LAND and bp.CategoriesHash.MOBILE and not bp.CategoriesHash.EXPERIMENTAL then
+                if bp.Intel.RadarStealth then continue end --skip everything that already has stealth of various kinds
+                if not bp.Intel then bp.Intel = {} end
+                bp.Intel.RadarStealth = true
+                bp.Intel.RadarStealthTransFlag = true
+            end
+            
         end
     end
     
