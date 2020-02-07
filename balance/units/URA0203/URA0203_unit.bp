@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "ura0203",
 
     Defense = {
-        Health = 800,            --from 832hp
-        MaxHealth = 800,
+        Health = 850,            --from 832hp
+        MaxHealth = 850,
     },
     Transport = {
         AirClass = true,
@@ -20,7 +20,7 @@ BlueprintId = "ura0203",
     Weapon = {
         { --Ground Fire Weapon
             Damage = 20,
-            DamageRadius = 3,        --from 3
+            DamageRadius = 3.5,        --from 3
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
