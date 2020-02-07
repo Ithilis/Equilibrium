@@ -48,9 +48,9 @@ BlueprintId="uas0103",
             MuzzleChargeDelay = 0.5,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
-                'MOBILE HOVER ARTILLERY'
+                'MOBILE HOVER ARTILLERY',
                 'MOBILE SHIELD',
-                'MOBILE HOVER'
+                'MOBILE HOVER',
                 'NAVAL MOBILE STEALTHFIELD',
                 'SPECIALLOWPRI',
                 'ALLUNITS',
