@@ -29,12 +29,16 @@ BlueprintId = "xsa0202",
     },
     Weapon = {
         { -- AA 1
-            Damage = 50,                -- from 25
+            Damage = 60,                -- from 25
+            MuzzleSalvoSize = 3,
+            MuzzleVelocity = 120,
             RateOfFire = 0.5,           -- from1
             NeedPrep = false,
         },
         { -- AA 2
-            Damage = 50,
+            Damage = 60,
+            MuzzleSalvoSize = 3,
+            MuzzleVelocity = 120,
             RateOfFire = 0.5,           -- from1
             NeedPrep = false,
         },
