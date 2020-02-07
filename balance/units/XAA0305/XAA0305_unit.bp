@@ -12,8 +12,8 @@ BlueprintId = "xaa0305",
         TransportClass = 2,
     },
     Defense = {
-        Health = 4500,        --from6000
-        MaxHealth = 4500,
+        Health = 5000,        --from6000
+        MaxHealth = 5000,
     },
     Economy = {
         BuildCostEnergy = 37500,
@@ -22,14 +22,19 @@ BlueprintId = "xaa0305",
     },
     Weapon = {
         { --ground fire weapon
-            Damage = 25,        --from24
+            Damage = 20,        --from 25// 133dps - miss
+                DamageRadius = 1,   -- from 0
+                FiringRandomness = 1.2, -- from 0
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
             },
             MaxRadius = 25,
+                MuzzleSalvoDelay = 0.1, --0.2
+                MuzzleSalvoSize = 20,    --4
+            MuzzleVelocity = 40,
             ProjectilesPerOnFire = 4,
-            RateOfFire = 1.25,
+            RateOfFire = 0.333,
             TargetPriorities = {
                 'SPECIALHIGHPRI',
                 'SPECIALLOWPRI',
@@ -38,7 +43,7 @@ BlueprintId = "xaa0305",
             TargetRestrictDisallow = 'UNTARGETABLE', --allow to fire at landed air units
         },
         {
-            Damage = 65,        --130AA dps
+            Damage = 60,        --120AA dps
             MaxRadius = 50,        --from60
             MuzzleVelocity = 35,
             RateOfFire = 1,
@@ -55,7 +60,7 @@ BlueprintId = "xaa0305",
             },
         },
         {
-            Damage = 65,        --130AA dps
+            Damage = 60,        --120AA dps
             MaxRadius = 50,        --from60
             MuzzleVelocity = 35,
             RateOfFire = 1,

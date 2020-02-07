@@ -14,8 +14,8 @@ UnitBlueprint {
         },
     },
     Defense = {
-        Health = 4250,        -- from 5900
-        MaxHealth = 4250,
+        Health = 4000,        -- from 5900
+        MaxHealth = 4000,
     },
     Economy = {
         BuildCostEnergy = 25000,
