@@ -78,7 +78,7 @@ BlueprintId="xss0103",
         MaxBrake = 5.5,  --from 6, because sumberibility
         MaxSpeed = 5.5,  --from 6, because sumberibility
         MaxSpeedReverse = 5.5,  --from 6, because sumberibility
-        Elevation = -1,     --so even navy can hit it by ground fire, what is not true for other eq navy
+        Elevation = -1.5,     --so even navy can hit it by ground fire,
         MotionType = 'RULEUMT_SurfacingSub',
     },
     Weapon = {
