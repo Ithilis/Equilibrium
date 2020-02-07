@@ -34,7 +34,8 @@ BlueprintId = "uaa0310",
         'OVERLAYSONAR',
         'OVERLAYMISC',
         'CANNOTUSEAIRSTAGING',
-    },
+        --'SHIELD',     --buggy version of personal shield, when czar shield will be uploaded by faf team it will be fine
+        },
     Defense = {
         Health = 100000,
         MaxHealth = 100000,    --from 58 000
@@ -43,8 +44,8 @@ BlueprintId = "uaa0310",
             RegenAssistMult = 60,
             ShieldEnergyDrainRechargeTime = 5,
             ShieldMaxHealth = 50000,
-            ShieldRechargeTime = 240,
-            ShieldRegenRate = 180,
+            ShieldRechargeTime = 300,
+            ShieldRegenRate = 120,
             ShieldRegenStartTime = 2,
             ShieldSize = 36,
         },
@@ -58,6 +59,7 @@ BlueprintId = "uaa0310",
             '<LOC ability_notcap>Not Capturable',
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
+            '<LOC ability_Shield>Shield',
         },
         UniformScale = 0.055,    --from 0,04
     },
@@ -162,6 +164,7 @@ BlueprintId = "uaa0310",
             FiringTolerance = 3,
             MaxRadius = 50,                --from 44
             MuzzleVelocity = 60,        --from 20
+            RateOfFire = 2,
         },
         {
             Damage = 250,                --from 240
@@ -171,6 +174,7 @@ BlueprintId = "uaa0310",
             FiringTolerance = 3,
             MaxRadius = 50,                --from 44
             MuzzleVelocity = 60,        --from 20
+            RateOfFire = 2,
         },
         {
             AboveWaterTargetsOnly = false,    --from true = hit also submarine
