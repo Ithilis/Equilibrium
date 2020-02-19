@@ -19,6 +19,10 @@ T1-5, T2-7.5 (sparky incuded), T3-10
 
 - Repair discont to 50% mass and energy
 
+- units in transport are not visible on radar anymore 
+
+- better target priority for many units
+
 ____
 LAND 
 
@@ -65,7 +69,6 @@ AIR
 T2 gunship
 - cybran 
 -- 280m 6000e 1600bt (245m 525e 1400bt) -> becasue fixing firing patern where can shoot and move
--- 800hp (850), 3aoe (3.5aoe)
 - Aeon
 -- 14sp (13)
 
@@ -74,8 +77,19 @@ Mercies
 
 T2 fighter
 - sera 420m 9000e 2400bt (350m 7500e 2000bt) -> faction diversity to scala power
--- 1175hp (925) 1250dmg (1050) 50r (45) uniform scale 0,08(0,5)
+-- 1175hp (925) 1250dmg (1050) 50r (45) uniform scale 0,08(0,5) 180AA dps (150)
 - cybran AA: 30r (40) 0,4 firing randomnes (0,8)
+
+T3 Gunship
+- Restorer 
+-- 5000hp (4500) 
+-- ground 20dmg 20 salvo size 1aoe 1.2 firing randomness -->133dps and more miss, but damage units around as well
+-- anti air 120dps (130) 
+- Wailer
+-- 4000hp (4250)
+
+T3 Solace
+- 4000hp (3750) 5000dmg per pass (4000) muzzle velocity 30 (14)
 
 Czar
 - 100 000hp (150 000) + 50 000shield (0shield) 500e drain -> add shield, while its most likely it will be in future patch

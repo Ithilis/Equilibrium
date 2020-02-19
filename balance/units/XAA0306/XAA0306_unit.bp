@@ -9,8 +9,8 @@ BlueprintId = "xaa0306",
         TransportClass = 2,
     },
     Defense = {
-        Health = 3750,
-        MaxHealth = 3750,
+        Health = 4000,  --3750
+        MaxHealth = 4000,
     },
     Display = {
         Abilities = {
@@ -25,10 +25,11 @@ BlueprintId = "xaa0306",
     },
     Weapon = {
         {
-            Damage = 500,        --4000dps per pass
+            Damage = 625,        --5000dps per pass
             DamageRadius = 0.5,
             MaxRadius = 32,
             MinRadius = 4,
+            MuzzleVelocity = 30,    --14
             ProjectilesPerOnFire = 4,
             RateOfFire = 0.08,
         },
