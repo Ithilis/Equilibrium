@@ -91,6 +91,9 @@ T3 Gunship
 T3 Solace
 - 4000hp (3750) 5000dmg per pass (4000) muzzle velocity 30 (14)
 
+T3 spy plane
+-- sera -> add cloac toggle - fot better show that it have selen ability when idle
+
 Czar
 - 100 000hp (150 000) + 50 000shield (0shield) 500e drain -> add shield, while its most likely it will be in future patch
 

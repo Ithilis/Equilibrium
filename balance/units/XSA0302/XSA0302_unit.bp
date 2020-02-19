@@ -8,20 +8,6 @@ BlueprintId = "xsa0302",
         MaxAirspeed = 25,    --from30
         MinAirspeed = 20,    --from25
     },
-    Defense = {
-        Health = 700,        --from1100
-        MaxHealth = 700,
-        RegenRate = 5,        --from0
-    },
-    Transport = {
-        AirClass = true,
-        TransportClass = 1,
-    },
-    Economy = {
-        BuildCostEnergy = 7500,
-        BuildCostMass = 200,
-        BuildTime = 1200,
-    },
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
@@ -40,6 +26,11 @@ BlueprintId = "xsa0302",
         'OVERLAYRADAR',
         'OVERLAYSONAR',
     },
+    Defense = {
+        Health = 700,        --from1100
+        MaxHealth = 700,
+        RegenRate = 5,        --from0
+    },
     Display = {
         Abilities = {
             '<LOC ability_cloak>Cloaking',    
@@ -47,6 +38,21 @@ BlueprintId = "xsa0302",
             '<LOC ability_omni>Omni Sensor',
             '<LOC ability_radar>Radar',
             '<LOC ability_sonar>Sonar',
+        },
+    },
+    Economy = {
+        BuildCostEnergy = 7500,
+        BuildCostMass = 200,
+        BuildTime = 1200,
+    },
+    General = {
+        OrderOverrides = {
+            RULEUTC_CloakToggle = {
+                helpText = 'xsl0101_toggle',
+            },
+        },
+        ToggleCaps = {
+            RULEUTC_CloakToggle = true,
         },
     },
     Intel = {
@@ -57,6 +63,10 @@ BlueprintId = "xsa0302",
         VisionRadius = 50,   --from64/55
         SonarRadius = 85,    --from98
         WaterVisionRadius = 25,
+    },
+    Transport = {
+        AirClass = true,
+        TransportClass = 1,
     },
     Weapon = {
         {
