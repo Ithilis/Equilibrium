@@ -72,8 +72,13 @@ T2 gunship
 - Aeon
 -- 14sp (13)
 
-Mercies
-- 280m 6000e 1600bt (245m 525e 1400bt)
+T2 Mercies
+- 280m 6000e 1600bt (245m 5250e 1400bt)
+
+T2 torpedo Bomber Skimmer (aeon)
+- 175m 3750e 1000bt (245m 5250e 1400bt)
+- 600hp (820) 2x250dmg (3x250) EMP 2/1/0.5s
+- better manevrability
 
 T2 fighter
 - sera 420m 9000e 2400bt (350m 7500e 2000bt) -> faction diversity to scala power
