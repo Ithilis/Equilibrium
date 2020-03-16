@@ -75,10 +75,12 @@ T2 gunship
 T2 Mercies
 - 280m 6000e 1600bt (245m 5250e 1400bt)
 
-T2 torpedo Bomber Skimmer (aeon)
-- 175m 3750e 1000bt (245m 5250e 1400bt)
-- 600hp (820) 2x250dmg (3x250) EMP 2/1/0.5s
-- better manevrability
+T2 torpedo Bomber 
+- speed 15 (16)
+- Skimmer (aeon)
+-- 175m 3750e 1000bt (245m 5250e 1400bt)
+-- 600hp (820) 2x250dmg (3x250) EMP 2/0.2/0.2s
+-- better manevrability
 
 T2 fighter
 - sera 420m 9000e 2400bt (350m 7500e 2000bt) -> faction diversity to scala power
@@ -94,7 +96,7 @@ T3 Gunship
 -- 4000hp (4250)
 
 T3 Solace
-- 4000hp (3750) 5000dmg per pass (4000) muzzle velocity 30 (14)
+- 4000hp (3750) 4500dmg per pass (4000) muzzle velocity 30 (14)
 
 T3 spy plane
 -- sera -> add cloac toggle - fot better show that it have selen ability when idle
@@ -109,6 +111,10 @@ NAVAL
 - Sera frigate - add submersibility, weapons are off underwater -> its posible to ground fire as underwater
 -- 5,5 sp (6)
 - Sera cruiser - add submersibility, weapons are off underwater
+
+- sera T2 sonar system 600m 1200e 12.5br
+-- add movability 3sp - 1.5sp submerged
+-- add repair, reclaim 12.5br
 
 - Aeon frigate 5,5sp (6)
 
