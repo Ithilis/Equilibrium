@@ -7,7 +7,7 @@ BlueprintId = "xsa0204",
     Air = {
         BreakOffDistance = 55,      --from 34
         CombatTurnSpeed = 1,    --from 0.5
-        MaxAirspeed = 16,      --from15
+        MaxAirspeed = 15,      --from15
         Turnspeed = 1,          --from 0.48
     },
     Display = {

@@ -25,12 +25,13 @@ BlueprintId = "xaa0306",
     },
     Weapon = {
         {
-            Damage = 625,        --5000dps per pass
+            Damage = 750,        --4500dps per pass
             DamageRadius = 0.5,
             MaxRadius = 32,
             MinRadius = 4,
             MuzzleVelocity = 30,    --14
-            ProjectilesPerOnFire = 4,
+            MuzzleSalvoSize = 3,
+            ProjectilesPerOnFire = 3,
             RateOfFire = 0.08,
         },
         {
