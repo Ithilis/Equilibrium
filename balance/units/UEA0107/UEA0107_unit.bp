@@ -6,14 +6,17 @@ BlueprintId = "uea0107",
 
     Air = {
         DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
+        MaxAirspeed = 15,   --12
     },
     Defense = {
+        Health = 400,
+        MaxHealth = 400,
         RegenRate = 5,
     },
     Economy = {
-        BuildCostEnergy = 3000,     --4800e
-        BuildCostMass = 120,        --120m
-        BuildTime = 800,
+        BuildCostEnergy = 3750,     --4800e
+        BuildCostMass = 150,        --120m
+        BuildTime = 1000,
     },
     Weapon = {
         {

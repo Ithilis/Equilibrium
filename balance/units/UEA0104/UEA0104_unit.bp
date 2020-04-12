@@ -6,9 +6,11 @@ BlueprintId = "uea0104",
 
     Air = {
         DisableAutoRefuel = true, --disables auto refuel/repair since it cant land in airstaging. ideally we would determine this automatically
-        MaxAirspeed = 15,        --from15
+        MaxAirspeed = 10,        --from15
     },
     Defense = {
+        Health = 2500,
+        MaxHealth = 2500,
         RegenRate = 5,
     },
     Economy = {
