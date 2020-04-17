@@ -14,9 +14,9 @@ BlueprintId = "uaa0104",
         RegenRate = 5,
     },
     Economy = {
-        BuildCostEnergy = 6000,     --12000e
-        BuildCostMass = 280,        --300m
-        BuildTime = 1600,           --2400bt
+        BuildCostEnergy = 7500,     --12000e
+        BuildCostMass = 350,        --300m
+        BuildTime = 2000,           --2400bt
     },
     Weapon = {
         {
