@@ -11,7 +11,7 @@ BlueprintId = "uab2301",
         AnimationPermOpen = 'UAB2204_Animation_NIL.sca', -- essentially deleting the open animation since it now does this on fire.
     },
     Economy = {
-        BuildCostEnergy = 3900,
+        BuildCostEnergy = 5200,
         BuildCostMass = 520,
         BuildTime = 650,
     },

@@ -9,7 +9,7 @@ BlueprintId = "xsb2204",
         MaxHealth = 2500,
     },
     Economy = {
-        BuildCostEnergy = 3600,
+        BuildCostEnergy = 4800,
         BuildCostMass = 480,
         BuildTime = 600,
     },
