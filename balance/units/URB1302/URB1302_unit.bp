@@ -12,7 +12,7 @@ BlueprintId = "urb1302",
     Economy = {
         BuildCostEnergy = 36000,
         BuildCostMass = 3600,
-        BuildTime = 4500,
+        BuildTime = 5625,
         MaintenanceConsumptionPerSecondEnergy = 50,
         ProductionPerSecondMass = 16,
     },
