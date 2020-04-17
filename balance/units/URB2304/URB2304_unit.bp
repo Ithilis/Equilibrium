@@ -7,6 +7,20 @@ BlueprintId="urb2304",
     Economy = {
         BuildCostEnergy = 12000,
         BuildCostMass = 1200,
-        BuildTime = 1000,
+        BuildTime = 1500,
+    },
+    Weapon = {
+        {
+            TargetPriorities = {
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TRANSPORTATION',
+                'EXPERIMENTAL',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE',
+                '(ALLUNITS - SPECIALLOWPRI)',
+            },
+        },
     },
 }
