@@ -7,7 +7,7 @@ BlueprintId = "xsb3104",
     Economy = {
         BuildCostEnergy = 48000,
         BuildCostMass = 2400,
-        BuildTime = 3750,
+        BuildTime = 3000,
         MaintenanceConsumptionPerSecondEnergy = 2000,
     },
     Intel = {

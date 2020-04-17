@@ -9,9 +9,9 @@ BlueprintId="urb3202",
         MaxHealth = 1200,
     },
     Economy = {
-        BuildCostEnergy = 4000,
-        BuildCostMass = 200,
-        BuildTime = 625,
+        BuildCostEnergy = 6000,
+        BuildCostMass = 400,
+        BuildTime = 500,
         BuildRate = 25,
         MaintenanceConsumptionPerSecondEnergy = 150,    --from 100
     },

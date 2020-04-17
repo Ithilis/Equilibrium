@@ -67,9 +67,9 @@ BlueprintId="xsb3202",
     },
     Economy = {
         BuildCostEnergy = 12000,
-        BuildCostMass = 600,
-        BuildTime = 937.5,
-        BuildRate = 12.5,
+        BuildCostMass = 800,
+        BuildTime = 1000,
+        BuildRate = 25,
         MaxBuildDistance = 15,
         MaintenanceConsumptionPerSecondEnergy = 250,    --from 100
     },
@@ -93,6 +93,8 @@ BlueprintId="xsb3202",
     },
     Intel = {
         WaterVisionRadius = 90,
+        SonarRadius = 300,  --350
+        VisionRadius = 25,
     },
     Physics = {
         Elevation = -2,
