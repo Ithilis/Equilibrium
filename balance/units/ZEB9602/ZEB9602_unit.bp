@@ -9,10 +9,10 @@ BlueprintId = "zeb9602",
         MaxHealth = 7500,
     },
     Economy = {
-        BuildCostEnergy = 38000,    --from 45 000
-        BuildCostMass = 1320,
+        BuildCostEnergy = 45000,
+        BuildCostMass = 1350,
         BuildRate = 120,
-        BuildTime = 3350,            -- from 1800
+        BuildTime = 2250,
         StorageEnergy = 0,
         StorageMass = 0,
         DifferentialUpgradeCostCalculation = true, 

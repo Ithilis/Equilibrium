@@ -9,8 +9,8 @@ BlueprintId = "ueb0303",
         MaxHealth = 22000,
     },
     Economy = {
-        BuildCostEnergy = 66000,
-        BuildCostMass = 7050,
+        BuildCostEnergy = 54000,
+        BuildCostMass = 5400,
         BuildRate = 180,    --from 120
         BuildTime = 7200,
         StorageEnergy = 0,

@@ -69,7 +69,7 @@ AIR
 T1 transports 150m 3750e 1000bt (120m 3700e 800bt)
 - 400hp (500) 15sp (12)
 
-T2 transports 10sp (16)
+T2 transports 10sp (16) 350m 7500e 2000bt (280m 6000e 1600bt)
 - aeon 2000hp (1575)
 - UEF 2500hp (1975)
 - Cybran 1850 (1525)
@@ -121,11 +121,80 @@ NAVAL
 -- 5,5 sp (6)
 - Sera cruiser - add submersibility, weapons are off underwater
 
-- sera T2 sonar system 600m 1200e 12.5br
--- add movability 3sp - 1.5sp submerged
--- add repair, reclaim 12.5br
-
 - Aeon frigate 5,5sp (6)
+
+_____
+STRUCTURE
+
+-Economy- -> slightli push eco to be faster build on start, and slower on late game, it mean that lose eco is more dangerous as before
+
+T1 Pgen
+- 100m 1000e 125bt +25e/s (75m 750e 125bt +20e/s)   -> pgen is slightli (6,25%) worse, but faster setup eco, and deeper suffer when lose them
+
+T1 Mex
+- 40m 400e (30m 300e) 
+T2 Mex
+- 8000e (6000e)
+T3 Mex
+- 5625bt (4500bt)
+T3 Fab
+- 6250bt(5000bt)
+
+-Factories- ->optimilize/fix resource drain while upgrade (was bugged, cost is basicly same only code change)
+
+T2 air HQ
+- 700m 15000e 2000bt (840m 17000e 1800bt)
+T2 air slave
+- 420m 9000e 750bt (420m 8000e 950bt)
+
+T2 land HQ 
+- 900m 4500e 2250bt (900m 6000e 2250bt)
+T2 land slave
+- 750bt (1050)
+T3 land HQ
+-
+T3 land slave
+- 1800m 18000e 2250bt (1500m 12000e 3300bt)
+
+T2 naval HQ
+- 1350m 9000e 1800bt ( 1650m 12000e 1800bt)
+T2 naval slave
+- 900m 750bt (750m 900bt)
+T3 naval HQ
+- 5400m 54000e (66000e 7050m)
+T3 naval slave
+- 2400m 24000e 3000bt (19500e 2100m 2700bt)
+
+
+
+
+T2 pd/AA  revert change to previous state
+- increase e pride to drain 100e/s (75e/s)
+
+T3 AA (SAMs)
+- 1000bt (1500bt) increase build time to drain 20m/s 200e/s (30m/300e//s)
+- change target priority to tansport first
+
+T3 pd Ravanger
+- 2250bt (1500bt) increse buid time to drain 20m/200e//s (30/300)
+
+
+T2 sonar
+- 400m 6000e 500bt  (200m 4000e 625bt) build drain 10m/150e (8/80)
+T2.5 Sera sonar
+- 800m 12000e 1000bt
+-- add submersibility
+-- add movability 3sp - 1.5sp submerged
+-- add repair, reclaim 25br 15range
+--- sonar radius 300r (350)
+T3 sonar
+1500bt (1875bt)
+
+T2 radar
+- 400m 6000e 500bt  (200m 4000e 625bt) build drain 10m/150e (8/80)
+T3 radar
+3000bt (3750bt)
+
 
 
 V. 41
