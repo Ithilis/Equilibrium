@@ -13,6 +13,9 @@ BlueprintId = "uel0203",
         Health = 2000,
         MaxHealth = 2000,
     },
+    Intel = {
+        VisionRadius = 15,
+    },
     Physics = {
         MaxAcceleration = 7.2,
         MaxBrake = 7.2,
@@ -23,9 +26,10 @@ BlueprintId = "uel0203",
         WaterSpeedMultiplier = 0.85,
     },
     Weapon = {
-        Damage = 18,        --120dps
         {
             Damage = 18,        --120dps
+            MaxRadius = 18,
+            RateOfFire = 3,
             TargetPriorities = {
                     'SPECIALHIGHPRI',
                     'COMMAND',            --acu is high priority

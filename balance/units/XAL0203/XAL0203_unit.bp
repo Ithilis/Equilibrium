@@ -13,6 +13,9 @@ BlueprintId = "xal0203",
         Health = 1150,
         MaxHealth = 1150,
     },
+    Intel = {
+        VisionRadius = 15,
+    },
     Physics = {
         MaxAcceleration = 4,
         MaxSpeed = 4,
@@ -24,7 +27,9 @@ BlueprintId = "xal0203",
     },
     Weapon = {
         {
-        Damage = 18,                --60dps
+            Damage = 18,                --60dps
+            MaxRadius = 23,
+            RateOfFire = 3,
         },
     },
     AI = {

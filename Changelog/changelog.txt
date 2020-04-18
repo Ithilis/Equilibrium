@@ -2,6 +2,7 @@ v.62
 ______
 In this version we focus to fix stuff that break while balance patch was coming out. 
 Another focus was make faction diversity deeper and promote more sharp desing, where not everything is poolish and smooth. 
+Move eco very sliglthli to T2 tech, where T3 eco take longer to build. 
 
 _____
 Misc
@@ -22,6 +23,11 @@ T1-5, T2-7.5 (sparky incuded), T3-10
 - units in transport are not visible on radar anymore 
 
 - better target priority for many units
+
+- T2 main tanks lock visual intel on 20
+- T2 hover tanks lock visual intel on 15
+- T2 tanks lock range and rof to stay balanced
+- t3 mobile artilery lock weapon stats
 
 ____
 LAND 
@@ -146,6 +152,10 @@ T2 air HQ
 - 700m 15000e 2000bt (840m 17000e 1800bt)
 T2 air slave
 - 420m 9000e 750bt (420m 8000e 950bt)
+T3 air hq
+-
+T3 air slave
+- 1350m 45000e 2250bt (1320m 38000e 3350bt)
 
 T2 land HQ 
 - 900m 4500e 2250bt (900m 6000e 2250bt)

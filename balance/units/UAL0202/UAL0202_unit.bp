@@ -19,6 +19,9 @@ BlueprintId = "ual0202",
             ShieldRegenRate = 5,        --from2
         },
     },
+    Intel = {
+        VisionRadius = 20,
+    },
     Physics = {
         MaxAcceleration = 2.65,
         MaxBrake = 2.65,

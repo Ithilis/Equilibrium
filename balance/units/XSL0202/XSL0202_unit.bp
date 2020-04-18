@@ -13,6 +13,9 @@ BlueprintId = "xsl0202",
         BuildCostMass = 360,
         BuildTime = 1800,
     },
+    Intel = {
+        VisionRadius = 20,
+    },
     Physics = {
         MaxAcceleration = 2.5,
         MaxBrake = 2.5,
