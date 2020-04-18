@@ -45,6 +45,8 @@ T2 Land
 - Beetle 2500dmg (3000), remove EMP
 - Mongoose 2,8sp (2,5)
 - Hoplite 3s (2,8)
+- Yenzee 1500hp (1250) 150dmg (180 60->45dps) 3.8sp (4)0.06 uniform scale (0.05)
+- Ilshaboh 28r (26r) 2000hp (2500) 
 
 Mobile shields/deciver: 
 - T2: 175m 1250e 1250bt (126m, 1350e, 900bt)

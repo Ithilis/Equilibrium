@@ -5,8 +5,8 @@ Merge = true,
 BlueprintId = "xsl0202",
     
     Defense = {
-        Health = 2500,
-        MaxHealth = 2500,
+        Health = 2000,      --2500
+        MaxHealth = 2000,
     },
     Economy = {
         BuildCostEnergy = 1800,
@@ -23,7 +23,7 @@ BlueprintId = "xsl0202",
     },
     Weapon = {
         Damage = 35,        --115dps
-        MaxRadius = 26,
+        MaxRadius = 28,     --26
         MuzzleSalvoSize = 1,
         MuzzleVelocity = 30,
         RateOfFire = 3,
