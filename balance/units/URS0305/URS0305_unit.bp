@@ -11,7 +11,7 @@ BlueprintId="urs0305",
     Economy = {
         BuildCostEnergy = 24000,    --from 12000
         BuildCostMass = 1200,        --from 480
-        BuildTime = 1875,
+        BuildTime = 1500,
         MaintenanceConsumptionPerSecondEnergy = 650,    --from 250
     },
     Intel = {

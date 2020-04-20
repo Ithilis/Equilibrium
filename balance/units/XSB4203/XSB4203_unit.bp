@@ -10,7 +10,7 @@ BlueprintId = "xsb4203",
     Display = {
         Abilities = {
             '<LOC ability_stealthfield>Stealth Field',
-            '<LOC ability_cloak>Cloaking',
+            '<LOC ability_cloak>Personal cloaking',
         },
         Tarmacs = {
             {

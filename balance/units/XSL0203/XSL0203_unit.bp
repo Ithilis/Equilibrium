@@ -10,19 +10,26 @@ BlueprintId = "xsl0203",
         BuildTime = 1000,
     },
     Defense = {
-        Health = 1250,
-        MaxHealth = 1250,
+        Health = 1500,
+        MaxHealth = 1500,
+    },
+    Display = {
+        UniformScale = 0.06,    --0,05
+    },
+    Intel = {
+        VisionRadius = 15,
     },
     Physics = {
-        MaxAcceleration = 4,
-        MaxBrake = 4,
-        MaxSpeed = 4,
+        MaxAcceleration = 3.8,
+        MaxBrake = 3.8,
+        MaxSpeed = 3.8,
         WaterSpeedMultiplier = 0.85,
     },
     Weapon = {
         {
-        Damage = 180,        --60dps
-        RateOfFire = 0.333,
+            Damage = 150,        --45dps
+            MaxRadius = 18,
+            RateOfFire = 0.3,
         },
     },
     AI = {

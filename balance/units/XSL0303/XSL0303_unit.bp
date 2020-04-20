@@ -59,6 +59,7 @@ BlueprintId = "xsl0303",
         },
         { --long range gun
             Damage = 400,        --100 dps
+            DamageRadius = 0,    -- prevention against break
             MaxRadius = 33,
             MuzzleVelocity = 30,
             TurretYawSpeed = 120,

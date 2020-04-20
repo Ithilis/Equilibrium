@@ -10,9 +10,10 @@ BlueprintId = "urb1101",
         RegenRate = 0,
     },
     Economy = {
-        BuildCostEnergy = 750,
-        BuildCostMass = 75,
+        BuildCostEnergy = 1000,
+        BuildCostMass = 100,
         BuildTime = 125,
+        ProductionPerSecondEnergy = 25,
     },
     Weapon = {
         {

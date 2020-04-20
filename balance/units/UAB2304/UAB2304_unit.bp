@@ -32,7 +32,7 @@ BlueprintId="uab2304",
     Economy = {
         BuildCostEnergy = 12000,
         BuildCostMass = 1200,
-        BuildTime = 1000,
+        BuildTime = 1500,
     },
     Weapon = {
         {
@@ -40,11 +40,20 @@ BlueprintId="uab2304",
             AimsStraightOnDisable = true,
             TurretYawSpeed = 180, -- all these are added to help maintain its performance when unpacking - it works just like uef sam now.
             TrackingRadius = 1.6,
+            TargetPriorities = {
+                'AIR MOBILE HIGHPRIAIR',
+                'AIR MOBILE TRANSPORTATION',
+                'EXPERIMENTAL',
+                'AIR MOBILE TECH3 BOMBER',
+                'AIR MOBILE BOMBER',
+                'AIR MOBILE GROUNDATTACK',
+                'AIR MOBILE',
+                '(ALLUNITS - SPECIALLOWPRI)',
+            },
             WeaponRepackTimeout = 2.5,
             WeaponUnpackAnimation = '/units/UAB2304/UAB2304_Aopen.sca', -- reusing the original animation
             WeaponUnpackAnimationRate = 3.0,
             WeaponUnpacks = true,
         },
-
     },
 }

@@ -9,10 +9,21 @@ BlueprintId = "xsl0304",
         BuildCostMass = 840,
         BuildTime = 6000,
     },
+    Physics = {
+        MaxAcceleration = 2.5,
+        MaxBrake = 2.5,
+        MaxSpeed = 2.5,
+    },
     Weapon = {
         {
+            Damage = 700,
+            DamageRadius = 6,
+            FiringRandomness = 1.75,
+            MaxRadius = 90,
             MinRadius = 10,      --from 0
             MuzzleVelocity = 24,
+            RateOfFire = 0.1,
+            WeaponUnpackAnimationRate = 1,
         },
     },
 }

@@ -11,7 +11,7 @@ BlueprintId = "xeb2306",
     Economy = {
         BuildCostEnergy = 18000,
         BuildCostMass = 1800,
-        BuildTime = 1500,
+        BuildTime = 2250,
     },
     Weapon = {
         {

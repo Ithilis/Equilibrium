@@ -7,7 +7,7 @@ BlueprintId = "uab3104",
     Economy = {
         BuildCostEnergy = 48000,    --30 000e
         BuildCostMass = 2400,       --2400m
-        BuildTime = 3750,           --2575bt
+        BuildTime = 3000,           --2575bt
         MaintenanceConsumptionPerSecondEnergy = 2000,
     },
     Intel = {

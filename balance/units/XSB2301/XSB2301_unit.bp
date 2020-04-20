@@ -5,7 +5,7 @@ Merge = true,
 BlueprintId = "xsb2301", 
 
     Economy = {
-        BuildCostEnergy = 3750,
+        BuildCostEnergy = 5000,
         BuildCostMass = 500,
         BuildTime = 625,
     },

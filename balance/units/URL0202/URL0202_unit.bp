@@ -13,6 +13,9 @@ BlueprintId = "url0202",
         Health = 1800,
         MaxHealth = 1800,
     },
+    Intel = {
+        VisionRadius = 20,
+    },
     Physics = {
         MaxAcceleration = 2.6,  -- from 2.7
         MaxBrake = 2.6,

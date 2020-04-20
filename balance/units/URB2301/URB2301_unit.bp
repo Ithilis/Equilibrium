@@ -1,11 +1,11 @@
---T2 Pint Defense
+--T2 Point Defense
 
 UnitBlueprint {
 Merge = true,
 BlueprintId = "urb2301", 
 
     Economy = {
-        BuildCostEnergy = 3600,
+        BuildCostEnergy = 4800,
         BuildCostMass = 480,
         BuildTime = 600,
     },

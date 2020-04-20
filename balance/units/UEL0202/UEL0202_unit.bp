@@ -9,6 +9,9 @@ BlueprintId = "uel0202",
         BuildCostMass = 200,
         BuildTime = 1000,
     },
+    Intel = {
+        VisionRadius = 20,
+    },
     Physics = {
         MaxAcceleration = 2.9,  --from 3
         MaxSpeed = 2.9,

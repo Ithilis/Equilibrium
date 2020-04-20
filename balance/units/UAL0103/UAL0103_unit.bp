@@ -17,6 +17,7 @@ BlueprintId = "ual0103",
             Damage = 100,            --from 200   = same dps but more projectiles
             DamageRadius = 1,        --from 0,5
             RateOfFire = 1,            --from 0,5
+            FiringRandomness = 0.5,
             
             TurretPitchRange = 75,    --from 45
             TurretYawRange = 75,    --from 45
