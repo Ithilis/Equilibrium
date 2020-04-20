@@ -1,8 +1,8 @@
 v.62
 ______
-In this version we focus to fix stuff that break while balance patch was coming out. 
-Another focus was make faction diversity deeper and promote more sharp desing, where not everything is poolish and smooth. 
-Move eco very sliglthli to T2 tech, where T3 eco take longer to build. 
+In this version we focus to fix stuff that break while new balance patches was coming out. 
+Another focus was make faction diversity deeper and promote more sharp desing, where not everything is poolish and smooth but have more spice inside. 
+In the last there was eco movement where very sliglthli promote eco T2 tech, where T3 eco take slightli longer to build. 
 
 _____
 Misc
@@ -12,7 +12,7 @@ Misc
 - fix swift win pricing mistake
 - shields/absolver not able to in naval factory
 - T2 mml/t3 maa/sparky lover energy cost to drain same as tanks
-- lock TML price to 180m
+- lock TML missile price to 180m
 - add code that preventing some unit in future break
 
 - Enginers -> bigger build range by tech level
@@ -40,6 +40,9 @@ ACU
 
 Matis
 - 300hp (330) 8dmg (7) ->26,4dps (23,3)
+
+Fevor
+- firing randomness 0.5 (0,35)
 
 T2 Land
 - Beetle 2500dmg (3000), remove EMP

@@ -26,6 +26,7 @@ BlueprintId = "uaa0203",
     Weapon = {
         { --ground fire weapon
             Damage = 10,    --from 13 = 50dps
+            DamageRadius = 0,
             FireTargetLayerCapsTable = { -- disable weapon vs air units (seabed sounds crazy but needed for attacking things on the shore!)
                 Air = 'Land|Water|Seabed',
                 Land = 'Land|Water|Seabed',
