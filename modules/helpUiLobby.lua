@@ -94,6 +94,6 @@ function ShowEQHelpDialog(inParent)
     
     Tooltip.AddButtonTooltip(changelogButton, "Open_EQ_Changelog")
     changelogButton.OnClick = function(self, modifiers)
-        OpenURL('http://equilibrium.x10host.com/changelog/')
+        OpenURL('http://faforever.github.io/equilibrium/Changelog/')
     end
 end
