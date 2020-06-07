@@ -20,14 +20,6 @@ Unit = Class(oldUnit) {
         self.BuildCostE = bpEcon.BuildCostEnergy
         self.BuildT = bpEcon.BuildTime
     end,
-    
-    OnStopBeingBuilt = function(self, builder, layer)
-        oldUnit.OnStopBeingBuilt(self, builder, layer)
-        local bp = self:GetBlueprint()
-        if bp.Intel.RadarStealthTransFlag then
-            self:DisableIntel('RadarStealth')
-        end
-    end,
 
     OnKilled = function(self, instigator, type, overkillRatio)
         self.Dead = true
@@ -553,6 +545,14 @@ Unit = Class(oldUnit) {
         if self.techCategory ~= 'COMMAND' then
             self:SendNotifyMessage('completed')
         end
+        
+        --------------------------------EQ: add a stealth disabler here
+        
+        local bp = self:GetBlueprint()
+        if bp.Intel.RadarStealthTransFlag then
+            self:DisableIntel('RadarStealth')
+        end
+        
 
         return true
     end,
